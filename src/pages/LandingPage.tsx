@@ -230,6 +230,7 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-[#94a3b8] hover:text-white text-sm font-medium transition-colors">Features</a>
             <a href="#how-it-works" className="text-[#94a3b8] hover:text-white text-sm font-medium transition-colors">How It Works</a>
+            <Link to="/full-scope-of-practice" className="text-[#94a3b8] hover:text-white text-sm font-medium transition-colors">Full Scope of Practice</Link>
             <a href="#security" className="text-[#94a3b8] hover:text-white text-sm font-medium transition-colors">Security</a>
             <a href="#faq" className="text-[#94a3b8] hover:text-white text-sm font-medium transition-colors">FAQ</a>
           </div>
@@ -251,6 +252,7 @@ export default function LandingPage() {
           className="md:hidden bg-[#0f172a] border-t border-white/5 px-6 py-4 flex flex-col gap-3">
               <a href="#features" className="text-[#94a3b8] text-sm py-2" onClick={() => setMenuOpen(false)}>Features</a>
               <a href="#how-it-works" className="text-[#94a3b8] text-sm py-2" onClick={() => setMenuOpen(false)}>How It Works</a>
+              <Link to="/full-scope-of-practice" className="text-[#94a3b8] text-sm py-2" onClick={() => setMenuOpen(false)}>Full Scope of Practice</Link>
               <a href="#security" className="text-[#94a3b8] text-sm py-2" onClick={() => setMenuOpen(false)}>Security</a>
               <a href="#faq" className="text-[#94a3b8] text-sm py-2" onClick={() => setMenuOpen(false)}>FAQ</a>
               <button onClick={() => {setMenuOpen(false);navigate("/dashboard");}}
@@ -642,6 +644,7 @@ export default function LandingPage() {
               <div className="space-y-3">
                 <a href="#features" className="block text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">Features</a>
                 <a href="#how-it-works" className="block text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">How It Works</a>
+                <Link to="/full-scope-of-practice" className="block text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">Full Scope of Practice</Link>
                 <a href="#security" className="block text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">Security</a>
                 <a href="#faq" className="block text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">FAQ</a>
               </div>

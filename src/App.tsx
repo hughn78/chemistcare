@@ -31,12 +31,14 @@ import PbsLookup from "./pages/PbsLookup";
 import ClaimsDemo from "./pages/ClaimsDemo";
 import FhirDemo from "./pages/FhirDemo";
 import IntegrationSettings from "./pages/IntegrationSettings";
+import FullScopeOfPractice from "./pages/FullScopeOfPractice";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   { path: "/", element: <LandingPage />, errorElement: <ErrorBoundary><NotFound /></ErrorBoundary> },
+  { path: "/full-scope-of-practice", element: <FullScopeOfPractice /> },
   { path: "/dashboard", element: <Index /> },
   { path: "/consultation", element: <NewConsultation /> },
   { path: "/patients", element: <Patients /> },
