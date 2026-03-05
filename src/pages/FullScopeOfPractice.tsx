@@ -435,9 +435,9 @@ export default function FullScopeOfPractice() {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: "'Recoleta', 'Manrope', serif" }}>
             Ready to experience the future of pharmacy care?
           </h2>
-          <button onClick={() => navigate("/dashboard")}
+          <button onClick={() => navigate("/#waitlist")}
             className="bg-[#2dd4bf] hover:bg-[#14b8a6] text-[#0f172a] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center gap-2">
-            Book a Consultation <ArrowRight size={20} />
+            Join the Waitlist <ArrowRight size={20} />
           </button>
         </div>
       </section>
