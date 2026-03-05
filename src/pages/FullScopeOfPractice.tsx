@@ -187,7 +187,7 @@ export default function FullScopeOfPractice() {
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.35 }}>
             <button onClick={() => navigate("/dashboard")}
               className="bg-[#2dd4bf] hover:bg-[#14b8a6] text-[#0f172a] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center gap-2">
-              Find a PrescriberOS Pharmacist Near You <ArrowRight size={20} />
+              ChemistCare PrescriberOS <ArrowRight size={20} />
             </button>
           </motion.div>
         </div>
