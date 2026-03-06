@@ -44,7 +44,6 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/component
 
 const mainItems = [
   { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
-  { title: 'Calendar', url: '/calendar', icon: CalendarDays },
   {
     title: 'New Consultation',
     url: '/consultation',
@@ -53,37 +52,23 @@ const mainItems = [
       { title: 'Travel Medicine', url: '/travel-consultation', icon: Plane },
     ],
   },
+  { title: 'Calendar', url: '/calendar', icon: CalendarDays },
   { title: 'Patients', url: '/patients', icon: Users },
-  { title: 'Conditions Library', url: '/conditions', icon: BookOpen },
   { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
-  { title: 'Calculators', url: '/calculators', icon: Calculator },
   { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
+];
+
+const supportItems = [
+  { title: 'Conditions Library', url: '/conditions', icon: BookOpen },
+  { title: 'Calculators', url: '/calculators', icon: Calculator },
   { title: 'Claims & Reporting', url: '/claims', icon: Receipt },
   { title: '8CPA / PPA Services', url: '/eight-cpa', icon: HeartPulse },
   { title: 'Patient Messaging', url: '/messaging', icon: MessageSquare },
+  { title: 'Patient Triage', url: '/triage', icon: UserCheck },
 ];
 
 const adminItems = [
-  { title: 'Audit', url: '/audit', icon: Shield },
-  { title: 'PBS Lookup', url: '/pbs-lookup', icon: Pill },
-  {
-    title: 'Integration Settings', url: '/integration-settings', icon: Plug,
-    children: [
-      { title: 'Claims Demo', url: '/claims-demo', icon: FileBarChart },
-      { title: 'FHIR Demo', url: '/fhir-demo', icon: HeartHandshake },
-      { title: 'PPA Integration', url: '/ppa-settings', icon: Receipt },
-    ],
-  },
-  {
-    title: 'Practice Settings', url: '/admin/settings', icon: Settings,
-    children: [
-      { title: 'Settings', url: '/settings', icon: Settings },
-    ],
-  },
-];
-
-const patientFacingItems = [
-  { title: 'Patient Triage', url: '/triage', icon: UserCheck },
+  { title: 'Settings', url: '/admin/settings', icon: Settings },
 ];
 
 type NavItem = {
