@@ -154,10 +154,24 @@ export function AppSidebar() {
 
       <SidebarContent className="px-2">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Clinical</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Prescribing</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-0.5">
               {mainItems.map((item) => (
+                <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Divider between groups */}
+        <div className="mx-3 my-2 border-t border-sidebar-border" />
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Clinical Support</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-0.5">
+              {supportItems.map((item) => (
                 <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
               ))}
             </SidebarMenu>
@@ -172,20 +186,6 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu className="space-y-0.5">
               {adminItems.map((item) => (
-                <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        {/* Divider between groups */}
-        <div className="mx-3 my-2 border-t border-sidebar-border" />
-
-        <SidebarGroup>
-          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Patient-Facing</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu className="space-y-0.5">
-              {patientFacingItems.map((item) => (
                 <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
               ))}
             </SidebarMenu>
