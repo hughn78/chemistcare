@@ -15,7 +15,7 @@ import { CONDITIONS, getConditionById } from '@/data/conditions';
 import { CONSULTATION_STEPS, ConsultationStep } from '@/types/clinical';
 import { useAutosave } from '@/hooks/useAutosave';
 import { useNavigationGuard } from '@/hooks/useNavigationGuard';
-import { validateStep, StepChecklist, SaveStatus } from '@/components/ConsultationValidation';
+import { validateStep, StepChecklist, SaveStatus, computeStepStatus, StepStatus } from '@/components/ConsultationValidation';
 import { FormPageSkeleton } from '@/components/PageSkeleton';
 import { ConsultStatusBar } from '@/components/consult/ConsultStatusBar';
 import { LiveNotePreview } from '@/components/consult/LiveNotePreview';
@@ -29,12 +29,13 @@ import { SketchPad } from '@/components/consult/SketchPad';
 import { ConsultStatus, transitionConsult } from '@/lib/consultStateMachine';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { evaluateSafety } from '@/lib/safetyEngine';
+import { logValidationBlocker } from '@/lib/qaTelemetry';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import {
   AlertTriangle, CheckCircle, XCircle, ChevronRight, ChevronLeft,
   Shield, Pill, FileText, User, Stethoscope, Brain, Lock, RotateCcw, Trash2, LayoutTemplate,
-  Circle, ChevronDown, Pen,
+  Circle, ChevronDown, Pen, AlertCircle,
 } from 'lucide-react';
 import { toast as sonnerToast } from 'sonner';
 import { CalculatorsDialog } from '@/components/CalculatorsDialog';
@@ -59,8 +60,76 @@ interface DraftState {
   safetyOverride?: SafetyOverride;
 }
 
+/* ── Completion Readiness Panel ── */
+function CompletionReadinessPanel({
+  allStepValidations,
+  safetyResult,
+  safetyOverride,
+}: {
+  allStepValidations: { step: ConsultationStep; label: string; validation: ValidationResult }[];
+  safetyResult: SafetyResult;
+  safetyOverride?: SafetyOverride;
+}) {
+  const allComplete = allStepValidations.every(s => s.validation.complete || s.validation.total === 0);
+  const hasUnresolvedBlockers = safetyResult.blockers.length > 0 && !safetyOverride;
+  const readyToFinalise = allComplete && !hasUnresolvedBlockers;
+  const totalMissing = allStepValidations.reduce((sum, s) => sum + s.validation.missing.length, 0);
+
+  return (
+    <div className="space-y-3">
+      <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Completion Readiness</h3>
+      
+      {/* Ready indicator */}
+      <div className={`flex items-center gap-2 p-2.5 rounded-lg text-xs font-medium ${
+        readyToFinalise 
+          ? 'bg-clinical-safe/10 text-clinical-safe' 
+          : 'bg-clinical-warning-bg text-clinical-warning'
+      }`}>
+        {readyToFinalise ? (
+          <><CheckCircle className="h-4 w-4" /> Ready to finalise</>
+        ) : (
+          <><AlertCircle className="h-4 w-4" /> {totalMissing} field{totalMissing !== 1 ? 's' : ''} remaining</>
+        )}
+      </div>
+
+      {/* Per-step summary */}
+      <div className="space-y-1.5 text-xs">
+        {allStepValidations.map(s => {
+          if (s.validation.total === 0) return null;
+          return (
+            <div key={s.step} className="flex items-center justify-between">
+              <span className="text-muted-foreground">{s.label}</span>
+              {s.validation.complete ? (
+                <CheckCircle className="h-3.5 w-3.5 text-clinical-safe" />
+              ) : (
+                <span className="tabular-nums text-clinical-warning">
+                  {s.validation.filled}/{s.validation.total}
+                </span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Safety risk flags */}
+      {safetyResult.blockers.length > 0 && (
+        <div className={`flex items-center gap-2 p-2 rounded-lg text-xs ${
+          safetyOverride ? 'bg-muted text-muted-foreground' : 'bg-clinical-danger-bg text-clinical-danger'
+        }`}>
+          <AlertTriangle className="h-3.5 w-3.5" />
+          {safetyOverride
+            ? `${safetyResult.blockers.length} safety blocker${safetyResult.blockers.length !== 1 ? 's' : ''} (overridden)`
+            : `${safetyResult.blockers.length} unresolved safety blocker${safetyResult.blockers.length !== 1 ? 's' : ''}`
+          }
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ── Step Progress Panel (deterministic) ── */
 function StepProgressPanel({ getStepStatus, getStepValidation }: {
-  getStepStatus: (step: ConsultationStep) => string;
+  getStepStatus: (step: ConsultationStep) => StepStatus;
   getStepValidation: (step: ConsultationStep) => ValidationResult;
 }) {
   const [open, setOpen] = useState(true);
@@ -78,6 +147,12 @@ function StepProgressPanel({ getStepStatus, getStepValidation }: {
             const validation = getStepValidation(s.key);
             const pct = validation.total > 0 ? Math.round((validation.filled / validation.total) * 100) : (status === 'complete' ? 100 : 0);
 
+            const statusLabel = status === 'complete' ? 'Complete' 
+              : status === 'needs_attention' ? 'Needs Attention'
+              : status === 'active' ? 'In Progress'
+              : status === 'blocked' ? 'Blocked'
+              : 'Incomplete';
+
             return (
               <div key={s.key} className="space-y-1">
                 <div className="flex items-center justify-between gap-2">
@@ -88,16 +163,25 @@ function StepProgressPanel({ getStepStatus, getStepValidation }: {
                       <div className="h-3.5 w-3.5 rounded-full border-2 border-primary pulse-ring" style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }} />
                     ) : status === 'blocked' ? (
                       <XCircle className="h-3.5 w-3.5 text-clinical-danger" />
+                    ) : status === 'needs_attention' ? (
+                      <AlertCircle className="h-3.5 w-3.5 text-clinical-warning" />
                     ) : (
                       <Circle className="h-3.5 w-3.5 text-muted-foreground/30" />
                     )}
                     <span className={status === 'active' ? 'font-medium text-foreground' : status === 'complete' ? 'text-foreground/70' : 'text-muted-foreground'}>{s.label}</span>
                   </div>
-                  {validation.total > 0 && (
-                    <span className={`tabular-nums ${validation.complete ? 'text-clinical-safe' : 'text-muted-foreground'}`}>
-                      {validation.filled}/{validation.total}
-                    </span>
-                  )}
+                  <div className="flex items-center gap-1.5">
+                    <span className={`text-[10px] ${
+                      status === 'complete' ? 'text-clinical-safe' 
+                      : status === 'needs_attention' ? 'text-clinical-warning'
+                      : 'text-muted-foreground/50'
+                    }`}>{statusLabel}</span>
+                    {validation.total > 0 && (
+                      <span className={`tabular-nums ${validation.complete ? 'text-clinical-safe' : 'text-muted-foreground'}`}>
+                        {validation.filled}/{validation.total}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 {/* Thin progress bar */}
                 <div className="h-1 rounded-full bg-muted ml-5.5" style={{ marginLeft: '22px' }}>
@@ -105,7 +189,9 @@ function StepProgressPanel({ getStepStatus, getStepValidation }: {
                     className="h-full rounded-full step-progress-fill"
                     style={{
                       width: `${pct}%`,
-                      backgroundColor: status === 'complete' ? 'hsl(var(--clinical-safe))' : pct > 0 ? 'hsl(var(--primary))' : 'transparent',
+                      backgroundColor: status === 'complete' ? 'hsl(var(--clinical-safe))' 
+                        : status === 'needs_attention' ? 'hsl(var(--clinical-warning))'
+                        : pct > 0 ? 'hsl(var(--primary))' : 'transparent',
                     }}
                   />
                 </div>
@@ -242,8 +328,44 @@ const NewConsultation = () => {
     setShowDraftPrompt(false);
   }, [loadDraft]);
 
-  const discardDraft = useCallback(() => {
+  /** Idempotent full discard — clears ALL state */
+  const handleDiscard = useCallback(() => {
+    const cId = consultId;
+    
+    // Reset all React state to pristine
+    setFormData({});
+    setSelectedCondition('');
+    setRedFlagsChecked({});
+    setDifferentials([{ diagnosis: '', reasonExcluded: '' }]);
+    setCurrentStep('patient');
+    setPinnedEvidence([]);
+    setConsultStatus('draft');
+    setConsultId(undefined);
+    setFinalisedAt(undefined);
+    setAttemptedProgress(false);
+    setSafetyOverride(undefined);
+    setNoteHeadings([]);
+    setSavedSketches([]);
+    setShowDraftPrompt(false);
+
+    // Clear all storage artefacts
     clearDraft();
+    try {
+      localStorage.removeItem(DRAFT_KEY);
+      // Clear any session-scoped draft keys
+      sessionStorage.removeItem('chemistcare:active_consult_id');
+    } catch {
+      // Storage unavailable
+    }
+
+    if (cId) {
+      logEvent(cId, 'draft_discarded');
+    }
+  }, [consultId, clearDraft, logEvent]);
+
+  const discardDraftPrompt = useCallback(() => {
+    clearDraft();
+    try { localStorage.removeItem(DRAFT_KEY); } catch {}
     setShowDraftPrompt(false);
   }, [clearDraft]);
 
@@ -255,30 +377,37 @@ const NewConsultation = () => {
     scope: Shield, treatment: Pill, documentation: FileText,
   };
 
-  const getStepStatus = (step: ConsultationStep) => {
-    const idx = CONSULTATION_STEPS.findIndex(s => s.key === step);
-    if (idx < stepIndex) return 'complete';
-    if (idx === stepIndex) return 'active';
-    if (step === 'assessment' && hasRedFlagTriggered) return 'blocked';
-    return 'pending';
-  };
+  /** Deterministic step status using actual validation */
+  const getStepValidation = useCallback((step: ConsultationStep) => {
+    return validateStep(step, formData, condition, redFlagsChecked, differentials, selectedCondition);
+  }, [formData, condition, redFlagsChecked, differentials, selectedCondition]);
 
-  const getStepValidation = (step: ConsultationStep) => {
-    return validateStep(step, formData, condition, redFlagsChecked, differentials);
-  };
+  const getStepStatus = useCallback((step: ConsultationStep): StepStatus => {
+    const validation = getStepValidation(step);
+    const isBlocked = step === 'assessment' && hasRedFlagTriggered;
+    return computeStepStatus(step, currentStep, validation, isBlocked);
+  }, [getStepValidation, currentStep, hasRedFlagTriggered]);
+
+  // All step validations for readiness panel
+  const allStepValidations = useMemo(() => {
+    return CONSULTATION_STEPS.map(s => ({
+      step: s.key,
+      label: s.label,
+      validation: getStepValidation(s.key),
+    }));
+  }, [getStepValidation]);
 
   // Compute all validation blockers for status bar
   const validationBlockers = useMemo(() => {
     const blockers: string[] = [];
-    CONSULTATION_STEPS.forEach(s => {
-      const v = getStepValidation(s.key);
-      blockers.push(...v.missing);
+    allStepValidations.forEach(s => {
+      blockers.push(...s.validation.missing);
     });
     if (safetyResult.blockers.length > 0 && !safetyOverride) {
       blockers.push('Safety blockers unresolved');
     }
     return blockers;
-  }, [formData, condition, redFlagsChecked, differentials, safetyResult, safetyOverride]);
+  }, [allStepValidations, safetyResult, safetyOverride]);
 
   // Safety-aware treatment progression check
   const hasSafetyBlock = safetyResult.blockers.length > 0 && !safetyOverride;
@@ -290,6 +419,11 @@ const NewConsultation = () => {
 
     if (!validation.complete && currentStep === 'patient') {
       setAttemptedProgress(true);
+      // QA telemetry: log each blocker
+      const cId = consultId || 'draft';
+      validation.missing.forEach(field => {
+        logValidationBlocker(cId, 'patient', field, 'required_field_missing');
+      });
       toast({
         title: 'Required fields missing',
         description: validation.missing.join(', '),
@@ -443,26 +577,6 @@ const NewConsultation = () => {
     }
   };
 
-  const handleDiscard = () => {
-    setFormData({});
-    setSelectedCondition('');
-    setRedFlagsChecked({});
-    setDifferentials([{ diagnosis: '', reasonExcluded: '' }]);
-    setCurrentStep('patient');
-    setPinnedEvidence([]);
-    setConsultStatus('draft');
-    setConsultId(undefined);
-    setFinalisedAt(undefined);
-    setAttemptedProgress(false);
-    setSafetyOverride(undefined);
-    setNoteHeadings([]);
-    clearDraft();
-
-    if (consultId) {
-      logEvent(consultId, 'draft_discarded');
-    }
-  };
-
   if (!isLoaded) return <ClinicalLayout><FormPageSkeleton /></ClinicalLayout>;
 
   return (
@@ -495,11 +609,11 @@ const NewConsultation = () => {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" onClick={discardDraft} className="gap-1.5">
+                    <Button variant="outline" size="sm" onClick={discardDraftPrompt} className="gap-1.5">
                       <Trash2 className="h-3.5 w-3.5" /> Discard
                     </Button>
                     <Button size="sm" onClick={restoreDraft} className="gap-1.5">
-                      <RotateCcw className="h-3.5 w-3.5" /> Restore Draft
+                      <RotateCcw className="h-3.5 w-3.5" /> Resume Draft
                     </Button>
                   </div>
                 </CardContent>
@@ -517,12 +631,13 @@ const NewConsultation = () => {
                     <div key={step.key} className="flex items-center">
                       <button
                         onClick={() => {
-                          if (status === 'complete' || status === 'active') setCurrentStep(step.key);
+                          if (status !== 'incomplete' && status !== 'blocked') setCurrentStep(step.key);
                         }}
-                        disabled={status === 'pending' || status === 'blocked'}
+                        disabled={status === 'incomplete' && step.key !== currentStep}
                         className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors whitespace-nowrap ${
                           status === 'active' ? 'bg-accent/10 text-accent' :
                           status === 'complete' ? 'text-clinical-safe hover:bg-muted' :
+                          status === 'needs_attention' ? 'text-clinical-warning hover:bg-muted' :
                           status === 'blocked' ? 'text-clinical-danger' :
                           'text-muted-foreground'
                         }`}
@@ -530,14 +645,16 @@ const NewConsultation = () => {
                         <div className={`step-indicator w-6 h-6 text-[10px] ${
                           status === 'active' ? 'step-active' :
                           status === 'complete' ? 'step-complete' :
+                          status === 'needs_attention' ? 'step-active' :
                           status === 'blocked' ? 'step-blocked' : 'step-pending'
                         }`}>
                           {status === 'complete' ? <CheckCircle className="h-3.5 w-3.5" /> :
                            status === 'blocked' ? <Lock className="h-3.5 w-3.5" /> :
+                           status === 'needs_attention' ? <AlertCircle className="h-3.5 w-3.5" /> :
                            <Icon className="h-3.5 w-3.5" />}
                         </div>
                         <span className="hidden sm:inline">{step.label}</span>
-                        {status === 'active' && validation.total > 0 && (
+                        {(status === 'active' || status === 'needs_attention') && validation.total > 0 && (
                           <StepChecklist validation={validation} compact />
                         )}
                       </button>
@@ -610,15 +727,24 @@ const NewConsultation = () => {
                       />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                      <FloatingInput
-                        label="Date of Birth"
-                        required
-                        type="date"
-                        value={formData.dob || ''}
-                        onChange={e => updateField('dob', e.target.value)}
-                        error={attemptedProgress && !formData.dob}
-                        valid={!!formData.dob}
-                      />
+                      <div className="space-y-1">
+                        <FloatingInput
+                          label="Date of Birth"
+                          required
+                          type="date"
+                          value={formData.dob || ''}
+                          onChange={e => updateField('dob', e.target.value)}
+                          error={attemptedProgress && (!formData.dob || (formData.dob && (isNaN(new Date(formData.dob).getTime()) || new Date(formData.dob) > new Date())))}
+                          valid={!!formData.dob && !isNaN(new Date(formData.dob).getTime()) && new Date(formData.dob) <= new Date()}
+                          max={new Date().toISOString().split('T')[0]}
+                        />
+                        {attemptedProgress && formData.dob && new Date(formData.dob) > new Date() && (
+                          <p className="text-[11px] text-clinical-danger pl-1">Date of birth cannot be in the future</p>
+                        )}
+                        {attemptedProgress && formData.dob && isNaN(new Date(formData.dob).getTime()) && (
+                          <p className="text-[11px] text-clinical-danger pl-1">Invalid date format</p>
+                        )}
+                      </div>
                       <FloatingSelectWrapper label="Sex" required hasValue={!!formData.sex} valid={!!formData.sex} error={attemptedProgress && !formData.sex}>
                         <Select value={formData.sex || ''} onValueChange={v => updateField('sex', v)}>
                           <SelectTrigger className="border-0 shadow-none focus:ring-0 h-auto py-0 px-3">
@@ -718,9 +844,14 @@ const NewConsultation = () => {
                   <Button
                     onClick={() => {
                       const v = getStepValidation('patient');
-                      if (!v.complete || !selectedCondition) {
+                      if (!v.complete) {
                         setAttemptedProgress(true);
-                        toast({ title: 'Required fields missing', description: v.missing.concat(!selectedCondition ? ['Condition selection'] : []).join(', '), variant: 'destructive' });
+                        // QA telemetry
+                        const cId = consultId || 'draft';
+                        v.missing.forEach(field => {
+                          logValidationBlocker(cId, 'patient', field, 'required_field_missing');
+                        });
+                        toast({ title: 'Required fields missing', description: v.missing.join(', '), variant: 'destructive' });
                         return;
                       }
                       setAttemptedProgress(false);
@@ -1062,7 +1193,7 @@ const NewConsultation = () => {
           </div>
         </div>
 
-        {/* Right panel: Live Note Preview + Safety */}
+        {/* Right panel: Live Note Preview + Safety + Readiness */}
         <div className="hidden lg:block w-80 border-l bg-muted/30 p-4 overflow-auto">
           <LiveNotePreview
             formData={formData}
@@ -1082,6 +1213,15 @@ const NewConsultation = () => {
             result={safetyResult}
             override={safetyOverride}
             onRequestOverride={() => setShowOverrideDialog(true)}
+          />
+
+          <Separator className="my-4" />
+
+          {/* Completion Readiness */}
+          <CompletionReadinessPanel
+            allStepValidations={allStepValidations}
+            safetyResult={safetyResult}
+            safetyOverride={safetyOverride}
           />
 
           <Separator className="my-4" />

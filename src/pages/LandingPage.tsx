@@ -651,9 +651,10 @@ export default function LandingPage() {
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
-              <a href="mailto:hugh@burkeroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">
-                hugh@burkeroadpharmacy.com.au
+              <a href="mailto:hello@chemistcare.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">
+                hello@chemistcare.com.au
               </a>
+              <p className="text-[#64748b] text-xs mt-2">General enquiries & partnership requests</p>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 text-[#475569] text-xs">
