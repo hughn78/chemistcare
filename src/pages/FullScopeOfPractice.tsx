@@ -462,8 +462,8 @@ export default function FullScopeOfPractice() {
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
-              <a href="mailto:hugh@burkeroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">
-                hugh@burkeroadpharmacy.com.au
+              <a href="mailto:hugh@blackshawsroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">
+                hugh@blackshawsroadpharmacy.com.au
               </a>
             </div>
           </div>
