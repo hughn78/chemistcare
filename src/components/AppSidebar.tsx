@@ -44,7 +44,6 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/component
 
 const mainItems = [
   { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
-  { title: 'Calendar', url: '/calendar', icon: CalendarDays },
   {
     title: 'New Consultation',
     url: '/consultation',
@@ -53,37 +52,23 @@ const mainItems = [
       { title: 'Travel Medicine', url: '/travel-consultation', icon: Plane },
     ],
   },
+  { title: 'Calendar', url: '/calendar', icon: CalendarDays },
   { title: 'Patients', url: '/patients', icon: Users },
-  { title: 'Conditions Library', url: '/conditions', icon: BookOpen },
   { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
-  { title: 'Calculators', url: '/calculators', icon: Calculator },
   { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
+];
+
+const supportItems = [
+  { title: 'Conditions Library', url: '/conditions', icon: BookOpen },
+  { title: 'Calculators', url: '/calculators', icon: Calculator },
   { title: 'Claims & Reporting', url: '/claims', icon: Receipt },
   { title: '8CPA / PPA Services', url: '/eight-cpa', icon: HeartPulse },
   { title: 'Patient Messaging', url: '/messaging', icon: MessageSquare },
+  { title: 'Patient Triage', url: '/triage', icon: UserCheck },
 ];
 
 const adminItems = [
-  { title: 'Audit', url: '/audit', icon: Shield },
-  { title: 'PBS Lookup', url: '/pbs-lookup', icon: Pill },
-  {
-    title: 'Integration Settings', url: '/integration-settings', icon: Plug,
-    children: [
-      { title: 'Claims Demo', url: '/claims-demo', icon: FileBarChart },
-      { title: 'FHIR Demo', url: '/fhir-demo', icon: HeartHandshake },
-      { title: 'PPA Integration', url: '/ppa-settings', icon: Receipt },
-    ],
-  },
-  {
-    title: 'Practice Settings', url: '/admin/settings', icon: Settings,
-    children: [
-      { title: 'Settings', url: '/settings', icon: Settings },
-    ],
-  },
-];
-
-const patientFacingItems = [
-  { title: 'Patient Triage', url: '/triage', icon: UserCheck },
+  { title: 'Settings', url: '/admin/settings', icon: Settings },
 ];
 
 type NavItem = {
@@ -169,10 +154,24 @@ export function AppSidebar() {
 
       <SidebarContent className="px-2">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Clinical</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Prescribing</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-0.5">
               {mainItems.map((item) => (
+                <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Divider between groups */}
+        <div className="mx-3 my-2 border-t border-sidebar-border" />
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Clinical Support</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-0.5">
+              {supportItems.map((item) => (
                 <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
               ))}
             </SidebarMenu>
@@ -187,20 +186,6 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu className="space-y-0.5">
               {adminItems.map((item) => (
-                <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        {/* Divider between groups */}
-        <div className="mx-3 my-2 border-t border-sidebar-border" />
-
-        <SidebarGroup>
-          <SidebarGroupLabel className="text-[0.6875rem] font-semibold tracking-wider text-sidebar-foreground/40 uppercase px-3 mb-1">Patient-Facing</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu className="space-y-0.5">
-              {patientFacingItems.map((item) => (
                 <NavItemRenderer key={item.title} item={item} collapsed={collapsed} isActive={isActive} />
               ))}
             </SidebarMenu>
