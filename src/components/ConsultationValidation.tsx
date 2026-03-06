@@ -9,12 +9,18 @@ export interface ValidationResult {
   filled: number;
 }
 
+/**
+ * Single source-of-truth validation for each consultation step.
+ * The `selectedCondition` param was added to unify condition validation
+ * into the patient step (prevents the 3/4 → 4/4 desync).
+ */
 export function validateStep(
   step: ConsultationStep,
   formData: Record<string, string>,
   condition: Condition | undefined,
   redFlagsChecked: Record<string, boolean>,
-  differentials: { diagnosis: string; reasonExcluded: string }[]
+  differentials: { diagnosis: string; reasonExcluded: string }[],
+  selectedCondition?: string,
 ): ValidationResult {
   const missing: string[] = [];
 
@@ -24,7 +30,17 @@ export function validateStep(
       if (!formData.lastName) missing.push('Last name');
       if (!formData.sex) missing.push('Sex');
       if (!formData.dob) missing.push('Date of birth');
-      const total = 4;
+      // Validate DOB is a real, parseable date and not in the future
+      if (formData.dob) {
+        const parsed = new Date(formData.dob);
+        if (isNaN(parsed.getTime())) {
+          missing.push('Date of birth (invalid date)');
+        } else if (parsed > new Date()) {
+          missing.push('Date of birth (cannot be in the future)');
+        }
+      }
+      if (!selectedCondition && selectedCondition !== undefined) missing.push('Condition selection');
+      const total = 5; // firstName, lastName, sex, dob, condition
       return { complete: missing.length === 0, missing, total, filled: total - missing.length };
     }
     case 'assessment': {
@@ -66,6 +82,35 @@ export function validateStep(
     default:
       return { complete: false, missing: [], total: 0, filled: 0 };
   }
+}
+
+/** Deterministic step status based on actual validation, not positional index */
+export type StepStatus = 'complete' | 'needs_attention' | 'incomplete' | 'active' | 'blocked';
+
+export function computeStepStatus(
+  step: ConsultationStep,
+  currentStep: ConsultationStep,
+  validation: ValidationResult,
+  isBlocked: boolean,
+): StepStatus {
+  const STEPS_ORDER: ConsultationStep[] = ['patient', 'assessment', 'differentials', 'scope', 'treatment', 'documentation'];
+  const stepIdx = STEPS_ORDER.indexOf(step);
+  const currentIdx = STEPS_ORDER.indexOf(currentStep);
+
+  if (isBlocked) return 'blocked';
+  if (step === currentStep) return 'active';
+  
+  // For steps before the current one, check actual validation
+  if (stepIdx < currentIdx) {
+    if (validation.complete) return 'complete';
+    if (validation.filled > 0) return 'needs_attention';
+    return 'incomplete';
+  }
+  
+  // For steps after the current one
+  if (validation.complete) return 'complete';
+  if (validation.filled > 0) return 'needs_attention';
+  return 'incomplete';
 }
 
 interface StepChecklistProps {
