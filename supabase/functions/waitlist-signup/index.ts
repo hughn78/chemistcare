@@ -58,7 +58,7 @@ Deno.serve(async (req) => {
             messages: [
               {
                 role: "user",
-                content: `Generate a brief notification for hugh@burkeroadpharmacy.com.au: New ChemistCareOS waitlist signup from ${email}${role ? `, role: ${role}` : ""}${pharmacy_name ? `, pharmacy: ${pharmacy_name}` : ""}. Keep to 2 sentences.`,
+                content: `Generate a brief notification for hugh@blackshawsroadpharmacy.com.au: New ChemistCareOS waitlist signup from ${email}${role ? `, role: ${role}` : ""}${pharmacy_name ? `, pharmacy: ${pharmacy_name}` : ""}. Keep to 2 sentences.`,
               },
             ],
             max_tokens: 150,
