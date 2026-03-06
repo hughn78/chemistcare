@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,10 +15,35 @@ import {
   CheckCircle,
   Calculator,
   Mic,
+  RotateCcw,
+  ChevronDown,
 } from 'lucide-react';
+
+const DRAFT_KEY = 'chemistcare_consultation_draft';
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [hasDraft, setHasDraft] = useState(false);
+  const [showDraftMenu, setShowDraftMenu] = useState(false);
+
+  useEffect(() => {
+    try {
+      setHasDraft(localStorage.getItem(DRAFT_KEY) !== null);
+    } catch {
+      setHasDraft(false);
+    }
+  }, []);
+
+  const handleStartNew = () => {
+    // Clear any existing draft to ensure fresh state
+    try { localStorage.removeItem(DRAFT_KEY); } catch {}
+    navigate('/consultation');
+  };
+
+  const handleResumeDraft = () => {
+    navigate('/consultation');
+    setShowDraftMenu(false);
+  };
 
   return (
     <ClinicalLayout>
@@ -30,10 +56,20 @@ const Dashboard = () => {
               ChemistCare Prescriber<span className="text-accent">OS</span> — Pharmacist Prescriber Workspace
             </p>
           </div>
-          <Button onClick={() => navigate('/consultation')} className="gap-2 w-full sm:w-auto">
-            <FilePlus className="h-4 w-4" />
-            New Consultation
-          </Button>
+          
+          {/* Split-button: Start New vs Resume Draft */}
+          <div className="flex items-center gap-1.5 w-full sm:w-auto">
+            <Button onClick={handleStartNew} className="gap-2 flex-1 sm:flex-initial">
+              <FilePlus className="h-4 w-4" />
+              Start New Consult
+            </Button>
+            {hasDraft && (
+              <Button variant="outline" onClick={handleResumeDraft} className="gap-2 flex-1 sm:flex-initial border-accent/30 text-accent hover:bg-accent/5">
+                <RotateCcw className="h-4 w-4" />
+                Resume Draft
+              </Button>
+            )}
+          </div>
         </div>
 
         {/* Stats */}
@@ -67,7 +103,7 @@ const Dashboard = () => {
             </CardHeader>
             <CardContent className="space-y-2">
               {[
-                { label: 'Start New Consultation', desc: 'Begin structured clinical assessment', icon: FilePlus, action: () => navigate('/consultation') },
+                { label: 'Start New Consultation', desc: 'Begin structured clinical assessment', icon: FilePlus, action: handleStartNew },
                 { label: 'View Conditions Library', desc: 'Browse 22 supported conditions', icon: TrendingUp, action: () => navigate('/conditions') },
                 { label: 'Patient Records', desc: 'Search and manage patient profiles', icon: Users, action: () => navigate('/patients') },
                 { label: 'Clinical Calculators', desc: 'CrCl, eGFR, Framingham & more', icon: Calculator, action: () => navigate('/calculators'), accent: true },

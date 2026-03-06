@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+import {
+  AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
+  AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import { supabase } from '@/integrations/supabase/client';
-import { FileText, ExternalLink, RefreshCw } from 'lucide-react';
+import { appendAudit } from '@/lib/auditStore';
+import { FileText, RefreshCw, Trash2, Archive } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 interface ConsultRecord {
   id: string;
@@ -23,6 +29,7 @@ interface ConsultRecord {
 const PrescribingLog = () => {
   const [records, setRecords] = useState<ConsultRecord[]>([]);
   const [loading, setLoading] = useState(true);
+  const [deleteTarget, setDeleteTarget] = useState<ConsultRecord | null>(null);
   const navigate = useNavigate();
 
   const fetchRecords = async () => {
@@ -39,6 +46,66 @@ const PrescribingLog = () => {
   };
 
   useEffect(() => { fetchRecords(); }, []);
+
+  const handleDelete = async (record: ConsultRecord) => {
+    try {
+      const { error } = await (supabase.from('consultations') as any)
+        .delete()
+        .eq('id', record.id);
+
+      if (error) throw error;
+
+      // Audit trail (local)
+      appendAudit({
+        consultId: record.id,
+        action: 'consult_deleted',
+        details: {
+          patientInitials: `${(record.patient_first_name || '?')[0]}${(record.patient_last_name || '?')[0]}`,
+          condition: record.condition_name,
+          status: record.status,
+        },
+      });
+
+      setRecords(prev => prev.filter(r => r.id !== record.id));
+      toast.success('Consultation record deleted', { position: 'bottom-right' });
+    } catch (err: any) {
+      toast.error('Failed to delete record', { description: err?.message });
+    }
+    setDeleteTarget(null);
+  };
+
+  const handleArchive = async (record: ConsultRecord) => {
+    try {
+      const { error } = await (supabase.from('consultations') as any)
+        .update({ status: 'archived' })
+        .eq('id', record.id);
+
+      if (error) throw error;
+
+      appendAudit({
+        consultId: record.id,
+        action: 'consult_archived',
+        details: {
+          patientInitials: `${(record.patient_first_name || '?')[0]}${(record.patient_last_name || '?')[0]}`,
+          previousStatus: record.status,
+        },
+      });
+
+      setRecords(prev => prev.map(r => r.id === record.id ? { ...r, status: 'archived' } : r));
+      toast.success('Consultation archived', { position: 'bottom-right' });
+    } catch (err: any) {
+      toast.error('Failed to archive record', { description: err?.message });
+    }
+  };
+
+  const statusColor = (status: string) => {
+    switch (status) {
+      case 'finalised': return 'default';
+      case 'archived': return 'outline';
+      case 'draft': return 'secondary';
+      default: return 'secondary';
+    }
+  };
 
   return (
     <ClinicalLayout>
@@ -80,7 +147,7 @@ const PrescribingLog = () => {
                         <span className="font-semibold text-sm">
                           {r.patient_first_name || ''} {r.patient_last_name || 'Unknown Patient'}
                         </span>
-                        <Badge variant={r.status === 'finalised' ? 'default' : 'secondary'} className="text-[10px]">
+                        <Badge variant={statusColor(r.status) as any} className="text-[10px]">
                           {r.status}
                         </Badge>
                         {r.red_flag_triggered && (
@@ -97,6 +164,28 @@ const PrescribingLog = () => {
                         }
                       </p>
                     </div>
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      {r.status !== 'archived' && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-8 w-8 p-0 text-muted-foreground hover:text-foreground"
+                          title="Archive"
+                          onClick={() => handleArchive(r)}
+                        >
+                          <Archive className="h-3.5 w-3.5" />
+                        </Button>
+                      )}
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-8 w-8 p-0 text-muted-foreground hover:text-clinical-danger"
+                        title="Delete"
+                        onClick={() => setDeleteTarget(r)}
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -104,6 +193,29 @@ const PrescribingLog = () => {
           </div>
         )}
       </div>
+
+      {/* Delete confirmation dialog */}
+      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => { if (!open) setDeleteTarget(null); }}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete consultation record?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This will permanently remove the consultation for{' '}
+              <strong>{deleteTarget?.patient_first_name} {deleteTarget?.patient_last_name}</strong>.
+              This action cannot be undone. An audit entry will be recorded.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              onClick={() => deleteTarget && handleDelete(deleteTarget)}
+            >
+              Delete Record
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </ClinicalLayout>
   );
 };
