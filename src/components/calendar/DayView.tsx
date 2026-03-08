@@ -23,36 +23,68 @@ export function DayView({ selectedDate, onDateChange, appointments, onAppointmen
   const dayAppts = appointments.filter(a => a.date === dateStr);
 
   return (
-    <div className="flex gap-6 lg:gap-10">
-      {/* Sidebar */}
-      <div className="w-[260px] shrink-0 hidden md:block space-y-4 overflow-hidden">
-        <Calendar
-          mode="single"
-          selected={selectedDate}
-          onSelect={(d) => d && onDateChange(d)}
-          className={cn("p-2 pointer-events-auto rounded-lg border w-full [&_table]:w-full")}
-        />
-        <Button variant="outline" size="sm" className="w-full" onClick={() => onDateChange(new Date())}>Today</Button>
-        <p className="text-sm text-muted-foreground text-center">{dayAppts.length} appointment{dayAppts.length !== 1 ? 's' : ''} today</p>
+    <div className="flex gap-8 lg:gap-12">
+      {/* Sidebar calendar */}
+      <div className="w-[280px] shrink-0 hidden md:flex flex-col gap-5">
+        <div className="rounded-xl border border-border bg-card p-4 shadow-card">
+          <Calendar
+            mode="single"
+            selected={selectedDate}
+            onSelect={(d) => d && onDateChange(d)}
+            className={cn("p-0 pointer-events-auto w-full [&_table]:w-full")}
+          />
+        </div>
+        <Button
+          variant="outline"
+          size="sm"
+          className="w-full rounded-lg font-medium"
+          onClick={() => onDateChange(new Date())}
+        >
+          Today
+        </Button>
+        <p className="text-sm text-muted-foreground text-center">
+          {dayAppts.length} appointment{dayAppts.length !== 1 ? 's' : ''} today
+        </p>
       </div>
 
       {/* Time grid */}
       <div className="flex-1 min-w-0">
-        <h2 className="text-base font-semibold mb-4">{format(selectedDate, 'EEEE, d MMMM yyyy')}</h2>
-        <div className="space-y-0">
-          {TIME_SLOTS.map(slot => {
-            const slotAppts = dayAppts.filter(a => a.time === slot);
-            return (
-              <div key={slot} className="flex min-h-[3rem] border-t border-border/50">
-                <div className="w-16 shrink-0 pt-1 text-xs text-muted-foreground font-mono">{slot}</div>
-                <div className="flex-1 py-1 space-y-1">
-                  {slotAppts.map(a => (
-                    <AppointmentCard key={a.id} appointment={a} onClick={() => onAppointmentClick(a)} />
-                  ))}
+        <div className="rounded-xl border border-border bg-card shadow-card overflow-hidden">
+          {/* Day header */}
+          <div className="px-6 py-4 border-b border-border bg-secondary/40">
+            <h2 className="text-lg font-semibold text-foreground">{format(selectedDate, 'EEEE, d MMMM yyyy')}</h2>
+          </div>
+
+          {/* Time rows */}
+          <div className="divide-y divide-border/40">
+            {TIME_SLOTS.map(slot => {
+              const slotAppts = dayAppts.filter(a => a.time === slot);
+              const isHour = slot.endsWith(':00');
+              return (
+                <div
+                  key={slot}
+                  className={cn(
+                    'flex min-h-[3.5rem] transition-colors hover:bg-secondary/20',
+                    isHour && 'bg-secondary/10'
+                  )}
+                >
+                  <div className="w-20 shrink-0 flex items-start justify-end pr-4 pt-3">
+                    <span className={cn(
+                      'text-xs font-mono',
+                      isHour ? 'text-foreground font-medium' : 'text-muted-foreground'
+                    )}>
+                      {slot}
+                    </span>
+                  </div>
+                  <div className="flex-1 border-l border-border/40 px-4 py-2 space-y-1.5">
+                    {slotAppts.map(a => (
+                      <AppointmentCard key={a.id} appointment={a} onClick={() => onAppointmentClick(a)} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

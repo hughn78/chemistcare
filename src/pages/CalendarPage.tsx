@@ -38,11 +38,13 @@ const CalendarPage = () => {
 
   return (
     <ClinicalLayout>
-      <div className="p-4 md:p-6 space-y-5 animate-fade-in">
+      <div className="p-5 md:p-8 space-y-6 animate-fade-in max-w-[1400px] mx-auto">
         {/* Top bar */}
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Appointment Calendar</h1>
-          <Button onClick={() => setDialogOpen(true)}><Plus className="h-4 w-4 mr-1" /> New Appointment</Button>
+          <h1 className="text-2xl font-bold text-foreground">Appointment Calendar</h1>
+          <Button onClick={() => setDialogOpen(true)} className="rounded-lg">
+            <Plus className="h-4 w-4 mr-1.5" /> New Appointment
+          </Button>
         </div>
 
         {/* KPI bar */}
@@ -50,11 +52,11 @@ const CalendarPage = () => {
 
         {/* Calendar views */}
         <Tabs defaultValue="day">
-          <TabsList>
-            <TabsTrigger value="day">Day View</TabsTrigger>
-            <TabsTrigger value="week">Week View</TabsTrigger>
+          <TabsList className="rounded-lg">
+            <TabsTrigger value="day" className="rounded-md">Day View</TabsTrigger>
+            <TabsTrigger value="week" className="rounded-md">Week View</TabsTrigger>
           </TabsList>
-          <TabsContent value="day" className="mt-4">
+          <TabsContent value="day" className="mt-6">
             <DayView
               selectedDate={selectedDate}
               onDateChange={setSelectedDate}
@@ -62,7 +64,7 @@ const CalendarPage = () => {
               onAppointmentClick={handleAppointmentClick}
             />
           </TabsContent>
-          <TabsContent value="week" className="mt-4">
+          <TabsContent value="week" className="mt-6">
             <WeekView
               selectedDate={selectedDate}
               onDateChange={setSelectedDate}
