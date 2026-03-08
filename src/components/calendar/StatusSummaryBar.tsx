@@ -24,7 +24,6 @@ export function StatusSummaryBar({ appointments, selectedDate }: Props) {
     return a.status === 'cancelled' && d >= ws && d <= we;
   }).length;
 
-  // Available slots today
   const dayName = format(selectedDate, 'EEEE');
   const wh = defaultAdminSettings.workingHours.find(d => d.day === dayName);
   let totalSlots = 0;
@@ -44,11 +43,16 @@ export function StatusSummaryBar({ appointments, selectedDate }: Props) {
   ];
 
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
       {tiles.map(t => (
-        <div key={t.label} className="flex items-center gap-2 rounded-lg border bg-card px-3 py-2">
-          <Badge variant={t.variant} className="text-sm font-bold px-2">{t.value}</Badge>
-          <span className="text-xs text-muted-foreground whitespace-nowrap">{t.label}</span>
+        <div
+          key={t.label}
+          className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card"
+        >
+          <Badge variant={t.variant} className="text-sm font-bold px-2.5 py-0.5 rounded-lg">
+            {t.value}
+          </Badge>
+          <span className="text-xs text-muted-foreground leading-tight">{t.label}</span>
         </div>
       ))}
     </div>
