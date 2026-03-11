@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from 'react';
 import { SketchPad } from '@/components/consult/SketchPad';
 import { Pen } from 'lucide-react';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
+import { TravelWeatherCard } from '@/components/clinical-api/TravelWeatherCard';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
