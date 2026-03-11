@@ -43,6 +43,8 @@ export default function PbsLookup() {
   const [data, setData] = useState<PbsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [source, setSource] = useState<'cache' | 'demo'>('demo');
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedMedicine, setSelectedMedicine] = useState('');
 
   useEffect(() => {
     const cached = getCached();
