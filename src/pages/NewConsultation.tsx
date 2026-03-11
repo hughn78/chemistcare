@@ -1179,18 +1179,25 @@ const NewConsultation = () => {
 
             {/* Step 6: Documentation / Review */}
             {currentStep === 'documentation' && (
-              <ReviewPanel
-                formData={formData}
-                condition={condition}
-                differentials={differentials}
-                hasRedFlagTriggered={hasRedFlagTriggered}
-                consultStatus={consultStatus}
-                consultId={consultId}
-                finalisedAt={finalisedAt}
-                onFinalise={handleFinalise}
-                onDiscard={handleDiscard}
-                pinnedEvidence={pinnedEvidence}
-              />
+              <div className="space-y-4">
+                <ReviewPanel
+                  formData={formData}
+                  condition={condition}
+                  differentials={differentials}
+                  hasRedFlagTriggered={hasRedFlagTriggered}
+                  consultStatus={consultStatus}
+                  consultId={consultId}
+                  finalisedAt={finalisedAt}
+                  onFinalise={handleFinalise}
+                  onDiscard={handleDiscard}
+                  pinnedEvidence={pinnedEvidence}
+                />
+                {/* Patient Education — auto-populated from diagnosis */}
+                <PatientEducationPanel
+                  diagnosisName={condition?.name}
+                  medicationName={formData.selectedTherapy}
+                />
+              </div>
             )}
           </div>
         </div>

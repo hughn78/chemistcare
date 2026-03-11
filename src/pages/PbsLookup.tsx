@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Search, Download, Database, AlertTriangle, RefreshCw } from 'lucide-react';
+import { Search, Download, Database, AlertTriangle, RefreshCw, Pill } from 'lucide-react';
 import { toast } from 'sonner';
 import { pbsDemoData, type PbsItem } from '@/data/pbs-demo-data';
+import { MedicineDetailDrawer } from '@/components/clinical-api/MedicineDetailDrawer';
 
 const CACHE_KEY = 'chemistcare_pbs_cache';
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
