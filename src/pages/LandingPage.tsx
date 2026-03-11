@@ -232,7 +232,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white" style={{ fontFamily: "'Inter', system-ui, sans-serif", scrollBehavior: "smooth" }}>
+    <div className="min-h-screen bg-[#0f172a] text-white overflow-x-hidden" style={{ fontFamily: "'Inter', system-ui, sans-serif", scrollBehavior: "smooth" }}>
 
       {/* ─── NAVBAR ─── */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#0f172a]/95 backdrop-blur-xl border-b border-white/5" : "bg-transparent"}`}>
@@ -288,13 +288,13 @@ export default function LandingPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-32">
           <div className="max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full bg-[#2dd4bf]/10 border border-[#2dd4bf]/20 text-[#2dd4bf] text-sm font-medium px-4 py-2 mb-8">
+            className="inline-flex items-center gap-2 rounded-full bg-[#2dd4bf]/10 border border-[#2dd4bf]/20 text-[#2dd4bf] text-sm font-medium px-4 py-2 mb-8 flex-wrap">
               <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2dd4bf] opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-[#2dd4bf]" /></span>
               Now Available in Victoria · Early Access 2026
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-white mb-8"
+            className="text-[2.25rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-white mb-8 break-words"
             style={{ fontFamily: "'Recoleta', 'Manrope', serif" }}>
               <span className="text-[#2dd4bf]">ChemistCare</span> Your partner for full scope of practice, pharmacy prescribing
             </motion.h1>
@@ -662,7 +662,7 @@ export default function LandingPage() {
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
-            <a href="mailto:hugh@blackshawsroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">
+            <a href="mailto:hugh@blackshawsroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors break-all">
                 hugh@blackshawsroadpharmacy.com.au
               </a>
               <p className="text-[#64748b] text-xs mt-2">General enquiries & partnership requests</p>
