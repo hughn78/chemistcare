@@ -1443,6 +1443,102 @@ export type Database = {
         }
         Relationships: []
       }
+      external_api_cache: {
+        Row: {
+          cache_key: string
+          created_at: string
+          expires_at: string
+          hit_count: number
+          id: string
+          provider: string
+          response_data: Json
+        }
+        Insert: {
+          cache_key: string
+          created_at?: string
+          expires_at: string
+          hit_count?: number
+          id?: string
+          provider: string
+          response_data?: Json
+        }
+        Update: {
+          cache_key?: string
+          created_at?: string
+          expires_at?: string
+          hit_count?: number
+          id?: string
+          provider?: string
+          response_data?: Json
+        }
+        Relationships: []
+      }
+      external_api_logs: {
+        Row: {
+          cache_hit: boolean | null
+          created_at: string
+          endpoint: string
+          error_message: string | null
+          id: string
+          provider: string
+          response_time_ms: number | null
+          status_code: number | null
+        }
+        Insert: {
+          cache_hit?: boolean | null
+          created_at?: string
+          endpoint: string
+          error_message?: string | null
+          id?: string
+          provider: string
+          response_time_ms?: number | null
+          status_code?: number | null
+        }
+        Update: {
+          cache_hit?: boolean | null
+          created_at?: string
+          endpoint?: string
+          error_message?: string | null
+          id?: string
+          provider?: string
+          response_time_ms?: number | null
+          status_code?: number | null
+        }
+        Relationships: []
+      }
+      geocode_cache: {
+        Row: {
+          country_code: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          latitude: number | null
+          longitude: number | null
+          query_text: string
+          source: string | null
+        }
+        Insert: {
+          country_code?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          latitude?: number | null
+          longitude?: number | null
+          query_text: string
+          source?: string | null
+        }
+        Update: {
+          country_code?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          latitude?: number | null
+          longitude?: number | null
+          query_text?: string
+          source?: string | null
+        }
+        Relationships: []
+      }
       integration_audit_log: {
         Row: {
           claim_case_id: string | null
@@ -1485,6 +1581,153 @@ export type Database = {
         }
         Relationships: []
       }
+      integration_feature_flags: {
+        Row: {
+          created_at: string
+          description: string | null
+          enabled: boolean
+          feature_key: string
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          enabled?: boolean
+          feature_key: string
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          enabled?: boolean
+          feature_key?: string
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      integration_sync_runs: {
+        Row: {
+          completed_at: string | null
+          error_message: string | null
+          id: string
+          provider: string
+          records_processed: number | null
+          started_at: string
+          status: string
+        }
+        Insert: {
+          completed_at?: string | null
+          error_message?: string | null
+          id?: string
+          provider: string
+          records_processed?: number | null
+          started_at?: string
+          status?: string
+        }
+        Update: {
+          completed_at?: string | null
+          error_message?: string | null
+          id?: string
+          provider?: string
+          records_processed?: number | null
+          started_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      medicine_normalizations: {
+        Row: {
+          brand_or_generic: string | null
+          class_data: Json | null
+          created_at: string
+          dose_form: string | null
+          id: string
+          ingredient: string | null
+          matched_name: string | null
+          pbs_code: string | null
+          raw_text: string
+          rxnorm_rxcui: string | null
+          source: string | null
+          strength: string | null
+          updated_at: string
+        }
+        Insert: {
+          brand_or_generic?: string | null
+          class_data?: Json | null
+          created_at?: string
+          dose_form?: string | null
+          id?: string
+          ingredient?: string | null
+          matched_name?: string | null
+          pbs_code?: string | null
+          raw_text: string
+          rxnorm_rxcui?: string | null
+          source?: string | null
+          strength?: string | null
+          updated_at?: string
+        }
+        Update: {
+          brand_or_generic?: string | null
+          class_data?: Json | null
+          created_at?: string
+          dose_form?: string | null
+          id?: string
+          ingredient?: string | null
+          matched_name?: string | null
+          pbs_code?: string | null
+          raw_text?: string
+          rxnorm_rxcui?: string | null
+          source?: string | null
+          strength?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      patient_education_links: {
+        Row: {
+          category: string | null
+          code: string | null
+          code_system: string | null
+          consult_id: string | null
+          created_at: string
+          id: string
+          reviewed_by_pharmacist: boolean | null
+          source: string
+          summary: string | null
+          topic_title: string
+          url: string
+        }
+        Insert: {
+          category?: string | null
+          code?: string | null
+          code_system?: string | null
+          consult_id?: string | null
+          created_at?: string
+          id?: string
+          reviewed_by_pharmacist?: boolean | null
+          source?: string
+          summary?: string | null
+          topic_title: string
+          url: string
+        }
+        Update: {
+          category?: string | null
+          code?: string | null
+          code_system?: string | null
+          consult_id?: string | null
+          created_at?: string
+          id?: string
+          reviewed_by_pharmacist?: boolean | null
+          source?: string
+          summary?: string | null
+          topic_title?: string
+          url?: string
+        }
+        Relationships: []
+      }
       patient_sms_consent: {
         Row: {
           consent_source: string | null
@@ -1515,6 +1758,69 @@ export type Database = {
           opted_out_at?: string | null
           patient_name?: string | null
           patient_phone?: string
+        }
+        Relationships: []
+      }
+      pbs_medicines_cache: {
+        Row: {
+          atc_code: string | null
+          atc_name: string | null
+          benefit_type: string | null
+          fee_amount: number | null
+          id: string
+          item_code: string | null
+          manufacturer: string | null
+          max_qty: number | null
+          mp_pt: string | null
+          num_repeats: number | null
+          pack_size: string | null
+          pbs_code: string
+          program_code: string | null
+          raw_data: Json | null
+          restriction_flag: string | null
+          schedule_code: string | null
+          synced_at: string
+          tpuu_or_mpp_pt: string | null
+        }
+        Insert: {
+          atc_code?: string | null
+          atc_name?: string | null
+          benefit_type?: string | null
+          fee_amount?: number | null
+          id?: string
+          item_code?: string | null
+          manufacturer?: string | null
+          max_qty?: number | null
+          mp_pt?: string | null
+          num_repeats?: number | null
+          pack_size?: string | null
+          pbs_code: string
+          program_code?: string | null
+          raw_data?: Json | null
+          restriction_flag?: string | null
+          schedule_code?: string | null
+          synced_at?: string
+          tpuu_or_mpp_pt?: string | null
+        }
+        Update: {
+          atc_code?: string | null
+          atc_name?: string | null
+          benefit_type?: string | null
+          fee_amount?: number | null
+          id?: string
+          item_code?: string | null
+          manufacturer?: string | null
+          max_qty?: number | null
+          mp_pt?: string | null
+          num_repeats?: number | null
+          pack_size?: string | null
+          pbs_code?: string
+          program_code?: string | null
+          raw_data?: Json | null
+          restriction_flag?: string | null
+          schedule_code?: string | null
+          synced_at?: string
+          tpuu_or_mpp_pt?: string | null
         }
         Relationships: []
       }
@@ -1643,6 +1949,45 @@ export type Database = {
           id?: string
           metadata?: Json | null
           reason?: string
+        }
+        Relationships: []
+      }
+      travel_context_cache: {
+        Row: {
+          air_quality_data: Json | null
+          destination: string
+          expires_at: string
+          fetched_at: string
+          forecast_date: string | null
+          id: string
+          latitude: number
+          longitude: number
+          uv_index: number | null
+          weather_data: Json | null
+        }
+        Insert: {
+          air_quality_data?: Json | null
+          destination: string
+          expires_at: string
+          fetched_at?: string
+          forecast_date?: string | null
+          id?: string
+          latitude: number
+          longitude: number
+          uv_index?: number | null
+          weather_data?: Json | null
+        }
+        Update: {
+          air_quality_data?: Json | null
+          destination?: string
+          expires_at?: string
+          fetched_at?: string
+          forecast_date?: string | null
+          id?: string
+          latitude?: number
+          longitude?: number
+          uv_index?: number | null
+          weather_data?: Json | null
         }
         Relationships: []
       }
