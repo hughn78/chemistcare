@@ -288,7 +288,7 @@ export default function LandingPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-32">
           <div className="max-w-4xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full bg-[#2dd4bf]/10 border border-[#2dd4bf]/20 text-[#2dd4bf] text-sm font-medium px-4 py-2 mb-8">
+            className="inline-flex items-center gap-2 rounded-full bg-[#2dd4bf]/10 border border-[#2dd4bf]/20 text-[#2dd4bf] text-sm font-medium px-4 py-2 mb-8 flex-wrap">
               <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2dd4bf] opacity-75" /><span className="relative inline-flex rounded-full h-2 w-2 bg-[#2dd4bf]" /></span>
               Now Available in Victoria · Early Access 2026
             </motion.div>
