@@ -662,7 +662,7 @@ export default function LandingPage() {
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
-            <a href="mailto:hugh@blackshawsroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors">
+            <a href="mailto:hugh@blackshawsroadpharmacy.com.au" className="text-[#94a3b8] text-sm hover:text-[#2dd4bf] transition-colors break-all">
                 hugh@blackshawsroadpharmacy.com.au
               </a>
               <p className="text-[#64748b] text-xs mt-2">General enquiries & partnership requests</p>
