@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from 'react';
 import { SketchPad } from '@/components/consult/SketchPad';
 import { Pen } from 'lucide-react';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
+import { TravelWeatherCard } from '@/components/clinical-api/TravelWeatherCard';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -489,6 +490,11 @@ ${pharmacistCredentials}`;
                 </CardContent>
               </Card>
             </div>
+
+            {/* Destination Weather Context */}
+            {form.itinerary.length > 0 && form.itinerary[0].destination && (
+              <TravelWeatherCard destination={form.itinerary[0].destination} />
+            )}
 
             <div className="flex justify-between">
               <Button variant="outline" onClick={goBack}><ArrowLeft className="mr-2 h-4 w-4" /> Back</Button>

@@ -1,4 +1,6 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
+import { PatientEducationPanel } from '@/components/clinical-api/PatientEducationPanel';
+import { MedicineDetailDrawer } from '@/components/clinical-api/MedicineDetailDrawer';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -1177,18 +1179,25 @@ const NewConsultation = () => {
 
             {/* Step 6: Documentation / Review */}
             {currentStep === 'documentation' && (
-              <ReviewPanel
-                formData={formData}
-                condition={condition}
-                differentials={differentials}
-                hasRedFlagTriggered={hasRedFlagTriggered}
-                consultStatus={consultStatus}
-                consultId={consultId}
-                finalisedAt={finalisedAt}
-                onFinalise={handleFinalise}
-                onDiscard={handleDiscard}
-                pinnedEvidence={pinnedEvidence}
-              />
+              <div className="space-y-4">
+                <ReviewPanel
+                  formData={formData}
+                  condition={condition}
+                  differentials={differentials}
+                  hasRedFlagTriggered={hasRedFlagTriggered}
+                  consultStatus={consultStatus}
+                  consultId={consultId}
+                  finalisedAt={finalisedAt}
+                  onFinalise={handleFinalise}
+                  onDiscard={handleDiscard}
+                  pinnedEvidence={pinnedEvidence}
+                />
+                {/* Patient Education — auto-populated from diagnosis */}
+                <PatientEducationPanel
+                  diagnosisName={condition?.name}
+                  medicationName={formData.selectedTherapy}
+                />
+              </div>
             )}
           </div>
         </div>

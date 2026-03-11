@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Search, Download, Database, AlertTriangle, RefreshCw } from 'lucide-react';
+import { Search, Download, Database, AlertTriangle, RefreshCw, Pill } from 'lucide-react';
 import { toast } from 'sonner';
 import { pbsDemoData, type PbsItem } from '@/data/pbs-demo-data';
+import { MedicineDetailDrawer } from '@/components/clinical-api/MedicineDetailDrawer';
 
 const CACHE_KEY = 'chemistcare_pbs_cache';
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
@@ -42,6 +43,8 @@ export default function PbsLookup() {
   const [data, setData] = useState<PbsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [source, setSource] = useState<'cache' | 'demo'>('demo');
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedMedicine, setSelectedMedicine] = useState('');
 
   useEffect(() => {
     const cached = getCached();
@@ -131,7 +134,7 @@ export default function PbsLookup() {
                   </TableHeader>
                   <TableBody>
                     {filtered.map(item => (
-                      <TableRow key={item.pbsCode}>
+                      <TableRow key={item.pbsCode} className="cursor-pointer hover:bg-accent/10" onClick={() => { setSelectedMedicine(item.name); setDrawerOpen(true); }}>
                         <TableCell className="font-medium">{item.name}</TableCell>
                         <TableCell className="font-mono text-xs">{item.pbsCode}</TableCell>
                         <TableCell className="hidden md:table-cell font-mono text-xs text-muted-foreground">{item.atcCode}</TableCell>
@@ -149,6 +152,7 @@ export default function PbsLookup() {
           </CardContent>
         </Card>
       </div>
+      <MedicineDetailDrawer open={drawerOpen} onOpenChange={setDrawerOpen} medicineName={selectedMedicine} />
     </ClinicalLayout>
   );
 }
