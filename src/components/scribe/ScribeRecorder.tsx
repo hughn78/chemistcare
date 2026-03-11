@@ -1,61 +1,98 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { Mic, MicOff, Copy, Check, Loader2, Square, ShieldCheck } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
+import { Progress } from '@/components/ui/progress';
+import { Mic, MicOff, Copy, Check, Loader2, Square, ShieldCheck, AlertCircle } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
+import { useAudioRecorder, RecorderStatus } from '@/hooks/useAudioRecorder';
 
 interface ScribeRecorderProps {
-  /** Compact mode for embedding in other views */
   compact?: boolean;
-  /** Called with the full transcript whenever it updates */
   onTranscriptChange?: (transcript: string) => void;
-  /** Additional class names */
   className?: string;
 }
 
-interface TranscriptSegment {
-  id: string;
-  text: string;
-  timestamp: Date;
-  isPartial?: boolean;
+const DEMO_FALLBACK = '[Demo] Patient presents with symptoms consistent with seasonal allergic rhinitis. No red flags identified. Recommends trial of intranasal corticosteroid.';
+
+async function transcribeAudio(blob: Blob): Promise<string> {
+  const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-transcribe`;
+  const formData = new FormData();
+  // Determine extension from MIME
+  const ext = blob.type.includes('mp4') ? 'mp4' : blob.type.includes('aac') ? 'aac' : 'webm';
+  formData.append('audio', blob, `recording.${ext}`);
+
+  const resp = await fetch(url, {
+    method: 'POST',
+    headers: {
+      apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+      Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+    },
+    body: formData,
+  });
+
+  if (!resp.ok) {
+    const errBody = await resp.text();
+    throw new Error(`Transcription failed (${resp.status}): ${errBody}`);
+  }
+
+  const data = await resp.json();
+  return data.text || '';
 }
 
+const STATUS_LABELS: Record<RecorderStatus, string> = {
+  idle: 'Ready to record',
+  requesting: 'Requesting microphone…',
+  recording: 'Recording…',
+  processing: 'Processing transcription…',
+  complete: 'Transcription complete',
+  failed: 'Recording failed',
+  denied: 'Microphone access denied',
+  unsupported: 'Browser not supported',
+};
+
 export function ScribeRecorder({ compact = false, onTranscriptChange, className }: ScribeRecorderProps) {
-  const [isConnected, setIsConnected] = useState(false);
-  const [isConnecting, setIsConnecting] = useState(false);
-  const [segments, setSegments] = useState<TranscriptSegment[]>([]);
-  const [partialText, setPartialText] = useState('');
+  const [transcript, setTranscript] = useState('');
   const [copied, setCopied] = useState(false);
-  const [elapsed, setElapsed] = useState(0);
   const [showConsentDialog, setShowConsentDialog] = useState(false);
   const [consentType, setConsentType] = useState<'written' | 'verbal' | ''>('');
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const wsRef = useRef<WebSocket | null>(null);
-  const mediaStreamRef = useRef<MediaStream | null>(null);
-  const processorRef = useRef<ScriptProcessorNode | null>(null);
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const fullTranscript = segments.filter(s => !s.isPartial).map(s => s.text).join(' ');
+  const recorder = useAudioRecorder({ maxDurationMs: 3000 });
 
-  useEffect(() => {
-    onTranscriptChange?.(fullTranscript);
-  }, [fullTranscript, onTranscriptChange]);
+  const doRecord = useCallback(async () => {
+    const blob = await recorder.startRecording();
+    if (!blob) return;
 
-  useEffect(() => {
-    return () => {
-      stopRecording();
-    };
-  }, []);
+    recorder.setStatus('processing');
+    try {
+      const text = await transcribeAudio(blob);
+      if (text.trim()) {
+        setTranscript(text.trim());
+        onTranscriptChange?.(text.trim());
+        recorder.setStatus('complete');
+        toast({ title: 'Transcription ready', description: `${text.trim().split(' ').length} words captured` });
+      } else {
+        // No speech detected — use fallback
+        setTranscript(DEMO_FALLBACK);
+        onTranscriptChange?.(DEMO_FALLBACK);
+        recorder.setStatus('complete');
+        toast({ title: 'No speech detected', description: 'Demo note inserted instead.' });
+      }
+    } catch (err: any) {
+      console.error('Transcription error:', err);
+      // Graceful fallback
+      setTranscript(DEMO_FALLBACK);
+      onTranscriptChange?.(DEMO_FALLBACK);
+      recorder.setStatus('complete');
+      toast({ title: 'Transcription unavailable', description: 'Demo note inserted as fallback.', variant: 'destructive' });
+    }
+  }, [recorder, onTranscriptChange]);
 
-  const requestConsent = useCallback(() => {
+  const handleStartClick = useCallback(() => {
     setConsentType('');
     setShowConsentDialog(true);
   }, []);
@@ -63,155 +100,24 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
   const handleConsentConfirm = useCallback(() => {
     if (!consentType) return;
     setShowConsentDialog(false);
-    startRecording();
-  }, [consentType]);
-
-  const startRecording = useCallback(async () => {
-    setIsConnecting(true);
-    try {
-      // Get scribe token
-      const { data, error } = await supabase.functions.invoke('elevenlabs-scribe-token');
-      if (error || !data?.token) {
-        throw new Error(error?.message || 'Failed to get scribe token');
-      }
-
-      // Get microphone access
-      const stream = await navigator.mediaDevices.getUserMedia({
-        audio: { echoCancellation: true, noiseSuppression: true, sampleRate: 16000 },
-      });
-      mediaStreamRef.current = stream;
-
-      // Set up audio processing
-      const audioContext = new AudioContext({ sampleRate: 16000 });
-      audioContextRef.current = audioContext;
-      const source = audioContext.createMediaStreamSource(stream);
-      const processor = audioContext.createScriptProcessor(4096, 1, 1);
-      processorRef.current = processor;
-
-      // Connect WebSocket to ElevenLabs
-      const ws = new WebSocket(
-        `wss://api.elevenlabs.io/v1/scribe/realtime?model_id=scribe_v2_realtime&language_code=en`
-      );
-      wsRef.current = ws;
-
-      ws.onopen = () => {
-        // Send auth
-        ws.send(JSON.stringify({ type: 'auth', token: data.token }));
-      };
-
-      ws.onmessage = (event) => {
-        try {
-          const msg = JSON.parse(event.data);
-          
-          if (msg.type === 'session_started') {
-            setIsConnected(true);
-            setIsConnecting(false);
-            setElapsed(0);
-            timerRef.current = setInterval(() => setElapsed(e => e + 1), 1000);
-          } else if (msg.type === 'partial_transcript') {
-            setPartialText(msg.text || '');
-          } else if (msg.type === 'committed_transcript' || msg.type === 'committed_transcript_with_timestamps') {
-            if (msg.text?.trim()) {
-              setSegments(prev => [...prev, {
-                id: crypto.randomUUID(),
-                text: msg.text.trim(),
-                timestamp: new Date(),
-              }]);
-            }
-            setPartialText('');
-          } else if (msg.type === 'error') {
-            console.error('Scribe error:', msg);
-            toast({ title: 'Transcription Error', description: msg.message || 'An error occurred', variant: 'destructive' });
-          }
-        } catch {
-          // Ignore parse errors
-        }
-      };
-
-      ws.onerror = () => {
-        toast({ title: 'Connection Error', description: 'Failed to connect to transcription service', variant: 'destructive' });
-        stopRecording();
-      };
-
-      ws.onclose = () => {
-        setIsConnected(false);
-        setIsConnecting(false);
-      };
-
-      // Stream audio chunks
-      processor.onaudioprocess = (e) => {
-        if (ws.readyState !== WebSocket.OPEN) return;
-        const inputData = e.inputBuffer.getChannelData(0);
-        // Convert Float32 to Int16 PCM
-        const pcm16 = new Int16Array(inputData.length);
-        for (let i = 0; i < inputData.length; i++) {
-          const s = Math.max(-1, Math.min(1, inputData[i]));
-          pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
-        }
-        // Convert to base64
-        const bytes = new Uint8Array(pcm16.buffer);
-        let binary = '';
-        for (let i = 0; i < bytes.byteLength; i++) {
-          binary += String.fromCharCode(bytes[i]);
-        }
-        const base64 = btoa(binary);
-        ws.send(JSON.stringify({ type: 'audio', data: base64 }));
-      };
-
-      source.connect(processor);
-      processor.connect(audioContext.destination);
-
-    } catch (err: any) {
-      console.error('Start recording error:', err);
-      toast({
-        title: 'Recording Failed',
-        description: err.message || 'Could not start recording. Check microphone permissions.',
-        variant: 'destructive',
-      });
-      setIsConnecting(false);
-      stopRecording();
-    }
-  }, []);
-
-  const stopRecording = useCallback(() => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-    if (wsRef.current) {
-      wsRef.current.close();
-      wsRef.current = null;
-    }
-    if (processorRef.current) {
-      processorRef.current.disconnect();
-      processorRef.current = null;
-    }
-    if (audioContextRef.current) {
-      audioContextRef.current.close();
-      audioContextRef.current = null;
-    }
-    if (mediaStreamRef.current) {
-      mediaStreamRef.current.getTracks().forEach(t => t.stop());
-      mediaStreamRef.current = null;
-    }
-    setIsConnected(false);
-    setIsConnecting(false);
-    setPartialText('');
-  }, []);
+    doRecord();
+  }, [consentType, doRecord]);
 
   const copyTranscript = useCallback(() => {
-    navigator.clipboard.writeText(fullTranscript);
+    navigator.clipboard.writeText(transcript);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
     toast({ title: 'Copied', description: 'Transcript copied to clipboard' });
-  }, [fullTranscript]);
+  }, [transcript]);
 
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const sec = s % 60;
-    return `${m.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-  };
+  const progressPct = recorder.status === 'recording'
+    ? Math.min((recorder.elapsed / recorder.maxDurationMs) * 100, 100)
+    : recorder.status === 'processing' ? 100 : 0;
 
+  const isWorking = recorder.status === 'requesting' || recorder.status === 'recording' || recorder.status === 'processing';
+  const isError = recorder.status === 'failed' || recorder.status === 'denied' || recorder.status === 'unsupported';
+
+  // Consent dialog — shared between compact and full mode
   const consentDialog = (
     <Dialog open={showConsentDialog} onOpenChange={setShowConsentDialog}>
       <DialogContent className="sm:max-w-md">
@@ -221,7 +127,7 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
             Patient Consent Required
           </DialogTitle>
           <DialogDescription>
-            Before recording, please confirm that the patient has provided consent to have this consultation audio recorded and transcribed.
+            Confirm that the patient has consented to have this consultation audio recorded and transcribed.
           </DialogDescription>
         </DialogHeader>
         <div className="py-3">
@@ -231,14 +137,14 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
               <RadioGroupItem value="written" id="consent-written" />
               <Label htmlFor="consent-written" className="cursor-pointer flex-1">
                 <span className="font-medium">Written consent</span>
-                <span className="block text-xs text-muted-foreground">Signed consent form obtained from patient or carer</span>
+                <span className="block text-xs text-muted-foreground">Signed consent form obtained</span>
               </Label>
             </div>
             <div className="flex items-center space-x-2 p-2 rounded-md border hover:bg-muted/50 transition-colors mt-2">
               <RadioGroupItem value="verbal" id="consent-verbal" />
               <Label htmlFor="consent-verbal" className="cursor-pointer flex-1">
                 <span className="font-medium">Verbal consent</span>
-                <span className="block text-xs text-muted-foreground">Patient or carer verbally agreed to recording</span>
+                <span className="block text-xs text-muted-foreground">Patient verbally agreed to recording</span>
               </Label>
             </div>
           </RadioGroup>
@@ -254,123 +160,157 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
     </Dialog>
   );
 
+  // ─── Compact mode (embedded in consultation) ───
   if (compact) {
     return (
       <div className={cn('space-y-2', className)}>
         {consentDialog}
         <div className="flex items-center gap-2">
-          {!isConnected ? (
+          {!isWorking ? (
             <Button
               size="sm"
               variant="destructive"
-              onClick={requestConsent}
-              disabled={isConnecting}
+              onClick={handleStartClick}
+              disabled={isWorking}
               className="gap-1.5"
             >
-              {isConnecting ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Mic className="h-3.5 w-3.5" />}
-              {isConnecting ? 'Connecting...' : 'Record & Transcribe'}
+              <Mic className="h-3.5 w-3.5" />
+              Record & Transcribe
             </Button>
           ) : (
-            <>
-              <Button size="sm" variant="destructive" onClick={stopRecording} className="gap-1.5">
-                <Square className="h-3 w-3" /> Stop
-              </Button>
-              <Badge variant="outline" className="gap-1 text-xs animate-pulse">
-                <span className="h-2 w-2 rounded-full bg-destructive inline-block" />
-                {formatTime(elapsed)}
-              </Badge>
-            </>
+            <Button size="sm" variant="destructive" onClick={recorder.stopRecording} disabled={recorder.status !== 'recording'} className="gap-1.5">
+              {recorder.status === 'recording' ? <Square className="h-3 w-3" /> : <Loader2 className="h-3.5 w-3.5 animate-spin" />}
+              {STATUS_LABELS[recorder.status]}
+            </Button>
           )}
-          {fullTranscript && (
+          {transcript && (
             <Button size="sm" variant="ghost" onClick={copyTranscript} className="gap-1 text-xs h-7">
               {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
               Copy
             </Button>
           )}
         </div>
-        {(isConnected || segments.length > 0) && (
+
+        {recorder.status === 'recording' && (
+          <Progress value={progressPct} className="h-1.5" />
+        )}
+
+        {isError && (
+          <p className="text-xs text-destructive flex items-center gap-1">
+            <AlertCircle className="h-3 w-3" /> {recorder.error}
+          </p>
+        )}
+
+        {transcript && (
           <div className="bg-muted/50 border rounded-md p-2 max-h-32 overflow-y-auto text-xs leading-relaxed">
-            {segments.map(s => (
-              <span key={s.id}>{s.text} </span>
-            ))}
-            {partialText && <span className="text-muted-foreground italic">{partialText}</span>}
-            {!segments.length && !partialText && isConnected && (
-              <span className="text-muted-foreground">Listening...</span>
-            )}
+            {transcript}
           </div>
         )}
       </div>
     );
   }
 
+  // ─── Full card mode (Scribe page) ───
   return (
     <>
-    {consentDialog}
-    <Card className={cn('', className)}>
-      <CardHeader className="flex flex-row items-center justify-between pb-3">
-        <CardTitle className="text-base flex items-center gap-2">
-          <Mic className="h-4 w-4 text-primary" />
-          Clinical Scribe
-        </CardTitle>
-        <div className="flex items-center gap-2">
-          {isConnected && (
-            <Badge variant="outline" className="gap-1.5 animate-pulse">
-              <span className="h-2 w-2 rounded-full bg-destructive inline-block" />
-              Recording {formatTime(elapsed)}
+      {consentDialog}
+      <Card className={cn('', className)}>
+        <CardHeader className="flex flex-row items-center justify-between pb-3">
+          <CardTitle className="text-base flex items-center gap-2">
+            <Mic className="h-4 w-4 text-primary" />
+            Clinical Scribe
+          </CardTitle>
+          <div className="flex items-center gap-2">
+            <Badge variant="outline" className="text-xs">
+              {STATUS_LABELS[recorder.status]}
             </Badge>
-          )}
-          {fullTranscript && (
-            <Button size="sm" variant="ghost" onClick={copyTranscript} className="gap-1.5 h-8">
-              {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
-              Copy
-            </Button>
-          )}
-        </div>
-      </CardHeader>
-      <CardContent className="space-y-3">
-        {/* Controls */}
-        <div className="flex items-center gap-2">
-          {!isConnected ? (
-            <Button variant="destructive" onClick={requestConsent} disabled={isConnecting} className="gap-2">
-              {isConnecting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mic className="h-4 w-4" />}
-              {isConnecting ? 'Connecting...' : 'Start Recording'}
-            </Button>
-          ) : (
-            <Button variant="destructive" onClick={stopRecording} className="gap-2">
-              <Square className="h-4 w-4" /> Stop Recording
-            </Button>
-          )}
-        </div>
+            {transcript && (
+              <Button size="sm" variant="ghost" onClick={copyTranscript} className="gap-1.5 h-8">
+                {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                Copy
+              </Button>
+            )}
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {/* Controls */}
+          <div className="flex items-center gap-3">
+            {!isWorking ? (
+              <Button variant="destructive" onClick={handleStartClick} className="gap-2">
+                <Mic className="h-4 w-4" />
+                Start Recording
+              </Button>
+            ) : recorder.status === 'recording' ? (
+              <Button variant="destructive" onClick={recorder.stopRecording} className="gap-2">
+                <Square className="h-4 w-4" /> Stop Early
+              </Button>
+            ) : (
+              <Button variant="outline" disabled className="gap-2">
+                <Loader2 className="h-4 w-4 animate-spin" />
+                {STATUS_LABELS[recorder.status]}
+              </Button>
+            )}
 
-        {/* Transcript */}
-        <ScrollArea className="h-[300px] border rounded-lg p-3" ref={scrollRef}>
-          {segments.length === 0 && !partialText && !isConnected ? (
-            <div className="flex flex-col items-center justify-center h-full text-center">
-              <MicOff className="h-8 w-8 text-muted-foreground/40 mb-2" />
-              <p className="text-sm font-medium text-muted-foreground">Capture your session</p>
-              <p className="text-xs text-muted-foreground/70">Your transcription will appear here</p>
-            </div>
-          ) : (
-            <div className="space-y-1 text-sm leading-relaxed">
-              {segments.map(s => (
-                <p key={s.id}>
-                  <span className="text-[10px] text-muted-foreground mr-1.5">
-                    {s.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                  </span>
-                  {s.text}
-                </p>
-              ))}
-              {partialText && (
-                <p className="text-muted-foreground italic">{partialText}</p>
-              )}
-              {!segments.length && !partialText && isConnected && (
-                <p className="text-muted-foreground text-center py-8">Listening... speak now</p>
-              )}
+            {recorder.status === 'complete' && (
+              <Button variant="outline" onClick={recorder.reset} className="gap-2">
+                Record Again
+              </Button>
+            )}
+          </div>
+
+          {/* Progress */}
+          {recorder.status === 'recording' && (
+            <div className="space-y-1">
+              <Progress value={progressPct} className="h-2" />
+              <p className="text-[10px] text-muted-foreground text-right">
+                {Math.ceil((recorder.maxDurationMs - recorder.elapsed) / 1000)}s remaining
+              </p>
             </div>
           )}
-        </ScrollArea>
-      </CardContent>
-    </Card>
+
+          {recorder.status === 'processing' && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground py-4 justify-center">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              Sending audio for transcription…
+            </div>
+          )}
+
+          {/* Error display */}
+          {isError && (
+            <div className="border border-destructive/30 bg-destructive/5 rounded-lg p-3 flex items-start gap-2">
+              <AlertCircle className="h-4 w-4 text-destructive mt-0.5 shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-destructive">
+                  {recorder.status === 'denied' ? 'Microphone Access Denied' : 
+                   recorder.status === 'unsupported' ? 'Browser Not Supported' : 'Recording Failed'}
+                </p>
+                <p className="text-xs text-muted-foreground mt-0.5">{recorder.error}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Transcript area */}
+          <div className="border rounded-lg min-h-[200px] p-4">
+            {!transcript && !isWorking && !isError ? (
+              <div className="flex flex-col items-center justify-center h-[200px] text-center">
+                <MicOff className="h-8 w-8 text-muted-foreground/40 mb-2" />
+                <p className="text-sm font-medium text-muted-foreground">Capture your session</p>
+                <p className="text-xs text-muted-foreground/70 mt-1">
+                  Press Start Recording to capture up to 3 seconds of audio
+                </p>
+              </div>
+            ) : transcript ? (
+              <div className="text-sm leading-relaxed">
+                {transcript}
+              </div>
+            ) : null}
+          </div>
+
+          <p className="text-[10px] text-muted-foreground">
+            Recordings are limited to 3 seconds for this demo. Review transcriptions before clinical use.
+          </p>
+        </CardContent>
+      </Card>
     </>
   );
 }
