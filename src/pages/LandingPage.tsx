@@ -294,7 +294,7 @@ export default function LandingPage() {
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-white mb-8"
+            className="text-[2.25rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-white mb-8 break-words"
             style={{ fontFamily: "'Recoleta', 'Manrope', serif" }}>
               <span className="text-[#2dd4bf]">ChemistCare</span> Your partner for full scope of practice, pharmacy prescribing
             </motion.h1>
