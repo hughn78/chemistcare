@@ -491,6 +491,11 @@ ${pharmacistCredentials}`;
               </Card>
             </div>
 
+            {/* Destination Weather Context */}
+            {form.itinerary.length > 0 && form.itinerary[0].destination && (
+              <TravelWeatherCard destination={form.itinerary[0].destination} />
+            )}
+
             <div className="flex justify-between">
               <Button variant="outline" onClick={goBack}><ArrowLeft className="mr-2 h-4 w-4" /> Back</Button>
               <Button onClick={goNext} disabled={blocked}>
