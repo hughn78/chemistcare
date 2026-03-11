@@ -134,7 +134,7 @@ export default function PbsLookup() {
                   </TableHeader>
                   <TableBody>
                     {filtered.map(item => (
-                      <TableRow key={item.pbsCode}>
+                      <TableRow key={item.pbsCode} className="cursor-pointer hover:bg-accent/10" onClick={() => { setSelectedMedicine(item.name); setDrawerOpen(true); }}>
                         <TableCell className="font-medium">{item.name}</TableCell>
                         <TableCell className="font-mono text-xs">{item.pbsCode}</TableCell>
                         <TableCell className="hidden md:table-cell font-mono text-xs text-muted-foreground">{item.atcCode}</TableCell>
@@ -152,6 +152,7 @@ export default function PbsLookup() {
           </CardContent>
         </Card>
       </div>
+      <MedicineDetailDrawer open={drawerOpen} onOpenChange={setDrawerOpen} medicineName={selectedMedicine} />
     </ClinicalLayout>
   );
 }
