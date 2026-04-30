@@ -20,7 +20,9 @@ import {
   FileBarChart,
   HeartHandshake,
   Plug,
+  ListChecks,
 } from 'lucide-react';
+import { getPinnedConditions } from '@/lib/conditionRegistry';
 import logoImg from '@/assets/chemistcare-logo.png';
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
