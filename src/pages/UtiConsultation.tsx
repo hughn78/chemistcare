@@ -226,7 +226,9 @@ const UtiConsultation = () => {
                 <Stethoscope className="h-5 w-5 text-accent shrink-0" />
                 <h1 className="text-base sm:text-lg font-bold truncate">New Consultation: Uncomplicated UTI</h1>
                 <Badge className="clinical-badge clinical-badge-danger">Acute</Badge>
-                <Badge variant="outline" className="text-[10px]">Vic CPSP · v{utiTemplate.templateVersion}</Badge>
+                <Badge variant="outline" className="text-[10px]" title={protocolStamp.protocolName}>
+                  {protocolStamp.protocolJurisdiction} protocol v{protocolStamp.protocolJurisdictionVersion} · template v{utiTemplate.templateVersion}
+                </Badge>
               </div>
               <p className="text-[11px] text-muted-foreground mt-1">
                 Suspected uncomplicated lower UTI in non-pregnant adult women — Victorian pharmacist prescribing scope.
