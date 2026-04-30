@@ -264,6 +264,11 @@ export const utiTemplate: ConditionTemplate = {
   category: 'acute',
   jurisdictions: ['VIC'],
   templateVersion: 1,
+  conditionTemplateVersion: '1.0.0',
+  jurisdictionProtocolVersion: 'VIC-PP-UTI-2026.1',
+  protocolStatus: 'active',
+  protocolLastReviewed: '2026-04-01',
+  protocolSourceLabel: 'Victorian pharmacist prescribing protocol',
   lastReviewed: '2026-04-01',
   legacyCondition: getConditionById('uti')!,
 

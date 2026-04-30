@@ -212,11 +212,24 @@ export interface ConditionTemplate {
   name: string;
   /** Acute / Chronic / etc. */
   category: 'acute' | 'chronic' | 'preventive' | 'resupply' | 'travel';
-  /** Jurisdiction the protocol is valid in. */
+  /** Jurisdiction codes the protocol is valid in (e.g. ['VIC']). */
   jurisdictions: string[];
-  /** Bumped when the template shape changes. */
+  /** Legacy numeric version. New code should prefer
+   *  `conditionTemplateVersion` (semver). Kept for back-compat. */
   templateVersion: number;
+  /** Semver template version, e.g. '1.0.0'. Bumped when template shape
+   *  or clinical content changes. */
+  conditionTemplateVersion: string;
+  /** Upstream regulator's protocol version, e.g. 'VIC-PP-UTI-2026.1'. */
+  jurisdictionProtocolVersion: string;
+  /** Lifecycle status of this protocol. */
+  protocolStatus: import('@/lib/protocolVersion').ProtocolStatus;
   /** Last clinical review date (ISO). */
+  protocolLastReviewed?: string;
+  /** Display label for the source of truth, e.g.
+   *  'Victorian pharmacist prescribing protocol'. */
+  protocolSourceLabel?: string;
+  /** @deprecated use `protocolLastReviewed`. */
   lastReviewed?: string;
   /** Source of truth for the underlying clinical record (used by
    *  legacy components like ConditionDetail). */

@@ -447,45 +447,60 @@ export type Database = {
       }
       consult_audit_events: {
         Row: {
+          condition_slug: string | null
+          condition_template_version: string | null
           consult_id: string
           created_at: string
           error_reason: string | null
           event_type: string
           id: string
+          jurisdiction: string | null
+          jurisdiction_protocol_version: string | null
           metadata: Json | null
           protocol_jurisdiction: string | null
           protocol_jurisdiction_version: string | null
           protocol_name: string | null
+          protocol_snapshot: Json | null
           step: string | null
           template_version: number | null
           user_id: string | null
           validation_result: Json | null
         }
         Insert: {
+          condition_slug?: string | null
+          condition_template_version?: string | null
           consult_id: string
           created_at?: string
           error_reason?: string | null
           event_type: string
           id?: string
+          jurisdiction?: string | null
+          jurisdiction_protocol_version?: string | null
           metadata?: Json | null
           protocol_jurisdiction?: string | null
           protocol_jurisdiction_version?: string | null
           protocol_name?: string | null
+          protocol_snapshot?: Json | null
           step?: string | null
           template_version?: number | null
           user_id?: string | null
           validation_result?: Json | null
         }
         Update: {
+          condition_slug?: string | null
+          condition_template_version?: string | null
           consult_id?: string
           created_at?: string
           error_reason?: string | null
           event_type?: string
           id?: string
+          jurisdiction?: string | null
+          jurisdiction_protocol_version?: string | null
           metadata?: Json | null
           protocol_jurisdiction?: string | null
           protocol_jurisdiction_version?: string | null
           protocol_name?: string | null
+          protocol_snapshot?: Json | null
           step?: string | null
           template_version?: number | null
           user_id?: string | null
@@ -507,11 +522,15 @@ export type Database = {
           clinical_notes: string | null
           condition_id: string | null
           condition_name: string | null
+          condition_slug: string | null
+          condition_template_version: string | null
           created_at: string
           created_by: string | null
           deviation_justification: string | null
           differentials: Json | null
           finalised_at: string | null
+          finalised_note: string | null
+          finalised_note_protocol_snapshot: Json | null
           follow_up_plan: string | null
           full_note_text: string | null
           gp_clinic: string | null
@@ -519,6 +538,8 @@ export type Database = {
           gp_name: string | null
           gp_phone: string | null
           id: string
+          jurisdiction: string | null
+          jurisdiction_protocol_version: string | null
           patient_allergies: string | null
           patient_comorbidities: string | null
           patient_dob: string | null
@@ -531,7 +552,10 @@ export type Database = {
           pinned_evidence: Json | null
           protocol_jurisdiction: string | null
           protocol_jurisdiction_version: string | null
+          protocol_last_reviewed: string | null
           protocol_name: string | null
+          protocol_source_label: string | null
+          protocol_status: string | null
           red_flag_triggered: boolean | null
           red_flags_checked: Json | null
           referral_notes: string | null
@@ -548,11 +572,15 @@ export type Database = {
           clinical_notes?: string | null
           condition_id?: string | null
           condition_name?: string | null
+          condition_slug?: string | null
+          condition_template_version?: string | null
           created_at?: string
           created_by?: string | null
           deviation_justification?: string | null
           differentials?: Json | null
           finalised_at?: string | null
+          finalised_note?: string | null
+          finalised_note_protocol_snapshot?: Json | null
           follow_up_plan?: string | null
           full_note_text?: string | null
           gp_clinic?: string | null
@@ -560,6 +588,8 @@ export type Database = {
           gp_name?: string | null
           gp_phone?: string | null
           id?: string
+          jurisdiction?: string | null
+          jurisdiction_protocol_version?: string | null
           patient_allergies?: string | null
           patient_comorbidities?: string | null
           patient_dob?: string | null
@@ -572,7 +602,10 @@ export type Database = {
           pinned_evidence?: Json | null
           protocol_jurisdiction?: string | null
           protocol_jurisdiction_version?: string | null
+          protocol_last_reviewed?: string | null
           protocol_name?: string | null
+          protocol_source_label?: string | null
+          protocol_status?: string | null
           red_flag_triggered?: boolean | null
           red_flags_checked?: Json | null
           referral_notes?: string | null
@@ -589,11 +622,15 @@ export type Database = {
           clinical_notes?: string | null
           condition_id?: string | null
           condition_name?: string | null
+          condition_slug?: string | null
+          condition_template_version?: string | null
           created_at?: string
           created_by?: string | null
           deviation_justification?: string | null
           differentials?: Json | null
           finalised_at?: string | null
+          finalised_note?: string | null
+          finalised_note_protocol_snapshot?: Json | null
           follow_up_plan?: string | null
           full_note_text?: string | null
           gp_clinic?: string | null
@@ -601,6 +638,8 @@ export type Database = {
           gp_name?: string | null
           gp_phone?: string | null
           id?: string
+          jurisdiction?: string | null
+          jurisdiction_protocol_version?: string | null
           patient_allergies?: string | null
           patient_comorbidities?: string | null
           patient_dob?: string | null
@@ -613,7 +652,10 @@ export type Database = {
           pinned_evidence?: Json | null
           protocol_jurisdiction?: string | null
           protocol_jurisdiction_version?: string | null
+          protocol_last_reviewed?: string | null
           protocol_name?: string | null
+          protocol_source_label?: string | null
+          protocol_status?: string | null
           red_flag_triggered?: boolean | null
           red_flags_checked?: Json | null
           referral_notes?: string | null
