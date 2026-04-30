@@ -22,12 +22,18 @@ import { utiTemplate } from './uti';
 import { herpesZosterTemplate } from './herpesZoster';
 import { ocpResupplyTemplate } from './ocpResupply';
 import { smokingCessationTemplate } from './smokingCessation';
+import { impetigoTemplate } from './impetigo';
+import { rhinitisTemplate } from './rhinitis';
+import { gordTemplate } from './gord';
 
 export const CONDITION_TEMPLATES: ConditionTemplate[] = [
   utiTemplate,
   herpesZosterTemplate,
   ocpResupplyTemplate,
   smokingCessationTemplate,
+  impetigoTemplate,
+  rhinitisTemplate,
+  gordTemplate,
 ];
 
 const BY_SLUG = new Map(CONDITION_TEMPLATES.map(t => [t.slug, t]));
