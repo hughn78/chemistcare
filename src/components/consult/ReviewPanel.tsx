@@ -92,7 +92,7 @@ export function ReviewPanel({
                 <a href="/patients">View Patient</a>
               </Button>
               <Button size="sm" asChild>
-                <a href="/consultation">New Consultation</a>
+                <a href="/consultations/new">New Consultation</a>
               </Button>
             </div>
           </CardContent>
