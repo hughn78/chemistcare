@@ -45,6 +45,9 @@ import {
   type UtiConsultationData,
 } from '@/lib/conditionTemplates/uti';
 import type { TreatmentOptionDefinition } from '@/lib/conditionTemplates/types';
+import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
+import { useConsultAudit } from '@/hooks/useConsultAudit';
+import { supabase } from '@/integrations/supabase/client';
 
 const DRAFT_KEY = 'chemistcare:uti_consultation_draft_v1';
 
