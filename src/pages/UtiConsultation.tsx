@@ -102,7 +102,16 @@ const UtiConsultation = () => {
 
   // Protocol stamp — captured on every audit event and finalised note.
   const protocolStamp = useMemo(
-    () => buildProtocolStamp(utiTemplate.templateVersion, utiTemplate.jurisdictions[0] ?? 'VIC'),
+    () => buildProtocolStamp({
+      conditionSlug: utiTemplate.slug,
+      conditionTemplateVersion: utiTemplate.conditionTemplateVersion,
+      templateVersionNumber: utiTemplate.templateVersion,
+      jurisdiction: utiTemplate.jurisdictions[0] ?? 'VIC',
+      jurisdictionProtocolVersion: utiTemplate.jurisdictionProtocolVersion,
+      protocolStatus: utiTemplate.protocolStatus,
+      protocolSourceLabel: utiTemplate.protocolSourceLabel,
+      protocolLastReviewed: utiTemplate.protocolLastReviewed,
+    }),
     [],
   );
 
@@ -225,9 +234,17 @@ const UtiConsultation = () => {
               <div className="flex items-center gap-2 flex-wrap">
                 <Stethoscope className="h-5 w-5 text-accent shrink-0" />
                 <h1 className="text-base sm:text-lg font-bold truncate">New Consultation: Uncomplicated UTI</h1>
-                <Badge className="clinical-badge clinical-badge-danger">Acute</Badge>
+                <Badge className="clinical-badge clinical-badge-danger">Acute · {protocolStamp.jurisdiction}</Badge>
                 <Badge variant="outline" className="text-[10px]" title={protocolStamp.protocolName}>
-                  {protocolStamp.protocolJurisdiction} protocol v{protocolStamp.jurisdictionProtocolVersion} · template v{utiTemplate.templateVersion}
+                  Template v{utiTemplate.conditionTemplateVersion} · {protocolStamp.jurisdictionProtocolVersion}
+                </Badge>
+                <Badge variant="outline" className={`text-[10px] capitalize ${
+                  utiTemplate.protocolStatus === 'active' ? 'border-clinical-safe text-clinical-safe' :
+                  utiTemplate.protocolStatus === 'draft' ? 'border-clinical-warning text-clinical-warning' :
+                  utiTemplate.protocolStatus === 'needs_review' ? 'border-clinical-warning text-clinical-warning' :
+                  'border-clinical-danger text-clinical-danger'
+                }`}>
+                  {utiTemplate.protocolStatus.replace('_', ' ')}
                 </Badge>
               </div>
               <p className="text-[11px] text-muted-foreground mt-1">
@@ -731,10 +748,22 @@ const UtiConsultation = () => {
                             referral_notes: data.referralNotes ?? null,
                             full_note_text: noteWithFooter,
                             finalised_at: new Date().toISOString(),
+                            // Legacy + new flat columns
                             template_version: utiTemplate.templateVersion,
                             protocol_jurisdiction: protocolStamp.protocolJurisdiction,
                             protocol_jurisdiction_version: protocolStamp.jurisdictionProtocolVersion,
                             protocol_name: protocolStamp.protocolName,
+                            condition_slug: utiTemplate.slug,
+                            condition_template_version: utiTemplate.conditionTemplateVersion,
+                            jurisdiction: protocolStamp.jurisdiction,
+                            protocol_source_label: utiTemplate.protocolSourceLabel ?? null,
+                            protocol_last_reviewed: utiTemplate.protocolLastReviewed ?? null,
+                            protocol_status: utiTemplate.protocolStatus,
+                            finalised_note: noteWithFooter,
+                            finalised_note_protocol_snapshot: {
+                              ...protocolStamp,
+                              capturedAt: new Date().toISOString(),
+                            },
                           };
 
                           const { data: inserted, error } = await (supabase.from('consultations') as any)

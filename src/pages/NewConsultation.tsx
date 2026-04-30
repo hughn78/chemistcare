@@ -584,7 +584,12 @@ const NewConsultation = () => {
 
     setConsultStatus('submitting');
 
-    const protocolStamp = buildProtocolStamp(registryEntry?.templateVersion ?? null);
+    const protocolStamp = buildProtocolStamp({
+      conditionSlug: registryEntry?.slug ?? selectedCondition ?? null,
+      conditionTemplateVersion: registryEntry ? String(registryEntry.templateVersion ?? 1) : 'unknown',
+      templateVersionNumber: registryEntry?.templateVersion ?? null,
+      protocolStatus: registryEntry ? 'needs_review' : 'needs_review',
+    });
 
     try {
       const consultData = {
@@ -630,6 +635,16 @@ const NewConsultation = () => {
         protocol_jurisdiction: protocolStamp.protocolJurisdiction,
         protocol_jurisdiction_version: protocolStamp.jurisdictionProtocolVersion,
         protocol_name: protocolStamp.protocolName,
+        // New richer columns
+        condition_slug: protocolStamp.conditionSlug,
+        condition_template_version: protocolStamp.conditionTemplateVersion,
+        jurisdiction: protocolStamp.jurisdiction,
+        protocol_status: protocolStamp.protocolStatus ?? 'needs_review',
+        protocol_source_label: protocolStamp.protocolSourceLabel ?? null,
+        finalised_note: formData.clinicalNotes
+          ? `${formData.clinicalNotes}\n\n— ${formatProtocolFooter(protocolStamp)}`
+          : null,
+        finalised_note_protocol_snapshot: { ...protocolStamp, capturedAt: new Date().toISOString() },
       };
 
       const { data, error } = await (supabase.from('consultations') as any)
