@@ -172,7 +172,19 @@ const ConsultationPicker = () => {
   const [activeCategory, setActiveCategory] = useState<ConditionCategory | null>(null);
   const [recent, setRecent] = useState<string[]>([]);
   const [draft, setDraft] = useState<LegacyDraftInfo>({ hasDraft: false });
+  const { isPinned, setPinned } = useConditionPins();
   const errorMessage = searchParams.get('error');
+
+  const handleTogglePin = (entry: ConditionRegistryEntry) => {
+    const willPin = !isPinned(entry.id);
+    setPinned(entry.id, willPin);
+    toast.success(willPin ? `Pinned ${entry.name} to sidebar` : `Unpinned ${entry.name}`, {
+      action: {
+        label: 'Undo',
+        onClick: () => setPinned(entry.id, !willPin),
+      },
+    });
+  };
 
   useEffect(() => {
     setRecent(loadRecentSlugs());
