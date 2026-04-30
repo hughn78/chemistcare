@@ -35,13 +35,16 @@ const Dashboard = () => {
   }, []);
 
   const handleStartNew = () => {
-    // Clear any existing draft to ensure fresh state
+    // Clear any existing draft to ensure fresh state, then route to the
+    // condition picker — the new entry point for every consultation.
     try { localStorage.removeItem(DRAFT_KEY); } catch {}
-    navigate('/consultation');
+    navigate('/consultations/new');
   };
 
   const handleResumeDraft = () => {
-    navigate('/consultation');
+    // The picker inspects the saved draft and offers a typed resume into the
+    // correct condition pathway (or prompts for a condition if legacy).
+    navigate('/consultations/new');
     setShowDraftMenu(false);
   };
 
