@@ -14,6 +14,8 @@ import {
   RotateCcw,
   Trash2,
   AlertCircle,
+  Pin,
+  PinOff,
 } from 'lucide-react';
 import {
   CONDITION_REGISTRY,
@@ -23,6 +25,8 @@ import {
   type ConditionRegistryEntry,
   getConditionBySlug,
 } from '@/lib/conditionRegistry';
+import { useConditionPins } from '@/lib/useConditionPins';
+import { toast } from 'sonner';
 
 const RECENT_KEY = 'chemistcare:recent_consult_slugs';
 const DRAFT_KEY = 'chemistcare_consultation_draft';
