@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getConditionById } from '@/data/conditions';
+import { getSlugForConditionId } from '@/lib/conditionRegistry';
 import { AlertTriangle, ArrowLeft, Shield, Pill, FileText, Clock, XCircle, CheckCircle } from 'lucide-react';
 
 const ConditionDetail = () => {
@@ -170,7 +171,10 @@ const ConditionDetail = () => {
 
         {/* Start Consultation */}
         <div className="flex justify-end">
-          <Button onClick={() => navigate(`/consultation?condition=${condition.id}`)} className="gap-2">
+          <Button onClick={() => {
+            const slug = getSlugForConditionId(condition.id);
+            navigate(slug ? `/consultations/new/${slug}` : '/consultations/new');
+          }} className="gap-2">
             Start Consultation for {condition.name}
           </Button>
         </div>

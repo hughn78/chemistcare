@@ -7,6 +7,8 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import LandingPage from "./pages/LandingPage";
 import Index from "./pages/Index";
 import NewConsultation from "./pages/NewConsultation";
+import ConsultationPicker from "./pages/ConsultationPicker";
+import ConsultationRedirect from "./pages/ConsultationRedirect";
 import Patients from "./pages/Patients";
 import ConditionsLibrary from "./pages/ConditionsLibrary";
 import ConditionDetail from "./pages/ConditionDetail";
@@ -40,7 +42,12 @@ const router = createBrowserRouter([
   { path: "/", element: <LandingPage />, errorElement: <ErrorBoundary><NotFound /></ErrorBoundary> },
   { path: "/full-scope-of-practice", element: <FullScopeOfPractice /> },
   { path: "/dashboard", element: <Index /> },
-  { path: "/consultation", element: <NewConsultation /> },
+  // Condition-aware consultation routing (single source of truth: conditionRegistry)
+  { path: "/consultations/new", element: <ConsultationPicker /> },
+  { path: "/consultations/new/:conditionSlug", element: <NewConsultation /> },
+  // Legacy: /consultation and /consultation?condition=<id> still link in from
+  // Dashboard, ConditionDetail, PrescribingLog, ReviewPanel — redirect them.
+  { path: "/consultation", element: <ConsultationRedirect /> },
   { path: "/patients", element: <Patients /> },
   { path: "/conditions", element: <ConditionsLibrary /> },
   { path: "/conditions/:id", element: <ConditionDetail /> },

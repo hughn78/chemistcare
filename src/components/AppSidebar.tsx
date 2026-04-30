@@ -20,7 +20,9 @@ import {
   FileBarChart,
   HeartHandshake,
   Plug,
+  ListChecks,
 } from 'lucide-react';
+import { getPinnedConditions } from '@/lib/conditionRegistry';
 import logoImg from '@/assets/chemistcare-logo.png';
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
@@ -42,14 +44,24 @@ import {
 } from '@/components/ui/sidebar';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 
+// Pinned condition shortcuts (Quick Start). Sourced from the central
+// conditionRegistry so this list stays in sync with the picker, conditions
+// library, and routing — never hand-curated in two places.
+const pinnedConditionItems = getPinnedConditions().map(c => ({
+  title: c.name,
+  url: `/consultations/new/${c.slug}`,
+  icon: c.category === 'travel' ? Plane : Pill,
+}));
+
 const mainItems = [
   { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
   {
     title: 'New Consultation',
-    url: '/consultation',
+    url: '/consultations/new',
     icon: FilePlus,
     children: [
-      { title: 'Travel Medicine', url: '/travel-consultation', icon: Plane },
+      ...pinnedConditionItems,
+      { title: 'All conditions', url: '/consultations/new', icon: ListChecks },
     ],
   },
   { title: 'Calendar', url: '/calendar', icon: CalendarDays },

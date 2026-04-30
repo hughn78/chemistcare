@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { PatientEducationPanel } from '@/components/clinical-api/PatientEducationPanel';
 import { MedicineDetailDrawer } from '@/components/clinical-api/MedicineDetailDrawer';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate, useParams } from 'react-router-dom';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,6 +14,12 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 import { CONDITIONS, getConditionById } from '@/data/conditions';
+import {
+  CONDITION_REGISTRY,
+  getConditionBySlug,
+  getRegistryEntryById,
+} from '@/lib/conditionRegistry';
+import { recordRecentCondition } from '@/pages/ConsultationPicker';
 import { CONSULTATION_STEPS, ConsultationStep } from '@/types/clinical';
 import { useAutosave } from '@/hooks/useAutosave';
 import { useNavigationGuard } from '@/hooks/useNavigationGuard';
@@ -37,7 +43,7 @@ import { useToast } from '@/hooks/use-toast';
 import {
   AlertTriangle, CheckCircle, XCircle, ChevronRight, ChevronLeft,
   Shield, Pill, FileText, User, Stethoscope, Brain, Lock, RotateCcw, Trash2, LayoutTemplate,
-  Circle, ChevronDown, Pen, AlertCircle,
+  Circle, ChevronDown, Pen, AlertCircle, Repeat,
 } from 'lucide-react';
 import { toast as sonnerToast } from 'sonner';
 import { CalculatorsDialog } from '@/components/CalculatorsDialog';
@@ -211,9 +217,39 @@ const NewConsultation = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { logEvent } = useConsultAudit();
+  const params = useParams<{ conditionSlug?: string }>();
+
+  // Resolve condition strictly from the URL slug. Fall back to the legacy
+  // `?condition=<id>` query only for backward compatibility with older links
+  // (e.g. ConditionDetail) — never to a hardcoded default.
+  const slugFromRoute = params.conditionSlug;
+  const legacyConditionId = !slugFromRoute ? searchParams.get('condition') : null;
+  const initialCondition = (() => {
+    if (slugFromRoute) {
+      const entry = getConditionBySlug(slugFromRoute);
+      return entry?.id ?? '';
+    }
+    if (legacyConditionId) {
+      const entry = getRegistryEntryById(legacyConditionId);
+      return entry?.id ?? '';
+    }
+    return '';
+  })();
+
+  // Hard guard: an explicit slug that doesn't resolve must redirect to the
+  // picker — we never silently fall back to Travel Medicine or any other
+  // pathway. (See the "Hard Requirements" in the New Consultation spec.)
+  useEffect(() => {
+    if (slugFromRoute && !getConditionBySlug(slugFromRoute)) {
+      navigate(`/consultations/new?error=${encodeURIComponent('Unknown consultation type — please pick one below.')}`, { replace: true });
+    } else if (!slugFromRoute && !legacyConditionId) {
+      // Reached `/consultation` (legacy) without a condition — bounce to picker.
+      navigate('/consultations/new', { replace: true });
+    }
+  }, [slugFromRoute, legacyConditionId, navigate]);
 
   const [currentStep, setCurrentStep] = useState<ConsultationStep>('patient');
-  const [selectedCondition, setSelectedCondition] = useState(searchParams.get('condition') || '');
+  const [selectedCondition, setSelectedCondition] = useState(initialCondition);
   const [redFlagsChecked, setRedFlagsChecked] = useState<Record<string, boolean>>({});
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [differentials, setDifferentials] = useState([{ diagnosis: '', reasonExcluded: '' }]);
@@ -240,9 +276,38 @@ const NewConsultation = () => {
   const [savedSketches, setSavedSketches] = useState<{ dataUrl: string; timestamp: string }[]>([]);
 
   const condition = useMemo(() => getConditionById(selectedCondition), [selectedCondition]);
+  const registryEntry = useMemo(() => getRegistryEntryById(selectedCondition), [selectedCondition]);
   const stepIndex = CONSULTATION_STEPS.findIndex(s => s.key === currentStep);
   const hasRedFlagTriggered = Object.values(redFlagsChecked).some(Boolean);
   const canProceedFromAssessment = !hasRedFlagTriggered;
+
+  // Patient data is "in progress" once any clinical/identity field has been
+  // touched. Used to gate the "Change condition" action with a confirm.
+  const patientDataExists = useMemo(() => {
+    return ['firstName', 'lastName', 'dob', 'allergies', 'medications', 'comorbidities'].some(
+      k => (formData[k] || '').trim().length > 0,
+    ) || differentials.some(d => d.diagnosis.trim()) || Object.values(redFlagsChecked).some(Boolean);
+  }, [formData, differentials, redFlagsChecked]);
+
+  // Track this condition in "recently used" the moment we render a real
+  // consultation so the picker can surface it. Idempotent per slug.
+  useEffect(() => {
+    if (registryEntry?.slug) {
+      recordRecentCondition(registryEntry.slug);
+    }
+  }, [registryEntry?.slug]);
+
+  const handleChangeCondition = useCallback(() => {
+    if (patientDataExists) {
+      const ok = window.confirm(
+        'Changing condition will discard the current consultation data. Continue?',
+      );
+      if (!ok) return;
+    }
+    // Clear all in-progress state and bounce to picker.
+    try { localStorage.removeItem(DRAFT_KEY); } catch {}
+    navigate('/consultations/new');
+  }, [patientDataExists, navigate]);
 
   // Re-evaluate safety whenever relevant inputs change
   useEffect(() => {
@@ -537,9 +602,16 @@ const NewConsultation = () => {
         red_flags_checked: redFlagsChecked,
         red_flag_triggered: hasRedFlagTriggered,
         referral_notes: formData.referralNotes || null,
-        assessment_data: Object.fromEntries(
-          Object.entries(formData).filter(([k]) => k.startsWith('assess_'))
-        ),
+        // `condition_slug` and `template_version` are stored inside the
+        // existing `assessment_data` jsonb to avoid a schema migration. Once
+        // the consultations table grows dedicated columns, promote them.
+        assessment_data: {
+          ...Object.fromEntries(
+            Object.entries(formData).filter(([k]) => k.startsWith('assess_'))
+          ),
+          __conditionSlug: registryEntry?.slug ?? null,
+          __templateVersion: registryEntry?.templateVersion ?? null,
+        },
         working_diagnosis: formData.workingDiagnosis || null,
         differentials: differentials.filter(d => d.diagnosis.trim()),
         selected_therapy_id: formData.selectedTherapy || null,
@@ -620,6 +692,33 @@ const NewConsultation = () => {
                   </div>
                 </CardContent>
               </Card>
+            )}
+
+            {/* Condition header — proves to the pharmacist exactly which
+                protocol pathway is loaded, and offers a confirm-protected
+                way to switch back to the picker. */}
+            {condition && registryEntry && (
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-lg border bg-card px-4 py-3">
+                <div className="min-w-0">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    New Consultation
+                  </p>
+                  <h1 className="text-base sm:text-lg font-bold truncate">
+                    {condition.name}
+                  </h1>
+                  <p className="text-[11px] text-muted-foreground mt-0.5">
+                    Victorian pharmacist prescriber pathway · {registryEntry.redFlagCount} red flags · {registryEntry.treatmentOptionCount} treatment options
+                  </p>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="gap-1.5 shrink-0"
+                  onClick={handleChangeCondition}
+                >
+                  <Repeat className="h-3.5 w-3.5" /> Change condition
+                </Button>
+              </div>
             )}
 
             {/* Step indicator + tools */}
@@ -822,26 +921,10 @@ const NewConsultation = () => {
                   </CardContent>
                 </Card>
 
-                {/* Condition Selection */}
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm">Select Presenting Condition <span className="text-clinical-danger">*</span></CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <Select value={selectedCondition} onValueChange={setSelectedCondition}>
-                      <SelectTrigger className={attemptedProgress && !selectedCondition ? 'border-clinical-danger' : ''}>
-                        <SelectValue placeholder="Select a condition..." />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {CONDITIONS.map(c => (
-                          <SelectItem key={c.id} value={c.id}>{c.name} ({c.classification})</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {attemptedProgress && !selectedCondition && <p className="text-xs mt-1 text-clinical-danger">Required — select a condition</p>}
-                  </CardContent>
-                </Card>
-
+                {/* Condition Selection card removed — the consultation
+                    pathway is now driven by the URL slug and chosen on the
+                    Consultation Picker. The header above shows the active
+                    condition and offers "Change condition". */}
                 <div className="flex justify-end">
                   <Button
                     onClick={() => {

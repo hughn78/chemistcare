@@ -131,7 +131,7 @@ const PrescribingLog = () => {
             <CardContent className="p-8 text-center text-muted-foreground">
               <FileText className="h-8 w-8 mx-auto mb-3 opacity-30" />
               <p className="text-sm">No prescribing records yet. Complete a consultation to generate entries.</p>
-              <Button variant="outline" size="sm" className="mt-4" onClick={() => navigate('/consultation')}>
+              <Button variant="outline" size="sm" className="mt-4" onClick={() => navigate('/consultations/new')}>
                 Start Consultation
               </Button>
             </CardContent>
