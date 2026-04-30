@@ -43,7 +43,7 @@ import { useToast } from '@/hooks/use-toast';
 import {
   AlertTriangle, CheckCircle, XCircle, ChevronRight, ChevronLeft,
   Shield, Pill, FileText, User, Stethoscope, Brain, Lock, RotateCcw, Trash2, LayoutTemplate,
-  Circle, ChevronDown, Pen, AlertCircle,
+  Circle, ChevronDown, Pen, AlertCircle, Repeat,
 } from 'lucide-react';
 import { toast as sonnerToast } from 'sonner';
 import { CalculatorsDialog } from '@/components/CalculatorsDialog';
