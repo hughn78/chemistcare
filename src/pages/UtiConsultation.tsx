@@ -94,9 +94,17 @@ function YesNo({
 
 const UtiConsultation = () => {
   const navigate = useNavigate();
+  const { logEvent } = useConsultAudit();
   const [step, setStep] = useState<StepId>('patient');
   const [data, setData] = useState<UtiConsultationData>(emptyUtiData);
   const [showDraftPrompt, setShowDraftPrompt] = useState(false);
+  const [isFinalising, setIsFinalising] = useState(false);
+
+  // Protocol stamp — captured on every audit event and finalised note.
+  const protocolStamp = useMemo(
+    () => buildProtocolStamp(utiTemplate.templateVersion, utiTemplate.jurisdictions[0] ?? 'VIC'),
+    [],
+  );
 
   // ── Load draft once ──
   useEffect(() => {
