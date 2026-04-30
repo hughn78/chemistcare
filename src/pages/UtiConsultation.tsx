@@ -321,7 +321,7 @@ const UtiConsultation = () => {
                   <div>
                     <Label className="text-xs">Allergies</Label>
                     <TagInput
-                      tags={parseTagString(data.patient.allergies)}
+                      value={parseTagString(data.patient.allergies)}
                       onChange={t => updatePatient('allergies', tagsToString(t))}
                       placeholder="e.g. trimethoprim, sulfa drugs"
                     />
@@ -329,7 +329,7 @@ const UtiConsultation = () => {
                   <div>
                     <Label className="text-xs">Current medicines</Label>
                     <TagInput
-                      tags={parseTagString(data.patient.currentMeds)}
+                      value={parseTagString(data.patient.currentMeds)}
                       onChange={t => updatePatient('currentMeds', tagsToString(t))}
                       placeholder="e.g. warfarin, methotrexate"
                     />
@@ -337,7 +337,7 @@ const UtiConsultation = () => {
                   <div>
                     <Label className="text-xs">Relevant medical conditions</Label>
                     <TagInput
-                      tags={parseTagString(data.patient.relevantConditions)}
+                      value={parseTagString(data.patient.relevantConditions)}
                       onChange={t => updatePatient('relevantConditions', tagsToString(t))}
                       placeholder="e.g. CKD, G6PD deficiency"
                     />
