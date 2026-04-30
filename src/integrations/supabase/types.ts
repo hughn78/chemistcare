@@ -453,7 +453,11 @@ export type Database = {
           event_type: string
           id: string
           metadata: Json | null
+          protocol_jurisdiction: string | null
+          protocol_jurisdiction_version: string | null
+          protocol_name: string | null
           step: string | null
+          template_version: number | null
           user_id: string | null
           validation_result: Json | null
         }
@@ -464,7 +468,11 @@ export type Database = {
           event_type: string
           id?: string
           metadata?: Json | null
+          protocol_jurisdiction?: string | null
+          protocol_jurisdiction_version?: string | null
+          protocol_name?: string | null
           step?: string | null
+          template_version?: number | null
           user_id?: string | null
           validation_result?: Json | null
         }
@@ -475,7 +483,11 @@ export type Database = {
           event_type?: string
           id?: string
           metadata?: Json | null
+          protocol_jurisdiction?: string | null
+          protocol_jurisdiction_version?: string | null
+          protocol_name?: string | null
           step?: string | null
+          template_version?: number | null
           user_id?: string | null
           validation_result?: Json | null
         }
@@ -517,6 +529,9 @@ export type Database = {
           patient_sex: string | null
           patient_summary_text: string | null
           pinned_evidence: Json | null
+          protocol_jurisdiction: string | null
+          protocol_jurisdiction_version: string | null
+          protocol_name: string | null
           red_flag_triggered: boolean | null
           red_flags_checked: Json | null
           referral_notes: string | null
@@ -524,6 +539,7 @@ export type Database = {
           scope_validation_passed: boolean | null
           selected_therapy_id: string | null
           status: string
+          template_version: number | null
           updated_at: string
           working_diagnosis: string | null
         }
@@ -554,6 +570,9 @@ export type Database = {
           patient_sex?: string | null
           patient_summary_text?: string | null
           pinned_evidence?: Json | null
+          protocol_jurisdiction?: string | null
+          protocol_jurisdiction_version?: string | null
+          protocol_name?: string | null
           red_flag_triggered?: boolean | null
           red_flags_checked?: Json | null
           referral_notes?: string | null
@@ -561,6 +580,7 @@ export type Database = {
           scope_validation_passed?: boolean | null
           selected_therapy_id?: string | null
           status?: string
+          template_version?: number | null
           updated_at?: string
           working_diagnosis?: string | null
         }
@@ -591,6 +611,9 @@ export type Database = {
           patient_sex?: string | null
           patient_summary_text?: string | null
           pinned_evidence?: Json | null
+          protocol_jurisdiction?: string | null
+          protocol_jurisdiction_version?: string | null
+          protocol_name?: string | null
           red_flag_triggered?: boolean | null
           red_flags_checked?: Json | null
           referral_notes?: string | null
@@ -598,6 +621,7 @@ export type Database = {
           scope_validation_passed?: boolean | null
           selected_therapy_id?: string | null
           status?: string
+          template_version?: number | null
           updated_at?: string
           working_diagnosis?: string | null
         }
