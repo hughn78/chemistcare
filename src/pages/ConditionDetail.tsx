@@ -171,7 +171,10 @@ const ConditionDetail = () => {
 
         {/* Start Consultation */}
         <div className="flex justify-end">
-          <Button onClick={() => navigate(`/consultation?condition=${condition.id}`)} className="gap-2">
+          <Button onClick={() => {
+            const slug = getSlugForConditionId(condition.id);
+            navigate(slug ? `/consultations/new/${slug}` : '/consultations/new');
+          }} className="gap-2">
             Start Consultation for {condition.name}
           </Button>
         </div>
