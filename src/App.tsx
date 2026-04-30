@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import NewConsultation from "./pages/NewConsultation";
 import ConsultationPicker from "./pages/ConsultationPicker";
 import ConsultationRedirect from "./pages/ConsultationRedirect";
+import UtiConsultation from "./pages/UtiConsultation";
 import Patients from "./pages/Patients";
 import ConditionsLibrary from "./pages/ConditionsLibrary";
 import ConditionDetail from "./pages/ConditionDetail";
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   { path: "/dashboard", element: <Index /> },
   // Condition-aware consultation routing (single source of truth: conditionRegistry)
   { path: "/consultations/new", element: <ConsultationPicker /> },
+  // UTI is the gold-standard, condition-driven pathway. Other 21 conditions
+  // continue to use the generic NewConsultation engine until they are
+  // migrated to the ConditionTemplate contract.
+  { path: "/consultations/new/uncomplicated-uti", element: <UtiConsultation /> },
   { path: "/consultations/new/:conditionSlug", element: <NewConsultation /> },
   // Legacy: /consultation and /consultation?condition=<id> still link in from
   // Dashboard, ConditionDetail, PrescribingLog, ReviewPanel — redirect them.
