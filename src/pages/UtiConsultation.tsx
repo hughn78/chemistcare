@@ -696,14 +696,83 @@ const UtiConsultation = () => {
                     </Button>
                     <Button
                       size="sm"
-                      disabled={!readyToFinalise && !readyAsReferral}
-                      onClick={() => {
-                        toast.success(readyAsReferral ? 'Referral consultation finalised' : 'UTI consultation finalised');
-                        discardDraft();
-                        navigate('/prescribing-log');
+                      disabled={isFinalising || (!readyToFinalise && !readyAsReferral)}
+                      onClick={async () => {
+                        setIsFinalising(true);
+                        const isReferral = readyAsReferral && !readyToFinalise;
+                        const noteWithFooter = `${noteText}\n\n— ${formatProtocolFooter(protocolStamp)}`;
+                        try {
+                          const insertPayload: Record<string, unknown> = {
+                            status: 'finalised',
+                            patient_first_name: data.patient.firstName ?? null,
+                            patient_last_name: data.patient.lastName ?? null,
+                            patient_dob: data.patient.dob ?? null,
+                            patient_sex: data.patient.sex ?? null,
+                            patient_pregnancy_status: data.patient.pregnancyStatus ?? null,
+                            patient_allergies: data.patient.allergies ?? null,
+                            patient_medications: data.patient.currentMeds ?? null,
+                            patient_comorbidities: data.patient.relevantConditions ?? null,
+                            condition_id: utiTemplate.id,
+                            condition_name: utiTemplate.name,
+                            red_flags_checked: data.redFlags,
+                            red_flag_triggered: positiveRedFlags.length > 0,
+                            assessment_data: {
+                              symptoms: data.symptoms,
+                              differentials: data.differentials,
+                              scopeStatus: data.scopeStatus,
+                              scopeReasons: data.scopeReasons,
+                              counsellingDone: data.counsellingDone,
+                              __conditionSlug: utiTemplate.slug,
+                              __templateVersion: utiTemplate.templateVersion,
+                            },
+                            selected_therapy_id: data.selectedTreatment?.id ?? null,
+                            follow_up_plan: data.followUpPlan ?? null,
+                            safety_net_advice: data.safetyNet ?? null,
+                            referral_notes: data.referralNotes ?? null,
+                            full_note_text: noteWithFooter,
+                            finalised_at: new Date().toISOString(),
+                            template_version: utiTemplate.templateVersion,
+                            protocol_jurisdiction: protocolStamp.protocolJurisdiction,
+                            protocol_jurisdiction_version: protocolStamp.protocolJurisdictionVersion,
+                            protocol_name: protocolStamp.protocolName,
+                          };
+
+                          const { data: inserted, error } = await (supabase.from('consultations') as any)
+                            .insert(insertPayload)
+                            .select('id')
+                            .single();
+
+                          // Audit even if insert fails — local store always captures it.
+                          const consultId = inserted?.id ?? `local-${Date.now()}`;
+                          await logEvent(consultId, 'finalise_started', { protocol: protocolStamp });
+                          if (error) {
+                            await logEvent(consultId, 'finalise_failed', {
+                              errorReason: error.message,
+                              protocol: protocolStamp,
+                            });
+                            toast.success(isReferral ? 'Referral consultation finalised (offline)' : 'UTI consultation finalised (offline)');
+                          } else {
+                            await logEvent(consultId, 'finalise_succeeded', {
+                              protocol: protocolStamp,
+                              metadata: { isReferral },
+                            });
+                            toast.success(isReferral ? 'Referral consultation finalised' : 'UTI consultation finalised');
+                          }
+                          discardDraft();
+                          navigate('/prescribing-log');
+                        } catch (err: unknown) {
+                          const msg = err instanceof Error ? err.message : 'Unknown error';
+                          await logEvent(`local-${Date.now()}`, 'finalise_failed', {
+                            errorReason: msg,
+                            protocol: protocolStamp,
+                          });
+                          toast.error(`Finalisation failed: ${msg}`);
+                        } finally {
+                          setIsFinalising(false);
+                        }
                       }}
                     >
-                      Finalise consultation
+                      {isFinalising ? 'Finalising…' : 'Finalise consultation'}
                     </Button>
                   </div>
                 </CardContent>
