@@ -36,6 +36,7 @@ import { ReviewPanel } from '@/components/consult/ReviewPanel';
 import { SketchPad } from '@/components/consult/SketchPad';
 import { ConsultStatus, transitionConsult } from '@/lib/consultStateMachine';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
+import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
 import { evaluateSafety } from '@/lib/safetyEngine';
 import { logValidationBlocker } from '@/lib/qaTelemetry';
 import { supabase } from '@/integrations/supabase/client';
