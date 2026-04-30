@@ -7,6 +7,8 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import LandingPage from "./pages/LandingPage";
 import Index from "./pages/Index";
 import NewConsultation from "./pages/NewConsultation";
+import ConsultationPicker from "./pages/ConsultationPicker";
+import ConsultationRedirect from "./pages/ConsultationRedirect";
 import Patients from "./pages/Patients";
 import ConditionsLibrary from "./pages/ConditionsLibrary";
 import ConditionDetail from "./pages/ConditionDetail";
