@@ -602,9 +602,16 @@ const NewConsultation = () => {
         red_flags_checked: redFlagsChecked,
         red_flag_triggered: hasRedFlagTriggered,
         referral_notes: formData.referralNotes || null,
-        assessment_data: Object.fromEntries(
-          Object.entries(formData).filter(([k]) => k.startsWith('assess_'))
-        ),
+        // `condition_slug` and `template_version` are stored inside the
+        // existing `assessment_data` jsonb to avoid a schema migration. Once
+        // the consultations table grows dedicated columns, promote them.
+        assessment_data: {
+          ...Object.fromEntries(
+            Object.entries(formData).filter(([k]) => k.startsWith('assess_'))
+          ),
+          __conditionSlug: registryEntry?.slug ?? null,
+          __templateVersion: registryEntry?.templateVersion ?? null,
+        },
         working_diagnosis: formData.workingDiagnosis || null,
         differentials: differentials.filter(d => d.diagnosis.trim()),
         selected_therapy_id: formData.selectedTherapy || null,
