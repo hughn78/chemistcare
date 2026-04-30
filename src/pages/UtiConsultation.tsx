@@ -227,7 +227,7 @@ const UtiConsultation = () => {
                 <h1 className="text-base sm:text-lg font-bold truncate">New Consultation: Uncomplicated UTI</h1>
                 <Badge className="clinical-badge clinical-badge-danger">Acute</Badge>
                 <Badge variant="outline" className="text-[10px]" title={protocolStamp.protocolName}>
-                  {protocolStamp.protocolJurisdiction} protocol v{protocolStamp.protocolJurisdictionVersion} · template v{utiTemplate.templateVersion}
+                  {protocolStamp.protocolJurisdiction} protocol v{protocolStamp.jurisdictionProtocolVersion} · template v{utiTemplate.templateVersion}
                 </Badge>
               </div>
               <p className="text-[11px] text-muted-foreground mt-1">
@@ -733,7 +733,7 @@ const UtiConsultation = () => {
                             finalised_at: new Date().toISOString(),
                             template_version: utiTemplate.templateVersion,
                             protocol_jurisdiction: protocolStamp.protocolJurisdiction,
-                            protocol_jurisdiction_version: protocolStamp.protocolJurisdictionVersion,
+                            protocol_jurisdiction_version: protocolStamp.jurisdictionProtocolVersion,
                             protocol_name: protocolStamp.protocolName,
                           };
 

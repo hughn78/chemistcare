@@ -628,7 +628,7 @@ const NewConsultation = () => {
         finalised_at: new Date().toISOString(),
         template_version: protocolStamp.templateVersion,
         protocol_jurisdiction: protocolStamp.protocolJurisdiction,
-        protocol_jurisdiction_version: protocolStamp.protocolJurisdictionVersion,
+        protocol_jurisdiction_version: protocolStamp.jurisdictionProtocolVersion,
         protocol_name: protocolStamp.protocolName,
       };
 
