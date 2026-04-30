@@ -217,9 +217,39 @@ const NewConsultation = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { logEvent } = useConsultAudit();
+  const params = useParams<{ conditionSlug?: string }>();
+
+  // Resolve condition strictly from the URL slug. Fall back to the legacy
+  // `?condition=<id>` query only for backward compatibility with older links
+  // (e.g. ConditionDetail) — never to a hardcoded default.
+  const slugFromRoute = params.conditionSlug;
+  const legacyConditionId = !slugFromRoute ? searchParams.get('condition') : null;
+  const initialCondition = (() => {
+    if (slugFromRoute) {
+      const entry = getConditionBySlug(slugFromRoute);
+      return entry?.id ?? '';
+    }
+    if (legacyConditionId) {
+      const entry = getRegistryEntryById(legacyConditionId);
+      return entry?.id ?? '';
+    }
+    return '';
+  })();
+
+  // Hard guard: an explicit slug that doesn't resolve must redirect to the
+  // picker — we never silently fall back to Travel Medicine or any other
+  // pathway. (See the "Hard Requirements" in the New Consultation spec.)
+  useEffect(() => {
+    if (slugFromRoute && !getConditionBySlug(slugFromRoute)) {
+      navigate(`/consultations/new?error=${encodeURIComponent('Unknown consultation type — please pick one below.')}`, { replace: true });
+    } else if (!slugFromRoute && !legacyConditionId) {
+      // Reached `/consultation` (legacy) without a condition — bounce to picker.
+      navigate('/consultations/new', { replace: true });
+    }
+  }, [slugFromRoute, legacyConditionId, navigate]);
 
   const [currentStep, setCurrentStep] = useState<ConsultationStep>('patient');
-  const [selectedCondition, setSelectedCondition] = useState(searchParams.get('condition') || '');
+  const [selectedCondition, setSelectedCondition] = useState(initialCondition);
   const [redFlagsChecked, setRedFlagsChecked] = useState<Record<string, boolean>>({});
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [differentials, setDifferentials] = useState([{ diagnosis: '', reasonExcluded: '' }]);
