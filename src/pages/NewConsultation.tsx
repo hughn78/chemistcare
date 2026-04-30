@@ -694,6 +694,33 @@ const NewConsultation = () => {
               </Card>
             )}
 
+            {/* Condition header — proves to the pharmacist exactly which
+                protocol pathway is loaded, and offers a confirm-protected
+                way to switch back to the picker. */}
+            {condition && registryEntry && (
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-lg border bg-card px-4 py-3">
+                <div className="min-w-0">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    New Consultation
+                  </p>
+                  <h1 className="text-base sm:text-lg font-bold truncate">
+                    {condition.name}
+                  </h1>
+                  <p className="text-[11px] text-muted-foreground mt-0.5">
+                    Victorian pharmacist prescriber pathway · {registryEntry.redFlagCount} red flags · {registryEntry.treatmentOptionCount} treatment options
+                  </p>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="gap-1.5 shrink-0"
+                  onClick={handleChangeCondition}
+                >
+                  <Repeat className="h-3.5 w-3.5" /> Change condition
+                </Button>
+              </div>
+            )}
+
             {/* Step indicator + tools */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1 overflow-x-auto pb-2">
