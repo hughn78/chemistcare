@@ -21,11 +21,13 @@ import {
   HeartHandshake,
   Plug,
   ListChecks,
+  X,
 } from 'lucide-react';
-import { getPinnedConditions } from '@/lib/conditionRegistry';
+import { useConditionPins } from '@/lib/useConditionPins';
 import logoImg from '@/assets/chemistcare-logo.png';
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
+import { toast } from 'sonner';
 import {
   Sidebar,
   SidebarContent,
