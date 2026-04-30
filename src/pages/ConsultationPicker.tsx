@@ -14,6 +14,8 @@ import {
   RotateCcw,
   Trash2,
   AlertCircle,
+  Pin,
+  PinOff,
 } from 'lucide-react';
 import {
   CONDITION_REGISTRY,
@@ -23,6 +25,8 @@ import {
   type ConditionRegistryEntry,
   getConditionBySlug,
 } from '@/lib/conditionRegistry';
+import { useConditionPins } from '@/lib/useConditionPins';
+import { toast } from 'sonner';
 
 const RECENT_KEY = 'chemistcare:recent_consult_slugs';
 const DRAFT_KEY = 'chemistcare_consultation_draft';
@@ -92,22 +96,44 @@ const CATEGORY_BADGE: Record<ConditionCategory, string> = {
 function ConditionCard({
   entry,
   onStart,
+  pinned,
+  onTogglePin,
 }: {
   entry: ConditionRegistryEntry;
   onStart: (slug: string) => void;
+  pinned: boolean;
+  onTogglePin: (entry: ConditionRegistryEntry) => void;
 }) {
   const disabled = !entry.enabled;
   return (
-    <Card className={`transition-shadow ${disabled ? 'opacity-60' : 'hover:shadow-md cursor-pointer'}`}>
+    <Card className={`transition-shadow ${disabled ? 'opacity-60' : 'hover:shadow-md'}`}>
       <CardContent className="p-4 space-y-3">
         <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <h3 className="text-sm font-semibold truncate">{entry.name}</h3>
             <p className="text-[11px] text-muted-foreground line-clamp-2 mt-0.5">{entry.description}</p>
           </div>
-          <span className={`clinical-badge ${CATEGORY_BADGE[entry.category]} shrink-0`}>
-            {CATEGORY_LABEL[entry.category]}
-          </span>
+          <div className="flex items-center gap-1 shrink-0">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onTogglePin(entry);
+              }}
+              aria-label={pinned ? `Unpin ${entry.name} from sidebar` : `Pin ${entry.name} to sidebar`}
+              title={pinned ? 'Unpin from sidebar' : 'Pin to sidebar'}
+              className={`p-1 rounded transition-colors ${
+                pinned
+                  ? 'text-primary hover:bg-primary/10'
+                  : 'text-muted-foreground/50 hover:text-primary hover:bg-muted'
+              }`}
+            >
+              {pinned ? <Pin className="h-3.5 w-3.5 fill-current" /> : <PinOff className="h-3.5 w-3.5" />}
+            </button>
+            <span className={`clinical-badge ${CATEGORY_BADGE[entry.category]}`}>
+              {CATEGORY_LABEL[entry.category]}
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
@@ -146,7 +172,19 @@ const ConsultationPicker = () => {
   const [activeCategory, setActiveCategory] = useState<ConditionCategory | null>(null);
   const [recent, setRecent] = useState<string[]>([]);
   const [draft, setDraft] = useState<LegacyDraftInfo>({ hasDraft: false });
+  const { isPinned, setPinned } = useConditionPins();
   const errorMessage = searchParams.get('error');
+
+  const handleTogglePin = (entry: ConditionRegistryEntry) => {
+    const willPin = !isPinned(entry.id);
+    setPinned(entry.id, willPin);
+    toast.success(willPin ? `Pinned ${entry.name} to sidebar` : `Unpinned ${entry.name}`, {
+      action: {
+        label: 'Undo',
+        onClick: () => setPinned(entry.id, !willPin),
+      },
+    });
+  };
 
   useEffect(() => {
     setRecent(loadRecentSlugs());
@@ -284,7 +322,7 @@ const ConsultationPicker = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {recentEntries.map(e => (
-                <ConditionCard key={`recent-${e.id}`} entry={e} onStart={startConsultation} />
+                <ConditionCard key={`recent-${e.id}`} entry={e} onStart={startConsultation} pinned={isPinned(e.id)} onTogglePin={handleTogglePin} />
               ))}
             </div>
           </div>
@@ -310,7 +348,7 @@ const ConsultationPicker = () => {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {filtered.map(e => (
-                <ConditionCard key={e.id} entry={e} onStart={startConsultation} />
+                <ConditionCard key={e.id} entry={e} onStart={startConsultation} pinned={isPinned(e.id)} onTogglePin={handleTogglePin} />
               ))}
             </div>
           )}

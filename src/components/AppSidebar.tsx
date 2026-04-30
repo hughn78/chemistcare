@@ -21,11 +21,13 @@ import {
   HeartHandshake,
   Plug,
   ListChecks,
+  X,
 } from 'lucide-react';
-import { getPinnedConditions } from '@/lib/conditionRegistry';
+import { useConditionPins } from '@/lib/useConditionPins';
 import logoImg from '@/assets/chemistcare-logo.png';
 import { NavLink } from '@/components/NavLink';
 import { useLocation } from 'react-router-dom';
+import { toast } from 'sonner';
 import {
   Sidebar,
   SidebarContent,
@@ -44,32 +46,6 @@ import {
 } from '@/components/ui/sidebar';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 
-// Pinned condition shortcuts (Quick Start). Sourced from the central
-// conditionRegistry so this list stays in sync with the picker, conditions
-// library, and routing — never hand-curated in two places.
-const pinnedConditionItems = getPinnedConditions().map(c => ({
-  title: c.name,
-  url: `/consultations/new/${c.slug}`,
-  icon: c.category === 'travel' ? Plane : Pill,
-}));
-
-const mainItems = [
-  { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
-  {
-    title: 'New Consultation',
-    url: '/consultations/new',
-    icon: FilePlus,
-    children: [
-      ...pinnedConditionItems,
-      { title: 'All conditions', url: '/consultations/new', icon: ListChecks },
-    ],
-  },
-  { title: 'Calendar', url: '/calendar', icon: CalendarDays },
-  { title: 'Patients', url: '/patients', icon: Users },
-  { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
-  { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
-];
-
 const supportItems = [
   { title: 'Conditions Library', url: '/conditions', icon: BookOpen },
   { title: 'Calculators', url: '/calculators', icon: Calculator },
@@ -83,11 +59,21 @@ const adminItems = [
   { title: 'Settings', url: '/admin/settings', icon: Settings },
 ];
 
+type NavChild = {
+  title: string;
+  url: string;
+  icon: typeof LayoutDashboard;
+  /** Optional inline action (e.g. unpin). Rendered to the right of the label. */
+  onAction?: (e: React.MouseEvent) => void;
+  actionLabel?: string;
+  actionIcon?: typeof LayoutDashboard;
+};
+
 type NavItem = {
   title: string;
   url: string;
   icon: typeof LayoutDashboard;
-  children?: { title: string; url: string; icon: typeof LayoutDashboard }[];
+  children?: NavChild[];
 };
 
 function NavItemRenderer({ item, collapsed, isActive }: { item: NavItem; collapsed: boolean; isActive: (path: string) => boolean }) {
@@ -115,16 +101,34 @@ function NavItemRenderer({ item, collapsed, isActive }: { item: NavItem; collaps
           </CollapsibleTrigger>
           <CollapsibleContent>
             <SidebarMenuSub>
-              {item.children.map((child) => (
-                <SidebarMenuSubItem key={child.title}>
-                  <SidebarMenuSubButton asChild className={`sidebar-nav-item ${isActive(child.url) ? 'sidebar-nav-active' : ''}`}>
-                    <NavLink to={child.url} activeClassName="">
-                      <child.icon className="h-3.5 w-3.5 shrink-0" />
-                      {!collapsed && <span className="text-[0.8125rem]">{child.title}</span>}
-                    </NavLink>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
-              ))}
+              {item.children.map((child) => {
+                const ActionIcon = child.actionIcon ?? X;
+                return (
+                  <SidebarMenuSubItem key={child.title} className="group/subitem relative">
+                    <SidebarMenuSubButton asChild className={`sidebar-nav-item ${isActive(child.url) ? 'sidebar-nav-active' : ''} ${child.onAction && !collapsed ? 'pr-7' : ''}`}>
+                      <NavLink to={child.url} activeClassName="">
+                        <child.icon className="h-3.5 w-3.5 shrink-0" />
+                        {!collapsed && <span className="text-[0.8125rem] truncate">{child.title}</span>}
+                      </NavLink>
+                    </SidebarMenuSubButton>
+                    {child.onAction && !collapsed && (
+                      <button
+                        type="button"
+                        aria-label={child.actionLabel ?? 'Action'}
+                        title={child.actionLabel ?? 'Action'}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          child.onAction?.(e);
+                        }}
+                        className="absolute right-1 top-1/2 -translate-y-1/2 p-1 rounded text-sidebar-foreground/40 hover:text-sidebar-foreground hover:bg-sidebar-accent opacity-0 group-hover/subitem:opacity-100 focus:opacity-100 transition-opacity"
+                      >
+                        <ActionIcon className="h-3 w-3" />
+                      </button>
+                    )}
+                  </SidebarMenuSubItem>
+                );
+              })}
             </SidebarMenuSub>
           </CollapsibleContent>
         </SidebarMenuItem>
@@ -149,6 +153,43 @@ export function AppSidebar() {
   const collapsed = state === 'collapsed';
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path || (path !== '/' && location.pathname.startsWith(path));
+  const { pinnedConditions, setPinned } = useConditionPins();
+
+  const handleUnpin = (conditionId: string, name: string) => {
+    setPinned(conditionId, false);
+    toast.success(`Unpinned ${name}`, {
+      action: {
+        label: 'Undo',
+        onClick: () => setPinned(conditionId, true),
+      },
+    });
+  };
+
+  const pinnedConditionItems: NavChild[] = pinnedConditions.map(c => ({
+    title: c.name,
+    url: `/consultations/new/${c.slug}`,
+    icon: c.category === 'travel' ? Plane : Pill,
+    onAction: () => handleUnpin(c.id, c.name),
+    actionLabel: `Unpin ${c.name}`,
+    actionIcon: X,
+  }));
+
+  const mainItems: NavItem[] = [
+    { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
+    {
+      title: 'New Consultation',
+      url: '/consultations/new',
+      icon: FilePlus,
+      children: [
+        ...pinnedConditionItems,
+        { title: 'All conditions', url: '/consultations/new', icon: ListChecks },
+      ],
+    },
+    { title: 'Calendar', url: '/calendar', icon: CalendarDays },
+    { title: 'Patients', url: '/patients', icon: Users },
+    { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
+    { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
+  ];
 
   return (
     <Sidebar collapsible="icon">
