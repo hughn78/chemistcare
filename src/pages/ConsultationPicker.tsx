@@ -322,7 +322,7 @@ const ConsultationPicker = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {recentEntries.map(e => (
-                <ConditionCard key={`recent-${e.id}`} entry={e} onStart={startConsultation} />
+                <ConditionCard key={`recent-${e.id}`} entry={e} onStart={startConsultation} pinned={isPinned(e.id)} onTogglePin={handleTogglePin} />
               ))}
             </div>
           </div>
@@ -348,7 +348,7 @@ const ConsultationPicker = () => {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {filtered.map(e => (
-                <ConditionCard key={e.id} entry={e} onStart={startConsultation} />
+                <ConditionCard key={e.id} entry={e} onStart={startConsultation} pinned={isPinned(e.id)} onTogglePin={handleTogglePin} />
               ))}
             </div>
           )}
