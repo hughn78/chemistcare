@@ -14,6 +14,12 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 import { CONDITIONS, getConditionById } from '@/data/conditions';
+import {
+  CONDITION_REGISTRY,
+  getConditionBySlug,
+  getRegistryEntryById,
+} from '@/lib/conditionRegistry';
+import { recordRecentCondition } from '@/pages/ConsultationPicker';
 import { CONSULTATION_STEPS, ConsultationStep } from '@/types/clinical';
 import { useAutosave } from '@/hooks/useAutosave';
 import { useNavigationGuard } from '@/hooks/useNavigationGuard';
