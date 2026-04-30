@@ -276,9 +276,38 @@ const NewConsultation = () => {
   const [savedSketches, setSavedSketches] = useState<{ dataUrl: string; timestamp: string }[]>([]);
 
   const condition = useMemo(() => getConditionById(selectedCondition), [selectedCondition]);
+  const registryEntry = useMemo(() => getRegistryEntryById(selectedCondition), [selectedCondition]);
   const stepIndex = CONSULTATION_STEPS.findIndex(s => s.key === currentStep);
   const hasRedFlagTriggered = Object.values(redFlagsChecked).some(Boolean);
   const canProceedFromAssessment = !hasRedFlagTriggered;
+
+  // Patient data is "in progress" once any clinical/identity field has been
+  // touched. Used to gate the "Change condition" action with a confirm.
+  const patientDataExists = useMemo(() => {
+    return ['firstName', 'lastName', 'dob', 'allergies', 'medications', 'comorbidities'].some(
+      k => (formData[k] || '').trim().length > 0,
+    ) || differentials.some(d => d.diagnosis.trim()) || Object.values(redFlagsChecked).some(Boolean);
+  }, [formData, differentials, redFlagsChecked]);
+
+  // Track this condition in "recently used" the moment we render a real
+  // consultation so the picker can surface it. Idempotent per slug.
+  useEffect(() => {
+    if (registryEntry?.slug) {
+      recordRecentCondition(registryEntry.slug);
+    }
+  }, [registryEntry?.slug]);
+
+  const handleChangeCondition = useCallback(() => {
+    if (patientDataExists) {
+      const ok = window.confirm(
+        'Changing condition will discard the current consultation data. Continue?',
+      );
+      if (!ok) return;
+    }
+    // Clear all in-progress state and bounce to picker.
+    try { localStorage.removeItem(DRAFT_KEY); } catch {}
+    navigate('/consultations/new');
+  }, [patientDataExists, navigate]);
 
   // Re-evaluate safety whenever relevant inputs change
   useEffect(() => {
