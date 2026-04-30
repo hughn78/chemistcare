@@ -46,32 +46,6 @@ import {
 } from '@/components/ui/sidebar';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 
-// Pinned condition shortcuts (Quick Start). Sourced from the central
-// conditionRegistry so this list stays in sync with the picker, conditions
-// library, and routing — never hand-curated in two places.
-const pinnedConditionItems = getPinnedConditions().map(c => ({
-  title: c.name,
-  url: `/consultations/new/${c.slug}`,
-  icon: c.category === 'travel' ? Plane : Pill,
-}));
-
-const mainItems = [
-  { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
-  {
-    title: 'New Consultation',
-    url: '/consultations/new',
-    icon: FilePlus,
-    children: [
-      ...pinnedConditionItems,
-      { title: 'All conditions', url: '/consultations/new', icon: ListChecks },
-    ],
-  },
-  { title: 'Calendar', url: '/calendar', icon: CalendarDays },
-  { title: 'Patients', url: '/patients', icon: Users },
-  { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
-  { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
-];
-
 const supportItems = [
   { title: 'Conditions Library', url: '/conditions', icon: BookOpen },
   { title: 'Calculators', url: '/calculators', icon: Calculator },
