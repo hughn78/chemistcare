@@ -25,6 +25,9 @@ import { smokingCessationTemplate } from './smokingCessation';
 import { impetigoTemplate } from './impetigo';
 import { rhinitisTemplate } from './rhinitis';
 import { gordTemplate } from './gord';
+import { acneTemplate } from './acne';
+import { atopicDermatitisTemplate } from './atopicDermatitis';
+import { earInfectionsTemplate } from './earInfections';
 
 export const CONDITION_TEMPLATES: ConditionTemplate[] = [
   utiTemplate,
@@ -34,6 +37,9 @@ export const CONDITION_TEMPLATES: ConditionTemplate[] = [
   impetigoTemplate,
   rhinitisTemplate,
   gordTemplate,
+  acneTemplate,
+  atopicDermatitisTemplate,
+  earInfectionsTemplate,
 ];
 
 const BY_SLUG = new Map(CONDITION_TEMPLATES.map(t => [t.slug, t]));
