@@ -59,11 +59,21 @@ const adminItems = [
   { title: 'Settings', url: '/admin/settings', icon: Settings },
 ];
 
+type NavChild = {
+  title: string;
+  url: string;
+  icon: typeof LayoutDashboard;
+  /** Optional inline action (e.g. unpin). Rendered to the right of the label. */
+  onAction?: (e: React.MouseEvent) => void;
+  actionLabel?: string;
+  actionIcon?: typeof LayoutDashboard;
+};
+
 type NavItem = {
   title: string;
   url: string;
   icon: typeof LayoutDashboard;
-  children?: { title: string; url: string; icon: typeof LayoutDashboard }[];
+  children?: NavChild[];
 };
 
 function NavItemRenderer({ item, collapsed, isActive }: { item: NavItem; collapsed: boolean; isActive: (path: string) => boolean }) {
@@ -91,16 +101,34 @@ function NavItemRenderer({ item, collapsed, isActive }: { item: NavItem; collaps
           </CollapsibleTrigger>
           <CollapsibleContent>
             <SidebarMenuSub>
-              {item.children.map((child) => (
-                <SidebarMenuSubItem key={child.title}>
-                  <SidebarMenuSubButton asChild className={`sidebar-nav-item ${isActive(child.url) ? 'sidebar-nav-active' : ''}`}>
-                    <NavLink to={child.url} activeClassName="">
-                      <child.icon className="h-3.5 w-3.5 shrink-0" />
-                      {!collapsed && <span className="text-[0.8125rem]">{child.title}</span>}
-                    </NavLink>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
-              ))}
+              {item.children.map((child) => {
+                const ActionIcon = child.actionIcon ?? X;
+                return (
+                  <SidebarMenuSubItem key={child.title} className="group/subitem relative">
+                    <SidebarMenuSubButton asChild className={`sidebar-nav-item ${isActive(child.url) ? 'sidebar-nav-active' : ''} ${child.onAction && !collapsed ? 'pr-7' : ''}`}>
+                      <NavLink to={child.url} activeClassName="">
+                        <child.icon className="h-3.5 w-3.5 shrink-0" />
+                        {!collapsed && <span className="text-[0.8125rem] truncate">{child.title}</span>}
+                      </NavLink>
+                    </SidebarMenuSubButton>
+                    {child.onAction && !collapsed && (
+                      <button
+                        type="button"
+                        aria-label={child.actionLabel ?? 'Action'}
+                        title={child.actionLabel ?? 'Action'}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          child.onAction?.(e);
+                        }}
+                        className="absolute right-1 top-1/2 -translate-y-1/2 p-1 rounded text-sidebar-foreground/40 hover:text-sidebar-foreground hover:bg-sidebar-accent opacity-0 group-hover/subitem:opacity-100 focus:opacity-100 transition-opacity"
+                      >
+                        <ActionIcon className="h-3 w-3" />
+                      </button>
+                    )}
+                  </SidebarMenuSubItem>
+                );
+              })}
             </SidebarMenuSub>
           </CollapsibleContent>
         </SidebarMenuItem>
