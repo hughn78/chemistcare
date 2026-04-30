@@ -96,22 +96,44 @@ const CATEGORY_BADGE: Record<ConditionCategory, string> = {
 function ConditionCard({
   entry,
   onStart,
+  pinned,
+  onTogglePin,
 }: {
   entry: ConditionRegistryEntry;
   onStart: (slug: string) => void;
+  pinned: boolean;
+  onTogglePin: (entry: ConditionRegistryEntry) => void;
 }) {
   const disabled = !entry.enabled;
   return (
-    <Card className={`transition-shadow ${disabled ? 'opacity-60' : 'hover:shadow-md cursor-pointer'}`}>
+    <Card className={`transition-shadow ${disabled ? 'opacity-60' : 'hover:shadow-md'}`}>
       <CardContent className="p-4 space-y-3">
         <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <h3 className="text-sm font-semibold truncate">{entry.name}</h3>
             <p className="text-[11px] text-muted-foreground line-clamp-2 mt-0.5">{entry.description}</p>
           </div>
-          <span className={`clinical-badge ${CATEGORY_BADGE[entry.category]} shrink-0`}>
-            {CATEGORY_LABEL[entry.category]}
-          </span>
+          <div className="flex items-center gap-1 shrink-0">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onTogglePin(entry);
+              }}
+              aria-label={pinned ? `Unpin ${entry.name} from sidebar` : `Pin ${entry.name} to sidebar`}
+              title={pinned ? 'Unpin from sidebar' : 'Pin to sidebar'}
+              className={`p-1 rounded transition-colors ${
+                pinned
+                  ? 'text-primary hover:bg-primary/10'
+                  : 'text-muted-foreground/50 hover:text-primary hover:bg-muted'
+              }`}
+            >
+              {pinned ? <Pin className="h-3.5 w-3.5 fill-current" /> : <PinOff className="h-3.5 w-3.5" />}
+            </button>
+            <span className={`clinical-badge ${CATEGORY_BADGE[entry.category]}`}>
+              {CATEGORY_LABEL[entry.category]}
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
