@@ -101,11 +101,12 @@ export function buildProtocolStamp(
 ): ProtocolStamp {
   // Legacy 2-arg signature (number | null, jurisdiction).
   if (input === null || input === undefined || typeof input === 'number') {
+    const num = (input ?? null) as number | null;
     const p = getProtocol(jurisdiction);
     return {
-      templateVersion: input ?? null,
+      templateVersion: num,
       conditionSlug: null,
-      conditionTemplateVersion: input != null ? String(input) : null,
+      conditionTemplateVersion: num != null ? String(num) : null,
       jurisdiction: p.jurisdictionLabel,
       jurisdictionProtocolVersion: p.version,
       protocolName: p.name,
