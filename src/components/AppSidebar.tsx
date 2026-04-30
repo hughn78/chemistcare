@@ -153,6 +153,43 @@ export function AppSidebar() {
   const collapsed = state === 'collapsed';
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path || (path !== '/' && location.pathname.startsWith(path));
+  const { pinnedConditions, setPinned } = useConditionPins();
+
+  const handleUnpin = (conditionId: string, name: string) => {
+    setPinned(conditionId, false);
+    toast.success(`Unpinned ${name}`, {
+      action: {
+        label: 'Undo',
+        onClick: () => setPinned(conditionId, true),
+      },
+    });
+  };
+
+  const pinnedConditionItems: NavChild[] = pinnedConditions.map(c => ({
+    title: c.name,
+    url: `/consultations/new/${c.slug}`,
+    icon: c.category === 'travel' ? Plane : Pill,
+    onAction: () => handleUnpin(c.id, c.name),
+    actionLabel: `Unpin ${c.name}`,
+    actionIcon: X,
+  }));
+
+  const mainItems: NavItem[] = [
+    { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
+    {
+      title: 'New Consultation',
+      url: '/consultations/new',
+      icon: FilePlus,
+      children: [
+        ...pinnedConditionItems,
+        { title: 'All conditions', url: '/consultations/new', icon: ListChecks },
+      ],
+    },
+    { title: 'Calendar', url: '/calendar', icon: CalendarDays },
+    { title: 'Patients', url: '/patients', icon: Users },
+    { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
+    { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
+  ];
 
   return (
     <Sidebar collapsible="icon">
