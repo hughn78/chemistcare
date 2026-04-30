@@ -36,6 +36,7 @@ import { ReviewPanel } from '@/components/consult/ReviewPanel';
 import { SketchPad } from '@/components/consult/SketchPad';
 import { ConsultStatus, transitionConsult } from '@/lib/consultStateMachine';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
+import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
 import { evaluateSafety } from '@/lib/safetyEngine';
 import { logValidationBlocker } from '@/lib/qaTelemetry';
 import { supabase } from '@/integrations/supabase/client';
@@ -583,6 +584,8 @@ const NewConsultation = () => {
 
     setConsultStatus('submitting');
 
+    const protocolStamp = buildProtocolStamp(registryEntry?.templateVersion ?? null);
+
     try {
       const consultData = {
         status: 'finalised',
@@ -618,9 +621,15 @@ const NewConsultation = () => {
         deviation_justification: formData.deviationJustification || null,
         follow_up_plan: formData.followUpPlan || null,
         safety_net_advice: formData.safetyNet || null,
-        clinical_notes: formData.clinicalNotes || null,
+        clinical_notes: formData.clinicalNotes
+          ? `${formData.clinicalNotes}\n\n— ${formatProtocolFooter(protocolStamp)}`
+          : `— ${formatProtocolFooter(protocolStamp)}`,
         pinned_evidence: pinnedEvidence,
         finalised_at: new Date().toISOString(),
+        template_version: protocolStamp.templateVersion,
+        protocol_jurisdiction: protocolStamp.protocolJurisdiction,
+        protocol_jurisdiction_version: protocolStamp.protocolJurisdictionVersion,
+        protocol_name: protocolStamp.protocolName,
       };
 
       const { data, error } = await (supabase.from('consultations') as any)
@@ -635,7 +644,7 @@ const NewConsultation = () => {
       setFinalisedAt(data.finalised_at);
       setConsultStatus('finalised');
 
-      await logEvent(newId, 'finalise_succeeded');
+      await logEvent(newId, 'finalise_succeeded', { protocol: protocolStamp });
       clearDraft();
 
       return { success: true, consultId: newId };
@@ -644,7 +653,7 @@ const NewConsultation = () => {
       const errorMsg = err?.message || 'Unknown error';
 
       if (consultId) {
-        await logEvent(consultId, 'finalise_failed', { errorReason: errorMsg });
+        await logEvent(consultId, 'finalise_failed', { errorReason: errorMsg, protocol: protocolStamp });
       }
 
       return { success: false, error: errorMsg };
