@@ -894,26 +894,10 @@ const NewConsultation = () => {
                   </CardContent>
                 </Card>
 
-                {/* Condition Selection */}
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm">Select Presenting Condition <span className="text-clinical-danger">*</span></CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <Select value={selectedCondition} onValueChange={setSelectedCondition}>
-                      <SelectTrigger className={attemptedProgress && !selectedCondition ? 'border-clinical-danger' : ''}>
-                        <SelectValue placeholder="Select a condition..." />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {CONDITIONS.map(c => (
-                          <SelectItem key={c.id} value={c.id}>{c.name} ({c.classification})</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {attemptedProgress && !selectedCondition && <p className="text-xs mt-1 text-clinical-danger">Required — select a condition</p>}
-                  </CardContent>
-                </Card>
-
+                {/* Condition Selection card removed — the consultation
+                    pathway is now driven by the URL slug and chosen on the
+                    Consultation Picker. The header above shows the active
+                    condition and offers "Change condition". */}
                 <div className="flex justify-end">
                   <Button
                     onClick={() => {
