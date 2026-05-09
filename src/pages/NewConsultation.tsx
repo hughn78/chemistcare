@@ -50,6 +50,7 @@ import { toast as sonnerToast } from 'sonner';
 import { CalculatorsDialog } from '@/components/CalculatorsDialog';
 import { AnatomyDialog } from '@/components/AnatomyDialog';
 import { TagInput, parseTagString, tagsToString } from '@/components/ui/tag-input';
+import { CATAssessmentDialog, type CATResult } from '@/components/copd/CATAssessmentDialog';
 import type { SafetyResult, SafetyOverride } from '@/types/safety';
 import type { ConsultTemplate } from '@/types/templates';
 
@@ -1000,6 +1001,85 @@ const NewConsultation = () => {
                     ))}
                   </CardContent>
                 </Card>
+
+                {/* COPD-specific: CAT (COPD Assessment Test) */}
+                {condition.id === 'copd' && (
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm flex items-center justify-between gap-2">
+                        <span>COPD Assessment Test (CAT)</span>
+                        <CATAssessmentDialog
+                          initial={(() => {
+                            const keys = ['cough','phlegm','tightness','breathless','activities','confidence','sleep','energy'];
+                            const out: Record<string, number> = {};
+                            keys.forEach(k => {
+                              const v = formData[`cat_item_${k}`];
+                              if (v !== undefined && v !== '') out[k] = Number(v);
+                            });
+                            return out;
+                          })()}
+                          initialTotal={formData.cat_total ? Number(formData.cat_total) : undefined}
+                          onSave={(r: CATResult) => {
+                            updateField('cat_total', String(r.total));
+                            updateField('cat_severity', r.severity);
+                            updateField('cat_severity_label', r.severityLabel);
+                            updateField('cat_diagnostic_impression', r.diagnosticImpression);
+                            updateField('cat_completed_at', r.completedAt);
+                            updateField('assess_CAT score', `${r.total}/40 — ${r.severityLabel}`);
+                            Object.entries(r.perItem).forEach(([k, v]) => updateField(`cat_item_${k}`, String(v)));
+                            // Seed working diagnosis if blank, to support clinical reasoning step
+                            if (!formData.workingDiagnosis) {
+                              updateField('workingDiagnosis', `COPD — ${r.severityLabel}`);
+                            }
+                          }}
+                        />
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <p className="text-xs text-muted-foreground">
+                        Open the validated 8-item CAT to capture symptom burden. Results inform GOLD group classification and treatment selection.
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div>
+                          <Label className="text-xs">CAT total (0–40)</Label>
+                          <Input
+                            type="number"
+                            min={0}
+                            max={40}
+                            placeholder="e.g. 18"
+                            value={formData.cat_total || ''}
+                            onChange={e => updateField('cat_total', e.target.value)}
+                          />
+                        </div>
+                        <div>
+                          <Label className="text-xs">Severity band</Label>
+                          <Input
+                            placeholder="Low / Medium / High / Very high"
+                            value={formData.cat_severity_label || ''}
+                            onChange={e => updateField('cat_severity_label', e.target.value)}
+                          />
+                        </div>
+                        <div>
+                          <Label className="text-xs">Completed</Label>
+                          <Input
+                            placeholder="Auto-filled on save"
+                            value={formData.cat_completed_at ? new Date(formData.cat_completed_at).toLocaleString('en-AU') : ''}
+                            readOnly
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <Label className="text-xs">Diagnostic impression (CAT-derived)</Label>
+                        <Textarea
+                          rows={3}
+                          placeholder="Auto-populated from CAT score; edit to refine clinical interpretation."
+                          value={formData.cat_diagnostic_impression || ''}
+                          onChange={e => updateField('cat_diagnostic_impression', e.target.value)}
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
 
                 {/* Red Flag Screening */}
                 <Card className={hasRedFlagTriggered ? 'border-clinical-danger bg-clinical-danger-bg' : ''}>
