@@ -50,6 +50,7 @@ import { toast as sonnerToast } from 'sonner';
 import { CalculatorsDialog } from '@/components/CalculatorsDialog';
 import { AnatomyDialog } from '@/components/AnatomyDialog';
 import { TagInput, parseTagString, tagsToString } from '@/components/ui/tag-input';
+import { CATAssessmentDialog, type CATResult } from '@/components/copd/CATAssessmentDialog';
 import type { SafetyResult, SafetyOverride } from '@/types/safety';
 import type { ConsultTemplate } from '@/types/templates';
 
