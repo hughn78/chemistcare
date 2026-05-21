@@ -726,7 +726,7 @@ const NewConsultation = () => {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-lg border bg-card px-4 py-3">
                 <div className="min-w-0">
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                    New Consultation
+                    Clinical consultation
                   </p>
                   <h1 className="text-base sm:text-lg font-bold truncate">
                     {condition.name}
