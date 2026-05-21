@@ -82,19 +82,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        /* ChemistCare named colours */
-        "clinical-blue": "#1D6FA4",
-        "deep-navy": "#1E293B",
-        "clinical-red": "#E63946",
-        "prescription-green": "#1FA971",
-        "safety-yellow": "#F6D860",
+        /* Legacy named aliases — retained for back-compat; remapped to new
+         * design tokens. Prefer semantic classes (bg-primary, text-destructive)
+         * in new code. */
+        "clinical-blue": "hsl(var(--primary))",   // now deep teal
+        "deep-navy": "hsl(var(--sidebar-background))",
+        "clinical-red": "hsl(var(--destructive))", // coral signal
+        "prescription-green": "hsl(var(--clinical-safe))",
+        "safety-yellow": "hsl(var(--clinical-warning))",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)",                  // 8px — cards
+        md: "calc(var(--radius) - 2px)",      // 6px — UI elements
+        sm: "calc(var(--radius) - 4px)",      // 4px
       },
       boxShadow: {
+        sm: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        md: "0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05)",
         card: "var(--shadow-card)",
         "card-hover": "var(--shadow-card-hover)",
       },
