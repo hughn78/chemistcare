@@ -16,7 +16,17 @@ export default {
       fontFamily: {
         heading: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        mono: ['"Roboto Mono"', '"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1.5' }],
+        sm: ['0.875rem', { lineHeight: '1.5' }],
+        base: ['1rem', { lineHeight: '1.5' }],
+        lg: ['1.125rem', { lineHeight: '1.4' }],
+        xl: ['1.25rem', { lineHeight: '1.3' }],
+        '2xl': ['1.5rem', { lineHeight: '1.2' }],
+        '3xl': ['1.875rem', { lineHeight: '1.2' }],
+        '4xl': ['2.25rem', { lineHeight: '1.2' }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -72,19 +82,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        /* ChemistCare named colours */
-        "clinical-blue": "#1D6FA4",
-        "deep-navy": "#1E293B",
-        "clinical-red": "#E63946",
-        "prescription-green": "#1FA971",
-        "safety-yellow": "#F6D860",
+        /* Legacy named aliases — retained for back-compat; remapped to new
+         * design tokens. Prefer semantic classes (bg-primary, text-destructive)
+         * in new code. */
+        "clinical-blue": "hsl(var(--primary))",   // now deep teal
+        "deep-navy": "hsl(var(--sidebar-background))",
+        "clinical-red": "hsl(var(--destructive))", // coral signal
+        "prescription-green": "hsl(var(--clinical-safe))",
+        "safety-yellow": "hsl(var(--clinical-warning))",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)",                  // 8px — cards
+        md: "calc(var(--radius) - 2px)",      // 6px — UI elements
+        sm: "calc(var(--radius) - 4px)",      // 4px
       },
       boxShadow: {
+        sm: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        md: "0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05)",
         card: "var(--shadow-card)",
         "card-hover": "var(--shadow-card-hover)",
       },

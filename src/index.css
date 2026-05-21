@@ -1,117 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Design tokens — see src/styles/theme.ts for the canonical TS reference.
+ * All colors are HSL triplets. Reference these tokens via Tailwind semantic
+ * classes (bg-primary, text-foreground, border-border). Do not introduce
+ * arbitrary hex values in components.
+ */
+
 @layer base {
   :root {
-    /* ChemistCare Style Guide — Enterprise Clinical */
+    /* Surfaces — neutral cool grayscale */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;               /* #0A0A0A */
 
-    /* Background: Cloud White #F8FBFC → hsl(192 33% 98%) */
-    --background: 192 33% 98%;
-    /* Foreground: Primary text #0F172A → hsl(222 47% 11%) */
-    --foreground: 222 47% 11%;
-
-    /* Card: Clean White #FFFFFF */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 4%;
 
-    /* Primary: Clinical Blue #1D6FA4 → hsl(205 69% 38%) */
-    --primary: 205 69% 38%;
+    /* Primary — Deep Clinical Teal #0F5B5E */
+    --primary: 182 72% 21%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Cool Grey #EDF2F5 → hsl(210 25% 95%) */
-    --secondary: 210 25% 95%;
-    /* Secondary foreground: darker for contrast */
-    --secondary-foreground: 215 25% 30%;
+    /* Secondary — neutral 100 */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
 
-    /* Muted: Soft Blue-Grey #EEF2F6 */
-    --muted: 214 20% 94%;
-    /* Muted foreground: readable grey #64748B */
-    --muted-foreground: 215 16% 47%;
+    /* Muted */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent: Primary blue (same as primary for consistency) */
-    --accent: 205 69% 38%;
+    /* Accent — same as primary; no parallel accent color */
+    --accent: 182 72% 21%;
     --accent-foreground: 0 0% 100%;
 
-    /* Destructive: Clinical Red — reserved for errors/warnings only */
-    --destructive: 355 77% 56%;
+    /* Destructive / signal — Coral #E85D4E (errors & warnings only) */
+    --destructive: 7 78% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Border: light cool grey */
-    --border: 214 18% 87%;
-    --input: 214 18% 87%;
-    /* Ring: Primary Blue */
-    --ring: 205 69% 38%;
+    /* Borders & inputs — neutral 200 */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 182 72% 21%;
 
-    /* Radius: 10px for cards, 8px for buttons */
-    --radius: 0.625rem;
+    /* Radius: cards default 8px; UI elements use rounded-md (6px) */
+    --radius: 0.5rem;
 
     /* Clinical status tokens */
-    --clinical-safe: 155 68% 39%;
-    --clinical-safe-bg: 155 40% 94%;
-    --clinical-warning: 46 90% 50%;
-    --clinical-warning-bg: 46 70% 95%;
-    --clinical-danger: 355 77% 56%;
-    --clinical-danger-bg: 355 55% 95%;
-    --clinical-info: 205 69% 38%;
-    --clinical-info-bg: 205 50% 95%;
+    --clinical-safe: 155 68% 32%;
+    --clinical-safe-bg: 155 40% 96%;
+    --clinical-warning: 38 92% 45%;
+    --clinical-warning-bg: 38 70% 96%;
+    --clinical-danger: 7 78% 60%;
+    --clinical-danger-bg: 7 60% 97%;
+    --clinical-info: 182 72% 21%;
+    --clinical-info-bg: 182 30% 96%;
 
-    /* Sidebar: Deep Navy-Slate */
-    --sidebar-background: 215 28% 13%;
-    --sidebar-foreground: 214 15% 62%;
-    --sidebar-primary: 205 69% 50%;
+    /* Sidebar — neutral deep */
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 64%;
+    --sidebar-primary: 182 60% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 25% 18%;
-    --sidebar-accent-foreground: 210 20% 92%;
-    --sidebar-border: 215 20% 19%;
-    --sidebar-ring: 205 69% 50%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 182 60% 38%;
 
     /* Typography */
     --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
     --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-mono: 'Roboto Mono', 'JetBrains Mono', monospace;
 
-    /* Card shadow */
-    --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.08);
-    --shadow-card-hover: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Elevation — sharp, neutral, minimal */
+    --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-card-hover: 0 1px 3px 0 rgb(0 0 0 / 0.08);
   }
 
   .dark {
-    --background: 222 30% 8%;
-    --foreground: 210 20% 90%;
-    --card: 222 25% 11%;
-    --card-foreground: 210 20% 90%;
-    --popover: 222 25% 11%;
-    --popover-foreground: 210 20% 90%;
-    --primary: 205 69% 50%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 182 60% 38%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 222 20% 16%;
-    --secondary-foreground: 210 15% 78%;
-    --muted: 222 18% 14%;
-    --muted-foreground: 215 12% 50%;
-    --accent: 205 60% 50%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 182 60% 38%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 355 65% 48%;
+    --destructive: 7 70% 55%;
     --destructive-foreground: 0 0% 100%;
-    --border: 222 18% 18%;
-    --input: 222 18% 18%;
-    --ring: 205 69% 50%;
-    --sidebar-background: 222 30% 6%;
-    --sidebar-foreground: 210 12% 60%;
-    --sidebar-primary: 205 69% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 182 60% 38%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 64%;
+    --sidebar-primary: 182 60% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 22% 13%;
-    --sidebar-accent-foreground: 210 12% 85%;
-    --sidebar-border: 222 20% 13%;
-    --sidebar-ring: 205 69% 50%;
+    --sidebar-accent: 0 0% 9%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 182 60% 38%;
 
-    --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.2);
-    --shadow-card-hover: 0 2px 8px rgba(0, 0, 0, 0.25);
+    --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+    --shadow-card-hover: 0 1px 3px 0 rgb(0 0 0 / 0.5);
   }
 }
 
