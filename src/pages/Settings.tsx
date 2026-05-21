@@ -2,22 +2,58 @@ import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
+const Row = ({ label, value }: { label: string; value: string }) => (
+  <div className="flex justify-between text-sm">
+    <span className="text-muted-foreground">{label}</span>
+    <span className="font-medium">{value}</span>
+  </div>
+);
+
 const SettingsPage = () => (
   <ClinicalLayout>
     <div className="p-6 space-y-6 animate-fade-in max-w-2xl">
       <div>
-        <h1 className="text-2xl font-bold">Settings</h1>
-        <p className="text-sm text-muted-foreground mt-1">System configuration and prescriber profile</p>
+        <h1 className="text-2xl font-semibold tracking-tight">Practice settings</h1>
+        <p className="text-sm text-muted-foreground mt-1">
+          Clinic profile, prescriber credentials, integrations and notifications.
+        </p>
       </div>
+
       <Card>
-        <CardHeader><CardTitle className="text-base">Prescriber Profile</CardTitle></CardHeader>
-        <CardContent className="space-y-3 text-sm">
-          <div className="flex justify-between"><span className="text-muted-foreground">Name</span><span className="font-medium">—</span></div>
-          <div className="flex justify-between"><span className="text-muted-foreground">Ahpra Registration</span><span className="font-medium">—</span></div>
-          <div className="flex justify-between"><span className="text-muted-foreground">Pharmacy</span><span className="font-medium">—</span></div>
+        <CardHeader><CardTitle className="text-base">Clinic profile</CardTitle></CardHeader>
+        <CardContent className="space-y-3">
+          <Row label="Pharmacy" value="—" />
+          <Row label="Address" value="—" />
           <Separator />
-          <div className="flex justify-between"><span className="text-muted-foreground">Jurisdiction</span><span className="font-medium">Victoria</span></div>
-          <div className="flex justify-between"><span className="text-muted-foreground">Prescribing Authority</span><span className="font-medium">Community Pharmacist Prescriber</span></div>
+          <Row label="Jurisdiction" value="Victoria" />
+          <Row label="Prescribing authority" value="Community Pharmacist Prescriber" />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader><CardTitle className="text-base">Prescriber credentials</CardTitle></CardHeader>
+        <CardContent className="space-y-3">
+          <Row label="Name" value="—" />
+          <Row label="Ahpra registration" value="—" />
+          <Row label="Endorsements" value="—" />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader><CardTitle className="text-base">Integrations</CardTitle></CardHeader>
+        <CardContent className="space-y-3">
+          <Row label="MediSecure" value="Connected" />
+          <Row label="PBS Online" value="Connected" />
+          <Row label="My Health Record" value="Not connected" />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader><CardTitle className="text-base">Notifications</CardTitle></CardHeader>
+        <CardContent className="space-y-3">
+          <Row label="Follow-up reminders" value="On" />
+          <Row label="Red-flag alerts" value="On" />
+          <Row label="Weekly summary email" value="On" />
         </CardContent>
       </Card>
     </div>
