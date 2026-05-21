@@ -51,7 +51,13 @@ const emptyForm = (): Omit<Patient, 'id' | 'lastVisit'> => ({
 const Patients = () => {
   const [patients, setPatients] = useState<Patient[]>(INITIAL_PATIENTS);
   const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(true);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(t);
+  }, []);
 
   // Edit/Add dialog
   const [editDialogOpen, setEditDialogOpen] = useState(false);
@@ -61,6 +67,13 @@ const Patients = () => {
   // Delete dialog
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deletingPatient, setDeletingPatient] = useState<Patient | null>(null);
+
+  const riskScore = (p: Patient): { label: string; tone: string } => {
+    const n = p.conditions.length;
+    if (n >= 2) return { label: 'Moderate', tone: 'bg-clinical-warning-bg text-clinical-warning' };
+    if (n === 1) return { label: 'Low', tone: 'bg-clinical-safe-bg text-clinical-safe' };
+    return { label: 'Baseline', tone: 'bg-muted text-muted-foreground' };
+  };
 
   const filtered = useMemo(() => {
     if (!search.trim()) return patients;
@@ -129,18 +142,20 @@ const Patients = () => {
       <div className="p-6 space-y-6 animate-fade-in">
         <div className="flex items-center justify-between">
           <div>
-            <h1>Patients</h1>
-            <p className="text-sm text-muted-foreground mt-1">Manage patient profiles and consultation history</p>
+            <h1 className="text-2xl font-semibold tracking-tight">Patient registry</h1>
+            <p className="text-sm text-muted-foreground mt-1">
+              Name, DOB, Medicare, last consult and risk score for every active record.
+            </p>
           </div>
           <Button className="gap-2" onClick={openAdd}>
-            <UserPlus className="h-4 w-4" /> Add Patient
+            <UserPlus className="h-4 w-4" /> Add patient
           </Button>
         </div>
 
         <div className="relative max-w-lg">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Search by name, DOB, Medicare, or phone..."
+            placeholder="Search by name, DOB, Medicare or phone..."
             className="pl-10"
             value={search}
             onChange={e => setSearch(e.target.value)}
@@ -149,45 +164,88 @@ const Patients = () => {
 
         {duplicateWarning && (
           <div className="text-xs px-3 py-2 rounded-md bg-clinical-warning-bg" style={{ color: 'hsl(var(--clinical-warning))' }}>
-            ⚠ {duplicateWarning}
+            {duplicateWarning}
           </div>
         )}
 
-        {filtered.length === 0 ? (
-          <EmptyState message="No patients matching your search." />
-        ) : (
-          <div className="space-y-2">
-            {filtered.map((p) => (
-              <Card key={p.id} className="hover:shadow-md transition-shadow">
-                <CardContent className="p-4 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary">
-                      {p.firstName[0]}{p.lastName[0]}
+        <div className={`transition-opacity duration-200 ${loading ? 'opacity-100' : 'opacity-100'}`}>
+          {loading ? (
+            <div className="space-y-2">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <Card key={i}>
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <Skeleton className="h-10 w-10 rounded-full" />
+                    <div className="flex-1 space-y-2">
+                      <Skeleton className="h-3.5 w-40" />
+                      <Skeleton className="h-3 w-64" />
                     </div>
-                    <div>
-                      <p className="text-sm font-semibold">{p.firstName} {p.lastName}</p>
-                      <p className="text-xs text-muted-foreground tabular-nums">DOB: {p.dateOfBirth} · {p.sex} · Medicare: {p.medicare}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex gap-1 hidden sm:flex">
-                      {p.conditions.map(c => (
-                        <Badge key={c} variant="secondary" className="text-xs">{c}</Badge>
-                      ))}
-                    </div>
-                    <span className="text-xs text-muted-foreground tabular-nums hidden sm:inline">Last: {p.lastVisit}</span>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => openEdit(p)}>
-                      <Pencil className="h-3.5 w-3.5" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:text-destructive" onClick={() => openDelete(p)}>
-                      <Trash2 className="h-3.5 w-3.5" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        )}
+                    <Skeleton className="h-5 w-16" />
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : filtered.length === 0 ? (
+            <Card>
+              <CardContent className="p-10 flex flex-col items-center justify-center gap-3 text-center">
+                <Inbox className="h-6 w-6 text-muted-foreground" />
+                <p className="text-sm">No patients match your filters.</p>
+                {search && (
+                  <button
+                    onClick={() => setSearch('')}
+                    className="text-xs text-primary underline-offset-4 hover:underline"
+                  >
+                    Clear filters
+                  </button>
+                )}
+              </CardContent>
+            </Card>
+          ) : (
+            <div className="space-y-2">
+              {filtered.map((p) => {
+                const risk = riskScore(p);
+                return (
+                  <Card key={p.id} className="hover:shadow-md transition-shadow">
+                    <CardContent className="p-4 flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary">
+                          {p.firstName[0]}{p.lastName[0]}
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold">{p.firstName} {p.lastName}</p>
+                          <p className="text-xs text-muted-foreground tabular-nums">
+                            DOB: {p.dateOfBirth} · {p.sex} · Medicare: {p.medicare}
+                          </p>
+                          <p className="text-[0.6875rem] text-muted-foreground mt-0.5">
+                            {p.conditions.length === 0 ? 'No open episodes' : 'Active under care'}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="hidden sm:flex gap-1">
+                          {p.conditions.map(c => (
+                            <Badge key={c} variant="secondary" className="text-xs">{c}</Badge>
+                          ))}
+                        </div>
+                        <span className={`text-[0.6875rem] font-medium px-2 py-0.5 rounded-full ${risk.tone}`}>
+                          Risk: {risk.label}
+                        </span>
+                        <span className="text-xs text-muted-foreground tabular-nums hidden sm:inline">
+                          Last: {p.lastVisit}
+                        </span>
+                        <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => openEdit(p)}>
+                          <Pencil className="h-3.5 w-3.5" />
+                        </Button>
+                        <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:text-destructive" onClick={() => openDelete(p)}>
+                          <Trash2 className="h-3.5 w-3.5" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Edit / Add Dialog */}
