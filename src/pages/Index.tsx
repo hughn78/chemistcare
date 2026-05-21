@@ -123,7 +123,7 @@ const Dashboard = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 pb-1 border-b">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Prescriber command centre</h1>
+            <h1 className="text-2xl font-semibold tracking-tight">Prescriber Command Centre</h1>
             <p className="text-sm text-muted-foreground mt-1 tabular-nums">{today}</p>
           </div>
           <div className="inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1.5 text-xs font-medium self-start lg:self-auto">
