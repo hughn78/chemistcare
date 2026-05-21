@@ -14,6 +14,7 @@ import Patients from "./pages/Patients";
 import ConditionsLibrary from "./pages/ConditionsLibrary";
 import ConditionDetail from "./pages/ConditionDetail";
 import PrescribingLog from "./pages/PrescribingLog";
+import Episodes from "./pages/Episodes";
 import Audit from "./pages/Audit";
 import SettingsPage from "./pages/Settings";
 import CalculatorsPage from "./pages/Calculators";
@@ -57,6 +58,7 @@ const router = createBrowserRouter([
   { path: "/conditions", element: <ConditionsLibrary /> },
   { path: "/conditions/:id", element: <ConditionDetail /> },
   { path: "/prescribing-log", element: <PrescribingLog /> },
+  { path: "/episodes", element: <Episodes /> },
   { path: "/audit", element: <Audit /> },
   { path: "/calculators", element: <CalculatorsPage /> },
   { path: "/claims", element: <ClaimsPage /> },

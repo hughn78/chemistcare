@@ -188,6 +188,7 @@ export function AppSidebar() {
     { title: 'Calendar', url: '/calendar', icon: CalendarDays },
     { title: 'Patients', url: '/patients', icon: Users },
     { title: 'Prescribing Log', url: '/prescribing-log', icon: ClipboardList },
+    { title: 'Care Episodes', url: '/episodes', icon: HeartPulse },
     { title: 'Clinical Scribe', url: '/scribe', icon: Mic },
   ];
 
