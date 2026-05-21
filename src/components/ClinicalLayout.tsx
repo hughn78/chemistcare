@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
+import { PageTransition } from '@/components/PageTransition';
 import { Shield } from 'lucide-react';
 
 interface ClinicalLayoutProps {
@@ -28,7 +29,7 @@ export function ClinicalLayout({ children }: ClinicalLayoutProps) {
             </div>
           </header>
           <main className="flex-1 overflow-auto">
-            {children}
+            <PageTransition>{children}</PageTransition>
           </main>
         </div>
       </div>
