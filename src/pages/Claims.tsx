@@ -13,7 +13,7 @@ const ClaimsPage = () => {
     <ClinicalLayout>
       <div className="p-6 space-y-6 animate-fade-in max-w-5xl">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">PBS claims &amp; reimbursements</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">PBS Claims &amp; Reimbursements</h1>
           <p className="text-sm text-muted-foreground mt-1">
             Assess eligibility, generate monthly claim batches and export summaries for funded community pharmacist programs.
           </p>
