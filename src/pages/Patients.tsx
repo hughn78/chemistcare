@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -200,50 +201,69 @@ const Patients = () => {
               </CardContent>
             </Card>
           ) : (
-            <div className="space-y-2">
-              {filtered.map((p) => {
+            <motion.div
+              className="space-y-2"
+              initial="hidden"
+              animate="show"
+              variants={{ show: { transition: { staggerChildren: 0.02 } } }}
+            >
+              {filtered.map((p, idx) => {
                 const risk = riskScore(p);
+                // Only stagger the first 10 rows; the rest render instantly.
+                const animate = idx < 10;
                 return (
-                  <Card key={p.id} className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-4 flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary">
-                          {p.firstName[0]}{p.lastName[0]}
+                  <motion.div
+                    key={p.id}
+                    variants={
+                      animate
+                        ? {
+                            hidden: { opacity: 0, y: -4 },
+                            show: { opacity: 1, y: 0, transition: { duration: 0.15, ease: 'easeOut' } },
+                          }
+                        : { hidden: { opacity: 1 }, show: { opacity: 1 } }
+                    }
+                  >
+                    <Card className="hover:shadow-md transition-shadow">
+                      <CardContent className="p-4 flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary">
+                            {p.firstName[0]}{p.lastName[0]}
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold">{p.firstName} {p.lastName}</p>
+                            <p className="text-xs text-muted-foreground tabular-nums">
+                              DOB: {p.dateOfBirth} · {p.sex} · Medicare: {p.medicare}
+                            </p>
+                            <p className="text-[0.6875rem] text-muted-foreground mt-0.5">
+                              {p.conditions.length === 0 ? 'No open episodes' : 'Active under care'}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-sm font-semibold">{p.firstName} {p.lastName}</p>
-                          <p className="text-xs text-muted-foreground tabular-nums">
-                            DOB: {p.dateOfBirth} · {p.sex} · Medicare: {p.medicare}
-                          </p>
-                          <p className="text-[0.6875rem] text-muted-foreground mt-0.5">
-                            {p.conditions.length === 0 ? 'No open episodes' : 'Active under care'}
-                          </p>
+                        <div className="flex items-center gap-3">
+                          <div className="hidden sm:flex gap-1">
+                            {p.conditions.map(c => (
+                              <Badge key={c} variant="secondary" className="text-xs">{c}</Badge>
+                            ))}
+                          </div>
+                          <span className={`text-[0.6875rem] font-medium px-2 py-0.5 rounded-full ${risk.tone}`}>
+                            Risk: {risk.label}
+                          </span>
+                          <span className="text-xs text-muted-foreground tabular-nums hidden sm:inline">
+                            Last: {p.lastVisit}
+                          </span>
+                          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => openEdit(p)}>
+                            <Pencil className="h-3.5 w-3.5" />
+                          </Button>
+                          <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:text-destructive" onClick={() => openDelete(p)}>
+                            <Trash2 className="h-3.5 w-3.5" />
+                          </Button>
                         </div>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="hidden sm:flex gap-1">
-                          {p.conditions.map(c => (
-                            <Badge key={c} variant="secondary" className="text-xs">{c}</Badge>
-                          ))}
-                        </div>
-                        <span className={`text-[0.6875rem] font-medium px-2 py-0.5 rounded-full ${risk.tone}`}>
-                          Risk: {risk.label}
-                        </span>
-                        <span className="text-xs text-muted-foreground tabular-nums hidden sm:inline">
-                          Last: {p.lastVisit}
-                        </span>
-                        <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => openEdit(p)}>
-                          <Pencil className="h-3.5 w-3.5" />
-                        </Button>
-                        <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:text-destructive" onClick={() => openDelete(p)}>
-                          <Trash2 className="h-3.5 w-3.5" />
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
