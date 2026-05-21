@@ -1,17 +1,17 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
+import { Skeleton } from '@/components/ui/skeleton';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { EmptyState } from '@/components/PageSkeleton';
 import { TagInput, parseTagString, tagsToString } from '@/components/ui/tag-input';
 import { useToast } from '@/hooks/use-toast';
-import { UserPlus, Search, Pencil, Trash2 } from 'lucide-react';
+import { UserPlus, Search, Pencil, Trash2, Inbox } from 'lucide-react';
 
 interface Patient {
   id: string;
