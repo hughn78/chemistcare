@@ -2,22 +2,28 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-// Fallbacks ensure packaged desktop builds still work even when CI doesn't inject env vars.
-const SUPABASE_URL =
-  import.meta.env.VITE_SUPABASE_URL ||
-  'https://moyonkosvvufpzxxjlle.supabase.co';
+// Production Supabase URL and anon key must be injected via environment
+// variables at build time (VITE_SUPABASE_URL, VITE_SUPABASE_PUBLISHABLE_KEY).
+// This file contains no fallback or hardcoded credentials.
 
-const SUPABASE_PUBLISHABLE_KEY =
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1veW9ua29zdnZ1ZnB6eHhqbGxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0MjQ1MzcsImV4cCI6MjA4ODAwMDUzN30.uEh_a37t1O67v53Iu5WHLeL8nTbyD9txxUvf9YeFMBs';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
-// Import the supabase client like this:
-// import { supabase } from "@/integrations/supabase/client";
+if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+  console.error(
+    '[ChemistCare] Missing Supabase environment variables. ' +
+    'Please set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY.'
+  );
+}
 
-export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: {
-    storage: localStorage,
-    persistSession: true,
-    autoRefreshToken: true,
-  },
-});
+export const supabase = createClient<Database>(
+  SUPABASE_URL || '',
+  SUPABASE_PUBLISHABLE_KEY || '',
+  {
+    auth: {
+      storage: localStorage,
+      persistSession: true,
+      autoRefreshToken: true,
+    },
+  }
+);

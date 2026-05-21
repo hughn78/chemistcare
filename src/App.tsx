@@ -3,82 +3,90 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+
+// Eager-load landing page for fast initial paint
 import LandingPage from "./pages/LandingPage";
-import Index from "./pages/Index";
-import NewConsultation from "./pages/NewConsultation";
-import ConsultationPicker from "./pages/ConsultationPicker";
-import ConsultationRedirect from "./pages/ConsultationRedirect";
-import UtiConsultation from "./pages/UtiConsultation";
-import Patients from "./pages/Patients";
-import ConditionsLibrary from "./pages/ConditionsLibrary";
-import ConditionDetail from "./pages/ConditionDetail";
-import PrescribingLog from "./pages/PrescribingLog";
-import Audit from "./pages/Audit";
-import SettingsPage from "./pages/Settings";
-import CalculatorsPage from "./pages/Calculators";
-import ClaimsPage from "./pages/Claims";
-import PPASettingsPage from "./pages/PPASettings";
-import EightCpaDashboard from "./pages/EightCpaDashboard";
-import EightCpaNewService from "./pages/EightCpaNewService";
-import EightCpaServiceHistory from "./pages/EightCpaServiceHistory";
-import PatientTriage from "./pages/PatientTriage";
-import ProtocolConsultation from "./pages/ProtocolConsultation";
-import TravelConsultation from "./pages/TravelConsultation";
-import CalendarPage from "./pages/CalendarPage";
-import BookingPage from "./pages/BookingPage";
-import AdminSettingsPage from "./pages/AdminSettingsPage";
-import ScribePage from "./pages/ScribePage";
-import PatientMessaging from "./pages/PatientMessaging";
-import PbsLookup from "./pages/PbsLookup";
-import ClaimsDemo from "./pages/ClaimsDemo";
-import FhirDemo from "./pages/FhirDemo";
-import IntegrationSettings from "./pages/IntegrationSettings";
-import FullScopeOfPractice from "./pages/FullScopeOfPractice";
-import NotFound from "./pages/NotFound";
+
+// Lazy-load everything else for code splitting
+const Index = lazy(() => import("./pages/Index"));
+const NewConsultation = lazy(() => import("./pages/NewConsultation"));
+const ConsultationPicker = lazy(() => import("./pages/ConsultationPicker"));
+const ConsultationRedirect = lazy(() => import("./pages/ConsultationRedirect"));
+const UtiConsultation = lazy(() => import("./pages/UtiConsultation"));
+const Patients = lazy(() => import("./pages/Patients"));
+const ConditionsLibrary = lazy(() => import("./pages/ConditionsLibrary"));
+const ConditionDetail = lazy(() => import("./pages/ConditionDetail"));
+const PrescribingLog = lazy(() => import("./pages/PrescribingLog"));
+const Audit = lazy(() => import("./pages/Audit"));
+const SettingsPage = lazy(() => import("./pages/Settings"));
+const CalculatorsPage = lazy(() => import("./pages/Calculators"));
+const ClaimsPage = lazy(() => import("./pages/Claims"));
+const PPASettingsPage = lazy(() => import("./pages/PPASettings"));
+const EightCpaDashboard = lazy(() => import("./pages/EightCpaDashboard"));
+const EightCpaNewService = lazy(() => import("./pages/EightCpaNewService"));
+const EightCpaServiceHistory = lazy(() => import("./pages/EightCpaServiceHistory"));
+const PatientTriage = lazy(() => import("./pages/PatientTriage"));
+const ProtocolConsultation = lazy(() => import("./pages/ProtocolConsultation"));
+const TravelConsultation = lazy(() => import("./pages/TravelConsultation"));
+const CalendarPage = lazy(() => import("./pages/CalendarPage"));
+const BookingPage = lazy(() => import("./pages/BookingPage"));
+const AdminSettingsPage = lazy(() => import("./pages/AdminSettingsPage"));
+const ScribePage = lazy(() => import("./pages/ScribePage"));
+const PatientMessaging = lazy(() => import("./pages/PatientMessaging"));
+const PbsLookup = lazy(() => import("./pages/PbsLookup"));
+const ClaimsDemo = lazy(() => import("./pages/ClaimsDemo"));
+const FhirDemo = lazy(() => import("./pages/FhirDemo"));
+const IntegrationSettings = lazy(() => import("./pages/IntegrationSettings"));
+const FullScopeOfPractice = lazy(() => import("./pages/FullScopeOfPractice"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+function PageLoader() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center space-y-4 bg-background text-foreground">
+      <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+      <p className="text-sm text-muted-foreground font-medium">Loading PrescriberOS...</p>
+    </div>
+  );
+}
 
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   { path: "/", element: <LandingPage />, errorElement: <ErrorBoundary><NotFound /></ErrorBoundary> },
-  { path: "/full-scope-of-practice", element: <FullScopeOfPractice /> },
-  { path: "/dashboard", element: <Index /> },
-  // Condition-aware consultation routing (single source of truth: conditionRegistry)
-  { path: "/consultations/new", element: <ConsultationPicker /> },
-  // UTI is the gold-standard, condition-driven pathway. Other 21 conditions
-  // continue to use the generic NewConsultation engine until they are
-  // migrated to the ConditionTemplate contract.
-  { path: "/consultations/new/uncomplicated-uti", element: <UtiConsultation /> },
-  { path: "/consultations/new/:conditionSlug", element: <NewConsultation /> },
-  // Legacy: /consultation and /consultation?condition=<id> still link in from
-  // Dashboard, ConditionDetail, PrescribingLog, ReviewPanel — redirect them.
-  { path: "/consultation", element: <ConsultationRedirect /> },
-  { path: "/patients", element: <Patients /> },
-  { path: "/conditions", element: <ConditionsLibrary /> },
-  { path: "/conditions/:id", element: <ConditionDetail /> },
-  { path: "/prescribing-log", element: <PrescribingLog /> },
-  { path: "/audit", element: <Audit /> },
-  { path: "/calculators", element: <CalculatorsPage /> },
-  { path: "/claims", element: <ClaimsPage /> },
-  { path: "/ppa-settings", element: <PPASettingsPage /> },
-  { path: "/eight-cpa", element: <EightCpaDashboard /> },
-  { path: "/eight-cpa/new", element: <EightCpaNewService /> },
-  { path: "/eight-cpa/edit/:id", element: <EightCpaNewService /> },
-  { path: "/eight-cpa/history", element: <EightCpaServiceHistory /> },
-  { path: "/settings", element: <SettingsPage /> },
-  { path: "/triage", element: <PatientTriage /> },
-  { path: "/protocol-consultation", element: <ProtocolConsultation /> },
-  { path: "/travel-consultation", element: <TravelConsultation /> },
-  { path: "/calendar", element: <CalendarPage /> },
-  { path: "/book/:pharmacySlug", element: <BookingPage /> },
-  { path: "/admin/settings", element: <AdminSettingsPage /> },
-  { path: "/scribe", element: <ScribePage /> },
-  { path: "/messaging", element: <PatientMessaging /> },
-  { path: "/pbs-lookup", element: <PbsLookup /> },
-  { path: "/claims-demo", element: <ClaimsDemo /> },
-  { path: "/fhir-demo", element: <FhirDemo /> },
-  { path: "/integration-settings", element: <IntegrationSettings /> },
-  { path: "*", element: <NotFound /> },
+  { path: "/full-scope-of-practice", element: <Suspense fallback={<PageLoader />}><FullScopeOfPractice /></Suspense> },
+  { path: "/dashboard", element: <Suspense fallback={<PageLoader />}><Index /></Suspense> },
+  { path: "/consultations/new", element: <Suspense fallback={<PageLoader />}><ConsultationPicker /></Suspense> },
+  { path: "/consultations/new/uncomplicated-uti", element: <Suspense fallback={<PageLoader />}><UtiConsultation /></Suspense> },
+  { path: "/consultations/new/:conditionSlug", element: <Suspense fallback={<PageLoader />}><NewConsultation /></Suspense> },
+  { path: "/consultation", element: <Suspense fallback={<PageLoader />}><ConsultationRedirect /></Suspense> },
+  { path: "/patients", element: <Suspense fallback={<PageLoader />}><Patients /></Suspense> },
+  { path: "/conditions", element: <Suspense fallback={<PageLoader />}><ConditionsLibrary /></Suspense> },
+  { path: "/conditions/:id", element: <Suspense fallback={<PageLoader />}><ConditionDetail /></Suspense> },
+  { path: "/prescribing-log", element: <Suspense fallback={<PageLoader />}><PrescribingLog /></Suspense> },
+  { path: "/audit", element: <Suspense fallback={<PageLoader />}><Audit /></Suspense> },
+  { path: "/calculators", element: <Suspense fallback={<PageLoader />}><CalculatorsPage /></Suspense> },
+  { path: "/claims", element: <Suspense fallback={<PageLoader />}><ClaimsPage /></Suspense> },
+  { path: "/ppa-settings", element: <Suspense fallback={<PageLoader />}><PPASettingsPage /></Suspense> },
+  { path: "/eight-cpa", element: <Suspense fallback={<PageLoader />}><EightCpaDashboard /></Suspense> },
+  { path: "/eight-cpa/new", element: <Suspense fallback={<PageLoader />}><EightCpaNewService /></Suspense> },
+  { path: "/eight-cpa/edit/:id", element: <Suspense fallback={<PageLoader />}><EightCpaNewService /></Suspense> },
+  { path: "/eight-cpa/history", element: <Suspense fallback={<PageLoader />}><EightCpaServiceHistory /></Suspense> },
+  { path: "/settings", element: <Suspense fallback={<PageLoader />}><SettingsPage /></Suspense> },
+  { path: "/triage", element: <Suspense fallback={<PageLoader />}><PatientTriage /></Suspense> },
+  { path: "/protocol-consultation", element: <Suspense fallback={<PageLoader />}><ProtocolConsultation /></Suspense> },
+  { path: "/travel-consultation", element: <Suspense fallback={<PageLoader />}><TravelConsultation /></Suspense> },
+  { path: "/calendar", element: <Suspense fallback={<PageLoader />}><CalendarPage /></Suspense> },
+  { path: "/book/:pharmacySlug", element: <Suspense fallback={<PageLoader />}><BookingPage /></Suspense> },
+  { path: "/admin/settings", element: <Suspense fallback={<PageLoader />}><AdminSettingsPage /></Suspense> },
+  { path: "/scribe", element: <Suspense fallback={<PageLoader />}><ScribePage /></Suspense> },
+  { path: "/messaging", element: <Suspense fallback={<PageLoader />}><PatientMessaging /></Suspense> },
+  { path: "/pbs-lookup", element: <Suspense fallback={<PageLoader />}><PbsLookup /></Suspense> },
+  { path: "/claims-demo", element: <Suspense fallback={<PageLoader />}><ClaimsDemo /></Suspense> },
+  { path: "/fhir-demo", element: <Suspense fallback={<PageLoader />}><FhirDemo /></Suspense> },
+  { path: "/integration-settings", element: <Suspense fallback={<PageLoader />}><IntegrationSettings /></Suspense> },
+  { path: "*", element: <Suspense fallback={<PageLoader />}><NotFound /></Suspense> },
 ]);
 
 const App = () => (

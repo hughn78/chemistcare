@@ -308,12 +308,12 @@ export default function LandingPage() {
             className="flex flex-col sm:flex-row items-start gap-4">
               <button onClick={() => navigate("/dashboard")}
               className="bg-[#2dd4bf] hover:bg-[#14b8a6] text-[#0f172a] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
-                Start Prescribing Now <ArrowRight size={20} />
+                Explore the Platform <ArrowRight size={20} />
               </button>
-              <button onClick={() => document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" })}
-              className="border border-white/20 text-white bg-white/5 px-8 py-4 text-lg font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
-                Join the Waitlist
-              </button>
+              <Link to="/full-scope-of-practice"
+              className="border border-white/20 text-white bg-white/5 px-8 py-4 text-lg font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 inline-flex items-center">
+                See Full Scope of Practice
+              </Link>
             </motion.div>
           </div>
         </div>
