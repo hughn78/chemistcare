@@ -43,7 +43,7 @@ const BINARIES = {
   },
 };
 
-const BIN_DIR = path.join(__dirname, "..", "resources", "bin");
+const BIN_DIR = path.join(__dirname, "..", "..", "resources", "bin");
 
 // Upstream 1.13.4 ships an invalid arm64 signature on libonnxruntime; dyld SIGKILLs unsigned loads.
 function adhocSign(filePath, platformArch) {

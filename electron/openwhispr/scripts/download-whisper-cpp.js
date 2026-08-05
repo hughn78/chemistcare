@@ -40,7 +40,9 @@ const BINARIES = {
   },
 };
 
-const BIN_DIR = path.join(__dirname, "..", "resources", "bin");
+// Layout note (ChemistCare port): the ported helpers resolve binaries at
+// ../../resources relative to helpers/ and utils/, i.e. <repo>/electron/resources/bin.
+const BIN_DIR = path.join(__dirname, "..", "..", "resources", "bin");
 
 // Cache the release info to avoid multiple API calls
 let cachedRelease = null;
