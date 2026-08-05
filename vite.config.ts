@@ -5,6 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Relative asset paths: required for the packaged Electron app, which loads
+  // dist/index.html over file:// (absolute "/assets/..." would resolve to the
+  // filesystem root and the window would stay blank).
+  base: "./",
   server: {
     host: "::",
     port: 8080,

@@ -12,6 +12,7 @@ function createWindow() {
     minWidth: 1100,
     minHeight: 700,
     title: 'ChemistCare-Offline',
+    autoHideMenuBar: true,
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
