@@ -1,6 +1,7 @@
 import { ClinicalLayout } from '@/components/ClinicalLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { VoiceTranscriptionSettings } from '@/components/settings/VoiceTranscriptionSettings';
 
 const Row = ({ label, value }: { label: string; value: string }) => (
   <div className="flex justify-between text-sm">
@@ -47,6 +48,8 @@ const SettingsPage = () => (
           <Row label="My Health Record" value="Not connected" />
         </CardContent>
       </Card>
+
+      <VoiceTranscriptionSettings />
 
       <Card>
         <CardHeader><CardTitle className="text-base">Notifications</CardTitle></CardHeader>

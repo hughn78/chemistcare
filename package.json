@@ -1,7 +1,7 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "chemistcare-offline",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,8 +16,10 @@
     "local:build": "vite build",
     "mac:start": "bash ./scripts/mac-start.command",
     "mac:stop": "bash ./scripts/mac-stop.command",
+    "stt:binaries": "node electron/openwhispr/scripts/download-whisper-cpp.js --current && node electron/openwhispr/scripts/download-diarization-binary.js --current",
+    "stt:binaries:all": "node electron/openwhispr/scripts/download-whisper-cpp.js && node electron/openwhispr/scripts/download-diarization-binary.js",
     "electron:dev": "concurrently -k \"npm run local:dev\" \"wait-on http://localhost:5173 && electron .\"",
-    "electron:build": "npm run local:build && electron-builder --mac dmg --publish never",
+    "electron:build": "npm run local:build && electron-builder --mac dmg zip --publish never",
     "electron:dist": "npm run local:bootstrap && npm run electron:build",
     "android:sync": "npm run build && npx cap sync android",
     "android:open": "npx cap open android",
@@ -66,12 +68,14 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "fabric": "^6.6.1",
+    "ffmpeg-static": "^5.2.0",
     "framer-motion": "^12.34.3",
     "input-otp": "^1.4.2",
     "jspdf": "^4.2.0",
     "jspdf-autotable": "^5.0.7",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
+    "onnxruntime-node": "^1.21.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
@@ -82,6 +86,9 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "tar": "^7.4.3",
+    "unbzip2-stream": "^1.4.3",
+    "unzipper": "^0.12.3",
     "vaul": "^0.9.9",
     "zod": "^3.25.76"
   },
@@ -114,23 +121,57 @@
   },
   "main": "electron-main.cjs",
   "build": {
-    "appId": "au.com.chemistcare.prescriberos",
-    "productName": "ChemistCare PrescriberOS",
+    "appId": "au.com.chemistcare.offline",
+    "productName": "ChemistCare-Offline",
     "files": [
       "dist/**/*",
       "electron-main.cjs",
+      "electron/**/*",
+      "!electron/openwhispr/resources/**",
       "package.json"
+    ],
+    "asarUnpack": [
+      "**/node_modules/ffmpeg-static/**",
+      "**/node_modules/onnxruntime-node/**"
+    ],
+    "extraResources": [
+      {
+        "from": "electron/openwhispr/resources/bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
     ],
     "mac": {
       "category": "public.app-category.medical",
       "target": [
-        "dmg",
-        "zip"
-      ]
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "hardenedRuntime": true,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "ChemistCare-Offline records consultation audio for on-device transcription. Audio never leaves this computer."
+      },
+      "artifactName": "ChemistCare-Offline-${version}-${arch}.${ext}"
     },
     "dmg": {
-      "title": "ChemistCare PrescriberOS",
-      "artifactName": "ChemistCare-PrescriberOS-${version}.${ext}"
+      "title": "ChemistCare-Offline",
+      "artifactName": "ChemistCare-Offline-${version}-${arch}.${ext}"
     },
     "win": {
       "target": [
@@ -147,7 +188,10 @@
           ]
         }
       ],
-      "artifactName": "ChemistCare-PrescriberOS-${version}-Setup-${arch}.${ext}"
+      "artifactName": "ChemistCare-Offline-${version}-Setup-${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "ChemistCare-Offline-${version}-Portable-${arch}.${ext}"
     },
     "nsis": {
       "oneClick": false,
@@ -155,7 +199,7 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "ChemistCare PrescriberOS"
+      "shortcutName": "ChemistCare-Offline"
     }
   }
 }
