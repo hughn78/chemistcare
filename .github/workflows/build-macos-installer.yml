@@ -1,9 +1,9 @@
-name: Build Windows Installer
+name: Build macOS Installer
 
 on:
   workflow_dispatch:
   push:
-    branches: [ main, offline-desktop ]
+    branches: [ offline-desktop ]
     paths:
       - 'package.json'
       - 'package-lock.json'
@@ -12,10 +12,11 @@ on:
       - 'src/**'
       - 'public/**'
       - 'vite.config.ts'
+      - 'build/**'
 
 jobs:
-  build-windows:
-    runs-on: windows-latest
+  build-macos:
+    runs-on: macos-latest
 
     steps:
       - name: Checkout
@@ -36,31 +37,28 @@ jobs:
           npm config set fetch-timeout 300000
 
       - name: Install dependencies (with retry)
-        shell: pwsh
         run: |
-          $max = 3
-          for ($i = 1; $i -le $max; $i++) {
-            Write-Host "Attempt $i of ${max}: npm install"
-            npm install --no-audit --no-fund
-            if ($LASTEXITCODE -eq 0) { exit 0 }
-            if ($i -lt $max) {
-              Write-Host "Install failed, waiting before retry..."
-              Start-Sleep -Seconds (15 * $i)
-            }
-          }
-          exit 1
+          for i in 1 2 3; do
+            echo "Attempt $i of 3: npm install"
+            npm install --no-audit --no-fund && break
+            sleep $((15 * i))
+          done
 
       - name: Download whisper.cpp + diarization sidecar binaries
         run: npm run stt:binaries
 
-      - name: Build Windows installer
-        run: npm run electron:build:win
+      - name: Build macOS app (dmg + zip, arm64 + x64)
+        run: npm run electron:build
+        env:
+          # Unsigned dev builds: set CSC_LINK / APPLE IDs via secrets for signed releases.
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: chemistcare-offline-windows-installer
+          name: chemistcare-offline-macos-installer
           path: |
-            dist/*.exe
+            dist/*.dmg
+            dist/*.zip
             dist/*.blockmap
           if-no-files-found: error

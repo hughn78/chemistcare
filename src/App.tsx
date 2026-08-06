@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import LandingPage from "./pages/LandingPage";
 import Index from "./pages/Index";
@@ -40,7 +40,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
+const routes = [
   { path: "/", element: <LandingPage />, errorElement: <ErrorBoundary><NotFound /></ErrorBoundary> },
   { path: "/full-scope-of-practice", element: <FullScopeOfPractice /> },
   { path: "/dashboard", element: <Index /> },
@@ -81,7 +81,14 @@ const router = createBrowserRouter([
   { path: "/fhir-demo", element: <FhirDemo /> },
   { path: "/integration-settings", element: <IntegrationSettings /> },
   { path: "*", element: <NotFound /> },
-]);
+];
+
+// Packaged Electron loads index.html over file://, where the pathname is a
+// filesystem path and browser history routing matches nothing (blank window).
+// Use hash routing only in that case; the web/dev builds keep clean URLs.
+const router = window.location.protocol === "file:"
+  ? createHashRouter(routes)
+  : createBrowserRouter(routes);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
