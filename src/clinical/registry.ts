@@ -12,13 +12,59 @@
 
 import { requireSource } from './sources';
 import { utiProtocol } from './protocols/uti';
+import { acneProtocol } from './protocols/acne';
+import { dermatitisProtocol } from './protocols/dermatitis';
 import {
   PROTOCOL_STATUS_ORDER,
   type ProtocolDefinition,
   type ProtocolLifecycleStatus,
 } from './types';
 
-export const PROTOCOL_REGISTRY: readonly ProtocolDefinition[] = [utiProtocol];
+export const PROTOCOL_REGISTRY: readonly ProtocolDefinition[] = [
+  utiProtocol,
+  acneProtocol,
+  dermatitisProtocol,
+];
+
+/**
+ * Conditions we have a registered source for but deliberately have NOT turned
+ * into a ProtocolDefinition, because transcribing them would require inventing
+ * or guessing clinical content. See the review note on each source.
+ *
+ * The registry validator asserts this set stays in sync with reality, so a
+ * future contributor cannot silently add an unreviewed protocol for one of
+ * these conditions without also removing it from this list.
+ */
+export const SOURCES_WITHOUT_PROTOCOL: readonly {
+  sourceId: string;
+  conditionId: string;
+  reason: string;
+}[] = [
+  {
+    sourceId: 'VIC_CCN_SHINGLES_2026_02',
+    conditionId: 'shingles',
+    reason:
+      'The retrieved PDF is a February 2024 Safer Care Victoria document under the ' +
+      'Community Pharmacist Statewide Pilot, not a current Department of Health ' +
+      'Community Pharmacist Program protocol. It also contains internal ' +
+      'contradictions. Per the stop-condition rule, it is marked for clinical ' +
+      'review rather than transcribed, and no shingles pathway is offered.',
+  },
+  {
+    sourceId: 'VIC_CCN_OCP_INIT_2026_07',
+    conditionId: 'ocp-initiation',
+    reason:
+      'This is an INITIATION protocol, not a resupply protocol. Not yet transcribed; ' +
+      'must be reviewed separately from hormonal contraception resupply.',
+  },
+  {
+    sourceId: 'VIC_CCN_HORMONAL_RESUPPLY_2025_12',
+    conditionId: 'hormonal-contraception-resupply',
+    reason:
+      'Source document not retrieved this sprint. Registered from the program ' +
+      'landing page only. No content may be encoded until it is retrieved.',
+  },
+];
 
 const BY_ID = new Map(PROTOCOL_REGISTRY.map(p => [p.id, p]));
 const BY_CONDITION = new Map<string, ProtocolDefinition[]>();
@@ -67,7 +113,8 @@ export interface ValidationIssue {
     | 'duplicate_eligibility_id'
     | 'duplicate_red_flag_id'
     | 'empty_medicines'
-    | 'review_flag_without_note';
+    | 'review_flag_without_note'
+    | 'blocked_source_has_protocol';
   message: string;
 }
 
@@ -166,6 +213,23 @@ export function validateRegistry(): ValidationIssue[] {
         message: `${list.length} non-superseded protocols for ${key}: ${list
           .map(p => p.id)
           .join(', ')}. Exactly one must be authoritative.`,
+      });
+    }
+  }
+
+  // A condition on the blocked list must not quietly acquire a protocol. If it
+  // does, someone has transcribed content the source could not support.
+  for (const blocked of SOURCES_WITHOUT_PROTOCOL) {
+    const present = protocolsForCondition(blocked.conditionId);
+    if (present.length > 0) {
+      issues.push({
+        protocolId: present.map(p => p.id).join(', '),
+        code: 'blocked_source_has_protocol',
+        message:
+          `Condition '${blocked.conditionId}' is on SOURCES_WITHOUT_PROTOCOL because: ` +
+          `${blocked.reason} A protocol has been registered for it anyway. Either the ` +
+          `source problem is resolved (remove it from the list) or the protocol must ` +
+          `not ship.`,
       });
     }
   }

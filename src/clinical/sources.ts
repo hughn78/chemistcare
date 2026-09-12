@@ -7,7 +7,21 @@
  *
  * VICTORIAN entries below were retrieved from the Victorian Department of
  * Health "Community Pharmacist Program – Resources for pharmacists" page on
- * 2026-09-13. Titles and update dates are as published there.
+ * 2026-09-13. Titles and update dates are as published there. Entries marked
+ * "Verified against the retrieved PDF" have had their title, publisher, date
+ * and ISBN read directly out of the downloaded document rather than inferred
+ * from the landing page.
+ *
+ * ⚠️ "Chemist Care Now" is the public-facing campaign name for the Victorian
+ * Community Pharmacist Program. It does NOT appear anywhere inside any of the
+ * protocol documents. Always cite the program by its formal name —
+ * "The Victorian Community Pharmacist Program" — in clinical provenance UI,
+ * and never imply a document is a "Chemist Care Now protocol" when the
+ * document itself says otherwise.
+ *
+ * ⚠️ Not all Victorian protocols in this registry belong to the same program.
+ * VIC_CCN_SHINGLES_2026_02 is a 2024 Safer Care Victoria document under the
+ * Community Pharmacist Statewide Pilot. See its reviewNote.
  *
  * QUEENSLAND entries are registered at PROGRAM level only. The individual
  * condition protocols were NOT retrieved during this sprint, so any
@@ -61,6 +75,33 @@ export const PROTOCOL_SOURCES: readonly ProtocolSource[] = [
     'Protocol for Management of Herpes Zoster (Shingles)',
     'https://www.health.vic.gov.au/sites/default/files/2026-02/protocol-for-management-of-herpes-zoster-shingles.pdf',
     '2026-02-12',
+    {
+      // ⚠️ The PDF served at this URL is NOT a Community Pharmacist Program
+      // document. Verified by reading the retrieved file on 2026-09-13:
+      //   • Cover:      "Victorian Community Pharmacist Statewide Pilot"
+      //   • Publisher:  "© State of Victoria, Australia, Safer Care Victoria,
+      //                  February 2024" (NOT the Department of Health)
+      //   • ISBN:       978-1-76131-470-4
+      //   • Authority:  "Secretary Approval: Community Pharmacist Statewide
+      //                  Pilot" (NOT "Secretary Approval: Community
+      //                  Pharmacist Program")
+      // Every other protocol in this registry is a Department of Health
+      // "Community Pharmacist Program" document dated Dec 2025 – Jul 2026.
+      // This one is ~2 years older, from a different publisher, under a
+      // different enabling instrument. It must not be assumed current.
+      authority: 'Safer Care Victoria',
+      program: 'Community Pharmacist Statewide Pilot',
+      version: 'February 2024',
+      publishedDate: '2024-02-01',
+      isbn: '978-1-76131-470-4',
+      needsClinicalReview: true,
+      reviewNote:
+        'Retrieved PDF is a Feb 2024 Safer Care Victoria document under the ' +
+        'Community Pharmacist Statewide Pilot, not a current Department of Health ' +
+        'Community Pharmacist Program protocol. Confirm whether a current ' +
+        'Community Pharmacist Program shingles protocol exists and supersedes this ' +
+        'one before any shingles content is presented as a VIC pathway.',
+    },
   ),
   vic(
     'VIC_CCN_MSK_PAIN_2026_06',
@@ -73,26 +114,96 @@ export const PROTOCOL_SOURCES: readonly ProtocolSource[] = [
     'Protocol for Initiation of the Oral Contraceptive Pill',
     'https://www.health.vic.gov.au/sites/default/files/2026-07/protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf',
     '2026-07-29',
+    {
+      // Verified against the retrieved PDF 2026-09-13:
+      //   "Protocol for Initiation of the Oral Contraceptive Pill", July 2026,
+      //   ISBN 978-1-76195-024-7, © State of Victoria, Department of Health.
+      // ⚠️ This is an INITIATION protocol — starting the OCP, not resupplying
+      // it. Resupply of hormonal contraception is a SEPARATE protocol
+      // (VIC_CCN_HORMONAL_RESUPPLY_2025_12). Initiation and resupply have
+      // different eligibility, different exclusions and different risk
+      // screening. Do not model one using the other.
+      version: 'July 2026',
+      publishedDate: '2026-07-01',
+      isbn: '978-1-76195-024-7',
+      needsClinicalReview: true,
+      reviewNote:
+        'This is an INITIATION protocol, not a resupply protocol. Verified against ' +
+        'the retrieved PDF (July 2026, ISBN 978-1-76195-024-7). Confirm which of ' +
+        'initiation vs resupply each OCP feature in the product actually implements, ' +
+        'and that the two are never mixed.',
+    },
   ),
   vic(
     'VIC_CCN_ACNE_2026_08',
     'Protocol for Management of Mild Acne',
     'https://www.health.vic.gov.au/sites/default/files/2026-08/protocol-for-management-of-mild-acne.pdf',
+    undefined,
+    {
+      // Verified against the retrieved PDF 2026-09-13:
+      //   "Protocol for Management of Mild Acne", The Victorian Community
+      //   Pharmacist Program, July 2026, ISBN/ISSN 978-1-76131-994-5.
+      // Note the title scopes the service to MILD acne only.
+      version: 'July 2026',
+      publishedDate: '2026-07-01',
+      isbn: '978-1-76131-994-5',
+    },
   ),
   vic(
     'VIC_CCN_DERMATITIS_2026_08',
     'Protocol for Management of Acute Exacerbations of Mild to Moderate Atopic Dermatitis',
     'https://www.health.vic.gov.au/sites/default/files/2026-08/protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf',
+    undefined,
+    {
+      // Verified against the retrieved PDF 2026-09-13:
+      //   July 2026, ISBN/ISSN 978-1-76131-993-8, Department of Health.
+      // ⚠️ Scope is an ACUTE EXACERBATION (flare), not maintenance management.
+      // Note also: the protocol states no per-product contraindications,
+      // cautions or interactions — it delegates all of these to Therapeutic
+      // Guidelines / AMH. Any such content for these products therefore has no
+      // in-document source and must NOT be transcribed as if it did.
+      version: 'July 2026',
+      publishedDate: '2026-07-01',
+      isbn: '978-1-76131-993-8',
+      needsClinicalReview: true,
+      reviewNote:
+        'Scope is acute exacerbation (flare) management only, not maintenance. The ' +
+        'protocol delegates contraindications, cautions, interactions and counselling ' +
+        'to Therapeutic Guidelines / AMH and gives none per product — do not ' +
+        'manufacture them. Age range 2–65 inclusive; face involvement excluded. ' +
+        'Severity bands have gaps (EASI 7.0–7.1 and SCORAD exactly 50 are ' +
+        'unclassified); confirm handling before encoding thresholds.',
+    },
   ),
   vic(
     'VIC_CCN_IMPETIGO_2025_12',
     'Protocol for Management of Impetigo',
     'https://www.health.vic.gov.au/sites/default/files/2025-12/protocol-for-management-of-impetigo-december-2025.pdf',
+    undefined,
+    {
+      // Verified against the retrieved PDF 2026-09-13:
+      //   "Protocol for Management of Impetigo", December 2025,
+      //   ISBN 978-1-76131-946-4, Department of Health.
+      version: 'December 2025',
+      publishedDate: '2025-12-01',
+      isbn: '978-1-76131-946-4',
+    },
   ),
   vic(
     'VIC_CCN_HORMONAL_RESUPPLY_2025_12',
     'Protocol for Resupply of Hormonal Contraception',
     'https://www.health.vic.gov.au/sites/default/files/2025-12/protocol-for-resupply-of-hormonal-contraception-december-2025.pdf',
+    undefined,
+    {
+      // Not retrieved during this sprint — registered from the landing page
+      // listing only. Distinct from VIC_CCN_OCP_INIT_2026_07 (initiation).
+      needsClinicalReview: true,
+      reviewNote:
+        'Not retrieved during this sprint; registered from the program landing page. ' +
+        'This is the RESUPPLY protocol and is a different document from the OCP ' +
+        'INITIATION protocol (VIC_CCN_OCP_INIT_2026_07). Retrieve before any ' +
+        'resupply content is encoded.',
+    },
   ),
   vic(
     'VIC_CCN_PSORIASIS_2024_02',

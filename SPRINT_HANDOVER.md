@@ -37,7 +37,7 @@ Priority 1 = Victorian Department of Health, Community Pharmacist Program ("Chem
 | Source ID | Title | Updated |
 |---|---|---|
 | `VIC_CCN_UTI_2026_01` | Protocol for Management of Urinary Tract Infections | 2026-02-04 (v. January 2026, ISBN 978-1-76131-955-6) |
-| `VIC_CCN_SHINGLES_2026_02` | Herpes Zoster (Shingles) | 2026-02-12 |
+| `VIC_CCN_SHINGLES_2026_02` | Herpes Zoster (Shingles) | ⚠️ see below — NOT a Community Pharmacist Program document |
 | `VIC_CCN_MSK_PAIN_2026_06` | Acute Mild Musculoskeletal Pain | 2026-06-22 |
 | `VIC_CCN_OCP_INIT_2026_07` | Initiation of the Oral Contraceptive Pill | 2026-07-29 |
 | `VIC_CCN_ACNE_2026_08` | Mild Acne | — |
@@ -46,6 +46,20 @@ Priority 1 = Victorian Department of Health, Community Pharmacist Program ("Chem
 | `VIC_CCN_HORMONAL_RESUPPLY_2025_12` | Resupply of Hormonal Contraception | — |
 | `VIC_CCN_PSORIASIS_2024_02` | Acute Exacerbation of Mild Plaque Psoriasis | — |
 | `VIC_CCN_VACCINE_ADMIN` | Vaccine Administration | — |
+
+#### Two findings from reading the retrieved PDFs
+
+Six of the ten Victorian documents were downloaded and read. Doing so changed two things.
+
+**1. "Chemist Care Now" appears in none of the protocol documents.** It is the public-facing campaign name for the Victorian Community Pharmacist Program. Every document names itself "The Victorian Community Pharmacist Program" (or, for shingles, the "Community Pharmacist Statewide Pilot"). Provenance UI must cite the formal program name; `src/clinical/sources.ts` now carries this warning at the top of the file.
+
+**2. The shingles document is not from this program.** The PDF served at the shingles URL is a **February 2024 Safer Care Victoria** publication under the **Community Pharmacist Statewide Pilot**, ISBN 978-1-76131-470-4, operating under "Secretary Approval: Community Pharmacist Statewide Pilot" — not the Department of Health Community Pharmacist Program, and roughly two years older than every other protocol in the registry. It also contains internal contradictions. Per the brief's stop-condition rule it was **not transcribed**; the source is flagged and the condition is on a blocked list (below).
+
+#### Protocols transcribed this sprint
+
+Three are now encoded: **UTI**, **mild acne** (`protocols/acne.ts`), **atopic dermatitis flare** (`protocols/dermatitis.ts`). All three are `source_verified` + `needsClinicalReview: true` and render in REFERENCE/DEVELOPMENT mode.
+
+**The acne and dermatitis protocols delegate all drug-safety information.** Both state that pharmacists *must* consult Therapeutic Guidelines and the AMH for contraindications, precautions, interactions and pregnancy/lactation, and give none per product. The encoded protocols therefore carry **empty** `contraindications` arrays. An empty array means "the protocol states none — pharmacist must confirm externally", and a regression test fails if anyone fills it in from memory.
 
 **Queensland: 2 program-level sources only, both flagged `needsClinicalReview: true`.** `health.qld.gov.au` returned **HTTP 403** to every retrieval attempt. Program existence and the 1 July 2025 commencement were confirmed, but **no Queensland clinical content has been extracted and none is marked active**. This is the sprint's largest open item.
 
@@ -143,7 +157,7 @@ npm run test:coverage
 
 | | Baseline (`0f08c37`) | Now |
 |---|---|---|
-| Tests | 18 passing, 1 file erroring (`window is not defined`) | **119 passing, 10 files** |
+| Tests | 18 passing, 1 file erroring (`window is not defined`) | **146 passing, 11 files** |
 | `tsc` | exit 0 (but `strict: false`) | exit 0 (unchanged) |
 | Lint | 55 errors / 24 warnings | 57 errors / 24 warnings |
 | Main bundle | 2,673.95 kB (gzip ~780 kB) | **381.03 kB (gzip 123.10 kB)** |
@@ -158,21 +172,24 @@ npm run test:coverage
 
 ### 9. Condition library reconciliation
 
-22 conditions in the library. **1 has a canonical protocol.**
+22 conditions in the library. **3 have a canonical protocol.**
 
 | Condition | VIC source exists? | Canonical protocol | Status |
 |---|---|---|---|
 | Uncomplicated UTI | Yes | ✅ `VIC_CCN_UTI_2026_01` | Transcribed, `source_verified`, needs clinical sign-off |
-| Herpes zoster (shingles) | Yes | ❌ | PDF downloaded, not transcribed |
-| OCP resupply | Yes (resupply + initiation) | ❌ | PDF downloaded, not transcribed |
-| Acne | Yes | ❌ | PDF downloaded, not transcribed |
-| Atopic dermatitis | Yes | ❌ | PDF downloaded, not transcribed |
-| Impetigo | Yes | ❌ | PDF downloaded, not transcribed |
+| Mild acne | Yes | ✅ `VIC_CCN_ACNE_2026_08` | Transcribed, `source_verified`, needs clinical sign-off |
+| Atopic dermatitis flare | Yes | ✅ `VIC_CCN_DERMATITIS_2026_08` | Transcribed, `source_verified`, needs clinical sign-off |
+| Herpes zoster (shingles) | Yes (but superseded) | ❌ | **Blocked** — source is a 2024 Safer Care Victoria pilot doc, not this program |
+| OCP initiation | Yes | ❌ | Blocked — initiation ≠ resupply; transcript produced, not encoded |
+| Hormonal contraception resupply | Yes | ❌ | Source not retrieved (landing page only) |
+| Impetigo | Yes | ❌ | Full structured transcript produced, not yet encoded |
 | Acute mild MSK pain | Yes | ❌ | Source registered, not transcribed |
 | Plaque psoriasis | Yes | ❌ | Source registered, not transcribed |
 | Hypertension, T2DM, asthma, COPD, dyslipidaemia, nausea, rhinitis, ear infections, GORD, wound, oral health, smoking cessation, travel medicine, weight management | **No VIC pharmacist protocol** | ❌ | Not part of the Victorian program — content is unverified and may be out of scope entirely |
 
-PDFs already downloaded to `%TEMP%\vicprotocols\` for: acne, dermatitis, impetigo, ocp, shingles, uti. Transcribing the next five is a mechanical job of a few hours each, **not** a judgement call — but each must be reviewed by a pharmacist before `active`.
+PDFs already downloaded to `%TEMP%\vicprotocols\` for: acne, dermatitis, impetigo, ocp, shingles, uti. Each must be reviewed by a pharmacist before `active`.
+
+Blocked conditions are enforced in code, not just documented: `SOURCES_WITHOUT_PROTOCOL` in `src/clinical/registry.ts` lists shingles, OCP initiation and hormonal contraception resupply, and `validateRegistry()` raises `blocked_source_has_protocol` if a protocol is ever registered for one. A test asserts the same.
 
 ---
 
@@ -181,6 +198,15 @@ PDFs already downloaded to `%TEMP%\vicprotocols\` for: acne, dermatitis, impetig
 | Item | Why | Blocking? |
 |---|---|---|
 | UTI protocol | Transcribed from a real source, not pharmacist-signed-off | Blocks `active`; renders as reference mode |
+| Mild acne protocol | Transcribed from a real source, not pharmacist-signed-off | Blocks `active`; renders as reference mode |
+| Atopic dermatitis flare protocol | Transcribed from a real source, not pharmacist-signed-off | Blocks `active`; renders as reference mode |
+| Acne/dermatitis per-product contraindications | Source states none and delegates to TG/AMH | Blocked by design — arrays left empty, guarded by test |
+| Shingles | Source is a superseded 2024 Safer Care Victoria pilot document with internal contradictions | **Blocks the shingles pathway entirely** — no protocol ships |
+| OCP initiation vs hormonal contraception resupply | Two different protocols; resupply source not retrieved | Blocks OCP content; the two must never be mixed |
+| Dermatitis: one red flag lost in PDF extraction | Page 7 ends with a bare bullet; page 14 does not reproduce it | Blocks `active`; must be recovered from the source PDF |
+| Dermatitis: methylprednisolone lotion site | Page 8 says "Scalp (children)", page 16 says "Scalp (children or adults)" | Blocks `active`; recorded, not silently resolved |
+| Dermatitis: severity band gaps | EASI 7.0–7.1 and SCORAD exactly 50 are unclassified | Blocks `active` |
+| Dermatitis: "advanced age" vs 65-year cap | "Advanced age" is listed as an immunocompromise example while the protocol caps at 65 | Blocks `active` |
 | Queensland condition protocols | HTTP 403, not retrieved | Blocks all QLD clinical content |
 | 21 of 22 conditions | No canonical protocol; content unverified | Blocks any claim of coverage |
 | "Severe renal impairment" | Protocol states no numeric threshold. **None was invented.** | Informational |
@@ -208,7 +234,7 @@ PDFs already downloaded to `%TEMP%\vicprotocols\` for: acne, dermatitis, impetig
 
 1. **Pharmacist review of the UTI protocol** → flip to `clinically_reviewed`. One line. Unblocks the flagship pathway from reference mode.
 2. **Retrieve the Queensland guidance** (403 — try a different client, or request the PDF directly from Queensland Health) and map condition protocols.
-3. **Transcribe the next five Victorian protocols** (shingles, OCP resupply, impetigo, acne, dermatitis). PDFs already downloaded.
+3. **Finish the remaining Victorian protocols.** Acne and dermatitis are transcribed; impetigo has a full structured transcript waiting (`docs/protocol-transcripts/impetigo-2025-12.extraction.md`) and needs encoding; OCP initiation and impetigo need pharmacist review first. Shingles needs a *current* source located before anything is written.
 4. **Decide what to do with the 14 conditions that have no Victorian protocol.** Either remove them from the prescribing pathway or mark them unmistakably as unscoped reference content. Right now they sit in the same library as a transcribed protocol.
 5. **Turn on `strict` incrementally**, starting with `src/clinical/**` where types are already explicit.
 6. **Then** the P3/P4 backlog: Query data layer, component decomposition, Playwright, accessibility sweep.
