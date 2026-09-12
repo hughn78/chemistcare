@@ -20,7 +20,6 @@ export default function RouteError() {
     'An unexpected error occurred while loading this page.';
 
   // Logged for support; intentionally not rendered to the user.
-  // eslint-disable-next-line no-console
   console.error('[RouteError]', error);
 
   const isNotFound = status === 404;

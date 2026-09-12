@@ -27,12 +27,11 @@ function showFatalScreen(title: string, detail: string) {
  * survives.
  */
 window.addEventListener("error", (event) => {
-  // eslint-disable-next-line no-console
+  // Logged for support. The previous implementation destroyed the whole app.
   console.error("[app:error]", event.error ?? event.message);
 });
 
 window.addEventListener("unhandledrejection", (event) => {
-  // eslint-disable-next-line no-console
   console.error("[app:unhandledrejection]", event.reason);
 });
 

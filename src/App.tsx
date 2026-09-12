@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,39 +7,53 @@ import { createBrowserRouter, RouterProvider, type RouteObject } from "react-rou
 import RouteError from "@/components/RouteError";
 import { AuditWriteWarning } from "@/components/AuditWriteWarning";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
-import LandingPage from "./pages/LandingPage";
-import Index from "./pages/Index";
-import NewConsultation from "./pages/NewConsultation";
-import ConsultationPicker from "./pages/ConsultationPicker";
-import ConsultationRedirect from "./pages/ConsultationRedirect";
-import UtiConsultation from "./pages/UtiConsultation";
-import Patients from "./pages/Patients";
-import ConditionsLibrary from "./pages/ConditionsLibrary";
-import ConditionDetail from "./pages/ConditionDetail";
-import PrescribingLog from "./pages/PrescribingLog";
-import Episodes from "./pages/Episodes";
-import Audit from "./pages/Audit";
-import SettingsPage from "./pages/Settings";
-import CalculatorsPage from "./pages/Calculators";
-import ClaimsPage from "./pages/Claims";
-import PPASettingsPage from "./pages/PPASettings";
-import EightCpaDashboard from "./pages/EightCpaDashboard";
-import EightCpaNewService from "./pages/EightCpaNewService";
-import EightCpaServiceHistory from "./pages/EightCpaServiceHistory";
-import PatientTriage from "./pages/PatientTriage";
-import ProtocolConsultation from "./pages/ProtocolConsultation";
-import TravelConsultation from "./pages/TravelConsultation";
-import CalendarPage from "./pages/CalendarPage";
-import BookingPage from "./pages/BookingPage";
-import AdminSettingsPage from "./pages/AdminSettingsPage";
-import ScribePage from "./pages/ScribePage";
-import PatientMessaging from "./pages/PatientMessaging";
-import PbsLookup from "./pages/PbsLookup";
-import ClaimsDemo from "./pages/ClaimsDemo";
-import FhirDemo from "./pages/FhirDemo";
-import IntegrationSettings from "./pages/IntegrationSettings";
-import FullScopeOfPractice from "./pages/FullScopeOfPractice";
-import NotFound from "./pages/NotFound";
+/**
+ * Every page is code-split. Previously a 2.7 MB single chunk was downloaded
+ * before the first paint, including the whole landing page, the 8CPA billing
+ * engine and the FHIR demo. Only the route you open is fetched now.
+ */
+const LandingPage = lazy(() => import("./pages/LandingPage"));
+const Index = lazy(() => import("./pages/Index"));
+const NewConsultation = lazy(() => import("./pages/NewConsultation"));
+const ConsultationPicker = lazy(() => import("./pages/ConsultationPicker"));
+const ConsultationRedirect = lazy(() => import("./pages/ConsultationRedirect"));
+const UtiConsultation = lazy(() => import("./pages/UtiConsultation"));
+const Patients = lazy(() => import("./pages/Patients"));
+const ConditionsLibrary = lazy(() => import("./pages/ConditionsLibrary"));
+const ConditionDetail = lazy(() => import("./pages/ConditionDetail"));
+const PrescribingLog = lazy(() => import("./pages/PrescribingLog"));
+const Episodes = lazy(() => import("./pages/Episodes"));
+const Audit = lazy(() => import("./pages/Audit"));
+const SettingsPage = lazy(() => import("./pages/Settings"));
+const CalculatorsPage = lazy(() => import("./pages/Calculators"));
+const ClaimsPage = lazy(() => import("./pages/Claims"));
+const PPASettingsPage = lazy(() => import("./pages/PPASettings"));
+const EightCpaDashboard = lazy(() => import("./pages/EightCpaDashboard"));
+const EightCpaNewService = lazy(() => import("./pages/EightCpaNewService"));
+const EightCpaServiceHistory = lazy(() => import("./pages/EightCpaServiceHistory"));
+const PatientTriage = lazy(() => import("./pages/PatientTriage"));
+const ProtocolConsultation = lazy(() => import("./pages/ProtocolConsultation"));
+const TravelConsultation = lazy(() => import("./pages/TravelConsultation"));
+const CalendarPage = lazy(() => import("./pages/CalendarPage"));
+const BookingPage = lazy(() => import("./pages/BookingPage"));
+const AdminSettingsPage = lazy(() => import("./pages/AdminSettingsPage"));
+const ScribePage = lazy(() => import("./pages/ScribePage"));
+const PatientMessaging = lazy(() => import("./pages/PatientMessaging"));
+const PbsLookup = lazy(() => import("./pages/PbsLookup"));
+const ClaimsDemo = lazy(() => import("./pages/ClaimsDemo"));
+const FhirDemo = lazy(() => import("./pages/FhirDemo"));
+const IntegrationSettings = lazy(() => import("./pages/IntegrationSettings"));
+const FullScopeOfPractice = lazy(() => import("./pages/FullScopeOfPractice"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+/** Shown while a route chunk downloads. */
+function RouteFallback() {
+  return (
+    <div className="flex min-h-screen items-center justify-center" aria-busy="true">
+      <span className="text-sm text-muted-foreground">Loading…</span>
+    </div>
+  );
+}
 
 const queryClient = new QueryClient();
 
@@ -100,7 +115,9 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <RouterProvider router={router} />
+        <Suspense fallback={<RouteFallback />}>
+          <RouterProvider router={router} />
+        </Suspense>
         <AuditWriteWarning />
       </TooltipProvider>
     </QueryClientProvider>
