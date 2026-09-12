@@ -23,6 +23,7 @@ import type {
   TreatmentOptionDefinition,
 } from './types';
 import { evaluateSafety } from '@/clinical/safety';
+import type { AiConsentState } from '@/clinical/aiGuardrails';
 import { ageFromDob, isWithinAgeBand } from '@/clinical/primitives';
 import { buildHandover, decide, type ConsultDecision, type DecisionInput } from '@/clinical/decision';
 import type { SafetyFinding } from '@/clinical/types';
@@ -526,6 +527,12 @@ export interface UtiConsultationData {
    * part of the clinical record rather than a legal checkbox off to the side.
    */
   consentToProgram?: boolean;
+  /** Free-text narrative written by the pharmacist (never generated). */
+  clinicianNarrative?: string;
+  /** Whether the patient agreed to AI assistance with documentation. */
+  aiAssistConsent?: AiConsentState;
+  /** Pharmacist who attested an AI-drafted note as reviewed. */
+  aiAttestedBy?: string;
   counsellingDone: string[];
   noteText?: string;
   pharmacistName?: string;

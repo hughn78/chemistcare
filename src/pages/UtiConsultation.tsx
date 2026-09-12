@@ -55,6 +55,7 @@ import {
 } from '@/components/clinical/ProtocolProvenance';
 import { SafetyFindingsPanel } from '@/components/clinical/SafetyFindingsPanel';
 import { ReferralPanel } from '@/components/clinical/ReferralPanel';
+import { AiAssistPanel } from '@/components/clinical/AiAssistPanel';
 import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { supabase } from '@/integrations/supabase/client';
@@ -783,7 +784,23 @@ const UtiConsultation = () => {
             {step === 'documentation' && (
               <Card>
                 <CardHeader><CardTitle className="text-sm">Clinical Note (UTI-specific)</CardTitle></CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
+                  {/*
+                    AI assist: pharmacist writes first, AI may draft, pharmacist
+                    must attest. Consent is recorded; "Continue without AI" is a
+                    first-class choice.
+                  */}
+                  <AiAssistPanel
+                    value={data.clinicianNarrative ?? ''}
+                    onChange={v => setData(d => ({ ...d, clinicianNarrative: v }))}
+                    consent={data.aiAssistConsent ?? 'not_asked'}
+                    onConsentChange={c => setData(d => ({ ...d, aiAssistConsent: c }))}
+                    pharmacistName={data.pharmacistName ?? ''}
+                    onPharmacistNameChange={name => setData(d => ({ ...d, pharmacistName: name }))}
+                  />
+
+                  <Separator />
+
                   <pre className="text-[12px] leading-relaxed whitespace-pre-wrap p-3 rounded-md bg-muted font-mono">
                     {noteText}
                   </pre>
