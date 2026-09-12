@@ -2,14 +2,16 @@ import { useState, useCallback, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
-import { Mic, MicOff, Copy, Check, Loader2, Square, ShieldCheck, AlertCircle } from 'lucide-react';
+import { Mic, MicOff, Copy, Check, Loader2, Square, ShieldCheck, AlertCircle, WifiOff } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { useAudioRecorder, RecorderStatus } from '@/hooks/useAudioRecorder';
+import { transcribeLocally, isLocalScribeAvailable, ScribeSegment } from '@/lib/scribeBridge';
 
 interface ScribeRecorderProps {
   compact?: boolean;
@@ -19,6 +21,14 @@ interface ScribeRecorderProps {
 
 const DEMO_FALLBACK = '[Demo] Patient presents with symptoms consistent with seasonal allergic rhinitis. No red flags identified. Recommends trial of intranasal corticosteroid.';
 
+/** Max consultation recording length: 5 minutes. */
+const MAX_RECORDING_MS = 300000;
+
+/**
+ * Cloud fallback (ElevenLabs via Supabase Edge Function). Used when the local
+ * offline engine is unavailable — e.g. running in the browser, or no local
+ * model has been downloaded yet. Fallback chain, not replacement.
+ */
 async function transcribeAudio(blob: Blob): Promise<string> {
   const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-transcribe`;
   const formData = new FormData();
@@ -57,11 +67,22 @@ const STATUS_LABELS: Record<RecorderStatus, string> = {
 
 export function ScribeRecorder({ compact = false, onTranscriptChange, className }: ScribeRecorderProps) {
   const [transcript, setTranscript] = useState('');
+  const [segments, setSegments] = useState<ScribeSegment[]>([]);
+  const [usedLocalEngine, setUsedLocalEngine] = useState(false);
+  const [speakerNames, setSpeakerNames] = useState<Record<string, string>>({});
   const [copied, setCopied] = useState(false);
   const [showConsentDialog, setShowConsentDialog] = useState(false);
   const [consentType, setConsentType] = useState<'written' | 'verbal' | ''>('');
 
-  const recorder = useAudioRecorder({ maxDurationMs: 3000 });
+  const recorder = useAudioRecorder({ maxDurationMs: MAX_RECORDING_MS });
+
+  const applyResult = useCallback((text: string, segs: ScribeSegment[], local: boolean) => {
+    setSegments(segs);
+    setUsedLocalEngine(local);
+    setSpeakerNames({});
+    setTranscript(text);
+    onTranscriptChange?.(text);
+  }, [onTranscriptChange]);
 
   const doRecord = useCallback(async () => {
     const blob = await recorder.startRecording();
@@ -69,28 +90,71 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
 
     recorder.setStatus('processing');
     try {
-      const text = await transcribeAudio(blob);
-      if (text.trim()) {
-        setTranscript(text.trim());
-        onTranscriptChange?.(text.trim());
+      let text: string;
+      let segs: ScribeSegment[] = [];
+      let local = false;
+
+      if (isLocalScribeAvailable()) {
+        try {
+          // Local-first: whisper.cpp sidecar on this machine. Audio never leaves the device.
+          const result = await transcribeLocally(blob);
+          text = (result.text || '').trim();
+          segs = result.segments || [];
+          local = true;
+        } catch (localErr: any) {
+          // No local model yet (or engine failure) — fall back to the cloud path.
+          console.warn('Local transcription unavailable, trying cloud fallback:', localErr?.message);
+          text = (await transcribeAudio(blob)).trim();
+        }
+      } else {
+        text = (await transcribeAudio(blob)).trim();
+      }
+
+      if (text) {
+        applyResult(text, segs, local);
         recorder.setStatus('complete');
-        toast({ title: 'Transcription ready', description: `${text.trim().split(' ').length} words captured` });
+        toast({
+          title: 'Transcription ready',
+          description: `${text.split(' ').length} words captured${local ? ' (on-device)' : ''}`,
+        });
       } else {
         // No speech detected — use fallback
-        setTranscript(DEMO_FALLBACK);
-        onTranscriptChange?.(DEMO_FALLBACK);
+        applyResult(DEMO_FALLBACK, [], false);
         recorder.setStatus('complete');
         toast({ title: 'No speech detected', description: 'Demo note inserted instead.' });
       }
     } catch (err: any) {
       console.error('Transcription error:', err);
       // Graceful fallback
-      setTranscript(DEMO_FALLBACK);
-      onTranscriptChange?.(DEMO_FALLBACK);
+      applyResult(DEMO_FALLBACK, [], false);
       recorder.setStatus('complete');
       toast({ title: 'Transcription unavailable', description: 'Demo note inserted as fallback.', variant: 'destructive' });
     }
-  }, [recorder, onTranscriptChange]);
+  }, [recorder, applyResult]);
+
+  // Speaker rename (Speaker 1 → Pharmacist, Speaker 2 → Patient, …)
+  const renameSpeaker = useCallback((speakerId: string, name: string) => {
+    setSpeakerNames((prev) => {
+      const next = { ...prev, [speakerId]: name };
+      setSegments((segs) => {
+        const retagged = segs.map((s) => {
+          const base = `Speaker ${[...new Set(segs.map((x) => x.speaker))].indexOf(s.speaker) + 1}`;
+          return { ...s, speakerLabel: next[s.speaker]?.trim() || base };
+        });
+        const rebuilt = retagged
+          .map((s) => {
+            const m = Math.floor(s.start / 60);
+            const sec = Math.floor(s.start % 60);
+            return `[${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}] ${s.speakerLabel}: ${s.text}`;
+          })
+          .join('\n');
+        setTranscript(rebuilt);
+        onTranscriptChange?.(rebuilt);
+        return retagged;
+      });
+      return next;
+    });
+  }, [onTranscriptChange]);
 
   const handleStartClick = useCallback(() => {
     setConsentType('');
@@ -224,6 +288,12 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
             <Badge variant="outline" className="text-xs">
               {STATUS_LABELS[recorder.status]}
             </Badge>
+            {usedLocalEngine && transcript && (
+              <Badge variant="secondary" className="text-xs gap-1">
+                <WifiOff className="h-3 w-3" />
+                On-device
+              </Badge>
+            )}
             {transcript && (
               <Button size="sm" variant="ghost" onClick={copyTranscript} className="gap-1.5 h-8">
                 {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
@@ -289,6 +359,24 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
             </div>
           )}
 
+          {/* Speaker rename (diarized consultations) */}
+          {segments.length > 0 && (
+            <div className="flex flex-wrap items-center gap-3 border rounded-md p-2.5 bg-muted/30">
+              <span className="text-xs text-muted-foreground font-medium">Speakers:</span>
+              {[...new Set(segments.map((s) => s.speaker))].map((speakerId, idx) => (
+                <div key={speakerId} className="flex items-center gap-1.5">
+                  <Label className="text-xs whitespace-nowrap">Speaker {idx + 1}</Label>
+                  <Input
+                    className="h-7 w-32 text-xs"
+                    placeholder={idx === 0 ? 'Pharmacist' : 'Patient'}
+                    value={speakerNames[speakerId] ?? ''}
+                    onChange={(e) => renameSpeaker(speakerId, e.target.value)}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
           {/* Transcript area */}
           <div className="border rounded-lg min-h-[200px] p-4">
             {!transcript && !isWorking && !isError ? (
@@ -296,18 +384,20 @@ export function ScribeRecorder({ compact = false, onTranscriptChange, className 
                 <MicOff className="h-8 w-8 text-muted-foreground/40 mb-2" />
                 <p className="text-sm font-medium text-muted-foreground">Capture your session</p>
                 <p className="text-xs text-muted-foreground/70 mt-1">
-                  Press Start Recording to capture up to 3 seconds of audio
+                  Press Start Recording to capture up to 5 minutes of audio
                 </p>
               </div>
             ) : transcript ? (
-              <div className="text-sm leading-relaxed">
+              <div className="text-sm leading-relaxed whitespace-pre-wrap">
                 {transcript}
               </div>
             ) : null}
           </div>
 
           <p className="text-[10px] text-muted-foreground">
-            Recordings are limited to 3 seconds for this demo. Review transcriptions before clinical use.
+            {usedLocalEngine
+              ? 'Transcribed on this device. Audio is discarded after transcription unless “Keep recordings” is enabled in Settings.'
+              : 'Review transcriptions before clinical use.'}
           </p>
         </CardContent>
       </Card>
