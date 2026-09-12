@@ -1,7 +1,7 @@
 # ChemistCare PrescriberOS — Clinical Engine & Product Modernisation Sprint
 ## Handover Report
 
-**Branch:** `prescriberos-clinical-modernisation` (local, 11 commits)
+**Branch:** `prescriberos-clinical-modernisation` (local, 13 commits)
 **Base:** `main` @ `0f08c37`
 **Date:** 2026-09-13
 **Scope:** clinical content architecture, clinical engine, consultation outcomes, AI guardrails, reliability. **Security was out of scope and was not touched.**
@@ -217,7 +217,7 @@ PDFs already downloaded to `%TEMP%\vicprotocols\` for: acne, dermatitis, impetig
 
 ### 13. Git and PR status
 
-**11 commits** on `prescriberos-clinical-modernisation`:
+**13 commits** on `prescriberos-clinical-modernisation`:
 
 ```
 c81d706 chore: preserve untracked desktop/offline-STT work and audit report
@@ -231,6 +231,10 @@ b9b1289 feat(clinical): wire canonical safety engine into the UTI pathway
 f9a92f9 perf(routing): code-split every route
 3b80b51 chore: drop transient vitest config artifact and ignore it
 53acbae build(tests): add coverage reporting and one-shot verify script
+5a156ce docs: add sprint handover report
+13d4b63 chore(lint): ignore coverage output and transient vitest artifacts
+c4de04f chore: ignore all transient vite/vitest config artifacts
+6e64e7c chore: de-duplicate .gitignore coverage entry
 ```
 
 **Not pushed, no PR opened.** `git push` failed: the sandbox has no GitHub credentials (`could not read Username for 'https://github.com'`; `gh` CLI is not installed). Everything is committed locally and ready to push.
