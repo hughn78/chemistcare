@@ -18,9 +18,12 @@ import { getConditionById } from '@/data/conditions';
 import { utiProtocol } from '@/clinical/protocols/uti';
 import type {
   ConditionTemplate,
+  RedFlagDefinition,
   ScopeRuleResult,
   TreatmentOptionDefinition,
 } from './types';
+import { evaluateSafety } from '@/clinical/safety';
+import type { SafetyFinding } from '@/clinical/types';
 
 // ────────── Helpers ──────────
 const lc = (s: unknown) => (typeof s === 'string' ? s.toLowerCase() : '');
@@ -31,13 +34,49 @@ const isPositive = (v: unknown) => v === 'yes' || v === true;
 const isNegative = (v: unknown) => v === 'no' || v === false;
 const isUnanswered = (v: unknown) => v === undefined || v === '' || v === null;
 
+/**
+ * Red flags are the protocol's red flags — all 22 of them.
+ *
+ * This list previously carried 15 hand-written flags, so the app never asked
+ * about IUD inserted <3 months, neurological bladder, urinary tract
+ * abnormality, diabetes/SGLT2, long-term inpatient care, asplenia, or history
+ * of pyelonephritis — every one of which the protocol screens for. It also
+ * invented a separate `nausea_vomiting` flag that duplicates the protocol's
+ * pyelonephritis criterion.
+ *
+ * `RedFlagId` is a literal union for compile-time safety, and
+ * `src/test/clinical/protocol-integrity.test.ts` asserts it stays identical to
+ * the canonical protocol's red flag ids.
+ */
 const RED_FLAG_IDS = [
-  'fever_rigors', 'flank_pain', 'nausea_vomiting', 'pyelonephritis_suspected',
-  'pregnant', 'male_patient', 'paediatric', 'immunocompromised',
-  'known_renal_disease', 'catheter_related', 'recurrent_pattern',
-  'visible_haematuria', 'std_concern', 'atypical_symptoms', 'recent_treatment_failure',
+  'pyelonephritis_suspected', 'fever_rigors', 'flank_pain', 'pregnant',
+  'visible_haematuria', 'neurological_bladder', 'recent_iud', 'catheter_related',
+  'tract_abnormality', 'diabetes_or_sglt2', 'recurrent_pattern',
+  'recent_treatment_failure', 'long_term_inpatient', 'std_concern',
+  'immunocompromised', 'known_renal_disease', 'asplenia', 'history_pyelonephritis',
+  'iud_in_situ_over_3_months', 'atypical_symptoms', 'male_patient', 'paediatric',
 ] as const;
 type RedFlagId = (typeof RED_FLAG_IDS)[number];
+
+/**
+ * Severity for display, derived from the protocol-stated outcome rather than
+ * invented per flag.
+ */
+function redFlagSeverity(outcome: string, blocksPrescribing: boolean): 'critical' | 'high' | 'moderate' {
+  if (outcome === 'emergency_department' || outcome === 'call_emergency') return 'critical';
+  return blocksPrescribing ? 'high' : 'moderate';
+}
+
+function redFlagsFromProtocol(): RedFlagDefinition[] {
+  return utiProtocol.redFlags.map(f => ({
+    id: f.id,
+    label: f.label,
+    detail: f.action,
+    severity: redFlagSeverity(f.outcome, f.prescribingBlocked),
+    action: f.action,
+    blocksPrescribing: f.prescribingBlocked,
+  }));
+}
 
 // ────────── Treatments ──────────
 /**
@@ -343,38 +382,8 @@ export const utiTemplate: ConditionTemplate = {
     },
   ],
 
-  redFlags: [
-    { id: 'fever_rigors', label: 'Fever ≥ 38°C or rigors', severity: 'critical', blocksPrescribing: true,
-      action: 'Refer for assessment — possible upper UTI / systemic infection' },
-    { id: 'flank_pain', label: 'Flank or loin pain / costovertebral tenderness', severity: 'critical',
-      blocksPrescribing: true, action: 'Refer urgently — possible pyelonephritis' },
-    { id: 'nausea_vomiting', label: 'Nausea or vomiting', severity: 'high', blocksPrescribing: true,
-      action: 'Refer — systemic features beyond pharmacist scope' },
-    { id: 'pyelonephritis_suspected', label: 'Suspected pyelonephritis', severity: 'critical',
-      blocksPrescribing: true, action: 'Urgent GP / ED referral' },
-    { id: 'pregnant', label: 'Pregnant or possibly pregnant', severity: 'critical',
-      blocksPrescribing: true, action: 'Refer — UTI in pregnancy requires medical management' },
-    { id: 'male_patient', label: 'Male patient', severity: 'critical',
-      blocksPrescribing: true, action: 'Out of pharmacist scope — refer to GP' },
-    { id: 'paediatric', label: 'Child or adolescent outside protocol age', severity: 'critical',
-      blocksPrescribing: true, action: 'Refer to GP / paediatric service' },
-    { id: 'immunocompromised', label: 'Immunocompromised state', severity: 'high',
-      blocksPrescribing: true, action: 'Refer — higher complication risk' },
-    { id: 'known_renal_disease', label: 'Known renal disease', severity: 'high',
-      blocksPrescribing: true, action: 'Refer — antibiotic dosing / safety considerations' },
-    { id: 'catheter_related', label: 'Catheter-associated symptoms', severity: 'high',
-      blocksPrescribing: true, action: 'Refer — CAUTI requires medical assessment' },
-    { id: 'recurrent_pattern', label: 'Recurrent UTI pattern requiring GP review', severity: 'moderate',
-      blocksPrescribing: true, action: 'Refer for investigation' },
-    { id: 'visible_haematuria', label: 'Visible blood in urine requiring referral', severity: 'high',
-      blocksPrescribing: true, action: 'Refer for urinalysis / further workup' },
-    { id: 'std_concern', label: 'Vaginal discharge, pelvic pain, or STI concern', severity: 'high',
-      blocksPrescribing: true, action: 'Refer — consider vaginitis / STI workup' },
-    { id: 'atypical_symptoms', label: 'Symptoms not consistent with uncomplicated UTI', severity: 'moderate',
-      blocksPrescribing: true, action: 'Refer for diagnosis' },
-    { id: 'recent_treatment_failure', label: 'Recent UTI treatment failure', severity: 'high',
-      blocksPrescribing: true, action: 'Refer — culture and sensitivity needed' },
-  ],
+  // Derived from the canonical protocol — see redFlagsFromProtocol().
+  redFlags: redFlagsFromProtocol(),
 
   scopeRules,
 
@@ -558,6 +567,64 @@ export function evaluateScope(data: UtiConsultationData): {
   return { status, reasons };
 }
 
+/**
+ * Structured safety findings for this consultation.
+ *
+ * Replaces the numeric "safety score". A single 0-100 number implied a
+ * precision the underlying rules did not have, and could not express "this is
+ * an absolute contraindication" versus "monitor this".
+ */
+export function evaluateUtiFindings(
+  data: UtiConsultationData,
+  treatment?: TreatmentOptionDefinition,
+): SafetyFinding[] {
+  const redFlags: Record<string, boolean | undefined> = {};
+  for (const id of RED_FLAG_IDS) {
+    const v = data.redFlags[id];
+    redFlags[id] = v === 'yes' ? true : v === 'no' ? false : undefined;
+  }
+
+  const findings = evaluateSafety(utiProtocol, {
+    redFlags,
+    medicationsText: data.patient.currentMeds,
+    conditionsText: data.patient.relevantConditions,
+    allergiesText: data.patient.allergies,
+    proposedMedicineId: treatment?.id,
+  });
+
+  // Completeness findings are not protocol rules but must be visible: an
+  // unanswered red flag is a safety issue, not an administrative one.
+  const unanswered = RED_FLAG_IDS.filter(id => isUnanswered(data.redFlags[id])).length;
+  if (unanswered > 0) {
+    findings.push({
+      ruleId: 'completeness:red_flags',
+      finding: `${unanswered} red flag(s) not answered`,
+      severity: 'monitor',
+      reason: 'The protocol requires every listed red flag to be assessed before a decision.',
+      sourceId: utiProtocol.sourceId,
+      recommendedAction: 'Complete red flag screening before selecting treatment.',
+      overridePolicy: 'non_overridable',
+    });
+  }
+  if (!data.patient.pregnancyStatus) {
+    findings.push({
+      ruleId: 'completeness:pregnancy_status',
+      finding: 'Pregnancy status not confirmed',
+      severity: 'monitor',
+      reason: 'Pregnancy changes both eligibility and the required referral pathway.',
+      sourceId: utiProtocol.sourceId,
+      recommendedAction: 'Record pregnancy status before selecting treatment.',
+      overridePolicy: 'non_overridable',
+    });
+  }
+
+  return findings;
+}
+
+/**
+ * Human-readable reasons why the proposed treatment must not proceed.
+ * Derived from the structured findings so the two can never disagree.
+ */
 export function evaluateTreatmentBlockers(
   data: UtiConsultationData,
   treatment: TreatmentOptionDefinition,
@@ -566,58 +633,31 @@ export function evaluateTreatmentBlockers(
   const scope = evaluateScope(data);
   if (scope.status !== 'in_scope') reasons.push('Out of scope — treatment not permitted');
 
-  for (const allergyTerm of treatment.allergyConflicts) {
-    if (tagContains(data.patient.allergies, allergyTerm)) {
-      reasons.push(`Allergy conflict: ${allergyTerm}`);
+  const findings = evaluateUtiFindings(data, treatment);
+  for (const f of findings) {
+    // Absolute barriers: non-overridable by policy, or a hard stop /
+    // contraindication by severity. There is no override UI in the product
+    // yet, so anything at that severity must stop the supply.
+    if (
+      f.overridePolicy === 'non_overridable' ||
+      f.severity === 'hard_stop' ||
+      f.severity === 'contraindication'
+    ) {
+      reasons.push(`${f.finding} — ${f.recommendedAction}`);
     }
   }
-  for (const ci of treatment.contraindications) {
-    if (tagContains(data.patient.relevantConditions, ci)) {
-      reasons.push(`Contraindication: ${ci}`);
-    }
-  }
-  for (const ix of treatment.interactionFlags) {
-    if (tagContains(data.patient.currentMeds, ix)) {
-      reasons.push(`Interaction with ${ix}`);
-    }
-  }
-  // Required assessment fields
-  const rfDone = UTI_RED_FLAG_IDS.every(id => !isUnanswered(data.redFlags[id]));
-  if (!rfDone) reasons.push('Red flag screening incomplete');
-  if (!data.patient.pregnancyStatus) reasons.push('Pregnancy status not confirmed');
 
-  return reasons;
+  // Caution-level findings never block silently: they are surfaced too, so a
+  // pharmacist cannot miss them behind a green "no blockers" state.
+  for (const f of findings) {
+    if (f.severity === 'caution' || f.severity === 'monitor' || f.severity === 'refer') {
+      reasons.push(`${f.severity === 'refer' ? 'Referral' : 'Caution'}: ${f.finding}`);
+    }
+  }
+
+  return dedupe(reasons);
 }
 
-export function computeUtiSafetyScore(data: UtiConsultationData): {
-  score: number;
-  penalties: { reason: string; weight: number }[];
-} {
-  const w = utiTemplate.safetyWeights;
-  const penalties: { reason: string; weight: number }[] = [];
-
-  if (!data.patient.pregnancyStatus) {
-    penalties.push({ reason: 'Pregnancy status missing', weight: w.missingCriticalField });
-  }
-  const unanswered = UTI_RED_FLAG_IDS.filter(id => isUnanswered(data.redFlags[id])).length;
-  if (unanswered) penalties.push({ reason: `${unanswered} red flag(s) unanswered`, weight: w.unansweredRedFlag * unanswered });
-
-  if (data.selectedTreatment) {
-    const blockers = evaluateTreatmentBlockers(data, data.selectedTreatment);
-    const allergyHits = blockers.filter(b => b.startsWith('Allergy')).length;
-    if (allergyHits) penalties.push({ reason: 'Allergy conflict with selected treatment', weight: w.allergyConflict * allergyHits });
-
-    const scope = evaluateScope(data);
-    if (scope.status !== 'in_scope') {
-      penalties.push({ reason: 'Treatment selected while out of scope', weight: w.outOfScopeTreatment });
-    }
-    const requiredCounselling = utiTemplate.counselling.filter(c => c.required).map(c => c.id);
-    const done = data.counsellingDone ?? [];
-    const allDone = requiredCounselling.every(id => done.includes(id));
-    if (!allDone) penalties.push({ reason: 'Treatment selected without full counselling', weight: w.treatmentWithoutCounselling });
-    if (!data.followUpPlan) penalties.push({ reason: 'Treatment selected without follow-up advice', weight: w.treatmentWithoutFollowUp });
-  }
-
-  const total = penalties.reduce((s, p) => s + p.weight, 0);
-  return { score: Math.max(0, 100 - total), penalties };
+function dedupe(xs: string[]): string[] {
+  return Array.from(new Set(xs));
 }

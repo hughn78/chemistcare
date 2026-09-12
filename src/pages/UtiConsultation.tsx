@@ -40,11 +40,18 @@ import {
   emptyUtiData,
   evaluateScope,
   evaluateTreatmentBlockers,
-  computeUtiSafetyScore,
+  evaluateUtiFindings,
   UTI_RED_FLAG_IDS,
   type UtiConsultationData,
 } from '@/lib/conditionTemplates/uti';
 import type { TreatmentOptionDefinition } from '@/lib/conditionTemplates/types';
+import { utiProtocol } from '@/clinical/protocols/uti';
+import {
+  ProtocolProvenancePopover,
+  ProtocolReferenceModeBanner,
+  ProtocolStatusBadge,
+} from '@/components/clinical/ProtocolProvenance';
+import { SafetyFindingsPanel } from '@/components/clinical/SafetyFindingsPanel';
 import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { supabase } from '@/integrations/supabase/client';
@@ -144,7 +151,11 @@ const UtiConsultation = () => {
 
   // ── Derived ──
   const scope = useMemo(() => evaluateScope(data), [data]);
-  const safety = useMemo(() => computeUtiSafetyScore(data), [data]);
+  // Structured findings replace the old 0–100 safety score.
+  const safetyFindings = useMemo(
+    () => evaluateUtiFindings(data, data.selectedTreatment),
+    [data],
+  );
   const positiveRedFlags = useMemo(
     () => UTI_RED_FLAG_IDS.filter(id => data.redFlags[id] === 'yes'),
     [data.redFlags],
@@ -219,7 +230,9 @@ const UtiConsultation = () => {
     }));
   }, [data]);
   const readyToFinalise =
-    completion.every(c => !c.required || c.done) && safety.score >= 60 && scope.status === 'in_scope';
+    completion.every(c => !c.required || c.done)
+    && !safetyFindings.some(f => f.overridePolicy === 'non_overridable')
+    && scope.status === 'in_scope';
   // out-of-scope referral path: also "ready" if no treatment selected and referral documented
   const readyAsReferral =
     scope.status === 'out_of_scope' && !data.selectedTreatment && !!data.referralNotes && !!data.followUpPlan;
@@ -246,6 +259,13 @@ const UtiConsultation = () => {
                 }`}>
                   {utiTemplate.protocolStatus.replace('_', ' ')}
                 </Badge>
+                {/* Canonical lifecycle status + full provenance, from
+                    src/clinical — not from the display template. */}
+                <ProtocolStatusBadge
+                  status={utiProtocol.lifecycle}
+                  needsClinicalReview={utiProtocol.needsClinicalReview}
+                />
+                <ProtocolProvenancePopover protocol={utiProtocol} />
               </div>
               <p className="text-[11px] text-muted-foreground mt-1">
                 Suspected uncomplicated lower UTI in non-pregnant adult women — Victorian pharmacist prescribing scope.
@@ -269,6 +289,13 @@ const UtiConsultation = () => {
             </div>
           </div>
         )}
+
+        {/* Provenance / lifecycle honesty: this protocol is transcribed from a
+            real source but has not been clinically signed off, so it renders as
+            reference content rather than an approved pathway. */}
+        <div className="px-4 sm:px-6 pt-3">
+          <ProtocolReferenceModeBanner protocol={utiProtocol} compact />
+        </div>
 
         <div className="flex-1 overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_360px]">
           {/* ── Main column ── */}
@@ -821,26 +848,8 @@ const UtiConsultation = () => {
 
           {/* ── Right rail ── */}
           <aside className="border-l bg-card overflow-auto p-4 space-y-4 hidden lg:block">
-            {/* Safety score */}
-            <div>
-              <h3 className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">Safety Score</h3>
-              <div className="flex items-end gap-2">
-                <span className={`text-3xl font-bold tabular-nums ${
-                  safety.score >= 80 ? 'text-clinical-safe' : safety.score >= 50 ? 'text-clinical-warning' : 'text-clinical-danger'
-                }`}>{safety.score}</span>
-                <span className="text-xs text-muted-foreground mb-1">/ 100</span>
-              </div>
-              {safety.penalties.length > 0 && (
-                <ul className="mt-2 space-y-1 text-[11px] text-muted-foreground">
-                  {safety.penalties.map((p, i) => (
-                    <li key={i} className="flex justify-between gap-2">
-                      <span>{p.reason}</span>
-                      <span className="text-clinical-danger tabular-nums">−{p.weight}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            {/* Safety findings — structured, not a 0–100 score */}
+            <SafetyFindingsPanel findings={safetyFindings} />
 
             <Separator />
 

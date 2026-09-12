@@ -85,6 +85,35 @@ export function parseMedicationList(text: string | undefined | null): Medication
     .map(normaliseMedication);
 }
 
+const ALLERGY_SEVERE_PATTERN = /\b(anaphyla\w+|severe|swelling|angioedema)\b/i;
+const ALLERGY_RESOLVED_PATTERN = /\b(resolved|outgrown|childhood|no longer)\b/i;
+
+/**
+ * Parse a free-text allergy list into structured allergies.
+ *
+ * "Penicillin - rash" and "Penicillin (anaphylaxis)" mean very different
+ * things. Free-text contains() could not tell them apart; this can.
+ */
+export function parseAllergyList(text: string | undefined | null): Allergy[] {
+  if (!text) return [];
+  return text
+    .split(/[,;\n]/)
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(entry => {
+      // "Penicillin — rash", "Penicillin: rash", "Penicillin (rash)"
+      const [substance, reaction] = entry.split(/\s+[—–-]\s+|\s*:\s*|\s*\(([^)]*)\)/);
+      return {
+        substance: (substance ?? entry).trim(),
+        reaction: reaction?.trim() || undefined,
+        severity: ALLERGY_SEVERE_PATTERN.test(entry) ? 'severe' : 'unknown',
+        certainty: 'unknown',
+        status: ALLERGY_RESOLVED_PATTERN.test(entry) ? 'resolved' : 'active',
+      } satisfies Allergy;
+    })
+    .filter(a => a.substance.length > 0);
+}
+
 /** Only these statuses can generate a hard stop or contraindication. */
 export function isActiveStatus(status: MedicineStatus): boolean {
   return status === 'current' || status === 'prn';
@@ -134,8 +163,13 @@ export function severityForRedFlag(flag: RedFlag): SafetySeverity {
 export interface SafetyInput {
   /** Map of redFlag id -> true (positive), false (negative), undefined (unanswered). */
   redFlags?: Record<string, boolean | undefined>;
+  /** Free-text current medicines, e.g. a tag-input value. */
   medicationsText?: string;
+  /** Free-text medical conditions. Contraindications are often conditions. */
+  conditionsText?: string;
+  /** Structured allergies. Free text is accepted and parsed when omitted. */
   allergies?: Allergy[];
+  allergiesText?: string;
   /** Medicine id the pharmacist proposes to supply. */
   proposedMedicineId?: string;
 }
@@ -146,7 +180,11 @@ export function evaluateSafety(
 ): SafetyFinding[] {
   const findings: SafetyFinding[] = [];
   const flags = input.redFlags ?? {};
-  const meds = parseMedicationList(input.medicationsText);
+  const meds = [
+    ...parseMedicationList(input.medicationsText),
+    ...parseMedicationList(input.conditionsText),
+  ];
+  const allergies = input.allergies ?? parseAllergyList(input.allergiesText);
 
   for (const flag of protocol.redFlags) {
     if (flags[flag.id] !== true) continue;
@@ -182,12 +220,47 @@ export function evaluateSafety(
       }
     }
 
+    for (const flag of proposed.interactionFlags ?? []) {
+      const hit = meds.find(m => isActiveStatus(m.status) && matchesTerm(flag, m));
+      if (hit) {
+        findings.push({
+          ruleId: `interaction:${proposed.id}`,
+          finding: `${proposed.medicineName} — interaction: ${flag}`,
+          severity: 'caution',
+          reason: `Recorded "${hit.rawText}" matches the protocol interaction flag "${flag}".`,
+          sourceId: proposed.sourceId,
+          recommendedAction:
+            'Review the interaction and select an alternative agent, or document a rationale and monitor.',
+          overridePolicy: 'rationale_required',
+        });
+      }
+    }
+
     for (const substance of proposed.allergyConflicts ?? []) {
-      const allergy = (input.allergies ?? []).find(
-        a => a.status !== 'resolved' && a.substance.toLowerCase().includes(substance),
+      const allergy = allergies.find(
+        a => a.status !== 'resolved' && matchesTerm(a.substance, {
+          rawText: substance,
+          normalisedName: substance,
+          status: 'current',
+        }),
       );
       if (!allergy) continue;
       const severe = allergy.severity === 'anaphylaxis' || allergy.severity === 'severe';
+      // An allergy to the proposed medicine ITSELF is never overridable.
+      // A class/cross-reactivity concern can be reasoned about.
+      const sameDrug =
+        matchesTerm(proposed.medicineName, {
+          rawText: allergy.substance,
+          normalisedName: allergy.substance,
+          status: 'current',
+        }) ||
+        (proposed.activeIngredient
+          ? matchesTerm(proposed.activeIngredient, {
+              rawText: allergy.substance,
+              normalisedName: allergy.substance,
+              status: 'current',
+            })
+          : false);
       findings.push({
         ruleId: `allergy:${proposed.id}:${substance}`,
         finding: `Allergy conflict — ${proposed.medicineName} vs recorded ${allergy.substance}`,
@@ -197,8 +270,10 @@ export function evaluateSafety(
           (allergy.reaction ? ` (reaction: ${allergy.reaction})` : '') +
           ` conflicts with ${proposed.medicineName}.`,
         sourceId: proposed.sourceId,
-        recommendedAction: 'Select an alternative agent or refer to GP.',
-        overridePolicy: severe ? 'non_overridable' : 'rationale_required',
+        recommendedAction: sameDrug
+          ? 'Do not supply this medicine. Select an alternative agent under the protocol, or refer to GP.'
+          : 'Assess cross-reactivity risk. Select an alternative agent or document a rationale.',
+        overridePolicy: sameDrug || severe ? 'non_overridable' : 'rationale_required',
       });
     }
   }
@@ -225,7 +300,7 @@ const NAME_STOPWORDS = new Set([
  * — never a bare bidirectional substring, which is what caused the old engine
  * to fire on "warfarin stopped 2019".
  */
-function matchesTerm(term: string, med: Medication): boolean {
+export function matchesTerm(term: string, med: Medication): boolean {
   const phrase = term.toLowerCase().trim();
   if (!phrase) return false;
 

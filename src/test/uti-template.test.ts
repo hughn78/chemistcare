@@ -5,7 +5,7 @@ import {
   emptyUtiData,
   evaluateScope,
   evaluateTreatmentBlockers,
-  computeUtiSafetyScore,
+  evaluateUtiFindings,
   UTI_RED_FLAG_IDS,
   type UtiConsultationData,
 } from '@/lib/conditionTemplates/uti';
@@ -34,11 +34,11 @@ describe('UTI template — Case 1: in-scope', () => {
     expect(blockers).toEqual([]);
   });
 
-  it('safety score is high (>=80) when no penalties apply', () => {
+  it('produces no blocking safety findings when the consultation is complete', () => {
     const d = baseInScope();
     d.selectedTreatment = utiTemplate.treatments[0];
-    const { score } = computeUtiSafetyScore(d);
-    expect(score).toBeGreaterThanOrEqual(80);
+    const findings = evaluateUtiFindings(d, d.selectedTreatment);
+    expect(findings.filter(f => f.overridePolicy === 'non_overridable')).toEqual([]);
   });
 
   it('clinical note mentions Trimethoprim when supplied', () => {
@@ -120,9 +120,10 @@ describe('UTI template — Case 5: incomplete red flags', () => {
 });
 
 describe('UTI template — registry shape', () => {
-  it('has slug uncomplicated-uti and 15 red flags', () => {
+  it('has slug uncomplicated-uti and the protocol’s 22 red flags', () => {
     expect(utiTemplate.slug).toBe('uncomplicated-uti');
-    expect(utiTemplate.redFlags.length).toBe(15);
+    // Was 15 hand-written flags; the protocol screens for 22.
+    expect(utiTemplate.redFlags.length).toBe(22);
     expect(utiTemplate.treatments.length).toBe(3);
   });
 });
