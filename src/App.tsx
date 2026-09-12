@@ -2,7 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, type RouteObject } from "react-router-dom";
+import RouteError from "@/components/RouteError";
+import { AuditWriteWarning } from "@/components/AuditWriteWarning";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import LandingPage from "./pages/LandingPage";
 import Index from "./pages/Index";
@@ -40,8 +42,8 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
-  { path: "/", element: <LandingPage />, errorElement: <ErrorBoundary><NotFound /></ErrorBoundary> },
+const routes: RouteObject[] = [
+  { path: "/", element: <LandingPage /> },
   { path: "/full-scope-of-practice", element: <FullScopeOfPractice /> },
   { path: "/dashboard", element: <Index /> },
   // Condition-aware consultation routing (single source of truth: conditionRegistry)
@@ -81,16 +83,28 @@ const router = createBrowserRouter([
   { path: "/fhir-demo", element: <FhirDemo /> },
   { path: "/integration-settings", element: <IntegrationSettings /> },
   { path: "*", element: <NotFound /> },
-]);
+];
+
+/**
+ * Every route gets a real error view. Previously the only errorElement in the
+ * app wrapped <NotFound />, so a route exception rendered a 404 page and gave
+ * the user no way to retry.
+ */
+const router = createBrowserRouter(
+  routes.map(route => ({ ...route, errorElement: <RouteError /> })),
+);
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <RouterProvider router={router} />
-    </TooltipProvider>
-  </QueryClientProvider>
+  <ErrorBoundary>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <RouterProvider router={router} />
+        <AuditWriteWarning />
+      </TooltipProvider>
+    </QueryClientProvider>
+  </ErrorBoundary>
 );
 
 export default App;
