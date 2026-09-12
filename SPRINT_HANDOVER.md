@@ -150,7 +150,9 @@ npm run test:coverage
 
 **New lint debt: 2 errors, both in files restored from previously-untracked work** (`ScribeRecorder.tsx`, `VoiceTranscriptionSettings.tsx`) committed in `c81d706` to preserve them. Every file this sprint created lints clean.
 
-**Coverage baseline:** `src/clinical` (the safety-critical engine) is at **94.08% statements / 83.72% branches / 87.17% functions**. `src/lib` and `src/hooks` are near zero — that is the honest picture, not a target. Caveat: the v8 provider does not attribute coverage from suites that declare a per-file `node` environment in this version, so some `src/lib` files under-report.
+**Coverage baseline:** `src/clinical` (the safety-critical engine) is at **94.08% statements / 83.72% branches / 87.17% functions**. `src/lib` and `src/hooks` are near zero — that is the honest picture, not a target. Two caveats: the v8 provider does not attribute coverage from suites that declare a per-file `node` environment in this version, so some `src/lib` files under-report; and `npm run test:coverage` is the command that first installs `@vitest/coverage-v8`.
+
+**One environment gotcha:** installing `@vitest/coverage-v8` pulled in jsdom's optional native `canvas` package **without its prebuilt binary**, which made every jsdom suite fail with `Cannot find module '../build/Release/canvas.node'`. Fix in this environment was `rm -rf node_modules/canvas` (jsdom then skips it gracefully). If you reinstall from scratch and see that error, that is the cause. `eslint.config.js` now also ignores `coverage/` and transient vitest artifacts.
 
 ---
 
