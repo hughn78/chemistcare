@@ -25,7 +25,10 @@
     "android:open": "npx cap open android",
     "android:run": "npm run android:sync && npx cap run android",
     "electron:build:win": "npm run local:build && electron-builder --win nsis portable --publish never",
-    "electron:dist:win": "npm run local:bootstrap && npm run electron:build:win"
+    "electron:dist:win": "npm run local:bootstrap && npm run electron:build:win",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "verify": "npm run typecheck && npm run test && npm run lint && npm run build"
   },
   "dependencies": {
     "@capacitor/android": "^8.1.0",
@@ -101,6 +104,7 @@
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react-swc": "^3.11.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "autoprefixer": "^10.4.21",
     "concurrently": "^9.0.1",
     "electron": "^32.2.0",
