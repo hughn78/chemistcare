@@ -23,7 +23,10 @@ export interface DecisionInput {
   /** eligibility id -> true (met), false (not met), undefined (unanswered). */
   eligibility?: Record<string, boolean | undefined>;
   medicationsText?: string;
+  /** Free-text medical conditions — contraindications are often conditions. */
+  conditionsText?: string;
   allergies?: Allergy[];
+  allergiesText?: string;
   proposedMedicineId?: string;
 }
 

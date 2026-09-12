@@ -23,6 +23,8 @@ import type {
   TreatmentOptionDefinition,
 } from './types';
 import { evaluateSafety } from '@/clinical/safety';
+import { ageFromDob, isWithinAgeBand } from '@/clinical/primitives';
+import { buildHandover, decide, type ConsultDecision, type DecisionInput } from '@/clinical/decision';
 import type { SafetyFinding } from '@/clinical/types';
 
 // ────────── Helpers ──────────
@@ -518,6 +520,12 @@ export interface UtiConsultationData {
   followUpPlan?: string;
   safetyNet?: string;
   referralNotes?: string;
+  /**
+   * Consent to participate in the program, including communication with the
+   * patient's usual GP. One of the protocol's eligibility criteria, so it is
+   * part of the clinical record rather than a legal checkbox off to the side.
+   */
+  consentToProgram?: boolean;
   counsellingDone: string[];
   noteText?: string;
   pharmacistName?: string;
@@ -660,4 +668,80 @@ export function evaluateTreatmentBlockers(
 
 function dedupe(xs: string[]): string[] {
   return Array.from(new Set(xs));
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Decision — referral is a clinical outcome, not a failure state
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** Build the canonical DecisionInput from this template's data shape. */
+export function utiDecisionInput(
+  data: UtiConsultationData,
+  treatment?: TreatmentOptionDefinition,
+): DecisionInput {
+  const redFlags: Record<string, boolean | undefined> = {};
+  for (const id of RED_FLAG_IDS) {
+    const v = data.redFlags[id];
+    redFlags[id] = v === 'yes' ? true : v === 'no' ? false : undefined;
+  }
+
+  const age = ageFromDob(data.patient.dob);
+  const inAgeBand = isWithinAgeBand(age, 18, 65);
+  const cystitisSymptoms = ['dysuria', 'frequency', 'urgency', 'suprapubic'].filter(
+    k => data.symptoms[k] === 'yes',
+  ).length;
+
+  return {
+    redFlags,
+    eligibility: {
+      sex_female: data.patient.sex ? data.patient.sex === 'female' : undefined,
+      age_18_to_65: inAgeBand === null ? undefined : inAgeBand,
+      // Two or more acute cystitis symptoms, as the protocol requires.
+      two_or_more_cystitis_symptoms:
+        cystitisSymptoms > 0 || ['dysuria', 'frequency', 'urgency', 'suprapubic']
+          .some(k => data.symptoms[k] === 'no')
+          ? cystitisSymptoms >= 2
+          : undefined,
+      // Consent to participate is captured explicitly in the consultation;
+      // until it is recorded the decision stays 'undecided'.
+      consent_and_present: data.consentToProgram === true ? true : undefined,
+    },
+    medicationsText: data.patient.currentMeds,
+    conditionsText: data.patient.relevantConditions,
+    allergiesText: data.patient.allergies,
+    proposedMedicineId: treatment?.id,
+  };
+}
+
+export function decideUti(
+  data: UtiConsultationData,
+  treatment?: TreatmentOptionDefinition,
+): ConsultDecision {
+  return decide(utiProtocol, utiDecisionInput(data, treatment));
+}
+
+/**
+ * ISBAR handover text for this consultation. Used for the GP letter and for
+ * the referral record; never shown to the patient in this form.
+ */
+export function buildUtiHandover(
+  data: UtiConsultationData,
+  treatment?: TreatmentOptionDefinition,
+): string {
+  const decision = decideUti(data, treatment);
+  const positive = RED_FLAG_IDS.filter(id => data.redFlags[id] === 'yes').map(
+    id => utiProtocol.redFlags.find(f => f.id === id)?.label ?? id,
+  );
+
+  return buildHandover(decision, {
+    patientName: [data.patient.firstName, data.patient.lastName].filter(Boolean).join(' '),
+    patientDob: data.patient.dob,
+    presentingProblem: 'Suspected uncomplicated lower urinary tract infection (cystitis)',
+    history: data.symptoms.previousUti,
+    medicines: data.patient.currentMeds,
+    allergies: data.patient.allergies,
+    assessment: data.referralNotes,
+    redFlagsPositive: positive,
+    actionsTaken: treatment ? `Pharmacist proposed ${treatment.medicineName}.` : undefined,
+  });
 }

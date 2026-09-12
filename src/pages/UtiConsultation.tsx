@@ -41,6 +41,8 @@ import {
   evaluateScope,
   evaluateTreatmentBlockers,
   evaluateUtiFindings,
+  decideUti,
+  buildUtiHandover,
   UTI_RED_FLAG_IDS,
   type UtiConsultationData,
 } from '@/lib/conditionTemplates/uti';
@@ -52,6 +54,7 @@ import {
   ProtocolStatusBadge,
 } from '@/components/clinical/ProtocolProvenance';
 import { SafetyFindingsPanel } from '@/components/clinical/SafetyFindingsPanel';
+import { ReferralPanel } from '@/components/clinical/ReferralPanel';
 import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { supabase } from '@/integrations/supabase/client';
@@ -233,9 +236,24 @@ const UtiConsultation = () => {
     completion.every(c => !c.required || c.done)
     && !safetyFindings.some(f => f.overridePolicy === 'non_overridable')
     && scope.status === 'in_scope';
-  // out-of-scope referral path: also "ready" if no treatment selected and referral documented
+  /**
+   * Referral is a real clinical outcome. When the decision is a referral, the
+   * consultation is finalisable once the outcome and safety-netting advice are
+   * documented — NOT blocked waiting for a supply that must not happen.
+   */
+  const decision = useMemo(
+    () => decideUti(data, data.selectedTreatment),
+    [data],
+  );
+  const isReferralPathway =
+    decision.outcome.prescribingBlocked || decision.outcome.kind !== 'treat';
   const readyAsReferral =
-    scope.status === 'out_of_scope' && !data.selectedTreatment && !!data.referralNotes && !!data.followUpPlan;
+    isReferralPathway && !data.selectedTreatment && !!data.followUpPlan;
+
+  const handover = useMemo(
+    () => buildUtiHandover(data, data.selectedTreatment),
+    [data],
+  );
 
   return (
     <ClinicalLayout>
@@ -398,6 +416,41 @@ const UtiConsultation = () => {
                       onChange={t => updatePatient('relevantConditions', tagsToString(t))}
                       placeholder="e.g. CKD, G6PD deficiency"
                     />
+                  </div>
+
+                  <Separator />
+                  {/*
+                    Consent is one of the protocol's ELIGIBILITY criteria and one
+                    of its documentation requirements, so it belongs in the
+                    clinical record rather than as a legal checkbox off to one
+                    side. Without it the decision stays 'undecided'.
+                  */}
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold">Consent to participate</p>
+                    <div className="flex items-start gap-2">
+                      <Checkbox
+                        id="consent-program"
+                        checked={data.consentToProgram === true}
+                        onCheckedChange={v => setData(d => ({ ...d, consentToProgram: v === true }))}
+                        className="mt-0.5"
+                      />
+                      <Label htmlFor="consent-program" className="text-xs leading-relaxed">
+                        The patient consents to participate in the Community Pharmacist Program,
+                        understands they pay the full cost of the medicine, and agrees to the
+                        pharmacist communicating with their usual medical practitioner or practice
+                        and accessing their My Health Record.
+                      </Label>
+                    </div>
+                    <p
+                      id="consent-program-help"
+                      className={`text-[10px] ${
+                        data.consentToProgram === true ? 'text-muted-foreground' : 'text-clinical-warning'
+                      }`}
+                    >
+                      {data.consentToProgram === true
+                        ? 'Consent recorded.'
+                        : 'Not recorded — supply is not permitted under the protocol until consent is given.'}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -850,6 +903,15 @@ const UtiConsultation = () => {
           <aside className="border-l bg-card overflow-auto p-4 space-y-4 hidden lg:block">
             {/* Safety findings — structured, not a 0–100 score */}
             <SafetyFindingsPanel findings={safetyFindings} />
+
+            <Separator />
+
+            {/* Outcome + referral / handover */}
+            <ReferralPanel
+              outcome={decision.outcome}
+              handover={handover}
+              readOnly={!isReferralPathway}
+            />
 
             <Separator />
 
