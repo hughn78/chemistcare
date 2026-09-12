@@ -206,16 +206,35 @@ export function evaluateSafety(
   return findings;
 }
 
-/** Does a medicine entry match a contraindication/interaction phrase? */
+/**
+ * Stopwords that must never be treated as a drug name when we tokenise a
+ * medicine entry to look for it inside a contraindication phrase.
+ */
+const NAME_STOPWORDS = new Set([
+  'with', 'from', 'due', 'the', 'and', 'for', 'that', 'this', 'have', 'has',
+  'been', 'using', 'use', 'used', 'severe', 'other', 'others', 'previous',
+  'history', 'treatment', 'treated', 'patient', 'known', 'acid', 'tablet',
+  'tablets', 'capsule', 'capsules', 'sachet', 'oral', 'dose',
+]);
+
+/**
+ * Does a recorded medicine relate to a contraindication/interaction phrase?
+ *
+ * Contraindications are often PHRASES ("Treatment with methotrexate"), so we
+ * tokenise the medicine name and look for a whole-word token inside the phrase
+ * — never a bare bidirectional substring, which is what caused the old engine
+ * to fire on "warfarin stopped 2019".
+ */
 function matchesTerm(term: string, med: Medication): boolean {
-  const t = term.toLowerCase().trim();
-  if (!t) return false;
-  const name = (med.normalisedName ?? '').toLowerCase();
-  const ingredient = (med.activeIngredient ?? '').toLowerCase();
-  if (name === t || ingredient === t) return true;
-  // Word-boundary containment only — never a bare bidirectional substring.
-  const re = new RegExp(`\\b${escapeRegExp(t)}\\b`);
-  return re.test(name) || (ingredient ? re.test(ingredient) : false);
+  const phrase = term.toLowerCase().trim();
+  if (!phrase) return false;
+
+  const tokens = [
+    ...(med.normalisedName ?? '').toLowerCase().split(/[^a-z0-9]+/),
+    ...(med.activeIngredient ?? '').toLowerCase().split(/[^a-z0-9]+/),
+  ].filter(tok => tok.length >= 4 && !NAME_STOPWORDS.has(tok));
+
+  return tokens.some(tok => new RegExp(`\\b${escapeRegExp(tok)}\\b`).test(phrase));
 }
 
 function escapeRegExp(s: string): string {
