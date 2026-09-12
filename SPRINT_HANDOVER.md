@@ -1,7 +1,7 @@
 # ChemistCare PrescriberOS — Clinical Engine & Product Modernisation Sprint
 ## Handover Report
 
-**Branch:** `prescriberos-clinical-modernisation` (local, 16 commits)
+**Branch:** `prescriberos-clinical-modernisation` (local, 18 commits)
 **Base:** `main` @ `0f08c37`
 **Date:** 2026-09-13
 **Scope:** clinical content architecture, clinical engine, consultation outcomes, AI guardrails, reliability. **Security was out of scope and was not touched.**
@@ -243,7 +243,7 @@ Blocked conditions are enforced in code, not just documented: `SOURCES_WITHOUT_P
 
 ### 13. Git and PR status
 
-**16 commits** on `prescriberos-clinical-modernisation`:
+**18 commits** on `prescriberos-clinical-modernisation`:
 
 ```
 c81d706 chore: preserve untracked desktop/offline-STT work and audit report
@@ -262,6 +262,8 @@ f9a92f9 perf(routing): code-split every route
 c4de04f chore: ignore all transient vite/vitest config artifacts
 6e64e7c chore: de-duplicate .gitignore coverage entry
 bd0f84a docs: update handover commit list
+94899ba docs: correct sprint commit count to 16
+3e2e9b2 feat(clinical): transcribe mild acne and atopic dermatitis flare protocols
 ```
 
 **Not pushed, no PR opened.** `git push` failed: the sandbox has no GitHub credentials (`could not read Username for 'https://github.com'`; `gh` CLI is not installed). Everything is committed locally and ready to push.
