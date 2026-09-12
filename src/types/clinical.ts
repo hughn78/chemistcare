@@ -54,6 +54,12 @@ export interface Condition {
   guidelineReference: string;
   followUpInterval?: string;
   monitoringChecklist?: string[];
+  /**
+   * When set, this condition's clinical content is OWNED by the canonical
+   * protocol in src/clinical/protocols and must be derived from it rather than
+   * duplicated here. Prevents the same drug carrying two different doses.
+   */
+  canonicalProtocolId?: string;
 }
 
 export interface Patient {

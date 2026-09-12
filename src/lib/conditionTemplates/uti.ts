@@ -15,6 +15,7 @@
  * whenever the data shape changes.
  */
 import { getConditionById } from '@/data/conditions';
+import { utiProtocol } from '@/clinical/protocols/uti';
 import type {
   ConditionTemplate,
   ScopeRuleResult,
@@ -39,76 +40,56 @@ const RED_FLAG_IDS = [
 type RedFlagId = (typeof RED_FLAG_IDS)[number];
 
 // ────────── Treatments ──────────
-const trimethoprim: TreatmentOptionDefinition = {
-  id: 'trimethoprim',
-  medicineName: 'Trimethoprim',
-  line: 'first',
-  dose: '300 mg',
-  frequency: 'Once daily',
-  duration: '3 days',
-  maxQuantity: 3,
-  repeats: 0,
-  pbsRestriction: 'Restricted benefit (PBP)',
-  contraindications: ['folate deficiency', 'blood dyscrasia', 'severe renal impairment'],
-  cautions: ['Monitor INR if on warfarin', 'Avoid in early pregnancy'],
-  allergyConflicts: ['trimethoprim', 'sulfonamide'],
-  interactionFlags: ['methotrexate', 'warfarin', 'phenytoin', 'spironolactone', 'ace inhibitor'],
-  counsellingPoints: [
-    'Take once daily for 3 days, with or without food',
-    'Complete the full course even if you feel better',
-    'Drink plenty of fluids',
-  ],
-  followUpAdvice: 'Symptoms should improve within 48 hours. If not, see a GP.',
-  referralTriggers: ['No improvement at 48 h', 'Symptoms worsen', 'Fever or flank pain develops'],
-  alternativeOptionId: 'nitrofurantoin',
-};
+/**
+ * Treatment options are DERIVED from the canonical Victorian protocol
+ * (src/clinical/protocols/uti.ts), which is the single source of truth.
+ *
+ * They are deliberately no longer hardcoded here. Previously this file listed
+ * trimethoprim as first line and offered cefalexin as third line. The official
+ * protocol is explicit that this is wrong:
+ *   - nitrofurantoin is FIRST line (100 mg every 6 hours for 5 days),
+ *   - fosfomycin is SECOND line (3 g single dose) — previously absent,
+ *   - trimethoprim is THIRD line and only where no trimethoprim exposure or
+ *     trimethoprim-resistant E. coli in the last 3 months,
+ *   - cefalexin is EXCLUDED from the medicines list to limit resistance.
+ */
+function treatmentFromProtocol(id: string): TreatmentOptionDefinition {
+  const m = utiProtocol.medicines.find(x => x.id === id);
+  if (!m) throw new Error(`UTI protocol has no medicine '${id}'`);
+  const nextLine = utiProtocol.medicines.find(x => x.line === m.line + 1);
+  return {
+    id: m.id,
+    medicineName: m.medicineName,
+    line: m.line === 1 ? 'first' : m.line === 2 ? 'second' : 'third',
+    dose: m.dose,
+    frequency: m.frequency,
+    duration: m.duration,
+    maxQuantity: m.quantity ?? 0,
+    repeats: m.repeats ?? 0,
+    pbsRestriction:
+      'Not PBS-subsidised under the Community Pharmacist Program — patient pays full cost',
+    contraindications: m.contraindications,
+    cautions: m.cautions ?? [],
+    allergyConflicts: m.allergyConflicts ?? [],
+    interactionFlags: m.interactionFlags ?? [],
+    counsellingPoints: m.counsellingPoints ?? [],
+    followUpAdvice:
+      'Symptoms should respond within 48 hours. If symptoms persist 48–72 hours after ' +
+      'finishing treatment, or new symptoms develop, advise the patient to see a GP.',
+    referralTriggers: [
+      'Fever 38°C or higher',
+      'Rigors',
+      'Loin or back pain',
+      'Vomiting',
+      'Symptoms that are not symptoms of acute cystitis',
+    ],
+    alternativeOptionId: nextLine?.id,
+  };
+}
 
-const nitrofurantoin: TreatmentOptionDefinition = {
-  id: 'nitrofurantoin',
-  medicineName: 'Nitrofurantoin',
-  line: 'second',
-  dose: '100 mg (modified release)',
-  frequency: 'Twice daily',
-  duration: '5 days',
-  maxQuantity: 10,
-  repeats: 0,
-  pbsRestriction: 'Restricted benefit (PBP)',
-  contraindications: ['eGFR < 45 mL/min', 'g6pd deficiency', 'pulmonary fibrosis history'],
-  cautions: ['Take with food to reduce nausea', 'Avoid at term (≥36 weeks) pregnancy'],
-  allergyConflicts: ['nitrofurantoin'],
-  interactionFlags: ['magnesium antacid', 'probenecid'],
-  counsellingPoints: [
-    'Take twice daily with food for 5 days',
-    'May discolour urine yellow-brown — harmless',
-    'Stop and seek review if you develop cough, breathlessness, or numbness/tingling',
-  ],
-  followUpAdvice: 'Expect improvement within 48–72 hours. Review at 5 days.',
-  referralTriggers: ['No improvement at 72 h', 'Respiratory symptoms develop'],
-  alternativeOptionId: 'cefalexin',
-};
-
-const cefalexin: TreatmentOptionDefinition = {
-  id: 'cefalexin',
-  medicineName: 'Cefalexin',
-  line: 'third',
-  dose: '500 mg',
-  frequency: 'Twice daily',
-  duration: '5 days',
-  maxQuantity: 10,
-  repeats: 0,
-  pbsRestriction: 'Alternative — confirm protocol locally',
-  contraindications: ['cephalosporin allergy'],
-  cautions: ['Severe penicillin allergy — assess cross-reactivity risk'],
-  allergyConflicts: ['cephalosporin', 'cefalexin', 'cephalexin'],
-  interactionFlags: ['probenecid'],
-  counsellingPoints: [
-    'Take twice daily for 5 days, with or without food',
-    'Complete the full course',
-    'Notify pharmacist if rash, swelling, or breathing difficulty develops',
-  ],
-  followUpAdvice: 'Expect improvement within 48–72 hours.',
-  referralTriggers: ['Allergic reaction', 'No improvement at 72 h'],
-};
+const nitrofurantoin = treatmentFromProtocol('nitrofurantoin');
+const fosfomycin = treatmentFromProtocol('fosfomycin');
+const trimethoprim = treatmentFromProtocol('trimethoprim');
 
 // ────────── Scope rules ──────────
 const scopeRules = [
@@ -265,11 +246,20 @@ export const utiTemplate: ConditionTemplate = {
   jurisdictions: ['VIC'],
   templateVersion: 1,
   conditionTemplateVersion: '1.0.0',
-  jurisdictionProtocolVersion: 'VIC-PP-UTI-2026.1',
-  protocolStatus: 'active',
-  protocolLastReviewed: '2026-04-01',
-  protocolSourceLabel: 'Victorian pharmacist prescribing protocol',
-  lastReviewed: '2026-04-01',
+  // Traceable to the actual published document — see src/clinical/sources.ts.
+  jurisdictionProtocolVersion: utiProtocol.id,
+  /**
+   * NOT 'active'. The clinical content is transcribed from the retrieved
+   * official Victorian protocol, but it has not been signed off by a practising
+   * pharmacist prescriber. Presenting it as 'active' would claim a review that
+   * has not happened. Canonical lifecycle: 'source_verified'.
+   */
+  protocolStatus: 'needs_review',
+  protocolLastReviewed: utiProtocol.effectiveDate ?? '2026-02-04',
+  protocolSourceLabel:
+    'Victorian Department of Health — Protocol for Management of Urinary Tract Infections, ' +
+    'Community Pharmacist Program (January 2026; updated 4 February 2026)',
+  lastReviewed: '2026-09-13',
   legacyCondition: getConditionById('uti')!,
 
   steps: [
@@ -405,7 +395,8 @@ export const utiTemplate: ConditionTemplate = {
       whenToSuspect: 'Recent diuretic / new medicines' },
   ],
 
-  treatments: [trimethoprim, nitrofurantoin, cefalexin],
+  // Order matters: the protocol's line of therapy (1st → 3rd).
+  treatments: [nitrofurantoin, fosfomycin, trimethoprim],
 
   counselling: [
     { id: 'how_to_take', label: 'How to take the medicine', required: true },
