@@ -17,6 +17,44 @@ I cannot push: this environment has no GitHub credentials, no SSH keys, and no `
 
 ---
 
+## ⚠️ First: make sure the token belongs to `hughn78`
+
+A push was already attempted and rejected with:
+
+```
+remote: Permission to hughn78/chemistcare.git denied to blackshawsroadpharmacy-flow.
+fatal: unable to access ... The requested URL returned error: 403
+```
+
+Cause: `hughn78/chemistcare` is owned by the user **`hughn78`**, but the token was
+generated on a different account, **`blackshawsroadpharmacy-flow`**. It has valid scopes
+and can *read* the repo (it's public) but has `push: false`.
+
+Two ways to fix — pick one:
+
+**A. Generate the token while logged in as `hughn78`** (recommended). Log into GitHub as
+`hughn78` first, *then* open https://github.com/settings/tokens.
+
+**B. Grant the other account access.** While logged in as `hughn78`:
+https://github.com/hughn78/chemistcare/settings/access → *Collaborators* → *Add people* →
+`blackshawsroadpharmacy-flow` → role **Write**.
+
+Check any token before using it:
+
+```bash
+TOKEN='<paste>'
+curl -s -H "Authorization: Bearer $TOKEN" https://api.github.com/user \
+  | grep '"login"'                    # must print hughn78
+curl -s -H "Authorization: Bearer $TOKEN" \
+  https://api.github.com/repos/hughn78/chemistcare \
+  | grep -A1 '"permissions"'          # must show "push": true
+```
+
+> 🔒 **Revoke the token you already shared.** It was pasted into a chat in plain text.
+> Remove it at **https://github.com/settings/tokens** → *Delete*, then generate a fresh one.
+
+---
+
 ## Method 1 — Browser login (easily the simplest, ~30 seconds)
 
 This machine already has **Git Credential Manager 2.9.0** bundled, so you do **not** need to create a token.
