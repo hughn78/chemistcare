@@ -3,8 +3,15 @@
 **Repo:** https://github.com/hughn78/chemistcare.git
 **Visibility:** ⚠️ **PUBLIC** — anything you push is world-readable.
 **Default branch on remote:** `main`
-**Local branch:** `workbuddy/prescriberos-clinical-modernisation`
-**State:** 19 commits ahead of remote `main`, zero commits behind. Clean fast-forward — no merge conflicts possible.
+**Local branch:** `prescriberos-clinical-modernisation`
+**State:** 20 commits ahead of remote `main`, zero commits behind. Clean fast-forward — no merge conflicts possible.
+
+> ⚠️ **Do not rename this branch to `workbuddy/prescriberos-clinical-modernisation` on this machine.**
+> Git here silently drops nested ref directories — `.git/refs/heads/workbuddy/` disappeared
+> right after a successful rename, leaving HEAD pointing at a branch with no commits. The
+> commits were recovered from the reflog, but it cost a scare. If you want the slash for
+> tidiness, rename it **after** pushing, on a machine where nested refs persist:
+> `git branch -m workbuddy/prescriberos-clinical-modernisation`
 
 I cannot push: this environment has no GitHub credentials, no SSH keys, and no `gh` CLI. Read access works (the repo is public); **write needs you to authenticate once**. Pick one method below.
 
@@ -16,7 +23,7 @@ This machine already has **Git Credential Manager 2.9.0** bundled, so you do **n
 
 ```bash
 cd /e/AI/chemistcare
-git push -u origin workbuddy/prescriberos-clinical-modernisation
+git push -u origin prescriberos-clinical-modernisation
 ```
 
 What happens:
@@ -43,7 +50,7 @@ Copy the token (`github_pat_...` or `ghp_...`). You only see it once.
 **Then push** — use the token as the *password*:
 
 ```bash
-git push -u origin workbuddy/prescriberos-clinical-modernisation
+git push -u origin prescriberos-clinical-modernisation
 # Username: hughn78
 # Password: <paste the token>
 ```
@@ -52,7 +59,7 @@ To avoid pasting it every time, cache it first:
 
 ```bash
 git config --global credential.helper manager
-git push -u origin workbuddy/prescriberos-clinical-modernisation
+git push -u origin prescriberos-clinical-modernisation
 ```
 
 > Do **not** put the token in the remote URL — it gets written to `.git/config` in plain text.
@@ -74,7 +81,7 @@ Add it at **https://github.com/settings/keys** → *New SSH key*.
 cd /e/AI/chemistcare
 git remote set-url origin git@github.com:hughn78/chemistcare.git
 ssh -T git@github.com          # expect: "Hi hughn78! You've successfully authenticated"
-git push -u origin workbuddy/prescriberos-clinical-modernisation
+git push -u origin prescriberos-clinical-modernisation
 ```
 
 ---
@@ -86,15 +93,15 @@ Your original sprint brief said *"Create a PR, do NOT auto-merge"* — so:
 **A. Branch + PR (recommended, matches the brief):**
 
 ```bash
-git push -u origin workbuddy/prescriberos-clinical-modernisation
+git push -u origin prescriberos-clinical-modernisation
 ```
 
-Then open **https://github.com/hughn78/chemistcare/pull/new/workbuddy/prescriberos-clinical-modernisation** and create the PR.
+Then open **https://github.com/hughn78/chemistcare/pull/new/prescriberos-clinical-modernisation** and create the PR.
 
 **B. Straight onto `main` (only if you're sure):** remote `main` is at exactly your base commit `0f08c37`, so this is a clean fast-forward with no force-push:
 
 ```bash
-git push origin workbuddy/prescriberos-clinical-modernisation:main
+git push origin prescriberos-clinical-modernisation:main
 ```
 
 ---
@@ -139,7 +146,7 @@ git config user.name  "Your Real Name"
 git config user.email "you@example.com"
 
 git rebase 0f08c37 --exec 'git commit --amend --reset-author --no-edit'
-git push -u origin workbuddy/prescriberos-clinical-modernisation
+git push -u origin prescriberos-clinical-modernisation
 ```
 
 ---
@@ -147,7 +154,7 @@ git push -u origin workbuddy/prescriberos-clinical-modernisation
 ## After a successful push
 
 ```
-19 commits · branch workbuddy/prescriberos-clinical-modernisation
+20 commits · branch prescriberos-clinical-modernisation
 3 canonical protocols (UTI, mild acne, atopic dermatitis flare)
 146 tests · tsc clean · lint 81 (unchanged baseline) · build OK
 ```
