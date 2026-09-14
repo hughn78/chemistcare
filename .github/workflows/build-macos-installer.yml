@@ -1,0 +1,64 @@
+name: Build macOS Installer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ offline-desktop ]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'electron-main.cjs'
+      - 'electron/**'
+      - 'src/**'
+      - 'public/**'
+      - 'vite.config.ts'
+      - 'build/**'
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Configure npm network resilience
+        run: |
+          npm config set fetch-retries 5
+          npm config set fetch-retry-factor 2
+          npm config set fetch-retry-mintimeout 20000
+          npm config set fetch-retry-maxtimeout 120000
+          npm config set fetch-timeout 300000
+
+      - name: Install dependencies (with retry)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i of 3: npm install"
+            npm install --no-audit --no-fund && break
+            sleep $((15 * i))
+          done
+
+      - name: Download whisper.cpp + diarization sidecar binaries
+        run: npm run stt:binaries
+
+      - name: Build macOS app (dmg + zip, arm64 + x64)
+        run: npm run electron:build
+        env:
+          # Unsigned dev builds: set CSC_LINK / APPLE IDs via secrets for signed releases.
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: chemistcare-offline-macos-installer
+          path: |
+            dist/*.dmg
+            dist/*.zip
+            dist/*.blockmap
+          if-no-files-found: error

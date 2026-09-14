@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { appendAudit } from '@/lib/auditStore';
+import { appendAudit, type AuditWriteResult } from '@/lib/auditStore';
 import {
   type ProtocolStamp,
   type ProtocolSnapshot,
@@ -40,24 +40,36 @@ export interface AuditEventOptions {
   protocol?: ProtocolStamp;
 }
 
+export interface ConsultAuditWriteOutcome {
+  /** Result of the local (always-attempted) audit write. */
+  local: AuditWriteResult;
+  /** Result of the optional server write. `null` when no backend call was made. */
+  remote: 'persisted' | 'failed' | null;
+}
+
 /**
  * Hook for writing consult audit events.
  *
  * Pass a `defaultProtocol` to bind a single `ProtocolStamp` for all
  * events emitted from this consultation; individual `logEvent` calls
  * can still override via `options.protocol`.
+ *
+ * `logEvent` resolves to the write outcome rather than `void`. A failed write
+ * is a medico-legal event: callers finalising a consultation must check
+ * `outcome.local.status` and tell the pharmacist if the record was not saved.
  */
 export function useConsultAudit(defaultProtocol?: ProtocolStamp) {
   const logEvent = useCallback(async (
     consultId: string,
     eventType: AuditEventType,
     options?: AuditEventOptions,
-  ) => {
+  ): Promise<ConsultAuditWriteOutcome> => {
     const protocol = options?.protocol ?? defaultProtocol;
     const snapshot: ProtocolSnapshot | null = protocol ? buildProtocolSnapshot(protocol) : null;
 
-    // Always write to local store
-    appendAudit({
+    // Always write to local store. This is the record of truth for the
+    // medico-legal trail, so its result is returned rather than swallowed.
+    const local = appendAudit({
       consultId,
       action: eventType,
       details: {
@@ -75,7 +87,9 @@ export function useConsultAudit(defaultProtocol?: ProtocolStamp) {
       },
     });
 
-    // Best-effort write to Supabase
+    // Best-effort write to Supabase. "Best-effort" no longer means silent:
+    // the failure is reported back so the caller can decide what to show.
+    let remote: 'persisted' | 'failed' | null = null;
     try {
       const { data: { user } } = await supabase.auth.getUser();
       await (supabase.from('consult_audit_events') as any).insert({
@@ -98,10 +112,21 @@ export function useConsultAudit(defaultProtocol?: ProtocolStamp) {
         jurisdiction_protocol_version: protocol?.jurisdictionProtocolVersion ?? null,
         protocol_snapshot: snapshot ?? null,
       });
-    } catch {
-      // Audit logging should never break the UI
-      console.warn('[Audit] Failed to log event to backend:', eventType);
+      remote = 'persisted';
+    } catch (err) {
+      remote = 'failed';
+      // Never block the consultation on this, but never hide it either.
+      console.error('[Audit] Failed to log event to backend:', eventType, err);
     }
+
+    if (local.status !== 'persisted') {
+      console.error(
+        `[Audit] Local audit write for "${eventType}" was NOT persisted (status: ${local.status}).`,
+        local.error ?? '',
+      );
+    }
+
+    return { local, remote };
   }, [defaultProtocol]);
 
   return { logEvent };

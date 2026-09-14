@@ -16,13 +16,23 @@ function showFatalScreen(title: string, detail: string) {
   `;
 }
 
+/**
+ * Runtime errors are LOGGED, never fatal to the whole application.
+ *
+ * The previous implementation replaced the entire #root innerHTML on any
+ * unhandled rejection. A single failed async call — for example one Supabase
+ * request inside a half-completed consultation — destroyed the React tree and
+ * every unsaved clinical field with it. React error boundaries and route
+ * errorElement now handle failures locally, so an in-progress consultation
+ * survives.
+ */
 window.addEventListener("error", (event) => {
-  showFatalScreen("A runtime error occurred.", String(event.error?.stack || event.message || "Unknown error"));
+  // Logged for support. The previous implementation destroyed the whole app.
+  console.error("[app:error]", event.error ?? event.message);
 });
 
 window.addEventListener("unhandledrejection", (event) => {
-  const reason = event.reason instanceof Error ? event.reason.stack || event.reason.message : JSON.stringify(event.reason);
-  showFatalScreen("An unhandled promise rejection occurred.", reason || "Unknown async error");
+  console.error("[app:unhandledrejection]", event.reason);
 });
 
 try {

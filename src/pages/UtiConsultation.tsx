@@ -40,11 +40,22 @@ import {
   emptyUtiData,
   evaluateScope,
   evaluateTreatmentBlockers,
-  computeUtiSafetyScore,
+  evaluateUtiFindings,
+  decideUti,
+  buildUtiHandover,
   UTI_RED_FLAG_IDS,
   type UtiConsultationData,
 } from '@/lib/conditionTemplates/uti';
 import type { TreatmentOptionDefinition } from '@/lib/conditionTemplates/types';
+import { utiProtocol } from '@/clinical/protocols/uti';
+import {
+  ProtocolProvenancePopover,
+  ProtocolReferenceModeBanner,
+  ProtocolStatusBadge,
+} from '@/components/clinical/ProtocolProvenance';
+import { SafetyFindingsPanel } from '@/components/clinical/SafetyFindingsPanel';
+import { ReferralPanel } from '@/components/clinical/ReferralPanel';
+import { AiAssistPanel } from '@/components/clinical/AiAssistPanel';
 import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { supabase } from '@/integrations/supabase/client';
@@ -144,7 +155,11 @@ const UtiConsultation = () => {
 
   // ── Derived ──
   const scope = useMemo(() => evaluateScope(data), [data]);
-  const safety = useMemo(() => computeUtiSafetyScore(data), [data]);
+  // Structured findings replace the old 0–100 safety score.
+  const safetyFindings = useMemo(
+    () => evaluateUtiFindings(data, data.selectedTreatment),
+    [data],
+  );
   const positiveRedFlags = useMemo(
     () => UTI_RED_FLAG_IDS.filter(id => data.redFlags[id] === 'yes'),
     [data.redFlags],
@@ -219,10 +234,27 @@ const UtiConsultation = () => {
     }));
   }, [data]);
   const readyToFinalise =
-    completion.every(c => !c.required || c.done) && safety.score >= 60 && scope.status === 'in_scope';
-  // out-of-scope referral path: also "ready" if no treatment selected and referral documented
+    completion.every(c => !c.required || c.done)
+    && !safetyFindings.some(f => f.overridePolicy === 'non_overridable')
+    && scope.status === 'in_scope';
+  /**
+   * Referral is a real clinical outcome. When the decision is a referral, the
+   * consultation is finalisable once the outcome and safety-netting advice are
+   * documented — NOT blocked waiting for a supply that must not happen.
+   */
+  const decision = useMemo(
+    () => decideUti(data, data.selectedTreatment),
+    [data],
+  );
+  const isReferralPathway =
+    decision.outcome.prescribingBlocked || decision.outcome.kind !== 'treat';
   const readyAsReferral =
-    scope.status === 'out_of_scope' && !data.selectedTreatment && !!data.referralNotes && !!data.followUpPlan;
+    isReferralPathway && !data.selectedTreatment && !!data.followUpPlan;
+
+  const handover = useMemo(
+    () => buildUtiHandover(data, data.selectedTreatment),
+    [data],
+  );
 
   return (
     <ClinicalLayout>
@@ -246,6 +278,13 @@ const UtiConsultation = () => {
                 }`}>
                   {utiTemplate.protocolStatus.replace('_', ' ')}
                 </Badge>
+                {/* Canonical lifecycle status + full provenance, from
+                    src/clinical — not from the display template. */}
+                <ProtocolStatusBadge
+                  status={utiProtocol.lifecycle}
+                  needsClinicalReview={utiProtocol.needsClinicalReview}
+                />
+                <ProtocolProvenancePopover protocol={utiProtocol} />
               </div>
               <p className="text-[11px] text-muted-foreground mt-1">
                 Suspected uncomplicated lower UTI in non-pregnant adult women — Victorian pharmacist prescribing scope.
@@ -269,6 +308,13 @@ const UtiConsultation = () => {
             </div>
           </div>
         )}
+
+        {/* Provenance / lifecycle honesty: this protocol is transcribed from a
+            real source but has not been clinically signed off, so it renders as
+            reference content rather than an approved pathway. */}
+        <div className="px-4 sm:px-6 pt-3">
+          <ProtocolReferenceModeBanner protocol={utiProtocol} compact />
+        </div>
 
         <div className="flex-1 overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_360px]">
           {/* ── Main column ── */}
@@ -371,6 +417,41 @@ const UtiConsultation = () => {
                       onChange={t => updatePatient('relevantConditions', tagsToString(t))}
                       placeholder="e.g. CKD, G6PD deficiency"
                     />
+                  </div>
+
+                  <Separator />
+                  {/*
+                    Consent is one of the protocol's ELIGIBILITY criteria and one
+                    of its documentation requirements, so it belongs in the
+                    clinical record rather than as a legal checkbox off to one
+                    side. Without it the decision stays 'undecided'.
+                  */}
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold">Consent to participate</p>
+                    <div className="flex items-start gap-2">
+                      <Checkbox
+                        id="consent-program"
+                        checked={data.consentToProgram === true}
+                        onCheckedChange={v => setData(d => ({ ...d, consentToProgram: v === true }))}
+                        className="mt-0.5"
+                      />
+                      <Label htmlFor="consent-program" className="text-xs leading-relaxed">
+                        The patient consents to participate in the Community Pharmacist Program,
+                        understands they pay the full cost of the medicine, and agrees to the
+                        pharmacist communicating with their usual medical practitioner or practice
+                        and accessing their My Health Record.
+                      </Label>
+                    </div>
+                    <p
+                      id="consent-program-help"
+                      className={`text-[10px] ${
+                        data.consentToProgram === true ? 'text-muted-foreground' : 'text-clinical-warning'
+                      }`}
+                    >
+                      {data.consentToProgram === true
+                        ? 'Consent recorded.'
+                        : 'Not recorded — supply is not permitted under the protocol until consent is given.'}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -703,7 +784,23 @@ const UtiConsultation = () => {
             {step === 'documentation' && (
               <Card>
                 <CardHeader><CardTitle className="text-sm">Clinical Note (UTI-specific)</CardTitle></CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
+                  {/*
+                    AI assist: pharmacist writes first, AI may draft, pharmacist
+                    must attest. Consent is recorded; "Continue without AI" is a
+                    first-class choice.
+                  */}
+                  <AiAssistPanel
+                    value={data.clinicianNarrative ?? ''}
+                    onChange={v => setData(d => ({ ...d, clinicianNarrative: v }))}
+                    consent={data.aiAssistConsent ?? 'not_asked'}
+                    onConsentChange={c => setData(d => ({ ...d, aiAssistConsent: c }))}
+                    pharmacistName={data.pharmacistName ?? ''}
+                    onPharmacistNameChange={name => setData(d => ({ ...d, pharmacistName: name }))}
+                  />
+
+                  <Separator />
+
                   <pre className="text-[12px] leading-relaxed whitespace-pre-wrap p-3 rounded-md bg-muted font-mono">
                     {noteText}
                   </pre>
@@ -821,26 +918,17 @@ const UtiConsultation = () => {
 
           {/* ── Right rail ── */}
           <aside className="border-l bg-card overflow-auto p-4 space-y-4 hidden lg:block">
-            {/* Safety score */}
-            <div>
-              <h3 className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">Safety Score</h3>
-              <div className="flex items-end gap-2">
-                <span className={`text-3xl font-bold tabular-nums ${
-                  safety.score >= 80 ? 'text-clinical-safe' : safety.score >= 50 ? 'text-clinical-warning' : 'text-clinical-danger'
-                }`}>{safety.score}</span>
-                <span className="text-xs text-muted-foreground mb-1">/ 100</span>
-              </div>
-              {safety.penalties.length > 0 && (
-                <ul className="mt-2 space-y-1 text-[11px] text-muted-foreground">
-                  {safety.penalties.map((p, i) => (
-                    <li key={i} className="flex justify-between gap-2">
-                      <span>{p.reason}</span>
-                      <span className="text-clinical-danger tabular-nums">−{p.weight}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+            {/* Safety findings — structured, not a 0–100 score */}
+            <SafetyFindingsPanel findings={safetyFindings} />
+
+            <Separator />
+
+            {/* Outcome + referral / handover */}
+            <ReferralPanel
+              outcome={decision.outcome}
+              handover={handover}
+              readOnly={!isReferralPathway}
+            />
 
             <Separator />
 

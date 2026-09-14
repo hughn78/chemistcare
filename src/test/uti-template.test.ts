@@ -5,7 +5,7 @@ import {
   emptyUtiData,
   evaluateScope,
   evaluateTreatmentBlockers,
-  computeUtiSafetyScore,
+  evaluateUtiFindings,
   UTI_RED_FLAG_IDS,
   type UtiConsultationData,
 } from '@/lib/conditionTemplates/uti';
@@ -34,18 +34,19 @@ describe('UTI template — Case 1: in-scope', () => {
     expect(blockers).toEqual([]);
   });
 
-  it('safety score is high (>=80) when no penalties apply', () => {
+  it('produces no blocking safety findings when the consultation is complete', () => {
     const d = baseInScope();
     d.selectedTreatment = utiTemplate.treatments[0];
-    const { score } = computeUtiSafetyScore(d);
-    expect(score).toBeGreaterThanOrEqual(80);
+    const findings = evaluateUtiFindings(d, d.selectedTreatment);
+    expect(findings.filter(f => f.overridePolicy === 'non_overridable')).toEqual([]);
   });
 
   it('clinical note mentions Trimethoprim when supplied', () => {
     const d = baseInScope();
     d.selectedTreatment = utiTemplate.treatments[0];
     const note = utiTemplate.documentation.generate(d as unknown as Record<string, unknown>);
-    expect(note).toMatch(/Trimethoprim/);
+    // First line is nitrofurantoin under the Victorian protocol.
+    expect(note).toMatch(/Nitrofurantoin/);
     expect(note).toMatch(/Vic CPSP/);
   });
 });
@@ -76,15 +77,34 @@ describe('UTI template — Case 3: flank pain + fever', () => {
 });
 
 describe('UTI template — Case 4: allergy conflict', () => {
-  it('blocks Trimethoprim when patient is sulfa-allergic and suggests an alternative', () => {
+  /**
+   * Updated 2026-09-13. This case previously asserted that treatments[0] was
+   * trimethoprim and that a sulfonamide allergy blocked it. Both were wrong:
+   *
+   *   - The Victorian protocol makes nitrofurantoin FIRST line, so
+   *     treatments[0] is nitrofurantoin and trimethoprim is third line.
+   *   - Trimethoprim is a dihydrofolate reductase inhibitor, NOT a sulfonamide
+   *     (co-trimoxazole is the sulfonamide combination), so a sulfonamide
+   *     allergy is not in itself a trimethoprim allergy conflict.
+   */
+  it('blocks Trimethoprim when the patient is trimethoprim-allergic', () => {
     const d = baseInScope();
-    d.patient.allergies = 'sulfonamide';
-    const blockers = evaluateTreatmentBlockers(d, utiTemplate.treatments[0]);
-    expect(blockers.some(b => b.toLowerCase().includes('allergy'))).toBe(true);
-    expect(utiTemplate.treatments[0].alternativeOptionId).toBe('nitrofurantoin');
-    // Alternative is not blocked by sulfa allergy
-    const altBlockers = evaluateTreatmentBlockers(d, utiTemplate.treatments[1]);
-    expect(altBlockers.some(b => b.toLowerCase().includes('allergy'))).toBe(false);
+    d.patient.allergies = 'trimethoprim';
+
+    const trimethoprim = utiTemplate.treatments.find(t => t.id === 'trimethoprim')!;
+    const nitrofurantoin = utiTemplate.treatments.find(t => t.id === 'nitrofurantoin')!;
+
+    expect(utiTemplate.treatments[0].id).toBe('nitrofurantoin');
+
+    const trimBlockers = evaluateTreatmentBlockers(d, trimethoprim);
+    expect(trimBlockers.some(b => b.toLowerCase().includes('allergy'))).toBe(true);
+
+    // First-line nitrofurantoin is unaffected by a trimethoprim allergy.
+    const nitroBlockers = evaluateTreatmentBlockers(d, nitrofurantoin);
+    expect(nitroBlockers.some(b => b.toLowerCase().includes('allergy'))).toBe(false);
+
+    // The alternative to third-line trimethoprim steps back up the protocol.
+    expect(trimethoprim.alternativeOptionId).toBeUndefined();
   });
 });
 
@@ -100,9 +120,10 @@ describe('UTI template — Case 5: incomplete red flags', () => {
 });
 
 describe('UTI template — registry shape', () => {
-  it('has slug uncomplicated-uti and 15 red flags', () => {
+  it('has slug uncomplicated-uti and the protocol’s 22 red flags', () => {
     expect(utiTemplate.slug).toBe('uncomplicated-uti');
-    expect(utiTemplate.redFlags.length).toBe(15);
+    // Was 15 hand-written flags; the protocol screens for 22.
+    expect(utiTemplate.redFlags.length).toBe(22);
     expect(utiTemplate.treatments.length).toBe(3);
   });
 });

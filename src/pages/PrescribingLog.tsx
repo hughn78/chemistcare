@@ -55,8 +55,8 @@ const PrescribingLog = () => {
 
       if (error) throw error;
 
-      // Audit trail (local)
-      appendAudit({
+      // Audit trail (local). A failed write must be reported, not assumed.
+      const audit = appendAudit({
         consultId: record.id,
         action: 'consult_deleted',
         details: {
@@ -67,7 +67,14 @@ const PrescribingLog = () => {
       });
 
       setRecords(prev => prev.filter(r => r.id !== record.id));
-      toast.success('Consultation record deleted', { position: 'bottom-right' });
+      if (audit.status === 'persisted') {
+        toast.success('Consultation record deleted', { position: 'bottom-right' });
+      } else {
+        toast.warning('Record deleted, but the audit entry was not saved', {
+          description: audit.error,
+          position: 'bottom-right',
+        });
+      }
     } catch (err: any) {
       toast.error('Failed to delete record', { description: err?.message });
     }
@@ -82,7 +89,7 @@ const PrescribingLog = () => {
 
       if (error) throw error;
 
-      appendAudit({
+      const audit = appendAudit({
         consultId: record.id,
         action: 'consult_archived',
         details: {
@@ -92,7 +99,14 @@ const PrescribingLog = () => {
       });
 
       setRecords(prev => prev.map(r => r.id === record.id ? { ...r, status: 'archived' } : r));
-      toast.success('Consultation archived', { position: 'bottom-right' });
+      if (audit.status === 'persisted') {
+        toast.success('Consultation archived', { position: 'bottom-right' });
+      } else {
+        toast.warning('Consultation archived, but the audit entry was not saved', {
+          description: audit.error,
+          position: 'bottom-right',
+        });
+      }
     } catch (err: any) {
       toast.error('Failed to archive record', { description: err?.message });
     }

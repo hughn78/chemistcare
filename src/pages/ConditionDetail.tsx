@@ -6,12 +6,23 @@ import { Separator } from '@/components/ui/separator';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getConditionById } from '@/data/conditions';
 import { getSlugForConditionId } from '@/lib/conditionRegistry';
-import { AlertTriangle, ArrowLeft, Shield, Pill, FileText, Clock, XCircle, CheckCircle } from 'lucide-react';
+import { getProtocol } from '@/clinical/registry';
+import {
+  ProtocolProvenancePopover,
+  ProtocolReferenceModeBanner,
+  ProtocolStatusBadge,
+} from '@/components/clinical/ProtocolProvenance';
+import { AlertTriangle, ArrowLeft, Ban, Shield, Pill, FileText, Clock, XCircle, CheckCircle } from 'lucide-react';
 
 const ConditionDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const condition = getConditionById(id || '');
+  // Canonical protocol, when this condition has one. Conditions without a
+  // canonical protocol show no provenance rather than an invented one.
+  const protocol = condition?.canonicalProtocolId
+    ? getProtocol(condition.canonicalProtocolId)
+    : undefined;
 
   if (!condition) {
     return (
@@ -43,8 +54,26 @@ const ConditionDetail = () => {
             </span>
           </div>
           <p className="text-sm text-muted-foreground">{condition.description}</p>
+          <div className="mt-2 flex flex-wrap items-center gap-3">
+            {protocol ? (
+              <>
+                <ProtocolStatusBadge
+                  status={protocol.lifecycle}
+                  needsClinicalReview={protocol.needsClinicalReview}
+                />
+                <ProtocolProvenancePopover protocol={protocol} />
+              </>
+            ) : (
+              <span className="text-xs text-muted-foreground italic">
+                No protocol in the registry yet — this condition is not traceable to a retrieved
+                source.
+              </span>
+            )}
+          </div>
           <p className="text-xs text-muted-foreground mt-1 italic">Reference: {condition.guidelineReference}</p>
         </div>
+
+        {protocol && <ProtocolReferenceModeBanner protocol={protocol} />}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Scope Validation */}
@@ -163,6 +192,33 @@ const ConditionDetail = () => {
                   )}
                   {t.specialPopulations && <p className="text-xs italic text-muted-foreground">{t.specialPopulations}</p>}
                   {t.monitoringRequired && <p className="text-xs"><span className="font-medium">Monitoring: </span>{t.monitoringRequired}</p>}
+                  {protocol && (
+                    <p className="border-t pt-2 text-[11px] text-muted-foreground">
+                      Source: {protocol.title} ({protocol.jurisdiction}) ·{' '}
+                      {protocol.effectiveDate ? `effective ${protocol.effectiveDate}` : 'date not stated'}{' '}
+                      · status <span className="font-medium">{protocol.lifecycle.replace(/_/g, ' ')}</span>
+                    </p>
+                  )}
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Medicines the protocol explicitly EXCLUDES — as clinically
+            important as the ones it lists, and previously invisible. */}
+        {protocol?.excludedMedicines && protocol.excludedMedicines.length > 0 && (
+          <Card className="border-amber-500/40">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-sm flex items-center gap-2">
+                <Ban className="h-4 w-4 text-amber-700" /> Excluded by protocol
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {protocol.excludedMedicines.map(ex => (
+                <div key={ex.medicineName} className="text-xs">
+                  <p className="font-semibold">{ex.medicineName}</p>
+                  <p className="text-muted-foreground">{ex.reason}</p>
                 </div>
               ))}
             </CardContent>

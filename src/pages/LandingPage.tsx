@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import {
-  ShieldCheck, FileCheck, TrendingUp, Check, Menu, X,
+  FileCheck, TrendingUp, Check, Menu, X,
   Lock, Server, Eye, ClipboardList, ChevronDown,
   Stethoscope, BarChart3, Zap, ExternalLink, ArrowRight,
   BookOpen, Clock, CheckCircle2, Shield, Users, BadgeCheck } from
@@ -135,10 +135,13 @@ const howItWorksSteps = [
 
 const faqs = [
 { q: "How long does setup take?", a: "Most pharmacies are live within 48 hours. We handle onboarding, protocol configuration, and staff training remotely — no IT team required." },
-{ q: "How does ChemistCare handle data security?", a: "All data is hosted on Australian-based infrastructure with AES-256 encryption at rest and TLS 1.3 in transit. We implement role-based access controls, full audit trails, and configurable data retention policies." },
+{ q: "How does ChemistCare handle data security?", a: "Clinical data is hosted on Australian-based infrastructure with encryption at rest and in transit, and every consultation action is written to an audit trail. We are still hardening access controls and have not yet completed an independent security assessment — ask us for our current posture before using this for live patient data." },
 { q: "Does it integrate with existing dispensing systems?", a: "ChemistCare PrescriberOS complements your existing POS/dispensing system. We provide structured exports and are actively developing direct integrations with major Australian pharmacy platforms." },
 { q: "What does it cost?", a: "We offer transparent per-pharmacy pricing with no lock-in contracts. Early access partners receive founding-member rates. Contact us to discuss your specific needs." },
-{ q: "Is this aligned with AHPRA and TGA requirements?", a: "Yes. ChemistCare PrescriberOS supports compliance with AHPRA professional standards and TGA requirements for pharmacist prescribing under Structured Prescribing Arrangements. Our protocols are reviewed by practising pharmacist prescribers." }];
+{
+  q: "Is this aligned with AHPRA and TGA requirements?",
+  a: "The product is designed to support pharmacist prescribing under Structured Prescribing Arrangements, and every protocol is traceable to a published state health department document with its version and retrieval date recorded. It does not assess your registration, training or scope for you — that remains your professional responsibility, and protocol content requires sign-off by your own pharmacist prescriber before clinical use."
+}];
 
 
 const roles = [
@@ -325,10 +328,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10">
             {[
-            { icon: ShieldCheck, label: "AHPRA Aligned" },
-            { icon: Lock, label: "AES-256 Encrypted" },
+            { icon: BookOpen, label: "Published protocol sources" },
+            { icon: FileCheck, label: "Provenance on every screen" },
             { icon: Server, label: "Australian Data Residency" },
-            { icon: FileCheck, label: "Privacy Act Compliant" },
+            { icon: ClipboardList, label: "Audit trail on every consult" },
             { icon: BadgeCheck, label: "Victorian SPA Compatible" }].
             map((b) =>
             <div key={b.label} className="flex items-center gap-2 text-[#94a3b8] text-sm">
@@ -434,8 +437,8 @@ export default function LandingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-            { icon: Stethoscope, title: "Protocol-Driven Prescribing", body: "Victoria-approved clinical playbooks for UTI, shingles, OCP, skin conditions, and more. Instant eligibility screening, red-flag alerts, and real-time decision support." },
-            { icon: FileCheck, title: "One-Click Documentation", body: "Auto-generated SOAP notes, GP referral letters, and audit-ready logs. Reduce post-consult admin by up to 50% with structured, compliant records." },
+            { icon: Stethoscope, title: "Protocol-Driven Prescribing", body: "Protocol content is transcribed from published state health department documents. Urinary tract infection is complete; the remaining conditions are being transcribed and are labelled as requiring clinical review until a pharmacist prescriber signs them off." },
+            { icon: FileCheck, title: "One-Click Documentation", body: "Structured consultation notes, ISBAR referral handover for the GP, and an audit trail on every step." },
             { icon: BarChart3, title: "Practice Growth Engine", body: "Smart patient intake, real-time revenue dashboards, automated follow-ups, and configurable service menus. Turn your credential into a business asset." }].
             map((f, i) =>
             <motion.div key={f.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}
@@ -499,10 +502,14 @@ export default function LandingPage() {
               Your duty of care, built in
             </h2>
             <p className="text-lg text-[#94a3b8] max-w-2xl mx-auto">We hold ourselves to the highest standard there is: the one you set when you care for patients.</p>
+            <p className="text-sm text-[#94a3b8] max-w-2xl mx-auto mt-4">
+              Some of the controls below are still being hardened and have not yet been independently
+              assessed. We will tell you exactly where we are rather than claim more than we can show.
+            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {["Privacy Act", "AHPRA Standards", "TGA Compliant", "APPs Aligned", "AES-256"].map((badge) =>
+            {["Published protocol sources", "Protocol provenance", "Referral-first outcomes", "Audit trail", "Australian hosting"].map((badge) =>
             <div key={badge} className="bg-white/[0.04] border border-white/10 rounded-lg px-5 py-3 text-sm font-medium text-[#94a3b8]">
                 {badge}
               </div>
@@ -512,8 +519,8 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             { icon: Server, title: "Australian Data Residency", desc: "All patient and clinical data hosted on Australian-based infrastructure." },
-            { icon: Lock, title: "Encryption at Rest & Transit", desc: "AES-256 encryption for stored data, TLS 1.3 for all data in transit." },
-            { icon: Eye, title: "Role-Based Access Controls", desc: "Granular permissions ensuring staff only access data relevant to their role." },
+            { icon: Lock, title: "Encryption at Rest & Transit", desc: "Encryption for stored data and for all data in transit, provided by our hosting platform." },
+            { icon: Eye, title: "Role-Based Access Controls", desc: "Granular permissions are in progress. Verify the current access model with us before go-live." },
             { icon: ClipboardList, title: "Audit Trails & Retention", desc: "Comprehensive activity logging with configurable data retention policies." }].
             map((sf, i) =>
             <motion.div key={sf.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -671,9 +678,10 @@ export default function LandingPage() {
           <div className="mt-12 pt-8 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 text-[#475569] text-xs">
             <span>© 2026 ChemistCare PrescriberOS. All rights reserved.</span>
             <div className="flex flex-wrap gap-4">
-              <span>Designed to support AHPRA & TGA compliance</span>
-              <span>Privacy Act aligned</span>
+              <span>Designed to support pharmacist prescribing under Structured Prescribing Arrangements</span>
+              <span>Protocols traceable to published state health department sources</span>
               <span>Victorian SPA compatible</span>
+              <span>Clinical content requires pharmacist sign-off before use</span>
             </div>
           </div>
         </div>

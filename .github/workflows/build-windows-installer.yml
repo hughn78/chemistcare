@@ -3,11 +3,12 @@ name: Build Windows Installer
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ main, offline-desktop ]
     paths:
       - 'package.json'
       - 'package-lock.json'
       - 'electron-main.cjs'
+      - 'electron/**'
       - 'src/**'
       - 'public/**'
       - 'vite.config.ts'
@@ -49,13 +50,16 @@ jobs:
           }
           exit 1
 
+      - name: Download whisper.cpp + diarization sidecar binaries
+        run: npm run stt:binaries
+
       - name: Build Windows installer
         run: npm run electron:build:win
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: chemistcare-windows-installer
+          name: chemistcare-offline-windows-installer
           path: |
             dist/*.exe
             dist/*.blockmap

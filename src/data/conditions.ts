@@ -1,4 +1,5 @@
 import { Condition } from '@/types/clinical';
+import { utiProtocol } from '@/clinical/protocols/uti';
 
 export const CONDITIONS: Condition[] = [
   {
@@ -14,15 +15,26 @@ export const CONDITIONS: Condition[] = [
       breastfeedingExcluded: false,
       jurisdictionNotes: 'Victorian Community Pharmacist Prescriber program',
     },
-    redFlags: [
-      { id: 'uti-rf1', description: 'Fever >38°C or systemic symptoms', action: 'referral_required' },
-      { id: 'uti-rf2', description: 'Flank pain or costovertebral angle tenderness', action: 'urgent_referral' },
-      { id: 'uti-rf3', description: 'Haematuria (visible)', action: 'referral_required' },
-      { id: 'uti-rf4', description: 'Recurrent UTI (≥3 in 12 months)', action: 'referral_required' },
-      { id: 'uti-rf5', description: 'Symptoms >7 days', action: 'referral_required' },
-      { id: 'uti-rf6', description: 'Immunocompromised patient', action: 'referral_required' },
-      { id: 'uti-rf7', description: 'Recent urinary tract procedure', action: 'referral_required' },
-    ],
+    /**
+     * UTI clinical content is OWNED by the canonical Victorian protocol
+     * (src/clinical/protocols/uti.ts) and derived from it here so the same
+     * fact cannot be represented twice with different values.
+     *
+     * Previously this block listed Trimethoprim first-line and Nitrofurantoin
+     * second-line with "eGFR <30" — both contradicted the official protocol
+     * and a third copy in types/protocols.ts.
+     */
+    canonicalProtocolId: utiProtocol.id,
+    redFlags: utiProtocol.redFlags.map(f => ({
+      id: `uti-rf-${f.id}`,
+      description: f.label,
+      action:
+        f.outcome === 'emergency_department'
+          ? ('urgent_referral' as const)
+          : f.prescribingBlocked
+            ? ('block_prescribing' as const)
+            : ('referral_required' as const),
+    })),
     exclusionCriteria: [
       { id: 'uti-ex1', description: 'Male patient', type: 'sex' },
       { id: 'uti-ex2', description: 'Pregnant or possibly pregnant', type: 'pregnancy' },
@@ -31,22 +43,30 @@ export const CONDITIONS: Condition[] = [
       { id: 'uti-ex5', description: 'Indwelling catheter', type: 'other' },
     ],
     assessmentFields: ['Dysuria', 'Frequency', 'Urgency', 'Suprapubic pain', 'Duration of symptoms', 'Previous UTI history', 'Last menstrual period', 'Vaginal discharge'],
-    therapyOptions: [
-      {
-        id: 'uti-t1', medicineName: 'Trimethoprim', dose: '300mg', frequency: 'Once daily', duration: '3 days',
-        maxQuantity: 3, repeats: 0, pbsRestriction: 'Restricted benefit', authorityRequired: false,
-        line: 'first', contraindications: ['Folate deficiency', 'Blood dyscrasia', 'Trimethoprim allergy'],
-        interactions: ['Methotrexate', 'Warfarin', 'Phenytoin'], monitoringRequired: 'Symptom review at 48hrs',
-      },
-      {
-        id: 'uti-t2', medicineName: 'Nitrofurantoin', dose: '100mg', frequency: 'Twice daily (modified release)', duration: '5 days',
-        maxQuantity: 10, repeats: 0, pbsRestriction: 'Restricted benefit', authorityRequired: false,
-        line: 'second', contraindications: ['eGFR <30', 'G6PD deficiency', 'Nitrofurantoin allergy'],
-        interactions: ['Antacids containing magnesium'], specialPopulations: 'Avoid if eGFR <30 mL/min',
-      },
-    ],
-    guidelineReference: 'Therapeutic Guidelines: Antibiotic – Urinary tract infections',
-    followUpInterval: '48 hours if no improvement, 7 days for resolution',
+    therapyOptions: utiProtocol.medicines.map(m => ({
+      id: `uti-t-${m.id}`,
+      medicineName: m.medicineName,
+      dose: m.dose,
+      frequency: m.frequency,
+      duration: m.duration,
+      maxQuantity: m.quantity ?? 0,
+      repeats: m.repeats ?? 0,
+      // The Victorian program page states program medicines are not subsidised
+      // under the PBS and the patient pays the full medication cost.
+      pbsRestriction: 'Not PBS-subsidised under the Community Pharmacist Program — patient pays full cost',
+      authorityRequired: false,
+      line: m.line === 1 ? ('first' as const) : m.line === 2 ? ('second' as const) : ('third' as const),
+      contraindications: m.contraindications,
+      interactions: m.interactionFlags ?? [],
+      monitoringRequired: 'Symptoms should respond within 48 hours of antibiotic treatment',
+      specialPopulations: m.id === 'nitrofurantoin'
+        ? 'Avoid in breastfeeding if the infant is under one month or has G6PD deficiency'
+        : undefined,
+    })),
+    guidelineReference:
+      'Victorian Department of Health, Protocol for Management of Urinary Tract Infections, ' +
+      'Community Pharmacist Program (January 2026; updated 4 February 2026)',
+    followUpInterval: '48 hours if no improvement; review if symptoms persist 48–72 hours after completing treatment',
   },
   {
     id: 'ocp-resupply',

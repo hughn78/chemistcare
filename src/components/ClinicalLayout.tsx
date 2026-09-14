@@ -3,6 +3,7 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
 import { PageTransition } from '@/components/PageTransition';
 import { Shield } from 'lucide-react';
+import { ClinicalDisclaimer } from '@/components/clinical/ClinicalDisclaimer';
 
 interface ClinicalLayoutProps {
   children: ReactNode;
@@ -31,6 +32,7 @@ export function ClinicalLayout({ children }: ClinicalLayoutProps) {
           <main className="flex-1 overflow-auto">
             <PageTransition>{children}</PageTransition>
           </main>
+          <ClinicalDisclaimer />
         </div>
       </div>
     </SidebarProvider>

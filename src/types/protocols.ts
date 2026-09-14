@@ -1,3 +1,5 @@
+import { utiProtocol } from '@/clinical/protocols/uti';
+
 export interface ProtocolAlert {
   level: 'red' | 'amber' | 'green';
   title: string;
@@ -18,38 +20,40 @@ export interface PrescribingOption {
 }
 
 // UTI Protocol
-export const UTI_PRESCRIBING: PrescribingOption[] = [
-  {
-    id: 'nitrofurantoin',
-    name: 'Nitrofurantoin 100mg MR',
-    line: 'first',
-    dose: '100mg',
-    frequency: 'Twice daily with food',
-    duration: '5 days',
-    notes: 'First-line. Contraindicated in eGFR <30 mL/min.',
-  },
-  {
-    id: 'fosfomycin',
-    name: 'Fosfomycin 3g sachet',
-    line: 'second',
-    dose: '3g',
-    frequency: 'Single dose',
-    duration: 'Single dose',
-    notes: 'Second-line. Take on empty stomach.',
-  },
-  {
-    id: 'trimethoprim',
-    name: 'Trimethoprim 300mg',
-    line: 'third',
-    dose: '300mg',
-    frequency: 'Once daily at night',
-    duration: '3 days',
-    notes: 'Third-line only.',
-    safetyChecks: [
-      { question: 'Has the patient used Trimethoprim in the last 3 months?', blockIf: true, blockMessage: 'Trimethoprim should not be prescribed if used within 3 months. Select Nitrofurantoin instead.' },
-    ],
-  },
-];
+/**
+ * DERIVED from the canonical Victorian protocol (src/clinical/protocols/uti.ts).
+ * Do not edit clinical values here — change the canonical protocol instead.
+ *
+ * The previous copy stated "Nitrofurantoin 100mg MR, twice daily,
+ * contraindicated in eGFR <30 mL/min". The official protocol specifies
+ * 100 mg every 6 hours for 5 days (20 capsules) and states NO numeric renal
+ * threshold — it says "severe renal impairment" and directs prescribers to
+ * Therapeutic Guidelines / AMH. Invented thresholds have been removed.
+ */
+export const UTI_PRESCRIBING: PrescribingOption[] = utiProtocol.medicines.map(m => ({
+  id: m.id,
+  name: `${m.medicineName} ${m.dose}`,
+  line: m.line === 1 ? ('first' as const) : m.line === 2 ? ('second' as const) : ('third' as const),
+  dose: m.dose,
+  frequency: m.frequency,
+  duration: m.duration,
+  notes:
+    m.id === 'trimethoprim'
+      ? 'Third-line only — not if trimethoprim used, or trimethoprim-resistant E. coli, in the last 3 months.'
+      : m.cautions?.[0],
+  safetyChecks:
+    m.id === 'trimethoprim'
+      ? [
+          {
+            question: 'Has the patient used trimethoprim in the last 3 months, or had a trimethoprim-resistant E. coli isolate?',
+            blockIf: true,
+            blockMessage:
+              'Trimethoprim should not be used if taken within 3 months or if a trimethoprim-resistant ' +
+              'E. coli isolate was identified. Select an alternative agent under the protocol.',
+          },
+        ]
+      : undefined,
+}));
 
 // Shingles Protocol
 export const SHINGLES_PRESCRIBING: PrescribingOption[] = [
