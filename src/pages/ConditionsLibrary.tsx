@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { CONDITIONS } from '@/data/conditions';
+import { getRegistryEntryById } from '@/lib/conditionRegistry';
+import { CORPUS_AS_AT, CORPUS_DOCUMENTS } from '@/data/protocol-corpus';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Search, AlertTriangle, ChevronRight } from 'lucide-react';
@@ -30,7 +32,9 @@ const ConditionsLibrary = () => {
       <div className="p-6 space-y-6 animate-fade-in">
         <div>
           <h1 className="text-2xl font-bold">Conditions Library</h1>
-          <p className="text-sm text-muted-foreground mt-1">22 supported conditions with clinical protocols and therapeutic guidelines</p>
+          <p className="text-sm text-muted-foreground mt-1">
+            22 supported conditions · jurisdiction coverage derived from {CORPUS_DOCUMENTS.length} corpus instruments (as at {CORPUS_AS_AT})
+          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3">
@@ -88,6 +92,7 @@ const ConditionsLibrary = () => {
                         </span>
                       )}
                     </div>
+                    <CoverageChips conditionId={condition.id} />
                   </div>
                   <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
                 </div>
@@ -99,5 +104,20 @@ const ConditionsLibrary = () => {
     </ClinicalLayout>
   );
 };
+
+/** Corpus-derived jurisdiction coverage chips for one condition card. */
+function CoverageChips({ conditionId }: { conditionId: string }) {
+  const entry = getRegistryEntryById(conditionId);
+  if (!entry || entry.jurisdictionAvailability.length === 0) return null;
+  return (
+    <div className="flex flex-wrap items-center gap-1 mt-2" title={`Corpus instruments (as at ${CORPUS_AS_AT})`}>
+      {entry.jurisdictionAvailability.map(st => (
+        <span key={st} className="clinical-badge clinical-badge-info text-[9px] px-1.5 py-0">
+          {st}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export default ConditionsLibrary;
