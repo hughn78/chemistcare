@@ -1,0 +1,761 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf",
+    "pdf_sha256": "a4d3e3d0abce686b34e74bbbe98d700be0dff89946fdc884b35d62a5c36a97d5",
+    "page_count": 11,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Mild, acute musculoskeletal pain clinical practice guideline",
+    "instrument_version": "No version number or date printed (page 11 footer codes read \"62'GUA\" and \"180510-DEC\"); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+    "supervision_model": "Approved pharmacist prescribing (document's own terminology): pharmacists must be 'approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP)' and 'authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)'; 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1)",
+    "scope_summary": "EACPP clinical practice guideline for mild, acute musculoskeletal (MSK) pain in patients aged 18 years or over (service restricted to patients aged 18 years or over). Flow (p.2): meet service and professional obligations -> patient history and assessment (pain history and assessment; examination - vital signs, examine area) -> develop management plan (non-pharmacological measures; pharmacotherapy - oral analgesia) -> treat and concurrently refer (Nil criteria) -> confirm management is appropriate (contraindications, precautions, interactions; pregnancy and lactation) -> communicate agreed management plan -> clinical review. 'Refer when' list (p.3) defines 15 referral triggers plus 'Treat (if clinically appropriate) and concurrently refer: Nil criteria.' Key constraints: 'Opioids are not required for the management of acute, mild MSK pain and cannot be prescribed by pharmacists' (p.3); only acute mechanical (self-limiting, less than 3 months) pain is in scope - chronic or inflammatory pain is referred (p.3, Table 1 p.5). This document prints no product names, strengths, doses or frequencies for analgesia; prescribing is 'in accordance with' specified sections of the current online Therapeutic Guidelines (p.6)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-2",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 6, "section_heading": "Develop management plan" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "acute swelling, erythema, and significant reduction in range of motion of a joint",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "headache and acute onset of visual or auditory disturbances",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "digital ischaemia",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "suspected nerve damage or mononeuropathy (e.g. loss of feeling, weakness, pain, burning and/or paraesthesia ('pins and needles'))",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "neurological signs including altered bladder or bowel function",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "systemic symptoms suggestive of serious pathology including fever, malaise, weight loss, nausea, and vomiting",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "pain that cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "history of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "the patient is at high risk of acute rheumatic fever",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "the patient rates their pain as moderate to severe",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "the patient is unable to accurately rate their pain due to cognitive impairment or other special needs",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "the patient requests treatment with an opioid",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "the patient is opioid-tolerant or recovering from an opioid use disorder",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "inadequate response to optimal treatment.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 1, "section_heading": "Contents" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 1, "section_heading": "Contents" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Mild, acute musculoskeletal pain - guideline overview pathway (page 2 flow, elaborated pages 4-8)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service; patient informed consent (including consent for communication with other health practitioners if relevant). Service restricted to patients aged 18 years or over. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+          "gates": [
+            { "criterion": "Initial patient eligibility and suitability for management within the scope of the service (Refer when: the patient is aged below 18 years)", "on_fail": "REFER" },
+            { "criterion": "Patient informed consent (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 2, "section_heading": "Guideline overview" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history (p.4): 'Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); underlying or co-existing medical conditions, including rheumatological and autoimmune conditions such as inflammatory arthritis and psoriasis; family history of inflammatory pain, rheumatological and/or autoimmune conditions e.g. ankylosing spondylitis or inflammatory arthritis; non-musculoskeletal symptoms that may indicate serious pathology, including weight-loss or gain, fever, malaise, nausea, vomiting, and sweating; risk factors for developing acute rheumatic fever as per the Therapeutic Guidelines: Antibiotic (Acute rheumatic fever); alerting symptoms and features as per the Therapeutic Guidelines: Rheumatology (Clinical assessment of musculoskeletal symptoms in adults); response to any previous treatments; impacts on quality of life including sleep, ability to self-care, mobility, work, leisure, emotional health, and relationships; precipitating, aggravating and relieving/alleviating factors; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements, and over-the-counter medicines); weight, dietary patterns, levels of physical activity; allergies/adverse drug reactions; alcohol, tobacco, and other drug history/status; mechanism of injury if injury involved; if the injury occurred in a workplace; if the patient has been, or suspected to have been, subject to domestic abuse; other psychosocial factors.' Pain history and assessment (p.4): 'Where appropriate, conduct assessment of vital signs. Pain history and assessment should be conducted in accordance with the Therapeutic Guidelines: Pain and analgesia (General principles of acute pain management) and Therapeutic Guidelines: Pain and analgesia (Assessing a patient with pain). Pain severity is subjective and should be interpreted in the context of the patient's presentation as well as additional information gained through the pain history. ... If the patient's self-reported pain severity is not consistent with other assessment findings e.g. physical function or examination findings, the patient should be referred to an appropriate healthcare provider for comprehensive assessment including socio-psycho-biomedical factors.' Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record.",
+          "gates": [
+            { "criterion": "Refer when: pain that cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain)", "on_fail": "REFER" },
+            { "criterion": "Refer when: history of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions)", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient is at high risk of acute rheumatic fever", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient is opioid-tolerant or recovering from an opioid use disorder", "on_fail": "REFER" },
+            { "criterion": "If the patient's self-reported pain severity is not consistent with other assessment findings e.g. physical function or examination findings", "on_fail": "REFER" },
+            { "criterion": "If the patient's self-reported pain severity is not consistent with other assessment findings - pain severity interpretation is subjective and context-dependent", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination (p.5): 'Examine the area of pain in accordance with the Therapeutic Guidelines: Rheumatology (Clinical assessment of musculoskeletal symptoms in adults). To determine appropriate management or referral, it is important to identify the aetiology of the pain (nociceptive, neuropathic, nociplastic, or a combination (mixed pain)) and to distinguish pain associated with inflammation from mechanical pain. See Therapeutic Guidelines: Pain and analgesia (Understanding Pain). MSK pain is predominantly nociceptive, with a superficial or deep origin and localisation of pain from the bone, joint, or muscles (somatic). Acute pain is defined by a duration of less than 3 months, usually with a nociceptive pain component arising from actual or threatened tissue damage.' Table 1: Clinical features/characteristics of mechanical versus inflammatory pain (p.5): Inflammatory pain - improves with exercise/movement; does not improve with rest; lasts more than 3 months; patient may experience morning stiffness (for greater than 30 minutes); pain waking patient during second half of the night with improvement on getting up. Mechanical pain (musculoskeletal) - may worsen with movement/exercise; often improves with rest; most cases have acute onset lasting less than 3 months; precipitating physical injury may be identifiable. Vital signs assessment 'where appropriate' (p.4).",
+          "gates": [
+            { "criterion": "Refer when: acute swelling, erythema, and significant reduction in range of motion of a joint", "on_fail": "REFER" },
+            { "criterion": "Refer when: headache and acute onset of visual or auditory disturbances", "on_fail": "REFER" },
+            { "criterion": "Refer when: digital ischaemia", "on_fail": "REFER" },
+            { "criterion": "Refer when: suspected nerve damage or mononeuropathy (e.g. loss of feeling, weakness, pain, burning and/or paraesthesia ('pins and needles'))", "on_fail": "REFER" },
+            { "criterion": "Refer when: neurological signs including altered bladder or bowel function", "on_fail": "REFER" },
+            { "criterion": "Refer when: systemic symptoms suggestive of serious pathology including fever, malaise, weight loss, nausea, and vomiting", "on_fail": "REFER" },
+            { "criterion": "Pain features are inflammatory rather than mechanical (Table 1: improves with exercise/movement; does not improve with rest; lasts more than 3 months; morning stiffness for greater than 30 minutes)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 5, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "INVESTIGATION",
+          "description": "Investigations (p.5): 'Referral to an appropriate healthcare provider for further investigation is required for acute pain that does not respond to treatment, or if indicated by patient history and/or pain history e.g. patients presenting with traumatic injuries that may require radiological examination.'",
+          "gates": [
+            { "criterion": "Acute pain responds to treatment and no investigation is indicated by patient history and/or pain history", "on_fail": "REFER" },
+            { "criterion": "Traumatic injuries that may require radiological examination", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 5, "section_heading": "Investigations" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Develop management plan (p.6): 'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. Pharmacist management of acute mild MSK pain involves: non-pharmacological measures - advice regarding non-pharmacological pain management strategies for all patients in accordance with the Therapeutic Guidelines: Pain and analgesia (Nonpharmacological management of acute pain); pharmacotherapy - oral analgesia in accordance with the: Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain - Mild, acute nociceptive pain); Therapeutic Guidelines: Rheumatology (Overview of limb conditions - Analgesia for acute soft-tissue limb conditions).' Key points (p.3): 'Non-pharmacological therapies and lifestyle measures (where there is a proven benefit) and pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for acute, mild MSK pain.' 'Opioids are not required for the management of acute, mild MSK pain and cannot be prescribed by pharmacists.' 'Acute MSK pain is generally mechanical, caused by damage to tissue or structural changes to joints, vertebrae, and muscles/soft tissue'; 'Acute MSK pain is expected to be self-limiting (last less than 3 months), with a return to usual function as the underlying injury resolves.'",
+          "gates": [
+            { "criterion": "Refer when: the patient rates their pain as moderate to severe", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient is unable to accurately rate their pain due to cognitive impairment or other special needs", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient requests treatment with an opioid", "on_fail": "REFER" },
+            { "criterion": "Opioids are not required for the management of acute, mild MSK pain and cannot be prescribed by pharmacists", "on_fail": "STOP" },
+            { "criterion": "Refer when: inadequate response to optimal treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 6, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate (p.6): 'Consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.'",
+          "gates": [
+            { "criterion": "Contraindications and precautions; drug interactions; pregnancy and lactation confirmed against the Therapeutic Guidelines, Australian Medicines Handbook and other resources", "on_fail": "unclear" },
+            { "criterion": "Refer when: the patient is at high risk of acute rheumatic fever (re-checked before supply)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 6, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan (p.7): 'Comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medicine use e.g. treatment regimens with paracetamol and NSAIDs and application instructions for topical NSAIDs; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment.' General advice (p.7): 'General advice to be provided to the patient regarding strategies to manage acute MSK pain includes: physical interventions that may provide adequate pain relief on their own e.g. hot and cold therapy; other interventions based on the reported injury e.g. ice, immobilisation, and compression therapy; evidence for the use of complementary medicines and possible adverse effects and interactions with conventional medicines.' 'management options and expectations for resolution'. 'Advise patients that analgesia (NSAIDs or paracetamol) should be discontinued if there is no benefit, or treatment causes adverse effects. Patients prescribed NSAIDs should be advised to use the minimum effective dose for the shortest duration possible.' At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: the pain relief provided is not adequate; symptoms do not improve with recommended treatment; the pain or other symptoms worsen; new pain or symptoms develop. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+          "gates": [
+            { "criterion": "General advice: the pain relief provided is not adequate", "on_fail": "REFER" },
+            { "criterion": "General advice: symptoms do not improve with recommended treatment", "on_fail": "REFER" },
+            { "criterion": "General advice: the pain or other symptoms worsen", "on_fail": "REFER" },
+            { "criterion": "General advice: new pain or symptoms develop", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review (p.8): 'Clinical review is generally not required unless the condition does not improve or resolve. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers, if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).' Flow (p.2): Clinical review - response to treatment; communication with other health practitioners.",
+          "gates": [
+            { "criterion": "The condition improves and resolves", "on_fail": "REFER" },
+            { "criterion": "Refer when: inadequate response to optimal treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 8, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Paracetamol",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy (p.8).",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy (p.8); no numeric quantity is printed.",
+      "notes": "Named in Key points (p.3): 'Non-pharmacological therapies and lifestyle measures (where there is a proven benefit) and pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for acute, mild MSK pain.' Prescribing is 'oral analgesia in accordance with the: Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain - Mild, acute nociceptive pain); Therapeutic Guidelines: Rheumatology (Overview of limb conditions - Analgesia for acute soft-tissue limb conditions)' (p.6) and pharmacists 'must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines'. No strength, dose, dosing frequency or treatment duration is printed anywhere in the 11 pages. Counselling verbatim (p.7): 'Advise patients that analgesia (NSAIDs or paracetamol) should be discontinued if there is no benefit, or treatment causes adverse effects.' 'individual product and medicine use e.g. treatment regimens with paracetamol and NSAIDs and application instructions for topical NSAIDs' (p.7). Opioids cannot be prescribed by pharmacists (p.3). No first-line ranking between paracetamol and NSAIDs is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Key points" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Non-steroidal anti-inflammatory drugs (NSAIDs), oral",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy (p.8).",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy (p.8); no numeric quantity is printed.",
+      "notes": "Named in Key points (p.3) alongside paracetamol for acute, mild MSK pain. No product name, strength, dose or dosing frequency is printed; prescribing is 'in accordance with' the specified sections of the current online Therapeutic Guidelines (p.6), including Therapeutic Guidelines: Rheumatology (Principles of NSAID use for musculoskeletal pain) [reference 7, p.9]. Counselling verbatim (p.7): 'Patients prescribed NSAIDs should be advised to use the minimum effective dose for the shortest duration possible.' and 'Advise patients that analgesia (NSAIDs or paracetamol) should be discontinued if there is no benefit, or treatment causes adverse effects.' Confirm management is appropriate (p.6) requires checking contraindications and precautions, drug interactions, and pregnancy and lactation. 'treatment regimens with paracetamol and NSAIDs and application instructions for topical NSAIDs' (p.7). No first-line ranking is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "Communicate agreed management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Topical NSAIDs",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy (p.8).",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy (p.8); no numeric quantity is printed.",
+      "notes": "Mentioned only in the counselling list (p.7): 'individual product and medicine use e.g. treatment regimens with paracetamol and NSAIDs and application instructions for topical NSAIDs'. No product name, strength, dose or application frequency is printed. Whether topical NSAIDs are within the prescribing scope of this service is not stated explicitly - see open question. Confirm management is appropriate (p.6) requires checking contraindications and precautions, drug interactions, and pregnancy and lactation.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+      "structured": { "parameter": "age", "operator": "<", "value": 18, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "acute swelling, erythema, and significant reduction in range of motion of a joint",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "headache and acute onset of visual or auditory disturbances",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "digital ischaemia",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "suspected nerve damage or mononeuropathy (e.g. loss of feeling, weakness, pain, burning and/or paraesthesia ('pins and needles'))",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "neurological signs including altered bladder or bowel function",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "systemic symptoms suggestive of serious pathology including fever, malaise, weight loss, nausea, and vomiting",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "pain that cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "history of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "the patient is at high risk of acute rheumatic fever",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "the patient rates their pain as moderate to severe",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "the patient is unable to accurately rate their pain due to cognitive impairment or other special needs",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "the patient requests treatment with an opioid",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "the patient is opioid-tolerant or recovering from an opioid use disorder",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "inadequate response to optimal treatment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Opioids are not required for the management of acute, mild MSK pain and cannot be prescribed by pharmacists.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Key points" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "If the patient's self-reported pain severity is not consistent with other assessment findings e.g. physical function or examination findings, the patient should be referred to an appropriate healthcare provider for comprehensive assessment including socio-psycho-biomedical factors.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Referral to an appropriate healthcare provider for further investigation is required for acute pain that does not respond to treatment, or if indicated by patient history and/or pain history e.g. patients presenting with traumatic injuries that may require radiological examination.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 5, "section_heading": "Investigations" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "the pain relief provided is not adequate [General advice: patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "symptoms do not improve with recommended treatment [General advice: patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "the pain or other symptoms worsen [General advice: patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "new pain or symptoms develop [General advice: patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "General advice" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services if required) in the following situations: [the 15 'Refer when' triggers] (p.3)",
+      "If the patient's self-reported pain severity is not consistent with other assessment findings e.g. physical function or examination findings, the patient should be referred to an appropriate healthcare provider for comprehensive assessment including socio-psycho-biomedical factors. (p.4)",
+      "Referral to an appropriate healthcare provider for further investigation is required for acute pain that does not respond to treatment, or if indicated by patient history and/or pain history e.g. patients presenting with traumatic injuries that may require radiological examination. (p.5)",
+      "At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: the pain relief provided is not adequate; symptoms do not improve with recommended treatment; the pain or other symptoms worsen; new pain or symptoms develop. (p.7)",
+      "Advise patients (and/or parents/caregivers, if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice). (p.8)",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. (p.7)"
+    ],
+    "urgent": [],
+    "emergency": [
+      "(including emergency services if required) (p.3)"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 3, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "Unless the condition does not improve or resolve",
+      "what": "Clinical review is generally not required unless the condition does not improve or resolve. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 8, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "If the condition does not improve or resolve",
+      "what": "Advise patients (and/or parents/caregivers, if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 8, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At the time of initial consultation (advice on return triggers)",
+      "what": "Patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: the pain relief provided is not adequate; symptoms do not improve with recommended treatment; the pain or other symptoms worsen; new pain or symptoms develop.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "when": "Clinical review (flow step, page 2)",
+      "what": "Clinical review - response to treatment; communication with other health practitioners.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 2, "section_heading": "Guideline overview" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Musculoskeletal.pdf", "page": 6, "section_heading": "Confirm management is appropriate" }
+  },
+  "references": [
+    "1. Harris C, Gurden S, Martindale J, Jeffries C. Differentiating Inflammatory and Mechanical Back Pain. 2018. In: Physiotherapy modules [Internet]. United Kingdom: NASS. Available from: https://nass.co.uk/wp-content/uploads/2020/03/Physiotherapy-modules-1.pdfh [p.9]",
+    "2. Villa-Forte A. Musculoskeletal Pain. MSD Manual Consumer Version; [updated Feb 2023]. Available from: https://www.msdmanuals.com/home/bone-joint-and-muscle-disorders/symptoms-of-musculoskeletal-disorders/musculoskeletal-pain [p.9]",
+    "3. El Tallawy SN, Nalamasu R, Salem GI et al. Management of Musculoskeletal Pain: An Update with Emphasis on Chronic Musculoskeletal Pain. Pain Ther. 2021 Feb 11;10(1):181–209 [p.9]",
+    "4. Therapeutic Guidelines: Pain and analgesia (General principles of acute pain management). Melbourne: Therapeutic Guidelines Limited; 2022 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=general-principles-acute-pain-management [p.9]",
+    "5. Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=understanding-pain&guidelinename=auto&sectionId=pharmacological_management_of_acute_pain#pharmacological_management_of_acute_pain [p.9]",
+    "6. Therapeutic Guidelines: Pain and analgesia (Nonpharmacological management of acute pain). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=nonpharmacological-management-acute-pain [p.9]",
+    "7. Therapeutic Guidelines: Rheumatology (Principles of NSAID use for musculoskeletal pain). Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=c_RHG_Principles-of-NSAID-use-for-musculoskeletal-pain_topic_1&guidelinename=auto&sectionId=c_RHG_Principles-of-NSAID-use-for-musculoskeletal-pain_topic_1#c_RHG_Principles-of-NSAID-use-for-musculoskeletal-pain_topic_1 [p.9]",
+    "8. Therapeutic Guidelines: Rheumatology (Principles of paracetamol use for musculoskeletal pain). Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=c_RHG_Principles-of-paracetamol-use-for-musculoskeletal-pain_topic_1&guidelinename=auto&sectionId=c_RHG_Principles-of-paracetamol-use-for-musculoskeletal-pain_topic_1#c_RHG_Principles-of-paracetamol-use-for-musculoskeletal-pain_topic_1 [p.9]",
+    "9. Therapeutic Guidelines: Rheumatology (Drugs that have a limited role for musculoskeletal pain). Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename= auto&sectionId=c_RHG_ Drugs-that-have-a-limited-role-for-musculoskeletal-pain_topic_2#c_RHG_Drugs-that-have-a-limited-role-for-musculoskeletal-pain_topic_2 [p.9]",
+    "10. Schug SA, Palmer GM, Scott DA, Halliwell R, Trinca J. Acute Pain Management: Scientific Evidence Working Group of the Australian and New Zealand College of Anaesthetists and Faculty of Pain Medicine; 2015. Available from: https://www.anzca.edu.au/getContentAsset/a9acfd0b-8ade-4126-996d-b3296ae32b65/80feb437-d24d-46b8-a858-4a2a28b9b970/Acute-Pain-Management-Scientific-Evidence-2015.pdf?language=en&view=1 [p.9]",
+    "11. Therapeutic Guidelines: Antibiotic (Acute rheumatic fever). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=rheumatic-fever&guidelinename=Antibiotic&sectionId=toc_dle837#toc_dle837 [p.10]",
+    "12. Therapeutic Guidelines: Rheumatology (Clinical assessment of musculoskeletal symptoms in adults). Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=Assessment_and_initial_management_of_musculoskeletal_symptoms#Assessment_and_initial_management_of_musculoskeletal_symptoms [p.10]",
+    "13. Therapeutic Guidelines: Pain and analgesia (Assessing a patient with pain). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=assessing-pain&guidelineName=Pain%20and%20Analgesia&sectionId=toc_d1e784#toc_d1e784. [p.10]",
+    "14. Therapeutic Guidelines: Pain and analgesia (Understanding pain). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=understanding-pain&guidelineName=Pain%20and%20Analgesia&topicNavigation=navigateTopic#toc_d1e155. [p.10]",
+    "15. Grinnell-Merrick LL, Lydon EJ, Mixon AM, Saalfeld W. Evaluating Inflammatory Versus Mechanical Back Pain in Individuals With Psoriatic Arthritis: A Review of the Literature. Rheumatol Ther. 2020;7(4):667-84. [p.10]",
+    "16. Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain – Mild, acute nociceptive pain). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain [p.10]",
+    "17. Therapeutic Guidelines: Rheumatology (Overview of limb conditions). Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Overview-of-limb-conditions_topic_6#c_RHG_ Overview-of-limb-conditions_topic_6 [p.10]"
+  ],
+  "open_questions": [
+    {
+      "topic": "No product-level analgesic doses, strengths, frequencies or durations are printed",
+      "observed": "Pharmacotherapy is defined only as 'oral analgesia in accordance with' the specified sections of the current online Therapeutic Guidelines (p.6); the only drug names anywhere are 'paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)' (p.3) and 'topical NSAIDs' in a counselling example (p.7).",
+      "why_unclear": "TX-1 to TX-3 therefore have blank strength/dose/frequency fields; nothing can be transcribed without inventing it. Dosing must come from the specified sections of the current online Therapeutic Guidelines.",
+      "source_page": 6
+    },
+    {
+      "topic": "No first-line ranking between paracetamol and NSAIDs",
+      "observed": "Page 3: 'pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for acute, mild MSK pain' - presented as a set with no ordering and no statement that either is first line.",
+      "why_unclear": "first_line is set false on all three treatment rows because the document gives no ranking; this reflects the source rather than a judgement that none is first line.",
+      "source_page": 3
+    },
+    {
+      "topic": "'Treat and concurrently refer - Nil criteria' is ambiguous",
+      "observed": "Page 2 flow and page 3 both read 'Treat (if clinically appropriate) and concurrently refer' followed by 'Nil criteria.' It is not stated whether this means (a) no criteria are required to treat and refer concurrently, (b) there are no situations requiring treat-and-refer, or (c) the step has no gating criteria.",
+      "why_unclear": "Captured verbatim in the scope summary and referred to in this open question; the interpretation must be confirmed with the department. No pathway step was created for it because no criteria or action can be derived.",
+      "source_page": 3
+    },
+    {
+      "topic": "Pain severity thresholds are qualitative - no numeric scale printed",
+      "observed": "Refer when: 'the patient rates their pain as moderate to severe' and 'the patient is unable to accurately rate their pain due to cognitive impairment or other special needs'. Page 4: 'Pain severity is subjective and should be interpreted in the context of the patient's presentation'; the Therapeutic Guidelines 'includes information to assist with determining pain severity' but no scale, cut-off or descriptor list is printed here.",
+      "why_unclear": "EXC-11/RF-11 and EXC-12/RF-12 stay qualitative; the practical effect is that only mild pain is treatable under this service, but no number defines 'moderate'.",
+      "source_page": 3
+    },
+    {
+      "topic": "Self-limiting acute pain expectation vs the referral boundary",
+      "observed": "Page 3: 'Acute MSK pain is expected to be self-limiting (last less than 3 months), with a return to usual function as the underlying injury resolves.' Page 5: 'Acute pain is defined by a duration of less than 3 months'; Table 1 inflammatory pain 'Lasts more than 3 months'. Refer when: pain that cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain).",
+      "why_unclear": "The 3-month boundary is printed as a definition/expectation, not as a referral trigger with a structured threshold; RF-8 therefore stays qualitative even though a duration reading is possible.",
+      "source_page": 3
+    },
+    {
+      "topic": "Opioid prohibition and opioid referral triggers overlap",
+      "observed": "Key points (p.3): 'Opioids are not required for the management of acute, mild MSK pain and cannot be prescribed by pharmacists.' Refer when (p.3): 'the patient requests treatment with an opioid' and 'the patient is opioid-tolerant or recovering from an opioid use disorder'.",
+      "why_unclear": "Recorded as both a NOT_ELIGIBLE red flag (RF-16) and referral triggers (RF-13, RF-14); whether the opioid-requesting patient is referred, supplied non-opioid analgesia, or both is not stated.",
+      "source_page": 3
+    },
+    {
+      "topic": "Vital signs are optional as printed",
+      "observed": "Page 4: 'Where appropriate, conduct assessment of vital signs.' Page 2 flow lists 'Examination: - vital signs'. No vital sign values or mandatory frequency are printed.",
+      "why_unclear": "'Where appropriate' is left to pharmacist judgement; no numeric thresholds (e.g. BP) exist to encode.",
+      "source_page": 4
+    },
+    {
+      "topic": "Whether topical NSAIDs are inside the prescribing scope",
+      "observed": "Topical NSAIDs appear only in the counselling example 'treatment regimens with paracetamol and NSAIDs and application instructions for topical NSAIDs' (p.7). The Develop management plan pharmacotherapy item is 'oral analgesia' (p.6) only; Key points name 'paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)' without specifying route.",
+      "why_unclear": "TX-3 carries confidence 'unclear' - it may be counselling for an already-supplied product rather than an item pharmacists prescribe under this service.",
+      "source_page": 7
+    },
+    {
+      "topic": "Combinatorics are inferred from the document's own framing",
+      "observed": "'Service restricted to patients aged 18 years or over' and 'may only be used by pharmacists who...' imply AND for the inclusion criteria (INC-1 to INC-5); 'Refer the patient ... in the following situations:' introduces the 15 refer-when items as alternatives, implying OR (EXC-1 to EXC-15).",
+      "why_unclear": "The document never prints 'all of' or 'any of' explicitly; the all_of/any_of groups are inferred from that wording and recorded here per spec rule 4.",
+      "source_page": 3
+    },
+    {
+      "topic": "The Refer when list is printed twice",
+      "observed": "The 15 triggers appear in the right-hand column of the Guideline overview on page 2 and again as the full 'Refer when' section on page 3 ('Refer the patient to an appropriate healthcare provider (including emergency services if required) in the following situations:'). Wording matches; the page 2 version adds '(does not preclude a patient from accessing usual pharmacy care)' after the age trigger.",
+      "why_unclear": "The list was captured once with provenance to page 3 (the dedicated section); the page 2 duplicates are noted here so the duplication is not lost.",
+      "source_page": 3
+    },
+    {
+      "topic": "No separately worded urgent referral tier",
+      "observed": "The document distinguishes only 'an appropriate healthcare provider (including emergency services if required)' and the advisory 'should be advised to see an appropriate healthcare provider if'. No 'urgent', 'immediate', ambulance or emergency-department wording appears.",
+      "why_unclear": "referral.urgent is empty; emergency holds the printed '(including emergency services if required)' qualifier rather than a distinct emergency list.",
+      "source_page": 3
+    },
+    {
+      "topic": "Referral block spans pages 3 to 8",
+      "observed": "Referral destinations/criteria are printed on page 3 (Refer when), page 4 (pain severity inconsistency), page 5 (Investigations), page 7 (General advice, Communicate agreed management plan) and page 8 (Clinical review).",
+      "why_unclear": "Spec rule for the referral block: the shared provenance uses the first page (page 3); the range 3-8 is recorded here.",
+      "source_page": 3
+    },
+    {
+      "topic": "Table 1 is a two-column comparison table",
+      "observed": "Page 5 Table 1 'Clinical features/characteristics of mechanical versus inflammatory pain' pairs each inflammatory feature against a mechanical feature in adjacent columns (e.g. 'Improves with exercise/movement' vs 'May worsen with movement/exercise'; 'Lasts more than 3 months' vs 'Most cases have acute onset lasting less than 3 months').",
+      "why_unclear": "Rows were transcribed pairwise from the extracted text; if any row is misaligned the pairing in PW-1-S3 would need correction - confidence on the pairing is medium overall.",
+      "source_page": 5
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "No version, date, document ID or approving officer appears; page 11 shows footer codes \"62'GUA\" and \"180510-DEC\", 'Produced by Clinical Excellence Division' and '© Department of Health 2026'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 11
+    },
+    {
+      "topic": "No notifiable condition or statutory notification requirement printed",
+      "observed": "The guideline requires communication with other health practitioners and sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent', but mentions no notifiable condition, AIR notification or compulsory GP notification.",
+      "why_unclear": "notifiable.required is null because the document is silent.",
+      "source_page": 7
+    },
+    {
+      "topic": "Source and adaptation acknowledged: originally Queensland Health material",
+      "observed": "Page 11: 'This document is based on clinical guidelines/protocols originally developed by Queensland Health for the Queensland Community Pharmacy Pilots. Queensland Health is acknowledged as the source of the original material.'",
+      "why_unclear": "Recorded for provenance of the instrument; no version of the Queensland originals is cited, so the WA document's own version cannot be derived from it.",
+      "source_page": 11
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm each pharmacist's EACPP approval and authorisation to prescribe under the Medicines and Poisons Regulations 2016 (WA), since 'This document alone does not provide an authorisation for a pharmacist to prescribe'.",
+      "source_page": 1,
+      "reason": "Eligibility to use the guideline is conditional on departmental approval and authorisation that this document cannot evidence."
+    },
+    {
+      "item": "Confirm which sections of the current online version of the Therapeutic Guidelines are the 'specified sections' pharmacists must prescribe according to (page 6) - the guideline does not enumerate them.",
+      "source_page": 6,
+      "reason": "INC-5 makes this a mandatory prescribing condition, but without the section list it cannot be evaluated as a hard check before go-live."
+    },
+    {
+      "item": "Obtain product-level drug names, strengths, doses, frequencies, quantities and durations for paracetamol, oral NSAIDs and (if in scope) topical NSAIDs from the specified sections of the current online Therapeutic Guidelines before any dosing rule is encoded - none are printed in this guideline.",
+      "source_page": 6,
+      "reason": "TX-1 to TX-3 have blank strength/dose/frequency fields; a prescribing support module cannot issue supply instructions from drug class names alone."
+    },
+    {
+      "item": "Confirm the operational pain-severity rule: what scale or descriptors define 'moderate to severe' (page 3), and how 'unable to accurately rate their pain due to cognitive impairment or other special needs' is assessed - no numeric scale is printed.",
+      "source_page": 3,
+      "reason": "These two triggers determine who can be treated at all (only mild pain appears in scope); they cannot be encoded as automatic checks without a printed scale."
+    },
+    {
+      "item": "Confirm the interpretation of 'Treat and concurrently refer - Nil criteria' (pages 2 and 3) with the Department of Health.",
+      "source_page": 3,
+      "reason": "The step sits between Develop management plan and Confirm management is appropriate in the flow; its meaning changes whether concurrent referral is routine or never required, and it is recorded only as an open question."
+    },
+    {
+      "item": "Confirm what happens when a patient requests an opioid or is opioid-tolerant/recovering from opioid use disorder (pages 2-3): referral destination, and whether non-opioid analgesia may still be supplied in the same consultation.",
+      "source_page": 3,
+      "reason": "The document both prohibits opioid prescribing by pharmacists and directs referral for these patients, but does not state the destination or whether treatment continues."
+    },
+    {
+      "item": "Confirm whether topical NSAIDs are prescribable under this service (page 7 mentions 'application instructions for topical NSAIDs' but the pharmacotherapy item is 'oral analgesia').",
+      "source_page": 7,
+      "reason": "TX-3 carries confidence 'unclear'; scope boundary between counselling on a supplied product and prescribing it must be resolved before go-live."
+    },
+    {
+      "item": "Confirm the operational supply rule: 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy' (page 8) - the expected duration itself is never printed, so no numeric cap can be derived.",
+      "source_page": 8,
+      "reason": "A quantity/duration cap cannot be encoded from this document; local policy must supply the numbers."
+    },
+    {
+      "item": "Confirm whether vital sign assessment is mandatory in practice ('Where appropriate, conduct assessment of vital signs', page 4) and which vital signs/values trigger referral.",
+      "source_page": 4,
+      "reason": "'Where appropriate' is judgement-based and no numeric vital sign thresholds are printed, so the step cannot be enforced automatically."
+    },
+    {
+      "item": "Confirm the controlled version/date of this clinical practice guideline with the Department of Health (no version or date is printed; only footer codes \"62'GUA\" and \"180510-DEC\" and © Department of Health 2026).",
+      "source_page": 11,
+      "reason": "A clinical practice guideline used for funded prescribing must be version-controlled and traceable to an approval date."
+    }
+  ]
+}

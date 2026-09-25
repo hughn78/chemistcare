@@ -1,0 +1,543 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf",
+    "pdf_sha256": "a1ba764d937a2b9db2adfb6df128de79cff357db3a47bed7d1f103bab9d6e3f5",
+    "page_count": 5,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Structured Administration and Supply Arrangement (SASA) - TITLE: Pharmacist Resupply of Oral Contraceptive Pills",
+    "instrument_version": "SASA 041/1-2024 (page footers and enquiries box: 'Number: 041/1-2024 Date: 24 April 2024')",
+    "effective_date": "28 May 2024 ('Effective from: 28 May 2024'); issued 24 April 2024",
+    "legal_basis": "Issued by the Chief Executive Officer of Health under Part 6 of the Medicines and Poisons Regulations 2016. (verbatim, '1. Authority', p.1). Approved activity: 'Supply of Schedule 4 oral contraceptive pills for contraceptive purposes.' (3. Criteria, p.1). Conditions also cite: 'Supply, packaging and labelling of the approved medicines is in accordance with Part 9 of the Medicines and Poisons Regulations 2016' (condition k) and 'Record keeping of supply is in accordance with Part 12 of the Medicines and Poisons Regulations 2016' (condition l).",
+    "supervision_model": "Document's own terminology: 'Practitioner: Registered Pharmacists who have completed approved training in accordance with Appendix 1.' Condition a: 'The pharmacist has an unconditional general registration with the Australian Health Practitioner Regulation Agency (AHPRA)'. Condition b: 'The pharmacist has successfully completed training in accordance with Appendix 1, and must maintain competency to provide the service, including any ongoing training'. Condition c: 'The supply must adhere to the Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol issued by the Western Australian Department of Health'. The words 'collaborative' and 'autonomous' are not used; no supervision arrangement is described.",
+    "scope_summary": "SASA authorising registered pharmacists working in community pharmacy to supply approved oral contraceptive pills (OCP) in defined circumstances: 'Supply of Schedule 4 oral contraceptive pills for contraceptive purposes.' Practice setting: registered pharmacy premises approved by the Pharmacy Registration Board of Western Australia, all regions of WA. Approved medicines: hormones listed in Appendix 2 as combined oral contraceptives or progestogen-only contraceptives (Appendix 2 lists 15 brand-group rows with estrogen and/or progestogen columns; no dose cells beyond hormone strengths). Medical conditions: contraception in females aged between 16 and 39 years. Condition d lists four mandatory patient eligibility criteria (age 16-39 inclusive; prescribed by a GP or nurse practitioner within the past two years; same OCP used consistently for at least two years; continued without interruption since prescribed). Resupply limits: patients aged 16-17 a single resupply for up to 4 months; patients aged 18-39 resupply for up to 12 months as long as supply does not extend the date of the last OCP review with a prescriber beyond two years. The OCP must contain the same hormones and doses used consistently for the past two years; alterations are not allowed. Clinical referral and assessment rules defer to the WA DoH 'Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol' (condition c), which is not reproduced here."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Medical conditions: Contraception in females aged between 16 and 39 years.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Condition d i: They must be between the ages of 16 and 39 (inclusive).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Condition d ii: They must have been prescribed the OCP by a general practitioner or a nurse practitioner within the past two years.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Condition d iii: They must have been using the same OCP consistently for at least two years.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Condition d iv: They must have continued taking the OCP without interruption since it was prescribed.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Practitioner: Registered Pharmacists who have completed approved training in accordance with Appendix 1.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Condition a: The pharmacist has an unconditional general registration with the Australian Health Practitioner Regulation Agency (AHPRA);",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Condition b: The pharmacist has successfully completed training in accordance with Appendix 1, and must maintain competency to provide the service, including any ongoing training;",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Practice setting: Registered pharmacy premises approved by the Pharmacy Registration Board of Western Australia. All regions of WA.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-10",
+        "text": "Condition c: The supply must adhere to the Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol issued by the Western Australian Department of Health;",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-11",
+        "text": "Condition h: The medicines are supplied from a pharmacy registered in Western Australia;",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-12",
+        "text": "Condition i: The registered pharmacy must have a room suitable to maintain confidentiality of the consultation, where the consultation conducted by a pharmacist cannot be seen or overheard by a person not involved in the consultation;",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-13",
+        "text": "Approved medicines: Hormones listed in Appendix 2 in the form of: Combined oral contraceptives, or Progestogen-only contraceptives",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-14",
+        "text": "Condition g: The OCP provided must contain the same hormones and doses that the patient has been using consistently for the past two years. Alterations to the hormones or doses are not allowed;",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Condition g: Alterations to the hormones or doses are not allowed - supply of any OCP other than one containing the same hormones and doses the patient has been using consistently for the past two years is outside this SASA.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Condition e: Patients aged between 16 and 17 years can receive a single resupply for up to 4 months. [a second resupply, or supply beyond 4 months, for patients aged 16-17 is not permitted under this SASA]",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Condition f: Patients aged between 18 and 39 years can receive resupply for up to 12 months, as long as the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years. [supply beyond 12 months, or beyond two years from the last OCP review with a prescriber, is not permitted under this SASA]",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": 39,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 1, "section_heading": "3. Criteria" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Oral contraceptive pill resupply under SASA 041/1-2024 - eligibility, supply and follow-up sequence",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm patient eligibility (4. Conditions, d): 'Only patients who meet the following criteria are eligible for the approved medicines: i. They must be between the ages of 16 and 39 (inclusive). ii. They must have been prescribed the OCP by a general practitioner or a nurse practitioner within the past two years. iii. They must have been using the same OCP consistently for at least two years. iv. They must have continued taking the OCP without interruption since it was prescribed.' (3. Criteria, p.1: Medical conditions: contraception in females aged between 16 and 39 years; Approved medicines: hormones listed in Appendix 2 as combined oral contraceptives or progestogen-only contraceptives; Approved activity: supply of Schedule 4 oral contraceptive pills for contraceptive purposes.) The supply must adhere to the Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol issued by the Western Australian Department of Health (condition c).",
+          "gates": [
+            { "criterion": "Patient is between the ages of 16 and 39 (inclusive)", "on_fail": "STOP" },
+            { "criterion": "OCP was prescribed by a general practitioner or a nurse practitioner within the past two years", "on_fail": "STOP" },
+            { "criterion": "Patient has been using the same OCP consistently for at least two years", "on_fail": "STOP" },
+            { "criterion": "Patient has continued taking the OCP without interruption since it was prescribed", "on_fail": "STOP" },
+            { "criterion": "Requested product is a hormone listed in Appendix 2 (combined oral contraceptive or progestogen-only contraceptive)", "on_fail": "STOP" },
+            { "criterion": "Pharmacist has an unconditional general registration with AHPRA and has successfully completed training in accordance with Appendix 1, maintaining competency", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Supply of the approved OCP: condition g - the OCP provided must contain the same hormones and doses that the patient has been using consistently for the past two years; alterations to the hormones or doses are not allowed; condition h - the medicines are supplied from a pharmacy registered in Western Australia; condition i - the registered pharmacy must have a room suitable to maintain confidentiality of the consultation, where the consultation conducted by a pharmacist cannot be seen or overheard by a person not involved in the consultation; condition k - supply, packaging and labelling of the approved medicines is in accordance with Part 9 of the Medicines and Poisons Regulations 2016. Approved activity (p.1): supply of Schedule 4 oral contraceptive pills for contraceptive purposes, from the Appendix 2 list of brand groups with their estrogen and/or progestogen columns.",
+          "gates": [
+            { "criterion": "Supplied OCP contains the same hormones and doses the patient has been using consistently for the past two years (alterations not allowed)", "on_fail": "STOP" },
+            { "criterion": "Supply is from a registered WA pharmacy, in a confidential consultation room, with supply, packaging and labelling in accordance with Part 9 of the Medicines and Poisons Regulations 2016", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "FOLLOW_UP",
+          "description": "Resupply duration and prescriber review window: condition e - patients aged between 16 and 17 years can receive a single resupply for up to 4 months; condition f - patients aged between 18 and 39 years can receive resupply for up to 12 months, as long as the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years.",
+          "gates": [
+            { "criterion": "If aged 16-17: a single resupply for up to 4 months only", "on_fail": "STOP" },
+            { "criterion": "If aged 18-39: resupply for up to 12 months only, and the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "FOLLOW_UP",
+          "description": "Clinical record, service summary and transmission: condition j - completion of a comprehensive clinical record of treatment and generation of a service summary provided to the patient and/or their primary health provider; condition l - record keeping of supply is in accordance with Part 12 of the Medicines and Poisons Regulations 2016; condition m - details of the supply is transmitted to My Health Record.",
+          "gates": [
+            { "criterion": "Comprehensive clinical record of treatment completed and a service summary generated and provided to the patient and/or their primary health provider", "on_fail": "STOP" },
+            { "criterion": "Details of the supply transmitted to My Health Record; record keeping in accordance with Part 12 of the Medicines and Poisons Regulations 2016", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1", "drug": "drospirenone (progestogen-only contraceptive)", "form": "progestogen-only contraceptive", "strength": "drospirenone 4 mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Progestogen only contraception'. Brand name examples as printed: Slinda. Estrogen column: not applicable/blank for this row as printed. No dose regimen, pack quantity, frequency or duration is printed - resupply limits are condition e/f (16-17: single resupply up to 4 months; 18-39: up to 12 months without extending beyond two years from last OCP review). Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-2", "drug": "levonorgestrel (progestogen-only contraceptive)", "form": "progestogen-only contraceptive", "strength": "levonorgestrel 30 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Progestogen only contraception'. Brand name examples as printed: Microlut. Estrogen column: not applicable/blank for this row as printed. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-3", "drug": "norethisterone (progestogen-only contraceptive)", "form": "progestogen-only contraceptive", "strength": "norethisterone 350 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Progestogen only contraception'. Brand name examples as printed: Noriday 28-day. Estrogen column: not applicable/blank for this row as printed. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-4", "drug": "drospirenone (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "drospirenone 3 mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Low estrogen dose'. Brand name examples as printed: Bella, Brooke, Rosie, Yana, Yaz. Estrogen column value does NOT appear in the text extraction for this row (see open questions) - strength is incomplete. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-5", "drug": "ethinylestradiol + levonorgestrel (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "ethinylestradiol 20 mcg; levonorgestrel 100 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Low estrogen dose'. Brand name examples as printed (brand cell wraps across lines in the extraction): Femme-Tab 20/100, Lenest 20, Loette, Microgynon 20, Micronelle 20. Estrogen cell: ethinylestradiol 20 mcg; progestogen cell: levonorgestrel 100 mcg (cell order interleaved in the text extraction - see open questions). No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-6", "drug": "estradiol + nomegestrol (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "estradiol 1.5 mg; nomegestrol 2.5 mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Low estrogen dose'. Brand name examples as printed: Zoely. Printed as 'Zoely estradiol 1.5 mg nomegestrol 2.5 mg'. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-7", "drug": "desogestrel (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "desogestrel 150 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed: Madeline, Marvelon. Estrogen column value does NOT appear in the text extraction for this row (see open questions) - strength is incomplete. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-8", "drug": "dienogest (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "dienogest 2mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed: Valette. Printed as 'Valette dienogest 2mg' (spacing as printed). Estrogen column value does NOT appear in the text extraction for this row (see open questions) - strength is incomplete. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-9", "drug": "drospirenone (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "drospirenone 3 mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed (brand cell wraps across lines): Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena. Estrogen column value does NOT appear in the text extraction for this row (see open questions) - strength is incomplete. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-10", "drug": "ethinylestradiol + gestodene (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "ethinylestradiol 30 mcg; gestodene 75 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed: Minulet. Printed as 'Minulet ethinylestradiol 30 mcg gestodene 75 mcg'. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-11", "drug": "levonorgestrel (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "levonorgestrel 150 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed (brand cell wraps across four lines): Eleanor 150/30, Evelyn 150/30, Femme-Tab 30/150, Lenest 30, Levlen, Microgynon 30, Micronelle 30, Monofeme, Seasonique. Progestogen cell: levonorgestrel 150 mcg. Estrogen column value does NOT appear in the text extraction for this row (see open questions) - strength is incomplete. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-12", "drug": "ethinylestradiol + norethisterone (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "ethinylestradiol 35 mcg; norethisterone 0.5 mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed: Norimin, Brevinor. Cells print as 'Norimin, Brevinor norethisterone 0.5 mg' followed by 'ethinylestradiol 35 mcg' (column order interleaved in the extraction - see open questions). No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-13", "drug": "ethinylestradiol + norethisterone (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "norethisterone 1 mg (ethinylestradiol cell not confirmed for this row - see open questions)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Monophasic combined oral contraception', sub-heading 'Standard estrogen dose'. Brand name examples as printed: Norimin-1, Brevinor-1. Printed as 'Norimin-1, Brevinor-1 norethisterone 1 mg'. The adjacent 'ethinylestradiol 35 mcg' cell appears immediately above this row (in the Norimin/Brevinor row); whether it is a merged cell covering both rows or belongs only to TX-12 cannot be determined from the extraction (both readings recorded - see open questions). No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-14", "drug": "ethinylestradiol + levonorgestrel (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "ethinylestradiol 30 mcg/40 mcg/30 mcg; levonorgestrel 50 mcg/75 mcg/125 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Multiphasic combined oral contraception'. Brand name examples as printed: Logynon, Trifeme, Triquilar, Triphasil. Cells print interleaved: 'ethinylestradiol 30 mcg/40 mcg/30 mcg' (estrogen) and 'levonorgestrel 50 mcg/75 mcg/125 mcg' (progestogen) with the brand cell between them. No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "TX-15", "drug": "estradiol + dienogest (combined oral contraceptive)", "form": "combined oral contraceptive", "strength": "estradiol 3 mg/2 mg/2 mg/1 mg; dienogest nil/2 mg/3 mg/nil", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 2, Approved Medicines (p.5), section 'Multiphasic combined oral contraception'. Brand name examples as printed: Qlaira. Cells print interleaved: 'estradiol' with its value '3 mg/2 mg/2 mg/1 mg' wrapping below, and 'dienogest nil/2 mg/3 mg/nil' (progestogen). No dose regimen, pack quantity, frequency or duration is printed. Supply must contain the same hormones and doses used consistently for the past two years; alterations not allowed (condition g).",
+      "first_line": false, "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Medical conditions: Contraception in females aged between 16 and 39 years. / Condition d i: They must be between the ages of 16 and 39 (inclusive). [patient aged under 16 years is not eligible]",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Medical conditions: Contraception in females aged between 16 and 39 years. / Condition d i: They must be between the ages of 16 and 39 (inclusive). [patient aged over 39 years is not eligible]",
+      "structured": { "parameter": "age", "operator": ">", "value": 39, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "They must have been prescribed the OCP by a general practitioner or a nurse practitioner within the past two years.",
+      "structured": { "parameter": "time since OCP prescribed by a general practitioner or nurse practitioner", "operator": ">", "value": 2, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "They must have been using the same OCP consistently for at least two years. [consistent use of the same OCP for less than two years is not eligible]",
+      "structured": { "parameter": "duration of consistent use of the same OCP", "operator": "<", "value": 2, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "They must have continued taking the OCP without interruption since it was prescribed. [interrupted use since prescription is not eligible]",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "The OCP provided must contain the same hormones and doses that the patient has been using consistently for the past two years. Alterations to the hormones or doses are not allowed;",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Patients aged between 16 and 17 years can receive a single resupply for up to 4 months. [supply beyond 4 months, or a second resupply, for a patient aged 16-17 is not permitted]",
+      "structured": { "parameter": "resupply duration for patients aged 16-17 years", "operator": ">", "value": 4, "unit": "months" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Patients aged between 18 and 39 years can receive resupply for up to 12 months, as long as the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years; [supply beyond 12 months is not permitted]",
+      "structured": { "parameter": "resupply duration for patients aged 18-39 years", "operator": ">", "value": 12, "unit": "months" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Patients aged between 18 and 39 years can receive resupply for up to 12 months, as long as the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years; [supply that would extend the date of the last OCP review with a prescriber beyond two years is not permitted]",
+      "structured": { "parameter": "supply extension beyond the date of the patient's last OCP review with a prescriber", "operator": ">", "value": 2, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    }
+  ],
+  "referral": {
+    "routine": [],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+  },
+  "review_followup": [
+    {
+      "when": "Patients aged between 16 and 17 years",
+      "what": "can receive a single resupply for up to 4 months.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "when": "Patients aged between 18 and 39 years",
+      "what": "can receive resupply for up to 12 months, as long as the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "when": "On completion of a comprehensive clinical record of treatment",
+      "what": "generation of a service summary provided to the patient and/or their primary health provider.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "when": "After each supply",
+      "what": "Details of the supply is transmitted to My Health Record.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 3, "section_heading": "4. Conditions" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Completion of a comprehensive clinical record of treatment and generation of a service summary provided to the patient and/or their primary health provider (condition j, p.2)",
+      "Details of the supply is transmitted to My Health Record (condition m, p.3)"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA-PHARM-OCP.pdf", "page": 2, "section_heading": "4. Conditions" }
+  },
+  "references": [],
+  "open_questions": [
+    {
+      "topic": "Clinical rules defer to the WA DoH 'Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol', which is not reproduced here",
+      "observed": "Condition c (p.2): 'The supply must adhere to the Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol issued by the Western Australian Department of Health.' The SASA itself contains no examination, counselling, contraindication, missed-pill, drug-interaction or referral rules; it contains authorisation criteria, conditions and a brand/hormone list only.",
+      "why_unclear": "Eligibility beyond the four condition d items, plus all referral/escalation wording, lives in that Protocol. It is recorded as a hugh_to_confirm item rather than invented; referral.routine/urgent/emergency are therefore empty because this document genuinely prints none.",
+      "source_page": 2
+    },
+    {
+      "topic": "Appendix 2 table text extraction is interleaved and several estrogen cells are missing",
+      "observed": "The Appendix 2 columns are 'Brand name examples | Estrogen | Progestogen', but the extraction interleaves cells across wrapped lines (e.g. 'Femme-Tab 20/100, Lenest 20,' / 'ethinylestradiol 20 mcg' / 'Loette, Microgynon 20, Micronelle levonorgestrel 100 mcg' / '20'). No estrogen cell appears at all for the rows: Bella/Brooke/Rosie/Yana/Yaz (drospirenone 3 mg), Madeline/Marvelon (desogestrel 150 mcg), Valette (dienogest 2mg), Brooklynn/Isabelle/Petibelle/Rosalee/Yasmin/Yelena (drospirenone 3 mg), and the Eleanor/Levlen/Seasonique group (levonorgestrel 150 mcg). Hormone columns printed: Estrogen (ethinylestradiol, estradiol) and Progestogen (drospirenone, levonorgestrel, norethisterone, desogestrel, dienogest, gestodene, nomegestrol).",
+      "why_unclear": "Per spec rule 2 the ambiguous rows are marked confidence 'unclear' (TX-4, TX-5, TX-7, TX-8, TX-9, TX-11, TX-12, TX-13, TX-14, TX-15) and the recoverable single-line rows 'medium'. Whether the missing estrogen cells are merged cells in the PDF or content dropped by extraction cannot be determined from the text - both possibilities recorded here.",
+      "source_page": 5
+    },
+    {
+      "topic": "Norimin-1/Brevinor-1 estrogen cell ambiguity - both readings recorded",
+      "observed": "Extraction prints: 'Norimin, Brevinor norethisterone 0.5 mg' / 'ethinylestradiol 35 mcg' / 'Norimin-1, Brevinor-1 norethisterone 1 mg'. The 'ethinylestradiol 35 mcg' cell sits between the two brand rows.",
+      "why_unclear": "Reading A: the estrogen cell is merged and applies to both TX-12 and TX-13. Reading B: it belongs only to TX-12 and TX-13's estrogen value is not captured. TX-13 strength records 'norethisterone 1 mg' plus this note rather than silently picking one reading.",
+      "source_page": 5
+    },
+    {
+      "topic": "No dose regimen, pack quantity, frequency or duration is printed for any product",
+      "observed": "Appendix 2 holds only brand examples and hormone strengths (e.g. 'ethinylestradiol 20 mcg', 'levonorgestrel 100 mcg'). No tablet count, pack size, dosing schedule, route statement or quantity appears; the only durations printed are the service-level resupply limits in conditions e and f.",
+      "why_unclear": "dose/frequency/duration/quantity_to_supply are blank on all treatment rows; 'route: oral' is taken from the instrument title ('Pharmacist Resupply of Oral Contraceptive Pills') and the Approved activity wording, not from a printed route column.",
+      "source_page": 5
+    },
+    {
+      "topic": "Combinatorics are inferred from 'Only patients who meet the following criteria are eligible'",
+      "observed": "Condition d (p.2) introduces four patient criteria with 'Only patients who meet the following criteria are eligible for the approved medicines'; conditions a-m are introduced by 'is subject to the conditions that'.",
+      "why_unclear": "Captured as all_of across INC-1 to INC-14 (the document never prints 'all of'/'any of' literally) and any_of across EXC-1 to EXC-3 (alternative ways a supply falls outside the SASA); recorded here per spec rule 4.",
+      "source_page": 2
+    },
+    {
+      "topic": "Age band is stated twice, with only the second print specifying inclusivity",
+      "observed": "3. Criteria (p.1): 'Medical conditions: Contraception in females aged between 16 and 39 years.' Condition d i (p.2): 'They must be between the ages of 16 and 39 (inclusive).'",
+      "why_unclear": "Both statements are recorded (INC-1 and INC-2) rather than merged; '(inclusive)' comes from the conditions print, which is used for the structured age flags.",
+      "source_page": 2
+    },
+    {
+      "topic": "No referral, escalation or emergency wording printed",
+      "observed": "Neither the SASA conditions nor Appendix 1-2 mention referring, urgent care, emergency, contacting a prescriber for deteriorating patients, or what to do when a patient fails an eligibility criterion. The only outside-clinical-care route named is the WA Protocol (condition c) and 'their primary health provider' as a service-summary recipient (condition j).",
+      "why_unclear": "referral lists are empty and the red flags are all NOT_ELIGIBLE actions; what the pharmacist must do instead when a criterion fails is not stated in this document (hugh_to_confirm).",
+      "source_page": 2
+    },
+    {
+      "topic": "Conditions block spans pages 2 and 3",
+      "observed": "Conditions a-l are on page 2 and condition m ('Details of the supply is transmitted to My Health Record.') plus the '5. Issued by' block are on page 3.",
+      "why_unclear": "Shared provenance for the notifiable block and PW-1-S4 uses page 2 (the first page of the conditions); the page 3 location of condition m is noted here and in the FU-4 provenance.",
+      "source_page": 2
+    },
+    {
+      "topic": "No reference list printed",
+      "observed": "The document has no references section; the only cross-references are to the WA Protocol (condition c), Appendix 1 (training) and Appendix 2 (medicines).",
+      "why_unclear": "references is empty because the document genuinely contains none.",
+      "source_page": 2
+    },
+    {
+      "topic": "Appendix 2 category headings are printed above the brand rows",
+      "observed": "Printed headings: 'Progestogen only contraception'; 'Monophasic combined oral contraception' with sub-headings 'Low estrogen dose' and 'Standard estrogen dose'; 'Multiphasic combined oral contraception'.",
+      "why_unclear": "Each treatment row records the heading it appears under; if a brand in the PDF sits under a different heading than the extraction implies, the category in notes would need correction against the PDF (part of the table-verification hugh_to_confirm).",
+      "source_page": 5
+    },
+    {
+      "topic": "No contraindications, medical exclusions or patient-history criteria printed",
+      "observed": "The SASA lists no contraindications to combined or progestogen-only contraceptives, no VTE/smoking/age-over-35 style warnings, no missed-pill rules and no examination requirements; Appendix 1 instead requires training to 'Recognise how to assess medical history, clinical risks, individual preferences, and make appropriate contraceptive advice'.",
+      "why_unclear": "exclusion list contains only the SASA's own supply limits; clinical contraindications are not in this instrument (they sit in the WA Protocol and product information) and were not invented.",
+      "source_page": 2
+    },
+    {
+      "topic": "Version/date information is complete but issuance and effective dates differ",
+      "observed": "SASA 041/1-2024; 'Effective from: 28 May 2024' in every footer; 'Date: 24 April 2024' in the issue block (Dr Andrew Robertson, Chief Health Officer, Department of Health WA).",
+      "why_unclear": "instrument_version and effective_date transcribed as printed; no review or expiry date is stated.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Obtain the 'Pharmacist Resupply of Oral Contraceptive Pills - Western Australian Protocol issued by the Western Australian Department of Health' (condition c) and extract its assessment, counselling, contraindication and referral rules - the SASA defers all clinical decision-making to it.",
+      "source_page": 2,
+      "reason": "Without the Protocol the module has eligibility gates but no clinical exclusions, no referral triggers and no counselling steps, and INC-10 cannot be enforced."
+    },
+    {
+      "item": "Confirm what a pharmacist must do when a patient fails an eligibility criterion (age outside 16-39, prescription older than two years, less than two years on the same OCP, interrupted use, product change required) - the SASA says only that such patients 'are eligible'/'are not eligible'.",
+      "source_page": 2,
+      "reason": "All nine red flags are NOT_ELIGIBLE actions with no printed destination, timeframe or escalation route; local policy must define the redirect."
+    },
+    {
+      "item": "Verify the Appendix 2 brand-to-hormone table directly against the PDF before any brand mapping is used - the text extraction interleaves cells and omits several estrogen cells (TX-4, TX-7, TX-8, TX-9, TX-11 and the TX-13/TX-12 shared-cell question).",
+      "source_page": 5,
+      "reason": "Ten of fifteen treatment rows are marked confidence 'unclear'; a wrong brand-hormone mapping would supply the wrong product."
+    },
+    {
+      "item": "Confirm pack quantities, repeats and how 'up to 4 months' (age 16-17) and 'up to 12 months' (age 18-39) of supply map to packs/repeats for each Appendix 2 product - no quantity is printed.",
+      "source_page": 2,
+      "reason": "quantity_to_supply is blank on all treatment rows; the duration limits exist but the supply unit is undefined."
+    },
+    {
+      "item": "Confirm the operational check for 'within the past two years' and 'at least two years' (conditions d ii and d iii) - date-of-prescription source, rounding at the two-year boundary, and evidence accepted (prescription label, My Health Record, patient report).",
+      "source_page": 2,
+      "reason": "Two of the four mandatory patient criteria hinge on dates whose evidence source is not specified."
+    },
+    {
+      "item": "Confirm how 'the supply does not extend the date of the patient's last OCP review with a prescriber beyond two years' is calculated when review dates are unknown or recorded only in the practice record.",
+      "source_page": 2,
+      "reason": "RF-9 is a hard stop on a date the pharmacy may not hold; the rule needs a defined data source before enforcement."
+    },
+    {
+      "item": "Confirm the pharmacist registration and training verification process: unconditional general AHPRA registration (condition a), Appendix 1 competency-based training, ongoing competency maintenance (condition b), and the Appendix 1 requirement to complete cultural safety and gender diversity training relevant to the place of practice.",
+      "source_page": 4,
+      "reason": "Practitioner-level hard gates that must be evidenced per pharmacist before go-live."
+    },
+    {
+      "item": "Confirm the mechanics and timing for the service summary to the patient and/or primary health provider (condition j) and for transmission of supply details to My Health Record (condition m), including patient consent handling.",
+      "source_page": 2,
+      "reason": "These are mandatory conditions (captured in notifiable and PW-1-S4) but the SASA does not specify format, system or timing."
+    },
+    {
+      "item": "Confirm local record-keeping retention under Part 12 of the Medicines and Poisons Regulations 2016 (condition l) and the confidential-room requirement (condition i) for each service point.",
+      "source_page": 2,
+      "reason": "Site and records compliance conditions cannot be verified from the document and are prerequisites for supply."
+    }
+  ]
+}

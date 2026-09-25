@@ -1,0 +1,1040 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf",
+    "pdf_sha256": "a0b2acc0d5012a4fc351d8f2bdaf751b441aee407a0e1e7cd381388702b27237",
+    "page_count": 24,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Management of Impetigo",
+    "instrument_version": "December 2025",
+    "effective_date": "December 2025",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 and Drugs, Poisons and Controlled Substances Regulations 2017 (Victoria); Secretary Approval: Community Pharmacist Program. Supply of the Schedule 4 poisons documented in this Protocol for the management of Impetigo under a structured prescribing arrangement. It is a requirement of the Secretary Approval: Community Pharmacist Program that pharmacists comply with this Protocol when supplying Schedule 4 poisons for treatment of Impetigo, and that pharmacists have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons. Pharmacists authorised to supply Schedule 4 poisons under the Regulations must operate at all times in accordance with the Drugs, Poisons and Controlled Substances Act 1981, the Regulations and all other applicable Victorian, Commonwealth and national laws, and act in a manner consistent with the Pharmacy Board of Australia's Code of Conduct.",
+    "supervision_model": "structured prescribing arrangement (pharmacists authorised under the Drugs, Poisons and Controlled Substances Regulations 2017 to supply the Schedule 4 poisons documented in the Protocol; must comply with the Protocol and have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons)",
+    "scope_summary": "The Victorian Community Pharmacist Program protocol (December 2025) for management of impetigo. Covers an eligibility and management flowchart (age >=2 years; signs/symptoms/history consistent with impetigo; consent with patient physically present; patient history; recurrent/immunocompromised/high-ARF-risk gate; skin assessment; red flag criteria to Emergency Department; bullous/widespread/ecthyma/unclear-diagnosis gate; clear non-bullous presentation; lesion count <=2 sores vs >2 sores by body regions; allergies/interactions/contraindications gate), pharmacotherapy A (limited: mupirocin 2%, hydrogen peroxide 1% cream) and B (extensive: dicloxacillin, flucloxacillin, cefalexin, trimethoprim + sulfamethoxazole) with exact printed regimens, non-pharmacological and self-care advice, clinical documentation requirements, supplementary guidance (patient history, examination, Table 1 types of impetigo, red flag/ineligibility lists, differential diagnosis, complications and Table 2 ARF high risk, investigations/swab), management and treatment plan, medicines list with penicillin hypersensitivity guidance, communication/general advice and follow up. Impetigo is explicitly not reportable to the Department of Health in Victoria."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Is the patient aged >= 2 years of age? Yes required to continue (No: 'Refer to General Practitioner').",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Does the patient present with signs, symptoms, or a history consistent with impetigo, based on initial presentation and information provided to the pharmacist? Yes to continue. Examples of likely impetigo: 'Golden or honey-coloured crusted lesions'; 'Lesions commonly on the face, limbs, or around the mouth or nose'; 'Vesicles or pustules that rupture easily'; 'May be mildly itchy or red, but not deep, painful, or scaly'; 'Erythema may be present where the lesions or sores are located'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Does the patient/carer/caregiver consent? Yes: 'continue on page 7'. Footnote: '*The patient must be physically present in the pharmacy'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-4",
+        "text": "No to all of the following reported/presented (Yes: 'Refer to General Practitioner'): 'The patient is identified with or at risk of recurrent impetigo (e.g., symptoms have not resolved after the first course of antibiotic treatment, symptoms significantly or rapidly worsen, if impetigo infection reoccurs frequently)'; 'The patient is immunocompromised'; 'The patient is at high risk of complications of impetigo, including patients at high risk of ARF (Refer to Table 2: People considered at high risk of developing ARF)'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 7, "section_heading": "2. Protocol for Management of Impetigo"}
+      },
+      {
+        "id": "INC-5",
+        "text": "No to all 'red flag criteria' (Yes: 'Refer to the Emergency Department immediately'): 'Widespread, painful rash that may be erythematous'; 'Non-blanching purple rash'; 'Blistering of the skin and/or mucous membranes (that may include mouth and eyes)'; 'Signs and symptoms of serious and/or systemic illness (e.g., complicated cellulitis, severe ecthyma, acute ARF) including fever, lethargy, headache, rash, nausea and vomiting, severe pain, sore and swollen joints, food/drinking aversion in a child'; 'Generalised erythema that covers 90% or more of the skin surface, especially when associated with systemic symptoms'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+      },
+      {
+        "id": "INC-6",
+        "text": "No to all of the following (Yes: 'Refer to General Practitioner'): 'Signs of bullous impetigo (large, flaccid blisters)'; 'Signs that impetigo is widespread, severe and/or has ecthyma (ulceration, induration) present'; 'Chronic sores or ulcers'; 'The patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features.'; 'A clear diagnosis of impetigo cannot be made (i.e. uncertain diagnosis of uncomplicated non-bullous impetigo), and/or other/co-occurring secondary conditions are suspected that cannot be treated in the community pharmacy setting, e.g., Infected atopic or discoid eczema, herpes simplex virus (HSV-1), varicella (chickenpox), herpes zoster (shingles), cellulitis, scabies, psoriasis, folliculitis or acne, contact dermatitis, dermatophytosis (tinea), candidiasis, thermal burns, and molluscum contagiosum.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+      },
+      {
+        "id": "INC-7",
+        "text": "Does the patient present with a clear presentation of non-bullous impetigo? Yes: 'continue page 9'. Key Features of non-bullous impetigo (eligible for pharmacist treatment): 'Honey-coloured crusts, typically on face/extremities'; 'Vesicles/pustules that rupture easily'; 'Mild itch, minimal pain'; 'No systemic symptoms'. Note: 'Pharmacists should treat only clearly eligible low-risk cases and refer to a GP for swabbing or further review if the diagnosis is uncertain, recurrent, or not improving.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Does the patient have allergies, medicine interactions or any other contraindications to management options? No: 'continue page 10' (Yes: 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner').",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+      },
+      {
+        "id": "INC-9",
+        "text": "Lesion/sores extent confirmed by the pharmacist: either 'Are the number of lesions/sores confirmed by the pharmacist as limited and not extensive (<= 2 sores)?' Yes (treatment A), or, where > 2 sores, the lesions/sores are confined to no more than 2 body regions (treatment B). Supplementary statement (pg. 14-15): 'Only patients with clearly identified non-recurrent, non-bullous impetigo, limited to no more than two body regions, with no signs of other complications, who are not at high risk of developing ARF (Refer to Table 2: People considered at high risk of developing ARF), are eligible for treatment under this protocol. All other cases must be referred to a GP or other medical professional.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "The patient is below the age of 2 years old",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "The patient is immunocompromised",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "The patient is at high risk of complications of impetigo, including patients at high risk of ARF (Refer to Table 2: People considered at high risk of developing ARF)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "A clear diagnosis of impetigo cannot be made or other/co-occurring conditions are suspected that cannot be treated in the community pharmacy setting, e.g., viral infection eczema herpeticum or contact dermatitis",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "The patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "The impetigo is widespread, severe and/or has ecthyma (ulceration) present",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "Chronic sores or ulcers",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "Symptoms have not resolved after the first course of antibiotic treatment, symptoms significantly or rapidly worsen, if impetigo infection reoccurs frequently",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "Signs of bullous impetigo (large, flaccid blisters) - flowchart branch 'Yes: Refer to General Practitioner'; only non-bullous impetigo is eligible for pharmacist treatment ('Only patients with clearly identified non-recurrent, non-bullous impetigo ... are eligible for treatment under this protocol', pg. 14-15).",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+      },
+      {
+        "id": "EXC-10",
+        "text": "Lesions/sores affect > 2 body regions (flowchart: 'Confirmation lesions/sores affect > 2 body regions: Refer to General Practitioner'). Eligibility statement pg. 14-15 limits treatment to impetigo 'limited to no more than two body regions'.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]},
+        "confidence": "unclear",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+      }
+    ],
+    "age_bounds": {"min_years": 2, "max_years": null, "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}},
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'Pharmacists must refer patients to a medical practitioner but may also provide treatment if: Vesicles present in more than one but limited to a maximum of two locations (e.g., face plus arms), indicating moderate infection. Noting that multiple vesicles can be present in a single location (e.g., multiple vesicles near/around the mouth are considered as one location)'",
+        "criteria_group": {"all_of": [], "any_of": []},
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"},
+        "confidence": "medium"
+      },
+      {
+        "id": "EXE-2",
+        "text": "Penicillin hypersensitivity does not exclude treatment: 'For patients who have had a non-severe (immediate or delayed) hypersensitivity reaction to a penicillin, use the cefalexin regimen above. Cefalexin may be used in patients who have had a non-severe (immediate or delayed) reaction to amoxicillin or ampicillin. However, because cross-reactivity between these drugs is possible, consideration should be given to the extent of the reaction, patient acceptability, and the suitability of non-beta-lactam options. For patients who have had a severe (immediate or delayed) hypersensitivity reaction to a penicillin use one of the trimethoprim + sulfamethoxazole regimens above.'",
+        "criteria_group": {"all_of": [], "any_of": []},
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "Guidance and Special Considerations"},
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Eligibility and management flowchart plus clinical documentation (pg. 6-12)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Is the patient aged >= 2 years of age?'. No: 'Refer to General Practitioner'. Yes: continue to the impetigo presentation question.",
+          "gates": [{"criterion": "Patient is aged >= 2 years of age", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient present with signs, symptoms, or a history consistent with impetigo, based on initial presentation and information provided to the pharmacist?' 'Examples of likely impetigo:' 'Golden or honey-coloured crusted lesions'; 'Lesions commonly on the face, limbs, or around the mouth or nose'; 'Vesicles or pustules that rupture easily'; 'May be mildly itchy or red, but not deep, painful, or scaly'; 'Erythema may be present where the lesions or sores are located'. No branch: 'Consider other skin conditions (e.g., shingles, psoriasis, acne, atopic dermatitis, HSV, scabies)' 'and provide usual pharmacist care' AND/OR 'Refer to General Practitioner'. Yes: continue.",
+          "gates": [{"criterion": "Signs, symptoms, or history consistent with impetigo on initial presentation", "on_fail": "REFER"}],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Question: 'Does the patient/carer/caregiver consent?*' with footnote '*The patient must be physically present in the pharmacy'. No: 'Refer to General Practitioner'. Yes: 'continue on page 7'.",
+          "gates": [
+            {"criterion": "Patient/carer/caregiver consents", "on_fail": "REFER"},
+            {"criterion": "Patient is physically present in the pharmacy", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "'Assess: Patient history' - 'Onset, duration, nature, location, severity and extent of lesions'; 'History of previous impetigo or skin infections, especially if lesions persist, or recur shortly after previous treatment completion'; 'Risk factors: recent skin or throat infections, trauma, immunosuppression, ARF risk factors (Refer to Table 2: People considered at high risk of developing ARF)'; 'Lifestyle factors: most recent place of residence or recent travel, recent contact with others with similar symptoms'; 'Comorbidities: diabetes, renal/hepatic impairment, overweight etc.'; 'Current medications'; 'Medication allergies and/or adverse effects' including 'Contraindications', 'Medication interactions', 'Pregnancy and lactation'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 7, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient report/present with any of the following?' - 'The patient is identified with or at risk of recurrent impetigo (e.g., symptoms have not resolved after the first course of antibiotic treatment, symptoms significantly or rapidly worsen, if impetigo infection reoccurs frequently)'; 'The patient is immunocompromised'; 'The patient is at high risk of complications of impetigo, including patients at high risk of ARF (Refer to Table 2: People considered at high risk of developing ARF)'. Yes: 'Refer to General Practitioner'. No: 'Conduct clinical review' -> 'Examination'.",
+          "gates": [
+            {"criterion": "Patient is not identified with and not at risk of recurrent impetigo", "on_fail": "REFER"},
+            {"criterion": "Patient is not immunocompromised", "on_fail": "REFER"},
+            {"criterion": "Patient is not at high risk of complications of impetigo, including high risk of ARF (Table 2)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 7, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EXAMINATION",
+          "description": "'Confirm presenting signs and symptoms indicative of impetigo by performing a skin assessment (Refer to supplementary notes including Table 1: Types of impetigo)'. 'When examining patients, standard and contact precautions apply for cases of localised impetigo'; 'Personal protective equipment (PPE) including gloves should be used, and surfaces should be cleaned with neutral detergent and disinfectant after examination'; 'Ensure hand hygiene is performed'. 'Continue on page 8'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 7, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient report/present with any of the following red flag criteria?' - 'Widespread, painful rash that may be erythematous'; 'Non-blanching purple rash'; 'Blistering of the skin and/or mucous membranes (that may include mouth and eyes)'; 'Signs and symptoms of serious and/or systemic illness (e.g., complicated cellulitis, severe ecthyma, acute ARF) including fever, lethargy, headache, rash, nausea and vomiting, severe pain, sore and swollen joints, food/drinking aversion in a child'; 'Generalised erythema that covers 90% or more of the skin surface, especially when associated with systemic symptoms'. Yes: 'Refer to the Emergency Department immediately'. No: continue.",
+          "gates": [{"criterion": "No red flag criteria present", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient report/present with any of the following?' - 'Signs of bullous impetigo (large, flaccid blisters)'; 'Signs that impetigo is widespread, severe and/or has ecthyma (ulceration, induration) present'; 'Chronic sores or ulcers'; 'The patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features.'; 'A clear diagnosis of impetigo cannot be made (i.e. uncertain diagnosis of uncomplicated non-bullous impetigo), and/or other/co-occurring secondary conditions are suspected that cannot be treated in the community pharmacy setting, e.g., Infected atopic or discoid eczema, herpes simplex virus (HSV-1), varicella (chickenpox), herpes zoster (shingles), cellulitis, scabies, psoriasis, folliculitis or acne, contact dermatitis, dermatophytosis (tinea), candidiasis, thermal burns, and molluscum contagiosum.' Yes: 'Refer to General Practitioner'. No: continue.",
+          "gates": [{"criterion": "None of: bullous impetigo signs; widespread/severe impetigo or ecthyma (ulceration, induration); chronic sores or ulcers; generalised erythema covering 90% or more of skin surface while otherwise well with no systemic features; clear diagnosis of impetigo cannot be made or co-occurring secondary conditions suspected that cannot be treated in the community pharmacy setting", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient present with a clear presentation of non-bullous impetigo?' 'Key Features of non-bullous impetigo (eligible for pharmacist treatment)': 'Honey-coloured crusts, typically on face/extremities'; 'Vesicles/pustules that rupture easily'; 'Mild itch, minimal pain'; 'No systemic symptoms'. No: 'Refer to General Practitioner'. Yes: 'continue page 9'. Note: 'Pharmacists should treat only clearly eligible low-risk cases and refer to a GP for swabbing or further review if the diagnosis is uncertain, recurrent, or not improving.'",
+          "gates": [{"criterion": "Clear presentation of non-bullous impetigo with the printed key features (honey-coloured crusts typically on face/extremities; vesicles/pustules that rupture easily; mild itch, minimal pain; no systemic symptoms)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 8, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Are the number of lesions/sores confirmed by the pharmacist as limited and not extensive (<= 2 sores)?' Yes: 'Proceed to A. Empirical treatment for limited non-bullous non-recurrent impetigo (pharmacist care)'. No: 'Proceed to B. Extensive non-bullous impetigo (> 2 sores):' with sub-branch on 'how many body regions are they confined to?': '> 2 body regions: Refer to General Practitioner'; '2 body regions: Proceed to pharmacist care (B. Empirical treatment for extensive non-bullous non-recurrent impetigo)' (e.g. 'both legs or arm + torso'); '1 body region: Proceed to pharmacist care (B. Empirical treatment for extensive non-bullous non-recurrent impetigo) AND Refer to General Practitioner for follow up'. Branch-to-action mapping is inferred from a column-scrambled extraction (see open question).",
+          "gates": [
+            {"criterion": "Lesion/sores count and body-region distribution confirmed by the pharmacist", "on_fail": "unclear"},
+            {"criterion": "Where lesions/sores are > 2: confined to no more than 2 body regions", "on_fail": "REFER"}
+          ],
+          "confidence": "unclear",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient have allergies, medicine interactions or any other contraindications to management options?' Yes: 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner'. No: 'continue page 10'.",
+          "gates": [{"criterion": "No allergies, medicine interactions or other contraindications to the management options under this protocol", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "TREAT",
+          "description": "'The management of impetigo consists of pharmacotherapy in addition to general measures for the patient, family and community to reduce spread.' 'For pharmacotherapy, provide treatment where indicated in line with the Therapeutic Guidelines.' A. Empirical treatment for limited non-bullous non-recurrent impetigo: '1. Mupirocin 2% ointment or cream topically to crusted areas, every 8 hours for 5 days'; '2. Hydrogen peroxide 1% cream topically to crusted areas, every 8 hours for 5 days'. B. Empirical treatment for extensive non-bullous non-recurrent impetigo: '1. Dicloxacillin 500mg (child: 12.5 mg/kg up to 500 mg) orally, every 6 hours for 5 days (Stop at 3 days if resolved)'; '1. Flucloxacillin 500 mg (child: 12.5 mg/kg up to 500 mg) orally every 6 hours for 5 days (Stop at 3 days if resolved)'; '2. Cefalexin 1 g (child: 25 mg/kg up to 1000 mg) orally, every 12 hours for 5 days (Stop at 3 days if resolved)*'; '3. Trimethoprim + Sulfamethoxazole 160+800 mg (child: 4+20 mg/kg up to 160+800 mg) orally, 12-hourly for 3 days'; '3. Trimethoprim + Sulfamethoxazole 320+1600 mg (child: 8+40 mg/kg up to 320+1600 mg) orally, once daily for 5 days'. '* Cefalexin may be preferred in children, because it is dosed less frequently and the liquid formulation is better tolerated.' Side note: 'Dispense medications via pharmacy dispensing software and label according to the legislative requirements outlined in the Drugs, Poisons and Controlled substances Regulation 2017'; 'Treatment of co-occurring skin conditions (e.g., dermatitis, head lice or tinea) with standard pharmacist care'. Note: 'Patients should be referred to a medical practitioner where treatment with intramuscular (IM) benzylpenicillin is considered the most appropriate treatment option (e.g., There is a concern the patient being able to finish their course of treatment)'.",
+          "gates": [
+            {"criterion": "Treatment (A or B) selected according to lesion extent with allergies, medicine interactions and contraindications ruled out (pg. 9)", "on_fail": "unclear"},
+            {"criterion": "Treatment with intramuscular (IM) benzylpenicillin is not considered the most appropriate treatment option", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 10, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "EDUCATE",
+          "description": "'Provide non-pharmacological and self-care advice' - '1. Provide patient with Consumer Medicines Information and/or a Self-Care Fact card to help patients control their impetigo'; '2. Provide advice on non-pharmacological, general and preventative measures'; 'For detailed hygiene and household prevention tips, refer to the Royal Children's Hospital Impetigo Fact Sheet'; 'For information on reducing the spread of impetigo, refer to the Therapeutic Guidelines - Figure 2.85 Patient information: Advice for reducing the spread of impetigo'. 'Continue on page 11'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 10, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "TREAT",
+          "description": "'Confirm management plan is appropriate with regards to contraindications, precautions, interactions, pregnancy and lactation status.'",
+          "gates": [{"criterion": "Management plan confirmed appropriate with regards to contraindications, precautions, interactions, pregnancy and lactation status", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 11, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "'Communicate agreed treatment plan to patient and other healthcare professionals:' 'Dispense medications via pharmacy dispensing program'; 'Counselling for topical or oral anti-infectives (e.g., dose, duration, application advice if applicable), including adverse effects and how to manage them'; 'Duration of treatment and expectations around resolution of symptoms'; 'Offer infection control advice and supply the patient appropriate dressings where required'; 'Advise when to seek further care e.g., If signs and symptoms do not improve within 5 days of commencing treatment or worsen at any point in time'. 'Document the consultation and share a record of the service with the patient, patient's usual treating GP or medical practice where the patient has one' (full clinical documentation requirements are listed at pg. 12).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 11, "section_heading": "2. Protocol for Management of Impetigo"}
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "EDUCATE",
+          "description": "'The pharmacist must document a clinical record of the consultation that contains:' sufficient information to identify the patient (Medicare number and date of birth usually recorded when dispensing prescriptions); date of treatment; name of the pharmacist and their HPI-I number; 'Consent given by the patient regarding: program participation, costs, pharmacist communication with other healthcare practitioners (e.g., patient's usual treating GP) and access to the patient's My Health Record for the purpose of checking inclusion/exclusion criteria and uploading information relating to the consultation as required'; information relevant to diagnosis or treatment (e.g. number of sores/lesions and sites affected) and observations/assessments including allergies and adverse medicine reactions; any clinical opinion reached; actions taken (medications supplied or referrals made); particulars of any medications supplied (form, strength and amount); information or advice given. 'The pharmacist must share a copy of the record of the service to the patient and with the patient's usual treating medical practitioner or medical practice, where the patient has one.' 'The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 12, "section_heading": "3. Clinical Documentation Requirements"}
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Supplementary information: gather information, assess and manage (pg. 14-24)",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "'Sufficient information must be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines for the patient. Consider:' 'age (patients < 2 years of age are NOT eligible for treatment and must be referred to a medical practitioner)'; 'weight (if a child)'; 'pregnancy and lactation status, including patients planning pregnancy (if applicable)'; 'most recent place of residence/community and/or recent travel to a place where impetigo or ARF may be endemic (In Australia, ARF is generally considered to be endemic in Far North Queensland and North Queensland, the Northern Territory, and the Pilbara and Kimberley regions of Western Australia)'; 'onset, duration, nature, location, severity and extent of lesions'; 'recent skin and throat infections and treatment received'; 'other signs and symptoms e.g., pain, lymphadenopathy, signs of sepsis or other complications including APSGN and ARF such as fever, confusion, tachycardia, hypotension or hypertension, clammy skin, vomiting and diarrhoea, facial or peripheral oedema, severe headache, joint pain and/or hot swollen joints'; 'potential source of infection e.g., skin trauma, contact with people with similar symptoms'; 'co-existing and underlying medical conditions, including skin conditions or immunosuppression that may lead to complications (e.g., atopic dermatitis, discoid eczema, scabies, herpes simplex)'; 'current, recently commenced or recently ceased medications ... and topical treatments'; 'medicine allergies/adverse effects'; 'other risk factors including day care settings, crowding and malnutrition'. 'The patient's My Health Record can be used to access a range of clinical information including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [{"criterion": "Age: patients >= 2 years ('patients < 2 years of age are NOT eligible for treatment and must be referred to a medical practitioner')", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 14, "section_heading": "4.1 Patient history"}
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "'Prior to commencing patient examination, pharmacists should consider implementing infection control steps in line with the Australian Guidelines for the Prevention and Control of Infection in Healthcare 2019 ... Pharmacists must also ensure that patient privacy is maintained throughout the examination and consultation.' 'Assessment and management of impetigo includes consideration of the patient's risk of complications including patients with a high risk of ARF, the nature (non-bullous or bullous), duration and number of sores, and whether the infection is recurrent.' 'Only patients with clearly identified non-recurrent, non-bullous impetigo, limited to no more than two body regions, with no signs of other complications, who are not at high risk of developing ARF (Refer to Table 2: People considered at high risk of developing ARF), are eligible for treatment under this protocol. All other cases must be referred to a GP or other medical professional.' 'Where the diagnosis is uncertain, the condition is severe or recurrent, or symptoms do not improve with appropriate empirical treatment, patients should be referred to a medical practitioner for review and swab collection.' (sentence spans pg. 14-15)",
+          "gates": [{"criterion": "Clearly identified non-recurrent, non-bullous impetigo, limited to no more than two body regions, with no signs of other complications, and not at high risk of developing ARF", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 14, "section_heading": "4.2 Examination"}
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "'A. Lesion Characteristics' - 'Impetigo is a contagious skin infection that most often affects children, though it can occur at any age. It usually develops on skin that is already damaged by cuts, insect bites, or conditions like eczema - this is called secondary impetigo and is the most common form. Less commonly, it occurs on intact skin, known as primary impetigo.' 'The main types of impetigo - non-bullous, bullous, and ecthyma - are described in Table 1: Types of impetigo.' Non-bullous (crusted): 'thin-walled pustules or vesicles that rupture quickly, forming honey-coloured crusts; usually itchy, not painful, with minimal or no surrounding erythema'; 'typically self-limiting; lesions may resolve spontaneously within 2-4 weeks without treatment'; 'Caused by Streptococcus pyogenes (GAS), Staphylococcus aureus, or both.' Bullous: 'irritating fluid-filled flaccid vesicles or bullae (diameter often > 1 cm)'; 'Patients with bullous impetigo are more likely to experience systemic symptoms including fever, malaise and lymphadenopathy'; 'Typically caused by Staphylococcus aureus.' Ecthyma (deep impetigo): 'yellowish crusted sores with underlying ulcers, typically with purplish borders'; 'Ecthyma is a deeper infection than non-bullous impetigo, with higher risk of scarring, systemic involvement'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 15, "section_heading": "A. Lesion Characteristics"}
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "'B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)'. 'Pharmacists must refer patients to the Emergency Department immediately if:' 'Widespread, painful rash that may be erythematous'; 'Raised purple rash that doesn't blanch'; 'Blistering of the skin and/or mucous membranes (that may include mouth and eyes)'; 'Signs and symptoms of serious and/or systemic illness (e.g., complicated cellulitis, severe ecthyma, acute ARF) including fever, lethargy, headache, rash, nausea and vomiting, sore and swollen joints, food/drinking aversion in a child'; 'Generalised erythema that covers 90% or more of the skin surface, especially when associated with systemic symptoms'. 'Pharmacists must refer patients to a medical practitioner immediately if:' 'The patient is below the age of 2 years old'; 'The patient is immunocompromised'; 'The patient is at high risk of complications of impetigo, including patients at high risk of ARF'; 'A clear diagnosis of impetigo cannot be made or other/co-occurring conditions are suspected that cannot be treated in the community pharmacy setting, e.g., viral infection eczema herpeticum or contact dermatitis'; 'The patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features.'; 'The impetigo is widespread, severe and/or has ecthyma (ulceration) present'; 'Chronic sores or ulcers'; 'Symptoms have not resolved after the first course of antibiotic treatment, symptoms significantly or rapidly worsen, if impetigo infection reoccurs frequently'. 'Pharmacists must refer patients to a medical practitioner but may also provide treatment if:' 'Vesicles present in more than one but limited to a maximum of two locations (e.g., face plus arms), indicating moderate infection.'",
+          "gates": [{"criterion": "Patient has none of the red flag signs or patient ineligibility criteria listed at pg. 16", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'C. Differential Diagnosis (refer if suspected)' - 'Impetigo may present similarly to, or co-exist with, other skin conditions including:' 'Infected atopic or discoid eczema'; 'Herpes simplex virus (HSV-1)'; 'Varicella (chickenpox)'; 'Herpes zoster (shingles)'; 'Cellulitis'; 'Scabies'; 'Psoriasis'; 'Folliculitis'; 'Acne'; 'Contact dermatitis'; 'Dermatophytosis (tinea)'; 'Candidiasis'; 'Thermal burns'; 'Molluscum contagiosum'.",
+          "gates": [{"criterion": "No differential diagnosis suspected (list at pg. 16-17)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "C. Differential Diagnosis (refer if suspected)"}
+        },
+        {
+          "id": "PW-2-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "'D. Risk of the individual developing complications' - 'As impetigo is contagious and most commonly in children, pharmacists should assess patients for the risk of developing complications.' 'Complications of impetigo, although rare, are more often associated with bullous impetigo and ecthyma, and may include:' 'Lymphangitis or lymphadenitis'; 'Widespread infection, cellulitis, gangrene and bacteraemia'; 'Permanent scarring'. 'Group A streptococcal infections (more common in endemic areas) may lead to:' 'ARF (Refer if at high risk of developing ARF)' - 'Onset: 1-5 weeks after strep infection, often with repeated strep throat or skin infections'; 'Most commonly in children 5-14 years'; 'APSGN' - 'Onset: 2-3 weeks after strep skin or throat infection'; 'Most common in children 12 months to 17 years'; 'Sepsis'; 'Osteomyelitis'. Table 2: People considered at high risk of developing ARF (pg. 18): Aboriginal and Torres Strait Islander people residing in rural/remote area or living in a household affected by overcrowding (> 2 people per bedroom) or experiencing socioeconomic disadvantage; Maori and/or Pacific Islander person in a household affected by overcrowding (> 2 people per bedroom) or socioeconomic disadvantage; personal history of ARF or RHD; family or household member with recent history of ARF or RHD; additional risk factors for individuals aged <= 40 years (particularly between 5-20 years): household overcrowding (> 2 people per bedroom)/socioeconomic disadvantage, current or prior residence in or frequent/recent travel to a high ARF rate area, APSGN.",
+          "gates": [{"criterion": "Patient is not at high risk of developing ARF (Table 2: People considered at high risk of developing ARF)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 17, "section_heading": "D. Risk of the individual developing complications"}
+        },
+        {
+          "id": "PW-2-S7",
+          "order": 7,
+          "type": "INVESTIGATION",
+          "description": "'4.3 Investigations' - 'Patients with impetigo do not require an initial skin swab before starting empirical therapy unless the diagnosis is uncertain or impetigo is recurrent. A skin swab for culture and susceptibility testing is recommended for patients with impetigo that is not responding to appropriate empirical therapy. Where referral is required (e.g., for recurrent, severe, or uncertain cases), pharmacists should direct patients to their general practitioner or another appropriate health service. If timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) may be considered as an alternative pathway to ensure timely care.'",
+          "gates": [{"criterion": "No initial skin swab required before starting empirical therapy (diagnosis not uncertain, impetigo not recurrent) and impetigo is responding to appropriate empirical therapy", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 18, "section_heading": "4.3 Investigations"}
+        },
+        {
+          "id": "PW-2-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "'5. Management and treatment plan' - 'Pharmacist management of impetigo can involve:' 'General and preventative measures'; 'Provide the patient/parent/caregiver with advice and education to help reduce the spread of impetigo' (Royal Children's Hospital Melbourne Impetigo fact sheet, Better Health Channel Impetigo fact sheet or Therapeutic Guidelines Patient information leaflet: Advice for reducing the spread of impetigo); 'Treatment of co-occurring skin conditions - Provide standard pharmacist care or refer to a medical practitioner as appropriate.' 'Pharmacotherapy - As per this protocol and in line with the Therapeutic Guidelines: Antibiotic - Impetigo including:' 'Empirical topical anti-infectives - for patients with non-recurrent limited non-bullous impetigo (up to 2 sores) who are not at high risk of ARF'; 'Empirical oral antibiotics - for patients with non-recurrent extensive non-bullous impetigo limited to no more than 2 sites who are not at high risk of ARF.' NB1: 'Topical antibiotics are considered sufficient treatment for the majority of patients. However, they are not appropriate if the infection is widespread or multiple family/community members are infected, due to the risk of rapid resistance. Oral antibiotics may be prescribed if appropriate.' NB2: 'The correct use of antibiotics is essential; extended or incorrect use may increase the risk of antimicrobial resistance, particularly for topical antibiotics ... Where the patient or caregiver's ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to a medical practitioner for IM benzathine benzylpenicillin.'",
+          "gates": [
+            {"criterion": "Topical antibiotics appropriate: infection not widespread and no multiple family/community members infected (NB1)", "on_fail": "unclear"},
+            {"criterion": "Patient or caregiver's ability and/or motivation to correctly use topical treatment is not in doubt (e.g. not multiple sores)", "on_fail": "SEE_PW-1-S12"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 19, "section_heading": "5. Management and treatment plan"}
+        },
+        {
+          "id": "PW-2-S9",
+          "order": 9,
+          "type": "TREAT",
+          "description": "'5.1 Confirm management is appropriate' - 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook, and other relevant references to confirm the management is appropriate, including for: Contraindications and precautions; Medicine interactions; Pregnancy and lactation.' Note: 'There is no requirement to report cases of impetigo to the Department of Health in Victoria.'",
+          "gates": [{"criterion": "Management confirmed appropriate for contraindications and precautions, medicine interactions, pregnancy and lactation against Therapeutic Guidelines, Australian Medicines Handbook and other relevant references", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 19, "section_heading": "5.1 Confirm management is appropriate"}
+        },
+        {
+          "id": "PW-2-S10",
+          "order": 10,
+          "type": "EDUCATE",
+          "description": "'7. Communicate agreed management plan' - 'Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient/parent/caregiver regarding:' 'Individual product and medication use including dosing, duration and application tips where indicated.'; 'Non-pharmacological, general and preventative measures' ('Patients should be advised to gently soak and clean affected areas, including removal of crusts'; 'Dilute bleach baths may help reduce bacterial load and support healing ... Bleach baths may be used as an adjunct to, not a replacement for, topical or oral therapy'); 'How to manage adverse effects of treatment.'; 'When to seek further care and/or treatment, including recognising complications of impetigo, particularly ARF and APSGN.' '7.1 General advice' key points: 'Impetigo is highly contagious and spreads easily between children.'; 'Avoid scratching or picking at sores; keep fingernails short and lesions covered with watertight dressings.'; 'Complete the full treatment course until all sores are healed' - 'Patients recommended topical treatments or oral trimethoprim-sulfamethoxazole on once daily dosing should complete 5 days of treatment'; 'Patients recommended first-line oral antibiotics (dicloxacillin or flucloxacillin), cefalexin or trimethoprim-sulfamethoxazole on twice daily dosing may stop treatment after 3 days if signs of infection have resolved.'; 'Children may return to school or childcare after 24 hours of treatment if all sores are fully covered' (sores gently cleaned and de-crusted before covering; dressings for dry or minimally weeping lesions; if lesions are heavily weeping, focus on cleaning and de-crusting). 'The agreed management plan should be shared with the patient's multidisciplinary healthcare team, with the patient's consent.' 'Patients/parents/caregivers should be advised to see a medical practitioner if:' 'the condition does not improve within 5-10 days of starting treatment'; 'the patient's condition worsens, including developing systemic signs and symptoms'; 'the condition recurs after treatment course is completed'; 'adverse effects of treatment cannot be managed in the pharmacy setting' (bullets continue on pg. 23).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 22, "section_heading": "7. Communicate agreed management plan"}
+        },
+        {
+          "id": "PW-2-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "'8. Follow up / clinical review' - 'Clinical review with the pharmacist is generally not required. If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'",
+          "gates": [{"criterion": "Condition improves or resolves (clinical review with the pharmacist is generally not required)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 24, "section_heading": "8. Follow up / clinical review"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Mupirocin",
+      "form": "Cream or Ointment",
+      "strength": "2%",
+      "dose": "Apply to crusted areas",
+      "route": "topical",
+      "frequency": "every 8 hours",
+      "duration": "5 days",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines list (pg. 20) marks '(1st line)' under 'Empirical therapy for limited non-bullous impetigo (<= 2 sores, non-recurrent, not at high risk of ARF)'; Preparation column: 'Cream 2% or Ointment 2%'; Dose column 'Apply to crusted areas every 8 hours'; Duration '5 days'. Flowchart (pg. 10): 'Mupirocin 2% ointment or cream topically to crusted areas, every 8 hours for 5 days'. Confirm contraindications, precautions, interactions, pregnancy and lactation per pg. 11 and pg. 19.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "Hydrogen peroxide",
+      "form": "Cream",
+      "strength": "1%",
+      "dose": "Apply to crusted areas",
+      "route": "topical",
+      "frequency": "every 8 hours",
+      "duration": "5 days",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines list (pg. 20) marks '(2nd line)' for limited non-bullous impetigo, Preparation 'Cream 1%', '*Unscheduled and available over the counter'. Flowchart (pg. 10): 'Hydrogen peroxide 1% cream topically to crusted areas, every 8 hours for 5 days'. Confirm contraindications, precautions, interactions, pregnancy and lactation per pg. 11 and pg. 19.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "Dicloxacillin",
+      "form": "Capsule",
+      "strength": "250mg or 500 mg",
+      "dose": "500 mg (child: 12.5 mg/kg up to 500 mg) orally",
+      "route": "oral",
+      "frequency": "every 6 hours",
+      "duration": "5 days (stop at 3 days if resolved)",
+      "max_quantity": "",
+      "max_dose": "500 mg",
+      "quantity_to_supply": "",
+      "notes": "Medicines list (pg. 20) marks '(1st line)' under 'Empirical therapy for extensive non-bullous impetigo (non-recurrent, limited to no more than 2 sites, not at high risk of ARF)'. Flowchart (pg. 10): 'Dicloxacillin 500mg (child: 12.5 mg/kg up to 500 mg) orally, every 6 hours for 5 days (Stop at 3 days if resolved)'. pg. 22: 'Patients recommended first-line oral antibiotics (dicloxacillin or flucloxacillin), cefalexin or trimethoprim-sulfamethoxazole on twice daily dosing may stop treatment after 3 days if signs of infection have resolved.' Confirm contraindications, precautions, interactions, pregnancy and lactation per pg. 11 and pg. 19.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "Flucloxacillin",
+      "form": "Capsule or Oral liquid",
+      "strength": "Capsule 250mg or 500 mg; Oral liquid 50 mg/mL or 25 mg/mL",
+      "dose": "500 mg (child: 12.5 mg/kg up to 500 mg) orally",
+      "route": "oral",
+      "frequency": "every 6 hours",
+      "duration": "5 days (stop at 3 days if resolved)",
+      "max_quantity": "",
+      "max_dose": "500 mg",
+      "quantity_to_supply": "",
+      "notes": "Medicines list (pg. 20) marks '(1st line)' for extensive non-bullous impetigo; Preparation column: 'Capsule 250mg or 500 mg, Oral liquid 50 mg/mL or 25 mg/mL'. Flowchart (pg. 10): 'Flucloxacillin 500 mg (child: 12.5 mg/kg up to 500 mg) orally every 6 hours for 5 days (Stop at 3 days if resolved)'. pg. 22 stop-at-3-days rule applies to first-line oral antibiotics on twice daily dosing. Confirm contraindications, precautions, interactions, pregnancy and lactation per pg. 11 and pg. 19.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "Cefalexin",
+      "form": "Capsule or Oral liquid",
+      "strength": "Capsule 250mg or 500 mg; Oral liquid 25mg/mL or 50 mg/mL",
+      "dose": "1 g (child: 25 mg/kg up to 1000mg) orally",
+      "route": "oral",
+      "frequency": "every 12 hours",
+      "duration": "5 days (stop at 3 days if resolved)",
+      "max_quantity": "",
+      "max_dose": "1000mg",
+      "quantity_to_supply": "",
+      "notes": "Medicines list (pg. 20) marks '(2nd line)' for extensive non-bullous impetigo. Flowchart (pg. 10): 'Cefalexin 1 g (child: 25 mg/kg up to 1000 mg) orally, every 12 hours for 5 days (Stop at 3 days if resolved)*'. '* Cefalexin may be preferred in children, because it is dosed less frequently and the liquid formulation is better tolerated.' (pg. 10); pg. 21: 'Cefalexin is often preferred in children due to better-tolerated oral liquid formulations and twice daily dosing'. Penicillin hypersensitivity (pg. 20): 'For patients who have had a non-severe (immediate or delayed) hypersensitivity reaction to a penicillin, use the cefalexin regimen above. Cefalexin may be used in patients who have had a non-severe (immediate or delayed) reaction to amoxicillin or ampicillin. However, because cross-reactivity between these drugs is possible, consideration should be given to the extent of the reaction, patient acceptability, and the suitability of non-beta-lactam options'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "Trimethoprim + Sulfamethoxazole",
+      "form": "Oral liquid or Tablet",
+      "strength": "Oral liquid 8+40 mg/mL; Tablet 160+800 mg (second regimen 320+1600 mg)",
+      "dose": "160+800 mg (child: 4+20 mg/kg up to 160+800 mg) orally, every 12 hours; OR 320+1600 mg (child: 8+40 mg/kg up to 320+1600 mg) orally, once daily",
+      "route": "oral",
+      "frequency": "every 12 hours (160+800 mg regimen) or once daily (320+1600 mg regimen)",
+      "duration": "3 days (160+800 mg regimen); 5 days (320+1600 mg regimen)",
+      "max_quantity": "",
+      "max_dose": "320+1600 mg",
+      "quantity_to_supply": "",
+      "notes": "Medicines list (pg. 20) marks '(3rd line)' for extensive non-bullous impetigo; Preparation column 'Oral liquid 8+40 mg/mL or Tablet 160+800 mg'; table rows column-scrambled in extraction (see open question). Flowchart (pg. 10): 'Trimethoprim + Sulfamethoxazole 160+800 mg (child: 4+20 mg/kg up to 160+800 mg) orally, 12-hourly for 3 days' and 'Trimethoprim + Sulfamethoxazole 320+1600 mg (child: 8+40 mg/kg up to 320+1600 mg) orally, once daily for 5 days'. pg. 22: 'Patients recommended topical treatments or oral trimethoprim-sulfamethoxazole on once daily dosing should complete 5 days of treatment'; twice daily dosing may stop after 3 days if signs of infection have resolved. Penicillin hypersensitivity (pg. 20): 'For patients who have had a severe (immediate or delayed) hypersensitivity reaction to a penicillin use one of the trimethoprim + sulfamethoxazole regimens above.' pg. 21: 'Consider trimethoprim + sulfamethoxazole for patients with true beta-lactam allergy or where dosing convenience (e.g., once-daily) is important'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Pharmacists must refer patients to the Emergency Department immediately if: ... Widespread, painful rash that may be erythematous'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Pharmacists must refer patients to the Emergency Department immediately if: ... Raised purple rash that doesn't blanch' (flowchart pg. 8 wording: 'Non-blanching purple rash')",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Pharmacists must refer patients to the Emergency Department immediately if: ... Blistering of the skin and/or mucous membranes (that may include mouth and eyes)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Pharmacists must refer patients to the Emergency Department immediately if: ... Signs and symptoms of serious and/or systemic illness (e.g., complicated cellulitis, severe ecthyma, acute ARF) including fever, lethargy, headache, rash, nausea and vomiting, sore and swollen joints, food/drinking aversion in a child' (flowchart pg. 8 wording additionally includes 'severe pain')",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Pharmacists must refer patients to the Emergency Department immediately if: ... Generalised erythema that covers 90% or more of the skin surface, especially when associated with systemic symptoms'",
+      "structured": {"parameter": "skin surface covered by generalised erythema", "operator": ">=", "value": 90, "unit": "%"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... The patient is below the age of 2 years old' (flowchart pg. 6 No branch: 'Refer to General Practitioner'; pg. 14: 'patients < 2 years of age are NOT eligible for treatment and must be referred to a medical practitioner')",
+      "structured": {"parameter": "age", "operator": "<", "value": 2, "unit": "years"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... The patient is immunocompromised'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... The patient is at high risk of complications of impetigo, including patients at high risk of ARF (Refer to Table 2: People considered at high risk of developing ARF)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... A clear diagnosis of impetigo cannot be made or other/co-occurring conditions are suspected that cannot be treated in the community pharmacy setting, e.g., viral infection eczema herpeticum or contact dermatitis'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... The patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features.'",
+      "structured": {"parameter": "skin surface covered by generalised erythema", "operator": ">=", "value": 90, "unit": "%"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... The impetigo is widespread, severe and/or has ecthyma (ulceration) present'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... Chronic sores or ulcers'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner immediately if: ... Symptoms have not resolved after the first course of antibiotic treatment, symptoms significantly or rapidly worsen, if impetigo infection reoccurs frequently'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Pharmacists must refer patients to a medical practitioner but may also provide treatment if: Vesicles present in more than one but limited to a maximum of two locations (e.g., face plus arms), indicating moderate infection. Noting that multiple vesicles can be present in a single location (e.g., multiple vesicles near/around the mouth are considered as one location)'",
+      "structured": {"parameter": "number of body locations with vesicles", "operator": "range", "value": "more than 1 and up to 2", "unit": "locations"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 16, "section_heading": "B. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)"}
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'Does the patient present with signs, symptoms, or a history consistent with impetigo, based on initial presentation and information provided to the pharmacist?' (No branch: 'Consider other skin conditions (e.g., shingles, psoriasis, acne, atopic dermatitis, HSV, scabies)' and provide usual pharmacist care AND/OR 'Refer to General Practitioner')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'Does the patient/carer/caregiver consent?* *The patient must be physically present in the pharmacy' (No branch: 'Refer to General Practitioner')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'Confirmation lesions/sores affect > 2 body regions: Refer to General Practitioner' (within the '> 2 sores' branch of 'Are the number of lesions/sores confirmed by the pharmacist as limited and not extensive (<= 2 sores)?')",
+      "structured": {"parameter": "body regions with lesions/sores", "operator": ">", "value": 2, "unit": "body regions"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'Does the patient have allergies, medicine interactions or any other contraindications to management options?' - 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 9, "section_heading": "2. Protocol for Management of Impetigo"}
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'Patients should be referred to a medical practitioner where treatment with intramuscular (IM) benzylpenicillin is considered the most appropriate treatment option (e.g., There is a concern the patient being able to finish their course of treatment)'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 10, "section_heading": "2. Protocol for Management of Impetigo"}
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'Advise when to seek further care e.g., If signs and symptoms do not improve within 5 days of commencing treatment or worsen at any point in time'",
+      "structured": {"parameter": "days from commencing treatment without improvement", "operator": ">=", "value": 5, "unit": "days"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 11, "section_heading": "2. Protocol for Management of Impetigo"}
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'Where the diagnosis is uncertain, the condition is severe or recurrent, or symptoms do not improve with appropriate empirical treatment, patients should be referred to a medical practitioner for review and swab collection.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 15, "section_heading": "4.2 Examination"}
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'All other cases must be referred to a GP or other medical professional' (cases other than 'clearly identified non-recurrent, non-bullous impetigo, limited to no more than two body regions, with no signs of other complications, who are not at high risk of developing ARF')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 15, "section_heading": "4.2 Examination"}
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'A skin swab for culture and susceptibility testing is recommended for patients with impetigo that is not responding to appropriate empirical therapy' ('Where referral is required (e.g., for recurrent, severe, or uncertain cases), pharmacists should direct patients to their general practitioner or another appropriate health service')",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 18, "section_heading": "4.3 Investigations"}
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'Patients/parents/caregivers should be advised to see a medical practitioner if: ... the condition does not improve within 5-10 days of starting treatment'",
+      "structured": {"parameter": "days from starting treatment without improvement", "operator": "range", "value": "5-10", "unit": "days"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 22, "section_heading": "7.1 General advice"}
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'Patients/parents/caregivers should be advised to see a medical practitioner if: ... the patient's condition worsens, including developing systemic signs and symptoms'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 23, "section_heading": "7.1 General advice"}
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'Patients/parents/caregivers should be advised to see a medical practitioner if: ... the condition recurs after treatment course is completed'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 23, "section_heading": "7.1 General advice"}
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'Patients/parents/caregivers should be advised to see a medical practitioner if: ... adverse effects of treatment cannot be managed in the pharmacy setting'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 23, "section_heading": "7.1 General advice"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to General Practitioner",
+      "Where the protocol indicates to 'Refer to General Practitioner', the Pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate",
+      "If timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) or an urgent care clinic may be considered as an alternative pathway",
+      "All other cases must be referred to a GP or other medical professional",
+      "Where the diagnosis is uncertain, the condition is severe or recurrent, or symptoms do not improve with appropriate empirical treatment, patients should be referred to a medical practitioner for review and swab collection",
+      "Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner",
+      "Patients should be referred to a medical practitioner where treatment with intramuscular (IM) benzylpenicillin is considered the most appropriate treatment option",
+      "Where the patient or caregiver's ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to a medical practitioner for IM benzathine benzylpenicillin",
+      "Where referral is required (e.g., for recurrent, severe, or uncertain cases), pharmacists should direct patients to their general practitioner or another appropriate health service; if timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) may be considered as an alternative pathway",
+      "Treatment of co-occurring skin conditions: provide standard pharmacist care or refer to a medical practitioner as appropriate"
+    ],
+    "urgent": [
+      "Pharmacists must refer patients to a medical practitioner immediately if: the patient is below the age of 2 years old; the patient is immunocompromised; the patient is at high risk of complications of impetigo, including patients at high risk of ARF (Refer to Table 2); a clear diagnosis of impetigo cannot be made or other/co-occurring conditions are suspected that cannot be treated in the community pharmacy setting; the patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features; the impetigo is widespread, severe and/or has ecthyma (ulceration) present; chronic sores or ulcers; symptoms have not resolved after the first course of antibiotic treatment, symptoms significantly or rapidly worsen, if impetigo infection reoccurs frequently",
+      "Pharmacists must refer patients to a medical practitioner but may also provide treatment if: vesicles present in more than one but limited to a maximum of two locations (e.g., face plus arms), indicating moderate infection"
+    ],
+    "emergency": [
+      "Pharmacists must refer patients to the Emergency Department immediately if: widespread, painful rash that may be erythematous; raised purple rash that doesn't blanch; blistering of the skin and/or mucous membranes (that may include mouth and eyes); signs and symptoms of serious and/or systemic illness (e.g., complicated cellulitis, severe ecthyma, acute ARF) including fever, lethargy, headache, rash, nausea and vomiting, sore and swollen joints, food/drinking aversion in a child; generalised erythema that covers 90% or more of the skin surface, especially when associated with systemic symptoms"
+    ],
+    "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol"}
+  },
+  "review_followup": [
+    {
+      "when": "If the condition does not improve or resolve",
+      "what": "'Clinical review with the pharmacist is generally not required. If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 24, "section_heading": "8. Follow up / clinical review"}
+    },
+    {
+      "when": "'Patients/parents/caregivers should be advised to see a medical practitioner if: the condition does not improve within 5-10 days of starting treatment; the patient's condition worsens, including developing systemic signs and symptoms; the condition recurs after treatment course is completed; adverse effects of treatment cannot be managed in the pharmacy setting' (bullets begin pg. 22, continue pg. 23)",
+      "what": "Advise the patient/parents/caregivers to see a medical practitioner",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 22, "section_heading": "7.1 General advice"}
+    },
+    {
+      "when": "After treatment is commenced (advice given when communicating the agreed plan): 'If signs and symptoms do not improve within 5 days of commencing treatment or worsen at any point in time'",
+      "what": "'Advise when to seek further care'; dispense medications via pharmacy dispensing program; counsel on topical or oral anti-infectives (dose, duration, application advice, adverse effects and how to manage them), duration of treatment and expectations around resolution; offer infection control advice and supply appropriate dressings; document the consultation and share a record of the service with the patient and their usual treating GP or medical practice",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 11, "section_heading": "2. Protocol for Management of Impetigo"}
+    },
+    {
+      "when": "Impetigo not responding to appropriate empirical therapy, or diagnosis uncertain/recurrent (no initial skin swab is required before starting empirical therapy otherwise)",
+      "what": "A skin swab for culture and susceptibility testing is recommended; direct the patient to their general practitioner or another appropriate health service, with Victorian Virtual Emergency Department (VVED) referral considered if timely GP access is not available",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 18, "section_heading": "4.3 Investigations"}
+    }
+  ],
+  "notifiable": {
+    "required": false,
+    "conditions": [
+      "There is no requirement to report cases of impetigo to the Department of Health in Victoria.",
+      "The pharmacist must share a copy of the record of the service to the patient and with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply.",
+      "Consent given by the patient regarding access to the patient's My Health Record for the purpose of checking inclusion/exclusion criteria and uploading information relating to the consultation as required"
+    ],
+    "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-impetigo-december-2025.pdf", "page": 19, "section_heading": "5. Management and treatment plan"}
+  },
+  "references": [
+    "Therapeutic Guidelines: Antibiotic - Impetigo (p10, p19, p24)",
+    "Therapeutic Guidelines - Figure 2.85 Patient information: Advice for reducing the spread of impetigo (p10)",
+    "Royal Children's Hospital Melbourne: Impetigo Fact Sheet (p10, p22)",
+    "Australian Medicines Handbook (p22, p24)",
+    "Australian Medicines Handbook: Antibacterials (skin) (p24)",
+    "Australian Medicines Handbook: Antibacterials (p24)",
+    "Australian Medicines Handbook: Skin and soft tissue infections (p24)",
+    "Australian Guidelines for the Prevention and Control of Infection in Healthcare 2019 (p14)",
+    "Rheumatic Heart Disease Australia - ARF RHD Guideline (p24)",
+    "MSD Manual Professional Edition - Impetigo and Ecthyma (p24)",
+    "Royal Children's Hospital Melbourne: Clinical Practice Guidelines: Cellulitis and other bacterial skin infections (p24)",
+    "Royal Children's Hospital Melbourne: Clinical Practice Guidelines: Antimicrobial guidelines (p24)",
+    "Royal Children's Hospital Melbourne: Skin infections - bleach baths (p22, p24)",
+    "DermNet NZ: Impetigo (p15)",
+    "DermNet NZ: Impetigo (school sores, skin infections): Images, Causes, and Symptoms (p24)",
+    "Australian College of Dermatologists: ACD A-Z of Skin - Impetigo (p24)",
+    "Royal Children's Hospital Melbourne: Kids Health Info: Impetigo (school sores) (p24)",
+    "Royal Children's Hospital Melbourne: Kids Health Info: Staphylococcal infections (p24)",
+    "Better Health Channel: Impetigo - school sores (p24)",
+    "Raising Children's Network: The Australian Parenting Website - Impetigo or school sores (p24)",
+    "Victorian Department of Health: Impetigo (school sores) (p24)",
+    "Health Direct: Impetigo - treatments, symptoms and causes (p24)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Flowchart text extraction is column-scrambled (pages 6-11)",
+      "observed": "Branch labels, questions and actions are interleaved (e.g. p6 'No and provide usual pharmacist care' fragments; p9 lesion-count branches with '1 body region', '2 body regions' and '> 2 body regions' text interleaved with 'Proceed to pharmacist care' actions); branch-to-action mapping for the eligibility flowchart was inferred from the reading order of the extracted text.",
+      "why_unclear": "Extraction order may not match the visual flowchart layout; gate pass/fail directions should be checked against the rendered PDF.",
+      "source_page": 6
+    },
+    {
+      "topic": "Lesion-count body-region sub-branch (p9) - which branch carries GP follow-up",
+      "observed": "Reading 1 (as extracted): '> 2 body regions: Refer to General Practitioner'; '2 body regions: Proceed to pharmacist care (B)'; '1 body region: Proceed to pharmacist care (B) AND Refer to General Practitioner for follow up'. Reading 2 (plausible column reflow): the 'Refer to General Practitioner for follow up' action attaches to the 2-body-region branch instead of the 1-body-region branch.",
+      "why_unclear": "The three region sub-branches and their actions are scrambled in the text extraction; both readings are recorded and the step confidence is 'unclear'.",
+      "source_page": 9
+    },
+    {
+      "topic": "p9 flowchart vs p16 'treat and refer' list - apparent contradiction for 2-location/2-region cases",
+      "observed": "p9 flowchart (as read) sends >2 sores confined to 1 body region to pharmacist care (B) plus GP follow-up, and 2 body regions to pharmacist care (B) with no stated referral; p16 states pharmacists 'must refer patients to a medical practitioner but may also provide treatment if: Vesicles present in more than one but limited to a maximum of two locations ... indicating moderate infection'. p19 additionally states oral antibiotics are for extensive impetigo 'limited to no more than 2 sites'.",
+      "why_unclear": "The referral obligation for exactly 2 locations/regions differs between the flowchart and the printed list; both readings recorded without reconciliation.",
+      "source_page": 16
+    },
+    {
+      "topic": "Seek-care timeframe - two different readings recorded",
+      "observed": "p11: 'Advise when to seek further care e.g., If signs and symptoms do not improve within 5 days of commencing treatment or worsen at any point in time'. p22: 'Patients/parents/caregivers should be advised to see a medical practitioner if: the condition does not improve within 5-10 days of starting treatment'.",
+      "why_unclear": "5 days vs 5-10 days are both printed; not reconciled. RF-20 (>= 5 days) and RF-24 (range 5-10 days) each carry their own printed page.",
+      "source_page": 11
+    },
+    {
+      "topic": "Generalised erythema 90% appears in both referral branches",
+      "observed": "p8/p16 Emergency Department list: 'Generalised erythema that covers 90% or more of the skin surface, especially when associated with systemic symptoms'. p8/p16 medical practitioner list: 'The patient presents with generalised erythema that covers 90% or more of the skin surface, but the patient is otherwise well, with no systemic features.'",
+      "why_unclear": "Same numeric threshold routes to Emergency Department when systemic features are present and to a medical practitioner when the patient is otherwise well; both readings recorded as separate rules (RF-5 and RF-10).",
+      "source_page": 16
+    },
+    {
+      "topic": "Red flag wording differs between flowchart (p8) and list (p16)",
+      "observed": "'Non-blanching purple rash' (p8) vs 'Raised purple rash that doesn't blanch' (p16); systemic illness bullet includes 'severe pain' at p8 but not at p16.",
+      "why_unclear": "Minor wording differences between two printings of the same criteria; p16 wording used for red flag trigger_text with the p8 wording noted.",
+      "source_page": 8
+    },
+    {
+      "topic": "Treatment B list numbering repeats in the flowchart (p10)",
+      "observed": "Items are numbered '1. Dicloxacillin ...', '1. Flucloxacillin ...', '2. Cefalexin ...', '3. Trimethoprim + Sulfamethoxazole 160+800 mg ... 3 days', '3. Trimethoprim + Sulfamethoxazole 320+1600 mg ... 5 days' (sequence 1, 1, 2, 3, 3).",
+      "why_unclear": "Numbering does not increment uniquely; ordering/option grouping is ambiguous but doses are transcribed exactly as printed.",
+      "source_page": 10
+    },
+    {
+      "topic": "Medicines list table rows column-scrambled for trimethoprim + sulfamethoxazole (p20)",
+      "observed": "Row reads 'Oral liquid | 160+800 mg (child: 4+20 mg/kg up to | 3 days | 8+40 mg/mL or | 160+800 mg) orally, every 12 hours' and 'Tablet | 320+1600 mg (child: 8+40 mg/kg up | 5 days | 160+800 mg | to 320+1600 mg) orally, once daily'.",
+      "why_unclear": "Preparation/strength/duration column alignment is uncertain in the extraction; regimens cross-checked against the flowchart at p10 (TX-6 confidence 'medium').",
+      "source_page": 20
+    },
+    {
+      "topic": "Referral block shared provenance spans pages 6-19",
+      "observed": "Referral wording begins on p6 (VVED/urgent care alternative, 'Refer to General Practitioner'), with immediate-referral lists on p16, IM benzylpenicillin referral on p10, VVED alternative for investigations on p18 and co-occurring-condition referral on p19.",
+      "why_unclear": "Shared provenance for the referral block uses the first page (6); the block content spans pages 6-19.",
+      "source_page": 6
+    },
+    {
+      "topic": "Eligibility statement spans pages 14-15",
+      "observed": "'Only patients with clearly identified non-recurrent, non-bullous impetigo, limited to no more than two body regions ... who are not at high risk of developing ARF' begins on p14 and the sentence continues '... (Refer to Table 2 ...), are eligible for treatment under this protocol. All other cases must be referred to a GP or other medical professional.' on p15.",
+      "why_unclear": "Provenance for PW-2-S2 and RF-22 uses p14/p15 as printed; the statement itself spans both pages.",
+      "source_page": 14
+    },
+    {
+      "topic": "notifiable classification basis",
+      "observed": "The document states 'There is no requirement to report cases of impetigo to the Department of Health in Victoria' (p19), while p12 mandates sharing the record of the service with the patient and their usual treating medical practitioner/medical practice, recording the supply in pharmacy software and an approved Victorian DH IT system, and MHR upload of consultation information as required.",
+      "why_unclear": "required set to false based on the explicit no-report statement; documentation/notification conditions listed for reference. The document is silent on the AIR.",
+      "source_page": 19
+    },
+    {
+      "topic": "p16 ineligibility items captured in both eligibility.exclusion and red_flags",
+      "observed": "The eight 'Pharmacists must refer patients to a medical practitioner immediately if' items (EXC-1..EXC-8) are also red_flags RF-6..RF-13 with action REFER_URGENT; the Emergency Department list (RF-1..RF-5) is kept only in red_flags, while EXC-9 (bullous impetigo, p8) and EXC-10 (> 2 body regions, p9) are kept only in eligibility.exclusion.",
+      "why_unclear": "The section heading reads 'Red flag signs or patient ineligibility criteria', so the same printed items serve as an evaluable decision list and as typed escalation rules carrying the document's own 'immediately' urgency; earlier protocol files kept exclusion-only lists out of red_flags. Confirm consumer expectations for the overlap.",
+      "source_page": 16
+    },
+    {
+      "topic": "Unstated fail actions for confirmation gates",
+      "observed": "Gates PW-1-S10 ('Lesion/sores count and body-region distribution confirmed'), PW-1-S12 (treatment A/B selection), PW-1-S14 ('Confirm management plan is appropriate...'), PW-2-S8 (NB1 topical-appropriateness) and PW-2-S9 ('Confirm management is appropriate...') carry on_fail 'unclear'.",
+      "why_unclear": "The document does not state the action if these checks fail; only referral failure actions are printed (Refer to General Practitioner / Refer to the Emergency Department immediately / refer to a medical practitioner).",
+      "source_page": 11
+    },
+    {
+      "topic": "Age bound and no upper age limit",
+      "observed": "Flowchart p6: 'Is the patient aged >= 2 years of age?'; p14: 'patients < 2 years of age are NOT eligible for treatment and must be referred to a medical practitioner'; p16: 'The patient is below the age of 2 years old'. No maximum age is printed anywhere in the document.",
+      "why_unclear": "min_years = 2 (>= 2 inclusive per flowchart wording); max_years left null because no numeric upper bound is printed.",
+      "source_page": 6
+    },
+    {
+      "topic": "IM benzylpenicillin product naming differs between printings",
+      "observed": "p10 note: 'treatment with intramuscular (IM) benzylpenicillin is considered the most appropriate treatment option'; p19 NB2: 'referral to a medical practitioner for IM benzathine benzylpenicillin'.",
+      "why_unclear": "The document uses 'benzylpenicillin' and 'benzathine benzylpenicillin' for the same referral scenario; both quoted as printed, not reconciled.",
+      "source_page": 10
+    },
+    {
+      "topic": "Printed wording preserved where quoted (legislation title, table counts)",
+      "observed": "p10 side note prints 'Drugs, Poisons and Controlled substances Regulation 2017' (lower-case 's' in substances, singular 'Regulation'); flowchart continues use printed page numbers ('continue on page 7', 'continue page 9', 'No: continue page 10') that match the PDF page markers.",
+      "why_unclear": "Quoted as printed to avoid silent correction; confirm whether the consumer expects the corrected citation title.",
+      "source_page": 10
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm the pharmacist has completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons (requirement of the Secretary Approval: Community Pharmacist Program).",
+      "source_page": 5,
+      "reason": "Individual training/authorisation status cannot be verified from the protocol document."
+    },
+    {
+      "item": "'Pharmacists are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 5,
+      "reason": "Protocol delegates adaptation of guidelines to professional judgment; local policy must define acceptable adaptation before go-live."
+    },
+    {
+      "item": "Referral destination flexibility: where the protocol indicates 'Refer to General Practitioner' the pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate; if timely GP access is not available, VVED or an urgent care clinic may be considered as an alternative pathway.",
+      "source_page": 6,
+      "reason": "Jurisdictional/local pathway availability (VVED, urgent care clinics, which practitioners count) must be confirmed for implementation."
+    },
+    {
+      "item": "Assessment of high ARF risk using Table 2: People considered at high risk of developing ARF (household overcrowding '> 2 people per bedroom', socioeconomic disadvantage, personal/family ARF or RHD history, residence/travel to endemic areas, APSGN; additional risk factors for individuals aged <= 40 years).",
+      "source_page": 18,
+      "reason": "High ARF risk gates eligibility; how the pharmacist asks about and records these social/history factors in the pharmacy must be confirmed locally."
+    },
+    {
+      "item": "'Bleach baths may help reduce bacterial load and support healing. Pharmacists may advise families on the safe use of bleach baths in line with the Royal Children's hospital guidance: Skin infections: bleach baths.'",
+      "source_page": 22,
+      "reason": "Advice is discretionary ('may advise') and depends on an external patient resource; confirm local counselling script/resource availability."
+    },
+    {
+      "item": "'Children may return to school or childcare after 24 hours of treatment if all sores are fully covered.'",
+      "source_page": 22,
+      "reason": "School/childcare exclusion advice is jurisdictional and must be checked against current Victorian school exclusion guidance before go-live."
+    },
+    {
+      "item": "Referral for intramuscular benzylpenicillin/benzathine benzylpenicillin: 'Patients should be referred to a medical practitioner where treatment with intramuscular (IM) benzylpenicillin is considered the most appropriate treatment option' and NB2 referral 'for IM benzathine benzylpenicillin' where topical adherence is in doubt.",
+      "source_page": 10,
+      "reason": "Referral destination and criteria for IM therapy are not specified (who supplies it, which service); local pathway must be confirmed."
+    },
+    {
+      "item": "Record keeping: 'The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply' and must share a copy of the record with the patient and their usual treating medical practitioner/medical practice.",
+      "source_page": 12,
+      "reason": "Which approved IT system is in use locally, and the record/sharing/MHR upload workflow, must be confirmed."
+    },
+    {
+      "item": "Penicillin hypersensitivity discretion: 'consideration should be given to the extent of the reaction, patient acceptability, and the suitability of non-beta-lactam options' when choosing cefalexin after a non-severe penicillin/amoxicillin/ampicillin reaction.",
+      "source_page": 20,
+      "reason": "The protocol leaves the decision to the pharmacist's consideration; a local rule (what counts as non-severe vs severe) is needed before go-live."
+    },
+    {
+      "item": "Choice of oral agent for extensive non-bullous impetigo (1st line dicloxacillin/flucloxacillin, 2nd line cefalexin, 3rd line trimethoprim + sulfamethoxazole) and the '(stop at 3 days if resolved)' rule for twice-daily regimens.",
+      "source_page": 20,
+      "reason": "Selection order, quantity-to-supply per regimen and implementation of the stop-at-3-days rule must be confirmed against local dispensing policy."
+    },
+    {
+      "item": "NB2 discretion: 'Where the patient or caregiver's ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to a medical practitioner for IM benzathine benzylpenicillin.'",
+      "source_page": 19,
+      "reason": "'In doubt' is a judgement trigger with two possible actions (oral antibiotic or referral); local policy must define how it is applied and recorded."
+    },
+    {
+      "item": "Effective date/version: only 'December 2025' is printed (cover and copyright page); no version number or separate effective date is printed.",
+      "source_page": 1,
+      "reason": "instrument_version and effective_date were derived from the printed date; confirm the authoritative effective date."
+    },
+    {
+      "item": "Documented exception where referral and treatment both occur: 'Pharmacists must refer patients to a medical practitioner but may also provide treatment if: Vesicles present in more than one but limited to a maximum of two locations (e.g., face plus arms), indicating moderate infection.'",
+      "source_page": 16,
+      "reason": "Dual referral-plus-treatment action must be encoded in the engine (and reconciled with the flowchart at pg. 9); confirm intended behaviour."
+    }
+  ]
+}

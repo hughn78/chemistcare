@@ -1,0 +1,704 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf",
+    "pdf_sha256": "5043a145f84ca9868af54d8267ae048171abc7cff4c9812b53434029b46a9dff",
+    "page_count": 19,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "SA Community Pharmacy Oral Contraceptive Pill (OCP) Resupply Services Management Protocol",
+    "instrument_version": "April 2024",
+    "effective_date": "2024-04-09",
+    "legal_basis": "p2 Authorisation: 'In accordance with the Community Pharmacy Oral Contraceptive Pill Resupply Services Scheme as determined by the Minister for Health and Wellbeing by notice in the Gazette on 9th April 2024, registered pharmacists who have successfully completed training may resupply specified oral contraceptive pills without a prescription to eligible patients for the purpose of contraception.' p6 Approved OCPs: 'Supply, packaging and labelling of the approved OCPs is in accordance with the requirements in the Controlled Substances Act (1984) and the Controlled Substances (Poisons) Regulations 2011.' NOTE: this instrument does NOT cite regulation 17A of the Controlled Substances (Poisons) Regulations 2011, the register of authorised pharmacists or the Community Pharmacist Prescribing Code — it authorises resupply without a prescription under a separate gazetted scheme (see open_questions).",
+    "supervision_model": "Document's own terminology (p2): 'registered pharmacists who have successfully completed training may resupply specified oral contraceptive pills without a prescription to eligible patients'. Conditions (p4): the pharmacist 'has an unconditional general registration with the Australian Health Practitioner Regulation Agency (Ahpra)'; 'Prior to providing services, the pharmacist must have successfully completed approved training as referred to in Appendix 1, and must maintain eligibility to provide services, including any ongoing training and professional development.' Pharmacy conditions (p4): 'Community pharmacies registered by the Pharmacy Regulation Authority of South Australia (PRASA) may participate in the scheme'; the pharmacy must have 'a screened or private consulting area' ensuring 'visual and auditory privacy'. The document does not use 'collaborative'/'autonomous' terminology.",
+    "scope_summary": "SA Health / PRASA Community Pharmacy OCP Resupply Services Management Protocol (April 2024) providing a framework for pharmacists authorised to resupply an approved oral contraceptive to eligible patients under the Community Pharmacy Oral Contraceptive Pill (OCP) Resupply Services Scheme — supply without a prescription, complementary to medical practitioner management, the PBS emergency supply rule and Continued Dispensing. Covers authorisation; definitions; services; conditions (pharmacist and pharmacy); patient eligibility (aged 17 to 40 — up to 12 months' supply; aged 41 to 50 — one pack/one resupply then refer for review; OCP history — initiated by a prescriber with stable continuous use for a minimum of 2 years; pill break rules; review of OCP at least once every 2 years); approved OCPs (Appendix 2 permitted estrogens/progestogens; no initiation or change of therapy; quantity limited to one original manufacturer's pack); clinical documentation and communication (clinical record, dispensing record, My Health Record upload, sharing with consent); consultation fees; cultural safety; Clinical Flow Chart (p8-p9, image only — no extractable text); Supplementary Information (young people under 17, people over 50, transgender/gender diverse/non-binary people, patient history, BMI and BP, nicotine vaping, referral triggers, patient information and counselling, preventative screening); Appendix 1 training requirements; Appendix 2 approved medicines (Tables 1-2); Appendix 3 contraindications to resupply (UKMEC Category 3 and 4 Tables 3-4); Appendix 4 references."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Patient aged 17 to 50 years: 'Patients aged 17 to 40 years: Eligible for resupply of one original manufacturer's pack of OCP at any one time, with additional resupply permitted for up to a maximum of 12 months' supply of the OCP in total.' 'Patients aged 41 to 50 years: Eligible for resupply of one original manufacturer's pack of OCP only – one resupply is permitted and the patient should be referred for review by their medical practitioner or other authorised prescribing healthcare practitioner.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Age range" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'OCP initiated by a medical practitioner or other authorised prescribing healthcare practitioner, and the patient has a history of stable continuous use of the requested OCP for a minimum of 2 years, prior to resupply through community pharmacy.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "OCP history" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'Verification of the requested OCP can be confirmed by sighting a previous prescription, OCP pack, or other physical and/or electronic dispensing records and My Health Record.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "OCP history" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Use of the OCP has been continuous, or any pill break was less than 2 weeks: 'The pharmacist must ascertain whether use of the OCP has been continuous. If a pill break has occurred for: Less than 2 weeks: Resupply of the OCP may occur.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Requested OCP is an approved OCP listed in Appendix 2: 'The pharmacist must only resupply approved OCPs as listed in Appendix 2.' Permitted estrogens: 'Ethinylestradiol (40 micrograms or less)' or 'Estradiol'; permitted progestogens: 'Levonorgestrel', 'Norethisterone', 'Drosperinone [as printed]', 'Nomegestrol', 'Desogestrel', 'Dienogest', 'Gestodene', 'Cyproterone'.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 14, "section_heading": "Appendix 2 – Approved Medicines" }
+      },
+      {
+        "id": "INC-6",
+        "text": "'The pharmacist must not sell or supply the OCPs in a quantity that exceeds one original manufacturer's pack of the OCP.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Approved OCPs" }
+      },
+      {
+        "id": "INC-7",
+        "text": "'As per the Clinical Flow Chart, sufficient information must be obtained from the patient to assess the safety and appropriateness of resupply of the OCP. The My Health Record should be reviewed where appropriate and available. The patient history should include: Age; Pregnancy and breastfeeding status; Body Mass Index (BMI)*; Blood Pressure (BP)*; Smoking status**; Current medications, including adherence and satisfaction with OCP; Drug allergies/adverse effects, including any adverse effects of OCP; Prior use of contraceptives, tolerability, and adverse effects; Any unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding; Any headaches indicative of migraines; Underlying medical conditions, including new or recently diagnosed medical conditions (see UK Medical Eligibility Criteria (UKMEC) 3 and 4, Appendix 3).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "Patient history" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Pharmacist conditions: 'The pharmacist providing services has an unconditional general registration with the Australian Health Practitioner Regulation Agency (Ahpra).'; 'Prior to providing services, the pharmacist must have successfully completed approved training as referred to in Appendix 1, and must maintain eligibility to provide services, including any ongoing training and professional development.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 4, "section_heading": "Conditions" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Pharmacy conditions: 'Community pharmacies registered by the Pharmacy Regulation Authority of South Australia (PRASA) may participate in the scheme.'; the pharmacy must have 'an area suitable to maintain confidentiality of the consultation, i.e., have a screened or private consulting area that: Ensures patients' privacy and confidentiality, including visual and auditory privacy. Has sufficient space to allow the presence of the patient, a carer if required, the pharmacist, and relevant equipment and documentation.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 4, "section_heading": "Conditions" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "Younger than 17 years: 'Patients younger than 17 years of age are to be confidentially referred to a general practitioner or a sexual health clinic.' Referral list (p11): 'Younger than 17 or over 50 years of age'.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "Young people" } },
+      { "id": "EXC-2", "text": "Over 50 years: 'The choice of contraceptive should be reconsidered at age 50 and at menopause and these patients should be referred to their treating practitioner.' Referral list (p11): 'Younger than 17 or over 50 years of age'.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "People over 50 years of age" } },
+      { "id": "EXC-3", "text": "Referral trigger: 'Not currently taking and wants to restart an OCP'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-4", "text": "Referral trigger: 'Request is for a different OCP than that stabilised on or a different type or contraception, e.g., a LARC' [as printed].", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-5", "text": "Referral trigger: 'Requested OCP is not on the protocol medicines list'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-6", "text": "Referral trigger: 'Requested OCP is now contraindicated or not appropriate, e.g., hypertensive, BMI >35'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-7", "text": "Referral trigger: 'Headache history is suggestive of migraines'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-8", "text": "Referral trigger: 'Unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-9", "text": "Referral trigger: 'Potentially pregnant'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-10", "text": "Referral trigger: 'If drug interactions are identified'.", "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+      { "id": "EXC-11", "text": "Pill break of one month or more: 'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.'", "criteria_group": { "all_of": [], "any_of": ["EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" } },
+      { "id": "EXC-12", "text": "'Supply of COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) is not permitted.'", "criteria_group": { "all_of": [], "any_of": ["EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Approved OCPs" } },
+      { "id": "EXC-13", "text": "'Supply of COCPs containing estetrol or mestranol is not permitted.'", "criteria_group": { "all_of": [], "any_of": ["EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Approved OCPs" } },
+      { "id": "EXC-14", "text": "'The pharmacist must not sell or supply the OCPs in a quantity that exceeds one original manufacturer's pack of the OCP.'", "criteria_group": { "all_of": [], "any_of": ["EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Approved OCPs" } },
+      { "id": "EXC-15", "text": "'Pharmacists are not permitted to initiate or change therapy.'", "criteria_group": { "all_of": [], "any_of": ["EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Approved OCPs" } },
+      { "id": "EXC-16", "text": "COCP contraindication (Table 3, 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral'): 'Current or previous history of breast cancer (including carriers of known gene mutations associated with breast cancer)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-17", "text": "COCP contraindication (Table 3): 'Migraine with/without aura'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-18", "text": "COCP contraindication (Table 3): 'Current or past history of ischaemic heart disease, stroke or transient ischaemic attack'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-19", "text": "COCP contraindication (Table 3): 'Aged 35 years or older and current smoker or recently quit smoking (including nicotine vaping*) in the last 12 months'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-20", "text": "COCP contraindication (Table 3): 'Hypertension (systolic blood pressure 140 mmHg or higher, or diastolic blood pressure 90 mmHg or higher), including adequately controlled hypertension'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-21", "text": "COCP contraindication (Table 3): 'Hypertension, with vascular disease'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-22", "text": "COCP contraindication (Table 3): 'Complicated valvular or congenital heart disease'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-23", "text": "COCP contraindication (Table 3): 'Cardiomyopathy with impaired cardiac function'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-24", "text": "COCP contraindication (Table 3): 'Atrial fibrillation'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-25", "text": "COCP contraindication (Table 3): 'Current or past history of VTE or a first-degree relative with a VTE (provoked or unprovoked) under the age of 45 years'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-26", "text": "COCP contraindication (Table 3): 'Positive antiphospholipid antibodies'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-27", "text": "COCP contraindication (Table 3): 'Known thrombogenic mutations, e.g. factor V Leiden, prothrombin mutation, Protein S, Protein C, antithrombin deficiencies'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-28", "text": "COCP contraindication (Table 3): 'Prolonged immobilisation'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-29", "text": "COCP contraindication (Table 3): 'Severe (decompensated) cirrhosis'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-30", "text": "COCP contraindication (Table 3): 'Hepatocellular adenoma or malignant liver tumour'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-31", "text": "COCP contraindication (Table 3): 'Body mass index (BMI) 35 kg/m2 or more'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-32", "text": "COCP contraindication (Table 3): 'Diabetes with nephropathy, retinopathy, neuropathy or other vascular disease'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-33", "text": "COCP contraindication (Table 3): 'Gall bladder disease (medically treated or current)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-34", "text": "COCP contraindication (Table 3): 'Undiagnosed mass/breast symptoms (only if the condition is pre-existing and the COCP is initiated)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-35", "text": "COCP contraindication (Table 3): 'Multiple risk factors for cardiovascular disease (such as smoking, diabetes, hypertension, obesity, and dyslipidaemias)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-36", "text": "COCP contraindication (Table 3): 'Past COC related cholestasis'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-37", "text": "COCP contraindication (Table 3): 'Organ transplant - Complicated: graft failure (acute or chronic), rejection, cardiac allograft vasculopathy'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-38", "text": "COCP contraindication (Table 3): 'Acute viral hepatitis, or flare (only if the condition is pre-existing and the COC is initiated)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31", "EXC-32", "EXC-33", "EXC-34", "EXC-35", "EXC-36", "EXC-37", "EXC-38"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+      { "id": "EXC-39", "text": "POP contraindication (Table 4, 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral'): 'Current or previous history of breast cancer'.", "criteria_group": { "all_of": [], "any_of": ["EXC-39", "EXC-40", "EXC-41", "EXC-42", "EXC-43"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+      { "id": "EXC-40", "text": "POP contraindication (Table 4): 'Unexplained vaginal bleeding (suspicious for a serious condition) before investigation for the cause'.", "criteria_group": { "all_of": [], "any_of": ["EXC-39", "EXC-40", "EXC-41", "EXC-42", "EXC-43"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+      { "id": "EXC-41", "text": "POP contraindication (Table 4): 'Severe (decompensated) cirrhosis'.", "criteria_group": { "all_of": [], "any_of": ["EXC-39", "EXC-40", "EXC-41", "EXC-42", "EXC-43"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+      { "id": "EXC-42", "text": "POP contraindication (Table 4): 'Hepatocellular adenoma or malignant liver tumour'.", "criteria_group": { "all_of": [], "any_of": ["EXC-39", "EXC-40", "EXC-41", "EXC-42", "EXC-43"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+      { "id": "EXC-43", "text": "POP contraindication (Table 4): 'Ischaemic heart disease, stroke or transient ischaemic attack (TIA) that develops during use'.", "criteria_group": { "all_of": [], "any_of": ["EXC-39", "EXC-40", "EXC-41", "EXC-42", "EXC-43"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } }
+    ],
+    "age_bounds": {
+      "min_years": 17,
+      "max_years": 50,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Age range" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "Pill break between 2 and 4 weeks may still be resupplied: 'More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.'", "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" }, "confidence": "high" },
+      { "id": "EXE-2", "text": "STI screening referral does not block resupply: 'STI screening is indicated (although OCP may still be resupplied by the pharmacist)'.", "criteria_group": { "all_of": ["EXE-2"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" }, "confidence": "high" },
+      { "id": "EXE-3", "text": "Breastfeeding/postpartum status is not a listed contraindication: 'Breastfeeding and postpartum risks have been excluded from Table 3 due to the requirement for a 2-year history of continuous OCP use to be eligible for this service.'", "criteria_group": { "all_of": ["EXE-3"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Appendix 3 – Contraindications to resupply" }, "confidence": "high" },
+      { "id": "EXE-4", "text": "Gender identity is not a restriction: 'These services are inclusive of transgender, gender diverse, intersex or non-binary people assigned and/or presumed female at birth - current gender identity does not impose any restrictions on methods of contraception that may be used; the same considerations apply for choosing safe and effective contraception, including personal characteristics, existing medical conditions and current medicines.'", "criteria_group": { "all_of": ["EXE-4"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "Transgender, gender diverse and non-binary people" }, "confidence": "high" }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "OCP resupply assessment (Clinical Flow Chart and Supplementary Information)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Obtain the patient history required to assess safety and appropriateness of resupply (p10-p11): 'As per the Clinical Flow Chart, sufficient information must be obtained from the patient to assess the safety and appropriateness of resupply of the OCP. The My Health Record should be reviewed where appropriate and available.' History includes Age; Pregnancy and breastfeeding status; Body Mass Index (BMI)*; Blood Pressure (BP)*; Smoking status** (there is an increased VTE risk in smokers 35 years and older); Current medications, including adherence and satisfaction with OCP; Drug allergies/adverse effects, including any adverse effects of OCP; Prior use of contraceptives, tolerability, and adverse effects; Any unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding; Any headaches indicative of migraines; Underlying medical conditions, including new or recently diagnosed medical conditions (see UK Medical Eligibility Criteria (UKMEC) 3 and 4, Appendix 3), which may: Be a contraindication to hormonal contraception, e.g., migraine with aura; Impact on contraceptive effectiveness and choice. NOTE: the Clinical Flow Chart (p8-p9) is an image with no extractable text — its decision nodes could not be transcribed (see open_questions).",
+          "gates": [
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of resupply of the OCP (age, pregnancy and breastfeeding status, BMI, BP, smoking status, current medications, drug allergies/adverse effects, prior contraceptive use, unexplained vaginal bleeding, headaches indicative of migraines, underlying medical conditions)", "on_fail": "unclear" },
+            { "criterion": "My Health Record reviewed where appropriate and available", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Verify the OCP history (p5): 'OCP initiated by a medical practitioner or other authorised prescribing healthcare practitioner, and the patient has a history of stable continuous use of the requested OCP for a minimum of 2 years, prior to resupply through community pharmacy.' 'Verification of the requested OCP can be confirmed by sighting a previous prescription, OCP pack, or other physical and/or electronic dispensing records and My Health Record.'",
+          "gates": [
+            { "criterion": "The requested OCP was initiated by a medical practitioner or other authorised prescribing healthcare practitioner", "on_fail": "REFER" },
+            { "criterion": "History of stable continuous use of the requested OCP for a minimum of 2 years, prior to resupply through community pharmacy", "on_fail": "REFER" },
+            { "criterion": "Verification of the requested OCP confirmed by sighting a previous prescription, OCP pack, or other physical and/or electronic dispensing records and My Health Record", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "OCP history" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Measure blood pressure and calculate BMI (p11): 'The pharmacist should measure blood pressure (BP) and calculate BMI to determine the patient's suitability for continuing their OCP and record this information in their clinical software program. Note that a single elevated BP reading is not enough to classify an individual as hypertensive (note that activity immediately prior to consultation should also be taken into consideration) and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method. BMI should be calculated on the first presentation, and professional judgement exercised regarding whether BMI needs to be recalculated on subsequent presentations (i.e., consider length of time between presentations, changes in body weight).'",
+          "gates": [
+            { "criterion": "Blood pressure measured and recorded in the clinical software program, with a second BP reading taken at the end of the consultation where the first reading is elevated", "on_fail": "unclear" },
+            { "criterion": "BMI calculated on first presentation and recorded (recalculated on subsequent presentations using professional judgement)", "on_fail": "unclear" },
+            { "criterion": "BP does not remain elevated on the second reading", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "*BMI and Blood Pressure" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Apply the age-band rules (p5): 'Patients aged 17 to 40 years: Eligible for resupply of one original manufacturer's pack of OCP at any one time, with additional resupply permitted for up to a maximum of 12 months' supply of the OCP in total. The pharmacist must be satisfied that the supply is appropriate on each occasion. The medical review date with the medical practitioner or other authorised prescribing healthcare practitioner must be considered at each resupply, to ensure that the resupply only allows for the continuation of the OCP within the 2-year period (see below Review of OCP).' 'Patients aged 41 to 50 years: Eligible for resupply of one original manufacturer's pack of OCP only – one resupply is permitted and the patient should be referred for review by their medical practitioner or other authorised prescribing healthcare practitioner.' Out-of-band ages are referred (p10-p11): under 17 confidentially to a general practitioner or a sexual health clinic; over 50 to their treating practitioner.",
+          "gates": [
+            { "criterion": "Patient aged 17 to 50 years", "on_fail": "REFER" },
+            { "criterion": "Aged 41 to 50 years: only one resupply has occurred, and the patient has been referred for review by their medical practitioner or other authorised prescribing healthcare practitioner", "on_fail": "REFER" },
+            { "criterion": "Aged 17 to 40 years: additional resupply remains within a maximum of 12 months' supply of the OCP in total", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Age range" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Assess pill break continuity (p5): 'The pharmacist must ascertain whether use of the OCP has been continuous. If a pill break has occurred for: Less than 2 weeks: Resupply of the OCP may occur. More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner. One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.' If use is continuous or the pill break was less than 2 weeks, continue to the medicine and contraindication screen; otherwise branch to PW-1-S6.",
+          "gates": [
+            { "criterion": "Use of the OCP has been continuous, or any pill break was less than 2 weeks", "on_fail": "SEE_PW-1-S6" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "REFER",
+          "description": "Pill break of 2 weeks or more (p5): 'More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.' 'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.' '*Note: The risk of venous thromboembolism (VTE) with the combined oral contraceptive pill (COCP) is highest in the first year of use, and particularly in the first 3-4 months after commencement. The level of risk returns, if the patient misses taking the COCP for 1 month or more.' 'If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'",
+          "gates": [
+            { "criterion": "Pill break is less than 1 month (for a pill break of 'One month or more' the document states: 'Do not resupply OCP. The patient should be referred...')", "on_fail": "REFER" },
+            { "criterion": "Where a pill break of more than 2 weeks but less than 4 weeks has occurred, any resupply is limited to 'Resupply of 1 month of the OCP ... with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner'", "on_fail": "unclear" },
+            { "criterion": "If a patient frequently takes pill breaks, professional judgement exercised and referral considered to explore alternative contraception options, e.g., LARCs", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Approved-medicine and supply-limit check (p6, p14-p15): 'The pharmacist must only resupply approved OCPs as listed in Appendix 2.' 'Pharmacists are not permitted to initiate or change therapy.' 'Supply of COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) is not permitted. Supply of COCPs containing estetrol or mestranol is not permitted.' 'The pharmacist must not sell or supply the OCPs in a quantity that exceeds one original manufacturer's pack of the OCP.' Appendix 2 permitted estrogens: 'Ethinylestradiol (40 micrograms or less)'; 'Estradiol'. Permitted progestogens: 'Levonorgestrel'; 'Norethisterone'; 'Drosperinone [as printed — Tables 1 and 2 print drospirenone]'; 'Nomegestrol'; 'Desogestrel'; 'Dienogest'; 'Gestodene'; 'Cyproterone'. Table 1 lists COCP brand examples (ethinylestradiol 20/30/35 micrograms or estradiol 1500 with drospirenone, levonorgestrel, nomegestrol, desogestrel, dienogest, gestodene, cyproterone, norethisterone; plus triphasic Logynon ED/Trifeme/Triphasil/Triquilar ED and quadriphasic Qlaira); Table 2 lists POPs 'norethisterone 350 mcg Noriday', 'levonorgestrel 30 mcg Microlut', 'drospirenone 4 mg Slinda'.",
+          "gates": [
+            { "criterion": "Requested OCP is an approved OCP listed in Appendix 2 (permitted estrogens and progestogens; Tables 1 and 2)", "on_fail": "REFER" },
+            { "criterion": "Supply is not a COCP with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) and does not contain estetrol or mestranol", "on_fail": "REFER" },
+            { "criterion": "Quantity does not exceed one original manufacturer's pack of the OCP", "on_fail": "STOP" },
+            { "criterion": "The pharmacist is not initiating or changing therapy ('Pharmacists are not permitted to initiate or change therapy.')", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Approved OCPs" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Contraindication and referral screen (p11-p12, p16-p17): 'Underlying medical conditions ... (see UK Medical Eligibility Criteria (UKMEC) 3 and 4, Appendix 3), which may: Be a contraindication to hormonal contraception, e.g., migraine with aura (Patients with a UKMEC Category 3 or 4 condition are not eligible for resupply and require referral. See Appendix 3 for UKMEC Category 3 and 4 criteria.)'. 'Pharmacists should refer patients to a medical practitioner (or sexual health clinic) if: Younger than 17 or over 50 years of age; Not currently taking and wants to restart an OCP; Request is for a different OCP than that stabilised on or a different type or contraception, e.g., a LARC; Requested OCP is not on the protocol medicines list; Requested OCP is now contraindicated or not appropriate, e.g., hypertensive, BMI >35; Headache history is suggestive of migraines; Unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding; Potentially pregnant; STI screening is indicated (although OCP may still be resupplied by the pharmacist); If drug interactions are identified.' Appendix 3 Tables 3 (COCP) and 4 (POP) list 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral'.",
+          "gates": [
+            { "criterion": "No UKMEC Category 3 or 4 condition from Appendix 3 (Table 3 for COCP / Table 4 for POP)", "on_fail": "REFER" },
+            { "criterion": "Requested OCP is not now contraindicated or not appropriate (e.g. not hypertensive, BMI not >35)", "on_fail": "REFER" },
+            { "criterion": "No referral trigger present: not currently taking/restarting; different OCP or contraception type requested; OCP not on protocol medicines list; headache history suggestive of migraines; unexplained vaginal bleeding or acute, severe menstrual bleeding; potentially pregnant; drug interactions identified", "on_fail": "REFER" },
+            { "criterion": "Pregnancy and breastfeeding status recorded as part of the patient history (BP and BMI results recorded per PW-1-S3)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "TREAT",
+          "description": "Resupply the approved OCP (p5-p6): 'Eligible for resupply of one original manufacturer's pack of OCP at any one time, with additional resupply permitted for up to a maximum of 12 months' supply of the OCP in total.' 'The pharmacist must be satisfied that the supply is appropriate on each occasion.' 'The medical review date with the medical practitioner or other authorised prescribing healthcare practitioner must be considered at each resupply, to ensure that the resupply only allows for the continuation of the OCP within the 2-year period.' 'The pharmacist must not sell or supply the OCPs in a quantity that exceeds one original manufacturer's pack of the OCP.' For patients aged 41 to 50 years: 'Eligible for resupply of one original manufacturer's pack of OCP only – one resupply is permitted'. 'Supply, packaging and labelling of the approved OCPs is in accordance with the requirements in the Controlled Substances Act (1984) and the Controlled Substances (Poisons) Regulations 2011.'",
+          "gates": [
+            { "criterion": "The pharmacist is satisfied that the supply is appropriate on each occasion", "on_fail": "REFER" },
+            { "criterion": "The medical review date has been considered at each resupply, so resupply only allows continuation of the OCP within the 2-year period", "on_fail": "REFER" },
+            { "criterion": "Quantity supplied does not exceed one original manufacturer's pack of the OCP", "on_fail": "STOP" },
+            { "criterion": "Aged 41 to 50 years: only one resupply has been provided (one original manufacturer's pack only), with referral for review", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Age range" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical documentation and communication (p6-p7): 'The pharmacist must make a clinical record, and a record in a pharmacy dispensing system regarding the supply of any OCPs under these services.' The record must include: 'Sufficient information to identify the patient. The name of the pharmacist who undertook the consultation and their Healthcare Provider Identifier-Individual (HPI-I) number. The date of the consultation. Information relevant to the patient's treatment (e.g. patient's medical history, adverse drug reactions). Any clinical opinion reached, and actions taken by the pharmacist. Details of the OCP supplied to the patient (generic name, form, strength and quantity). Any information or advice given by the pharmacist to the patient in relation to any proposed treatment. Details of any referrals made to a medical practitioner or other healthcare practitioner. Any consent given by a patient to the consultation, supply of medication, treatment proposed, and sharing of information with their medical practitioner or other relevant healthcare practitioners or services.' 'Where a patient has a My Health Record, the pharmacist must ensure the details of the OCP supply are uploaded to My Health Record, unless requested otherwise by the patient.' 'The pharmacist must offer a record of the service to the patient.' 'Following consent by the patient, the pharmacist may share a record of the supply and consultation with the patient's usual treating medical practitioner or medical practice, where the patient has one.' 'Pharmacists must, at the request of the Minister for Health and Wellbeing, provide data on the scheme periodically (for monitoring and evaluation purposes).'",
+          "gates": [
+            { "criterion": "Clinical record and pharmacy dispensing record made, containing all listed record elements (patient identifiers, pharmacist name and HPI-I, date, treatment information, clinical opinion and actions, OCP details — generic name, form, strength and quantity, advice given, referrals, consent)", "on_fail": "unclear" },
+            { "criterion": "Details of the OCP supply uploaded to My Health Record where the patient has one, unless requested otherwise by the patient", "on_fail": "unclear" },
+            { "criterion": "A record of the service offered to the patient; shared with the patient's usual treating medical practitioner following consent where the patient has one", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Clinical documentation and communication" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "Patient information, counselling and screening promotion (p12): 'Where a patient is prescribed an oral contraceptive, they should be provided with comprehensive counselling and be given supporting written information (e.g., Consumer Medicines Information (CMI)) when required, regarding: Instructions for use; Side effects to expect, and how to manage these side effects; What to do in the event of a missed pill and emergency contraception options available if required; Importance of adherence, and avoiding stopping/starting the pill; When to seek further care from their medical practitioner or other authorised prescribing healthcare practitioner: the signs of VTE and what to do if it is suspected; the importance of reporting new or worsening mood-related symptoms to the pharmacist and usual medical practitioner; if health screening is indicated.' Screening ('Patients should be provided information about and be encouraged to make an appointment for the following screening'): 'Cervical screening – routine screening is available for people from the age of 25 and is recommended every five years'; 'Breast checks – people who have a personal or family history of breast cancer, should be advised to see their medical practitioner for advice regarding frequency and type of screening'; 'Sexually transmitted infection (STI) screening – recommended for anyone who is sexually active and engaging in unprotected sex'. 'Only oral forms of contraception are available for resupply. Pharmacists may also discuss the use of LARCs with patients when appropriate, as per the Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG) recommendations.'",
+          "gates": [
+            { "criterion": "Comprehensive counselling and supporting written information provided (instructions for use; side effects and management; missed pill and emergency contraception options; adherence; when to seek further care — VTE signs, mood-related symptoms, health screening)", "on_fail": "unclear" },
+            { "criterion": "Screening information provided and appointment encouraged (cervical screening from age 25 every five years; breast checks where personal or family history of breast cancer; STI screening for sexually active patients engaging in unprotected sex)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Patient information and counselling" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "FOLLOW_UP",
+          "description": "OCP review interval (p5): 'Patients should have a thorough review of their OCP use by their medical practitioner or other authorised prescribing healthcare practitioner at least once every 2 years.' At each resupply the medical review date must be considered to ensure resupply only allows continuation of the OCP within the 2-year period; patients aged 41 to 50 years are referred for review after their single permitted resupply. 'This Management Protocol will be reviewed on a regular basis as required.' (p12)",
+          "gates": [
+            { "criterion": "Thorough review of OCP use by the patient's medical practitioner or other authorised prescribing healthcare practitioner at least once every 2 years", "on_fail": "REFER" },
+            { "criterion": "Aged 41 to 50 years: patient referred for review by their medical practitioner or other authorised prescribing healthcare practitioner after the one permitted resupply", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Review of OCP" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    { "id": "TX-1", "drug": "ethinylestradiol + drospirenone", "form": "oral contraceptive pill (monophasic oral formulation: Low estrogen dose)", "strength": "ethinylestradiol 20; drospirenone 3000 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Bella, Brooke, Yana, Yaz'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6). dose/frequency/duration not printed — regimen as per pack/CMI.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-2", "drug": "ethinylestradiol + levonorgestrel", "form": "oral contraceptive pill (monophasic oral formulation: Low estrogen dose)", "strength": "ethinylestradiol 20; levonorgestrel 100 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Femme-Tab ED 20/100, Lenest 20 ED, Loette, Microgynon 20 ED, Micronelle 20 ED'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-3", "drug": "estradiol + nomegestrol", "form": "oral contraceptive pill (monophasic oral formulation: Low estrogen dose)", "strength": "estradiol 1500; nomegestrol 2500 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Zoely'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-4", "drug": "ethinylestradiol + desogestrel", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 30; desogestrel 150 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Madeline, Marvelon'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-5", "drug": "ethinylestradiol + dienogest", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 30; dienogest 2000 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Valette'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-6", "drug": "ethinylestradiol + drospirenone", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 30; drospirenone 3000 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Brooklynn, Isabelle, Petibelle, Yasmin, Yelena'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-7", "drug": "ethinylestradiol + gestodene", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 30; gestodene 75 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Minulet'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-8", "drug": "ethinylestradiol + levonorgestrel", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 30; levonorgestrel 150 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Eleanor 150/30 ED, Evelyn 150/30 ED, Femme-Tab ED 30/150, Lenest 30 ED, Levlen ED, Microgynon 30 ED, Micronelle 30 ED, Monofeme, Nordette, Seasonique'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-9", "drug": "ethinylestradiol + cyproterone", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 35; cyproterone 2000 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Brenda-35 ED, Chelsea-35 ED, Diane-35 ED, Estelle-35 ED, Jene-35 ED, Juliet-35 ED, Laila-35 ED'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-10", "drug": "ethinylestradiol + norethisterone", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 35; norethisterone 500 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Norimin'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-11", "drug": "ethinylestradiol + norethisterone", "form": "oral contraceptive pill (monophasic oral formulation: Standard estrogen dose)", "strength": "ethinylestradiol 35; norethisterone 1000 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Brevinor-1, Norimin-1'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-12", "drug": "ethinylestradiol + levonorgestrel (triphasic)", "form": "oral contraceptive pill (Triphasic oral formulation)", "strength": "phase 1 (6 pills): ethinylestradiol 30 + levonorgestrel 50; phase 2 (5 pills): ethinylestradiol 40 + levonorgestrel 75; phase 3 (10 pills): ethinylestradiol 30 + levonorgestrel 125 (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Logynon ED, Trifeme, Triphasil, Triquilar ED'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-13", "drug": "estradiol valerate + dienogest (quadriphasic)", "form": "oral contraceptive pill (Quadriphasic oral formulation)", "strength": "phase 1 (2 pills): estradiol valerate 3000 alone; phase 2 (5 pills): estradiol valerate 2000 + dienogest 2000; phase 3 (17 pills): estradiol valerate 2000 + dienogest 3000; phase 4 (2 pills): estradiol valerate 1000 alone (micrograms per table column headers)", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 1 (p15): 'Brand name examples (not exhaustive): Qlaira'. Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 1: Combined oral contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-14", "drug": "norethisterone", "form": "progestogen only pill", "strength": "350 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 2 (p15): 'Progestogen only contraceptive pills available through the SA Community Pharmacy OCP Resupply Service' — 'norethisterone 350 mcg Noriday' (brand example). Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 2: Progestogen only contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-15", "drug": "levonorgestrel", "form": "progestogen only pill", "strength": "30 mcg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 2 (p15): 'levonorgestrel 30 mcg Microlut' (brand example). Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 2: Progestogen only contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } },
+    { "id": "TX-16", "drug": "drospirenone", "form": "progestogen only pill", "strength": "4 mg", "dose": "", "route": "oral", "frequency": "", "duration": "", "max_quantity": "one original manufacturer's pack", "max_dose": "", "quantity_to_supply": "one original manufacturer's pack at any one time", "notes": "Table 2 (p15): 'drospirenone 4 mg Slinda' (brand example). Note Appendix 2 (p14) prints the progestogen as 'Drosperinone' while Tables 1-2 print 'drospirenone' (see open_questions). Supply restricted to one original manufacturer's pack; pharmacists not permitted to initiate or change therapy (p6).", "first_line": false, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 15, "section_heading": "Table 2: Progestogen only contraceptive pills available through the SA Community Pharmacy OCP Resupply Service" } }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Referral list (p11): 'Younger than 17 or over 50 years of age'. Young people (p10): 'Patients younger than 17 years of age are to be confidentially referred to a general practitioner or a sexual health clinic.' 'Pharmacists should consider their professional responsibilities in this age group including consideration of child protection concerns.'", "structured": { "parameter": "age_years", "operator": "<", "value": 17, "unit": "years" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "Young people" } },
+    { "id": "RF-2", "trigger_text": "Referral list (p11): 'Younger than 17 or over 50 years of age'. People over 50 years of age (p10): 'The choice of contraceptive should be reconsidered at age 50 and at menopause and these patients should be referred to their treating practitioner.'", "structured": { "parameter": "age_years", "operator": ">", "value": 50, "unit": "years" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "People over 50 years of age" } },
+    { "id": "RF-3", "trigger_text": "Referral trigger: 'Not currently taking and wants to restart an OCP'.", "structured": { "parameter": "wants_to_restart_ocp_but_not_currently_taking", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-4", "trigger_text": "Referral trigger: 'Request is for a different OCP than that stabilised on or a different type or contraception, e.g., a LARC' [as printed].", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-5", "trigger_text": "Referral trigger: 'Requested OCP is not on the protocol medicines list'.", "structured": { "parameter": "requested_ocp_on_protocol_medicines_list", "operator": "==", "value": false, "unit": "" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-6", "trigger_text": "Referral trigger: 'Requested OCP is now contraindicated or not appropriate, e.g., hypertensive, BMI >35'.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-7", "trigger_text": "Referral trigger: 'Headache history is suggestive of migraines'.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-8", "trigger_text": "Referral trigger: 'Unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding'.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-9", "trigger_text": "Referral trigger: 'Potentially pregnant'.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-10", "trigger_text": "Referral trigger: 'STI screening is indicated (although OCP may still be resupplied by the pharmacist)'.", "structured": null, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-11", "trigger_text": "Referral trigger: 'If drug interactions are identified'.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" } },
+    { "id": "RF-12", "trigger_text": "Pill break: 'More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.'", "structured": { "parameter": "pill_break_duration_weeks", "operator": "range", "value": [2, 4], "unit": "weeks" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" } },
+    { "id": "RF-13", "trigger_text": "Pill break: 'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.' '*Note: The risk of venous thromboembolism (VTE) with the combined oral contraceptive pill (COCP) is highest in the first year of use, and particularly in the first 3-4 months after commencement. The level of risk returns, if the patient misses taking the COCP for 1 month or more.'", "structured": { "parameter": "pill_break_duration_months", "operator": ">=", "value": 1, "unit": "months" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" } },
+    { "id": "RF-14", "trigger_text": "'If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" } },
+    { "id": "RF-15", "trigger_text": "'If BP remains elevated, the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method.' (a single elevated BP reading is not enough to classify an individual as hypertensive; a second BP reading should be taken at the end of the consultation)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "*BMI and Blood Pressure" } },
+    { "id": "RF-16", "trigger_text": "Nicotine vaping (Family Planning Alliance Australia recommendation quoted): 'Until further evidence is available, vaping with nicotine is considered equivalent to cigarette smoking in relation to the medical eligibility criteria (MEC) for contraceptive use. As it is not possible to determine equivalency of exposure between vaping and smoking, any vaping in those aged 35 years and older will be MEC 4 (i.e. absolutely contraindicated) for use of combined hormonal contraception.'", "structured": null, "action": "NOT_ELIGIBLE", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "**Nicotine vaping" } },
+    { "id": "RF-17", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16) — 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral': 'Current or previous history of breast cancer (including carriers of known gene mutations associated with breast cancer)'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-18", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Migraine with/without aura'. (p11: 'migraine with aura' given as example of a UKMEC 3/4 contraindication)", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-19", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Current or past history of ischaemic heart disease, stroke or transient ischaemic attack'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-20", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Aged 35 years or older and current smoker or recently quit smoking (including nicotine vaping*) in the last 12 months'. '*As per Australian consensus guidelines'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-21", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Hypertension (systolic blood pressure 140 mmHg or higher, or diastolic blood pressure 90 mmHg or higher), including adequately controlled hypertension' — systolic reading.", "structured": { "parameter": "systolic_blood_pressure", "operator": ">=", "value": 140, "unit": "mmHg" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-22", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Hypertension (systolic blood pressure 140 mmHg or higher, or diastolic blood pressure 90 mmHg or higher), including adequately controlled hypertension' — diastolic reading.", "structured": { "parameter": "diastolic_blood_pressure", "operator": ">=", "value": 90, "unit": "mmHg" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-23", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Hypertension, with vascular disease'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-24", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Complicated valvular or congenital heart disease'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-25", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Cardiomyopathy with impaired cardiac function'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-26", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Atrial fibrillation'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-27", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Current or past history of VTE or a first-degree relative with a VTE (provoked or unprovoked) under the age of 45 years'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-28", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Positive antiphospholipid antibodies'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-29", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Known thrombogenic mutations, e.g. factor V Leiden, prothrombin mutation, Protein S, Protein C, antithrombin deficiencies'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-30", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Prolonged immobilisation'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-31", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Severe (decompensated) cirrhosis'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-32", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Hepatocellular adenoma or malignant liver tumour'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-33", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Body mass index (BMI) 35 kg/m2 or more'.", "structured": { "parameter": "bmi", "operator": ">=", "value": 35, "unit": "kg/m2" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-34", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Diabetes with nephropathy, retinopathy, neuropathy or other vascular disease'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-35", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Gall bladder disease (medically treated or current)'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-36", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Undiagnosed mass/breast symptoms (only if the condition is pre-existing and the COCP is initiated)'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-37", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Multiple risk factors for cardiovascular disease (such as smoking, diabetes, hypertension, obesity, and dyslipidaemias)'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-38", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Past COC related cholestasis'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-39", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Organ transplant - Complicated: graft failure (acute or chronic), rejection, cardiac allograft vasculopathy'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-40", "trigger_text": "Contraindications to resupply of the COCP (Table 3, p16): 'Acute viral hepatitis, or flare (only if the condition is pre-existing and the COC is initiated)'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 16, "section_heading": "Table 3: Contraindications to resupply of the COCP" } },
+    { "id": "RF-41", "trigger_text": "Contraindications to resupply of the POP (Table 4, p17) — 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral': 'Current or previous history of breast cancer'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+    { "id": "RF-42", "trigger_text": "Contraindications to resupply of the POP (Table 4, p17): 'Unexplained vaginal bleeding (suspicious for a serious condition) before investigation for the cause'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+    { "id": "RF-43", "trigger_text": "Contraindications to resupply of the POP (Table 4, p17): 'Severe (decompensated) cirrhosis'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+    { "id": "RF-44", "trigger_text": "Contraindications to resupply of the POP (Table 4, p17): 'Hepatocellular adenoma or malignant liver tumour'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+    { "id": "RF-45", "trigger_text": "Contraindications to resupply of the POP (Table 4, p17): 'Ischaemic heart disease, stroke or transient ischaemic attack (TIA) that develops during use'.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 17, "section_heading": "Table 4: Contraindications to resupply of the POP" } },
+    { "id": "RF-46", "trigger_text": "When to seek further care (p12): 'the signs of VTE and what to do if it is suspected'.", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "unclear", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Patient information and counselling" } },
+    { "id": "RF-47", "trigger_text": "When to seek further care (p12): 'the importance of reporting new or worsening mood-related symptoms to the pharmacist and usual medical practitioner'.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Patient information and counselling" } },
+    { "id": "RF-48", "trigger_text": "When to seek further care (p12): 'if health screening is indicated'.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Patient information and counselling" } },
+    { "id": "RF-49", "trigger_text": "'Pharmacists may refer individuals assigned and/or presumed female at birth who are at risk of pregnancy to a general practitioner or specialist sexual health services, if not already engaging with these services, to ensure that they receive comprehensive and culturally safe sexual healthcare that is tailored to their individual needs.'", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 10, "section_heading": "Transgender, gender diverse and non-binary people" } }
+  ],
+  "referral": {
+    "routine": [
+      "p10 (Young people): 'Patients younger than 17 years of age are to be confidentially referred to a general practitioner or a sexual health clinic.'",
+      "p10 (People over 50 years of age): 'The choice of contraceptive should be reconsidered at age 50 and at menopause and these patients should be referred to their treating practitioner.'",
+      "p5 (Pill breaks): 'More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.'; 'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.'; 'If a patient frequently takes pill breaks ... consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'",
+      "p5 (Age range): patients aged 41 to 50 years — 'one resupply is permitted and the patient should be referred for review by their medical practitioner or other authorised prescribing healthcare practitioner.'",
+      "p11-p12 (referral list): 'Not currently taking and wants to restart an OCP'; 'Request is for a different OCP than that stabilised on or a different type or contraception, e.g., a LARC'; 'Requested OCP is not on the protocol medicines list'; 'STI screening is indicated (although OCP may still be resupplied by the pharmacist)'; 'If drug interactions are identified'.",
+      "p11 (BP): 'If BP remains elevated, the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method.'",
+      "p10 (Transgender, gender diverse and non-binary people): 'Pharmacists may refer individuals assigned and/or presumed female at birth who are at risk of pregnancy to a general practitioner or specialist sexual health services, if not already engaging with these services...'"
+    ],
+    "urgent": [
+      "p11 (referral list): 'Requested OCP is now contraindicated or not appropriate, e.g., hypertensive, BMI >35'; 'Headache history is suggestive of migraines'; 'Unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding'; 'Potentially pregnant'.",
+      "p11: 'Patients with a UKMEC Category 3 or 4 condition are not eligible for resupply and require referral. See Appendix 3 for UKMEC Category 3 and 4 criteria.'",
+      "p16-p17 (Appendix 3): 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral' — Table 3 (Contraindications to resupply of the COCP) and Table 4 (Contraindications to resupply of the POP)."
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "Refer to medical practitioner or other authorised prescribing healthcare practitioner when:" }
+  },
+  "review_followup": [
+    {
+      "when": "At least once every 2 years",
+      "what": "'Patients should have a thorough review of their OCP use by their medical practitioner or other authorised prescribing healthcare practitioner at least once every 2 years.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Review of OCP" }
+    },
+    {
+      "when": "At each resupply (ages 17 to 40 years)",
+      "what": "'The medical review date with the medical practitioner or other authorised prescribing healthcare practitioner must be considered at each resupply, to ensure that the resupply only allows for the continuation of the OCP within the 2-year period (see below Review of OCP).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Age range" }
+    },
+    {
+      "when": "After the single permitted resupply (ages 41 to 50 years)",
+      "what": "'Eligible for resupply of one original manufacturer's pack of OCP only – one resupply is permitted and the patient should be referred for review by their medical practitioner or other authorised prescribing healthcare practitioner.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Age range" }
+    },
+    {
+      "when": "Pill break more than 2 weeks but less than 4 weeks",
+      "what": "'Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 5, "section_heading": "Pill breaks" }
+    },
+    {
+      "when": "If BP remains elevated on the second reading at the end of the consultation",
+      "what": "'the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 11, "section_heading": "*BMI and Blood Pressure" }
+    },
+    {
+      "when": "At consultation — when to seek further care",
+      "what": "'When to seek further care from their medical practitioner or other authorised prescribing healthcare practitioner: the signs of VTE and what to do if it is suspected; the importance of reporting new or worsening mood-related symptoms to the pharmacist and usual medical practitioner; if health screening is indicated.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Patient information and counselling" }
+    },
+    {
+      "when": "At consultation — preventative healthcare screening (appointment encouraged)",
+      "what": "'Cervical screening – routine screening is available for people from the age of 25 and is recommended every five years'; 'Breast checks – people who have a personal or family history of breast cancer, should be advised to see their medical practitioner for advice regarding frequency and type of screening'; 'Sexually transmitted infection (STI) screening – recommended for anyone who is sexually active and engaging in unprotected sex'.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 12, "section_heading": "Patient information and counselling" }
+    },
+    {
+      "when": "At every supply — documentation and communication",
+      "what": "Clinical record and pharmacy dispensing record made (including pharmacist name and HPI-I, OCP details: generic name, form, strength and quantity, advice, referrals, consent); 'details of the OCP supply are uploaded to My Health Record, unless requested otherwise by the patient'; 'The pharmacist must offer a record of the service to the patient'; 'Following consent by the patient, the pharmacist may share a record of the supply and consultation with the patient's usual treating medical practitioner or medical practice, where the patient has one.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Clinical documentation and communication" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'Where a patient has a My Health Record, the pharmacist must ensure the details of the OCP supply are uploaded to My Health Record, unless requested otherwise by the patient.' (p6)",
+      "'Pharmacists must, at the request of the Minister for Health and Wellbeing, provide data on the scheme periodically (for monitoring and evaluation purposes).' (p7)"
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-ocp-resupply-services-management-protocol.pdf", "page": 6, "section_heading": "Clinical documentation and communication" }
+  },
+  "references": [
+    "[p18] Professional Practice Standards and Codes of Conduct: Pharmaceutical Society of Australia Professional Practice Standards 2023, version 6 (https://www.psa.org.au/practice-support-industry/pps/).",
+    "[p18] Australian Health Practitioner Regulation Agency – Shared Code of Conduct (Australian Health Practitioner Regulation Agency - Shared Code of conduct (ahpra.gov.au)).",
+    "[p18] The Faculty of Sexual and Reproductive Healthcare – UK Medical Eligibility Criteria for Contraceptive Use: UKMEC April 2016 (Amended September 2019) - Faculty of Sexual and Reproductive Healthcare (fsrh.org).",
+    "[p18] The Faculty of Sexual and Reproductive Healthcare – UKMEC Summary Table: Hormonal and Intrauterine Contraception: UKMEC April 2016 Summary Sheet (Amended September 2019) - Faculty of Sexual and Reproductive Healthcare (fsrh.org).",
+    "[p18] The Faculty of Sexual and Reproductive Healthcare – Combined Hormonal Contraception Clinical Guideline: FSRH Clinical Guideline: Combined Hormonal Contraception (January 2019, Amended October 2023) - Faculty of Sexual and Reproductive Healthcare.",
+    "[p18] The Faculty of Sexual and Reproductive Healthcare – Progestogen-only Pills Clinical Guideline: FSRH Clinical Guideline: Progestogen-only Pills (August 2022, Amended July 2023) - Faculty of Sexual and Reproductive Healthcare.",
+    "[p18] Sexual and Reproductive expert group. Sexual and Reproductive Health. eTG complete. Melbourne, Australia: Therapeutic Guidelines; https://www.tg.org.au.",
+    "[p18] Australian Medicines Handbook (online). Adelaide, Australia: Australian Medicines Handbook Pty Ltd; March 2024. https://amhonline.amh.net.au/.",
+    "[p18] UKMEC Calculator.",
+    "[p18] Pharmaceutical Society of Australia Women's Sexual and Reproductive Health (Women's sexual and reproductive health (psa.org.au)).",
+    "[p19] STI Guidelines: Australian STI management guidelines for use in primary care (https://sti.guidelines.org.au/sexual-history/).",
+    "[p19] Approved Pharmacist Contraception Training: Pharmaceutical Society of Australia Contraception Essentials online training module (Training Plan: Contraception Essentials - SA (psa.org.au)).",
+    "[p19] Approved Pharmacist Contraception Training: Australasian College of Pharmacy Oral Contraceptives: a comprehensive training course for pharmacists (Oral Contraceptives: a comprehensive training course for pharmacists (acp.edu.au)).",
+    "[p19] Other Relevant Training - Cultural safety: PSA resource on providing resources for Aboriginal and Torres Strait Islanders (ppaonline.com.au/wp-content/uploads/2019/01/PSA-Guide-to-Providing-Pharmacy-Services.pdf).",
+    "[p19] Pharmaceutical Society of Australia Deadly pharmacists foundations training course (Training Plan: Deadly pharmacists foundation training course (psa.org.au)).",
+    "[p19] Feedback and Complaints Checklist: Australian Health Practitioner Regulation Agency - Checklist for practitioners handling feedback and complaints (ahpra.gov.au).",
+    "[p19] Consumer Information: Better Health Channel 'Oral contraceptive pills' (https://www.betterhealth.vic.gov.au/health/healthyliving/contraception-choices#oral-contraceptive-pills).",
+    "[p19] Consumer Information: Better Health Channel 'Safe sex' (Better Health Channel 'Safe sex' - SA Health).",
+    "[p19] Consumer Information: Shine SA — Contraception Options - SHINE SA; The Pill | SHINE SA - Combined Oral Contraceptive Pill; Progestogen-Only Pill - SHINE SA; Emergency Contraception - SHINE SA.",
+    "[p19] Consumer Information: Jean Hailes contraception fact sheet (https://www.jeanhailes.org.au/resources/health-a-z/contraception)."
+  ],
+  "open_questions": [
+    {
+      "topic": "Clinical Flow Chart (p8-p9) has no extractable text — image only",
+      "observed": "Pages 8 and 9 of the text extraction contain only 'OFFICIAL' and the page number; the Clinical Flow Chart itself is a graphic. Supplementary Information repeatedly says 'As per the Clinical Flow Chart, sufficient information must be obtained from the patient...' (p10).",
+      "why_unclear": "The flow chart's decision nodes, branches and any thresholds could not be transcribed from the text layer; PW-1 steps were built from the narrative sections only. The flow chart must be reviewed visually before go-live (hugh_to_confirm).",
+      "source_page": 8
+    },
+    {
+      "topic": "Legal basis differs from the sibling CPGs in this batch (no regulation 17A / Community Pharmacist Prescribing Code)",
+      "observed": "p2: supply is authorised 'In accordance with the Community Pharmacy Oral Contraceptive Pill Resupply Services Scheme as determined by the Minister for Health and Wellbeing by notice in the Gazette on 9th April 2024 ... may resupply specified oral contraceptive pills without a prescription'. p6 cites the Controlled Substances Act (1984) and Controlled Substances (Poisons) Regulations 2011 for supply/packaging/labelling only.",
+      "why_unclear": "This instrument is a resupply-without-prescription scheme, not a prescribing authorisation; recorded verbatim rather than assuming the regulation 17A basis used by the CPG series. Whether the prescribing-support module should ingest it is flagged for hugh_to_confirm.",
+      "source_page": 2
+    },
+    {
+      "topic": "No version number printed — only the date 'April 2024'",
+      "observed": "Cover (p1) prints 'SA Community Pharmacy Oral Contraceptive Pill (OCP) Resupply Services Management Protocol April 2024'; no 'Version X' string appears anywhere in the document.",
+      "why_unclear": "instrument_version recorded as 'April 2024' (the only version-like string printed); effective_date recorded as the Gazette notice date 2024-04-09 (p2).",
+      "source_page": 1
+    },
+    {
+      "topic": "BMI threshold wording differs between the referral list and Appendix 3",
+      "observed": "p11: 'Requested OCP is now contraindicated or not appropriate, e.g., hypertensive, BMI >35'; p16 Table 3: 'Body mass index (BMI) 35 kg/m2 or more'.",
+      "why_unclear": "'>35' and '35 kg/m2 or more' are different operators (strictly greater than vs at least 35); both readings recorded as printed (rule 2) — RF-33 uses >= 35 per the contraindication table, EXC-6 records the p11 wording verbatim.",
+      "source_page": 16
+    },
+    {
+      "topic": "Table 1 dose-column units come from the column headers, which read 'microg rams' in the text extraction",
+      "observed": "Table 1 (p15) columns print 'Estrogen dose (microg rams)' and 'Progestogen dose (microg rams)' with bare numbers in the rows (e.g. 'ethinylestradiol 20 drospirenone 3000'); Table 2 prints units inline ('350 mcg', '30 mcg', '4 mg').",
+      "why_unclear": "Units for Table 1 rows are read as micrograms from the header (the split word is a text-extraction artifact); values transcribed exactly as printed. Cross-check against brand strengths (e.g. Yaz = 20 micrograms ethinylestradiol) before go-live (hugh_to_confirm).",
+      "source_page": 15
+    },
+    {
+      "topic": "Progestogen spelling: Appendix 2 prints 'Drosperinone', Tables 1-2 print 'drospirenone'",
+      "observed": "p14 Appendix 2 permitted progestogens: 'c. Drosperinone'; p15 Table 1 rows and Table 2 ('drospirenone 4 mg Slinda') print 'drospirenone'.",
+      "why_unclear": "Both spellings recorded as printed (rule 2); TX-16 confidence marked 'medium' because of the inconsistency. 'Drospirenone' is the standard generic name.",
+      "source_page": 14
+    },
+    {
+      "topic": "UKMEC tables are explicitly not exhaustive and do not distinguish Category 3 from Category 4 per bullet",
+      "observed": "p16: 'These are based on the UK Medical Eligibility Criteria (UKMEC) and include conditions in Table 3 and 4 (not an exhaustive list). For a full list of UKMEC 3 and UKMEC 4 classified conditions, see: UKMEC April 2016 (Amended September 2019)...'; table heading: 'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral'.",
+      "why_unclear": "EXC-16 to EXC-43 confidence 'medium' because the printed list is partial and the category (3 vs 4) of each bullet is not stated; the full external UKMEC list is required for a complete engine rule set (hugh_to_confirm).",
+      "source_page": 16
+    },
+    {
+      "topic": "Breastfeeding and postpartum status deliberately excluded from the contraindication table",
+      "observed": "p17: 'Breastfeeding and postpartum risks have been excluded from Table 3 due to the requirement for a 2-year history of continuous OCP use to be eligible for this service.'",
+      "why_unclear": "Recorded as exclusion exception EXE-3 so the engine does not treat absence from the table as an oversight; pregnancy status is still captured in the patient history and 'Potentially pregnant' is a referral trigger.",
+      "source_page": 17
+    },
+    {
+      "topic": "Compound conditions captured with structured: null",
+      "observed": "'Aged 35 years or older and current smoker or recently quit smoking (including nicotine vaping*) in the last 12 months' (p16) and 'any vaping in those aged 35 years and older will be MEC 4' (p11) each combine age plus behaviour; 'Current or past history of VTE or a first-degree relative with a VTE ... under the age of 45 years' combines patient/relative status.",
+      "why_unclear": "No single parameter/operator/value triple can express the conjunction without misrepresenting it, so structured is null and the verbatim wording carries the rule; engine must evaluate both components (RF-16, RF-20, RF-27).",
+      "source_page": 16
+    },
+    {
+      "topic": "Mapping of the document's own urgency language to action/severity",
+      "observed": "'...other conditions that require immediate referral' (Tables 3-4 headings, p16-p17) → REFER_URGENT / high; p11 'require referral' for UKMEC 3/4 → REFER_URGENT / high; p11 referral list (restart, different OCP, not on list, migraines, drug interactions) → REFER / medium; 'contraindicated or not appropriate', 'acute, severe menstrual bleeding' → REFER / high; 'STI screening is indicated' (parenthetical permits resupply) → REFER / low; pill break 2-4 weeks → REFER / low; pill break ≥1 month ('Do not resupply') → REFER / medium with ineligibility held in EXC-11; age out of band → NOT_ELIGIBLE / medium; 'potentially pregnant' → REFER / medium (no urgency word printed).",
+      "why_unclear": "The document prints no ED/000 tier and no numeric severity; the mapping records the document's own wording ('immediate', 'urgent'-equivalent, plain 'refer') so it can be re-checked.",
+      "source_page": 16
+    },
+    {
+      "topic": "No emergency escalation tier printed anywhere in the document",
+      "observed": "Referral destinations are limited to 'a general practitioner or a sexual health clinic', 'their treating practitioner', 'their usual medical practitioner or other authorised prescribing healthcare practitioner', 'a medical practitioner' and 'specialist sexual health services'; no emergency department, ambulance or 000 wording appears.",
+      "why_unclear": "referral.emergency is an empty array because the document genuinely has none (spec: empty arrays allowed only where the document has none); whether local policy needs an emergency tier is flagged for hugh_to_confirm.",
+      "source_page": 11
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document for several steps",
+      "observed": "Used: REFER for verification, age band, contraindication/referral screens, BP-remains-elevated, 'do not resupply' pill break and review-interval failures; STOP for quantity-exceeds-one-pack and initiate/change-therapy; SEE_PW-1-S6 for the pill-break branch; 'unclear' for history sufficiency, My Health Record review, BMI/BP recording, the 12-month supply cap counting, documentation elements, My Health Record upload, record sharing, counselling and screening completion.",
+      "why_unclear": "The document states duties but not the consequence of each failing check; 'unclear' used where no branch outcome is printed (rule 5).",
+      "source_page": 6
+    },
+    {
+      "topic": "'Frequently takes pill breaks' is undefined",
+      "observed": "p5: 'If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'",
+      "why_unclear": "No frequency threshold printed; RF-14 structured: null so the engine surfaces a judgement prompt rather than an automatic check.",
+      "source_page": 5
+    },
+    {
+      "topic": "'BP remains elevated' has no numeric definition at p11; hypertension numbers appear only in Table 3",
+      "observed": "p11: 'a single elevated BP reading is not enough to classify an individual as hypertensive ... a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred...'; p16 Table 3: 'Hypertension (systolic blood pressure 140 mmHg or higher, or diastolic blood pressure 90 mmHg or higher)'.",
+      "why_unclear": "RF-15 (p11 rule) is structured: null; RF-21/RF-22 carry the numeric Table 3 thresholds. Whether 'elevated' at p11 means the Table 3 values is not stated.",
+      "source_page": 11
+    },
+    {
+      "topic": "Verification wording for the 2-year OCP history is permissive ('can be confirmed')",
+      "observed": "p5: 'Verification of the requested OCP can be confirmed by sighting a previous prescription, OCP pack, or other physical and/or electronic dispensing records and My Health Record.'",
+      "why_unclear": "It is not stated which evidence is mandatory or what happens if none can be sighted; INC-3 confidence 'medium' and PW-1-S2 gate on_fail REFER recorded as the conservative reading.",
+      "source_page": 5
+    },
+    {
+      "topic": "No dose, frequency or duration printed for any resupply",
+      "observed": "The protocol specifies quantity only: 'one original manufacturer's pack of OCP at any one time' (p5), 'must not sell or supply the OCPs in a quantity that exceeds one original manufacturer's pack' (p6); the record must include 'Details of the OCP supplied to the patient (generic name, form, strength and quantity)' (p6).",
+      "why_unclear": "dose/frequency/duration/max_dose left empty for TX-1 to TX-16 rather than invented; regimen comes from the pack/CMI per the counselling section (p12).",
+      "source_page": 6
+    },
+    {
+      "topic": "How the 12-month supply cap is counted is not defined",
+      "observed": "p5: 'additional resupply permitted for up to a maximum of 12 months' supply of the OCP in total' for ages 17 to 40, with 'one original manufacturer's pack ... at any one time'.",
+      "why_unclear": "Not stated whether the cap is counted in packs, calendar months of therapy or dispensing events; PW-1-S4 gate on_fail 'unclear' (hugh_to_confirm).",
+      "source_page": 5
+    },
+    {
+      "topic": "Approved medicines list: brand examples are explicitly 'not exhaustive'",
+      "observed": "Table 1 (p15) header: 'Brand name examples (not exhaustive)'; Appendix 2 (p14) defines the permitted estrogens — 'Ethinylestradiol (40 micrograms or less)', 'Estradiol' — and permitted progestogens — 'Levonorgestrel', 'Norethisterone', 'Drosperinone [as printed]', 'Nomegestrol', 'Desogestrel', 'Dienogest', 'Gestodene', 'Cyproterone' — while COCPs with 'a high estrogen dose (50 micrograms of ethinylestradiol or equivalent)' or 'containing estetrol or mestranol' are not permitted.",
+      "why_unclear": "The definitive on-list test is the ingredient/strength rule, not the brand tables; TX rows transcribe the printed rows exactly but a brand not listed may still be permitted if it matches the ingredients (and vice versa) — flag for hugh_to_confirm.",
+      "source_page": 14
+    },
+    {
+      "topic": "Whether this instrument belongs in a prescribing-support module",
+      "observed": "'registered pharmacists who have successfully completed training may resupply specified oral contraceptive pills without a prescription to eligible patients' (p2); 'Pharmacists are not permitted to initiate or change therapy.' (p6).",
+      "why_unclear": "The service is supply/resupply, not prescribing; the engine's scope decision (resupply checks vs prescribing rules) is a product/jurisdiction question, not a transcription question.",
+      "source_page": 2
+    },
+    {
+      "topic": "STI screening referral is simultaneous with permitted resupply",
+      "observed": "p11: 'STI screening is indicated (although OCP may still be resupplied by the pharmacist)'.",
+      "why_unclear": "The document allows referral and resupply to occur together; EXE-2 records the exception so the referral trigger (RF-10) is not misread as an ineligibility rule.",
+      "source_page": 11
+    },
+    {
+      "topic": "Smoking/vaping definitions and their external source",
+      "observed": "p10: 'Smoking status** (there is an increased VTE risk in smokers 35 years and older)'; p11: '**Nicotine vaping — The following recommendation regarding vaping and medical eligibility for hormonal contraception has been issued by Family Planning Alliance Australia: ... any vaping in those aged 35 years and older will be MEC 4'; Table 3 (p16): 'current smoker or recently quit smoking (including nicotine vaping*) in the last 12 months' with '*As per Australian consensus guidelines'.",
+      "why_unclear": "Two external sources (Family Planning Alliance Australia; Australian consensus guidelines) are quoted without version dates; 'recently quit' is defined only as 'in the last 12 months'.",
+      "source_page": 11
+    },
+    {
+      "topic": "VTE signs and mood-symptom counselling content are not printed",
+      "observed": "p12 lists what to counsel on — 'the signs of VTE and what to do if it is suspected'; 'the importance of reporting new or worsening mood-related symptoms' — but no sign list or action steps are given (CMI/external).",
+      "why_unclear": "RF-46 marked confidence 'unclear' because the trigger content ('the signs of VTE') is defined outside this document; local counselling material required (hugh_to_confirm).",
+      "source_page": 12
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm module scope and legal-basis handling: this protocol authorises resupply without a prescription under the Community Pharmacy OCP Resupply Services Scheme (Gazette notice 9 April 2024), not regulation 17A / the register of authorised pharmacists / the Community Pharmacist Prescribing Code used by the sibling CPGs.",
+      "source_page": 2,
+      "reason": "A prescribing-support engine keyed to regulation 17A would mis-handle this instrument; the legal basis recorded here is the document's own."
+    },
+    {
+      "item": "Review the Clinical Flow Chart on p8-p9 visually (image, no text layer) and reconcile it with PW-1-S1 to PW-1-S12 — especially any decision nodes, thresholds or branches not repeated in the narrative sections.",
+      "source_page": 8,
+      "reason": "The flow chart is the document's primary algorithm but could not be transcribed from the extracted text; untranscribed nodes would be missing from the rules engine."
+    },
+    {
+      "item": "Confirm the controlled-copy version/date — cover prints 'April 2024' with no version number anywhere in the document.",
+      "source_page": 1,
+      "reason": "instrument_version/effective_date had to be derived from the cover date and the Gazette notice date; a superseding edition would change eligibility and medicine lists."
+    },
+    {
+      "item": "Maintain the approved-medicines rule: ingredient/strength test (permitted estrogens 'Ethinylestradiol (40 micrograms or less)' or 'Estradiol' plus permitted progestogens; ban on 50 micrograms ethinylestradiol or equivalent, estetrol and mestranol) versus the 'not exhaustive' brand examples in Tables 1-2.",
+      "source_page": 14,
+      "reason": "Brand lists are explicitly non-exhaustive; the engine needs a deterministic on-list test and a process for adding new brands."
+    },
+    {
+      "item": "Load the full external UKMEC dataset (UKMEC April 2016 Amended September 2019 — full list and summary sheet) and mark which conditions are Category 3 versus Category 4; the printed tables are 'not an exhaustive list'.",
+      "source_page": 16,
+      "reason": "EXC-16 to EXC-43 cover only the printed bullets at confidence 'medium'; a complete contraindication check requires the external criteria and their category-specific actions."
+    },
+    {
+      "item": "Define enforcement of the age-band supply caps: how 'a maximum of 12 months' supply of the OCP in total' is counted for ages 17-40 (packs vs months vs dispensing events), and the one-resupply-only rule for ages 41-50.",
+      "source_page": 5,
+      "reason": "The document states the caps but not the counting mechanism; PW-1-S4 gates are on_fail 'unclear' pending local definition."
+    },
+    {
+      "item": "Set the operational threshold for 'If a patient frequently takes pill breaks' (RF-14) and the referral destination for exploring alternative contraception (LARCs).",
+      "source_page": 5,
+      "reason": "'Frequently' is undefined and left to professional judgement; an engine rule needs a count/interval or must remain a judgement prompt."
+    },
+    {
+      "item": "Resolve the BMI threshold discrepancy — 'BMI >35' (referral list, p11) versus 'Body mass index (BMI) 35 kg/m2 or more' (Table 3, p16) — and confirm which applies in which context (COCP vs POP vs general appropriateness).",
+      "source_page": 16,
+      "reason": "Two different operators are printed for what appears to be the same threshold; the engine can only implement one unless the contexts are separated."
+    },
+    {
+      "item": "Confirm whether 'If BP remains elevated' (p11) uses the Table 3 hypertension numbers (systolic ≥140 mmHg or diastolic ≥90 mmHg) or a local BP threshold, and where the second-reading workflow is recorded.",
+      "source_page": 11,
+      "reason": "RF-15 is structured: null while RF-21/RF-22 carry the Table 3 numbers; the linkage between the two statements is not printed."
+    },
+    {
+      "item": "Specify acceptable verification evidence for the 2-year stable OCP history (previous prescription, OCP pack, physical/electronic dispensing records, My Health Record) — which are mandatory, what is recorded when none can be sighted, and whether 'can be confirmed' is permissive or required.",
+      "source_page": 5,
+      "reason": "PW-1-S2 gates assume REFER on failure, but the document's wording is permissive and states no consequence."
+    },
+    {
+      "item": "My Health Record handling: upload of OCP supply details 'unless requested otherwise by the patient', patient consent capture, and the record-sharing workflow with the usual medical practitioner ('Following consent by the patient...').",
+      "source_page": 6,
+      "reason": "Consent wording, exception handling and system integration are left to local policy; notifiable.required=true was set on this basis."
+    },
+    {
+      "item": "Ministerial data provision: format, fields and periodicity for 'data on the scheme' that pharmacists 'must, at the request of the Minister for Health and Wellbeing, provide ... periodically (for monitoring and evaluation purposes)'.",
+      "source_page": 7,
+      "reason": "'Periodically' and the data schema are undefined; a reporting obligation exists but cannot be machine-checked as printed."
+    },
+    {
+      "item": "Local referral destination lists and after-hours pathways: sexual health clinics, treating practitioners, specialist sexual health services, GP practices — names, addresses, and how 'urgently/ immediately' referrals are executed given no emergency (000/ED) tier exists in this document.",
+      "source_page": 11,
+      "reason": "Only referral roles are printed; referral.emergency is empty and local pathways must be configured before go-live."
+    },
+    {
+      "item": "Cultural safety and gender diversity training compliance (Appendix 4 suggested resources: PSA cultural safety resources, Deadly pharmacists foundation training) and the requirement that pharmacists 'must complete cultural safety and gender diversity training relevant to their place of practice'.",
+      "source_page": 7,
+      "reason": "Service condition with no completion evidence/verification process printed; local HR/compliance process required."
+    },
+    {
+      "item": "Consultation fee process: 'Pharmacists may charge a consultation fee for the service, in addition to the cost of any medicine that is supplied' and ensuring 'the patient understands the costs involved when offering the service'.",
+      "source_page": 7,
+      "reason": "Fee schedule, disclosure wording and consent flow are local policy; not machine-derivable from the document."
+    },
+    {
+      "item": "Counselling material for 'the signs of VTE and what to do if it is suspected' and new/worsening mood-related symptoms (RF-46, RF-47) — source documents (CMI, Therapeutic Guidelines, FSRH guidance) and the local action pathway.",
+      "source_page": 12,
+      "reason": "The signs and actions are not printed in this protocol; RF-46 confidence 'unclear' until local material is adopted."
+    },
+    {
+      "item": "Which approved OCPs the participating pharmacy will stock (Tables 1-2 brand examples are 'not exhaustive') and confirmation that no first-line agent is designated (first_line=false for TX-1 to TX-16).",
+      "source_page": 15,
+      "reason": "The document designates no preferred agent; stock list and any local preference must be decided by the pharmacy."
+    },
+    {
+      "item": "Pharmacist and pharmacy compliance evidence: unconditional Ahpra general registration, approved training completion (Appendix 1 — PSA Contraception Essentials or ACP Oral Contraceptives course), PRASA pharmacy registration, and the screened/private consulting area standard.",
+      "source_page": 4,
+      "reason": "Service conditions gate every supply (INC-8, INC-9) but the document prints no verification/audit process; local onboarding checks required."
+    },
+    {
+      "item": "Record-keeping implementation: clinical record elements including the pharmacist's Healthcare Provider Identifier-Individual (HPI-I) number, dispensing-system record, and the record offered to the patient (checklist copy).",
+      "source_page": 6,
+      "reason": "Required record fields are printed but the system workflow, retention location ('at the pharmacy where the patient consultation occurred') and template are local."
+    },
+    {
+      "item": "Nicotine vaping and smoking rule provenance: Family Planning Alliance Australia statement quoted without a date/version, and 'Australian consensus guidelines' cited for 'recently quit smoking (including nicotine vaping) in the last 12 months'.",
+      "source_page": 11,
+      "reason": "External, undated sources drive an absolute contraindication (MEC 4) at age ≥35; the governing versions must be confirmed and kept current."
+    },
+    {
+      "item": "Practical meaning of the 12-month supply cap versus 'one original manufacturer's pack at any one time', including how multiple resupply events are tracked in the pharmacy dispensing system.",
+      "source_page": 5,
+      "reason": "The cap is stated but not operationalised; PW-1-S4/S9 enforcement depends on a defined counter."
+    }
+  ]
+}

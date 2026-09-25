@@ -1,0 +1,360 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf",
+    "pdf_sha256": "4cde9d6ee4bedee2e847a77df09c33739b3a0b332e77522b52ad85bf886a98fe",
+    "page_count": 2,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "SA Community Pharmacy UTI Services – Health Professionals fact sheet",
+    "instrument_version": "Not printed (fact sheet carries no version identifier)",
+    "effective_date": "1 March 2024 (service commencement: 'From 1 March 2024 ...')",
+    "legal_basis": "'This is in accordance with the Community Pharmacy Urinary Tract Infection Treatment Services Scheme.' (p1). The fact sheet is guidance about the scheme, not the scheme instrument itself: 'Further information on patient eligibility is available in the SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol.' (p1)",
+    "supervision_model": "Supply-without-prescription by a trained community pharmacist. p1: 'eligible South Australian women aged 18-65 with symptoms of uncomplicated urinary tract infections (UTIs) can speak to trained community pharmacists and may be supplied specified antibiotic treatment through SA Community Pharmacy UTI Services, without needing a prescription from a doctor, if they meet clinical criteria.' p2: 'Completion of specific accredited training for pharmacists on UTI treatment is mandatory prior to offering SA Community Pharmacy UTI Services.'",
+    "scope_summary": "NON-PROTOCOL supporting document: a 2-page SA Health 'Health Professionals – fact sheet' describing the SA Community Pharmacy UTI Services. It states the service purpose (timely advice and treatment when patients can't access usual care, reducing hospital emergency department admissions), a one-sentence patient eligibility statement (women aged 18 to 65 with symptoms of an uncomplicated UTI, assessed by a trained pharmacist as likely uncomplicated UTI and at low risk of complications), referral triggers (risk of complicated UTI, health complications, symptoms of a serious infection, symptoms inconsistent with a UTI such as a sexually transmitted infection), the three medicines that may be supplied without a prescription (trimethoprim; or nitrofurantoin; or cefalexin, in that fallback order, with no doses or strengths printed), clinical documentation and My Health Record consent, referral to GP services, mandatory pharmacist training, and named supporting guidelines. It contains no assessment criteria beyond the single eligibility sentence, no Clinical Flow Chart content (it says the separate UTI Management Protocol 'includes a Clinical Flow Chart'), no doses, no urgency tiers and no age/ineligibility detail beyond '18-65'."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'From 1 March 2024, eligible South Australian women aged 18-65 with symptoms of uncomplicated urinary tract infections (UTIs) can speak to trained community pharmacists and may be supplied specified antibiotic treatment through SA Community Pharmacy UTI Services, without needing a prescription from a doctor, if they meet clinical criteria.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "SA Community Pharmacy UTI Services" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Women aged 18 to 65 years with symptoms of an uncomplicated UTI can speak with a trained pharmacist to be assessed to determine if they are likely experiencing an uncomplicated UTI and are at low risk of complications or other conditions.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "'Patients who are assessed by a pharmacist as being at risk of a complicated UTI ... will be referred to a GP or other health services as appropriate.' — sub-criterion: assessed as being at risk of a complicated UTI.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-2", "text": "'Patients who are assessed by a pharmacist as ... having health complications ... will be referred to a GP or other health services as appropriate.' — sub-criterion: having health complications.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-3", "text": "'Patients who are assessed by a pharmacist as ... displaying any symptoms of a serious infection ... will be referred to a GP or other health services as appropriate.' — sub-criterion: displaying any symptoms of a serious infection.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-4", "text": "'Patients may also be referred if there are symptoms inconsistent with a UTI (e.g. a sexually transmitted infection).' — sub-criterion: symptoms inconsistent with a UTI.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 65,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "SA Community Pharmacy UTI Services" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "SA Community Pharmacy UTI Services — service flow as stated in the fact sheet (non-protocol; clinical criteria held in the separate UTI Management Protocol)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Eligibility assessment by a trained pharmacist. p1: 'Women aged 18 to 65 years with symptoms of an uncomplicated UTI can speak with a trained pharmacist to be assessed to determine if they are likely experiencing an uncomplicated UTI and are at low risk of complications or other conditions.' p1: supply is possible 'without needing a prescription from a doctor, if they meet clinical criteria'. The fact sheet prints no assessment questions, symptom checklist or risk criteria itself: 'Further information on patient eligibility is available in the SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol.'",
+          "gates": [
+            { "criterion": "patient is a woman aged 18 to 65 years (INC-1 / INC-2)", "on_fail": "REFER" },
+            { "criterion": "patient has symptoms of an uncomplicated UTI (INC-1 / INC-2)", "on_fail": "REFER" },
+            { "criterion": "patient assessed by a trained pharmacist as likely experiencing an uncomplicated UTI and at low risk of complications or other conditions (INC-2)", "on_fail": "REFER" },
+            { "criterion": "patient meets the scheme clinical criteria — criteria not printed in this fact sheet; refer to the SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol (INC-1)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "REFER",
+          "description": "Referral triage. p1: 'Patients who are assessed by a pharmacist as being at risk of a complicated UTI, having health complications or displaying any symptoms of a serious infection, will be referred to a GP or other health services as appropriate. Patients may also be referred if there are symptoms inconsistent with a UTI (e.g. a sexually transmitted infection).' p2: 'GPs may receive referrals from pharmacists as part of these services. Practice managers should be alerted to the possibility of pharmacists contacting general practices to facilitate a referral, as part of follow-up or referral from Community Pharmacy UTI Services.' No urgency tiers, timeframes or referral destinations beyond 'a GP or other health services' are printed.",
+          "gates": [
+            { "criterion": "no 'at risk of a complicated UTI' assessment (EXC-1 / RF-1)", "on_fail": "REFER" },
+            { "criterion": "no health complications (EXC-2 / RF-2)", "on_fail": "REFER" },
+            { "criterion": "no symptoms of a serious infection (EXC-3 / RF-3)", "on_fail": "REFER" },
+            { "criterion": "no symptoms inconsistent with a UTI, e.g. a sexually transmitted infection (EXC-4 / RF-4)", "on_fail": "REFER" },
+            { "criterion": "referral made to 'a GP or other health services as appropriate' — no timeframe or urgency tier printed", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "Antibiotic supply where treatment is indicated. p2: 'Under the SA Community Pharmacy UTI Services, the following medicines may be supplied by a pharmacist without a prescription to eligible patients where treatment is indicated: trimethoprim; or nitrofurantoin, where trimethoprim is not appropriate for the patient or not available; or cefalexin, where trimethoprim and nitrofurantoin are not appropriate for the patient or not available.' No dose, strength, frequency, duration, pack size or quantity is printed in this fact sheet; dosing resides in the SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol.",
+          "gates": [
+            { "criterion": "eligibility assessment passed (PW-1-S1) and no referral trigger present (PW-1-S2)", "on_fail": "REFER" },
+            { "criterion": "treatment indicated — 'where treatment is indicated' (indication criteria not printed in this fact sheet)", "on_fail": "unclear" },
+            { "criterion": "first-line supply: trimethoprim", "on_fail": "SEE_PW-1-S2" },
+            { "criterion": "second-line supply: nitrofurantoin, 'where trimethoprim is not appropriate for the patient or not available'", "on_fail": "SEE_PW-1-S2" },
+            { "criterion": "third-line supply: cefalexin, 'where trimethoprim and nitrofurantoin are not appropriate for the patient or not available'", "on_fail": "SEE_PW-1-S2" },
+            { "criterion": "dose, strength, quantity and duration confirmed from the UTI Management Protocol — not printed in this fact sheet", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Medicines available for treatment" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EDUCATE",
+          "description": "Clinical documentation, consent and patient information. p2: 'Consultations including any supply of antibiotics or other treatment will be documented and recorded by the pharmacist, irrespective of whether a person is supplied an antibiotic or other treatment.' 'Pharmacists will obtain patient consent to upload information about the consultation and treatment into My Health Record.' 'To support continuity of care, patients will be provided a record of their consultation (e.g., patient assessment checklist) and encouraged to pass on this information to their GP.'",
+          "gates": [
+            { "criterion": "consultation documented and recorded by the pharmacist, 'irrespective of whether a person is supplied an antibiotic or other treatment'", "on_fail": "STOP" },
+            { "criterion": "patient consent obtained to upload consultation and treatment information into My Health Record", "on_fail": "unclear" },
+            { "criterion": "patient provided a record of their consultation (e.g., patient assessment checklist) and encouraged to pass it on to their GP", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "FOLLOW_UP",
+          "description": "Safety-netting. p2: 'Patients should be advised to seek GP or other health service advice if symptoms worsen, or they have not responded to treatment within two days.' The fact sheet prints no review appointment, no test-of-cure and no further antibiotic advice.",
+          "gates": [
+            { "criterion": "patient advised to seek GP or other health service advice if symptoms worsen (RF-5)", "on_fail": "REVIEW_GP" },
+            { "criterion": "patient advised to seek GP or other health service advice if symptoms have not responded to treatment within two days (RF-5 / FU-1)", "on_fail": "REVIEW_GP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "trimethoprim",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p2): 'trimethoprim; or' — first in the printed fallback sequence, supplied 'without a prescription to eligible patients where treatment is indicated'. No form, strength, dose, route, frequency, duration or quantity is printed in this fact sheet; those live in the SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Medicines available for treatment" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "nitrofurantoin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p2): 'nitrofurantoin, where trimethoprim is not appropriate for the patient or not available; or' — second in the printed fallback sequence. No form, strength, dose, route, frequency, duration or quantity is printed in this fact sheet.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Medicines available for treatment" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "cefalexin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p2): 'cefalexin, where trimethoprim and nitrofurantoin are not appropriate for the patient or not available.' — third in the printed fallback sequence. No form, strength, dose, route, frequency, duration or quantity is printed in this fact sheet.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Medicines available for treatment" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Patients who are assessed by a pharmacist as being at risk of a complicated UTI ... will be referred to a GP or other health services as appropriate.'",
+      "action": "REFER",
+      "severity": "medium",
+      "structured": null,
+      "note": "No urgency tier printed; 'as appropriate' is the document's only qualification.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'... having health complications ... will be referred to a GP or other health services as appropriate.'",
+      "action": "REFER",
+      "severity": "medium",
+      "structured": null,
+      "note": "'Health complications' is not defined anywhere in the fact sheet.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'... displaying any symptoms of a serious infection ... will be referred to a GP or other health services as appropriate.'",
+      "action": "REFER",
+      "severity": "high",
+      "structured": null,
+      "note": "Trigger text names serious infection; no emergency action (call 000 / ED) is printed in this fact sheet.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Patients may also be referred if there are symptoms inconsistent with a UTI (e.g. a sexually transmitted infection).'",
+      "action": "REFER",
+      "severity": "medium",
+      "structured": null,
+      "note": "'May also be referred' — discretionary wording as printed.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Patients should be advised to seek GP or other health service advice if symptoms worsen, or they have not responded to treatment within two days.'",
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "structured": null,
+      "note": "Safety-netting instruction addressed to the patient; the fact sheet does not direct the pharmacist to reassess.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'Patients who are assessed by a pharmacist as being at risk of a complicated UTI, having health complications or displaying any symptoms of a serious infection, will be referred to a GP or other health services as appropriate.' (p1)",
+      "'Patients may also be referred if there are symptoms inconsistent with a UTI (e.g. a sexually transmitted infection).' (p1)",
+      "'Patients should be advised to seek GP or other health service advice if symptoms worsen, or they have not responded to treatment within two days.' (p2)",
+      "'GPs may receive referrals from pharmacists as part of these services. Practice managers should be alerted to the possibility of pharmacists contacting general practices to facilitate a referral, as part of follow-up or referral from Community Pharmacy UTI Services.' (p2)"
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 1, "section_heading": "Patient eligibility" }
+  },
+  "review_followup": [
+    {
+      "when": "If symptoms worsen after treatment",
+      "what": "'Patients should be advised to seek GP or other health service advice if symptoms worsen, or they have not responded to treatment within two days.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+    },
+    {
+      "when": "If symptoms have not responded to treatment within two days",
+      "what": "'Patients should be advised to seek GP or other health service advice if symptoms worsen, or they have not responded to treatment within two days.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+    },
+    {
+      "when": "At the end of the consultation (record to the patient)",
+      "what": "'To support continuity of care, patients will be provided a record of their consultation (e.g., patient assessment checklist) and encouraged to pass on this information to their GP.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'Consultations including any supply of antibiotics or other treatment will be documented and recorded by the pharmacist, irrespective of whether a person is supplied an antibiotic or other treatment.' (p2)",
+      "'Pharmacists will obtain patient consent to upload information about the consultation and treatment into My Health Record.' (p2)"
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-services-health-professionals-factsheet.pdf", "page": 2, "section_heading": "Clinical documentation and patient information" }
+  },
+  "references": [
+    "[p1] SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol — named as where 'further information on patient eligibility is available' (companion document; separately extracted)",
+    "[p2] Pharmaceutical Society of Australia (PSA) Treatment Guidelines for Pharmacists – Cystitis",
+    "[p2] Therapeutic Guidelines (advice contained within)",
+    "[p2] Australian Medicines Handbook (advice contained within)",
+    "[p2] Pharmaceutical Society of Australia Professional Practice Standards 2023, version 6",
+    "[p2] SA Health Urinary Tract Infections (adult): Empirical Treatment Clinical Guideline (PDF 514KB) — 'is also in place in South Australia'",
+    "[p2] SA Community Pharmacy Urinary Tract Infection (UTI) Services | SA Health (Resources — URL text not present in the extraction)",
+    "[p2] Feedback: health.officeofthechiefpharmacist@sa.gov.au"
+  ],
+  "open_questions": [
+    {
+      "topic": "This document is a 2-page fact sheet, not a protocol — what standing should it have in the engine?",
+      "observed": "Header reads 'Health Professionals – fact sheet' for 'SA Community Pharmacy UTI Services'. It defers all clinical decision content: 'Further information on patient eligibility is available in the SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol' and the protocol 'includes a Clinical Flow Chart that provides information to guide assessment and clinical decision-making'.",
+      "why_unclear": "Extracted as a non-protocol guidance record: only the sentences actually printed were transcribed. No assessment criteria, doses or flow-chart branches were inferred. Confirm whether this record should be merged with, or superseded by, SA_uti-management-protocol.v1.json.",
+      "source_page": 1
+    },
+    {
+      "topic": "Scheme name discrepancy between this fact sheet and the UTI Management Protocol",
+      "observed": "Fact sheet (p1): 'This is in accordance with the Community Pharmacy Urinary Tract Infection Treatment Services Scheme.' The protocol's authorisation page instead names 'the Community Pharmacy Urinary Tract Infection Services Scheme' (and this fact sheet itself elsewhere writes 'SA Community Pharmacy Urinary Tract Infection Services Scheme UTI Management Protocol').",
+      "why_unclear": "Two different scheme names appear across the two SA documents; one may be an error in the fact sheet. Both transcribed verbatim; no reconciliation invented.",
+      "source_page": 1
+    },
+    {
+      "topic": "The three medicines are listed with no dose, strength, frequency, duration or quantity",
+      "observed": "p2 lists only 'trimethoprim; or nitrofurantoin ...; or cefalexin ...'.",
+      "why_unclear": "Dosing cannot be extracted from this document and must not be invented; it resides in the UTI Management Protocol (Appendix 2 of the companion extraction).",
+      "source_page": 2
+    },
+    {
+      "topic": "'if they meet clinical criteria' — the clinical criteria themselves are not printed",
+      "observed": "p1 conditions supply on meeting clinical criteria but never enumerates them; eligibility detail is deferred to the UTI Management Protocol.",
+      "why_unclear": "No criteria exist to transcribe; INC items here are only the single printed eligibility sentence.",
+      "source_page": 1
+    },
+    {
+      "topic": "Clinical Flow Chart content absent",
+      "observed": "p1: the UTI Management Protocol 'includes a Clinical Flow Chart that provides information to guide assessment and clinical decision-making on management of uncomplicated UTI and appropriate referral'. No chart appears in this 2-page fact sheet.",
+      "why_unclear": "The flow chart lives in the companion protocol PDF (whose page 6 is image-only); nothing was inferred here.",
+      "source_page": 1
+    },
+    {
+      "topic": "No referral urgency tiers or timeframes printed",
+      "observed": "Referrals are described only as 'referred to a GP or other health services as appropriate' and 'seek GP or other health service advice if symptoms worsen, or ... not responded to treatment within two days'.",
+      "why_unclear": "referral.urgent and referral.emergency are empty because the document prints no urgent or emergency tier; destinations like healthdirect, Medicare Urgent Care Clinic or hospital emergency department are named only in the description of the separate protocol's flow chart, not as this document's referral instructions.",
+      "source_page": 1
+    },
+    {
+      "topic": "Mandatory training specifics not named here",
+      "observed": "p2: 'Completion of specific accredited training for pharmacists on UTI treatment is mandatory prior to offering SA Community Pharmacy UTI Services. Pharmacist must also complete cultural safety and gender diversity training relevant to their place of practice.' The accredited course(s) are not named.",
+      "why_unclear": "Course names appear only in the companion protocol's Appendix 1; no course identified in this document.",
+      "source_page": 2
+    },
+    {
+      "topic": "'where treatment is indicated' — indication criteria not printed",
+      "observed": "p2 supplies medicines 'to eligible patients where treatment is indicated', without defining when treatment is indicated versus conservative management.",
+      "why_unclear": "Conservative management and treatment-indication rules are not in this document; not invented.",
+      "source_page": 2
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Whether this fact sheet should be a first-class protocol record or a pointer to SA_uti-management-protocol.v1.json (possible content overlap and contradictory scheme naming).",
+      "source_page": 1,
+      "reason": "It is guidance, not the instrument; keeping both could double-count eligibility and referral rules in the engine."
+    },
+    {
+      "item": "Correct scheme name: 'Community Pharmacy Urinary Tract Infection Treatment Services Scheme' (this fact sheet, p1) vs 'Community Pharmacy Urinary Tract Infection Services Scheme' (protocol authorisation page).",
+      "source_page": 1,
+      "reason": "One of the two documents appears to misname the Ministerial scheme; affects any text search or legal-basis citation."
+    },
+    {
+      "item": "Doses, strengths, quantities and durations for trimethoprim, nitrofurantoin and cefalexin as referenced by this fact sheet.",
+      "source_page": 2,
+      "reason": "Not printed here; must come from the UTI Management Protocol Appendix 2 (already extracted separately) — confirm the fact sheet is not expected to carry them."
+    },
+    {
+      "item": "Identity of the 'clinical criteria' that patients must meet (p1).",
+      "source_page": 1,
+      "reason": "Supply is conditional on them but they are deferred to the protocol/flow chart; the engine cannot evaluate them from this document."
+    },
+    {
+      "item": "Referral destinations, urgency tiers and timeframes for 'a GP or other health services as appropriate'.",
+      "source_page": 1,
+      "reason": "No tiers printed; urgent/emergency arrays are empty by necessity, matching the companion protocol's own gaps."
+    },
+    {
+      "item": "Named accredited UTI training course(s) and the cultural safety/gender diversity training requirement.",
+      "source_page": 2,
+      "reason": "Declared mandatory but unnamed in this document; eligibility to serve depends on them."
+    },
+    {
+      "item": "Link target for 'SA Community Pharmacy Urinary Tract Infection (UTI) Services | SA Health' (Resources, p2) — no URL text survived extraction.",
+      "source_page": 2,
+      "reason": "Reference recorded without URL to avoid inventing one."
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf",
+    "pdf_sha256": "967a04a55b419d2a3676633d9d025caa5a98d371aef1d5b6f7359a5e8dd06439",
+    "page_count": 11,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Community Pharmacist Prescribing Code (CPP Code)",
+    "instrument_version": "Version 1.0",
+    "effective_date": "15 January 2026 (Date published: 15 January 2026; approved by Chief Executive, Department for Health and Wellbeing, 9 January 2026)",
+    "legal_basis": "Section 18(1)(a)(iii) of the Controlled Substances Act 1984 (the Act) authorises a registered health practitioner to prescribe a prescription drug (not being a drug of dependence) (Schedule 4 drug) to a person, if the practitioner is acting in the ordinary course of the practitioner's profession and the practitioner is authorised to prescribe the drug by the regulations. For the purposes of section 18(1)(a)(iii) of the Act, regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) authorises a pharmacist to prescribe a Schedule 4 drug if (a) the pharmacist is included on the register of authorised pharmacists; and (b) the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.",
+    "supervision_model": "Authorised pharmacist prescribing under Regulation 17A (2) of the Poisons Regulations: the pharmacist holds unconditional general registration with the Pharmacy Board of Australia, has successfully completed a training program approved by the Chief Executive of the Department for Health and Wellbeing, and must comply with all relevant legislation including the Code of Conduct for Pharmacists (document's own terminology). Prescribing must be preceded by an individualised clinical assessment and must follow the Community Pharmacist Prescribing Clinical Practice Guidelines and Protocols for the particular indication.",
+    "scope_summary": "FRAMEWORK DOCUMENT (code of conduct / governance instrument), not a single-condition prescribing protocol. The CPP Code sets the legal basis, pharmacist eligibility requirements (registration, approved training, legislative compliance), consultation/site/prescribing/recording requirements, and Appendix 2 (the list of Schedule 4 drugs, indications and restrictions that a pharmacist may prescribe, all defined by reference to the current online Therapeutic Guidelines). It prints no condition-specific clinical criteria, no diagnostic pathways and no drug doses; clinical detail is deferred to the Community Pharmacist Prescribing Clinical Practice Guidelines and Protocols published by the Department. Appendix 1 notes that chronic management conditions are included in training only and are not currently approved for expanded scope services."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "The pharmacist holds an unconditional general registration in the health profession of pharmacy with the Pharmacy Board of Australia under the Health Practitioner Regulation National Law (HPRNL)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Requirements a Pharmacist Must Meet - Regulation 17A (2) of the Poisons Regulations" }
+      },
+      {
+        "id": "INC-2",
+        "text": "The pharmacist must have successfully completed a training program approved by the Chief Executive of the Department for Health and Wellbeing (the Department) (see Appendix 1).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Requirements a Pharmacist Must Meet - Regulation 17A (2) of the Poisons Regulations" }
+      },
+      {
+        "id": "INC-3",
+        "text": "The pharmacist must comply with all relevant legislation, including the Act, the HPRNL, the Therapeutic Goods Act 1989 (Cth), the Code of Conduct for Pharmacists developed and approved by the Pharmacy Board of Australia under the HPRNL, and the expected standards of ethical behaviour of pharmacists towards individuals, the community and society.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Requirements a Pharmacist Must Meet - Regulation 17A (2) of the Poisons Regulations" }
+      },
+      {
+        "id": "INC-4",
+        "text": "regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) authorises a pharmacist to prescribe a Schedule 4 drug if - (a) the pharmacist is included on the register of authorised pharmacists; and (b) the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Foreword" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Before prescribing a Schedule 4 drug to a person, the pharmacist must undertake an individualised clinical assessment of the person's health needs, including relevant medical history, symptoms and investigations as part of the consultation to determine suitability for any prescribed treatment. Refer to the Community Pharmacist Prescribing Clinical Practice Guidelines and Protocols published by the Department for the particular indication to which the Schedule 4 drug relates.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Prescribing Requirements" }
+      },
+      {
+        "id": "INC-6",
+        "text": "The pharmacist may only prescribe a Schedule 4 drug for a person at a community pharmacy: (a) following a consultation with that person, who is physically present at the same pharmacy; and (b) this consultation is at premises registered as a pharmacy under Part 4 of the Health Practitioner Regulation National Law (South Australia) Act 2010; and (c) the pharmacy has an area that complies with the Pharmacy Regulation Authority SA's 'Guidelines for Community pharmacy consultation rooms', and (d) the pharmacy is accredited against a relevant quality care standard.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Prescribing Requirements" }
+      },
+      {
+        "id": "INC-7",
+        "text": "The pharmacist may prescribe a Schedule 4 drug listed in Appendix 2, Column 1: (a) For the indication listed in Appendix 2, Column 2; and (b) Subject to the restrictions stated in Appendix 2, Column 3.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Prescribing Requirements" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Appendix 2 Column 1 drug: A topical medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Dermatology: Psoriasis'. Column 2 indication: Acute exacerbations of mild plaque psoriasis. Column 3 restrictions and conditions: For persons aged 18 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 7, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Gastrointestinal: Nausea and vomiting: Antiemetic drugs in adults'. Column 2 indication: Acute nausea and vomiting associated with gastroenteritis. Column 3 restrictions and conditions: For persons aged 18 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 7, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-10",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Antibiotic: Traumatic wound infections: Bite wound infections, including clenched-fist injury infections; or 'Antibiotic: Traumatic wound infections: Post-traumatic wound infections; or 'Antibiotic: Traumatic wound infections: Water-immersed wound infections'. Lidocaine preparations of 1% or less in accordance with the current online version of the section of the Therapeutic Guidelines titled 'Pain and analgesia: Drugs used for pain: Local anaesthetics for acute pain management'. Column 2 indication: Acute minor wound management. Column 3 restrictions and conditions: For persons aged 5 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 7, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-11",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Pain and analgesia: Pharmacological management of acute pain: Mild, acute nociceptive pain'. An otic medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Antibiotic: Ear, nose and throat infections: Otitis externa'. Column 2 indication: Acute otitis externa - treatment and/or management of associated pain. Column 3 restrictions and conditions: For persons aged 2 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 8, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-12",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Pain and analgesia: Pharmacological management of acute pain: Mild, acute nociceptive pain; or 'Antibiotic: Ear, nose and throat infections: Otitis media'. Column 2 indication: Acute otitis media - treatment and/or management of associated pain. Column 3 restrictions and conditions: For persons aged 2 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 8, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-13",
+        "text": "Appendix 2 Column 1 drug: A medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Respiratory: Rhinitis and rhinosinusitis: Allergic rhinitis'; or 'Respiratory: Rhinitis and rhinosinusitis: Nonallergic rhinitis'. Column 2 indication: Allergic and non-allergic rhinitis. Column 3 restrictions and conditions: For persons aged 6 years or over. Excluding ocular medicines containing ketorolac or corticosteroids.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 8, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-14",
+        "text": "Appendix 2 Column 1 drug: A medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Gastrointestinal: Oesophageal disorders: Gastro-oesophageal reflux in adults'. Column 2 indication: Gastro-oesophageal reflux and gastro-oesophageal reflux disease. Column 3 restrictions and conditions: For persons aged 18 years to 50 years.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 8, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-15",
+        "text": "Appendix 2 Column 1 drug: Combined hormonal contraception - combined oral contraceptives (COCs) and the contraceptive vaginal ring, excluding preparations containing 50 micrograms or more of ethinylestradiol or preparations containing mestranol. Progestogen-only contraceptive pill. Depot medroxyprogesterone (injection). Column 2 indication: Hormonal contraception (initiation). Column 3 restrictions and conditions: For persons aged 17 years or over*. *Initiation of combined hormonal contraception not permitted in persons aged 41 to 50 years",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-16",
+        "text": "Appendix 2 Column 1 drug: A topical or oral medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Antibiotic: Skin and soft tissue infections: Impetigo'. Column 2 indication: Impetigo. Column 3 restrictions and conditions: For persons aged 1 year or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-17",
+        "text": "Appendix 2 Column 1 drug: A medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Dermatology: Acne'. Column 2 indication: Mild to moderate acne. Column 3 restrictions and conditions: For persons aged 12 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-18",
+        "text": "Appendix 2 Column 1 drug: A topical medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Dermatology: Dermatitis: Atopic dermatitis'. Column 2 indication: Mild to moderate atopic dermatitis. Column 3 restrictions and conditions: For persons aged 6 months or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-19",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Pain and Analgesia: Pharmacological management of acute pain: Mild, acute nociceptive pain'; or 'Rheumatology: Overview of limb conditions: Analgesia for acute soft-tissue limb conditions'. Column 2 indication: Mild, acute musculoskeletal pain. Column 3 restrictions and conditions: For persons aged 18 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-20",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Pain and Analgesia: Pharmacological management of acute pain: Mild, acute nociceptive pain'; or 'Pain and Analgesia: Managing specific pain syndromes: Pain associated with shingles (herpes zoster): Acute pain associated with shingles (herpes zoster)'; or 'Antibiotic: Skin and soft tissue infections: Shingles (herpes zoster)'. Column 2 indication: Shingles - treatment and/or management of associated mild nociceptive pain. Column 3 restrictions and conditions: For persons aged 18 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 10, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-21",
+        "text": "Appendix 2 Column 1 drug: A medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Addiction: Tobacco smoking and nicotine dependence'. Column 2 indication: Treatment of nicotine dependence. Column 3 restrictions and conditions: For persons aged 18 years or over. Excluding nortriptyline and nicotine vaping products.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 10, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-22",
+        "text": "Appendix 2 Column 1 drug: An oral medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Wilderness medicine: Altitude illness'; or 'Gastrointestinal: Nausea and vomiting'. Column 2 indication: Travel health - Acute mountain sickness - standby treatment and/or standby management of associated symptoms. Column 3 restrictions and conditions: For persons aged 8 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 10, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-23",
+        "text": "Appendix 2 Column 1 drug: A medicine mentioned in the current online version of the sections of the Therapeutic Guidelines titled: 'Antibiotic: Infectious diarrhoea: Travellers' diarrhoea'; or 'Gastrointestinal: Acute gastroenteritis: Other supportive therapy and considerations for acute gastroenteritis: Antidiarrhoeal drugs for acute gastroenteritis'. Column 2 indication: Travel health - Travellers' diarrhoea - standby emergency treatment and/or standby management of associated symptoms. Column 3 restrictions and conditions: For persons aged 2 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 10, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "INC-24",
+        "text": "Appendix 2 Column 1 drug: A medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled 'Antibiotic: Parasitic infections: Malaria'. Column 2 indication: Travel health - Malaria - prophylaxis or standby emergency treatment of uncomplicated malaria. Column 3 restrictions and conditions: For persons aged 8 years or over.",
+        "criteria_group": { "all_of": [], "any_of": ["INC-8", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 11, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Excluding ocular medicines containing ketorolac or corticosteroids. (restriction for the Allergic and non-allergic rhinitis indication)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 8, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Excluding nortriptyline and nicotine vaping products. (restriction for the Treatment of nicotine dependence indication)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 10, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Initiation of combined hormonal contraception not permitted in persons aged 41 to 50 years",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Note: chronic management conditions are included in training only. They are not currently approved for expanded scope services. (Chronic management conditions: Improved asthma symptom control; Cardiovascular disease risk reduction; Chronic obstructive pulmonary disease (COPD) monitoring)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 5, "section_heading": "Approved Training Programs" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 7, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Community Pharmacist Prescribing Code - prescribing consultation, prescription and documentation pathway",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Prescribing Requirements: Before prescribing a Schedule 4 drug to a person, the pharmacist must undertake an individualised clinical assessment of the person's health needs, including relevant medical history, symptoms and investigations as part of the consultation to determine suitability for any prescribed treatment. Refer to the Community Pharmacist Prescribing Clinical Practice Guidelines and Protocols published by the Department for the particular indication to which the Schedule 4 drug relates. The consultation must be with the person, who is physically present at the same pharmacy, at premises registered as a pharmacy under Part 4 of the Health Practitioner Regulation National Law (South Australia) Act 2010, in a pharmacy area that complies with the Pharmacy Regulation Authority SA's 'Guidelines for Community pharmacy consultation rooms', and the pharmacy must be accredited against a relevant quality care standard.",
+          "gates": [
+            { "criterion": "Consultation conducted with the person physically present at the same pharmacy, at premises registered as a pharmacy, with a compliant consultation room area and accreditation against a relevant quality care standard", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Prescribing Requirements" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Determine suitability for any prescribed treatment against Appendix 2: The pharmacist may prescribe a Schedule 4 drug listed in Appendix 2, Column 1: (a) For the indication listed in Appendix 2, Column 2; and (b) Subject to the restrictions stated in Appendix 2, Column 3. Appendices/Column headings as printed: 'Column 1 - Drug', 'Column 2 - Indication', 'Column 3 - Restrictions and conditions'. Each indication carries its own age restriction (e.g. allergic and non-allergic rhinitis: persons aged 6 years or over; gastro-oesophageal reflux and gastro-oesophageal reflux disease: persons aged 18 years to 50 years).",
+          "gates": [
+            { "criterion": "The drug is listed in Appendix 2 Column 1, the indication is listed in Appendix 2 Column 2, and the restrictions stated in Appendix 2 Column 3 are met", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 3, "section_heading": "Prescribing Requirements" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "The pharmacist when prescribing a Schedule 4 drug must give a prescription (written or in an approved electronic form) that is compliant with the Act and the Poisons Regulations. The pharmacist must on all prescriptions they give include the prescriber number issued to the pharmacist by the Department. The pharmacist should prescribe a clinically appropriate quantity of the medicine, including repeats, to cover until the next scheduled clinical review or based on the person's circumstances. The quantity and repeats prescribed should align with standard quantities issued for medicines (e.g., quantities in a standard manufacturer's pack or as outlined on the Pharmaceutical Benefits Scheme). The pharmacist must not prescribe, in one prescription, greater than 12 months' supply of a medicine.",
+          "gates": [
+            { "criterion": "Prescription is written or in an approved electronic form, compliant with the Act and the Poisons Regulations, and includes the prescriber number issued to the pharmacist by the Department", "on_fail": "STOP" },
+            { "criterion": "The prescription does not exceed 12 months' supply of a medicine", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "FOLLOW_UP",
+          "description": "The pharmacist must make and keep (at the pharmacy where the person's consultation occurred) a comprehensive clinical record of the consultation and of any prescriptions given to a person, in accordance with relevant legislation and professional responsibilities. The record must include: (a) sufficient information to identify the person; and (b) the name of the pharmacist who undertook the consultation and their healthcare identifier number (HPI-I); and (c) the date of the consultation; and (d) information relevant to the person's diagnosis and treatment (for example, person's medical history, adverse drug reactions); and (e) any clinical opinion reached, and actions taken by the pharmacist; and (f) details of the management plan, including: i. any prescriptions given to the person (generic name, form, strength, quantity, instructions for use); and ii. any information or advice given by the pharmacist to the person in relation to any proposed treatment; and iii. any information or advice about recommended follow up. (g) any consent given by a person to the consultation, treatment proposed, and sharing of information with their medical practitioner. The pharmacist must offer a record of the consultation to the person, including details of any changes to their medication management. Following consent, the pharmacist should share a record of the consultation via secure transfer to the person's usual treating healthcare practitioner or medical practice, where the person has one.",
+          "gates": [
+            { "criterion": "Consent obtained before sharing a record of the consultation via secure transfer to the person's usual treating healthcare practitioner or medical practice", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+        }
+      ]
+    }
+  ],
+  "treatments": [],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Excluding ocular medicines containing ketorolac or corticosteroids.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 8, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Excluding nortriptyline and nicotine vaping products.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 10, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Initiation of combined hormonal contraception not permitted in persons aged 41 to 50 years",
+      "structured": { "parameter": "age", "operator": "range", "value": [41, 50], "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 9, "section_heading": "Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Note: chronic management conditions are included in training only. They are not currently approved for expanded scope services.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 5, "section_heading": "Approved Training Programs" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "The pharmacist must not prescribe, in one prescription, greater than 12 months' supply of a medicine.",
+      "structured": { "parameter": "quantity_to_supply", "operator": "<=", "value": 12, "unit": "months" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Following consent, the pharmacist should share a record of the consultation via secure transfer to the person's usual treating healthcare practitioner or medical practice, where the person has one.",
+      "The pharmacist must offer a record of the consultation to the person, including details of any changes to their medication management."
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+  },
+  "review_followup": [
+    {
+      "when": "Until the next scheduled clinical review, or based on the person's circumstances",
+      "what": "The pharmacist should prescribe a clinically appropriate quantity of the medicine, including repeats, to cover until the next scheduled clinical review or based on the person's circumstances. The quantity and repeats prescribed should align with standard quantities issued for medicines (e.g., quantities in a standard manufacturer's pack or as outlined on the Pharmaceutical Benefits Scheme). The pharmacist must not prescribe, in one prescription, greater than 12 months' supply of a medicine.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+    },
+    {
+      "when": "At the consultation (as part of the comprehensive clinical record)",
+      "what": "The record must include details of the management plan, including any information or advice about recommended follow up.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must offer a record of the consultation to the person, including details of any changes to their medication management.",
+      "Following consent, the pharmacist should share a record of the consultation via secure transfer to the person's usual treating healthcare practitioner or medical practice, where the person has one."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacist-prescribing-code-cpp-code.pdf", "page": 4, "section_heading": "Prescribing Requirements" }
+  },
+  "references": [],
+  "open_questions": [
+    {
+      "topic": "Framework document, not a single-condition protocol",
+      "observed": "The CPP Code is a governance/code instrument (legal basis, pharmacist requirements, prescribing, recording and Appendix 2 scope table). It contains no condition-specific clinical criteria, no diagnostic or assessment pathway for any condition, no treatment regimens and no reference list; clinical content is deferred to the Community Pharmacist Prescribing Clinical Practice Guidelines and Protocols published by the Department (page 3 and page 7).",
+      "why_unclear": "Recorded per the NON-PROTOCOL DOCUMENTS guidance: eligibility/requirements/scope are extracted as criteria, treatments and references arrays are genuinely empty, and no clinical content was fabricated.",
+      "source_page": 3
+    },
+    {
+      "topic": "No single service-wide numeric age bound",
+      "observed": "Appendix 2 assigns a different age restriction per indication: 6 years or over (allergic and non-allergic rhinitis); 5 years or over (acute minor wound management); 2 years or over (otitis externa, otitis media, travellers' diarrhoea); 1 year or over (impetigo); 6 months or over (atopic dermatitis); 12 years or over (mild to moderate acne); 17 years or over (hormonal contraception initiation); 18 years or over (plaque psoriasis, nausea and vomiting, gastro-oesophageal reflux in adults is 18 years to 50 years, musculoskeletal pain, shingles, nicotine dependence); 8 years or over (acute mountain sickness, malaria).",
+      "why_unclear": "No document-wide age floor/ceiling is printed, so age_bounds min_years and max_years are left null; each indication's age is transcribed verbatim into its inclusion criterion text instead of being aggregated.",
+      "source_page": 7
+    },
+    {
+      "topic": "Appendix 2 table column interleaving",
+      "observed": "The text extraction interleaves the three columns across pages 7-11. For 'Acute minor wound management' the oral antibiotic sections and 'Lidocaine preparations of 1% or less' appear in Column 1 against a single indication/restriction; for 'Acute otitis externa' the otic medicine row appears in Column 1 with no separate indication/restriction text.",
+      "why_unclear": "Rows were consolidated as one criterion each and marked confidence 'unclear' (INC-10, INC-11) where the cell structure could not be confirmed from the extraction; both readings (separate rows vs merged cells) are recorded here.",
+      "source_page": 7
+    },
+    {
+      "topic": "Headings for Appendix 2 rows",
+      "observed": "The heading 'Appendix 2 Schedule 4 drugs that may be prescribed by a pharmacist' is printed once on page 7; pages 8-11 repeat only the column header row while the table continues.",
+      "why_unclear": "The appendix heading is used as section_heading for all Appendix 2 rows (pages 7-11) because no new heading is printed on the continuation pages; page numbers still come from each page marker.",
+      "source_page": 7
+    },
+    {
+      "topic": "No clinical referral or escalation triggers",
+      "observed": "The Code states no clinical red-flag/referral triggers (no urgent, emergency or GP referral criteria for patient presentation). The only practitioner-to-practitioner duty is sharing the consultation record with the person's usual treating healthcare practitioner or medical practice following consent (page 4).",
+      "why_unclear": "referral.urgent and referral.emergency are therefore genuinely empty; red_flags contains only NOT_ELIGIBLE prescribing restrictions (explicit exclusions and the 12-month supply limit), not clinical escalation triggers. EXC-1 to EXC-4 and RF-1 to RF-4 quote the same four source statements because they serve both the eligibility decision list and the hard-stop alert list.",
+      "source_page": 4
+    },
+    {
+      "topic": "Gate on_fail values derived from prohibitions",
+      "observed": "The Code states requirements and prohibitions ('must', 'may only prescribe', 'must not') rather than explicit branch instructions; it never uses words such as 'stop' or 'refer' for a failed requirement.",
+      "why_unclear": "on_fail 'STOP' is recorded as the direct consequence of each prohibition (prescribing is not permitted unless the requirement is met); this derivation is flagged rather than being printed branch language.",
+      "source_page": 3
+    },
+    {
+      "topic": "Approved training programs not yet listed",
+      "observed": "Appendix 1: 'Approved Training Programs - Will be published on the SA Health webpage as courses are approved.' No course names or providers are printed in the document.",
+      "why_unclear": "Eligibility requirement INC-2 cannot be checked against any published list from this document alone.",
+      "source_page": 5
+    },
+    {
+      "topic": "Notification duties interpretation",
+      "observed": "The Code does not mention notifiable conditions, the Australian Immunisation Register or mandatory disease notification. It does require offering a record of the consultation to the person and, following consent, sharing the record with their usual treating healthcare practitioner or medical practice where the person has one.",
+      "why_unclear": "notifiable.required is recorded as true only for those two record-sharing/offering duties; the conditions array quotes them verbatim. Consent is a precondition for sharing, and the duty applies only where the person has a usual treating healthcare practitioner.",
+      "source_page": 4
+    },
+    {
+      "topic": "Medicines identified by guideline reference only",
+      "observed": "Appendix 2 names no individual generic drug with strength, dose, route, frequency or duration; every drug entry is a class defined as 'a medicine mentioned in the current online version of the section of the Therapeutic Guidelines titled ...', except 'Lidocaine preparations of 1% or less' and the contraceptive preparations (excluding 50 micrograms or more of ethinylestradiol, or containing mestranol).",
+      "why_unclear": "The treatments array is empty because the Code prescribes no regimen and naming drugs would require reading the external Therapeutic Guidelines; the medicine-class statements are captured verbatim in the inclusion criteria instead.",
+      "source_page": 7
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Approved training programs list (Appendix 1): 'Will be published on the SA Health webpage as courses are approved'; an approved training program comprises a prescribing training component and a clinical training component delivered through a TEQSA- or ASQA-accredited education institution, at tertiary-level study equivalent to Australian Qualifications Framework Level 8.",
+      "source_page": 5,
+      "reason": "Pharmacist eligibility requirement INC-2 cannot be verified until SA Health publishes the approved-course list; must be re-checked before go-live."
+    },
+    {
+      "item": "Scope change risk: 'Note: chronic management conditions are included in training only. They are not currently approved for expanded scope services.' (Improved asthma symptom control; Cardiovascular disease risk reduction; COPD monitoring)",
+      "source_page": 5,
+      "reason": "These conditions must be blocked in the prescribing module now, but the note says 'not currently' - re-confirm status before any scope update."
+    },
+    {
+      "item": "Site requirements: consultation must be with the person physically present at the same pharmacy; premises registered as a pharmacy under Part 4 of the Health Practitioner Regulation National Law (South Australia) Act 2010; pharmacy area complying with the Pharmacy Regulation Authority SA's 'Guidelines for Community pharmacy consultation rooms'; pharmacy accredited against a relevant quality care standard.",
+      "source_page": 3,
+      "reason": "Per-site accreditation and premises status must be verified for each pharmacy before the service is enabled."
+    },
+    {
+      "item": "Prescriber number: 'The pharmacist must on all prescriptions they give include the prescriber number issued to the pharmacist by the Department.'",
+      "source_page": 4,
+      "reason": "Each pharmacist's Department-issued prescriber number must be captured in the prescribing system and validated before a prescription can be generated."
+    },
+    {
+      "item": "Prescription form: 'written or in an approved electronic form' compliant with the Act and the Poisons Regulations.",
+      "source_page": 4,
+      "reason": "Which electronic prescription forms are approved for this Service, and how they are issued from OpenScript (private/non-PBS, D-001), must be confirmed."
+    },
+    {
+      "item": "Quantity rule: clinically appropriate quantity including repeats covering until the next scheduled clinical review, aligned with standard quantities (standard manufacturer's pack or as outlined on the Pharmaceutical Benefits Scheme), and never more than 12 months' supply in one prescription.",
+      "source_page": 4,
+      "reason": "Numeric supply caps, repeat limits and review intervals are left to pharmacist judgement and external guidance; local service policy must set concrete values."
+    },
+    {
+      "item": "Appendix 2 definitions are dynamic: every drug entry refers to 'the current online version of the section of the Therapeutic Guidelines titled ...'.",
+      "source_page": 7,
+      "reason": "The prescribable drug/indication definitions change when the online Therapeutic Guidelines are updated; re-verify the Appendix 2 list at go-live and periodically thereafter."
+    },
+    {
+      "item": "Hormonal contraception restriction: 'Initiation of combined hormonal contraception not permitted in persons aged 41 to 50 years', and preparations containing 50 micrograms or more of ethinylestradiol or containing mestranol are excluded.",
+      "source_page": 9,
+      "reason": "Jurisdiction-specific hard stops that must be enforced exactly as printed in the module."
+    },
+    {
+      "item": "Record sharing: 'Following consent, the pharmacist should share a record of the consultation via secure transfer to the person's usual treating healthcare practitioner or medical practice, where the person has one.'",
+      "source_page": 4,
+      "reason": "Consent capture, secure-transfer mechanism and how this integrates with the pharmacy dispensing/clinical record must be defined locally."
+    }
+  ]
+}

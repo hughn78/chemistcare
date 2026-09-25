@@ -1,0 +1,559 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf",
+    "pdf_sha256": "640cdec5abb323db0375bc6f115375b89f4f6d273f41792faf66cf05fe500c6a",
+    "page_count": 12,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Mild to Moderate Acne – Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "Authorisation page (p2): 'Community Pharmacy Expanded Scope of Practice Initiative. In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.'",
+    "supervision_model": "Document does not use 'collaborative'/'autonomous' terminology; its own wording: an authorised pharmacist on the register of authorised pharmacists prescribing in accordance with the Community Pharmacist Prescribing Code (p2), with a prescribing restriction note (p8 NB1): 'Australian state and territory law restricts the prescription of certain retinoid medicines to specialist physicians and dermatologists. Regulation 19 of the Controlled Substances (Poisons) Regulations 2011 outlines specific restrictions on the prescribing and use of certain Schedule 4 (S4) drugs, known as \"prescribed prescription drugs\" (11).' Discretion clause (p6): 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'",
+    "scope_summary": "SA Health (Community Pharmacy Expanded Scope of Practice Initiative) clinical practice guideline for pharmacist assessment and management of mild to moderate acne in patients aged 12 years or over. Covers 'Red flag' warning signs necessitating referral to emergency medical care (immediate referral to an emergency department – call 000), referral to a general practitioner (urgent referral within 24 to 48 hours; non-urgent referral), 'Treat (if clinically appropriate) and concurrently refer' situations, key points, patient history, examination and clinical features, management and treatment plan (general measures plus pharmacotherapy: over-the-counter topicals products, topical retinoids (and combination products with benzoyl peroxide), topical antibiotics (and combination products with benzoyl peroxide or retinoids), oral antibiotics), antibiotic-therapy limitations, teratogenicity warning for retinoids, confirmation of management, communication of the agreed management plan, general advice, clinical review (6-week follow-up) and resources. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'"
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 12 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Presentation is acne within the Service scope: 'Acne is characterised by a mixed eruption of lesions on the face, neck and/or trunk, where severity can be classified according to the Therapeutic Guidelines: Acne (Diagnosis and classification of acne) (3).' Guideline scope is mild to moderate acne (title); no numeric severity grading is printed in this document (see open_questions).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 7, "section_heading": "Clinical features" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 6, "section_heading": "Patient history" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "Patient aged under 12 years — 'Service restricted to patients aged 12 years or over.' (Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.)", "criteria_group": { "all_of": ["EXC-1"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+      { "id": "EXC-2", "text": "Immediate referral to an emergency department – call 000: Raised purple rash that doesn't blanch.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-3", "text": "Immediate referral to an emergency department – call 000: Generalised erythema that covers 90% or more of the skin.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-4", "text": "Immediate referral to an emergency department – call 000: Rash with shortness of breath or lip / tongue swelling.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-5", "text": "Immediate referral to an emergency department – call 000: Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver. [temperatures transcribed exactly as extracted — see open_questions]", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "unclear", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-6", "text": "Urgent referral within 24 to 48 hours: Acne lesions are infected.", "criteria_group": { "all_of": [], "any_of": ["EXC-6", "EXC-7"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-7", "text": "Urgent referral within 24 to 48 hours: Signs or symptoms of progressive disease, e.g. cellulitis.", "criteria_group": { "all_of": [], "any_of": ["EXC-6", "EXC-7"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-8", "text": "Non-urgent referral: The diagnosis is unclear.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-9", "text": "Non-urgent referral: The patient is planning a pregnancy or pregnant (and requires treatment above standard pharmacist care).", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-10", "text": "Non-urgent referral: The patient is taking a medicine that can cause or aggravate acne.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-11", "text": "Non-urgent referral: A female patient has PCOS or presents with signs of androgenisation including hirsutism, obesity and/or menstrual irregularity.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-12", "text": "Non-urgent referral: The acne is classified as severe, cystic (e.g. nodulocystic acne, acne conglobate) or scarring, or the patient has a family history of scarring acne.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-13", "text": "Non-urgent referral: Consider early referral if acne is scarring, presents in a patient with a family history of severe scarring acne, is resistant to other treatments, repeatedly relapses, or has a marked negative emotional and social effect.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-14", "text": "Non-urgent referral: The condition worsens, repeatedly relapses or does not respond to optimal treatment in the Service.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-15", "text": "Non-urgent referral: The patient requires longer than 6 months of oral antibiotic therapy.", "criteria_group": { "all_of": [], "any_of": ["EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-16", "text": "Treat (if clinically appropriate) and concurrently refer: Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) [as printed] in the following situations: Females of child-bearing age being treated with teratogenic topical or oral medicines who request contraception that cannot be provided as part of standard pharmacist care or within the scope of the Hormonal Contraception Clinical Practice Guideline.", "criteria_group": { "all_of": [], "any_of": ["EXC-16"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer:" } },
+      { "id": "EXC-17", "text": "NB2: 'Referral to a medical practitioner is required for female patients where acne may be related to androgenisation.'", "criteria_group": { "all_of": [], "any_of": ["EXC-17"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" } }
+    ],
+    "age_bounds": {
+      "min_years": 12,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+      { "id": "EXE-2", "text": "'Treat (if clinically appropriate) and concurrently refer' — contraception request that cannot be provided as part of standard pharmacist care or within the scope of the Hormonal Contraception Clinical Practice Guideline: 'Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) [as printed] in the following situations' (EXC-16).", "criteria_group": { "all_of": [], "any_of": ["EXE-2"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer:" } }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Assessment and management of mild to moderate acne",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "REFER",
+          "description": "Red flag screen at presentation — emergency tier (p4): \"'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: Immediate referral to an emergency department – call 000:\" Raised purple rash that doesn't blanch; Generalised erythema that covers 90% or more of the skin; Rash with shortness of breath or lip / tongue swelling; Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver. (See RF-2 to RF-6 / EXC-2 to EXC-5.)",
+          "gates": [
+            { "criterion": "No 'call 000' red flag warning sign present (EXC-2 to EXC-5 / RF-2 to RF-6)", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "REFER",
+          "description": "Medical practitioner referral screen (p5): 'Refer to a general practitioner (or other medical practitioner where appropriate):' — 'Urgent referral within 24 to 48 hours:' Acne lesions are infected; Signs or symptoms of progressive disease, e.g. cellulitis. 'Non-urgent referral:' The diagnosis is unclear; The patient is planning a pregnancy or pregnant (and requires treatment above standard pharmacist care); The patient is taking a medicine that can cause or aggravate acne; A female patient has PCOS or presents with signs of androgenisation including hirsutism, obesity and/or menstrual irregularity; The acne is classified as severe, cystic (e.g. nodulocystic acne, acne conglobate) or scarring, or the patient has a family history of scarring acne; Consider early referral if acne is scarring, presents in a patient with a family history of severe scarring acne, is resistant to other treatments, repeatedly relapses, or has a marked negative emotional and social effect; The condition worsens, repeatedly relapses or does not respond to optimal treatment in the Service; The patient requires longer than 6 months of oral antibiotic therapy. 'Treat (if clinically appropriate) and concurrently refer:' Females of child-bearing age being treated with teratogenic topical or oral medicines who request contraception that cannot be provided as part of standard pharmacist care or within the scope of the Hormonal Contraception Clinical Practice Guideline. NB2 (p8): 'Referral to a medical practitioner is required for female patients where acne may be related to androgenisation.' (See EXC-6 to EXC-17 / RF-7 to RF-18.)",
+          "gates": [
+            { "criterion": "No 'Urgent referral within 24 to 48 hours' criterion present (EXC-6, EXC-7 / RF-7, RF-8)", "on_fail": "REFER" },
+            { "criterion": "No 'Non-urgent referral' criterion present (EXC-8 to EXC-15 / RF-9 to RF-16)", "on_fail": "REFER" },
+            { "criterion": "No NB2 referral trigger — acne may be related to androgenisation in a female patient (EXC-17 / RF-18)", "on_fail": "REFER" },
+            { "criterion": "No 'Treat (if clinically appropriate) and concurrently refer' situation present — no request for contraception outside standard pharmacist care / Hormonal Contraception Clinical Practice Guideline scope by a female of child-bearing age being treated with teratogenic topical or oral medicines (EXC-16 / RF-17)", "on_fail": "SEE_PW-1-S6" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs — Patient history (p6-p7): 'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines.' The patient history should consider: age; whether the person identifies as Aboriginal or Torres Strait Islander; pregnancy and breastfeeding status (if applicable), including plans to become pregnant; onset, duration, nature, location and severity of lesions (has the condition worsened or relapsed); underlying medical conditions, including PCOS; previous history of acne or other skin conditions; hormonal changes and signs of androgenisation in women, including hirsutism, obesity and menstrual irregularity; current and recently ceased medicines (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies, adverse effects and/or sensitivities to medicines (and other topical products); current management strategies for acne, including hygiene, skin care regimes and products (cosmetic, complementary, over-the-counter and scheduled medicines/products); response to prior therapy or management strategies; aggravating factors (e.g., occupation and exposure to comedogenic factors); emotional and social impacts of acne. Aboriginal and Torres Strait Islander patients (p7): 'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (8).' Reminder (p7): 'Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [
+            { "criterion": "Patient aged 12 years or over — 'Service restricted to patients aged 12 years or over' (INC-1 / EXC-1 / RF-1)", "on_fail": "unclear" },
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" },
+            { "criterion": "Pregnancy and breastfeeding status (if applicable), including plans to become pregnant, recorded — 'The patient is planning a pregnancy or pregnant (and requires treatment above standard pharmacist care)' requires non-urgent referral (EXC-9 / RF-10)", "on_fail": "REFER" },
+            { "criterion": "No current medicine that can cause or aggravate acne (EXC-10 / RF-11)", "on_fail": "REFER" },
+            { "criterion": "No PCOS or signs of androgenisation (hirsutism, obesity and/or menstrual irregularity) (EXC-11 / RF-12; NB2 referral required — RF-18)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 6, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EXAMINATION",
+          "description": "Examination and clinical features (p7): 'Apply standard and contact infection precautions when examining patients.' 'Conduct assessment of vital signs – temperature, blood pressure, heart rate, hydration status.' Clinical features: 'Acne is characterised by a mixed eruption of lesions on the face, neck and/or trunk, where severity can be classified according to the Therapeutic Guidelines: Acne (Diagnosis and classification of acne) (3). Some images of acne can be found in the DermNet NZ - Acne, other listed resources also contain useful images (2).' 'Other conditions with similar signs and symptoms that may require consideration and referral for investigation and/or treatment are included in Therapeutic Guidelines: Acne (Diagnosis and classification of acne) and the Australian Pharmaceutical Formulary and Handbook: Acne (current edition) (3, 9).'",
+          "gates": [
+            { "criterion": "Vital signs assessed – temperature, blood pressure, heart rate, hydration status", "on_fail": "unclear" },
+            { "criterion": "Other conditions with similar signs and symptoms considered (differential diagnosis per Therapeutic Guidelines: Acne and APF: Acne) — otherwise 'The diagnosis is unclear' → non-urgent referral (EXC-8 / RF-9)", "on_fail": "REFER" },
+            { "criterion": "No infected acne lesions and no signs or symptoms of progressive disease e.g. cellulitis (EXC-6, EXC-7 / RF-7, RF-8)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 7, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm the diagnosis is acne and that severity is within the Service scope (mild to moderate) (p7 Clinical features; title 'Mild to Moderate Acne'). Severity is classified 'according to the Therapeutic Guidelines: Acne (Diagnosis and classification of acne) (3)' — no numeric grading is printed in this document. Key point (p6): 'Adult female acne may be different from typical adolescent acne, suggesting possible endocrinological abnormalities including polycystic ovarian syndrome (PCOS) requiring referral to a medical practitioner (6).' Key point (p6): 'Acne can have significant impacts on a person's social, emotional and mental wellbeing, along with permanent physical scarring; early and effective treatment is important, even for mild forms (3, 5, 7).'",
+          "gates": [
+            { "criterion": "Diagnosis clear — 'The diagnosis is unclear' requires non-urgent referral (EXC-8 / RF-9)", "on_fail": "REFER" },
+            { "criterion": "Acne not classified as severe, cystic (e.g. nodulocystic acne, acne conglobate) or scarring, and no family history of scarring acne (EXC-12 / RF-13)", "on_fail": "REFER" },
+            { "criterion": "No early-referral feature: scarring, family history of severe scarring acne, resistance to other treatments, repeated relapse, or marked negative emotional and social effect (EXC-13 / RF-14)", "on_fail": "REFER" },
+            { "criterion": "Condition not worsening, repeatedly relapsing or failing to respond to optimal treatment in the Service (EXC-14 / RF-15)", "on_fail": "REFER" },
+            { "criterion": "Patient does not require longer than 6 months of oral antibiotic therapy (EXC-15 / RF-16)", "on_fail": "REFER" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 7, "section_heading": "Clinical features" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Management and treatment plan (p7-p8): 'Pharmacist management of mild to moderate acne involves: general measures for acne — Advice regarding skin care and minimising exposure to aggravating factors, in accordance with the Therapeutic Guidelines: Acne (General measures for acne) (3), the Australasian College of Dermatologists: A-Z of Skin (1), and the Australian Pharmaceutical Formulary and Handbook (Acne) (9); pharmacotherapy — In accordance with the Therapeutic Guidelines: Acne NB1-3, specifically (3): over-the-counter topicals products; topical retinoids (and combination products with benzoyl peroxide); topical antibiotics (and combination products with benzoyl peroxide or retinoids); oral antibiotics.' NB1 (p8): 'Australian state and territory law restricts the prescription of certain retinoid medicines to specialist physicians and dermatologists. Regulation 19 of the Controlled Substances (Poisons) Regulations 2011 outlines specific restrictions on the prescribing and use of certain Schedule 4 (S4) drugs, known as \"prescribed prescription drugs\" (11).' NB2 (p8): 'Referral to a medical practitioner is required for female patients where acne may be related to androgenisation.' NB3 (p8): 'The use of a combined oral contraceptive (COC) for the management of acne is 'off-label''. Prescription of a COC pill should be in accordance with the Hormonal Contraception Clinical Practice Guideline. Additional information for consideration (p8): 'Antibiotic therapy should not be used long-term, or as monotherapy (topical or oral) (3, 12).' 'The Australian Medicines Handbook recommends limiting treatment with oral antibiotics to 3-6 months when possible (13).' 'The use of topical clindamycin by itself should be limited to 3 months (14).' 'Oral and topical antibiotics should be discontinued when inflammatory lesions have adequately resolved but may be resumed if inflammation reoccurs.' 'Antibiotics should not be switched in a patient who is responding to therapy (13).' 'Topical retinoids (including combinations with benzoyl peroxide) can be used indefinitely with appropriate periodic review.' Reminder (p8): 'Retinoids are teratogenic. Avoid topical and oral retinoids in patients who are planning to become pregnant, or who are pregnant. Women of childbearing age should have an effective contraception plan in place to prevent pregnancy before being prescribed a teratogenic topical or oral medicine for acne.' Confirm management is appropriate (p9): 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+          "gates": [
+            { "criterion": "Treatment recommendation confirmed appropriate per Therapeutic Guidelines, Australian Medicines Handbook and other relevant references, including for contraindications and precautions, drug interactions, and pregnancy and breastfeeding (p9)", "on_fail": "unclear" },
+            { "criterion": "Topical and oral retinoids avoided in patients who are planning to become pregnant, or who are pregnant — 'Retinoids are teratogenic' (p8 Reminder)", "on_fail": "STOP" },
+            { "criterion": "Women of childbearing age have an effective contraception plan in place to prevent pregnancy before being prescribed a teratogenic topical or oral medicine for acne; otherwise 'Treat (if clinically appropriate) and concurrently refer' (EXC-16 / RF-17)", "on_fail": "SEE_PW-1-S2" },
+            { "criterion": "Patient does not require longer than 6 months of oral antibiotic therapy (EXC-15 / RF-16)", "on_fail": "REFER" },
+            { "criterion": "Antibiotic therapy not used long-term or as monotherapy (topical or oral); oral antibiotics limited to 3-6 months when possible; topical clindamycin by itself limited to 3 months; antibiotics discontinued when inflammatory lesions have adequately resolved; antibiotics not switched in a patient who is responding to therapy (p8)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan (p9): 'Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook, Australian Pharmaceutical Formulary Handbook (Acne), and other relevant references, should be provided to the patient regarding: individual product and medicine use e.g., dosing, application and administration instructions; strategies to assist adherence to therapies; how to manage adverse effects; when to seek further care and/or treatment; when to return to the pharmacist for follow up.' 'Many patients will have already been exposed to a plethora of confusing, conflicting and misleading information related to acne management and products. Pharmacists should be judicious in their recommendation of supplements, cosmetics and hygiene products (5).' 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' Patient resource (p9): Royal Children's Hospital Melbourne - Fact Sheet: Acne (4).",
+          "gates": [
+            { "criterion": "Advice and counselling provided on product/medicine use, adherence strategies, adverse effects, when to seek further care, and when to return for follow up", "on_fail": "unclear" },
+            { "criterion": "Agreed management plan shared with the multidisciplinary healthcare team with the patient's consent", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 9, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "General advice and clinical review (p10): 'At the time of initial consultation, a patient (and parents/caregivers if applicable) should be advised to see a medical practitioner if: the acne worsens; the condition is having a marked negative emotional and social effect on the patient; they are experiencing serious or life-threatening adverse effects from treatment; adverse effects cannot be managed in the pharmacy setting.' 'Inconsistent medication use and insufficient duration of treatment is a common reason for treatment failure; the patient should be advised that most treatments take between 6 to 12 weeks of consistent and correct use to start to be visibly effective (5).' Clinical review: 'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines.' 'Patients being treated with oral antibiotics should return for a follow up consultation 6 weeks after the initiation of oral antibiotics.' 'Other patients (not taking oral antibiotics) should return for a follow up consultation 6 weeks after treatment initiation.' 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review.'",
+          "gates": [
+            { "criterion": "Condition not worsening and no marked negative emotional and social effect and no serious or life-threatening or pharmacy-unmanageable adverse effects (p10 general advice)", "on_fail": "REFER" },
+            { "criterion": "Follow-up consultation booked 6 weeks after initiation of oral antibiotics (or 6 weeks after treatment initiation for patients not taking oral antibiotics)", "on_fail": "unclear" },
+            { "criterion": "Quantity prescribed (including repeats) sufficient only for the period until the patient's next review", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Over-the-counter topicals products",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p8, pharmacotherapy list): 'over-the-counter topicals products [as printed]' 'In accordance with the Therapeutic Guidelines: Acne NB1-3, specifically (3)'. No product, form, strength, dose, frequency or duration is printed in this document. General measures verbatim (p7): 'Advice regarding skin care and minimising exposure to aggravating factors, in accordance with the Therapeutic Guidelines: Acne (General measures for acne) (3), the Australasian College of Dermatologists: A-Z of Skin (1), and the Australian Pharmaceutical Formulary and Handbook (Acne) (9).' Confirm management (p9): 'contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Topical retinoids (and combination products with benzoyl peroxide)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "can be used indefinitely with appropriate periodic review",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p8, pharmacotherapy list): 'topical retinoids (and combination products with benzoyl peroxide)'. Duration verbatim (p8): 'Topical retinoids (including combinations with benzoyl peroxide) can be used indefinitely with appropriate periodic review.' NB1 verbatim (p8): 'Australian state and territory law restricts the prescription of certain retinoid medicines to specialist physicians and dermatologists. Regulation 19 of the Controlled Substances (Poisons) Regulations 2011 outlines specific restrictions on the prescribing and use of certain Schedule 4 (S4) drugs, known as \"prescribed prescription drugs\" (11). These drugs are typically those that are teratogenic, have a high risk of causing birth defects, or require specialist management. Medical practitioners must hold specific qualifications or authorisations to prescribe these drugs for the uses specified in the regulations.' Pregnancy caveat verbatim (p8 Reminder): 'Retinoids are teratogenic. Avoid topical and oral retinoids in patients who are planning to become pregnant, or who are pregnant. Women of childbearing age should have an effective contraception plan in place to prevent pregnancy before being prescribed a teratogenic topical or oral medicine for acne.' No product, strength, dose, frequency or max dose is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Topical antibiotics (and combination products with benzoyl peroxide or retinoids)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p8, pharmacotherapy list): 'topical antibiotics (and combination products with benzoyl peroxide or retinoids)'. Stewardship verbatim (p8): 'Antibiotic therapy should not be used long-term, or as monotherapy (topical or oral) (3, 12).'; 'Oral and topical antibiotics should be discontinued when inflammatory lesions have adequately resolved but may be resumed if inflammation reoccurs.'; 'Antibiotics should not be switched in a patient who is responding to therapy (13).' Specific limit for topical clindamycin as monotherapy is captured separately (TX-5). No product, strength, dose, frequency or max dose is printed. Confirm management (p9): 'contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Oral antibiotics",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "3-6 months when possible",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p8, pharmacotherapy list): 'oral antibiotics'. Duration verbatim (p8): 'The Australian Medicines Handbook recommends limiting treatment with oral antibiotics to 3-6 months when possible (13).' Stewardship verbatim (p8): 'Antibiotic therapy should not be used long-term, or as monotherapy (topical or oral) (3, 12).'; 'Oral and topical antibiotics should be discontinued when inflammatory lesions have adequately resolved but may be resumed if inflammation reoccurs.'; 'Antibiotics should not be switched in a patient who is responding to therapy (13).' Referral trigger verbatim (p5): 'The patient requires longer than 6 months of oral antibiotic therapy.' → non-urgent referral. Follow-up verbatim (p10): 'Patients being treated with oral antibiotics should return for a follow up consultation 6 weeks after the initiation of oral antibiotics.' No agent, strength, dose or frequency is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Clindamycin (topical, used by itself)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "3 months",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p8, Additional information for consideration): 'The use of topical clindamycin by itself should be limited to 3 months (14).' Row exists so the 3-month limit is machine-checkable. No product, strength, dose or frequency is printed. Related rule verbatim: 'Antibiotic therapy should not be used long-term, or as monotherapy (topical or oral) (3, 12).'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Additional information for consideration" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Combined oral contraceptive (COC)",
+      "form": "pill",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p8, NB3): 'The use of a combined oral contraceptive (COC) for the management of acne is 'off-label''. Prescription of a COC pill should be in accordance with the Hormonal Contraception Clinical Practice Guideline.' Related treat-and-concurrently-refer rule verbatim (p5): 'Females of child-bearing age being treated with teratogenic topical or oral medicines who request contraception that cannot be provided as part of standard pharmacist care or within the scope of the Hormonal Contraception Clinical Practice Guideline.' No product, strength, dose, frequency or duration is printed; the COC is not listed in the pharmacotherapy list on p8 — it appears only as NB3 with an off-label caveat. Form 'pill' and route 'oral' are printed ('COC pill' / 'combined oral contraceptive').",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Service restricted to patients aged 12 years or over. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "structured": { "parameter": "age_years", "operator": ">=", "value": 12, "unit": "years" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+    { "id": "RF-2", "trigger_text": "Immediate referral to an emergency department – call 000: Raised purple rash that doesn't blanch.", "structured": { "parameter": "raised_purple_rash_that_does_not_blanch", "operator": "==", "value": true, "unit": "" }, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-3", "trigger_text": "Immediate referral to an emergency department – call 000: Generalised erythema that covers 90% or more of the skin.", "structured": { "parameter": "generalised_erythema_skin_covered", "operator": ">=", "value": 90, "unit": "% of skin" }, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-4", "trigger_text": "Immediate referral to an emergency department – call 000: Rash with shortness of breath or lip / tongue swelling.", "structured": { "parameter": "rash_with_shortness_of_breath_or_lip_tongue_swelling", "operator": "==", "value": true, "unit": "" }, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-5", "trigger_text": "Immediate referral to an emergency department – call 000: Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver. [fever branch; temperatures transcribed exactly as extracted — see open_questions]", "structured": { "parameter": "temperature", "operator": ">", "value": 38.0, "unit": "degC" }, "action": "ESCALATE_000", "severity": "critical", "confidence": "unclear", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-6", "trigger_text": "Immediate referral to an emergency department – call 000: Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver. [hypothermia branch; temperatures transcribed exactly as extracted — see open_questions]", "structured": { "parameter": "temperature", "operator": "<", "value": 35.5, "unit": "degC" }, "action": "ESCALATE_000", "severity": "critical", "confidence": "unclear", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-7", "trigger_text": "Urgent referral within 24 to 48 hours: Acne lesions are infected.", "structured": { "parameter": "acne_lesions_infected", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-8", "trigger_text": "Urgent referral within 24 to 48 hours: Signs or symptoms of progressive disease, e.g. cellulitis.", "structured": null, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-9", "trigger_text": "Non-urgent referral: The diagnosis is unclear.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-10", "trigger_text": "Non-urgent referral: The patient is planning a pregnancy or pregnant (and requires treatment above standard pharmacist care).", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-11", "trigger_text": "Non-urgent referral: The patient is taking a medicine that can cause or aggravate acne.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-12", "trigger_text": "Non-urgent referral: A female patient has PCOS or presents with signs of androgenisation including hirsutism, obesity and/or menstrual irregularity.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-13", "trigger_text": "Non-urgent referral: The acne is classified as severe, cystic (e.g. nodulocystic acne, acne conglobate) or scarring, or the patient has a family history of scarring acne.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-14", "trigger_text": "Non-urgent referral: Consider early referral if acne is scarring, presents in a patient with a family history of severe scarring acne, is resistant to other treatments, repeatedly relapses, or has a marked negative emotional and social effect.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-15", "trigger_text": "Non-urgent referral: The condition worsens, repeatedly relapses or does not respond to optimal treatment in the Service.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-16", "trigger_text": "Non-urgent referral: The patient requires longer than 6 months of oral antibiotic therapy.", "structured": { "parameter": "months_of_oral_antibiotic_therapy_required", "operator": ">", "value": 6, "unit": "months" }, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-17", "trigger_text": "Treat (if clinically appropriate) and concurrently refer: Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) [as printed] in the following situations: Females of child-bearing age being treated with teratogenic topical or oral medicines who request contraception that cannot be provided as part of standard pharmacist care or within the scope of the Hormonal Contraception Clinical Practice Guideline.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer:" } },
+    { "id": "RF-18", "trigger_text": "NB2: 'Referral to a medical practitioner is required for female patients where acne may be related to androgenisation.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" } },
+    { "id": "RF-19", "trigger_text": "General advice: 'At the time of initial consultation, a patient (and parents/caregivers if applicable) should be advised to see a medical practitioner if: the acne worsens'.", "structured": { "parameter": "acne_worsens", "operator": "==", "value": true, "unit": "" }, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "General advice" } },
+    { "id": "RF-20", "trigger_text": "General advice: 'should be advised to see a medical practitioner if: the condition is having a marked negative emotional and social effect on the patient'.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "General advice" } },
+    { "id": "RF-21", "trigger_text": "General advice: 'should be advised to see a medical practitioner if: they are experiencing serious or life-threatening adverse effects from treatment'.", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "General advice" } },
+    { "id": "RF-22", "trigger_text": "General advice: 'should be advised to see a medical practitioner if: adverse effects cannot be managed in the pharmacy setting'.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "General advice" } }
+  ],
+  "referral": {
+    "routine": [
+      "'Refer to a general practitioner (or other medical practitioner where appropriate): Non-urgent referral:' The diagnosis is unclear; The patient is planning a pregnancy or pregnant (and requires treatment above standard pharmacist care); The patient is taking a medicine that can cause or aggravate acne; A female patient has PCOS or presents with signs of androgenisation including hirsutism, obesity and/or menstrual irregularity; The acne is classified as severe, cystic (e.g. nodulocystic acne, acne conglobate) or scarring, or the patient has a family history of scarring acne; Consider early referral if acne is scarring, presents in a patient with a family history of severe scarring acne, is resistant to other treatments, repeatedly relapses, or has a marked negative emotional and social effect; The condition worsens, repeatedly relapses or does not respond to optimal treatment in the Service; The patient requires longer than 6 months of oral antibiotic therapy.",
+      "p8 NB2: 'Referral to a medical practitioner is required for female patients where acne may be related to androgenisation.'",
+      "p10 (General advice): 'At the time of initial consultation, a patient (and parents/caregivers if applicable) should be advised to see a medical practitioner if: the acne worsens; the condition is having a marked negative emotional and social effect on the patient; they are experiencing serious or life-threatening adverse effects from treatment; adverse effects cannot be managed in the pharmacy setting.'"
+    ],
+    "urgent": [
+      "'Urgent referral within 24 to 48 hours:' Acne lesions are infected; Signs or symptoms of progressive disease, e.g. cellulitis."
+    ],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care (p4): 'Immediate referral to an emergency department – call 000:' Raised purple rash that doesn't blanch; Generalised erythema that covers 90% or more of the skin; Rash with shortness of breath or lip / tongue swelling; Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review with the pharmacist",
+      "what": "'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "6 weeks after the initiation of oral antibiotics (patients being treated with oral antibiotics)",
+      "what": "'Patients being treated with oral antibiotics should return for a follow up consultation 6 weeks after the initiation of oral antibiotics.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "6 weeks after treatment initiation (patients not taking oral antibiotics)",
+      "what": "'Other patients (not taking oral antibiotics) should return for a follow up consultation 6 weeks after treatment initiation.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At each prescribing event — quantity limited to the period until next review",
+      "what": "'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At initial consultation — set expectation that visible effect takes 6 to 12 weeks of consistent and correct use",
+      "what": "'Inconsistent medication use and insufficient duration of treatment is a common reason for treatment failure; the patient should be advised that most treatments take between 6 to 12 weeks of consistent and correct use to start to be visibly effective (5).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 10, "section_heading": "General advice" }
+    },
+    {
+      "when": "At consultation — counselling includes follow-up timing",
+      "what": "Advice includes 'when to return to the pharmacist for follow up' and 'when to seek further care and/or treatment'.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 9, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-to-moderate-acne-cpg.pdf", "page": 1, "section_heading": "" }
+  },
+  "references": [
+    "[p11] Pharmacist resources: Therapeutic Guidelines: Dermatology (Acne); Sexual and Reproductive Health - Contraception in individuals with acne; Australian Medicines Handbook (Drugs for acne; Acne therapeutic monograph; Antibacterials); Pharmaceutical Society of Australia - Australian Pharmaceutical Formulary and Handbook - Non-prescription medicine treatment guideline: Acne; Australian Family Physician (Royal Australian College of General Practitioners): Acne in adolescents (5); Acne: Best practice management (7); DermNet NZ - Acne (2); The Australasian College of Dermatologists - A-Z of Skin: Acne Vulgaris (1); Acne | Australian Pharmaceutical Formulary and Handbook (9); CARPA Manual - Remote Primary Health Care Manuals: Skin Infection and Rashes (8); Women's and Children's Hospital • Paediatric Clinical Resources (10).",
+    "[p9] Patient resources: Royal Children's Hospital Melbourne - The Royal Children's Hospital Melbourne - Fact Sheet: Acne (4).",
+    "[p12] 1. The Australasian College of Dermatologists. Acne Vulgaris Online2023 [Available from: https://www.dermcoll.edu.au/atoz/acne-vulgaris/.",
+    "[p12] 2. DermNet. Acne Online2025 [Available from: https://dermnetnz.org/topics/acne.",
+    "[p12] 3. Acne [Internet]. Therapeutic Guidelines Limited. 2022. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Dermatology&topicfile=acne&guidelinename=Dermatology&sectionId=toc_d1e47#toc_d1e47.",
+    "[p12] 4. The Royal Children's Hospital Melbourne. Fact Sheet: Acne. 2025.",
+    "[p12] 5. Gebauer K. Acne in adolescents. Aust Fam Physician. 2017;46(12):892-5.",
+    "[p12] 6. Chanyachailert P, Chularojanamontri L, Chantrapanichkul P, Tuchinda P, Wongwananuruk T, Sardod P, Kulthanan K. Adult female acne: Clinical characteristics and factors significantly associated with polycystic ovary syndrome. Australas J Dermatol. 2021;62(4):e532-e8.",
+    "[p12] 7. Cook D, Krassas G, Huang T. Acne - best practice management. Aust Fam Physician. 2010;39(9):656-60.",
+    "[p12] 8. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[p12] 9. Acne [Internet]. Pharmaceutical Society of Australia. 2025.",
+    "[p12] 10. Government of South Australia SA Health. Paediatric Clinical Resources 2025 [Available from: https://www.wch.sa.gov.au/professionals/clinical-resources/paediatric-clinical-resources.",
+    "[p12] 11. Government of South Australia. Controlled Substances (Poisons) Regulations 2011. Online: Government of South Australia,; 2011.",
+    "[p12] 12. The Australian College of Dermatologists: Recommendations [Internet]. 2021. Available from: https://www.choosingwisely.org.au/recommendations/acd.",
+    "[p12] 13. Acne [Internet]. 2025. Available from: https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/acne.",
+    "[p12] 14. Antibacterials [Internet]. 2025. Available from: https://amhonline.amh.net.au/."
+  ],
+  "open_questions": [
+    {
+      "topic": "Criteria combinatorics not explicitly labelled",
+      "observed": "Inclusion uses all_of (INC-1 to INC-3) and each referral tier is grouped as any_of (EXC-2 to EXC-5 'call 000'; EXC-6 to EXC-7 urgent; EXC-8 to EXC-15 non-urgent; EXC-16 treat-and-refer; EXC-17 NB2); the document never prints an AND/OR key but states each red flag 'necessitate[s] referral'.",
+      "why_unclear": "Combinatorics derived from wording/structure rather than stated; recorded here per spec rule 4.",
+      "source_page": 4
+    },
+    {
+      "topic": "Fever/hypothermia thresholds extracted without degree symbols ('380C' / '35.50C')",
+      "observed": "p4 prints (as extracted): 'Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below'. The extraction shows the values as '> 380C' and '< 35.50C'.",
+      "why_unclear": "Both readings recorded: trigger_text transcribes the extraction exactly; RF-5/RF-6 structured use 38.0 degC and 35.5 degC as the only clinically plausible reading of a lost degree symbol (°C). Confidence marked unclear for the structured values — they must be verified against the PDF glyphs before go-live (hugh_to_confirm).",
+      "source_page": 4
+    },
+    {
+      "topic": "No numeric severity grading printed for 'mild to moderate' acne",
+      "observed": "'Acne is characterised by a mixed eruption of lesions on the face, neck and/or trunk, where severity can be classified according to the Therapeutic Guidelines: Acne (Diagnosis and classification of acne) (3)' (p7); no grade cutoffs or lesion counts are printed in this document.",
+      "why_unclear": "INC-2 severity component is confidence medium; the mild/moderate boundary that gates Service eligibility must come from the external Therapeutic Guidelines section.",
+      "source_page": 7
+    },
+    {
+      "topic": "No dose, strength, frequency, duration (except printed limits), max dose or quantity printed for pharmacotherapy",
+      "observed": "Pharmacotherapy is a named list only (p8): 'over-the-counter topicals products; topical retinoids (and combination products with benzoyl peroxide); topical antibiotics (and combination products with benzoyl peroxide or retinoids); oral antibiotics.' Printed duration limits only: oral antibiotics '3-6 months when possible'; topical clindamycin by itself '3 months'; topical retinoids 'indefinitely with appropriate periodic review'.",
+      "why_unclear": "Nothing printed to transcribe for dose/frequency; empty fields left empty rather than invented.",
+      "source_page": 8
+    },
+    {
+      "topic": "Referral block spans pages 4-5 (plus p8 NB2 and p10 general advice)",
+      "observed": "referral.provenance uses page 4 (first page of the 'Red flag' warning signs section); the GP tiers are on p5, NB2 is on p8, general advice is on p10.",
+      "why_unclear": "Spec requires one shared provenance object for the referral block using the first page; range recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Mapping of the document's own urgency tiers to action/severity",
+      "observed": "'Immediate referral to an emergency department – call 000' → ESCALATE_000 / critical; 'Urgent referral within 24 to 48 hours' → REFER_URGENT / medium; 'Non-urgent referral' → REVIEW_GP / low; 'Treat (if clinically appropriate) and concurrently refer' → REFER / medium; NB2 'referral ... is required' → REFER / medium; general advice 'see a medical practitioner' → REVIEW_GP / low, except 'serious or life-threatening adverse effects from treatment' → REVIEW_GP / medium (document's own words); age restriction → NOT_ELIGIBLE / medium.",
+      "why_unclear": "The document prints its own tiers but no numeric severity; mapping recorded so it can be re-checked.",
+      "source_page": 4
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document",
+      "observed": "Branch outcomes are not printed for every gate. Used: STOP for 'call 000' triggers and for the retinoid-avoidance rule; REFER for both GP tiers, differential-diagnosis failure, infected/progressive disease, severity/scope failure, non-response and general-advice triggers; SEE_PW-1-S2 to route the treat-and-concurrently-refer contraception branch and the contraception-plan gate; 'unclear' where the document states no consequence (age under 12, history sufficiency, vital-signs check, confirm-management, antibiotic stewardship principles, counselling completion, plan sharing, follow-up booking, quantity rule).",
+      "why_unclear": "Some branch outcomes are inferred from directive wording rather than printed explicitly.",
+      "source_page": 4
+    },
+    {
+      "topic": "No action printed for a presenter aged under 12 years",
+      "observed": "'Service restricted to patients aged 12 years or over' plus the usual ineligibility statement; no referral action is printed for an under-12 presenter.",
+      "why_unclear": "PW-1-S3 age gate on_fail recorded as 'unclear' because the document states no action beyond ineligibility for the prescribing service.",
+      "source_page": 3
+    },
+    {
+      "topic": "'A medicine that can cause or aggravate acne' is not enumerated",
+      "observed": "Non-urgent referral trigger (p5): 'The patient is taking a medicine that can cause or aggravate acne.' Patient history asks for 'current and recently ceased medicines' (p6) but no candidate drug list is printed (unlike other SA CPGs' Table 1).",
+      "why_unclear": "RF-11 structured null; the engine cannot check this without an external list (hugh_to_confirm).",
+      "source_page": 5
+    },
+    {
+      "topic": "'Teratogenic topical or oral medicines' and 'standard pharmacist care' not defined",
+      "observed": "Treat-and-refer trigger (p5) refers to 'teratogenic topical or oral medicines' and 'contraception that cannot be provided as part of standard pharmacist care or within the scope of the Hormonal Contraception Clinical Practice Guideline'; NB3 (p8) says COC use for acne is 'off-label'. The Reminder (p8) identifies retinoids as teratogenic but no exhaustive list is printed.",
+      "why_unclear": "Which agents are classed as teratogenic, and what counts as 'standard pharmacist care', must be defined outside this document.",
+      "source_page": 5
+    },
+    {
+      "topic": "Regulation 19 'prescribed prescription drugs' restriction versus pharmacist prescribing of retinoids",
+      "observed": "NB1 (p8): 'Australian state and territory law restricts the prescription of certain retinoid medicines to specialist physicians and dermatologists. Regulation 19 of the Controlled Substances (Poisons) Regulations 2011 outlines specific restrictions on the prescribing and use of certain Schedule 4 (S4) drugs, known as \"prescribed prescription drugs\" (11).' The pharmacotherapy list on the same page nevertheless includes 'topical retinoids'.",
+      "why_unclear": "The document does not state which retinoids, if any, a SA authorised pharmacist may prescribe under this Service; jurisdictional and must be confirmed (hugh_to_confirm).",
+      "source_page": 8
+    },
+    {
+      "topic": "Consequence of antibiotic-stewardship non-adherence not printed",
+      "observed": "'Antibiotic therapy should not be used long-term, or as monotherapy (topical or oral)' (p8) with limits of 3-6 months (oral) and 3 months (topical clindamycin alone); the explicit referral trigger is only 'The patient requires longer than 6 months of oral antibiotic therapy' (p5).",
+      "why_unclear": "PW-1-S6 stewardship gate on_fail recorded as 'unclear' — the document states no action for use beyond 3 months (oral) or for monotherapy.",
+      "source_page": 8
+    },
+    {
+      "topic": "No designated first-line pharmacotherapy",
+      "observed": "The pharmacotherapy list (p8) is unordered by preference and never uses 'first-line'.",
+      "why_unclear": "first_line recorded as false for TX-1 to TX-6; local first-line designation must be confirmed if required (hugh_to_confirm).",
+      "source_page": 8
+    },
+    {
+      "topic": "Pregnancy, lactation and paediatric caveats captured verbatim but without therapy-specific guidance",
+      "observed": "History requires 'pregnancy and breastfeeding status (if applicable), including plans to become pregnant' (p6); referral if 'planning a pregnancy or pregnant (and requires treatment above standard pharmacist care)' (p5); Reminder: 'Retinoids are teratogenic. Avoid topical and oral retinoids ... Women of childbearing age should have an effective contraception plan in place ...' (p8); confirm-management requires 'contraindications and precautions; drug interactions; pregnancy and breastfeeding' (p9); service age floor is 12 years (p3); no weight-based or age-banded dosing is printed.",
+      "why_unclear": "No agent-specific pregnancy, lactation or paediatric dosing guidance exists in this document; captured as notes/open question rather than invented.",
+      "source_page": 6
+    },
+    {
+      "topic": "Antibiotic therapy commencement rule not printed",
+      "observed": "The document lists oral/topical antibiotics and stewardship limits but prints no rule about what to check before starting (e.g. pregnancy status, previous response) beyond the generic confirm-management clause.",
+      "why_unclear": "Any pre-prescribing checklist beyond p9 confirm-management would be invented; recorded here instead.",
+      "source_page": 9
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Doses, strengths, forms, frequencies, durations, max doses and quantities to supply for over-the-counter topical products, topical retinoids (± benzoyl peroxide), topical antibiotics (± benzoyl peroxide or retinoids) and oral antibiotics, from the Therapeutic Guidelines: Acne sections cited (General measures for acne; Diagnosis and classification of acne; pharmacotherapy NB1-3).",
+      "source_page": 8,
+      "reason": "This guideline prints no dose fields; TX-1 to TX-4 dose fields are empty and must be filled before go-live."
+    },
+    {
+      "item": "Verify the printed fever/hypothermia thresholds against the PDF glyphs — extraction shows 'temperature > 380C' and 'temperature < 35.50C' (read as 38.0 °C and 35.5 °C in RF-5/RF-6 structured).",
+      "source_page": 4,
+      "reason": "Degree symbols were lost in text extraction; structured values are an interpretation with confidence 'unclear' and must be confirmed before the engine enforces them."
+    },
+    {
+      "item": "Severity grading cutoffs that define 'mild' and 'moderate' acne for Service eligibility (Therapeutic Guidelines: Acne — Diagnosis and classification of acne).",
+      "source_page": 7,
+      "reason": "No numeric grading is printed in this document, yet 'severe, cystic ... or scarring' acne must be referred — the boundary must be machine-checkable."
+    },
+    {
+      "item": "Whether any topical retinoid may be prescribed by an authorised SA pharmacist given NB1 / regulation 19 of the Controlled Substances (Poisons) Regulations 2011 ('prescribed prescription drugs' restricted to specialist physicians and dermatologists).",
+      "source_page": 8,
+      "reason": "Jurisdictional restriction stated without listing which retinoids are affected; must be confirmed against the regulation before go-live."
+    },
+    {
+      "item": "List of medicines that can cause or aggravate acne (to check against the patient's medicine history), and the definition of 'standard pharmacist care' for pregnancy-related referral.",
+      "source_page": 5,
+      "reason": "Both referral triggers depend on external/undefined criteria; no list or definition is printed."
+    },
+    {
+      "item": "Which medicines are classed as 'teratogenic topical or oral medicines' for the contraception treat-and-concurrently-refer rule, and the contraception provision pathway under the Hormonal Contraception Clinical Practice Guideline (including the 'off-label' COC caveat).",
+      "source_page": 5,
+      "reason": "The trigger and NB3 both delegate to another guideline; the engine needs an explicit agent list and cross-protocol hand-off."
+    },
+    {
+      "item": "Operational compliance evidence for each prescribing event: pharmacist 'included on the register of authorised pharmacists' and prescribing 'in accordance with the Community Pharmacist Prescribing Code' (regulation 17A, Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal basis is stated but the record-keeping/verification steps are not; local process must be confirmed before go-live."
+    },
+    {
+      "item": "Referral destinations, after-hours pathways and transport arrangements beyond 'Immediate referral to an emergency department – call 000'.",
+      "source_page": 4,
+      "reason": "No ED names, phone numbers or after-hours GP pathways are printed; local pathways must be confirmed."
+    },
+    {
+      "item": "Action for a presenter aged under 12 years (document states ineligibility only, with no referral action).",
+      "source_page": 3,
+      "reason": "No escalation instruction is printed; local policy must define what happens after NOT_ELIGIBLE."
+    },
+    {
+      "item": "Operationalising 'Consider early referral if acne is scarring ... resistant to other treatments, repeatedly relapses, or has a marked negative emotional and social effect' and the 'emotional and social effect' screening question.",
+      "source_page": 5,
+      "reason": "'Consider early referral' and 'marked' are judgement terms with no tool or threshold printed."
+    },
+    {
+      "item": "Follow-up booking process for the 6-week consultations (oral antibiotics and all other patients), the return-to-pharmacist reminder, and recording 'sufficient quantity ... for the period until the patient's next review'.",
+      "source_page": 10,
+      "reason": "Timing is printed but the booking/recording process and any default supply quantity are left to local policy."
+    },
+    {
+      "item": "Contraindications and precautions, drug interactions, and pregnancy/breastfeeding checks for each treatment (per Therapeutic Guidelines, Australian Medicines Handbook and product information).",
+      "source_page": 9,
+      "reason": "Explicitly delegated by 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references ...'."
+    },
+    {
+      "item": "My Health Record access and use during consultations ('Pharmacists can access a range of clinical information in a patient's My Health Record').",
+      "source_page": 7,
+      "reason": "Access arrangements and consent handling are left to local policy/system configuration."
+    },
+    {
+      "item": "Sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent' — consent capture and destination list.",
+      "source_page": 9,
+      "reason": "Left to local policy by the document; no consent wording or sharing mechanism is printed."
+    },
+    {
+      "item": "Pharmacist professional discretion clause — how 'exercise professional discretion and judgement ... in consultation with the patient and/or their carer' interacts with hard-coded engine rules.",
+      "source_page": 6,
+      "reason": "The document explicitly reserves judgement to the pharmacist; the engine needs a documented override/escalation path."
+    },
+    {
+      "item": "Which agent(s) the local service treats as preferred/first-line for mild to moderate acne (the document designates none).",
+      "source_page": 8,
+      "reason": "first_line is false for all treatment rows; local policy must decide before go-live."
+    }
+  ]
+}

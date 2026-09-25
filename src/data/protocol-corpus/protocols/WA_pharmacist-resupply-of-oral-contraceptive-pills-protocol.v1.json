@@ -1,0 +1,696 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf",
+    "pdf_sha256": "e8f0c4eb7b9cbaf73274b8eb8eefb7c5b613a24834483cbf15085623bd0f8b98",
+    "page_count": 7,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Pharmacist Resupply of Oral Contraceptive Pills Pilot - Western Australian Protocol",
+    "instrument_version": "No version number or date printed on the document",
+    "effective_date": "Not printed on the document",
+    "legal_basis": "Structured Administration and Supply Arrangement (SASA): the dispensing record for resupply must not list the previous medical practitioner or nurse practitioner in the 'prescriber' field; the pharmacist's name and Healthcare Provider Identifier-Individual (HPI-I) must be included for My Health Record transmission; a documented patient request to withhold transmission 'serves as a justifiable reason for not meeting condition 4(m) of the SASA'. Record keeping of supply must be kept for at least 2 years, in accordance with Part 12 of the Medicines and Poisons Regulations 2016 (WA) (p.5).",
+    "supervision_model": "Pilot authorisation as printed: 'This protocol provides a framework for pharmacists authorised to resupply oral contraceptive pills to eligible patients' (p.1); supply is recorded under the SASA in the pharmacist's own name with their HPI-I (p.5). The document does not use the terms 'collaborative' or 'autonomous'.",
+    "scope_summary": "Western Australian pilot protocol for pharmacist resupply of oral contraceptive pills (OCP). Program Scope WA criteria A-K define the scope: age 16-39 years inclusive; combined oral contraception (COC) and progestogen-only contraception (POP) oral dosage forms; OCP initiated by a GP or Nurse Practitioner and stabilised minimum 2 years continuously; OCP review with a medical practitioner or nurse practitioner minimum every 2 years; TGD people presumed female at birth included; pill break maximum 2 weeks continuously; re-supply one manufacturer's pack or maximum up to 12 months; high dose estrogen (50 microg ethinylestradiol) not permitted; permitted estrogens and progestogens listed with excluded substances; and K. Exclusion criteria (UKMEC Category 3 & 4 contraindications) for COC and POP. Explanatory notes (pp.4-5), Pharmacist assessment (p.5), Documentation and communication (pp.5-6), Non-pharmacological and self-care advice (p.6) and Fees and charges (p.6) support the pathway; Attachment 1 (p.7) is a summary table for OCP whose rows were not present in the text extraction."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "A. Age range 16-39 years (inclusive)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-2",
+        "text": "B. Dosage forms Combined oral contraception and progestogen-only contraception. Dosage forms other than oral formulations excluded.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-3",
+        "text": "C. OCP history OCP initiated by a General Practitioner or a Nurse Practitioner and has been stabilised for minimum 2 years continuously. Different OCP or hormones excluded on protocol medicines list are not permitted.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-4",
+        "text": "D. OCP review A thorough review of the OCP with a medical practitioner or nurse practitioner. Minimum every 2 years.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-5",
+        "text": "E. Transgender and gender diverse people presumed female at birth - Included, and professional obligations apply. (Explanatory note E, page 4: 'The resupply of OCP is permitted for TGD individuals, provided all other protocol conditions are met.')",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-6",
+        "text": "F. Pill break Maximum 2 weeks continuously. (Explanatory note F, page 5: 'Pill breaks should not exceed 2 weeks consecutively, with inactive pills not considered part of the pill break in this context. The total duration of pill breaks should not surpass 4 weeks within a 12-month period.')",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-7",
+        "text": "G. Re-supply quantity One manufacturer's pack, or maximum up to 12 months.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-8",
+        "text": "I. Permitted estrogens Estradiol; Ethinylestradiol (See attachment 1)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "INC-9",
+        "text": "J. Permitted progestogens Levonorgestrel; Norethisterone; Drospirenone; Nomegestrol; Desogestrel; Dienogest; Gestodene (See attachment 1)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "H. High dose estrogen (50 microg of ethinylestradiol) - Not permitted",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "I. Excluded - estetrol, mestranol",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "J. Excluded - Cyproterone",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "[COC and POP] K. Exclusion criteria (including UKMEC Category 3 & 4 contraindications): Current or previous history of breast cancer (including carrier of known gene mutations, e.g. BRCA)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "[COC and POP] K. Exclusion criteria: Hepatocellular adenoma, or malignant liver tumour",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "[COC and POP] K. Exclusion criteria: Severe (decompensated) cirrhosis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "[COC and POP] K. Exclusion criteria: Potentially pregnant",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "[COC and POP] K. Exclusion criteria: STI screening is indicated (although OCP may still be resupplied by the pharmacist)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "[COC and POP] K. Exclusion criteria: Unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "[COC and POP] K. Exclusion criteria: If drug interactions are identified. For example, prescription/non-prescription medications (CYP 3A4/5 inducers such as carbamazepine, corticosteroids, modafinil, phenobarbital, phenytoin, rifampicin, St John's wort)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "[COC] K. Exclusion criteria: Migraine with/without aura",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "[COC] K. Exclusion criteria: Prolonged immobilisation",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "[POP] K. Exclusion criteria: Ischaemic heart disease, stroke or transient ischaemic attack (TIA) that develops during use of POP.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Age 35 years or older and current smoker or recently quit smoking in the last 12 months (including nicotine vaping)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: History of ischaemic heart disease, stroke, or transient ischaemic attack",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Hypertension (systolic blood pressure 140mmHg or higher, diastolic blood pressure 90mmHg or higher), including adequately controlled hypertension",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Complicated valvular or congenital heart disease",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-18",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Cardiomyopathy with impaired cardiac function",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-19",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Atrial fibrillation",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-20",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: History of VTE or a first-degree relative with a VTE (provoked or unprovoked) under the age of 45 years",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-21",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Positive antiphospholipid antibodies",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-22",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Known thrombogenic mutations, e.g. factor V Leiden, prothrombin mutation, Protein S, Protein C, antithrombin deficiencies",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-23",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Diabetes with nephropathy, retinopathy, neuropathy, or other vascular disease",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-24",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Gall bladder disease (medically treated or current)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-25",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Past COC related cholestasis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-26",
+        "text": "[COC (inferred, see open question)] K. Exclusion criteria: Body mass index (BMI) ≥ 35kg/m2",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 3, "section_heading": "Program Scope WA criteria" }
+      },
+      {
+        "id": "EXC-27",
+        "text": "[K. Exclusion criteria table note] Breastfeeding and postpartum risks are excluded due to the requirement for continuous OCP history for at least 2 years.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": 39,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "STI screening is indicated (although OCP may still be resupplied by the pharmacist)",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "Category 2 risks can be considered, and pharmacists should exercise professional judgement when multiple category 2 conditions are present. (Context: 'Patients with UKMEC category 3 and 4 risks are considered high risk and must be referred.')",
+        "criteria_group": { "all_of": ["EXE-2"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Pharmacist assessment" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-3",
+        "text": "a patient turning 40 years-of-age in a month should not be given a full 12-month resupply. Instead, resupplying one manufacturer's pack of OCP is acceptable, but the patient should be referred for a medical review.",
+        "criteria_group": { "all_of": ["EXE-3"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-4",
+        "text": "Patients aged 16-17 years: These patients can have up to 4 months resupplied as an extension to their original prescription, provided other protocol conditions are met.",
+        "criteria_group": { "all_of": ["EXE-4"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist resupply of OCP - assessment, supply and follow-up",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Confirm the Program Scope WA criteria before resupply: A. Age range 16-39 years (inclusive); B. Dosage forms combined oral contraception and progestogen-only contraception (dosage forms other than oral formulations excluded); C. OCP history - OCP initiated by a General Practitioner or a Nurse Practitioner and has been stabilised for minimum 2 years continuously (different OCP or hormones excluded on protocol medicines list are not permitted); D. OCP review - a thorough review of the OCP with a medical practitioner or nurse practitioner, minimum every 2 years; E. Transgender and gender diverse people presumed female at birth - included, and professional obligations apply; F. Pill break - maximum 2 weeks continuously; G. Re-supply quantity - one manufacturer's pack, or maximum up to 12 months; H. High dose estrogen (50 microg of ethinylestradiol) - not permitted. Before resupplying, pharmacists should verify the previous prescription by sighting it or through other physical or electronic records (e.g., My Health Records, dispensing records).",
+          "gates": [
+            { "criterion": "A. Age range 16-39 years (inclusive)", "on_fail": "REFER" },
+            { "criterion": "C. OCP initiated by a General Practitioner or a Nurse Practitioner and has been stabilised for minimum 2 years continuously", "on_fail": "REFER" },
+            { "criterion": "B. Dosage forms other than oral formulations excluded", "on_fail": "REFER" },
+            { "criterion": "H. High dose estrogen (50 microg of ethinylestradiol) - Not permitted", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Check the K. Exclusion criteria (including UKMEC Category 3 & 4 contraindications) against both the Combined oral contraception (COC) column and the Progestogen-only contraception (POP) column: current or previous history of breast cancer (including carrier of known gene mutations, e.g. BRCA); hepatocellular adenoma, or malignant liver tumour; severe (decompensated) cirrhosis; potentially pregnant; STI screening is indicated; unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding; drug interactions (e.g. prescription/non-prescription medications (CYP 3A4/5 inducers such as carbamazepine, corticosteroids, modafinil, phenobarbital, phenytoin, rifampicin, St John's wort)); COC-only criteria (migraine with/without aura; prolonged immobilisation; plus the page 3 list); POP-only criterion (ischaemic heart disease, stroke or transient ischaemic attack (TIA) that develops during use of POP). Table note: conditions that require immediate referral - refer the patient to their regular GP with a copy of the assessment. See also UKMEC April 2016 (Amended September 2019) and UKMEC April 2016 Summary Sheet (Amended September 2019).",
+          "gates": [
+            { "criterion": "Any K. Exclusion criteria present (including UKMEC Category 3 & 4 contraindications)", "on_fail": "REFER" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Clinical Measurements: For COC, measure the patient's blood pressure and BMI.",
+          "gates": [
+            { "criterion": "EXC-16: Hypertension (systolic blood pressure 140mmHg or higher, diastolic blood pressure 90mmHg or higher), including adequately controlled hypertension (K. Exclusion criteria, page 3)", "on_fail": "REFER" },
+            { "criterion": "EXC-26: Body mass index (BMI) ≥ 35kg/m2 (K. Exclusion criteria, page 3)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Pharmacist assessment" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Confidentiality: consultations must be conducted in a private room to maintain confidentiality; it should not be seen or heard by a person not involved in the consultation. Consent: documented informed consent must be obtained from the patient (this can include financial consent (costs to the patient), consent to access medical records, and consent for referral). Risk Assessment: assess the patient's adherence, smoking status, adverse effects to OCP, changes in bleeding pattern, changes in health, new medications, and potential pregnancy.",
+          "gates": [
+            { "criterion": "Documented informed consent must be obtained from the patient", "on_fail": "unclear" },
+            { "criterion": "EXC-14: Age 35 years or older and current smoker or recently quit smoking in the last 12 months (including nicotine vaping) (K. Exclusion criteria, page 3)", "on_fail": "REFER" },
+            { "criterion": "EXC-10: If drug interactions are identified (K. Exclusion criteria, page 2)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Pharmacist assessment" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Risk Categories: patients with UKMEC category 3 and 4 risks are considered high risk and must be referred; category 2 risks can be considered, and pharmacists should exercise professional judgement when multiple category 2 conditions are present. References: refer to UKMEC, Therapeutic Guidelines, Australian Medicines Handbook (AMH), product information, and other relevant references. Social and Sexual Health Discussion: discuss social and sexual health issues as appropriate; refer confidentially when required. Adherence and Satisfaction Check: check the patient's adherence and satisfaction with OCP; offer contraceptive counselling to explore other options as appropriate, e.g., LARCs.",
+          "gates": [
+            { "criterion": "Patients with UKMEC category 3 and 4 risks are considered high risk and must be referred", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Pharmacist assessment" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Resupply the OCP (oral contraceptive pills) within the quantity limits: G. Re-supply quantity - one manufacturer's pack, or maximum up to 12 months. Patients aged 16-17 years can have up to 4 months resupplied as an extension to their original prescription, provided other protocol conditions are met (given the potential health and social risk factors these patients should have more frequent contraception reviews and be encouraged to engage regularly with a GP; a thorough review is essential, and a new prescription must be issued for subsequent supplies). Patients aged 18-39 years can have up to 12 months of OCP resupplied at once, guided by the patient's preference and the pharmacist's assessment. Other conditions must be considered when determining the quantity.",
+          "gates": [
+            { "criterion": "Other conditions must be considered when determining the quantity (for example, a patient turning 40 years-of-age in a month should not be given a full 12-month resupply)", "on_fail": "unclear" },
+            { "criterion": "The review date must be considered during resupply, ensuring that the quantity resupplied only allows for the continuation of OCP within the 2-year period", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "HISTORY",
+          "description": "Documentation and communication: the pharmacist must create and maintain a comprehensive clinical record of the consultation, including patient identifiers and consent given; date of consultation and name of pharmacist who undertook the consultation; clinical information relevant to the resupply (e.g., medical and OCP history, BMI, BP, pregnancy status, STI risks); clinical opinion reached by the pharmacist, as well as the actions and management plan; details of the OCP supplied (generic name, strength, and quantity); counselling and advice given to the patient; any referrals made to another healthcare professional with patient's consent. A copy of this record should be provided to the patient and, if necessary, their regular medical practitioner. Record keeping of supply must be kept for at least 2 years, in accordance with Part 12 of the Medicines and Poisons Regulations 2016. The dispensing record for resupply must not list the previous medical practitioner or nurse practitioner in the 'prescriber' field; instead the name of the pharmacist who undertook the consultation must be used, and their Healthcare Provider Identifier-Individual (HPI-I) number must be included alongside other critical information (e.g. patient's IHI) for My Health Record transmission. The pharmacy dispensing software must be configured to enable the details of the supply to be uploaded to My Health Record.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Documentation and communication" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "A referral should be initiated only with the patient's consent. Where practical, it should be directed to the patient's regular GP or another GP within the same practice. This approach helps maintain the continuity of care for the patient. Referral destinations named in the protocol: regular medical practitioner or health service (patients not eligible for resupply); GP, sexual health clinic, or health service (patients under 16 years, or 40 years and over); regular GP with a copy of the assessment (conditions that require immediate referral); medical review (patient turning 40 years-of-age in a month); alternative contraception options (patient frequently takes pill breaks).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Documentation and communication" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Non-pharmacological and self-care advice: provide Consumer Medicines Information and/or a Self-Care Fact Card, and appropriate counselling on the OCP supplied - Instructions (how to take the OCP and recognise active/inactive pills); Side Effects (what side effects to expect, potential drug interactions, signs of VTE and what to do if it is suspected); Missed Pill (what to do in the event of a missed pill, with instructions specific to the OCP resupplied, additionally emergency contraception options available if required); Adherence (reiterate the importance of adherence and avoiding starting/stopping the pill); Blood Pressure Monitoring (the patient's blood pressure should be monitored at least at 12 monthly intervals); GP Review (patients should engage with a regular GP and be reviewed at least every two years); Cervical Screening (available for women from the age of 25 and recommended every 5 years); Breast Checks (recommended for women who have a personal or family history of breast cancer - patients should seek GP advice regarding the frequency and type of screening); STI Screening (recommended for anyone who is sexually active and engaging in unprotected sex).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Follow-up requirements: patients on OCP should have a medical review at least every 2 years and the quantity resupplied must only allow continuation of OCP within the 2-year period; blood pressure should be monitored at least at 12 monthly intervals; patients should engage with a regular GP and be reviewed at least every two years; patients aged 16-17 years should have more frequent contraception reviews and be encouraged to engage regularly with a GP; cervical screening every 5 years from the age of 25; breast checks for women with a personal or family history of breast cancer; STI screening for anyone who is sexually active and engaging in unprotected sex.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Oral contraceptive pills (combined oral contraception and progestogen-only contraception)",
+      "form": "Oral",
+      "strength": "",
+      "dose": "Resupply of the OCP the patient has been stabilised on (no dose printed in this document; product strengths are in Attachment 1, page 7)",
+      "route": "Oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "One manufacturer's pack, or maximum up to 12 months (G. Re-supply quantity); patients aged 16-17 years: up to 4 months as an extension to their original prescription; patients aged 18-39 years: up to 12 months of OCP resupplied at once, guided by the patient's preference and the pharmacist's assessment",
+      "max_dose": "",
+      "quantity_to_supply": "One manufacturer's pack, or maximum up to 12 months",
+      "notes": "B. Dosage forms - combined oral contraception and progestogen-only contraception; dosage forms other than oral formulations excluded. C. OCP history - different OCP or hormones excluded on protocol medicines list are not permitted. H. High dose estrogen (50 microg of ethinylestradiol) - not permitted. I. Permitted estrogens: estradiol, ethinylestradiol (excluded - estetrol, mestranol). J. Permitted progestogens: levonorgestrel, norethisterone, drospirenone, nomegestrol, desogestrel, dienogest, gestodene (excluded - Cyproterone). F. Pill break - maximum 2 weeks continuously; pill breaks should not exceed 2 weeks consecutively (inactive pills not considered part of the pill break) and total pill breaks should not surpass 4 weeks within a 12-month period. Quantity must only allow continuation of OCP within the 2-year OCP review period. Pharmacists may charge a consultation fee for the service, in addition to the cost of OCP supplied. This is the protocol's single supply intervention (resupply of the patient's established OCP); the document does not rank products or alternatives - LARCs may be discussed with patients when appropriate. No product-level strengths/doses are printed in the extracted text; Attachment 1: Summary table for OCP (page 7) contains only its heading in the extraction.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Program Scope WA criteria" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "conditions that require immediate referral. Refer the patient to their regular GP with a copy of the assessment. [table note in the K. Exclusion criteria table, alongside the breast cancer and liver tumour rows]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Patients under 16 years, or 40 years and over: Refer these patients confidentially to a GP, sexual health clinic, or health service.",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Patients under 16 years, or 40 years and over: Refer these patients confidentially to a GP, sexual health clinic, or health service.",
+      "structured": { "parameter": "age", "operator": ">=", "value": 40, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Patients with UKMEC category 3 and 4 risks are considered high risk and must be referred.",
+      "structured": { "parameter": "UKMEC category", "operator": "in", "value": [3, 4], "unit": "UKMEC category" },
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Pharmacist assessment" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "a patient turning 40 years-of-age in a month should not be given a full 12-month resupply. Instead, resupplying one manufacturer's pack of OCP is acceptable, but the patient should be referred for a medical review.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "F. Pill break" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Patients who have requested the service but are not eligible for resupply should be referred to their regular medical practitioner or health service.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 1, "section_heading": "Pharmacist Resupply of Oral Contraceptive Pills Pilot – Western Australian Protocol" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Patients who have requested the service but are not eligible for resupply should be referred to their regular medical practitioner or health service.",
+      "Refer the patient to their regular GP with a copy of the assessment.",
+      "Patients under 16 years, or 40 years and over: Refer these patients confidentially to a GP, sexual health clinic, or health service.",
+      "the patient should be referred for a medical review.",
+      "consider referring the patient to explore alternative contraception options.",
+      "Social and Sexual Health Discussion: Discuss social and sexual health issues as appropriate. Refer confidentially when required.",
+      "A referral should be initiated only with the patient's consent. Where practical, it should be directed to the patient's regular GP or another GP within the same practice. This approach helps maintain the continuity of care for the patient."
+    ],
+    "urgent": [
+      "conditions that require immediate referral. Refer the patient to their regular GP with a copy of the assessment."
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 2, "section_heading": "Program Scope WA criteria" }
+  },
+  "review_followup": [
+    {
+      "when": "At least every 2 years (medical review of the OCP)",
+      "what": "Patients on OCP should have a medical review at least every 2 years. Before resupplying, pharmacists should verify the previous prescription by sighting it or through other physical or electronic records (e.g., My Health Records, dispensing records). The review date must be considered during resupply, ensuring that the quantity resupplied only allows for the continuation of OCP within the 2-year period.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" }
+    },
+    {
+      "when": "Patients aged 16-17 years - more frequent contraception reviews",
+      "what": "Given the potential health and social risk factors, these patients should have more frequent contraception reviews and be encouraged to engage regularly with a GP. A thorough review is essential, and a new prescription must be issued for subsequent supplies.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 4, "section_heading": "Explanatory notes" }
+    },
+    {
+      "when": "At least at 12 monthly intervals",
+      "what": "The patient's blood pressure should be monitored at least at 12 monthly intervals.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+    },
+    {
+      "when": "At least every two years",
+      "what": "Patients should engage with a regular GP and be reviewed at least every two years.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+    },
+    {
+      "when": "From the age of 25, recommended every 5 years",
+      "what": "Cervical screening is available for women from the age of 25 and is recommended every 5 years.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+    },
+    {
+      "when": "For women who have a personal or family history of breast cancer",
+      "what": "Breast checks are recommended. Patients should seek GP advice regarding the frequency and type of screening.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+    },
+    {
+      "when": "For anyone who is sexually active and engaging in unprotected sex",
+      "what": "STI screening is recommended. Guidance and information on how to take a sexual history is available at: Sexual history | STI Guidelines Australia.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 6, "section_heading": "Non-pharmacological and self-care advice" }
+    },
+    {
+      "when": "After the consultation (record sharing)",
+      "what": "A copy of the clinical record should be provided to the patient and, if necessary, their regular medical practitioner; record keeping of supply must be kept for at least 2 years in accordance with Part 12 of the Medicines and Poisons Regulations 2016.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Documentation and communication" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The dispensing record for resupply must be uploaded to My Health Record: the pharmacy dispensing software must be configured to enable the details of the supply to be uploaded to My Health Record, and the dispensing record must include the pharmacist's name, their HPI-I number and other critical information (e.g. patient's IHI). As My Health Record is consumer controlled, the patient can request to withhold the transmission of the dispensing record; the request must be documented and such a request serves as a justifiable reason for not meeting condition 4(m) of the SASA.",
+      "A copy of the clinical record of the consultation should be provided to the patient and, if necessary, their regular medical practitioner."
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacist-resupply-of-oral-contraceptive-pills-Protocol.pdf", "page": 5, "section_heading": "Documentation and communication" }
+  },
+  "references": [
+    "UKMEC April 2016 (Amended September 2019) [p.2]",
+    "UKMEC April 2016 Summary Sheet (Amended September 2019) [p.2]",
+    "Long Acting Reversible Contraception (LARC) - Consensus Statement (ranzcog.edu.au) [p.4]",
+    "FSRH CEU Statement: Contraceptive Choices and Sexual Health for Transgender and Non-Binary People (October 2017) [p.4]",
+    "References: Refer to UKMEC, Therapeutic Guidelines, Australian Medicines Handbook (AMH), product information, and other relevant references [p.5]",
+    "Sexual history | STI Guidelines Australia [p.6]"
+  ],
+  "open_questions": [
+    {
+      "topic": "Attachment 1 (Summary table for OCP) content is not present in the text extraction",
+      "observed": "Page 7 contains only the heading 'Attachment 1: Summary table for OCP' and the page number; no product rows, strengths, doses or quantities were extracted.",
+      "why_unclear": "No product-level treatment rows can be transcribed (strength/dose/frequency are left blank on TX-1) without inventing content; the table must be obtained from the source PDF or another route before product-level rules can be encoded.",
+      "source_page": 7
+    },
+    {
+      "topic": "Two-column K. Exclusion criteria table (COC vs POP) is interleaved in the text extraction",
+      "observed": "Page 2 prints 'Combined oral contraception (COC)' and 'Progestogen-only contraception (POP)' columns side by side; the extraction interleaves the two columns line by line. On page 2 the column assignment is recoverable from the interleaving pattern (e.g. 'Migraine with/without aura' and 'Prolonged immobilisation' are left/COC; 'Ischaemic heart disease, stroke or transient ischaemic attack (TIA) that develops during use of POP' is right/POP). Page 3 bullets have no visible column header and appear to continue the left (COC) column, but this cannot be confirmed from the extraction alone.",
+      "why_unclear": "Column tags were added as editorial annotations: [COC] and [POP] on page 2 (high confidence), [COC (inferred, see open question)] on page 3 with confidence 'medium'. Spec rule 2 requires ambiguous/misaligned table rows to be marked and recorded rather than reconciled silently.",
+      "source_page": 3
+    },
+    {
+      "topic": "Table note 'conditions that require immediate referral' has a cut-off subject",
+      "observed": "The right-hand notes column of the K. Exclusion criteria table reads: 'conditions that require immediate referral. Refer the patient to their regular GP with a copy of the assessment.' The subject (which conditions) is not legible in the extraction; from the layout it sits alongside the breast cancer and liver tumour rows.",
+      "why_unclear": "Captured as RF-1 with confidence 'unclear' and exact wording; the attachment of the note to specific rows cannot be confirmed from the text extraction.",
+      "source_page": 2
+    },
+    {
+      "topic": "Combinatorics of the scope criteria and exclusion list are inferred, not explicitly stated",
+      "observed": "The document lists criteria A-K as 'Program Scope WA criteria' without saying 'all' or 'any'. Supporting language: 'The resupply of OCP is permitted for TGD individuals, provided all other protocol conditions are met' (p.4) and 'provided other protocol conditions are met' (p.4) imply AND for the scope criteria; the K list is introduced as 'Exclusion criteria: ... Including UKMEC Category 3 & 4 contraindications, and ...' where presence of any item is a contraindication, implying OR.",
+      "why_unclear": "Scope criteria INC-1..INC-9 default to all_of and exclusions default to any_of; the document does not state combinatorics explicitly, so the mapping is inferred and recorded here per spec rule 4.",
+      "source_page": 1
+    },
+    {
+      "topic": "on_fail actions for pathway gates are partly derived",
+      "observed": "The document states referral for ineligibility ('Patients who have requested the service but are not eligible for resupply should be referred to their regular medical practitioner or health service', p.1), for age outside 16-39 (p.4) and for UKMEC category 3/4 risks (p.5), so those gates use on_fail 'REFER'. The document does not state what happens if consent is not obtained, if quantity conditions cannot be met, or if the review date cannot be verified.",
+      "why_unclear": "Those gates use on_fail 'unclear' per spec rule 5; the consequence must be confirmed rather than assumed.",
+      "source_page": 5
+    },
+    {
+      "topic": "STI screening appears both as an exclusion and as something that does not prevent resupply",
+      "observed": "'STI screening is indicated (although OCP may still be resupplied by the pharmacist)' is listed in BOTH the COC and POP exclusion columns (p.2).",
+      "why_unclear": "Captured verbatim as EXC-8 and its parenthetical as exclusion exception EXE-1; the document gives no decision rule for when resupply proceeds versus when it does not (it does state 'STI screening is recommended for anyone who is sexually active and engaging in unprotected sex', p.6).",
+      "source_page": 2
+    },
+    {
+      "topic": "Referral block spans pages 2-6",
+      "observed": "Referral wording appears on page 1 (not eligible), page 2 (table note), page 4 (age, medical review), page 5 (frequently takes pill breaks; refer confidentially) and page 6 (consent and destination).",
+      "why_unclear": "Spec rule for the referral block: one shared provenance object uses the first page of the range (page 2); the full range 2-6 is recorded here.",
+      "source_page": 2
+    },
+    {
+      "topic": "No emergency referral wording printed",
+      "observed": "The document uses 'immediate referral' (p.2, captured in referral.urgent and RF-1) but never mentions emergency services, ambulance, 000 or emergency department.",
+      "why_unclear": "referral.emergency is empty because the source is silent; this reflects the document rather than an extraction gap.",
+      "source_page": 2
+    },
+    {
+      "topic": "notifiable captures My Health Record transmission and record sharing, not a notifiable condition",
+      "observed": "The document requires My Health Record upload of the dispensing record (with a documented patient request to withhold as a justifiable reason for not meeting condition 4(m) of the SASA) and provision of a copy of the record to the patient and, if necessary, their regular medical practitioner (p.5). No notifiable condition, AIR notification or compulsory GP notification is mentioned.",
+      "why_unclear": "notifiable.required is set true only for those explicitly printed transmission/sharing obligations; no public-health notification requirement exists in this document.",
+      "source_page": 5
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "Page 1 carries only the title 'Pharmacist Resupply of Oral Contraceptive Pills Pilot - Western Australian Protocol'; no version, date, document identifier or approval line appears on any of the 7 pages (page 7 is the Attachment 1 heading).",
+      "why_unclear": "instrument_version and effective_date cannot be populated from the document.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Obtain the content of Attachment 1: Summary table for OCP (page 7) and confirm product-level strengths/doses before any product-level resupply rule is encoded - the table's rows were not present in the text extraction.",
+      "source_page": 7,
+      "reason": "TX-1 therefore has blank strength/dose/frequency; permitted-ingredient lists (I and J) are captured, but product details cannot be transcribed from what was extracted."
+    },
+    {
+      "item": "Confirm the COC/POP column attribution of the K. Exclusion criteria table (pages 2-3) against the source PDF layout, particularly the page 3 items tagged [COC (inferred)].",
+      "source_page": 3,
+      "reason": "The two-column table is interleaved in the text extraction; misattributing a COC-only criterion (e.g. BMI ≥ 35kg/m2, age 35+ smoker) to POP would wrongly block eligible POP resupplies, and vice versa."
+    },
+    {
+      "item": "Confirm which conditions the table note 'conditions that require immediate referral. Refer the patient to their regular GP with a copy of the assessment' applies to (breast cancer and/or liver tumour rows, or all K exclusions).",
+      "source_page": 2,
+      "reason": "The note's subject is cut off in the extraction; RF-1 is recorded with confidence 'unclear' and drives an immediate-referral rule, so the attachment must be verified."
+    },
+    {
+      "item": "Confirm the SASA reference: which Structured Administration and Supply Arrangement and which version of condition 4(m) the protocol operates under, and the instrument that authorises pharmacists to resupply OCP under the Medicines and Poisons Regulations 2016 (WA).",
+      "source_page": 5,
+      "reason": "The document cites 'condition 4(m) of the SASA' and 'Part 12 of the Medicines and Poisons Regulations 2016' but never identifies the SASA instrument, its date or the authorisation wording; legal_basis depends on this."
+    },
+    {
+      "item": "Confirm local rules for quantity decisions: 'One manufacturer's pack, or maximum up to 12 months', the 16-17 year 'up to 4 months' rule, and the requirement that quantity only allows continuation of OCP within the 2-year review period.",
+      "source_page": 4,
+      "reason": "The protocol leaves quantity selection to 'the patient's preference and the pharmacist's assessment' with conditions to consider; exact supply/quantity logic must be confirmed for the rules engine."
+    },
+    {
+      "item": "Confirm how 'stabilised for minimum 2 years continuously' and the OCP review date are evidenced at the point of supply (sighting the previous prescription, My Health Record, dispensing records) and how frequently this verification must occur locally.",
+      "source_page": 4,
+      "reason": "The document says pharmacists 'should verify' (advisory wording) while the scope criteria are mandatory; the operational evidence standard is left to local policy."
+    },
+    {
+      "item": "Confirm handling of My Health Record upload configuration and documented patient requests to withhold transmission (justifiable reason for not meeting condition 4(m) of the SASA), including who documents the request.",
+      "source_page": 5,
+      "reason": "The requirement depends on pharmacy dispensing software configuration and patient consent workflow that this document does not specify."
+    },
+    {
+      "item": "Confirm the consultation fee position: 'Pharmacists may charge a consultation fee for the service, in addition to the cost of OCP supplied' and the advice that free consultations are available through bulk-billing general practitioners.",
+      "source_page": 6,
+      "reason": "Fees are explicitly left to the pharmacy; pricing and the patient information script must be set locally rather than inferred from the protocol."
+    },
+    {
+      "item": "Confirm the controlled version/date of this protocol with the Department of Health (no version number or date is printed) and that the UKMEC version in force is UKMEC April 2016 (Amended September 2019) as cited.",
+      "source_page": 1,
+      "reason": "The protocol is cited against a specific UKMEC version and has no printed version/effective date; both must be verified before go-live."
+    }
+  ]
+}

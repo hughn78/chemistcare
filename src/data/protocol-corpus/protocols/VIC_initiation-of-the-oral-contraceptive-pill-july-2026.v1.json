@@ -1,0 +1,1162 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf",
+    "pdf_sha256": "73a5c42c215b81b45ea6a87b3c5add56177a8a40b2300a681e0ce6ebec026667",
+    "page_count": 28,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Initiation of the Oral Contraceptive Pill",
+    "instrument_version": "July 2026",
+    "effective_date": "July 2026",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 and the Drugs, Poisons and Controlled Substances Regulations 2017 (the Regulations); supply of the Schedule 4 poisons documented in this Protocol for the initiation of the oral contraceptive pill under a structured prescribing arrangement; requirement of the Secretary Approval: Community Pharmacist Program that pharmacists comply with this Protocol and have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons (page 4, '1. About').",
+    "supervision_model": "structured prescribing arrangement (document's own term) under the Secretary Approval: Community Pharmacist Program; pharmacists must operate at all times in accordance with the Drugs, Poisons and Controlled Substances Act 1981, the Regulations and all other applicable Victorian, Commonwealth and national laws, and act in a manner consistent with the Pharmacy Board of Australia's Code of Conduct (page 4, '1. About').",
+    "scope_summary": "Victorian Community Pharmacist Program protocol (July 2026) authorising pharmacists to supply Schedule 4 poisons for commencement or restarting of an oral contraceptive pill only. Scope of the service is limited to pharmacist-led commencement or restarting of an oral contraceptive pill; it does not cover resupply of other contraceptive methods (page 5, '2.1. Key to colours used in this protocol'). Includes a flowchart (pages 5-9), supplementary assessment guidance (sections 4-5, pages 12-21), a Medicines List (page 22-23), counselling/documentation requirements (pages 10, 24-25) and follow-up rules (page 26)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Is the patient, female*, aged >= 18-50 years of age? *the term 'female' is used to include all people presumed female at birth",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Is the patient requesting a contraceptive medicine for contraceptive purposes? The scope of this service is limited to pharmacist-led commencement or restarting of an oral contraceptive pill only.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Is the patient consenting to participate in the Pharmacist Initiation of the Oral Contraceptive Service? *The patient must be physically present at the pharmacy.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Is the private consultation room available (to conduct the service)? If No: 'Do not proceed until room is available to conduct the service'.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-5",
+        "text": "The patient meets eligibility criteria (UKMEC category 1 or 2)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-6",
+        "text": "No contraindications to, or clinically significant interactions with, the hormonal contraceptive",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-7",
+        "text": "No exclusion criteria identified",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-8",
+        "text": "The patient has had the opportunity to consider all suitable contraceptive options, and the agreed contraceptive plan includes an oral contraceptive pill as a clinically appropriate and preferred option.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "If the UKMEC category 3 or 4 applies. (Repeated on page 21: 'A hormonal contraception that is classified as UKMEC category of 3 or 4 for a patient CANNOT be supplied as part of this service.')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Changes in health that would be a contraindication to ongoing use (angina, heart attack, stroke/TIA, breast cancer, liver disease, DVT/PE, new migraine or headaches, increased VTE risk (e.g. recent major surgery))",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Potential pregnancy",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Drug interactions that may compromise the efficacy of oral contraceptives",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "The patient has prior significant side effects related to hormonal contraceptive use",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "SBP>140mmHg or DBP>90mmHg",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "The patient has a BMI of more than 35kg/m2",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Current or history of meningioma",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "The patient has signs and symptoms of PMOS/PCOS",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "The patient has (or is suspected to have) endometriosis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "The patient has unexplained vaginal bleeding, menstrual bleeding/pain that affects daily activities, irregular periods, amenorrhea, or pain/discomfort with sexual intercourse",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "The patient has symptoms of sexually transmitted infection (STI) e.g. changes in vaginal or urethral discharge",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "The patient requests or requires a method of contraception that is not available in the Oral Contraceptive Service",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "Patients who stopped due to serious adverse effects or complications related to hormonal contraception (e.g. VTE) should be excluded from the service and referred to a GP, medical practitioner or sexual health service for further assessment and advice.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 18, "section_heading": "A. Restarting oral contraceptives" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "Patients aged 41 to 50 years: Pharmacists must not initiate a combined hormonal contraception in this age group.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 19, "section_heading": "C. Age-related eligibility for a COCP" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "COCPs containing >=50 micrograms ethinylestradiol or mestranol are not recommended for contraception alone due to the unacceptable increased VTE risk. These formulations are not permitted for use in this service.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 19, "section_heading": "Exclusions" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "The following hormonal contraceptives have been excluded from the Program: COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) - not routinely recommended for contraception due to unacceptable risk of VTE; Combined hormonal vaginal ring; Depot medroxyprogesterone (DMPA) injection; Etonogestrel subdermal contraceptive implant; Levonorgestrel-releasing intrauterine contraceptive device.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-17"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 23, "section_heading": "6. Medicines list" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 50,
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'treat and refer' criterion: The patient has been, or suspected to have been, subject to reproductive coercion, sexual abuse or sexual violence. Yes -> 'Proceed & refer to GP for immediate review'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-1", "EXE-2"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "'treat and refer' criterion: CST is indicated (Guidance and information on who should be tested can be found at: https://www.health.gov.au/our-work/national-cervical-screening-program/getting-a-cervical-screening-test/who-should-get-a-cervical-screening-test). Yes -> 'Proceed & refer to GP for immediate review'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-1", "EXE-2"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Protocol for Initiation of the Oral Contraceptive Pill - flowchart pathway (preliminary enquiries, immediate referral, pharmacist care and care provided)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Preliminary enquiry: 'Is the patient, female*, aged >= 18-50 years of age? *the term female is used to include all people presumed female at birth'. No branch -> 'Refer to General Practitioner'. Yes -> continue to PW-1-S2.",
+          "gates": [{ "criterion": "Patient is female (all people presumed female at birth) and aged >= 18-50 years of age", "on_fail": "REFER" }],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient requesting a contraceptive medicine for contraceptive purposes? The scope of this service is limited to pharmacist-led commencement or restarting of an oral contraceptive pill only.' No branch -> 'Refer to General Practitioner, OR resupply protocol'.",
+          "gates": [{ "criterion": "Patient is requesting a contraceptive medicine for contraceptive purposes (service scope: pharmacist-led commencement or restarting of an oral contraceptive pill only)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient consenting to participate in the Pharmacist Initiation of the Oral Contraceptive Service? *The patient must be physically present at the pharmacy.' No branch -> 'Refer to General Practitioner'. Yes -> continue to page 6 (PDF page 6).",
+          "gates": [{ "criterion": "Patient consents to participate and is physically present at the pharmacy", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Service precondition: 'Is the private consultation room available'. No branch -> 'Do not proceed until room is available to conduct the service'.",
+          "gates": [{ "criterion": "Private consultation room available to conduct the service", "on_fail": "STOP" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "'Confirm informed consent and undertake contraceptive counselling; The pharmacist must provide patient centred contraceptive counselling and support shared decision-making, including but not limited to: All available contraceptive options, including options not available through this service e.g. LARCs, combined hormonal vaginal ring and DMPA injection; Relative effectiveness, adherence requirements and additional benefits e.g. desire for bleeding control and duration of need; Confirmation that contraceptive and sexual health plan may include OCP; Relevant costs e.g. medicines; Communication with the patient's usual GP. Where the patient does not have a regular GP, support them to identify a local general practice using the Healthdirect Service Finder.' No branch -> 'Refer to General Practitioner'.",
+          "gates": [{ "criterion": "Informed consent confirmed and patient-centred contraceptive counselling / shared decision-making completed", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "'Patient history; take a focused history to identify relevant risk factors:' Age; Medical history (VTE, migraine, cardiovascular disease, liver disease, cancer, meningioma); Family history (VTE in first-degree relative <45-50 years); Social history, including mental health and any identified safety concerns; Smoking status; Menopausal or perimenopausal status, especially for women in their 40's; Medication history, including current and recently ceased medicines, use of enzyme-inducing medicines, and previous hormonal contraceptives, including the indication for use, tolerability, adverse effects (including mood-related symptoms), and reason for cessation or change; Reproductive history (LMP, pregnancy risk, postpartum/lactation status); Medication allergies and/or adverse reactions; Review MHR, where possible; STI assessment and referral (recommended for anyone who is sexually active and engaging in unprotected sex, has a new partner since their last STI test, or thinks they may be at risk).",
+          "gates": [{ "criterion": "Patient able to provide a history ('If the patient is unable to provide a history, refer to GP')", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EXAMINATION",
+          "description": "'Conduct Clinical Review and Record findings' - Measure BP; Calculate BMI; 'Exclude pregnancy with high confidence. Consider if emergency contraception is required.' (see PW-2 for the printed pregnancy-exclusion criteria, page 15); 'Taking into account the patient's history, clinical review, and clinical judgement, the pharmacist should identify UKMEC risk factors and assign an eligibility category. The highest UKMEC category determines a contraceptive option's suitability'. Supplementary note (page 16, '4.3. Examination'): 'A single elevated BP reading is not enough to classify a patient as hypertensive, and a second BP reading should be taken at the end of the consultation.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient meet any of the following exclusion criteria?' (list reproduced in eligibility.exclusion EXC-1 to EXC-13): UKMEC category 3 or 4; changes in health that would be a contraindication to ongoing use; potential pregnancy; drug interactions that may compromise efficacy; prior significant side effects related to hormonal contraceptive use; SBP>140mmHg or DBP>90mmHg; BMI of more than 35kg/m2; current or history of meningioma; signs and symptoms of PMOS/PCOS; endometriosis; unexplained vaginal bleeding/menstrual bleeding/pain/irregular periods/amenorrhea/pain with intercourse; symptoms of STI; requests or requires a method of contraception not available in the Oral Contraceptive Service. Yes -> 'Refer to General Practitioner'. No, to all -> continue to PW-1-S9.",
+          "gates": [{ "criterion": "Patient meets NO exclusion criteria (all of EXC-1 to EXC-13 absent)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient meet any of the following 'treat and refer' criteria?' - The patient has been, or suspected to have been, subject to reproductive coercion, sexual abuse or sexual violence; CST is indicated. Yes branch -> 'Proceed & refer to GP for immediate review'. No branch -> 'Continue to pg. 8' (PDF page 8). Whether pharmacotherapy proceeds in the same consultation is recorded in open_questions.",
+          "gates": [{ "criterion": "Patient meets NO 'treat and refer' criteria", "on_fail": "REFER" }],
+          "confidence": "unclear",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Confirm Suitability' - The patient meets eligibility criteria (UKMEC category 1 or 2); No contraindications to, or clinically significant interactions with, the hormonal contraceptive; No exclusion criteria identified; The patient has had the opportunity to consider all suitable contraceptive options, and the agreed contraceptive plan includes an oral contraceptive pill as a clinically appropriate and preferred option. No branch -> 'Refer to General Practitioner'. Yes -> Pharmacotherapy.",
+          "gates": [{ "criterion": "Confirm Suitability: UKMEC category 1 or 2, no contraindications/clinically significant interactions, no exclusion criteria, patient has considered all suitable options and agreed plan includes an oral contraceptive pill", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "TREAT",
+          "description": "'Pharmacotherapy' - 'If the contraceptive plan aligns, select an oral contraceptive option in accordance with the Therapeutic Guidelines: Sexual and Reproductive Health (Contraception) and the Australian Medicines Handbook: Combined Oral Contraceptives. Pharmacists may only supply OCPs listed in this protocol.' 'For most eligible patients without additional risk factors, a monophasic COCP containing 30 micrograms of ethinylestradiol with levonorgestrel is recommended as first-line therapy.' Flowchart medicines list (page 8): Combined Oral Contraceptive Pills - Low dose estrogen: ethinylestradiol + levonorgestrel 20/100microg; ethinylestradiol + drospirenone 20microg/3mg; estradiol + nomegestrol 1.5/2.5mg. Standard dose estrogen: ethinylestradiol + levonorgestrel 30/150microg; ethinylestradiol + desogestrel 30/150microg; ethinylestradiol + dienogest 30microg/2mg; ethinylestradiol + drospirenone 30microg/3mg; ethinylestradiol + gestodene 30/75microg; ethinylestradiol + cyproterone 35microg/2mg; ethinylestradiol + norethisterone 35microg/0.5mg; ethinylestradiol + norethisterone 35microg/1mg; estetrol + drospirenone 14.2/3mg. Triphasic: ethinylestradiol 30/40/30microg + levonorgestrel 50/75/125microg. Quadriphasic: estradiol valerate 3/2/2/1mg + dienogest 2/3mg. Progesterone Only Pills (POPs): levonorgestrel 30microg; norethisterone 350microg; drospirenone 4mg. Age gate for a COCP (page 19, 'C. Age-related eligibility for a COCP'): 'Patients aged 18 to 40 years: A COCP may be initiated where the patient meets all protocol and UKMEC eligibility requirements.'",
+          "gates": [{ "criterion": "The contraceptive plan aligns with the Therapeutic Guidelines: Sexual and Reproductive Health (Contraception) and Australian Medicines Handbook: Combined Oral Contraceptives; and (for a COCP) the patient is aged 18 to 40 years and meets all protocol and UKMEC eligibility requirements", "on_fail": "unclear" }],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "EDUCATE",
+          "description": "'Provide non-pharmacological advice, and counselling on other pregnancy prevention measures. Counselling requirements linked to selection: Provide contraceptive and sexual health plan counselling; Provide patient with a Consumer Medicines Information and patient handout.' 'Confirm contraception plan is appropriate with regards to the UKMEC, patient's age, contraindications, precautions, interactions, pregnancy and lactation status.'",
+          "gates": [{ "criterion": "Contraception plan confirmed appropriate with regards to the UKMEC, patient's age, contraindications, precautions, interactions, pregnancy and lactation status", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "TREAT",
+          "description": "'Communicate agreed treatment plan to patient and other healthcare professionals - Dispense medications via pharmacy dispensing program and ensure MHR upload (if applicable); Provide one original pack (a 3-4 month supply).'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "'Explain relative efficacy and adherence requirements; Educate on daily compliance, missed pill and adverse effects; Advise when to seek further care or earlier review in the event of adverse effects or change in health status.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "FOLLOW_UP",
+          "description": "'Refer for review by GP within 3-4 months after initiation of the OCP' (see also page 26, '8. Follow up / clinical review').",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "EDUCATE",
+          "description": "'Document the consultation' - Document the patient history, clinical assessment, UKMEC category, pharmacotherapy choice and decision-making rationale; Share a record of the service with the patient, patient's usual GP, or, where the patient does not have a regular GP, support connection with a local general practice using the Healthdirect Service Finder and follow the agreed referral and information-sharing process. Clinical documentation requirements are set out on page 10, '3. Clinical documentation requirements'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Assess pregnancy risk - pregnancy exclusion before commencing any hormonal contraception",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "INVESTIGATION",
+          "description": "'Assess pregnancy risk - Pregnancy should be reasonably excluded before commencing any hormonal contraception. A patient can be reasonably assumed not to be pregnant if: There are no symptoms or signs of pregnancy AND any of the following criteria are met: they have not had intercourse since the start of the last normal (natural) menstrual period, or since childbirth, abortion or miscarriage; they have been correctly and consistently using a reliable method of contraception (barrier methods can be assumed to be reliable if used correctly in this context); they are within the first 5 days of the onset of a normal (natural) menstrual period or within the first 5 days after abortion or miscarriage; they are less than 21 days postpartum; they have not had intercourse for >21 days and have a negative urine pregnancy test. 'If there is any doubt regarding whether the patient may be pregnant, hormonal contraception should NOT be supplied and the patient referred to an appropriate healthcare provider for pregnancy testing.'",
+          "gates": [{ "criterion": "No symptoms or signs of pregnancy AND any one of the five printed criteria met (no intercourse since start of last normal menstrual period or since childbirth/abortion/miscarriage; correctly and consistently using a reliable method of contraception; within the first 5 days of onset of a normal menstrual period or within the first 5 days after abortion or miscarriage; less than 21 days postpartum; not had intercourse for >21 days and a negative urine pregnancy test)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 15, "section_heading": "Assess pregnancy risk" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Ethinylestradiol + Levonorgestrel",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 20 + levonorgestrel 100 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: low-dose estrogen (table heading as printed). Brand name examples: Femme-Tab ED 20/100, Loette, Microgynon 20 ED, Micronelle 20 ED. Doses read from the Medicines List table columns headed 'Estrogen dose (micrograms)' and 'Progestogen dose (micrograms)'; transcribed without unit conversion. Page 18 guidance: '20 micrograms: may be considered where there is a preference for a lower estrogen dose or where there are concerns about estrogen-related adverse effects. Patients should be advised that this dose is more likely to cause unscheduled bleeding and may be less suitable where cycle control is important, including in dysmenorrhoea or menorrhagia.' No dose/frequency/duration is printed in the Medicines List; dosing is deferred to Therapeutic Guidelines and AMH (page 17).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Ethinylestradiol + Drospirenone",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 20 + drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: low-dose estrogen. Brand name examples: Bella, Brooke, Rosie, Yana, Yaz. The estrogen cell for this row is blank in the text extraction (grouped table cell under 'ethinylestradiol 20'); pairing confirmed by page 8 'Ethinylestradiol + Drospirenone 20microg/3mg'. Page 19: 'Drospirenone containing COCPs: may be considered for premenstrual symptoms, bloating or mood concerns, or where minimising perceived hormonal side effects is important. These are commonly used with lower estrogen doses; counsel regarding increased breakthrough bleeding and increase the estrogen dose if required.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Estradiol + Nomegestrol",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "estradiol 1500 + nomegestrol 2500 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: low-dose estrogen. Brand name example: Zoely. Page 19: 'COCPs containing estradiol (e.g. Zoely) or estetrol (e.g. Nextstellis) may be considered, noting their reduced impact on laboratory markers of VTE risk. In practice, these are generally used as second-line options, particularly where individuals experience bleeding disturbances or hormonal adverse effects with standard ethinylestradiol containing COCPs. Estradiol/nomegestrol may also be considered where specifically requested or where a formulation perceived to be more mood-neutral is preferred.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Ethinylestradiol + Levonorgestrel",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 30 + levonorgestrel 150 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name examples: Eleanor 150/30 ED, Evelyn 150/30 ED, Femme-Tab ED 30/150, Lenest 30 ED, Leveth 150/30 ED, Levlen ED, Microgynon 30 ED, Micronelle 30 ED, Monofeme Seasonique. FIRST-LINE (verbatim, page 8): 'For most eligible patients without additional risk factors, a monophasic COCP containing 30 micrograms of ethinylestradiol with levonorgestrel is recommended as first-line therapy.' Page 18: 'For most eligible patients, a monophasic COCP containing 30 micrograms of ethinylestradiol with levonorgestrel is recommended as first-line. This is preferred because of its established safety profile, lower cost, reliable cycle control and simpler missed-pill management.' Page 19: 'Levonorgestrel containing COCPs: preferred first-line progestogen due to its established safety profile.'",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Ethinylestradiol + Desogestrel",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 30 + desogestrel 150 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name examples: Madeline, Marvelon. Estrogen cell blank in text extraction (grouped under 'ethinylestradiol 30'); pairing confirmed by page 8 'Ethinylestradiol + Desogestrel 30/150microg'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Ethinylestradiol + Dienogest",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 30 + dienogest 2000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name example: Valette. Estrogen cell blank in text extraction (grouped under 'ethinylestradiol 30'); pairing confirmed by page 8 'Ethinylestradiol + Dienogest 30microg/2mg'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Ethinylestradiol + Drospirenone",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 30 + drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name examples: Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena. Estrogen cell blank in text extraction (grouped under 'ethinylestradiol 30'); pairing confirmed by page 8 'Ethinylestradiol + Drospirenone 30microg/3mg'. Page 19 drospirenone guidance applies (premenstrual symptoms, bloating, mood concerns; counsel regarding increased breakthrough bleeding).",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "Ethinylestradiol + Gestodene",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 30 + gestodene 75 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name example: Minulet. Estrogen cell blank in text extraction (grouped under 'ethinylestradiol 30'); pairing confirmed by page 8 'Ethinylestradiol + Gestodene 30/75microg'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-9",
+      "drug": "Ethinylestradiol + Cyproterone",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 35 + cyproterone 2000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name examples: Diane-35 ED, Estelle-35 ED, Juliet-35 ED, Brenda-35 ED. Verbatim protocol caveat (page 19): 'Cyproterone containing COCPs: are not recommended for general contraceptive use due to an increased risk of VTE and lack of Therapeutic Goods Administration approval for contraception use alone. Use should be restricted to the management of hyperandrogenism following appropriate assessment and investigation, and they should not be used as first-line contraceptive options.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-10",
+      "drug": "Ethinylestradiol + Norethisterone",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 35 + norethisterone 500 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name examples: Brevinor, Norimin. Page 18: '35 micrograms: reserved as second-line for persistent breakthrough bleeding despite appropriate use of a 30 microgram formulation. Discuss the increased VTE risk associated with higher estrogen doses.' Page 24: 'COCPs containing levonorgestrel or norethisterone have a slightly lower risk of VTE.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-11",
+      "drug": "Ethinylestradiol + Norethisterone",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "ethinylestradiol 35 + norethisterone 1000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name examples: Brevinor-1, Norimin-1, Pirmella. Page 18: '35 micrograms: reserved as second-line for persistent breakthrough bleeding despite appropriate use of a 30 microgram formulation. Discuss the increased VTE risk associated with higher estrogen doses.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-12",
+      "drug": "Estetrol + Drospirenone",
+      "form": "Combined oral contraceptive pill (COCP)",
+      "strength": "estetrol 14200 (14.2 mg) + drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Monophasic oral formulations: standard-dose estrogen. Brand name example: Nextstellis. Strength transcribed exactly as printed including the table's own '(14.2 mg)' parenthetical. Page 19: estetrol-containing COCPs 'may be considered, noting their reduced impact on laboratory markers of VTE risk... generally used as second-line options'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-13",
+      "drug": "Ethinylestradiol + Levonorgestrel",
+      "form": "Combined oral contraceptive pill (COCP), triphasic",
+      "strength": "ethinylestradiol 30/40/30 + levonorgestrel 50/75/125 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Triphasic: low or standard dose estrogen (table heading as printed). Brand name examples: Logynon ED, Trifeme, Triphasil, Triquilar. Verbatim (page 19): 'Triphasic formulations: not routinely recommended, as they offer no clear advantage over monophasic preparations.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-14",
+      "drug": "Estradiol Valerate + Dienogest",
+      "form": "Combined oral contraceptive pill (COCP), quadriphasic",
+      "strength": "estradiol valerate 3000/2000/2000/1000 + dienogest 2000/3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Quadriphasic: low or standard dose estrogen (table heading as printed). Brand name example: Qlaira. Verbatim (page 19): 'Quadriphasic formulations: (e.g. Qlaira) may be considered for heavy menstrual bleeding but are generally third line, due to more complex dosing and missed pill rules.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-15",
+      "drug": "Levonorgestrel",
+      "form": "Progestogen only pill (POP), oral contraception",
+      "strength": "Levonorgestrel 30 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Progestogen only pills (POP) oral contraception (table heading as printed). Brand name example: Microlut. Page 8 prints 'Levonorgestrel 30microg'. Verbatim (page 20): 'Levonorgestrel or norethisterone containing POP: may be used where drospirenone is not suitable, contraindicated, or not preferred. These formulations are associated with less consistent suppression of ovulation and a shorter missed-pill window (approximately 3 hours), and may be association with bleeding. Appropriate counselling should be provided if these options are selected.' Populations: 'Progestogen-only pills (POPs) may be suitable for individuals who have a contraindication to estrogen or who prefer an estrogen-free option.' (page 20). Lactation (page 20): 'An eligible POP is generally the preferred oral option because it does not contain estrogen and is not expected to affect milk production.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-16",
+      "drug": "Norethisterone",
+      "form": "Progestogen only pill (POP), oral contraception",
+      "strength": "Norethisterone 350 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Progestogen only pills (POP) oral contraception (table heading as printed). Brand name example: Noriday. Page 8 prints 'Norethisterone 350microg'. Verbatim (page 20): 'Levonorgestrel or norethisterone containing POP: may be used where drospirenone is not suitable, contraindicated, or not preferred... shorter missed-pill window (approximately 3 hours)... Appropriate counselling should be provided if these options are selected.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-17",
+      "drug": "Drospirenone",
+      "form": "Progestogen only pill (POP), oral contraception",
+      "strength": "Drospirenone 4mg",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "one original pack (a 3-4 month supply) [page 9, '2. Protocol for Initiation of the Oral Contraceptive Pill']",
+      "notes": "Progestogen only pills (POP) oral contraception (table heading as printed). Brand name example: Slinda. Strength transcribed exactly as printed ('4mg'). Preferred option within the POP class (verbatim, page 20): 'Drospirenone containing POP: preferred where available, due to its more consistent suppression of ovulation, a more favourable bleeding profile, and a 24-hour missed pill window, providing greater flexibility than traditional POPs.' Protocol-level first-line remains the monophasic 30 microgram ethinylestradiol with levonorgestrel COCP (page 8).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 22, "section_heading": "6. Medicines list" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Is the patient, female*, aged >= 18-50 years of age? *the term 'female' is used to include all people presumed female at birth",
+      "structured": { "parameter": "age", "operator": "range", "value": [18, 50], "unit": "years" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Is the patient requesting a contraceptive medicine for contraceptive purposes? The scope of this service is limited to pharmacist-led commencement or restarting of an oral contraceptive pill only. (No branch: 'Refer to General Practitioner, OR resupply protocol')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Is the patient consenting to participate in the Pharmacist Initiation of the Oral Contraceptive Service? *The patient must be physically present at the pharmacy.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Is the private consultation room available - No: 'Do not proceed until room is available to conduct the service'",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Confirm informed consent and undertake contraceptive counselling - No branch: 'Refer to General Practitioner'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "If the patient is unable to provide a history, refer to GP",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "If the UKMEC category 3 or 4 applies",
+      "structured": { "parameter": "UKMEC category", "operator": "in", "value": [3, 4], "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Changes in health that would be a contraindication to ongoing use (angina, heart attack, stroke/TIA, breast cancer, liver disease, DVT/PE, new migraine or headaches, increased VTE risk (e.g. recent major surgery))",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Potential pregnancy",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Drug interactions that may compromise the efficacy of oral contraceptives",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "The patient has prior significant side effects related to hormonal contraceptive use",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "SBP>140mmHg or DBP>90mmHg (systolic limb of the printed OR trigger)",
+      "structured": { "parameter": "SBP", "operator": ">", "value": 140, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "SBP>140mmHg or DBP>90mmHg (diastolic limb of the printed OR trigger)",
+      "structured": { "parameter": "DBP", "operator": ">", "value": 90, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "The patient has a BMI of more than 35kg/m2",
+      "structured": { "parameter": "BMI", "operator": ">", "value": 35, "unit": "kg/m2" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Current or history of meningioma",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "The patient has signs and symptoms of PMOS/PCOS",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "The patient has (or is suspected to have) endometriosis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "The patient has unexplained vaginal bleeding, menstrual bleeding/pain that affects daily activities, irregular periods, amenorrhea, or pain/discomfort with sexual intercourse",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "The patient has symptoms of sexually transmitted infection (STI) e.g. changes in vaginal or urethral discharge",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "The patient requests or requires a method of contraception that is not available in the Oral Contraceptive Service",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "The patient has been, or suspected to have been, subject to reproductive coercion, sexual abuse or sexual violence ('treat and refer' criterion; Yes branch: 'Proceed & refer to GP for immediate review')",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "CST is indicated (Guidance and information on who should be tested can be found at: https://www.health.gov.au/our-work/national-cervical-screening-program/getting-a-cervical-screening-test/who-should-get-a-cervical-screening-test) ('treat and refer' criterion; Yes branch: 'Proceed & refer to GP for immediate review')",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "If the pharmacist becomes aware of this during the consultation, they should provide appropriate trauma-informed support and assistance, including referral to support options depending on the patient's circumstances. Do not pressure the patient to disclose or take immediate action unless there is an immediate risk identified.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 13, "section_heading": "Reproductive coercion, sexual and domestic violence and abuse" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Transgender and non-binary people receiving gender-affirming hormone therapy, or who have more complex hormonal management needs, may require referral to their regular medical practitioner or an appropriately experienced sexual health or gender-affirming healthcare service for comprehensive, culturally safe care tailored to their individual needs.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 14, "section_heading": "Contraceptive options for transgender and non-binary people" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "If there is any doubt regarding whether the patient may be pregnant, hormonal contraception should NOT be supplied and the patient referred to an appropriate healthcare provider for pregnancy testing",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 15, "section_heading": "Assess pregnancy risk" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Patients who stopped due to serious adverse effects or complications related to hormonal contraception (e.g. VTE) should be excluded from the service and referred to a GP, medical practitioner or sexual health service for further assessment and advice.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 18, "section_heading": "A. Restarting oral contraceptives" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "Patients aged 41 to 50 years: Pharmacists must not initiate a combined hormonal contraception in this age group.",
+      "structured": { "parameter": "age", "operator": "range", "value": [41, 50], "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 19, "section_heading": "C. Age-related eligibility for a COCP" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "Refer where the patient: Wishes to consider a COCP (in the aged 41 to 50 years context)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 20, "section_heading": "C. Age-related eligibility for a COCP" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Refer where the patient: Has contraceptive needs that cannot be met under this service",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 20, "section_heading": "C. Age-related eligibility for a COCP" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "Refer where the patient: Has experienced symptoms or changes that may relate to perimenopause or menopause",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 20, "section_heading": "C. Age-related eligibility for a COCP" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "Where a LARC is preferred or may be more suitable, refer the patient to an appropriately qualified practitioner or service for further counselling and access.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 21, "section_heading": "E. Lactation and postpartum considerations" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "When to seek further care and/or treatment: Signs of VTE and what to do if it is suspected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 24, "section_heading": "7.1. General advice" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "When to seek further care and/or treatment: The importance of reporting new or worsening mood-related symptoms",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 24, "section_heading": "7.1. General advice" }
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "Presence of symptoms suggestive of STI must result in immediate referral for medical assessment.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 25, "section_heading": "Sexually Transmitted Infection (STI) assessment and referral" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to General Practitioner (default No branch of the flowchart)",
+      "the Pharmacist may refer to other authorised prescribing health practitioners where they have the appropriate women's health, sexual health or contraceptive expertise",
+      "Where timely access is not available, referral to other women's health services may be considered, including women's sexual and reproductive health hubs, women's health clinics, the Aboriginal women's health clinic, or the virtual women's health clinic",
+      "With consent, all Aboriginal and Torres Strait Islander patients should be offered referral to an Aboriginal Community Controlled Health Organisation (ACCHO)",
+      "Referral options include the local hospital, sexual health clinic, and/or community-based sexual violence support services",
+      "or the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device",
+      "the patient referred to an appropriate healthcare provider for pregnancy testing",
+      "Transgender and non-binary people ... may require referral to their regular medical practitioner or an appropriately experienced sexual health or gender-affirming healthcare service",
+      "refer the patient to an appropriately qualified practitioner or service for further counselling and access (where a LARC is preferred or may be more suitable)",
+      "STI testing must be supported through assessment, advice and a referral to a GP or sexual health service",
+      "People who have a personal or family history of breast cancer should be advised to see their medical practitioner for advice regarding frequency and type of screening"
+    ],
+    "urgent": [
+      "Proceed & refer to GP for immediate review ('treat and refer' criteria)",
+      "Presence of symptoms suggestive of STI must result in immediate referral for medical assessment.",
+      "Patients should seek earlier review if they experience adverse effects, a significant change in health, commence a new medicine, or wish to change or discontinue contraception."
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+  },
+  "review_followup": [
+    {
+      "when": "within 3-4 months after initiation of the OCP (at initiation)",
+      "what": "Patients must be referred at initiation for clinical review within 3-4 months to assess tolerability, adherence, adverse effects, blood pressure, changes in medical eligibility or medicines, and ongoing suitability.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 26, "section_heading": "8. Follow up / clinical review" }
+    },
+    {
+      "when": "earlier than scheduled",
+      "what": "Patients should seek earlier review if they experience adverse effects, a significant change in health, commence a new medicine, or wish to change or discontinue contraception.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 26, "section_heading": "8. Follow up / clinical review" }
+    },
+    {
+      "when": "after the initial review, at least annually",
+      "what": "Patients continuing hormonal contraception should receive ongoing clinical review at least annually, or earlier where clinically indicated.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 26, "section_heading": "8. Follow up / clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must provide a copy of the record of the service to the patient and to the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply."
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-initiation-of-the-oral-contraceptive-pill-july-2026.pdf", "page": 10, "section_heading": "3. Clinical documentation requirements" }
+  },
+  "references": [
+    "Therapeutic Guidelines: Sexual and Reproductive Health - Sexual and Reproductive Health - Therapeutic Guidelines (p. 27)",
+    "Australian Medicines Handbook: Drugs for contraception - Drugs for contraception - Australian Medicines Handbook (p. 27)",
+    "Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG) - C-Gyn 3 Contraception Clinical Guideline (p. 27)",
+    "The Faculty of Sexual & Reproductive Healthcare (FSRH) - fsrh-guideline-combined-hormonal-contraception-october-2023.pdf (p. 27)",
+    "The College of Sexual and Reproductive Healthcare CoSRH- UK Medical Eligibility Criteria for Contraceptive Use (UKMEC) - Medical Eligibility Criteria for Contraceptive Use (UKMEC) (p. 27)",
+    "UKMEC Calculator (p. 27)",
+    "Pharmacists integrating trauma-informed care - Integrating trauma-informed care - The Pharmaceutical Journal (p. 27)",
+    "Australian Contraception and Abortion Primary Care Practitioner Support Network (AusCAPPS) - AusCAPPS Network (p. 27)",
+    "World Health Organisation: Family Planning: A Global Handbook for Providers (2018) - Family planning: a global handbook for providers: evidence-based guidance developed through worldwide collaboration, 3rd ed (p. 27)",
+    "CoSRH/ FSHR Clinical guideline - Progestogen-only Pills; CoSRH/ FSHR Clinical guideline - Combined Hormonal Contraception; CoSRH/ FSHR Clinical guideline - Progestogen-only injectable contraception (p. 12)",
+    "RANZCOG Contraception clinical guideline; UK Medical Eligibility Criteria for Contraceptive Use (UKMEC) (p. 12)",
+    "National Heart Foundation of Australia Guideline for the diagnosis and management of hypertension in adults (p. 16)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Age gate wording",
+      "observed": "Flowchart prints 'Is the patient, female*, aged >= 18-50 years of age?' with '>= ' combined with an upper bound of 50; section C separately states 'Patients aged 18 to 40 years: A COCP may be initiated' and 'Patients aged 41 to 50 years: Pharmacists must not initiate a combined hormonal contraception in this age group'.",
+      "why_unclear": "The '>= 18-50' phrasing is not standard; it is read as an inclusive 18-50 service range. Age bounds recorded as min 18 / max 50. The COCP-specific 18-40 sub-range is captured as a pathway gate (PW-1-S11) and as EXC-15/RF-27 rather than as the service age bound.",
+      "source_page": 5
+    },
+    {
+      "topic": "'treat and refer' branch outcome",
+      "observed": "Page 7: Yes branch of the 'treat and refer' box reads 'Proceed & refer to GP for immediate review', while the No branch reads 'No: Continue to pg. 8'.",
+      "why_unclear": "It is not explicit whether the pharmacist proceeds to pharmacotherapy in the same consultation when a 'treat and refer' criterion is met, or whether supply is deferred until GP review. Both readings recorded; EXE-1/EXE-2 confidence set to unclear.",
+      "source_page": 7
+    },
+    {
+      "topic": "Medicines List table row alignment (grouped cells)",
+      "observed": "In the text extraction of the page 22 table, the estrogen column cell is blank for the drospirenone 3000 row (low-dose group) and for the desogestrel/dienogest/drospirenone/gestodene rows (standard-dose group); doses appear as bare numbers under column headers 'Estrogen dose (micrograms)' and 'Progestogen dose (micrograms)'; the estetrol row prints '14200 (14.2 mg)'.",
+      "why_unclear": "Blank cells read as grouped/merged cells inheriting the row above ('ethinylestradiol 20' and 'ethinylestradiol 30' respectively); corroborated by the page 8 list which prints the same pairings with explicit units. Rows affected are recorded with confidence 'medium'.",
+      "source_page": 22
+    },
+    {
+      "topic": "No dose, frequency or duration printed in the Medicines List",
+      "observed": "The page 22 table prints only estrogen/progestogen doses and brand name examples; no per-dose amount, frequency, duration or pack quantity is printed for any row.",
+      "why_unclear": "Dose/frequency/duration/max_quantity/max_dose left empty rather than inferred. Quantity to supply taken from page 9 ('Provide one original pack (a 3-4 month supply)'). Dosing is deferred by the protocol to Therapeutic Guidelines: Sexual and Reproductive Health (Contraception) and Australian Medicines Handbook (page 17).",
+      "source_page": 22
+    },
+    {
+      "topic": "Action not specified for 'when to seek further care' triggers",
+      "observed": "Page 24 lists under 'When to seek further care and/or treatment': 'Signs of VTE and what to do if it is suspected' and 'The importance of reporting new or worsening mood-related symptoms', without stating a referral destination or urgency.",
+      "why_unclear": "RF-32 and RF-33 actions (REFER / REVIEW_GP) are the closest enum values; the document specifies neither destination nor urgency, so confidence is 'unclear' and severity kept at 'medium' (not upgraded).",
+      "source_page": 24
+    },
+    {
+      "topic": "No emergency referral pathway in this document",
+      "observed": "The protocol's referral options are GP, other authorised prescribing health practitioners, women's health services, sexual health clinic, hospital, support services and pregnancy testing providers; no emergency/ambulance/000 escalation is printed anywhere in the 28 pages.",
+      "why_unclear": "referral.emergency is empty because the document genuinely contains none (not a transcription gap).",
+      "source_page": 5
+    },
+    {
+      "topic": "Eligibility of people not presumed female at birth",
+      "observed": "Flowchart gate is 'female* ... all people presumed female at birth'; page 14 separately addresses 'Contraceptive options for transgender and non-binary people' and states information on cervical screening should be provided to transgender men and non-binary people who have a uterus.",
+      "why_unclear": "The document does not explicitly state how the 'female (presumed female at birth)' gate applies to transgender men / non-binary people with a uterus seeking oral contraception; the supplementary note says such patients 'may require referral' where they receive gender-affirming hormone therapy or have more complex hormonal management needs.",
+      "source_page": 5
+    },
+    {
+      "topic": "Quadriphasic strength printed in different units on page 8 vs page 22",
+      "observed": "Page 8 prints 'Estradiol Valerate 3/2/2/1mg + Dienogest 2/3mg'; the page 22 Medicines List table prints the same Qlaira row as estradiol valerate '3000/2000/2000/1000' and dienogest '2000/3000' under column headers '(micrograms)'.",
+      "why_unclear": "Same product, two printed unit presentations (mg vs micrograms). No conversion applied; the page 22 microgram figures are transcribed for TX-14 and the page 8 mg wording is quoted in the pathway step. Confirm which presentation the rules engine should display.",
+      "source_page": 22
+    },
+    {
+      "topic": "Referral block spans multiple pages",
+      "observed": "referral.routine and referral.urgent quote destinations printed across pages 5, 13, 14, 15, 20, 21, 24, 25 and 26; the shared provenance object references the first page (5).",
+      "why_unclear": "Single shared provenance per schema; page range recorded here as required by the spec.",
+      "source_page": 5
+    },
+    {
+      "topic": "Personal/family history of breast cancer screening advice",
+      "observed": "Page 25: 'People who have a personal or family history of breast cancer should be advised to see their medical practitioner for advice regarding frequency and type of screening.'",
+      "why_unclear": "This is screening advice rather than a service exclusion or escalation trigger; it is captured in referral.routine only, not as a red flag.",
+      "source_page": 25
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Current training requirements: 'It is also a requirement of the Secretary Approval: Community Pharmacist Program that pharmacists have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons.'",
+      "source_page": 4,
+      "reason": "Departmental guidance is external to the protocol; the go-live checklist must confirm which training version is current."
+    },
+    {
+      "item": "Authorisation status under the Secretary Approval: Community Pharmacist Program and the 'structured prescribing arrangement' supervision model.",
+      "source_page": 4,
+      "reason": "Supervision model is the document's own term; confirm local authorisation/credentialing before go-live."
+    },
+    {
+      "item": "'Where the protocol indicates to Refer to General Practitioner, the Pharmacist may refer to other authorised prescribing health practitioners where they have the appropriate women's health, sexual health or contraceptive expertise.'",
+      "source_page": 5,
+      "reason": "Who qualifies as having 'appropriate expertise' is left to pharmacist judgement/local policy."
+    },
+    {
+      "item": "'Where timely access is not available, referral to other women's health services may be considered, including women's sexual and reproductive health hubs, women's health clinics, the Aboriginal women's health clinic, or the virtual women's health clinic.'",
+      "source_page": 5,
+      "reason": "Hedged ('may be considered') and dependent on local service availability."
+    },
+    {
+      "item": "'Review MHR, where possible' and 'ensure MHR upload (if applicable)'.",
+      "source_page": 6,
+      "reason": "Conditional on My Health Record access/consent and pharmacy software configuration; confirm local workflow."
+    },
+    {
+      "item": "'If required, emergency contraception may be supplied as per standard pharmacy care, or the person may be referred ... for another method of emergency contraception e.g. insertion of a copper intrauterine device.'",
+      "source_page": 14,
+      "reason": "Emergency contraception is outside this protocol's Medicines List; local policy must define what 'standard pharmacy care' means here."
+    },
+    {
+      "item": "'The UKMEC calculator should be used to ensure all possible contraindications are considered prior to hormonal contraception selection.'",
+      "source_page": 17,
+      "reason": "Depends on an external calculator and the currency of UKMEC; confirm which version/tool is approved for use."
+    },
+    {
+      "item": "'Provide one original pack (a 3-4 month supply)' and 'Dispense medications via pharmacy dispensing program and ensure MHR upload (if applicable)'.",
+      "source_page": 9,
+      "reason": "Supply quantity and dispensing-program mechanics are operational rules to confirm against current program instructions and software."
+    },
+    {
+      "item": "STI assessment and referral: 'recommended for anyone who is sexually active and engaging in unprotected sex, has a new partner since their last STI test, or thinks they may be at risk' and 'Approved pharmacists should recommend STI testing for individuals who may be at risk even if the individual does not report any symptoms.'",
+      "source_page": 25,
+      "reason": "Worded as 'recommended'; thresholds for testing/referral are left to pharmacist judgement."
+    },
+    {
+      "item": "'Pharmacists are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 4,
+      "reason": "Explicit local-judgement latitude; confirm what adaptation is permitted before go-live."
+    }
+  ]
+}

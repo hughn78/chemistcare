@@ -1,0 +1,480 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf",
+    "pdf_sha256": "294ba8fec9201371bf2762a0c1bfb540a536f35ba60fdb3d59993d0786fdb9b9",
+    "page_count": 4,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NT",
+    "instrument_name": "NT Wide Pharmacist Immunisation - Immunisation Scheduled Substance Treatment Protocol (SSTP) for Pharmacists",
+    "instrument_version": "V3 (printed in page headers 'Immunisation Scheduled Substance Treatment Protocol (SSTP) for Pharmacists V3', pp.2-4); no version date printed",
+    "effective_date": "2026-04-27",
+    "legal_basis": "Scheduled Substance Treatment Protocol (SSTP) signed by the Chief Health Officer: 'Chief Health Officer Signature Name Date / EDOC2026/116962 Adj Prof Paul Burgess 27/04/2026' (p.4); 'Period of effect This SSTP remains in force until 27/04/2028 unless revoked earlier.' (p.4). No statutory provision (e.g. an Act or section number) is cited anywhere in this 4-page file - see open_questions.",
+    "supervision_model": "SSTP-authorised pharmacist model, document terminology: 'Health Professionals authorised by this SSTP: Pharmacists' (p.1). No supervising practitioner is printed; the document's own escalation boundary is 'If contraindications or interactions are present refer to medical officer before administration' (p.4, References). Accreditation requirements (pp.3-4): Pharmacy Board registration with no conditions or undertakings limiting clinical services to patients, a current immunisation training certificate (APPIMM806A or 10455NAT before 1 January 2017, or an Australian Pharmacy Council-accredited program after 1 January 2017), maintained CPD and a current CPR certificate.",
+    "scope_summary": "Scheduled Substance Treatment Protocol authorising pharmacists to administer 20 named vaccines (COVID 19, Diphtheria, Hib, Hepatitis A, Hepatitis B, HPV, Influenza, Japanese Encephalitis, Measles, Meningococcal, Mumps, Pertussis, Pneumococcal, Poliomyelitis, RSV, Rotavirus, Rubella, Tetanus, Varicella, Zoster) NT wide for immunisation against vaccine-preventable diseases in persons aged 2 years and older, covering funded-program and privately funded doses plus NT Centre for Disease Control advice. Doses, routes, frequencies and contraindications are deferred to the current Australian Immunisation Handbook / NT Immunisation Schedule / CDC advice. Prints screening and consent duties, anaphylaxis preparedness (second person with Basic Life Support or Provide First Aid certificate; complete Emergency Response Kit contents), premises requirements (all premises, PS5 pharmacy premises, non-pharmacy premises), 15-minute post-vaccination monitoring, adverse event reporting to the NT Centre for Disease Control, accreditation requirements and Australian Immunisation Register documentation duties."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Areas Applicable: NT Wide",
+        "criteria_group": {"all_of": ["INC-1", "INC-2"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Areas Applicable"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Health Professionals authorised by this SSTP: Pharmacists",
+        "criteria_group": {"all_of": ["INC-1", "INC-2"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Health Professionals authorised by this SSTP"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Indication: Immunisation against vaccine preventable diseases in persons aged 2years and older.",
+        "criteria_group": {"all_of": ["INC-3", "INC-4", "INC-8"], "any_of": ["INC-5", "INC-6", "INC-7"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Indication"}
+      },
+      {
+        "id": "INC-4",
+        "text": "Scheduled Substance(s) within scope: COVID 19 Vaccine; Diphtheria Vaccine; Haemophilus influenza type B (Hib) Vaccine; Hepatitis A Vaccine; Hepatitis B Vaccine; Human Papillomavirus Vaccine; Influenza Vaccine; Japanese Encephalitis Vaccine; Measles Vaccine; Meningococcal Vaccine; Mumps Vaccine; Pertussis (Whooping Cough) Vaccine; Pneumococcal Vaccine; Poliomyelitis Vaccine; Respiratory syncytial virus (RSV) Vaccine; Rotavirus Vaccine; Rubella Vaccine; Tetanus Vaccine; Varicella (Chickenpox) Vaccine; Zoster (Herpes Zoster) Vaccine",
+        "criteria_group": {"all_of": ["INC-3", "INC-4", "INC-8"], "any_of": ["INC-5", "INC-6", "INC-7"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}
+      },
+      {
+        "id": "INC-5",
+        "text": "1) Vaccination in line with funded programs delivered under the NT Immunisation Schedule or National Immunisation Program.",
+        "criteria_group": {"all_of": ["INC-3", "INC-4", "INC-8"], "any_of": ["INC-5", "INC-6", "INC-7"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Indication"}
+      },
+      {
+        "id": "INC-6",
+        "text": "2) Privately funded primary course vaccination and booster doses for individuals recommended by the current version of the Australian Immunisation Handbook. This includes individuals with specific medical conditions and those at an elevated risk of exposure to vaccine-preventable diseases.",
+        "criteria_group": {"all_of": ["INC-3", "INC-4", "INC-8"], "any_of": ["INC-5", "INC-6", "INC-7"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Indication"}
+      },
+      {
+        "id": "INC-7",
+        "text": "3) As per published advice issued by the NT Centre for Disease Control",
+        "criteria_group": {"all_of": ["INC-3", "INC-4", "INC-8"], "any_of": ["INC-5", "INC-6", "INC-7"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Indication"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Pharmacists may only administer vaccines to patients aged 2 years and above",
+        "criteria_group": {"all_of": ["INC-3", "INC-4", "INC-8"], "any_of": ["INC-5", "INC-6", "INC-7"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "INC-9",
+        "text": "Be registered with the Pharmacy Board of Australia with no conditions or undertakings which may limit delivery of clinical services directly to patients",
+        "criteria_group": {"all_of": ["INC-9", "INC-12", "INC-13"], "any_of": ["INC-10", "INC-11"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Accreditation Requirements"}
+      },
+      {
+        "id": "INC-10",
+        "text": "Hold a current certificate of completion of either: Prior to 1 January 2017: APPIMM806A - Manage the delivery and administration of injections and immunisations -Pharmaceutical Society of Australia; or 10455NAT - Course in conduct immunisation services within a community pharmacy environment - Pharmacy Guild of Australia",
+        "criteria_group": {"all_of": ["INC-9", "INC-12", "INC-13"], "any_of": ["INC-10", "INC-11"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Accreditation Requirements"}
+      },
+      {
+        "id": "INC-11",
+        "text": "Hold a current certificate of completion of: After 1 January 2017: a training program accredited as meeting the standards set by the Australian Pharmacy Council's 'Standards for the accreditation of programs to support Pharmacist Administration of vaccines'.",
+        "criteria_group": {"all_of": ["INC-9", "INC-12", "INC-13"], "any_of": ["INC-10", "INC-11"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "Accreditation Requirements"}
+      },
+      {
+        "id": "INC-12",
+        "text": "Maintain continuing professional development related to skills and competencies required for the delivery of medicines and COVID-19 vaccines including the use of multi-dose vials and management of anaphylaxis",
+        "criteria_group": {"all_of": ["INC-9", "INC-12", "INC-13"], "any_of": ["INC-10", "INC-11"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "Accreditation Requirements"}
+      },
+      {
+        "id": "INC-13",
+        "text": "Hold a current Cardiopulmonary Resuscitation (CPR) certificate",
+        "criteria_group": {"all_of": ["INC-9", "INC-12", "INC-13"], "any_of": ["INC-10", "INC-11"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "Accreditation Requirements"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Contraindications and/or Exclusions: As per the current Australian Immunisation Handbook",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Where the Australian Immunisation Handbook states vaccination is not recommended for specific cohorts, such as pregnant women or immunocompromised patients, this protocol cannot be used in that group",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "Pharmacists may only administer vaccines to patients aged 2 years and above (patients aged under 2 years excluded)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-3"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "If contraindications or interactions are present refer to medical officer before administration",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "References"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": null,
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Indication"}
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Immunisation suitability, administration and follow-up (NT Wide Pharmacist Immunisation SSTP)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Immunisation providers should screen people for eligibility before vaccination, obtain valid consent, and ensure that the correct equipment and procedures are in place before vaccination.' Eligibility: indication (immunisation against vaccine preventable diseases in persons aged 2years and older, one of the three printed indication categories) with a scheduled substance from the SSTP list, per the current Australian Immunisation Handbook.",
+          "gates": [{"criterion": "Person screened for eligibility before vaccination (aged 2 years and above; indication and vaccine within the SSTP; per current Australian Immunisation Handbook)", "on_fail": "unclear"}],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Administration"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "REFER",
+          "description": "'a referral to a medical practitioner may be required for serological testing and result interpretation to determine suitability for vaccination where stated in the Australian Immunisation Handbook'.",
+          "gates": [{"criterion": "No serological testing required to determine suitability for vaccination according to the Australian Immunisation Handbook", "on_fail": "REFER"}],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Note"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Contraindication check: 'Contraindications As per the current Australian Immunisation Handbook and;' and 'Where the Australian Immunisation Handbook states vaccination is not recommended for specific cohorts, such as pregnant women or immunocompromised patients, this protocol cannot be used in that group'. Escalation if found: 'If contraindications or interactions are present refer to medical officer before administration' (p.4, References).",
+          "gates": [{"criterion": "No contraindications per the current Australian Immunisation Handbook and person not in a cohort where the Handbook states vaccination is not recommended", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EDUCATE",
+          "description": "Obtain valid consent: 'Immunisation providers should screen people for eligibility before vaccination, obtain valid consent, and ensure that the correct equipment and procedures are in place before vaccination.' 'Patient consent (written or verbal) for vaccination must be recorded. Records of consent are to be maintained by the clinical service.' (p.4, Documentation).",
+          "gates": [{"criterion": "Valid consent (written or verbal) obtained and recorded", "on_fail": "unclear"}],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Administration"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "INVESTIGATION",
+          "description": "Anaphylaxis preparedness check (Management of Anaphylaxis): 'Administration of any vaccine from this protocol must occur where another person, who holds a current Basic Life Support Certificate or Provide First Aid Certificate, is immediately available to provide emergency assistance if required' and 'must occur where there is a complete anaphylaxis Emergency Response Kit ... in line with procedures from the current Australian Immunisation Handbook'. Kit must be checked regularly, maintained, easily accessible and contain: Adrenaline 1:1000 (minimum of 3 ampoules); 1mL syringes and 25mm needles for IM injection (minimum of 3 of each); Cotton wool swabs; Pen and paper to record time of administration of adrenaline; Laminated copy of 'Recognition and treatment of anaphylaxis' and the 'Doses of intramuscular 1:1000 adrenaline for anaphylaxis' available from the Table. Recognition and treatment of anaphylaxis | The Australian Immunisation Handbook (health.gov.au).",
+          "gates": [{"criterion": "Another person with a current Basic Life Support Certificate or Provide First Aid Certificate immediately available AND a complete anaphylaxis Emergency Response Kit with the printed contents present", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Management of Anaphylaxis"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "All premises check: 'All vaccines must be administered in a location, service and manner that allows the practitioner to manage anaphylaxis including emergency response kit outline above.'",
+          "gates": [{"criterion": "Location, service and manner allow the practitioner to manage anaphylaxis including use of the emergency response kit", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Administration Premises Requirements"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "INVESTIGATION",
+          "description": "Premises-specific check: 'Vaccines administered on a pharmacy premises must also meet the requirements as outlined in the current PS5 Premises & Equipment Standard for Pharmacy Based Immunisations.' Non-pharmacy premises must 'ensure privacy of the consumer'; 'ensure sufficient room to accommodate the consumer, carer and immuniser and allow sufficient space, surfaces and be able to respond to medical emergencies including sufficient space for the consumer to lie down if required'; and have equipment including 'Easy access to a sink with running water and hand soap for washing hands and/or ready access to hand sanitiser', 'Sharps disposal container and dedicated bin for medical waste', 'Equipment and storage facilities to meet the National Vaccine Storage Guidelines', 'Consumables for the delivery of a vaccine eg needles, hypoallergenic tape, cottonwool swabs and/or adhesive bandage strips'.",
+          "gates": [{"criterion": "Premises meet the printed pharmacy (PS5) or non-pharmacy premises requirements", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Pharmacy Premises"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "Administer one of the scheduled vaccines of this SSTP: COVID 19 Vaccine, Diphtheria Vaccine, Haemophilus influenza type B (Hib) Vaccine, Hepatitis A Vaccine, Hepatitis B Vaccine, Human Papillomavirus Vaccine, Influenza Vaccine, Japanese Encephalitis Vaccine, Measles Vaccine, Meningococcal Vaccine, Mumps Vaccine, Pertussis (Whooping Cough) Vaccine, Pneumococcal Vaccine, Poliomyelitis Vaccine, Respiratory syncytial virus (RSV) Vaccine, Rotavirus Vaccine, Rubella Vaccine, Tetanus Vaccine, Varicella (Chickenpox) Vaccine, Zoster (Herpes Zoster) Vaccine. 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' 'Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control'.",
+          "gates": [{"criterion": "Dose and route per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice; dosing frequency/intervals per the current NT Immunisation Schedule, Australian Immunisation Handbook or NT Center for Disease Control advice", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Dose and Route"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "FOLLOW_UP",
+          "description": "'Post vaccination procedures should be followed as per the Australian Immunisation Handbook. All patients must be monitored post vaccination for 15 minutes unless they withdraw consent to be monitored. Ensure withdrawn consent is documented in the person's clinical record.'",
+          "gates": [{"criterion": "Patient monitored post vaccination for 15 minutes unless consent to be monitored is withdrawn and the withdrawal documented", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Monitoring requirements"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "'Report any adverse event during or post vaccination to the NT Centre for Disease Control using the 'Adverse event following vaccination' form available online or in hard copy on the Recording and reports on immunisations | NT Health'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Monitoring requirements"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Documentation: 'Patient consent (written or verbal) for vaccination must be recorded. Records of consent are to be maintained by the clinical service.' 'Complete all clinical documentation requirements as outlined by the Health Service' and 'Enter the patient details, vaccine brand name, dose, site of administration and batch number in the Australian Immunisation Register within 24 hours, and no later than 10 days, after administration. For many vaccine providers this involves entry into routine clinical information systems for automatic upload.'",
+          "gates": [{"criterion": "Australian Immunisation Register entry made within 24 hours, and no later than 10 days, after administration", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "Documentation"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {"id": "TX-1", "drug": "COVID 19 Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-2", "drug": "Diphtheria Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-3", "drug": "Haemophilus influenza type B (Hib) Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-4", "drug": "Hepatitis A Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-5", "drug": "Hepatitis B Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-6", "drug": "Human Papillomavirus Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-7", "drug": "Influenza Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-8", "drug": "Japanese Encephalitis Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-9", "drug": "Measles Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-10", "drug": "Meningococcal Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-11", "drug": "Mumps Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-12", "drug": "Pertussis (Whooping Cough) Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-13", "drug": "Pneumococcal Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-14", "drug": "Poliomyelitis Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-15", "drug": "Respiratory syncytial virus (RSV) Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-16", "drug": "Rotavirus Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-17", "drug": "Rubella Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-18", "drug": "Tetanus Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-19", "drug": "Varicella (Chickenpox) Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}},
+    {"id": "TX-20", "drug": "Zoster (Herpes Zoster) Vaccine", "form": "", "strength": "", "dose": "Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.", "route": "", "frequency": "Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "'Dose and Route' (p.2) printed in full: 'Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' Drug Interactions (p.3): 'As per interactions listed in the current Australian Immunisation Handbook and individual vaccine product information.' Footnote (p.4): 'If contraindications or interactions are present refer to medical officer before administration.' No numeric dose, volume, strength, route, duration or quantity printed.", "first_line": false, "confidence": "high", "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 1, "section_heading": "Scheduled Substance(s)"}}
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Pharmacists may only administer vaccines to patients aged 2 years and above",
+      "structured": {"parameter": "age", "operator": "<", "value": 2, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Where the Australian Immunisation Handbook states vaccination is not recommended for specific cohorts, such as pregnant women or immunocompromised patients, this protocol cannot be used in that group",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "If contraindications or interactions are present refer to medical officer before administration",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "References"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Administration of any vaccine from this protocol must occur where another person, who holds a current Basic Life Support Certificate or Provide First Aid Certificate, is immediately available to provide emergency assistance if required",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Management of Anaphylaxis"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Administration of any vaccine from this protocol must occur where there is a complete anaphylaxis Emergency Response Kit for the use in treatment and management of anaphylaxis in line with procedures from the current Australian Immunisation Handbook",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Management of Anaphylaxis"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "All vaccines must be administered in a location, service and manner that allows the practitioner to manage anaphylaxis including emergency response kit outline above.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Administration Premises Requirements"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "a referral to a medical practitioner may be required for serological testing and result interpretation to determine suitability for vaccination where stated in the Australian Immunisation Handbook",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Note"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "a referral to a medical practitioner may be required for serological testing and result interpretation to determine suitability for vaccination where stated in the Australian Immunisation Handbook"
+    ],
+    "urgent": [
+      "If contraindications or interactions are present refer to medical officer before administration"
+    ],
+    "emergency": [
+      "another person, who holds a current Basic Life Support Certificate or Provide First Aid Certificate, is immediately available to provide emergency assistance if required"
+    ],
+    "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 2, "section_heading": "Note"}
+  },
+  "review_followup": [
+    {
+      "when": "Post vaccination",
+      "what": "All patients must be monitored post vaccination for 15 minutes unless they withdraw consent to be monitored; ensure withdrawn consent is documented in the person's clinical record; post vaccination procedures per the Australian Immunisation Handbook",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Monitoring requirements"}
+    },
+    {
+      "when": "Any adverse event during or post vaccination",
+      "what": "Report to the NT Centre for Disease Control using the 'Adverse event following vaccination' form available online or in hard copy on the Recording and reports on immunisations | NT Health",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Monitoring requirements"}
+    },
+    {
+      "when": "Within 24 hours, and no later than 10 days, after administration",
+      "what": "Enter the patient details, vaccine brand name, dose, site of administration and batch number in the Australian Immunisation Register (for many vaccine providers this involves entry into routine clinical information systems for automatic upload)",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "Documentation"}
+    },
+    {
+      "when": "At the time of vaccination",
+      "what": "Record patient consent (written or verbal); maintain records of consent at the clinical service; complete all clinical documentation requirements as outlined by the Health Service",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 4, "section_heading": "Documentation"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Any adverse event during or post vaccination must be reported to the NT Centre for Disease Control using the 'Adverse event following vaccination' form (p.3)",
+      "Patient details, vaccine brand name, dose, site of administration and batch number entered in the Australian Immunisation Register within 24 hours, and no later than 10 days, after administration (p.4)"
+    ],
+    "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-immunisation-sstp.pdf", "page": 3, "section_heading": "Monitoring requirements"}
+  },
+  "references": [
+    "The Australian Immunisation Handbook (health.gov.au) (page 4)",
+    "National vaccine storage guidelines - Strive for 5, 3rd edition (health.gov.au) (page 4)",
+    "ASCIA Guidelines - Acute Management of Anaphylaxis (page 4)",
+    "Pharmacy Premises Standard - PS5 - Premises and Equipment Standard for Pharmacy Based Immunisation Programs (page 4)",
+    "* The drug information provided is to act as a guide to outline the limits of legal dealing with the named scheduled substances. Further information reference should be made to the full manufacturer's product info and other reliable sources of medicines information. If contraindications or interactions are present refer to medical officer before administration (page 4)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Contradictory 'SSTP in force until' footers",
+      "observed": "Page 1 footer prints 'SSTP in force until 27/04/2028'; page 2, page 3 and page 4 footers each print 'SSTP in force until 27/04/2026'; the Period of effect statement on p.4 prints 'This SSTP remains in force until 27/04/2028 unless revoked earlier.'",
+      "why_unclear": "Two different expiry dates printed in the same document; both readings recorded and not reconciled. effective_date uses the Chief Health Officer signature date 27/04/2026 (EDOC2026/116962).",
+      "source_page": 1
+    },
+    {
+      "topic": "No statutory approval instrument in this file",
+      "observed": "This 4-page file begins directly with the SSTP table ('Scheduled Substance Treatment Protocol SSTP / NT Wide Pharmacist Immunisation'); there is no CHO approval page, no section number of an Act, and no Schedule A.",
+      "why_unclear": "legal_basis records only what is printed (CHO signature block and period of effect, p.4). Whether this SSTP was made under section 254 of the Medicines, Poisons and Therapeutic Goods Act 2012 (NT) like the other NT SSTPs is not printed here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Version string without a date",
+      "observed": "Headers on pp.2-4 read 'Immunisation Scheduled Substance Treatment Protocol (SSTP) for Pharmacists V3'; no version date or approval instrument date is printed in the file.",
+      "why_unclear": "instrument_version records 'V3' as printed; effective_date derived from the CHO signature date 27/04/2026.",
+      "source_page": 2
+    },
+    {
+      "topic": "No numeric dose, route or frequency printed",
+      "observed": "'Dose and Route: Dose as per the current version Australian Immunisation Handbook or relevant Centre for Disease Control advice.' (p.2) and 'Dose Frequency: Dosing frequency, and intervals between vaccines, as per the current version NT Immunisation Schedule, Australian Immunisation Handbook or as per advice issued by the NT Center for Disease Control' (p.3).",
+      "why_unclear": "No dose numbers, volumes, routes or intervals are printed; dosing rules come from external documents whose versions are not pinned in the SSTP. Treatment rows therefore carry the printed reference text verbatim with empty strength/route/quantity fields.",
+      "source_page": 2
+    },
+    {
+      "topic": "Indication combinators inferred",
+      "observed": "The Indication section (p.1) states the age/condition, then 'This includes: 1) ... 2) ... 3) ...'.",
+      "why_unclear": "The numbered list is read as alternatives (any_of INC-5, INC-6, INC-7) combined with the age indication and the scheduled-substance list (all_of). The document does not print explicit boolean combinators.",
+      "source_page": 1
+    },
+    {
+      "topic": "Gates with on_fail unclear",
+      "observed": "Screening, consent, 15-minute monitoring, dose/frequency sourcing and AIR entry are stated as 'should'/'must' duties with no printed branch if unmet (pp.2-4).",
+      "why_unclear": "The document does not state what happens when these steps fail, so the gates use on_fail 'unclear' rather than an invented branch.",
+      "source_page": 2
+    },
+    {
+      "topic": "notifiable conditions span two pages",
+      "observed": "Adverse event reporting is printed on p.3; Australian Immunisation Register entry on p.4.",
+      "why_unclear": "Shared notifiable provenance uses the first page (3); both conditions are quoted with their own page numbers.",
+      "source_page": 3
+    },
+    {
+      "topic": "Spelling variants transcribed as printed",
+      "observed": "Page 1 indication prints 'persons aged 2years and older'; p.3 dose frequency prints 'NT Center for Disease Control' (American spelling) while elsewhere 'NT Centre for Disease Control' is used; p.2 prints 'cottonwool swabs'.",
+      "why_unclear": "Transcribed exactly as printed with no normalisation; note only, no clinical impact identified.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm the SSTP expiry: page 1 footer says 'SSTP in force until 27/04/2028' while pp.2-4 footers say 'SSTP in force until 27/04/2026'; the Period of effect statement says 27/04/2028.",
+      "source_page": 1,
+      "reason": "Two different expiry dates are printed in the same document; must be resolved with NT Health before go-live."
+    },
+    {
+      "item": "Confirm the enabling legal instrument for this SSTP (no Act or section number is printed in this 4-page file) and obtain the approval instrument for provenance.",
+      "source_page": 4,
+      "reason": "legal_basis cannot be completed from the document itself; only the CHO signature block (EDOC2026/116962, 27/04/2026) is printed."
+    },
+    {
+      "item": "Pin the current versions of the Australian Immunisation Handbook, the NT Immunisation Schedule and NT Centre for Disease Control advice that govern dose, route, frequency, intervals, contraindications and cohort exclusions before go-live.",
+      "source_page": 2,
+      "reason": "Every dosing and contraindication rule is deferred to external, version-changing documents; the SSTP prints no doses itself."
+    },
+    {
+      "item": "Confirm local procedure and rostering so another person with a current Basic Life Support Certificate or Provide First Aid Certificate is immediately available for every vaccination, and confirm the Emergency Response Kit checking schedule ('checked regularly') and contents.",
+      "source_page": 2,
+      "reason": "Operational preconditions are printed as 'musts' but no check frequency, responsible person or local SOP is specified."
+    },
+    {
+      "item": "Confirm the current Australian Immunisation Handbook position on cohorts where vaccination is not recommended (e.g. pregnant women, immunocompromised patients) and the local serology referral pathway to a medical practitioner.",
+      "source_page": 2,
+      "reason": "Exclusion and serology referral are defined entirely by an external document and hedged wording ('may be required'); local pathway not printed."
+    },
+    {
+      "item": "Confirm which premises standard applies at each service location (PS5 for pharmacy premises; the non-pharmacy premises list) and confirm AIR submission method for the 24-hour / 10-day entry requirement.",
+      "source_page": 3,
+      "reason": "Premises split and AIR workflow depend on local arrangements; only the minimum requirements are printed."
+    },
+    {
+      "item": "Confirm that 'V3' is the current version of this SSTP and obtain a version date, since no version date is printed in the file.",
+      "source_page": 2,
+      "reason": "Version identification for go-live provenance is incomplete (header shows V3 only)."
+    }
+  ]
+}

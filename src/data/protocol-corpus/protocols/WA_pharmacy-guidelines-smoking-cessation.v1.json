@@ -1,0 +1,535 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf",
+    "pdf_sha256": "cf631f2904aca884b0cd210d5ae1037eb641e6426cc1ddefb70c3ddbdff00558",
+    "page_count": 10,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Smoking cessation clinical practice guideline",
+    "instrument_version": "No version number printed; footer code \"62'GUA180510-DEC\" (p.10); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division, p.10)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA), verbatim (p.1): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.'",
+    "supervision_model": "Approved EACPP pharmacist prescribing (document's own terminology): 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1). The words 'collaborative' and 'autonomous' are not used in this document.",
+    "scope_summary": "EACPP clinical practice guideline for tobacco smoking cessation in patients aged 18 years or over (service restricted to patients aged 18 years or over). Flow (p.2): meet service and professional obligations -> patient history and assessment (5As approach, patient history, smoking history, examination and screening incl. blood pressure measurement and common co-morbidities) -> develop smoking cessation management plan (non-pharmacological measures plus pharmacotherapy: nicotine replacement therapy, bupropion, varenicline) -> confirm management is appropriate (contraindications, precautions, interactions, pregnancy and lactation) -> communicate agreed management plan -> clinical review. 'Refer when' lists (p.3) define four referral triggers; 'Treat and concurrently refer' (p.3) adds one concurrent-referral trigger. Nortriptyline and nicotine vaping products are not permitted for use by pharmacists (NB3, p.5); vaping cessation is out of scope (NB2, p.5; Reminder, p.3). No product-level doses, strengths or frequencies are printed - pharmacotherapy must follow the current online Therapeutic Guidelines."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-2",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 5, "section_heading": "Develop smoking cessation management plan" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "the patient is or could be pregnant",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "inadequate response to optimal treatment.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "NB3: Nortriptyline or nicotine vaping products are not permitted for use by pharmacists.",
+        "criteria_group": { "all_of": ["EXC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 5, "section_heading": "Develop smoking cessation management plan" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "This guideline covers tobacco smoking cessation - the management of vaping cessation is not within the scope of this guideline.",
+        "criteria_group": { "all_of": ["EXC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Key points" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 1, "section_heading": "Contents" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 1, "section_heading": "Contents" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Tobacco smoking cessation - guideline overview pathway (page 2 flow, elaborated pages 3-7)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service; patient informed consent (including consent for communication with other health practitioners if relevant). Service restricted to patients aged 18 years or over (p.1). The guideline may only be used by pharmacists approved by the Department of Health to participate in the EACPP and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA); 'This document alone does not provide an authorisation for a pharmacist to prescribe' (p.1). Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care (p.1).",
+          "gates": [
+            { "criterion": "Patient is aged 18 years or over (Refer when: the patient is aged below 18 years)", "on_fail": "REFER" },
+            { "criterion": "Pharmacist is approved by the Department of Health to participate in the EACPP and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)", "on_fail": "STOP" },
+            { "criterion": "Patient informed consent (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 2, "section_heading": "Guideline overview" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history and assessment: the 5As approach is recommended to identify an individual's support needs, barriers and other relevant cultural, population-specific, or medicine-associated factors, to develop a comprehensive smoking cessation plan. Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); underlying medical conditions and chronic diseases including current (or history of) psychiatric illness (including but not limited to psychosis, schizophrenia, bipolar disorder, clinically diagnosed depression and anxiety, eating disorder, substance use disorders and history of suicidal ideation, suicide related behaviour, or self-harm); duration, recording past and current pack years; previous attempts to quit and periods of not smoking, including support required; previous responses to pharmacotherapy for smoking cessation; current or recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements, and over-the-counter medicines); drug allergies/adverse drug reactions. Smoking history - consider: age when smoking first commenced; type of smoking e.g. cigarettes, pipes; time to first cigarette in the mornings; number of cigarettes smoked per day; cravings for a cigarette, urges to smoke, or withdrawal symptoms upon stopping; previous attempts to quit and periods of not smoking, including support required; previous responses to pharmacotherapy for smoking cessation. Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies, and current medical conditions. Refer to Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence - Screening and assessment of tobacco smoking and nicotine dependence) to assist with determining nicotine dependence and whether pharmacotherapy may be appropriate.",
+          "gates": [
+            { "criterion": "Refer when: the patient is or could be pregnant", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: the patient does not have a chronic disease or medical condition that requires additional support or can complicate smoking cessation interventions (e.g. diabetes, cardiovascular disease, mental illness, substance use disorder, multiple comorbidities)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination and screening: take an initial blood pressure measurement to screen for hypertension. It is recommended that the patient be screened for common comorbidities associated with smoking, including CVD, asthma and COPD, either as part of pilot services (if eligible), or with or an appropriate healthcare provider. Guideline overview flow also lists 'Examination and screening: blood pressure measurement; common co-morbidities' (p.2).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 4, "section_heading": "Examination and screening" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "Develop smoking cessation management plan: 'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.' A comprehensive approach to smoking cessation should include counselling and behavioural support. The type of assistance should be based on the patient's willingness to quit, needs, preferences and level of nicotine dependence. Pharmacist support for smoking cessation involves: non-pharmacological interventions and support - develop a cessation plan, e.g. Your quit smoking plan available on the Quit website; including identifying barriers to stopping, strategies to address barriers, and identifying and engaging social support; for patients that are not ready to quit, use motivational approaches, explore barriers, and encourage harm minimisation such as reducing the number of cigarettes smoked each day and working towards a quit day; counselling and behavioural support and referral to Quitline and/or other support programs. Pharmacotherapy: guided by the Pharmacotherapy treatment algorithm in the RACGP Supporting smoking cessation: A guide for health professionals; a medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence). Pharmacotherapy options listed: - nicotine replacement therapy; - bupropion; - varenicline. NB1: Resources to support counselling and behavioural support are available on the WA Government Make Smoking History website. Referral to Quitline or a relevant health professional with expertise specific to smoking cessation is recommended. NB2: This guideline covers tobacco smoking cessation, the use of pharmacotherapy for vaping cessation is not within the scope of this guideline. NB3: Nortriptyline or nicotine vaping products are not permitted for use by pharmacists.",
+          "gates": [
+            { "criterion": "Pharmacotherapy is a medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence)", "on_fail": "STOP" },
+            { "criterion": "Medicines are not nortriptyline and not nicotine vaping products (NB3: Nortriptyline or nicotine vaping products are not permitted for use by pharmacists)", "on_fail": "STOP" },
+            { "criterion": "Indication is tobacco smoking cessation, not vaping cessation (NB2: vaping cessation is not within the scope of this guideline)", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 5, "section_heading": "Develop smoking cessation management plan" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Treat and concurrently refer: 'Provide initial treatment and concurrently refer to an appropriate healthcare provider and smoking cessation support service (e.g. Quitline) in the following situations: the patient has a chronic disease or medical condition that requires additional support or can complicate smoking cessation interventions (e.g. diabetes, cardiovascular disease, mental illness, substance use disorder, multiple comorbidities).' Initial treatment is provided AND the referral is made concurrently (not instead of treatment).",
+          "gates": [
+            { "criterion": "The patient does not have a chronic disease or medical condition that requires additional support or can complicate smoking cessation interventions (e.g. diabetes, cardiovascular disease, mental illness, substance use disorder, multiple comorbidities)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Treat and concurrently refer" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources (including relevant product information) to confirm the smoking cessation plan is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. NB1: Both smoking itself and pharmacotherapy to assist with smoking cessation are associated with a number of drug interactions that require consideration when someone is deciding to reduce and/or cease smoking.",
+          "gates": [
+            { "criterion": "Pregnancy and lactation considered (Refer when: the patient is or could be pregnant)", "on_fail": "REFER" },
+            { "criterion": "Contraindications, precautions, and drug interactions checked and the smoking cessation plan confirmed appropriate", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 6, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information if required) should be provided to the patient regarding the smoking cessation plan. Relevant information may include: instructions for individual dosage form and medicine use e.g. medicine dosage and NRT product selection and use; how to manage adverse effects, including serious adverse effects requiring medical care e.g. mood disturbances; when to return for follow-up. General advice: the most successful approach to smoking cessation for nicotine dependent people is counselling and behavioural support, combined with first-line pharmacotherapy and follow-up; while pharmacotherapy for smoking cessation has good efficacy, relapse is not uncommon; people should be advised not to be discouraged by unsuccessful attempts. Patients should be advised to seek support from an appropriate healthcare provider and a smoking cessation service (e.g. Quitline) if they relapse, or at any time they require extra assistance or have any concerns. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers if applicable) and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. Patient resources: Make Smoking History; Quit.org.au (quit plan, quitting tips and tactics, cost of smoking calculator); Commonwealth Government My QuitBuddy app.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines, the RACGP Supporting smoking cessation: A guide for health professionals and the Australian Medicines Handbook: Nicotine dependence. Patients prescribed NRT should return for a follow up consultation 2 weeks after starting treatment to review for tolerability and effectiveness, and additionally at regular intervals during the minimum 12-week course. Patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention). An additional follow up consultation should occur at the end of the treatment course (9 weeks for bupropion and 12 weeks for varenicline). An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse. People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider. It is recommended that the patient also receive follow up and ongoing support from a smoking cessation service such as Quitline. For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review.",
+          "gates": [
+            { "criterion": "Adequate response to optimal treatment at clinical review (Refer when: inadequate response to optimal treatment)", "on_fail": "REFER" },
+            { "criterion": "Fewer than 2 courses of varenicline (24 weeks) within the previous 12 months, and no requirement for additional treatment with varenicline after 2 courses", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Nicotine replacement therapy (NRT)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "minimum 12-week course",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. (p.7)",
+      "notes": "Listed as a pharmacotherapy option under 'Develop smoking cessation management plan' (p.5): '- nicotine replacement therapy'. No product names, strengths, doses, routes, frequencies or quantities are printed anywhere in the guideline (see open questions). Follow-up (p.7): patients prescribed NRT should return for a follow up consultation 2 weeks after starting treatment to review for tolerability and effectiveness, and additionally at regular intervals during the minimum 12-week course. Relevant information to communicate (p.6) includes 'instructions for individual dosage form and medicine use e.g. medicine dosage and NRT product selection and use'. NB1 (p.6): both smoking itself and pharmacotherapy to assist with smoking cessation are associated with a number of drug interactions that require consideration when someone is deciding to reduce and/or cease smoking. Confirm management is appropriate (p.6): contraindications and precautions, drug interactions, pregnancy and lactation. Nortriptyline or nicotine vaping products are not permitted for use by pharmacists (NB3, p.5). No first-line ranking is printed between nicotine replacement therapy, bupropion and varenicline.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 5, "section_heading": "Develop smoking cessation management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Bupropion",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "9 weeks (treatment course duration printed at p.7: '9 weeks for bupropion')",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. (p.7)",
+      "notes": "Listed as a pharmacotherapy option under 'Develop smoking cessation management plan' (p.5): '- bupropion'. No strength, dose, route or frequency is printed. Follow-up (p.7): patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention); an additional follow up consultation should occur at the end of the treatment course (9 weeks for bupropion). Pharmacotherapy must be a medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (p.5); nortriptyline and nicotine vaping products are not permitted (NB3, p.5). Confirm management is appropriate (p.6): contraindications and precautions, drug interactions, pregnancy and lactation. No first-line ranking is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 5, "section_heading": "Develop smoking cessation management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Varenicline",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "12 weeks (treatment course duration printed at p.7: '12 weeks for varenicline'); 'An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.'",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. (p.7)",
+      "notes": "Listed as a pharmacotherapy option under 'Develop smoking cessation management plan' (p.5): '- varenicline'. No strength, dose, route or frequency is printed. Follow-up and limits verbatim (p.7): patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention); an additional follow up consultation should occur at the end of the treatment course (12 weeks for varenicline); 'An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse'; 'People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider.' Pharmacotherapy must be a medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (p.5). No first-line ranking is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 5, "section_heading": "Develop smoking cessation management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+      "structured": { "parameter": "age", "operator": "<", "value": 18, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "the patient is or could be pregnant",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "inadequate response to optimal treatment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "the patient has a chronic disease or medical condition that requires additional support or can complicate smoking cessation interventions (e.g. diabetes, cardiovascular disease, mental illness, substance use disorder, multiple comorbidities). [Treat and concurrently refer: provide initial treatment and concurrently refer]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider.",
+      "structured": { "parameter": "courses of varenicline completed within the previous 12 months", "operator": ">=", "value": 2, "unit": "courses" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Patients should be advised to seek support from an appropriate healthcare provider and a smoking cessation service (e.g. Quitline) if they relapse, or at any time they require extra assistance or have any concerns.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "how to manage adverse effects, including serious adverse effects requiring medical care e.g. mood disturbances",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to an appropriate healthcare provider and smoking cessation support service (e.g. Quitline) in the following situations: the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care); the patient is or could be pregnant; the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns; inadequate response to optimal treatment.",
+      "Provide initial treatment and concurrently refer to an appropriate healthcare provider and smoking cessation support service (e.g. Quitline) where the patient has a chronic disease or medical condition that requires additional support or can complicate smoking cessation interventions (e.g. diabetes, cardiovascular disease, mental illness, substance use disorder, multiple comorbidities).",
+      "Referral to Quitline or a relevant health professional with expertise specific to smoking cessation is recommended.",
+      "Patients should be advised to seek support from an appropriate healthcare provider and a smoking cessation service (e.g. Quitline) if they relapse, or at any time they require extra assistance or have any concerns.",
+      "People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider.",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent."
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 3, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "2 weeks after starting treatment (NRT)",
+      "what": "Patients prescribed NRT should return for a follow up consultation 2 weeks after starting treatment to review for tolerability and effectiveness, and additionally at regular intervals during the minimum 12-week course.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "2 weeks after commencing treatment (varenicline or bupropion)",
+      "what": "Patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At the end of the treatment course (9 weeks for bupropion and 12 weeks for varenicline)",
+      "what": "An additional follow up consultation should occur at the end of the treatment course (9 weeks for bupropion and 12 weeks for varenicline).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "If required, to reduce chances of relapse (additional varenicline)",
+      "what": "An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "Recommended alongside treatment",
+      "what": "It is recommended that the patient also receive follow up and ongoing support from a smoking cessation service such as Quitline.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "For patients continuing therapy",
+      "what": "Follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 7, "section_heading": "Clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Smoking-Cessation.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+  },
+  "references": [
+    "1. Australian Institute of Health and Welfare. Alcohol, tobacco & other drugs in Australia. Canberra: AIHW, Australian Government; [cited 2025 April 2]. Available from: https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/contents/drug-types/tobacco. [p.9]",
+    "2. The Royal Australian College of General Practitioners. Supporting smoking cessation: A guide for health professionals. East Melbourne, Victoria: RACGP; [cited 2025 April 2]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/supporting-smoking-cessation. [p.9]",
+    "3. Therapeutic Guidelines: Addiction Medicine (Tobacco smoking and nicotine dependence). Melbourne: Therapeutic Guidelines Limited; [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Addiction%20Medicine&topicfile=c_AMG_Overview-of-tobacco-smoking-and-nicotine-dependence_topic_1&guidelinename=auto&sectionId=c_AMG_Overview-of-tobacco-smoking-and-nicotine-dependence_topic_1#c_AMG_Overview-of-tobacco-smoking-and-nicotine-dependence_topic_1 [p.9]",
+    "4. Pharmaceutical Society of Australia. Professional practice guidelines for pharmacists: Nicotine dependence support; 2024 [cited 2025 April 2]. Deakin West, ACT: PSA. Available from: https://my.psa.org.au/s/article/Professional-practice-guidelines-for-pharmacists-nicotine-dependence-support [p.9]",
+    "5. Quit Victoria. Cutting down to quit smoking; 2025 [cited 2025 April 2]. Available from: https://www.quit.org.au/articles/cutting-down-to-quit-smoking. [p.9]",
+    "6. Make Smoking History. Health Professionals Overview; 2026 [cited 2026 January 13]. Available from: https://www.makesmokinghistory.org.au/health-professionals/health-professionals-overview. [p.9]",
+    "7. Australian Medicines Handbook: Drugs for nicotine dependence; 2025. Adelaide: Australian Medicines Handbook Pty Ltd; Available from: https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-nicotine-dependence?menu=vertical. [p.9]"
+  ],
+  "open_questions": [
+    {
+      "topic": "No product-level doses, strengths, routes or frequencies are printed",
+      "observed": "Pharmacotherapy is listed only as '- nicotine replacement therapy; - bupropion; - varenicline' under Develop smoking cessation management plan (p.5), and as 'first-line pharmacotherapy' generally (p.6). No drug strength, dose, route, frequency, quantity or product name appears anywhere in the 10 pages.",
+      "why_unclear": "TX-1 to TX-3 therefore have blank strength/dose/route/frequency fields; nothing can be transcribed without inventing it. Dosing must come from the specified sections of the current online Therapeutic Guidelines (p.5) and product selection guidance (p.6).",
+      "source_page": 5
+    },
+    {
+      "topic": "No first-line designation among the three pharmacotherapy options",
+      "observed": "Page 6 states the most successful approach is 'counselling and behavioural support, combined with first-line pharmacotherapy and follow-up', but the document never says which of nicotine replacement therapy, bupropion or varenicline is first line, nor gives an escalation sequence.",
+      "why_unclear": "first_line is set false on all three treatment rows because no ranking is printed; this reflects the source rather than a judgement that none is first line.",
+      "source_page": 6
+    },
+    {
+      "topic": "Combinatorics are inferred from the document's own framing",
+      "observed": "'Service restricted to patients aged 18 years or over' and 'may only be used by pharmacists who...' imply AND for the inclusion criteria (INC-1 to INC-5); 'Refer the patient ... in the following situations:' introduces the four refer-when items as alternatives, implying OR (EXC-1 to EXC-4).",
+      "why_unclear": "The document never prints 'all of' or 'any of' explicitly; the all_of/any_of groups are inferred from that wording and recorded here per spec rule 4.",
+      "source_page": 3
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "No version, date, document ID or approving officer appears; page 10 shows footer code \"62'GUA180510-DEC\", 'Produced by Clinical Excellence Division', '© Department of Health 2026'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 10
+    },
+    {
+      "topic": "Referral block spans pages 3 to 7",
+      "observed": "Referral triggers/destinations are printed on page 3 (Refer when; Treat and concurrently refer), page 5 (referral to Quitline or a relevant health professional recommended), page 6 (General advice - seek support if relapse/extra assistance/concerns) and page 7 (varenicline 2-course referral).",
+      "why_unclear": "Spec rule for the referral block: the shared provenance uses the first page (page 3); the range 3-7 is recorded here.",
+      "source_page": 3
+    },
+    {
+      "topic": "No urgent or emergency referral tier printed",
+      "observed": "The document distinguishes only 'Refer the patient to an appropriate healthcare provider and smoking cessation support service (e.g. Quitline)', 'Treat and concurrently refer', and the advisory 'should be advised to seek support ... if they relapse'. No 'urgent', ambulance or emergency-department wording appears.",
+      "why_unclear": "referral.urgent and referral.emergency are empty; RF-8 ('serious adverse effects requiring medical care e.g. mood disturbances') is the closest escalation wording and is captured as a red flag with severity high, not as an emergency referral entry.",
+      "source_page": 6
+    },
+    {
+      "topic": "No list of 'medicines that interact with smoking' is printed",
+      "observed": "Refer when trigger (p.3): 'the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns'. NB1 (p.6) notes both smoking itself and pharmacotherapy are associated with a number of drug interactions. The pharmacist resources list (p.8) points to 'Quit Centre: ... Drug interactions with smoking' but no medicine list or threshold is printed.",
+      "why_unclear": "RF-3 is captured qualitatively with structured: null; the engine cannot evaluate this trigger automatically without an externally sourced interacting-medicine list.",
+      "source_page": 3
+    },
+    {
+      "topic": "Blood pressure screening has no threshold or action printed",
+      "observed": "Examination and screening (p.4): 'Take an initial blood pressure measurement to screen for hypertension.' Clinical review (p.7) includes 'Blood pressure monitoring'. No numeric threshold, no antihypertensive action and no referral trigger is printed.",
+      "why_unclear": "No structured blood-pressure red flag can be created without inventing a threshold; PW-1-S3 has no gates.",
+      "source_page": 4
+    },
+    {
+      "topic": "'Regular intervals' during the NRT course is not quantified",
+      "observed": "Clinical review (p.7): NRT patients should return 2 weeks after starting treatment 'and additionally at regular intervals during the minimum 12-week course'.",
+      "why_unclear": "The interval length is not stated, so FU-1 records the printed wording only; no numeric review interval can be encoded.",
+      "source_page": 7
+    },
+    {
+      "topic": "Two gates are recorded with on_fail 'unclear' because the document does not state the consequence",
+      "observed": "PW-1-S1 gate 'Patient informed consent' and PW-1-S6 gate 'Contraindications, precautions, and drug interactions checked' - the guideline makes both mandatory but never states what happens if they cannot be satisfied.",
+      "why_unclear": "Per spec rule 5, on_fail is 'unclear' with this open question rather than an invented consequence.",
+      "source_page": 6
+    },
+    {
+      "topic": "'Treat and concurrently refer' means treat AND refer, not either/or",
+      "observed": "Page 3: 'Provide initial treatment and concurrently refer to an appropriate healthcare provider and smoking cessation support service (e.g. Quitline) in the following situations: the patient has a chronic disease or medical condition ...'. Page 2 places 'Treat and concurrently refer' beside the Develop smoking cessation management plan box.",
+      "why_unclear": "Captured as PW-1-S5 (TREAT) with an on_fail REFER gate so both actions fire; confirm the engine runs the referral in addition to, not instead of, treatment.",
+      "source_page": 3
+    },
+    {
+      "topic": "Vaping cessation is out of scope",
+      "observed": "Reminder (p.3): 'This guideline covers tobacco smoking cessation - the management of vaping cessation is not within the scope of this guideline.' NB2 (p.5): 'the use of pharmacotherapy for vaping cessation is not within the scope of this guideline.'",
+      "why_unclear": "Recorded as EXC-6 (scope exclusion) and as a gate on PW-1-S4; whether a separate vaping-cessation service/pathway exists is not stated in this document.",
+      "source_page": 3
+    },
+    {
+      "topic": "Notifiable conditions: document is silent",
+      "observed": "The guideline requires communication with other health practitioners and sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent' (p.6), but mentions no notifiable condition, AIR notification or compulsory GP notification.",
+      "why_unclear": "notifiable.required is null because the document is silent; consent-based communication is captured in PW-1-S7 and referral.routine.",
+      "source_page": 6
+    },
+    {
+      "topic": "Source and adaptation acknowledged: originally Queensland Health material",
+      "observed": "Page 10: 'This document is based on clinical guidelines/protocols originally developed by Queensland Health for the Queensland Community Pharmacy Pilots. Queensland Health is acknowledged as the source of the original material.'",
+      "why_unclear": "Recorded for provenance of the instrument; no version of the Queensland originals is cited, so the WA document's own version cannot be derived from it.",
+      "source_page": 10
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm each pharmacist's EACPP approval and authorisation to prescribe under the Medicines and Poisons Regulations 2016 (WA), since 'This document alone does not provide an authorisation for a pharmacist to prescribe'.",
+      "source_page": 1,
+      "reason": "Eligibility to use the guideline (INC-2) is conditional on departmental approval and authorisation that this document cannot evidence."
+    },
+    {
+      "item": "Confirm which sections of the current online version of the Therapeutic Guidelines are the 'specified sections' that pharmacists must prescribe medicines according to (page 5) - the guideline does not enumerate them.",
+      "source_page": 5,
+      "reason": "INC-5 makes this a mandatory prescribing condition, but without the section list it cannot be evaluated as a hard check before go-live."
+    },
+    {
+      "item": "Obtain product-level drug names, strengths, doses, routes, frequencies and quantities for nicotine replacement therapy, bupropion and varenicline from the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) before any dosing rule is encoded - none are printed in this guideline.",
+      "source_page": 5,
+      "reason": "TX-1 to TX-3 have blank strength/dose/route/frequency fields; a prescribing support module cannot issue supply instructions from class names alone."
+    },
+    {
+      "item": "Confirm which of nicotine replacement therapy, bupropion and varenicline is 'first-line pharmacotherapy' (page 6) and the escalation sequence between them.",
+      "source_page": 6,
+      "reason": "All treatment rows carry first_line false because the document gives no ranking; a treatment-sequencing rule cannot be derived from this guideline alone."
+    },
+    {
+      "item": "Confirm the operational source of the 'medicine that interacts with smoking' list (page 3) - e.g. Quit Centre 'Drug interactions with smoking' (page 8) - and the review/dose-adjustment rules to apply as smoking patterns change.",
+      "source_page": 3,
+      "reason": "RF-3/EXC-3 is a printed referral trigger but the document prints no medicine list, so it cannot be evaluated automatically."
+    },
+    {
+      "item": "Confirm the supply-quantity rule: 'Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review' (page 7) - including how repeats, stock and the review interval interact.",
+      "source_page": 7,
+      "reason": "Printed as a pharmacist judgement requirement with no numbers; left to local supply policy."
+    },
+    {
+      "item": "Confirm the meaning of 'additional follow up consultation ... at regular intervals during the minimum 12-week course' for NRT (page 7) - the interval is not quantified.",
+      "source_page": 7,
+      "reason": "FU-1 cannot be converted into a scheduled reminder without a locally agreed interval."
+    },
+    {
+      "item": "Confirm the local pathway for vaping cessation patients, since 'the management of vaping cessation is not within the scope of this guideline' (page 3) and pharmacotherapy for vaping cessation is likewise out of scope (NB2, page 5).",
+      "source_page": 3,
+      "reason": "These patients will present to the same service; the document explicitly excludes them without naming an alternative service."
+    },
+    {
+      "item": "Confirm the controlled version/date of this clinical practice guideline with the Department of Health (no version or date is printed; only footer code \"62'GUA180510-DEC\" and © Department of Health 2026).",
+      "source_page": 10,
+      "reason": "A clinical practice guideline used for funded prescribing must be version-controlled and traceable to an approval date."
+    }
+  ]
+}

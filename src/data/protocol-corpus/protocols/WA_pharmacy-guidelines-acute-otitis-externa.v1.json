@@ -1,0 +1,383 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf",
+    "pdf_sha256": "414645155d4b0c76784e932bc1bae2fce2a56f4f608ef1aafeeb1105df6572fa",
+    "page_count": 10,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Acute otitis externa: Clinical practice guideline",
+    "instrument_version": "No version number printed; footer code \"62'GUA180510-DEC\" (p.10); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division, p.10)",
+    "legal_basis": "Authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.'",
+    "supervision_model": "Pharmacists approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA); 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority' and retain responsibility for clinical assessment and decisions appropriate to the individual (document's own terminology; not labelled collaborative/autonomous).",
+    "scope_summary": "Clinical practice guideline for pharmacist management of acute diffuse otitis externa (AOE, swimmer's ear) under the EACPP (WA): service obligations and consent, patient history, examination including otoscopy, diagnosis of diffuse AOE, non-pharmacological measures (keep ears dry), pharmacotherapy (oral analgesia, otic antimicrobial therapy), confirm management, communicate plan, prevention advice and clinical review, plus 'Refer when' and 'Treat and concurrently refer' referral triggers. Service restricted to patients aged 2 years or over."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 2 years or over.",
+        "criteria_group": {"all_of": ["INC-2", "INC-3", "INC-4"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 1, "section_heading": "Contents"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": {"all_of": ["INC-1", "INC-3", "INC-4"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-4"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-4",
+        "text": "A diagnosis of diffuse AOE requires the rapid onset (generally within 48 hours) of: 1. symptoms of ear canal inflammation: - ear pain (commonly severe), itching, or a feeling of fullness in the ear (can be with or without hearing loss or jaw pain), pain in the ear canal and temporomandibular joint region intensified by jaw motion",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-5",
+        "text": "2. signs of ear canal inflammation: - tenderness of the tragus and/or pinna",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": ["INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-6",
+        "text": "2. signs of ear canal inflammation: - diffuse ear canal oedema and/or erythema (with or without otorrhea, regional lymphadenitis, TM erythema, or cellulitis of the pinna and adjacent skin)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": ["INC-5"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      }
+    ],
+    "exclusion": [
+      {"id": "EXC-1", "text": "the patient is aged below 2 years (does not preclude a patient from accessing usual pharmacy care)", "criteria_group": {"all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-2", "text": "unclear diagnosis", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-3", "text": "complete occlusion of the ear canal", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-4", "text": "red, swollen, and tender behind the ear (possible acute mastoiditis)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-5", "text": "systemic symptoms including fever, weakness, irritability, loss of appetite", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-6", "text": "recent significant head or ear trauma", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-7", "text": "immunocompromised", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-8", "text": "diabetes", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-9", "text": "tympanic membrane (TM) 'red flags': - crust/scab or granulation in attic region (discharge/odour may be present)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-10", "text": "tympanic membrane (TM) 'red flags': - severely retracted (sucked in) TM or retraction pocket in attic area of ear drum", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-11", "text": "tympanic membrane (TM) 'red flags': - dull, white mass behind TM or chalky patches", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-12", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-12", "text": "tympanic membrane (TM) 'red flags': - perforation or suspected perforation of the TM", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-13", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-13", "text": "evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-14", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-14", "text": "inadequate response to optimal treatment", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-15"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-15", "text": "recurrent symptoms (at least 3 episodes in 6 months, or 4 episodes in 12 months).", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}}
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": null,
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 1, "section_heading": "Contents"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-2"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 1, "section_heading": "Contents"}
+      },
+      {
+        "id": "EXE-2",
+        "text": "the patient is aged below 2 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Acute otitis externa management pathway (Enhanced Access Community Pharmacy Pilot)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service (service restricted to patients aged 2 years or over), and patient informed consent (including consent for communication with other health practitioners if relevant).",
+          "gates": [
+            {"criterion": "Patient is eligible and suitable for management within the scope of the service (aged 2 years or over and no 'Refer when' situation present)", "on_fail": "REFER"},
+            {"criterion": "Patient informed consent obtained (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 2, "section_heading": "Guideline overview"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines - age; pregnancy and lactation status (if applicable); nature, severity and frequency of symptoms including pain, itch, discharge, hearing loss, a feeling of fullness, and dizziness; onset and duration of symptoms, including preceding illness; history of head or ear trauma; recent history of upper respiratory tract infection; other presenting symptoms including temperature > 38°C or < 35.5°C, rash, increased respiratory rate/distress, dehydration and/or reduced urine output, runny nose, sore throat, or cough; family history of ear conditions and hearing loss, previous hearing tests; delayed speech or language development; previous history of AOE, otitis media (OM), or other ear conditions (age at first episode, under the care of an ENT specialist or audiologist, ear surgery to insert tympanostomy tube (grommets), prior treatment for AOE, OM, or other ear conditions); frequency and method of ear cleaning; precipitating factors e.g. swimming (especially in a dam or creek), humid or tropical weather conditions, local trauma to the ear canal, use of topical antimicrobial agents or exposure to other irritants, obstruction of the ear canal (e.g. cerumen, foreign bodies), use of hearing aids, use of ear plugs; relieving factors; underlying medical conditions e.g. immunocompromised (including diabetes), cochlear implant, craniofacial abnormalities, persistent hearing loss, dermatological conditions (e.g. psoriasis, dermatitis), herpes zoster (Ramsay Hunt syndrome); previous radiation treatment; drug allergies/adverse drug reactions; immunisation status as per the Australian Immunisation Handbook; current and recently ceased treatments.",
+          "gates": [
+            {"criterion": "Diagnosis is clear (no 'unclear diagnosis' trigger)", "on_fail": "REFER"},
+            {"criterion": "No history of recent significant head or ear trauma", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Patient history"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination: conduct assessment of vital signs; examine for tender or enlarged cervical lymph nodes; conduct visual examination and palpation of mastoid area; check for other symptoms if required (nose, throat, cough). Ear examination using otoscopy: physical examination including otoscopy of both ears (starting with the least painful ear) is required to differentiate between diffuse AOE, acute otitis media, and other ear conditions; ear examination should be conducted in accordance with the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual (an ear differential diagnosis flowchart is included, and features to assist in differentiating between bacterial and fungal infections). If ear discharge is visible, the ear canal should be gently cleaned prior to performing ear examination to remove any discharge (dry mopping). Visualisation of the TM can be difficult in the presence of extensive otorrhoea or cerumen, or when there is complete occlusion of the canal; pain triggered by gently pulling on the pinna is suggestive of diffuse AOE.",
+          "gates": [
+            {"criterion": "Vital signs assessed (conducted for all patients as part of examination)", "on_fail": "unclear"},
+            {"criterion": "Both ears examined by otoscopy, starting with the least painful ear", "on_fail": "SEE_PW-1-S5"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 5, "section_heading": "Ear examination using otoscopy"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Diagnosis of AOE is based on clinical history and ear examination using an otoscope. A diagnosis of diffuse AOE requires the rapid onset (generally within 48 hours) of: 1. symptoms of ear canal inflammation - ear pain (commonly severe), itching, or a feeling of fullness in the ear (can be with or without hearing loss or jaw pain), pain in the ear canal and temporomandibular joint region intensified by jaw motion AND 2. signs of ear canal inflammation - tenderness of the tragus and/or pinna OR diffuse ear canal oedema and/or erythema (with or without otorrhea, regional lymphadenitis, TM erythema, or cellulitis of the pinna and adjacent skin).",
+          "gates": [
+            {"criterion": "Rapid onset (generally within 48 hours) of symptoms of ear canal inflammation", "on_fail": "REFER"},
+            {"criterion": "Signs of ear canal inflammation present: tenderness of the tragus and/or pinna OR diffuse ear canal oedema and/or erythema", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Refer when: refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations (RF-1 to RF-15): aged below 2 years; unclear diagnosis; complete occlusion of the ear canal; red, swollen, and tender behind the ear (possible acute mastoiditis); systemic symptoms including fever, weakness, irritability, loss of appetite; recent significant head or ear trauma; immunocompromised; diabetes; tympanic membrane (TM) 'red flags' (crust/scab or granulation in attic region; severely retracted TM or retraction pocket in attic area of ear drum; dull, white mass behind TM or chalky patches; perforation or suspected perforation of the TM); evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis; inadequate response to optimal treatment; recurrent symptoms (at least 3 episodes in 6 months, or 4 episodes in 12 months). If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to an appropriate healthcare provider.",
+          "gates": [
+            {"criterion": "Any 'Refer when' situation present", "on_fail": "SEE_PW-1-S6"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Develop management plan: non-pharmacological measures - advice and education regarding keeping ears dry in accordance with the Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis externa) and the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual; pharmacotherapy - oral analgesia in accordance with the Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain: Mild, acute nociceptive pain) and otic antimicrobial therapy in accordance with the Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis externa). Oral antibiotics should not be used for uncomplicated AOE; patients that require assessment for oral antibiotics due to presence of complications (e.g. systemic symptoms or evidence of infection beyond the ear canal) should be referred to an appropriate healthcare provider.",
+          "gates": [
+            {"criterion": "Patient eligible for management in the service (aged 2 years or over and no 'Refer when' situation present, see PW-1-S5)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 6, "section_heading": "Develop management plan"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "Treat (if clinically appropriate) and concurrently refer: provide initial therapy (non-pharmacological measures and pharmacotherapy - oral analgesia and otic antimicrobial therapy) and concurrently refer to an appropriate healthcare provider (including emergency services, if required) where the patient has severe symptoms (without complete occlusion of the ear canal) associated with intense pain.",
+          "gates": [
+            {"criterion": "Patient has severe symptoms (without complete occlusion of the ear canal) associated with intense pain", "on_fail": "SEE_PW-1-S8"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: consult the Therapeutic Guidelines, Australian Medicines Handbook, and other relevant resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation; appropriate antimicrobial use. The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic; pharmacists should carefully assess whether antibiotic therapy is clinically indicated, and if so, consider local antimicrobial resistance patterns and relevant clinical factors when selecting therapy (NB1: Western Australia has a high prevalence of MRSA, particularly in regions north of metropolitan Perth, including the Goldfields, Kimberley, and Pilbara regions).",
+          "gates": [
+            {"criterion": "Contraindications and precautions, drug interactions, pregnancy and lactation and appropriate antimicrobial use confirmed appropriate", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 6, "section_heading": "Confirm management is appropriate"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) regarding individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment (including recognising patient deterioration). The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. General advice: patients should be advised to see an appropriate healthcare provider if there is no improvement in symptoms after 48 to 72 hours of treatment, if signs or symptoms worsen or their condition deteriorates, if new signs or symptoms develop (including systemic symptoms), or if otorrhea continues for ≥ 2 weeks. Prevention advice: keeping the external ear canal dry and free of water (e.g. using earplugs, a shower, or bathing cap); avoiding local trauma to the ear canal (e.g. use of cotton buds or other implements); the use of over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol following water exposure (after current infection resolution, only if eardrum is intact).",
+          "gates": [
+            {"criterion": "Patient (and/or parent/caregiver) counselled on keeping ears dry, avoiding local trauma and when to seek further care", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 6, "section_heading": "Communicate agreed management plan"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: clinical review is generally not required. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice). AOE symptoms typically improve within 48 to 72 hours of starting treatment, however full resolution may take up to 2 weeks.",
+          "gates": [
+            {"criterion": "Condition improves or resolves as expected (symptoms improve within 48 to 72 hours; full resolution up to 2 weeks)", "on_fail": "SEE_PW-1-S5"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "Clinical review"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "otic antimicrobial therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "otic antimicrobial therapy in accordance with the Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis externa). Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation; appropriate antimicrobial use. 'The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic. Pharmacists should carefully assess whether antibiotic therapy is clinically indicated, and if so, consider local antimicrobial resistance patterns and relevant clinical factors when selecting therapy.' No specific agent, form, strength, dose, route, frequency or duration is printed in this document.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 6, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "oral analgesia",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "in accordance with the Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain: Mild, acute nociceptive pain). 'Ear conditions are often very painful, particularly for young children, and it is important to approach with care. If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to an appropriate healthcare provider.' No specific agent, strength, dose, frequency or duration is printed in this document.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 6, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "oral antibiotics",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NOT RECOMMENDED FOR UNCOMPLICATED AOE: 'Oral antibiotics should not be used for uncomplicated AOE. Patients that require assessment for oral antibiotics due to presence of complications e.g. systemic symptoms or evidence of infection beyond the ear canal, should be referred to an appropriate healthcare provider.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Key points"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol",
+      "form": "ear drops",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Prevention of AOE: 'the use of over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol following water exposure (after current infection resolution, only if eardrum is intact)'. Not part of treatment of the acute episode. No strength, dose or frequency is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}
+    }
+  ],
+  "red_flags": [
+    {"id": "RF-1", "trigger_text": "the patient is aged below 2 years (does not preclude a patient from accessing usual pharmacy care)", "structured": {"parameter": "age", "operator": "<", "value": 2, "unit": "years"}, "action": "NOT_ELIGIBLE", "severity": "low", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-2", "trigger_text": "unclear diagnosis", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-3", "trigger_text": "complete occlusion of the ear canal", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-4", "trigger_text": "red, swollen, and tender behind the ear (possible acute mastoiditis)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-5", "trigger_text": "systemic symptoms including fever, weakness, irritability, loss of appetite", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-6", "trigger_text": "recent significant head or ear trauma", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-7", "trigger_text": "immunocompromised", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-8", "trigger_text": "diabetes", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-9", "trigger_text": "tympanic membrane (TM) 'red flags': - crust/scab or granulation in attic region (discharge/odour may be present)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-10", "trigger_text": "tympanic membrane (TM) 'red flags': - severely retracted (sucked in) TM or retraction pocket in attic area of ear drum", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-11", "trigger_text": "tympanic membrane (TM) 'red flags': - dull, white mass behind TM or chalky patches", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-12", "trigger_text": "tympanic membrane (TM) 'red flags': - perforation or suspected perforation of the TM", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-13", "trigger_text": "evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-14", "trigger_text": "inadequate response to optimal treatment", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-15", "trigger_text": "recurrent symptoms (at least 3 episodes in 6 months, or 4 episodes in 12 months).", "structured": {"parameter": "episodes_in_6_months", "operator": ">=", "value": 3, "unit": "episodes"}, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-16", "trigger_text": "recurrent symptoms (at least 3 episodes in 6 months, or 4 episodes in 12 months).", "structured": {"parameter": "episodes_in_12_months", "operator": ">=", "value": 4, "unit": "episodes"}, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-17", "trigger_text": "patient has severe symptoms (without complete occlusion of the ear canal) associated with intense pain.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-18", "trigger_text": "If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to an appropriate healthcare provider.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Key points"}},
+    {"id": "RF-19", "trigger_text": "there is no improvement in symptoms after 48 to 72 hours of treatment", "structured": {"parameter": "treatment_duration_without_improvement", "operator": "range", "value": [48, 72], "unit": "hours"}, "action": "REVIEW_GP", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-20", "trigger_text": "signs or symptoms worsen, or their condition deteriorates", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-21", "trigger_text": "new signs or symptoms develop, including systemic symptoms", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-22", "trigger_text": "otorrhea continues for ≥ 2 weeks.", "structured": {"parameter": "otorrhea_duration", "operator": ">=", "value": 2, "unit": "weeks"}, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}}
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider"
+    ],
+    "urgent": [],
+    "emergency": [
+      "including emergency services, if required"
+    ],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 3, "section_heading": "Refer when"}
+  },
+  "review_followup": [
+    {"when": "there is no improvement in symptoms after 48 to 72 hours of treatment", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "signs or symptoms worsen, or their condition deteriorates", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "new signs or symptoms develop, including systemic symptoms", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "otorrhea continues for ≥ 2 weeks", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "the condition does not improve or resolve", "what": "Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider (see Refer when and General advice)", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "Clinical review"}},
+    {"when": "Clinical review (generally not required)", "what": "Prescribe a quantity of medicine that aligns with the expected duration of therapy; AOE symptoms typically improve within 48 to 72 hours of starting treatment, full resolution may take up to 2 weeks", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 7, "section_heading": "Clinical review"}}
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-otitis-externa.pdf", "page": 6, "section_heading": "Communicate agreed management plan"}
+  },
+  "references": [
+    "1. Therapeutic Guidelines: Antibiotic (Otitis externa). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=otitis-externa. [page 9]",
+    "2. BMJ Best Practice. Otitis Externa; 2024 [cited 2025 April 2]. At: https://bestpractice.bmj.com/topics/en-gb/40 [page 9]",
+    "3. Ngan V. Otitis externa: DermNet New Zealand Trust; 2024 [cited 2025 April 2]. Available from: https://dermnetnz.org/topics/otitis-externa. [page 9]",
+    "4. Jacksin EA, Geer K. Acute Otitis Externa: Rapid Evidence Review. Am Fam Physician. 2023;107(2):145-151 [page 9]",
+    "5. Rosenfeld RM, Schwartz SR, Cannon CR, Roland PS, Simon GR, Kumar KA, et al. Clinical Practice Guideline: Acute Otitis Externa. Otolaryngology–Head and Neck Surgery. 2014;150(1_suppl):S1-S24. [page 9]",
+    "6. Queensland Health and Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. Cairns: Office of Rural and Remote Health, Queensland Government; 2025 [cited 2025 June 18]. Available from: https://www.health.qld.gov.au/rrcsu/clinical-manuals/primary-clinical-care-manual-pccm. [page 9]",
+    "7. Therapeutic Guidelines: Antibiotic (Otitis media). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=otitis-media. [page 9]",
+    "8. Limb C, Lustig L, Durand M. Acute otitis media in adults: Wolters Kluwer; 2024 [cited 2025 April 2]. Available from: https://www.uptodate.com/contents/acute-otitis-media-in-adults. [page 9]",
+    "9. Remote Primary Health Care Manuals. Clinical Procedures Manual. Alice Springs: Centre for Remote Health; 2022 [cited 2025 April 2]. Available from: https://remotephcmanuals.com.au/manuals.html#fragment-15 [page 9]",
+    "10. Kesser B. MSD Manual Professional Version: External Otitis (Acute): Merck & Co; 2024 [cited 2025 April 2]. Available from: https://www.msdmanuals.com/en-au/professional/ear,-nose,-and-throat-disorders/external-ear-disorders/external-ear-otitis-acute?query=otitis%20externa. [page 9]",
+    "11. Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2022 June 27]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain. [page 9]",
+    "12. The Royal Children's Hospital General Medicine Emergency and Otolaryngology departments. Ear infections and glue ear Melbourne: RCHM; 2018 [cited 2022 March 18]. Available from: https://www.rch.org.au/kidsinfo/fact_sheets/Ear_infections_and_otitis_media/. [page 9]",
+    "13. Australian Medicines Handbook: Drugs for ear infections. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 2]. Available from: https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-ear-infections?menu=vertical. [page 9]"
+  ],
+  "open_questions": [
+    {"topic": "Eligibility list has no 'inclusion/exclusion criteria' headings", "observed": "Eligibility is expressed as the cover-page age restriction (page 1), 'Meet service and professional obligations' (page 2) and the diagnostic criteria for diffuse AOE (page 4); the 'Refer when' list (page 3) has been used as the exclusion list.", "why_unclear": "The document does not label these as formal criteria and does not state combinatorics; defaulted to all_of for inclusion (with any_of for the two alternative signs of ear canal inflammation) and any_of for exclusion.", "source_page": 3},
+    {"topic": "'Refer when' versus exclusion semantics", "observed": "'Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' (page 3).", "why_unclear": "It is not stated whether treatment may still be provided under the service for these situations; items are recorded both as exclusion criteria and as red flags.", "source_page": 3},
+    {"topic": "Instrument effective date / version not printed", "observed": "Only '© Department of Health 2026' and footer code \"62'GUA180510-DEC\" are printed; no effective date or version number appears.", "why_unclear": "effective_date recorded as 'Not printed'; instrument_version records the printed copyright/code only.", "source_page": 10},
+    {"topic": "Specific drug regimens absent from the document", "observed": "Pharmacotherapy is delegated to Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis externa) and Therapeutic Guidelines: Pain and Analgesia (page 6); no molecule, strength, dose, frequency or duration is printed.", "why_unclear": "Treatment rows therefore carry no agent/dose; regimens must be sourced externally.", "source_page": 6},
+    {"topic": "Referral urgency tiers not distinguished", "observed": "A single referral tier is printed ('an appropriate healthcare provider (including emergency services, if required)', page 3); no 'urgent' referral wording appears.", "why_unclear": "referral.urgent left empty because the document genuinely has no separate urgent tier; severity grading is not stated by the document.", "source_page": 3},
+    {"topic": "Two recurrence thresholds in one sentence", "observed": "'recurrent symptoms (at least 3 episodes in 6 months, or 4 episodes in 12 months)' (page 3).", "why_unclear": "One sentence expresses two alternatives; recorded as two red flags (RF-15, RF-16) with separate structured thresholds and medium confidence.", "source_page": 3},
+    {"topic": "Diagnostic criteria column interleaving", "observed": "On page 4 the fragment '2. signs of ear canal inflammation' is printed at the top of the page, above the 'Treat (if clinically appropriate) and concurrently refer' heading, while '1. symptoms of ear canal inflammation' appears under 'Patient history and assessment'.", "why_unclear": "Both fragments attributed to section 'Patient history and assessment' on page 4 as the diagnosis section that introduces them; PDF column order reads imperfectly.", "source_page": 4},
+    {"topic": "Clinical review interval not specified", "observed": "'Clinical review is generally not required.' (page 7) with no numeric follow-up interval.", "why_unclear": "No review interval can be transcribed; quantity to supply is left to 'expected duration of therapy'.", "source_page": 7},
+    {"topic": "Improvement window recorded as a range", "observed": "'no improvement in symptoms after 48 to 72 hours of treatment' (page 7).", "why_unclear": "Recorded with structured operator 'range' [48, 72] hours; the document does not state which end of the window triggers review.", "source_page": 7},
+    {"topic": "Temperature thresholds are history items, not referral triggers", "observed": "'other presenting symptoms including temperature > 38°C or < 35.5°C, rash, increased respiratory rate/distress, dehydration and/or reduced urine output, runny nose, sore throat, or cough' (page 5, patient history).", "why_unclear": "The document lists these as history items; the referral trigger is the qualitative 'systemic symptoms including fever, weakness, irritability, loss of appetite' (page 3), so no structured temperature red flag was created.", "source_page": 5},
+    {"topic": "Patient history list spans pages 4-5", "observed": "'The patient history should consider:' begins on page 4 and continues on page 5 (including the temperature and other symptom items).", "why_unclear": "Step PW-1-S2 provenance uses page 4 (where the section heading is printed); items printed on page 5 are described within the step.", "source_page": 4},
+    {"topic": "Pathway gate on_fail not stated by the document", "observed": "Consent (page 2), vital-signs assessment (page 5) and confirm-management (page 6) steps do not state what happens if the gate fails.", "why_unclear": "on_fail recorded as 'unclear' per spec rather than inferred.", "source_page": 2}
+  ],
+  "hugh_to_confirm": [
+    {"item": "Confirm the individual pharmacist is approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA) - 'This document alone does not provide an authorisation for a pharmacist to prescribe'.", "source_page": 1, "reason": "Authorisation is individual and external to the guideline; prerequisite for go-live."},
+    {"item": "Confirm local antimicrobial resistance patterns when selecting therapy (NB1: Western Australia has a high prevalence of MRSA, particularly in regions north of metropolitan Perth, including the Goldfields, Kimberley, and Pilbara regions).", "source_page": 6, "reason": "Region-specific resistance data are external and change over time; document requires local consideration."},
+    {"item": "Obtain the exact otic antimicrobial agent(s), form, strength, dose, route, frequency and duration from the current online Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis externa).", "source_page": 6, "reason": "No regimen is printed in the protocol; required before a prescribing rules engine can be used."},
+    {"item": "Obtain the exact oral analgesic agent, strength, dose, frequency and duration from Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain: Mild, acute nociceptive pain).", "source_page": 6, "reason": "No analgesic regimen is printed in the protocol."},
+    {"item": "Confirm quantity-to-supply / dispensing quantity policy: 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.'", "source_page": 7, "reason": "Quantity is left to pharmacist judgement; no numeric quantity is printed."},
+    {"item": "Confirm pregnancy and lactation checks against the Therapeutic Guidelines and Australian Medicines Handbook before prescribing otic antimicrobial therapy or oral analgesia.", "source_page": 6, "reason": "Document requires the check but does not print any pregnancy/lactation-specific dosing guidance."},
+    {"item": "Confirm applicability to WA practice of the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual for ear examination/otoscopy and dry mopping, and of the Remote Primary Health Care Manual - Clinical Procedures Manual (the document is an adaptation of Queensland Community Pharmacy Pilots material).", "source_page": 5, "reason": "Cross-jurisdictional source documents govern core examination procedure."},
+    {"item": "Confirm otoscopy competency, training and equipment requirements for the prescribing pharmacist, and local arrangement for the ear differential diagnosis flowchart.", "source_page": 5, "reason": "Procedure is delegated to external manuals; no competency standard is printed."},
+    {"item": "Confirm the wording and conditions for prevention advice on over-the-counter drying ear drops ('after current infection resolution, only if eardrum is intact').", "source_page": 7, "reason": "Intact-eardrum check must be locally verifiable before the advice is given."},
+    {"item": "Confirm EACPP service-level arrangements for consent documentation and communication with other health practitioners.", "source_page": 2, "reason": "Document requires informed consent including consent for communication but does not specify the local process."}
+  ]
+}

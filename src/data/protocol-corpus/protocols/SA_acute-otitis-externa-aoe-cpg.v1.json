@@ -1,0 +1,737 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf",
+    "pdf_sha256": "798b44c37acddf330ee345ee113477c3cc110bd495b760a9c9c0fa1682e6fd27",
+    "page_count": 14,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Acute Otitis Externa (AOE) – Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "Authorisation page (p2): 'Community Pharmacy Expanded Scope of Practice Initiative. In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.'",
+    "supervision_model": "Document does not use 'collaborative'/'autonomous' terminology; its own wording: an authorised pharmacist on the register of authorised pharmacists prescribing in accordance with the Community Pharmacist Prescribing Code (p2). Discretion clause (p6): 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.' Pharmacotherapy is delegated to external references (p9): analgesia 'in accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (14)'; otic antimicrobial therapy 'in accordance with the Therapeutic Guidelines: Otitis externa' with NB2/NB3 notes.",
+    "scope_summary": "SA Health (Community Pharmacy Expanded Scope of Practice Initiative) clinical practice guideline for pharmacist assessment and management of acute otitis externa (AOE, swimmer's ear). Service restricted to patients aged 2 years or over. Covers 'Red flag' warning signs necessitating referral to emergency medical care ('Urgent referral to an emergency department – patient may make their own way to the emergency department', including suspicion of necrotising otitis externa), referral to a general practitioner ('Urgent referral within 24 to 48 hours', including TM red flags) and 'Non-urgent referral', key points, patient history, examination (vital signs, cervical lymph nodes, mastoid area, otoscopy of both ears with dry mopping), diagnosis of diffuse AOE (rapid onset generally within 48 hours of symptoms plus signs of ear canal inflammation), management and treatment plan (advice/education, dry mopping, analgesia and otic antimicrobial therapy per Therapeutic Guidelines, with NB1/NB2/NB3 notes), confirmation of management, communication of the agreed management plan, general advice and prevention, and clinical review. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'"
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 2 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Diagnosis of diffuse AOE based on clinical history and ear examination using an otoscope: 'A diagnosis of diffuse AOE requires the rapid onset (generally within 48 hours) of: Symptoms of ear canal inflammation: ear pain (commonly severe), itching or a feeling of fullness in the ear (can be with or without hearing loss or jaw pain) AND Signs of ear canal inflammation: tenderness of the tragus and/or pinna OR diffuse ear canal oedema and/or erythema (with or without otorrhea, regional lymphadenitis, tympanic membrane (TM) erythema or cellulitis of the pinna) (9).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Gather information and assess patient's needs" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Otoscopic examination performed: 'Physical examination including otoscopy of both ears (starting with the least painful ear) is required to differentiate between diffuse AOE, acute otitis media (AOM) and other ear conditions (4, 11, 12).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Red flags excluded at presentation: 'Exclude red flags.' (examination step, p8) — none of the printed red-flag warning signs (p4-p5) or other exclusion criteria are present.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Examination" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Patient allows otoscopic examination: 'If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to a medical practitioner.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Key points" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care – Urgent referral to an emergency department – patient may make their own way to the emergency department: Suspicion of necrotising otitis externa: Otalgia and headache more severe than clinical signs would suggest.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-2", "text": "Urgent referral to an emergency department – patient may make their own way: Refractory otitis externa with temperature over 39oC [as printed].", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-3", "text": "Urgent referral to an emergency department – patient may make their own way: Severe nocturnal otalgia.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-4", "text": "Urgent referral to an emergency department – patient may make their own way: Purulent otorrhoea.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-5", "text": "Urgent referral to an emergency department – patient may make their own way: Granulation tissue or exposed bone in ear canal.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-6", "text": "Urgent referral to an emergency department – patient may make their own way: Cranial nerve involvement, e.g. facial nerve palsy.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-7", "text": "Urgent referral to an emergency department – patient may make their own way: Red, swollen and tender behind the ear (possible acute mastoiditis).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-8", "text": "Urgent referral to an emergency department – patient may make their own way: Complete occlusion of the ear canal.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-9", "text": "Urgent referral to an emergency department – patient may make their own way: Cellulitis spreading to the face.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-10", "text": "Urgent referral to an emergency department – patient may make their own way: Significant progression of otitis externa.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-11", "text": "Urgent referral to an emergency department – patient may make their own way: Signs and symptoms of spreading infection.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-12", "text": "Urgent referral to an emergency department – patient may make their own way: External ear swelling, redness and tenderness (possible perichondritis).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-13", "text": "Urgent referral to an emergency department – patient may make their own way: Bleeding from the ear.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-14", "text": "Urgent referral to an emergency department – patient may make their own way: Severe symptoms (without complete occlusion of the ear canal) associated with intense pain (antibiotic therapy may be provided concurrent to referral).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-15", "text": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours: The patient is immunocompromised or has diabetes.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-16", "text": "Urgent referral within 24 to 48 hours: Systemic symptoms including fever, weakness, irritability, difficulty sleeping and/or loss of appetite.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-17", "text": "Urgent referral within 24 to 48 hours: Recent trauma to the ear or head.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-18", "text": "Urgent referral within 24 to 48 hours – Tympanic membrane (TM) red flags (if TM can be visualised): Perforation or suspected perforation / retraction.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-19", "text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Crust / granulation / discharge in attic region.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-20", "text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Severely retracted TM.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-21", "text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Dull white mass behind TM.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-22", "text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Perforation near the edge of the TM.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-23", "text": "Urgent referral within 24 to 48 hours: Growth on the pinna (particularly in older adults).", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-24", "text": "Urgent referral within 24 to 48 hours: Profound conductive hearing loss.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-25", "text": "Urgent referral within 24 to 48 hours: Vertigo.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-26", "text": "Urgent referral within 24 to 48 hours: Foreign object in ear, especially with a fever.", "criteria_group": { "all_of": [], "any_of": ["EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-27", "text": "Non-urgent referral: A clear diagnosis of AOE cannot be made.", "criteria_group": { "all_of": [], "any_of": ["EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+      { "id": "EXC-28", "text": "Non-urgent referral: There is evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis.", "criteria_group": { "all_of": [], "any_of": ["EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+      { "id": "EXC-29", "text": "Non-urgent referral: Unusual appearance to tympanic membrane including fungating lesions, opacity of tympanic, foreign objects [as printed].", "criteria_group": { "all_of": [], "any_of": ["EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+      { "id": "EXC-30", "text": "Non-urgent referral: The condition does not improve or worsens after optimal treatment (including if the patient presents after 48-72 hours of appropriate analgesia with no improvement).", "criteria_group": { "all_of": [], "any_of": ["EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+      { "id": "EXC-31", "text": "Non-urgent referral: Symptoms are recurrent (at least 3 episodes in 6 months or 4 episodes in 12 months).", "criteria_group": { "all_of": [], "any_of": ["EXC-27", "EXC-28", "EXC-29", "EXC-30", "EXC-31"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+      { "id": "EXC-32", "text": "The patient is under 2 years of age ('Service restricted to patients aged 2 years or over'). 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "criteria_group": { "all_of": [], "any_of": ["EXC-32"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+      { "id": "EXC-33", "text": "'If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to a medical practitioner.'", "criteria_group": { "all_of": [], "any_of": ["EXC-33"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Key points" } },
+      { "id": "EXC-34", "text": "'Consider early referral for high-risk individuals such as advanced age (risk factor for necrotising otitis externa) and Aboriginal and Torres Strait Islander people (higher burden of chronic ear disease).'", "criteria_group": { "all_of": [], "any_of": ["EXC-34"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Key points" } },
+      { "id": "EXC-35", "text": "'If there is a suspicion of TM perforation, the pharmacist should also refer to the clinical practice guideline for AOM, as urgent referral to a medical practitioner may be required.'", "criteria_group": { "all_of": [], "any_of": ["EXC-35"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" } },
+      { "id": "EXC-36", "text": "'Visualisation of the TM can be difficult in the presence of extensive otorrhoea or cerumen, or when there is complete occlusion of the canal (4, 11). In these cases, it can be difficult to distinguish AOE from purulent otitis media with a TM perforation; pain triggered by gently pulling on the pinna is suggestive of diffuse AOE (13).'", "criteria_group": { "all_of": [], "any_of": ["EXC-36"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" } },
+      { "id": "EXC-37", "text": "'After assessment, in cases where there is a suspicion of AOM, consult the Acute Otitis Media Clinical Practice Guideline.'", "criteria_group": { "all_of": [], "any_of": ["EXC-37"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" } },
+      { "id": "EXC-38", "text": "NB2: 'Patients that have a complete occlusion of the ear canal must be referred to a medical practitioner.'", "criteria_group": { "all_of": [], "any_of": ["EXC-38"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+      { "id": "EXC-39", "text": "NB2: 'Patients that require oral antibiotics for systemic symptoms, spreading infection or due to immunocompromise must be referred to a medical practitioner for commencement of antibiotic treatment (4).' Related key point (p6): 'Oral antibiotics are generally not required for AOE (4, 7-9). Patients that require antibiotic treatment due to immunocompromise, presence of systemic symptoms or have evidence of infection beyond the ear canal must be referred to a medical practitioner.'", "criteria_group": { "all_of": [], "any_of": ["EXC-39"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+      { "id": "EXC-40", "text": "NB3: 'Ear dops [sic] containing an aminoglycoside should also be avoided if the patient has a tympanic membrane that is known or suspected to be perforated, however, these patients are not eligible for treatment under this Service and should be referred to a medical practitioner (4).'", "criteria_group": { "all_of": [], "any_of": ["EXC-40"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } }
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+      { "id": "EXE-2", "text": "Emergency-tier red flag 'Severe symptoms (without complete occlusion of the ear canal) associated with intense pain' carries the printed qualifier '(antibiotic therapy may be provided concurrent to referral)' — treatment may proceed while the referral proceeds.", "criteria_group": { "all_of": [], "any_of": ["EXE-2"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXE-3", "text": "NB3: patients with a tympanostomy tube in situ are not excluded from treatment: 'Avoid ear drops containing an aminoglycoside (e.g., framycetin, neomycin) if the patient has a tympanostomy tube in situ (see Figure 1) – use a ciprofloxacin-containing ear drop if possible.'", "criteria_group": { "all_of": [], "any_of": ["EXE-3"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+      { "id": "EXE-4", "text": "'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'", "criteria_group": { "all_of": ["EXE-4"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Key points" } }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Assessment and management of acute otitis externa",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs: 'Diagnosis of AOE is based on clinical history and ear examination using an otoscope (2, 4).' 'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines.' The patient history should consider: age; whether the patient identifies as Aboriginal or Torres Strait Islander; social history, including identifying if you feel your patient is from a vulnerable population, under guardianship/out-of-home care arrangements and/or requires a third party to receive correspondence on their behalf; signs and symptoms; nature, severity and frequency of symptoms including pain, itch, discharge, hearing loss, a feeling of fullness, tinnitus and dizziness; onset and duration of symptoms, including preceding illness; recent history of upper respiratory tract infection; other presenting symptoms including temperature > 38°C or < 35.5°C, rash, increased respiratory rate/distress, dehydration and/or reduced urine output, runny nose, sore throat or cough; family history of ear conditions and hearing loss; previous history of AOE, otitis media (OM) or other ear conditions (hearing loss and hearing tests; patient age at first episode of ear conditions; under the care of an ENT specialist or audiologist; ear surgery to insert tympanostomy tube (grommets)); precipitating or risk factors e.g., recent ear trauma, exposure to cigarette smoke, recent swimming (especially in a dam or creek), dusty environments, overcrowding/close proximity to other children, use of hearing aids or ear plugs, eczema, psoriasis, older age; relieving factors including medication and other strategies tried to treat current symptoms; underlying medical conditions e.g., immunocompromised, (including diabetes), recent radiotherapy, cochlear implant, craniofacial abnormalities, persistent hearing loss; delayed speech or language development (referral may be required if this is evident and has not been assessed by a medical practitioner); current medications (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); frequency and method of ear cleaning; drug allergies/adverse drug effects; immunisation status as per the Australian Immunisation Handbook. Aboriginal and Torres Strait Islander patients: 'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (10).' Reminder: 'Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [
+            { "criterion": "sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" },
+            { "criterion": "age 2 years or over — 'Service restricted to patients aged 2 years or over' (INC-1 / EXC-32 / RF-1)", "on_fail": "STOP" },
+            { "criterion": "underlying medical conditions assessed, including immunocompromise and diabetes — 'The patient is immunocompromised or has diabetes' requires urgent referral within 24 to 48 hours (EXC-15 / RF-16)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "recent trauma to the ear or head assessed (EXC-17 / RF-18); 'Recent trauma to the ear or head' → urgent referral within 24 to 48 hours", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "previous history of AOE/OM and recurrent episodes assessed — 'Symptoms are recurrent (at least 3 episodes in 6 months or 4 episodes in 12 months)' → non-urgent referral (EXC-31 / RF-32)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "precipitating/risk factors assessed, including recent swimming and exposure to cigarette smoke", "on_fail": "unclear" },
+            { "criterion": "drug allergies/adverse drug effects assessed before medicine selection", "on_fail": "unclear" },
+            { "criterion": "high-risk individuals considered for early referral — 'advanced age (risk factor for necrotising otitis externa) and Aboriginal and Torres Strait Islander people (higher burden of chronic ear disease)' (EXC-34 / RF-34)", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Gather information and assess patient's needs" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination: 'Conduct assessment of vital signs – temperature, blood pressure, heart rate, hydration status.' 'Examine for tender or enlarged cervical lymph nodes.' 'Conduct visual examination and palpation of mastoid area.' 'Exclude red flags.' Ear examination using otoscopy: 'Physical examination including otoscopy of both ears (starting with the least painful ear) is required to differentiate between diffuse AOE, acute otitis media (AOM) and other ear conditions (4, 11, 12).' 'Ear examination should be conducted in accordance with the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual. An ear differential diagnosis flowchart is also included (2).' 'If ear discharge is visible, the ear canal should be gently cleaned prior to performing ear examination to remove any discharge with a tissue rolled up to a point (dry mopping) to visualise ear drum. The Standard Treatment Manual protocols and the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual contain a step by step guide for dry mopping (2, 10).' 'Visualisation of the TM can be difficult in the presence of extensive otorrhoea or cerumen, or when there is complete occlusion of the canal (4, 11).' 'Check for other symptoms if required (nose, throat, cough) (2).'",
+          "gates": [
+            { "criterion": "vital signs assessed — temperature, blood pressure, heart rate, hydration status", "on_fail": "unclear" },
+            { "criterion": "temperature not over 39oC [as printed] — 'Refractory otitis externa with temperature over 39oC' is an emergency-department red flag (EXC-2 / RF-3)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "cervical lymph nodes examined for tenderness or enlargement", "on_fail": "unclear" },
+            { "criterion": "mastoid area visually examined and palpated — 'Red, swollen and tender behind the ear (possible acute mastoiditis)' is an emergency-department red flag (EXC-7 / RF-8)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "otoscopy of both ears performed, starting with the least painful ear (INC-3)", "on_fail": "SEE_PW-1-S3" },
+            { "criterion": "if ear discharge is visible: ear canal gently cleaned (dry mopping with a tissue rolled up to a point) to visualise the ear drum", "on_fail": "unclear" },
+            { "criterion": "TM visualised, or difficulty recorded — 'Visualisation of the TM can be difficult in the presence of extensive otorrhoea or cerumen, or when there is complete occlusion of the canal' (EXC-36 / RF-36); complete occlusion of the ear canal is an emergency-department red flag (EXC-8 / RF-9) and must be referred (EXC-38 / RF-38)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no suspicion of TM perforation — 'If there is a suspicion of TM perforation, the pharmacist should also refer to the clinical practice guideline for AOM, as urgent referral to a medical practitioner may be required' (EXC-35 / RF-35)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no suspicion of AOM — 'After assessment, in cases where there is a suspicion of AOM, consult the Acute Otitis Media Clinical Practice Guideline' (EXC-37 / RF-37)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "patient permits otoscopic examination — 'If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to a medical practitioner' (EXC-33 / RF-33)", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm the diagnosis of diffuse AOE: 'Diagnosis of AOE is based on clinical history and ear examination using an otoscope (2, 4). A diagnosis of diffuse AOE requires the rapid onset (generally within 48 hours) of: Symptoms of ear canal inflammation: ear pain (commonly severe), itching or a feeling of fullness in the ear (can be with or without hearing loss or jaw pain) AND Signs of ear canal inflammation: tenderness of the tragus and/or pinna OR diffuse ear canal oedema and/or erythema (with or without otorrhea, regional lymphadenitis, tympanic membrane (TM) erythema or cellulitis of the pinna) (9).' Differentiators: 'In these cases, it can be difficult to distinguish AOE from purulent otitis media with a TM perforation; pain triggered by gently pulling on the pinna is suggestive of diffuse AOE (13).' 'Features to differentiate between bacterial and fungal infections are included in the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual.' Key points (p6): 'Approximately 90% of diffuse AOE cases, also known as swimmer's ear, are caused primarily by bacterial infection, although mixed bacterial and fungal infections are common (4, 5).' 'Diffuse AOE can affect people of any age but is most common in children aged between 7 and 14 years (6).'",
+          "gates": [
+            { "criterion": "rapid onset (generally within 48 hours) of ear pain/itching/fullness PLUS (tenderness of tragus and/or pinna OR diffuse ear canal oedema and/or erythema) — INC-2", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "a clear diagnosis of AOE can be made — 'A clear diagnosis of AOE cannot be made' requires non-urgent referral (EXC-27 / RF-28)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no TM red flag visible — perforation or suspected perforation / retraction; crust / granulation / discharge in attic region; severely retracted TM; dull white mass behind TM; perforation near the edge of the TM (EXC-18 to EXC-22 / RF-19 to RF-23)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis (EXC-28 / RF-29)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no unusual appearance to tympanic membrane including fungating lesions, opacity of tympanic, foreign objects (EXC-29 / RF-30)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no foreign object in ear, especially with a fever (EXC-26 / RF-27)", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Gather information and assess patient's needs" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "Red-flag triage: ''Red flag' warning signs at patient presentation that necessitate referral to emergency medical care' (p4-p5). (a) 'Urgent referral to an emergency department – patient may make their own way to the emergency department:' Suspicion of necrotising otitis externa (Otalgia and headache more severe than clinical signs would suggest; Refractory otitis externa with temperature over 39oC [as printed]; Severe nocturnal otalgia; Purulent otorrhoea; Granulation tissue or exposed bone in ear canal; Cranial nerve involvement, e.g. facial nerve palsy); Red, swollen and tender behind the ear (possible acute mastoiditis); Complete occlusion of the ear canal; Cellulitis spreading to the face; Significant progression of otitis externa; Signs and symptoms of spreading infection; External ear swelling, redness and tenderness (possible perichondritis); Bleeding from the ear; Severe symptoms (without complete occlusion of the ear canal) associated with intense pain (antibiotic therapy may be provided concurrent to referral). (b) 'Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours:' The patient is immunocompromised or has diabetes; Systemic symptoms including fever, weakness, irritability, difficulty sleeping and/or loss of appetite; Recent trauma to the ear or head; Tympanic membrane (TM) red flags (if TM can be visualised): perforation or suspected perforation / retraction, crust / granulation / discharge in attic region, severely retracted TM, dull white mass behind TM, perforation near the edge of the TM; Growth on the pinna (particularly in older adults); Profound conductive hearing loss; Vertigo; Foreign object in ear, especially with a fever. (c) 'Non-urgent referral:' A clear diagnosis of AOE cannot be made; There is evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis; Unusual appearance to tympanic membrane including fungating lesions, opacity of tympanic, foreign objects; The condition does not improve or worsens after optimal treatment (including if the patient presents after 48-72 hours of appropriate analgesia with no improvement); Symptoms are recurrent (at least 3 episodes in 6 months or 4 episodes in 12 months). (d) Other printed referral rules: patient will not allow otoscopic examination due to pain (refer after analgesia advice, p6); consider early referral for high-risk individuals such as advanced age and Aboriginal and Torres Strait Islander people (p6); suspicion of TM perforation → refer to the AOM clinical practice guideline as urgent referral may be required (p8); suspicion of AOM → consult the Acute Otitis Media Clinical Practice Guideline (p8); complete occlusion of the ear canal must be referred (NB2, p9); patients that require oral antibiotics for systemic symptoms, spreading infection or due to immunocompromise must be referred for commencement of antibiotic treatment (NB2, p9); tympanic membrane known or suspected to be perforated — 'these patients are not eligible for treatment under this Service and should be referred to a medical practitioner' (NB3, p9).",
+          "gates": [
+            { "criterion": "no 'Urgent referral to an emergency department – patient may make their own way' trigger present (EXC-1 to EXC-14 / RF-2 to RF-15)", "on_fail": "STOP" },
+            { "criterion": "no 'Urgent referral within 24 to 48 hours' trigger to a general practitioner present (EXC-15 to EXC-26 / RF-16 to RF-27)", "on_fail": "REFER" },
+            { "criterion": "no 'Non-urgent referral' trigger present (EXC-27 to EXC-31 / RF-28 to RF-32)", "on_fail": "REFER" },
+            { "criterion": "no other printed referral rule triggered (EXC-33 to EXC-40 / RF-33 to RF-40)", "on_fail": "REFER" },
+            { "criterion": "patient eligible for treatment under this Service (age 2 years or over; not a patient with a known or suspected TM perforation)", "on_fail": "NOT_ELIGIBLE" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Management and treatment plan: 'Pharmacist management of AOE involves: Advice and education regarding keeping ears dry and the use of dry mopping with tissue spears, in accordance with the Therapeutic Guidelines: Otitis externa (4) and the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual (2, 4).' 'Pharmacotherapy: AnalgesiaNB1 in accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (14). Otic antimicrobial therapy in accordance with the Therapeutic Guidelines: Otitis externaNB2,3 (4).' NB1: 'Paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) can be sold as Schedule 2 medicines.' NB2: 'Patients that have a complete occlusion of the ear canal must be referred to a medical practitioner. Patients that require oral antibiotics for systemic symptoms, spreading infection or due to immunocompromise must be referred to a medical practitioner for commencement of antibiotic treatment (4).' NB3: 'Avoid ear drops containing an aminoglycoside (e.g., framycetin, neomycin) if the patient has a tympanostomy tube in situ (see Figure 1) – use a ciprofloxacin-containing ear drop if possible. Ear dops containing an aminoglycoside should also be avoided if the patient has a tympanic membrane that is known or suspected to be perforated, however, these patients are not eligible for treatment under this Service and should be referred to a medical practitioner (4).' Key point (p6): 'Oral antibiotics are generally not required for AOE (4, 7-9).' Confirm management is appropriate: 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm that the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+          "gates": [
+            { "criterion": "no red-flag trigger requiring referral before treatment (PW-1-S4)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm that the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding'", "on_fail": "STOP" },
+            { "criterion": "oral antibiotics not required — 'Patients that require oral antibiotics for systemic symptoms, spreading infection or due to immunocompromise must be referred to a medical practitioner for commencement of antibiotic treatment' (EXC-39 / RF-39)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "ear canal not completely occluded — 'Patients that have a complete occlusion of the ear canal must be referred to a medical practitioner' (EXC-38 / RF-38)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "if tympanostomy tube in situ: aminoglycoside ear drops avoided (framycetin, neomycin) and a ciprofloxacin-containing ear drop used if possible (EXE-3)", "on_fail": "unclear" },
+            { "criterion": "tympanic membrane known or suspected to be perforated: aminoglycoside ear drops avoided AND patient referred — 'these patients are not eligible for treatment under this Service' (EXC-40 / RF-40)", "on_fail": "NOT_ELIGIBLE" },
+            { "criterion": "analgesia selected per the Therapeutic Guidelines: Pharmacological management of acute pain (14); NB1: 'Paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) can be sold as Schedule 2 medicines'", "on_fail": "unclear" },
+            { "criterion": "otic antimicrobial therapy selected per the Therapeutic Guidelines: Otitis externa (4)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "Communiate agreed management plan [heading as printed, p10]: 'Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references, should be provided to the patient regarding: individual product and medicine use (e.g., dosing and ear drop application/ administration instructions); how to manage adverse effects; when to seek further care and/or treatment (including recognising patient deterioration).' 'It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and parents/caregivers if applicable) and to ensure compliance with all copyright conditions.' 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' Patient resources: 'The Royal Children's Hospital Melbourne Fact sheet: Ear infections and glue ear (1)'; 'Better Health Channel Victoria – Swimmer's ear (3).' General advice: 'AOE symptoms typically improve within 48 to 72 hours of starting treatment, however full resolution may take up to 2 weeks.' Prevention advice: 'the use of over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol following water exposure (after current infection resolution) (2, 4, 13, 16)'; 'pneumococcal and influenza vaccination'; 'hygiene, including frequent handwashing (especially after nose blowing and coughing) and keeping hands and face clean of nasal discharge'; 'avoidance of swimming and water sports for at least 7- 10 days during treatment [as printed]'; 'avoidance of exposure to smoke (2).'",
+          "gates": [
+            { "criterion": "comprehensive advice and counselling provided: individual product and medicine use (e.g., dosing and ear drop application/ administration instructions); how to manage adverse effects; when to seek further care and/or treatment (including recognising patient deterioration)", "on_fail": "unclear" },
+            { "criterion": "advice given to see a medical practitioner if the condition worsens or deteriorates, if there is no improvement in symptoms after 48-72 hours, or if discharge continues past 14 days", "on_fail": "unclear" },
+            { "criterion": "agreed management plan shared with members of the patient's multidisciplinary healthcare team, with the patient's consent", "on_fail": "unclear" },
+            { "criterion": "suitability and accuracy of any resources and information provided to patients (and parents/caregivers if applicable) ensured, with compliance with all copyright conditions", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Communiate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: 'AOE symptoms typically improve within 48 to 72 hours of starting treatment, however full resolution may take up to 2 weeks.' 'At the initial appointment, patients (parents/caregivers if applicable) should be advised to see a medical practitioner if: their condition worsens or deteriorates; there is no improvement in symptoms after 48-72 hours; discharge continues past 14 days.' 'Clinical review with the pharmacist is generally not required. If the symptoms are not improving within 48-72 hours of starting initial treatment, and the symptoms have not fully resolved after two weeks of starting initial treatment, the patient should be advised to see a medical practitioner for further investigation.' Related non-urgent referral trigger (p5): 'The condition does not improve or worsens after optimal treatment (including if the patient presents after 48-72 hours of appropriate analgesia with no improvement).'",
+          "gates": [
+            { "criterion": "clinical review with the pharmacist — 'generally not required'", "on_fail": "unclear" },
+            { "criterion": "symptoms improving within 48-72 hours of starting initial treatment — otherwise see a medical practitioner (RF-41)", "on_fail": "REFER" },
+            { "criterion": "symptoms fully resolved after two weeks of starting initial treatment — otherwise see a medical practitioner for further investigation (RF-44)", "on_fail": "REFER" },
+            { "criterion": "condition not worsening or deteriorating (RF-43)", "on_fail": "REFER" },
+            { "criterion": "discharge not continuing past 14 days (RF-42)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Paracetamol",
+      "form": "tablets",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB1): 'Paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) can be sold as Schedule 2 medicines.' Context (p9): 'AnalgesiaNB1 in accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (14).' No strength, dose, frequency, duration or quantity is printed in this document (delegated to the reference).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Ibuprofen",
+      "form": "tablets",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB1): 'Paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) can be sold as Schedule 2 medicines.' Analgesia per the Therapeutic Guidelines: Pharmacological management of acute pain (14). No strength, dose, frequency, duration or quantity is printed.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Naproxen (in preparations containing 250mg or less)",
+      "form": "tablets",
+      "strength": "250mg or less [as printed for the preparation]",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB1): 'Paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) can be sold as Schedule 2 medicines.' The '250mg or less' qualifier is printed in the pack/preparation statement; interpretation flagged in open_questions. No dose, frequency, duration or quantity is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Otic antimicrobial therapy (class statement; agent selected from Therapeutic Guidelines: Otitis externa)",
+      "form": "ear drops",
+      "strength": "",
+      "dose": "",
+      "route": "otic",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9): 'Otic antimicrobial therapy in accordance with the Therapeutic Guidelines: Otitis externaNB2,3 (4).' No specific agent, strength, dose, frequency or duration is printed in this document; NB2 and NB3 constraints apply (complete occlusion → refer; oral antibiotics → refer; aminoglycosides avoided with tympanostomy tube in situ or known/suspected TM perforation). Route recorded as 'otic' from 'Otic antimicrobial therapy' / 'ear drops' wording.",
+      "first_line": true,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Ciprofloxacin-containing ear drop",
+      "form": "ear drops",
+      "strength": "",
+      "dose": "",
+      "route": "otic",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB3): 'Avoid ear drops containing an aminoglycoside (e.g., framycetin, neomycin) if the patient has a tympanostomy tube in situ (see Figure 1) – use a ciprofloxacin-containing ear drop if possible.' Preference printed only for the tympanostomy-tube (grommet) situation; no strength, dose, frequency or duration printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Framycetin (aminoglycoside-containing ear drop)",
+      "form": "ear drops",
+      "strength": "",
+      "dose": "",
+      "route": "otic",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB3): 'Avoid ear drops containing an aminoglycoside (e.g., framycetin, neomycin) if the patient has a tympanostomy tube in situ ... Ear dops [sic] containing an aminoglycoside should also be avoided if the patient has a tympanic membrane that is known or suspected to be perforated, however, these patients are not eligible for treatment under this Service and should be referred to a medical practitioner (4).' Listed here as a constraint on therapy selection, not as a recommended product.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Neomycin (aminoglycoside-containing ear drop)",
+      "form": "ear drops",
+      "strength": "",
+      "dose": "",
+      "route": "otic",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB3): 'Avoid ear drops containing an aminoglycoside (e.g., framycetin, neomycin) if the patient has a tympanostomy tube in situ ... Ear dops [sic] containing an aminoglycoside should also be avoided if the patient has a tympanic membrane that is known or suspected to be perforated ...' Constraint on therapy selection, not a recommended product.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol",
+      "form": "ear drops (drying agents)",
+      "strength": "",
+      "dose": "",
+      "route": "otic",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p10): 'the use of over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol following water exposure (after current infection resolution) (2, 4, 13, 16).' Prevention advice after resolution of the current infection, not treatment of the acute episode. No product, strength, dose, frequency or duration is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Patient resources" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Service restricted to patients aged 2 years or over. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "structured": { "parameter": "age_years", "operator": ">=", "value": 2, "unit": "years" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+    { "id": "RF-2", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Suspicion of necrotising otitis externa: Otalgia and headache more severe than clinical signs would suggest.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-3", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Refractory otitis externa with temperature over 39oC [as printed].", "structured": { "parameter": "temperature", "operator": ">", "value": 39, "unit": "oC" }, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-4", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Severe nocturnal otalgia.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-5", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Purulent otorrhoea.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-6", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Granulation tissue or exposed bone in ear canal.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-7", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Cranial nerve involvement, e.g. facial nerve palsy.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-8", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Red, swollen and tender behind the ear (possible acute mastoiditis).", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-9", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Complete occlusion of the ear canal.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-10", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Cellulitis spreading to the face.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-11", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Significant progression of otitis externa.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-12", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Signs and symptoms of spreading infection.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-13", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: External ear swelling, redness and tenderness (possible perichondritis).", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-14", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Bleeding from the ear.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-15", "trigger_text": "Urgent referral to an emergency department – patient may make their own way: Severe symptoms (without complete occlusion of the ear canal) associated with intense pain (antibiotic therapy may be provided concurrent to referral).", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-16", "trigger_text": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours: The patient is immunocompromised or has diabetes.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-17", "trigger_text": "Urgent referral within 24 to 48 hours: Systemic symptoms including fever, weakness, irritability, difficulty sleeping and/or loss of appetite.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-18", "trigger_text": "Urgent referral within 24 to 48 hours: Recent trauma to the ear or head.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-19", "trigger_text": "Urgent referral within 24 to 48 hours – Tympanic membrane (TM) red flags (if TM can be visualised): Perforation or suspected perforation / retraction.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-20", "trigger_text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Crust / granulation / discharge in attic region.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-21", "trigger_text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Severely retracted TM.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-22", "trigger_text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Dull white mass behind TM.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-23", "trigger_text": "Urgent referral within 24 to 48 hours – TM red flags (if TM can be visualised): Perforation near the edge of the TM.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-24", "trigger_text": "Urgent referral within 24 to 48 hours: Growth on the pinna (particularly in older adults).", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-25", "trigger_text": "Urgent referral within 24 to 48 hours: Profound conductive hearing loss.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-26", "trigger_text": "Urgent referral within 24 to 48 hours: Vertigo.", "structured": { "parameter": "vertigo", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-27", "trigger_text": "Urgent referral within 24 to 48 hours: Foreign object in ear, especially with a fever.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-28", "trigger_text": "Non-urgent referral: A clear diagnosis of AOE cannot be made.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+    { "id": "RF-29", "trigger_text": "Non-urgent referral: There is evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+    { "id": "RF-30", "trigger_text": "Non-urgent referral: Unusual appearance to tympanic membrane including fungating lesions, opacity of tympanic, foreign objects [as printed].", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+    { "id": "RF-31", "trigger_text": "Non-urgent referral: The condition does not improve or worsens after optimal treatment (including if the patient presents after 48-72 hours of appropriate analgesia with no improvement).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+    { "id": "RF-32", "trigger_text": "Non-urgent referral: Symptoms are recurrent (at least 3 episodes in 6 months or 4 episodes in 12 months).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" } },
+    { "id": "RF-33", "trigger_text": "'If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to a medical practitioner.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Key points" } },
+    { "id": "RF-34", "trigger_text": "'Consider early referral for high-risk individuals such as advanced age (risk factor for necrotising otitis externa) and Aboriginal and Torres Strait Islander people (higher burden of chronic ear disease).'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 6, "section_heading": "Key points" } },
+    { "id": "RF-35", "trigger_text": "'If there is a suspicion of TM perforation, the pharmacist should also refer to the clinical practice guideline for AOM, as urgent referral to a medical practitioner may be required.'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" } },
+    { "id": "RF-36", "trigger_text": "'Visualisation of the TM can be difficult in the presence of extensive otorrhoea or cerumen, or when there is complete occlusion of the canal (4, 11). In these cases, it can be difficult to distinguish AOE from purulent otitis media with a TM perforation; pain triggered by gently pulling on the pinna is suggestive of diffuse AOE (13).'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" } },
+    { "id": "RF-37", "trigger_text": "'After assessment, in cases where there is a suspicion of AOM, consult the Acute Otitis Media Clinical Practice Guideline.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 8, "section_heading": "Ear examination using otoscopy" } },
+    { "id": "RF-38", "trigger_text": "NB2: 'Patients that have a complete occlusion of the ear canal must be referred to a medical practitioner.'", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+    { "id": "RF-39", "trigger_text": "NB2: 'Patients that require oral antibiotics for systemic symptoms, spreading infection or due to immunocompromise must be referred to a medical practitioner for commencement of antibiotic treatment (4).' Key point (p6): 'Oral antibiotics are generally not required for AOE (4, 7-9).'", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+    { "id": "RF-40", "trigger_text": "NB3: 'Ear dops [sic] containing an aminoglycoside should also be avoided if the patient has a tympanic membrane that is known or suspected to be perforated, however, these patients are not eligible for treatment under this Service and should be referred to a medical practitioner (4).'", "structured": null, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+    { "id": "RF-41", "trigger_text": "'there is no improvement in symptoms after 48-72 hours' — patients (parents/caregivers if applicable) should be advised to see a medical practitioner.", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Patient resources" } },
+    { "id": "RF-42", "trigger_text": "'discharge continues past 14 days' — patients (parents/caregivers if applicable) should be advised to see a medical practitioner.", "structured": { "parameter": "duration_of_discharge", "operator": ">", "value": 14, "unit": "days" }, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Patient resources" } },
+    { "id": "RF-43", "trigger_text": "'their condition worsens or deteriorates' — patients (parents/caregivers if applicable) should be advised to see a medical practitioner.", "structured": { "parameter": "condition_worsens_or_deteriorates", "operator": "==", "value": true, "unit": "" }, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Patient resources" } },
+    { "id": "RF-44", "trigger_text": "Clinical review: 'If the symptoms are not improving within 48-72 hours of starting initial treatment, and the symptoms have not fully resolved after two weeks of starting initial treatment, the patient should be advised to see a medical practitioner for further investigation.'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 11, "section_heading": "Clinical review" } }
+  ],
+  "referral": {
+    "routine": [
+      "'Non-urgent referral:' A clear diagnosis of AOE cannot be made; There is evidence of infection beyond the ear canal including inflammation to the pinna or folliculitis; Unusual appearance to tympanic membrane including fungating lesions, opacity of tympanic, foreign objects; The condition does not improve or worsens after optimal treatment (including if the patient presents after 48-72 hours of appropriate analgesia with no improvement); Symptoms are recurrent (at least 3 episodes in 6 months or 4 episodes in 12 months).",
+      "'If the patient will not allow for otoscopic examination due to pain, advice should be provided on appropriate analgesia and the patient referred to a medical practitioner.'",
+      "'Consider early referral for high-risk individuals such as advanced age (risk factor for necrotising otitis externa) and Aboriginal and Torres Strait Islander people (higher burden of chronic ear disease).'",
+      "'After assessment, in cases where there is a suspicion of AOM, consult the Acute Otitis Media Clinical Practice Guideline.'",
+      "NB2: 'Patients that have a complete occlusion of the ear canal must be referred to a medical practitioner.'; 'Patients that require oral antibiotics for systemic symptoms, spreading infection or due to immunocompromise must be referred to a medical practitioner for commencement of antibiotic treatment (4).'",
+      "NB3: patients with a tympanic membrane known or suspected to be perforated 'are not eligible for treatment under this Service and should be referred to a medical practitioner (4).'",
+      "Clinical review: 'If the symptoms are not improving within 48-72 hours of starting initial treatment, and the symptoms have not fully resolved after two weeks of starting initial treatment, the patient should be advised to see a medical practitioner for further investigation.'; initial-appointment advice: see a medical practitioner if the condition worsens or deteriorates, there is no improvement in symptoms after 48-72 hours, or discharge continues past 14 days."
+    ],
+    "urgent": [
+      "'Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours:' The patient is immunocompromised or has diabetes; Systemic symptoms including fever, weakness, irritability, difficulty sleeping and/or loss of appetite; Recent trauma to the ear or head; Tympanic membrane (TM) red flags (if TM can be visualised): perforation or suspected perforation / retraction, crust / granulation / discharge in attic region, severely retracted TM, dull white mass behind TM, perforation near the edge of the TM; Growth on the pinna (particularly in older adults); Profound conductive hearing loss; Vertigo; Foreign object in ear, especially with a fever.",
+      "'If there is a suspicion of TM perforation, the pharmacist should also refer to the clinical practice guideline for AOM, as urgent referral to a medical practitioner may be required.'"
+    ],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: 'Urgent referral to an emergency department – patient may make their own way to the emergency department:' Suspicion of necrotising otitis externa (Otalgia and headache more severe than clinical signs would suggest; Refractory otitis externa with temperature over 39oC [as printed]; Severe nocturnal otalgia; Purulent otorrhoea; Granulation tissue or exposed bone in ear canal; Cranial nerve involvement, e.g. facial nerve palsy); Red, swollen and tender behind the ear (possible acute mastoiditis); Complete occlusion of the ear canal; Cellulitis spreading to the face; Significant progression of otitis externa; Signs and symptoms of spreading infection; External ear swelling, redness and tenderness (possible perichondritis); Bleeding from the ear; Severe symptoms (without complete occlusion of the ear canal) associated with intense pain (antibiotic therapy may be provided concurrent to referral)."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+  },
+  "review_followup": [
+    {
+      "when": "At the initial appointment",
+      "what": "Patients (parents/caregivers if applicable) should be advised to see a medical practitioner if: 'their condition worsens or deteriorates'; 'there is no improvement in symptoms after 48-72 hours'; 'discharge continues past 14 days.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Patient resources" }
+    },
+    {
+      "when": "Expected course — 48 to 72 hours after starting treatment",
+      "what": "'AOE symptoms typically improve within 48 to 72 hours of starting treatment, however full resolution may take up to 2 weeks.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 10, "section_heading": "Patient resources" }
+    },
+    {
+      "when": "Clinical review with the pharmacist",
+      "what": "'Clinical review with the pharmacist is generally not required.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "Symptoms not improving within 48-72 hours of starting initial treatment, AND symptoms not fully resolved after two weeks of starting initial treatment",
+      "what": "'the patient should be advised to see a medical practitioner for further investigation.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "Patient presents after 48-72 hours of appropriate analgesia with no improvement, or the condition does not improve or worsens after optimal treatment",
+      "what": "'Non-urgent referral: The condition does not improve or worsens after optimal treatment (including if the patient presents after 48-72 hours of appropriate analgesia with no improvement).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral:" }
+    }
+  ],
+  "notifiable": {
+    "required": false,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-otitis-externa-aoe-cpg.pdf", "page": 1, "section_heading": "Acute Otitis Externa (AOE) – Clinical Practice Guideline" }
+  },
+  "references": [
+    "[p13] 1. Ear infections and glue ear [Internet]. The Royal Children's Hospital Melbourne. 2025. Available from: https://www.rch.org.au/kidsinfo/fact_sheets/Ear_infections_and_otitis_media/.",
+    "[p13] 2. Office of Rural and Remote Health Queensland Government. Primary Clinical Care Manual. 11th edition. Cairns (AU): Office of Rural and Remote Health, Queensland Government; 2022.",
+    "[p13] 3. Swimmer's ear [Internet]. Victoria Government. 2025 [cited 18 June 2025]. Available from: https://www.betterhealth.vic.gov.au/health/ConditionsAndTreatments/swimmers-ear.",
+    "[p13] 4. Otitis Externa [Internet]. 2023 Therapeutic Guidelines Limited. 2025. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=c_ABG_Otitis-externa_topic_1&guidelinename=auto&sectionId=c_ABG_Otitis-externa_topic_1#c_ABG_Otitis-externa_topic_1.",
+    "[p13] 5. DermNet. Otitis externa 2025 [updated February 2024. Available from: https://dermnetnz.org/topics/otitis-externa.",
+    "[p13] 6. Medina-Blasini Y, Sharman T. Otitis externa. 2020.",
+    "[p13] 7. Cheffins T, Heal C, Rudolphy S. Acute otitis externa: management by GPs in North Queensland. Aust Fam Physician. 2009;38(4):262-3, 5-6.",
+    "[p13] 8. Wiegand S, Berner R, Schneider A, Lundershausen E, Dietz A. Otitis Externa. Dtsch Arztebl Int. 2019;116(13):224-34.",
+    "[p13] 9. Rosenfeld RM, Schwartz SR, Cannon CR, Roland PS, Simon GR, Kumar KA, et al. Clinical practice guideline: acute otitis externa. Otolaryngol Head Neck Surg. 2014;150(1 Suppl):S1-S24.",
+    "[p13] 10. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[p13] 11. Diagnosis of acute otitis media [Internet]. Therapeutic Guidelines Limited. 2025 [cited 2 June 2025]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=otitis-media&guidelinename=auto&sectionId=toc_dle106#toc_dle106.",
+    "[p13] 12. UpToDate. Acute otitis media in adults. 2024 [cited 02 June 2025]. In: Acute otitis media in adults [Internet]. Online: UpToDate, Inc.; 2024. Available from: https://www.uptodate.com/contents/acute-otitis-media-in-adults.",
+    "[p13] 13. Otitis Media (Acute) [Internet]. Merck & Co., Inc. 2025. Available from: https://www.msdmanuals.com/professional/ear-nose-and-throat-disorders/middle-ear-and-tympanic-membrane-disorders/otitis-media-acute.",
+    "[p13] 14. Mild, acute nociceptive pain [Internet]. Therapeutic Guidelines Limited. 2025 [cited 18 June 2025]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain.",
+    "[p13] 15. Rosenfeld R. A Parent's Guide to Ear Tubes: Hamilton, Ontario, Canada: BC Decker; 2005.",
+    "[p13] 16. Drugs for ear infections [Internet]. AMH. 2025 [cited 18 June 2025]. Available from: https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-ear-infections?menu=vertical.",
+    "[p12] Pharmacist resources: Therapeutic Guidelines (Antibiotic – Otitis externa; Pain and analgesia); Australian Medicines Handbook – Antiemetics [as printed]; MSD Manual (Professional version) (Otitis externa; Drug for ear infections; NSAIDs; External otitis (Acute)); WCHN Referral guidelines - Paediatric Ear Nose and Throat; SA Paediatric Clinical Practice Guidelines; HealthPathways SA; Otolaryngology Journal - Clinical Practice Guideline: Acute Otitis Externa; Queensland Health and Royal Flying Doctors Service (Queensland branch) Primary Clinical Care Manual 11th edition 2022 (2); DermNet NZ - Otitis externa (5); Remote Primary Health Care Manual (CARPA Manual) - Clinical Procedure Manual; McGovern Medical School - Ear disease photo book."
+  ],
+  "open_questions": [
+    {
+      "topic": "No specific otic antimicrobial agent, strength, dose, frequency or duration printed",
+      "observed": "'Otic antimicrobial therapy in accordance with the Therapeutic Guidelines: Otitis externaNB2,3 (4).' Only NB2/NB3 constraints and the aminoglycoside/ciprofloxacin preference are printed; no product list, drops-per-ear, frequency or duration exists in this document.",
+      "why_unclear": "The document delegates selection and dosing to an external reference; inventing them would breach the never-invent rule. TX-4 and TX-5 dose fields are empty.",
+      "source_page": 9
+    },
+    {
+      "topic": "No analgesia dose, strength, frequency or duration printed",
+      "observed": "'AnalgesiaNB1 in accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (14).' NB1 only states that paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) 'can be sold as Schedule 2 medicines'.",
+      "why_unclear": "Dosing delegated; TX-1 to TX-3 dose fields are empty.",
+      "source_page": 9
+    },
+    {
+      "topic": "NB1 'naproxen (in preparations containing 250mg or less)' interpretation",
+      "observed": "'Paracetamol, ibuprofen and naproxen (in preparations containing 250mg or less) can be sold as Schedule 2 medicines.'",
+      "why_unclear": "The qualifier is printed inside a Schedule 2 supply statement; whether '250mg or less' applies to all three medicines, to naproxen only, or to pack size is not stated. TX-3 confidence 'medium'.",
+      "source_page": 9
+    },
+    {
+      "topic": "No 'call 000' tier in this guideline",
+      "observed": "The red-flag list (p4) begins at 'Urgent referral to an emergency department – patient may make their own way to the emergency department' — unlike other SA guidelines in this batch there is no 'Immediate referral ... call 000' tier and no ambulance instruction.",
+      "why_unclear": "Confirmed absent from the printed text; whether ambulance/000 criteria exist elsewhere (e.g., local policy) is not stated. All emergency-tier items mapped to REFER_URGENT, none to ESCALATE_000.",
+      "source_page": 4
+    },
+    {
+      "topic": "'Urgent referral within 24 to 48 hours' printed as a range",
+      "observed": "'Urgent referral within 24 to 48 hours:' heads the GP tier on p5.",
+      "why_unclear": "A single numeric cut-off cannot be transcribed without inventing one; recorded verbatim with structured thresholds left null.",
+      "source_page": 5
+    },
+    {
+      "topic": "Age restriction is 2 years or over (not 18 as in sibling guidelines)",
+      "observed": "'Service restricted to patients aged 2 years or over.' (p3)",
+      "why_unclear": "Transcribed as printed; recorded as age_bounds min_years 2. No referral action is printed for an under-2 presenter beyond ineligibility plus the usual-pharmacy-care statement.",
+      "source_page": 3
+    },
+    {
+      "topic": "'temperature over 39oC' formatting and measurement",
+      "observed": "'Refractory otitis externa with temperature over 39oC' (p4).",
+      "why_unclear": "Printed without a space or degree symbol convention ('39oC'); transcribed as printed with structured value 39 and unit 'oC'. Whether measured or reported, and in what context (refractory case), is not stated.",
+      "source_page": 4
+    },
+    {
+      "topic": "TM red flags apply only 'if TM can be visualised'",
+      "observed": "'Tympanic membrane (TM) red flags (if TM can be visualised):' (p5).",
+      "why_unclear": "No alternative pathway is printed for when the TM cannot be visualised (p8 notes visualisation 'can be difficult' with extensive otorrhoea, cerumen or complete occlusion).",
+      "source_page": 5
+    },
+    {
+      "topic": "No antifungal treatment named despite mixed infections being common",
+      "observed": "'Approximately 90% of diffuse AOE cases ... are caused primarily by bacterial infection, although mixed bacterial and fungal infections are common (4, 5).' 'Features to differentiate between bacterial and fungal infections are included in the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual.'",
+      "why_unclear": "The document names no antifungal agent; only the delegation to external manuals is printed.",
+      "source_page": 6
+    },
+    {
+      "topic": "'Severe symptoms ... associated with intense pain (antibiotic therapy may be provided concurrent to referral)' — which antibiotic and who supplies it",
+      "observed": "Emergency-tier trigger with a printed treatment qualifier (p4).",
+      "why_unclear": "The document does not name the antibiotic, the route, or whether supply happens under this Service while the referral proceeds; EXE-2 records the exception as printed.",
+      "source_page": 4
+    },
+    {
+      "topic": "Dry mopping technique and materials delegated to external manuals",
+      "observed": "'... the ear canal should be gently cleaned ... with a tissue rolled up to a point (dry mopping) ... The Standard Treatment Manual protocols and the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual contain a step by step guide for dry mopping (2, 10).' Management (p9) refers to 'dry mopping with tissue spears'.",
+      "why_unclear": "'Tissue spears' (p9) vs 'a tissue rolled up to a point' (p8) — same procedure under two names; supplies and operator not specified.",
+      "source_page": 8
+    },
+    {
+      "topic": "'Significant progression of otitis externa' and 'Severe symptoms' are undefined",
+      "observed": "Two of the fourteen emergency-tier triggers have no objective definition in the document.",
+      "why_unclear": "Captured with structured: null as judgement prompts; EXC-10/EXC-14 confidence 'medium' accordingly.",
+      "source_page": 4
+    },
+    {
+      "topic": "Recurrent-symptoms threshold vs 'previous history of AOE'",
+      "observed": "'Symptoms are recurrent (at least 3 episodes in 6 months or 4 episodes in 12 months)' (non-urgent referral, p5); history section asks for 'previous history of AOE, otitis media (OM) or other ear conditions' (p7).",
+      "why_unclear": "The document does not state whether a single previous AOE episode (below the recurrent threshold) affects eligibility, or only the printed recurrence counts trigger referral.",
+      "source_page": 5
+    },
+    {
+      "topic": "High-risk early-referral criteria have no thresholds",
+      "observed": "'Consider early referral for high-risk individuals such as advanced age (risk factor for necrotising otitis externa) and Aboriginal and Torres Strait Islander people (higher burden of chronic ear disease).'",
+      "why_unclear": "'Advanced age' has no cut-off; 'consider' is discretionary. Recorded as EXC-34/RF-34 with confidence 'high' for the text but no numeric criterion can be built.",
+      "source_page": 6
+    },
+    {
+      "topic": "Drying-agent prevention products not named",
+      "observed": "'the use of over-the-counter ear drops containing drying agents such as acetic acid and isopropyl alcohol following water exposure (after current infection resolution) (2, 4, 13, 16).'",
+      "why_unclear": "No product, age restriction, frequency or duration is printed; TX-8 dose fields empty.",
+      "source_page": 10
+    },
+    {
+      "topic": "Swimming avoidance duration printed as '7- 10 days'",
+      "observed": "'avoidance of swimming and water sports for at least 7- 10 days during treatment' [as printed].",
+      "why_unclear": "Typographic spacing transcribed as printed; 'at least' plus a range makes the operative duration ambiguous.",
+      "source_page": 11
+    },
+    {
+      "topic": "'Clinical review ... generally not required' vs the two-condition review rule",
+      "observed": "p11: 'Clinical review with the pharmacist is generally not required. If the symptoms are not improving within 48-72 hours of starting initial treatment, and the symptoms have not fully resolved after two weeks of starting initial treatment, the patient should be advised to see a medical practitioner...'",
+      "why_unclear": "It is unclear whether the second sentence describes a patient-initiated return or a scheduled review; the conjunction ('and') means both conditions must hold before the advice applies, which is stricter than the p10 initial-appointment advice (any one of three triggers).",
+      "source_page": 11
+    },
+    {
+      "topic": "Suspicion of AOM / TM perforation dual-guideline routing",
+      "observed": "p8: 'If there is a suspicion of TM perforation, the pharmacist should also refer to the clinical practice guideline for AOM, as urgent referral to a medical practitioner may be required.'; 'After assessment, in cases where there is a suspicion of AOM, consult the Acute Otitis Media Clinical Practice Guideline.'",
+      "why_unclear": "The document does not state whether the AOM guideline runs in parallel (both services available) or replaces this pathway for that patient, nor what to do while the suspicion is unresolved.",
+      "source_page": 8
+    },
+    {
+      "topic": "Heading and word-level typographical errors in the source",
+      "observed": "'Communiate agreed management plan' (p10 heading); 'Ear dops containing an aminoglycoside' (NB3, p9); 'opacity of tympanic, foreign objects' (p5); 'at least 7- 10 days' (p11); Pharmacist resources lists 'Australian Medicines Handbook – Antiemetics' (p12) in an ear guideline.",
+      "why_unclear": "Transcribed as printed with [as printed]/[sic] markers; intended readings are mostly obvious but were not silently corrected.",
+      "source_page": 10
+    },
+    {
+      "topic": "Criteria combinatorics not explicitly labelled",
+      "observed": "Inclusion uses all_of (INC-1 to INC-5); exclusions are grouped per printed referral tier with any_of (EXC-1 to EXC-14 emergency; EXC-15 to EXC-26 24-48h; EXC-27 to EXC-31 non-urgent; EXC-32 to EXC-40 single-item rules); no AND/OR key is printed.",
+      "why_unclear": "Combinatorics derived from the tier structure ('necessitate referral', 'in the following situations'); recorded here per spec rule 4.",
+      "source_page": 4
+    },
+    {
+      "topic": "Mapping of the document's own urgency tiers to action/severity",
+      "observed": "'Urgent referral to an emergency department – patient may make their own way' → REFER_URGENT / critical; 'Urgent referral within 24 to 48 hours' (GP) → REFER_URGENT / high; 'Non-urgent referral' → REFER / medium; age/perforation ineligibility → NOT_ELIGIBLE / medium; 'see a medical practitioner' advice → REVIEW_GP / medium.",
+      "why_unclear": "The document prints its own tiers but no numeric severity; mapping recorded so it can be re-checked.",
+      "source_page": 4
+    },
+    {
+      "topic": "No supply quantity, pack rule, repeats or duration printed for any medicine",
+      "observed": "Only the NB1 Schedule 2 statement is printed; no pack size, repeat, duration or 'quantity until review' exists in this guideline.",
+      "why_unclear": "max_quantity/quantity_to_supply recorded as empty across TX-1 to TX-8 (see hugh_to_confirm).",
+      "source_page": 9
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document",
+      "observed": "Branch outcomes are not printed for most gates. Used: STOP for age ineligibility and the confirm-management prerequisite; STOP/REFER for the emergency and 24-48 hour tiers per their printed urgency; SEE_PW-1-S4 to route into red-flag triage; NOT_ELIGIBLE for known/suspected TM perforation; 'unclear' where the document states no consequence.",
+      "why_unclear": "Some branch outcomes are inferred from directive wording rather than printed explicitly.",
+      "source_page": 4
+    },
+    {
+      "topic": "Vital-signs abnormality thresholds not printed",
+      "observed": "'Conduct assessment of vital signs – temperature, blood pressure, heart rate, hydration status' (p8) with no abnormal values given (the only number in the guideline is 'temperature over 39oC' on p4; history also lists 'temperature > 38°C or < 35.5°C' as other presenting symptoms to consider, p7).",
+      "why_unclear": "No cut-offs for blood pressure or heart rate exist anywhere in the document; recorded as assessment items without thresholds.",
+      "source_page": 8
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Specific otic antimicrobial agent(s), strengths, doses, routes, frequencies and durations from the Therapeutic Guidelines: Otitis externa (and Australian Medicines Handbook).",
+      "source_page": 9,
+      "reason": "This guideline prints only the class and reference; TX-4 and TX-5 dose fields are empty and must be filled before go-live."
+    },
+    {
+      "item": "Analgesia regimens (paracetamol, ibuprofen, naproxen) from the Therapeutic Guidelines: Pharmacological management of acute pain — strengths, doses, frequencies, durations, maximum quantities and age/weight bands.",
+      "source_page": 9,
+      "reason": "Only the Schedule 2 statement (NB1) is printed; TX-1 to TX-3 dose fields are empty."
+    },
+    {
+      "item": "Interpretation of NB1 'naproxen (in preparations containing 250mg or less)' — does the 250mg qualifier apply to all three medicines, to naproxen only, or to pack size?",
+      "source_page": 9,
+      "reason": "Ambiguous printed wording affects Schedule 2 supply legality; TX-3 confidence is 'medium'."
+    },
+    {
+      "item": "Whether any 'call 000' / ambulance pathway exists for AOE red flags (this guideline's ED tier is 'patient may make their own way' only), and which of the necrotising-otitis-externa or mastoiditis features mandate an ambulance instead.",
+      "source_page": 4,
+      "reason": "No 000 tier is printed; local escalation policy must be confirmed before go-live."
+    },
+    {
+      "item": "Operational cut-off for 'Urgent referral within 24 to 48 hours' — a single number must be chosen for engine rules while retaining the printed range in prose.",
+      "source_page": 5,
+      "reason": "Printed as a range; a single threshold cannot be transcribed without a decision."
+    },
+    {
+      "item": "Objective definitions for 'Significant progression of otitis externa', 'Severe symptoms ... associated with intense pain', and 'Signs and symptoms of spreading infection'.",
+      "source_page": 4,
+      "reason": "Three emergency-tier triggers are judgement prompts with no criteria in the document (EXC-10, EXC-11, EXC-14 confidence 'medium')."
+    },
+    {
+      "item": "Referral destinations and transport for the three tiers — which ED, what 'patient may make their own way' means operationally, GP booking expectations for the 24-48 hour tier, and after-hours pathways.",
+      "source_page": 4,
+      "reason": "No destinations, phone numbers or after-hours pathways are printed; local pathways must be confirmed."
+    },
+    {
+      "item": "Management of an under-2 presenter — document states ineligibility ('Service restricted to patients aged 2 years or over') plus the usual-pharmacy-care statement but prints no referral action.",
+      "source_page": 3,
+      "reason": "No escalation instruction is printed; local policy must define what happens after NOT_ELIGIBLE."
+    },
+    {
+      "item": "Antifungal treatment pathway for mixed bacterial and fungal infections ('mixed bacterial and fungal infections are common') — which agents, and how bacterial/fungal differentiation (delegated to the QH/RFDS manual) is performed in pharmacy.",
+      "source_page": 6,
+      "reason": "No antifungal agent is named anywhere in the document."
+    },
+    {
+      "item": "Who performs dry mopping ('dry mopping with tissue spears' vs 'a tissue rolled up to a point'), with what supplies, and whether it is within pharmacist scope at every site.",
+      "source_page": 9,
+      "reason": "Technique is delegated to the Standard Treatment Manual and QH/RFDS Primary Clinical Care Manual."
+    },
+    {
+      "item": "Otoscopy — equipment (scope type), infection control between patients, training/competency requirement, and whether ear examination must be performed for every presentation including returns.",
+      "source_page": 8,
+      "reason": "'Ear examination should be conducted in accordance with the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual'; operational requirements are not printed."
+    },
+    {
+      "item": "Antibiotic therapy 'may be provided concurrent to referral' for severe symptoms with intense pain — which antibiotic, by whom, quantity, and how supply is recorded while the referral is in progress.",
+      "source_page": 4,
+      "reason": "Printed as a parenthetical qualifier only; EXE-2 records the exception with no supply mechanics."
+    },
+    {
+      "item": "Dual-guideline routing when AOM or TM perforation is suspected — does the AOM guideline run in parallel to this Service, and what happens to this episode's record.",
+      "source_page": 8,
+      "reason": "The document says 'refer to the clinical practice guideline for AOM' / 'consult the Acute Otitis Media Clinical Practice Guideline' without stating service mechanics."
+    },
+    {
+      "item": "Definition of 'advanced age' for the necrotising-otitis-externa early-referral advice, and any additional early-referral criteria for Aboriginal and Torres Strait Islander patients beyond 'higher burden of chronic ear disease'.",
+      "source_page": 6,
+      "reason": "No age cut-off or criteria are printed; 'consider early referral' is discretionary."
+    },
+    {
+      "item": "Prevention products — which OTC drying-agent ear drops (acetic acid and isopropyl alcohol) are stocked/approved, age restrictions, frequency of use, and that use starts only 'after current infection resolution'.",
+      "source_page": 10,
+      "reason": "No product, age restriction or dosing is printed; TX-8 dose fields empty."
+    },
+    {
+      "item": "Reconciliation of the two follow-up rules into engine logic: p10 initial-appointment advice (any of: worsens / no improvement after 48-72 hours / discharge past 14 days) vs p11 clinical review (symptoms not improving within 48-72 hours AND not fully resolved after two weeks).",
+      "source_page": 11,
+      "reason": "The two printed rules use different triggers and a conjunction/disjunction mix; one engine rule must be agreed."
+    },
+    {
+      "item": "Operational compliance evidence for each prescribing event: pharmacist 'included on the register of authorised pharmacists' and prescribing 'in accordance with the Community Pharmacist Prescribing Code' (regulation 17A, Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal basis is stated but the record-keeping/verification steps are not; local process must be confirmed before go-live."
+    },
+    {
+      "item": "Vital-signs abnormality thresholds for the assessment step (blood pressure, heart rate, hydration status) and how the history prompt 'temperature > 38°C or < 35.5°C' interacts with the red flag 'temperature over 39oC'.",
+      "source_page": 8,
+      "reason": "No cut-offs are printed; two different temperature figures appear on different pages with different purposes."
+    },
+    {
+      "item": "Sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent' — consent capture and destination list.",
+      "source_page": 10,
+      "reason": "Left to local policy by the document; no consent wording or sharing mechanism is printed."
+    },
+    {
+      "item": "Pharmacist professional discretion clause — how 'exercise professional discretion and judgement ... in consultation with the patient and/or their carer' interacts with hard-coded engine rules.",
+      "source_page": 6,
+      "reason": "The document explicitly reserves judgement to the pharmacist; the engine needs a documented override/escalation path."
+    }
+  ]
+}

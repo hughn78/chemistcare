@@ -45,6 +45,44 @@ export const PROTOCOLS: Record<string, JurisdictionProtocol> = {
     version: '2025.07',
     effectiveDate: '2025-07-01',
   },
+  // ── Added from the Sep 2026 protocol corpus (instrument names/versions
+  //    as printed on the source documents; see ProtocolPanel for full
+  //    provenance incl. sha256). ──
+  ACT: {
+    jurisdiction: 'ACT',
+    jurisdictionLabel: 'Australian Capital Territory',
+    name: 'ACT Pharmacist Extended Scope of Practice (Notifiable Instrument NI2026-189)',
+    version: 'NI2026-189 (No 1)',
+    effectiveDate: '2026-04-10',
+  },
+  NT: {
+    jurisdiction: 'NT',
+    jurisdictionLabel: 'Northern Territory',
+    name: 'NT Community Pharmacy Full Scope of Practice Program',
+    version: '1.0',
+    effectiveDate: '2026-05-15',
+  },
+  SA: {
+    jurisdiction: 'SA',
+    jurisdictionLabel: 'South Australia',
+    name: 'Community Pharmacist Prescribing Code (CPP Code)',
+    version: '1.0',
+    effectiveDate: '2026-01-15',
+  },
+  TAS: {
+    jurisdiction: 'TAS',
+    jurisdictionLabel: 'Tasmania',
+    name: 'Tasmanian Community Pharmacist Prescribing Protocols',
+    version: '2.0',
+    effectiveDate: '2025-05-01',
+  },
+  WA: {
+    jurisdiction: 'WA',
+    jurisdictionLabel: 'Western Australia',
+    name: 'Enhanced Access Community Pharmacy Pilot (QLD-aligned)',
+    version: 'pilot',
+    effectiveDate: '2026-01-01',
+  },
 };
 
 export const DEFAULT_JURISDICTION = 'VIC';

@@ -1,0 +1,698 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf",
+    "pdf_sha256": "7d80f2f157a10763bbd9b288331d0c38a53a57c8b9969f1cdb89935e9bd4bab1",
+    "page_count": 9,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Acute exacerbations of mild plaque psoriasis clinical practice guideline",
+    "instrument_version": "No version number printed (page 9 footer code reads \"62’GUA180510-DEC\"); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+    "supervision_model": "Approved pharmacist prescribing (document's own terminology): pharmacists must be 'approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP)' and 'authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)'; 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1)",
+    "scope_summary": "EACPP clinical practice guideline for acute exacerbations of mild plaque psoriasis (psoriasis vulgaris) in patients aged 16 years or over (service restricted to patients aged 16 years or over). Flow: meet service and professional obligations -> patient history and assessment (history incl. aggravating factors; examination of clinical features and severity using Psoriasis Area and Severity Index (PASI) and Dermatology Life Quality Index (DLQI)) -> develop management plan (non-pharmacological measures and topical pharmacotherapy per Therapeutic Guidelines: Dermatology (Psoriasis)) -> treat and concurrently refer -> confirm management is appropriate (contraindications, precautions, interactions, pregnancy and lactation) -> communicate agreed management plan -> clinical review (response; continue, modify or stop treatment). 'Refer when' (page 3) defines referral triggers; 'Treat (if clinically appropriate) and concurrently refer' (page 3) defines conditions treated while referring. The guideline prints no product names, strengths, doses, frequencies or durations - topical treatment is delegated to the Therapeutic Guidelines: Dermatology (Psoriasis). Total quantity prescribed should not exceed 12 months supply (including repeats)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 16 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-2",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-5",
+        "text": "People presenting with an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris) may receive treatment within the service. Refer people with all other presentations to an appropriate healthcare provider.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-6",
+        "text": "mild or mild to moderate plaque psoriasis = a PASI ≤ 10 and DLQI ≤ 10",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Assessment of severity" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Develop management plan" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is aged below 16 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "unclear diagnosis (e.g. arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers, and solid tumours)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "psoriatic lesions are infected",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "psoriasis is moderate or severe",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "symptoms indicate a type of psoriasis other than mild plaque psoriasis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "the face, scalp, genitals, nails, palms and/or soles are affected [page 2 flow words this as 'The face, scalp, genitals, palms, and/or soles are affected' - nails appears in the page 3 print and in Key points (p.3: 'Psoriasis occurring on the face, nails, scalp, genitals, flexures, and soles is considered to be severe'); both readings recorded, see open question]",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "inadequate response to optimal topical treatment. [page 2 flow words this as 'Inadequate response to optimal topical treatment or the condition reoccurs.' - both readings recorded, see open question]",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 1, "section_heading": "Contents" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 1, "section_heading": "Contents" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Acute exacerbations of mild plaque psoriasis - guideline overview pathway (page 2 flow, elaborated pages 4-6)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service; patient informed consent (including consent for communication with other health practitioners if relevant). Service restricted to patients aged 16 years or over.",
+          "gates": [
+            { "criterion": "Initial patient eligibility and suitability for management within the scope of the service (Refer when: the patient is aged below 16 years)", "on_fail": "REFER" },
+            { "criterion": "Patient informed consent (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 2, "section_heading": "Guideline overview" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); onset, duration, nature, location, severity, and extent of the rash and other symptoms; previous diagnosis of plaque psoriasis and any current or past management plan; underlying and associated medical conditions, including psoriatic comorbidities such as arthritis (or joint pain) and common comorbidities such as hypertension, hyperlipidaemia, obesity, type 2 diabetes, and depression; response to any previous treatment/s; impacts on quality of life and psychosocial wellbeing; exposure to factors that can aggravate psoriasis (Table 1: streptococcal tonsillitis (strep throat) and other infections e.g. viral; skin trauma and injuries such as cuts, abrasions, sunburn; sun exposure (although gentle exposure is often beneficial); dry skin; obesity; metabolic factors (calcium deficiency); smoking; sleep deprivation and emotional stress; excessive alcohol consumption; hormonal factors (pregnancy or postpartum); medicines such as lithium, beta-blockers, antimalarials, nonsteroidal anti-inflammatories, antibiotics, ACE inhibitors, terbinafine, and TNF-α inhibitors; stopping oral steroids or potent topical corticosteroids (TCS); other environmental factors such as a stressful event); current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements, and over-the-counter medicines); family history of psoriasis; allergies/adverse drug reactions. Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies, and current medical conditions.",
+          "gates": [
+            { "criterion": "Refer when: the patient is taking a medicine that can exacerbate psoriasis", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient is planning a pregnancy or could be pregnant", "on_fail": "REFER" },
+            { "criterion": "Refer when: unclear diagnosis", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination and assessment of severity: 'Physical examination of the patient's skin is required to identify, assess, and classify the severity of an acute exacerbation of mild plaque psoriasis.' In darker skin tones, plaques are generally darker or violet in colour, thicker, and with more obvious scale and itch. Nail changes including pitting, lifting of the nail (onycholysis), and subungual hyperkeratosis may also be observed, although it may be difficult to distinguish nail changes due to psoriasis from fungal nail infections. A Psoriasis Area and Severity Index (PASI) score and Dermatology Life Quality Index (DLQI) score may be used to assess severity and responses to treatment: mild or mild to moderate plaque psoriasis = a PASI ≤ 10 and DLQI ≤ 10; moderate to severe plaque psoriasis = PASI > 10 and/or DLQI > 10 - the psoriasis is always considered severe when the DLQI score is > 10, regardless of the PASI score; it may also be considered moderate to severe if it has significant impacts on the patient's quality of life, due to involvement of visible areas, major parts of the scalp, genitals, palms and/or soles, onycholysis of at least 2 fingernails, or pruritus leading to excoriation. Refer to Pharmacist resources' section for more information about PASI and DLQI scores. Where appropriate, consider screening for cardiovascular risk and refer if risk factors are identified that require management.",
+          "gates": [
+            { "criterion": "Refer when: unclear diagnosis", "on_fail": "REFER" },
+            { "criterion": "Refer when: psoriatic lesions are infected", "on_fail": "REFER" },
+            { "criterion": "Refer when: psoriasis is moderate or severe (PASI > 10 and/or DLQI > 10)", "on_fail": "REFER" },
+            { "criterion": "Refer when: symptoms indicate a type of psoriasis other than mild plaque psoriasis", "on_fail": "REFER" },
+            { "criterion": "Refer when: the face, scalp, genitals, nails, palms and/or soles are affected", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "Develop management plan: pharmacist management of acute exacerbations of mild plaque psoriasis involves non-pharmacological measures - education and advice regarding lifestyle modification, use of adjunctive agents including emollients/moisturisers, and other measures as per the Therapeutic Guidelines: Dermatology (Psoriasis - Advice for managing psoriasis in primary care) and the Australian Medicines Handbook: Psoriasis; pharmacotherapy - a topical treatment for the management of acute exacerbations of mild plaque psoriasis in accordance with the Therapeutic Guidelines: Dermatology (Psoriasis). Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers) and compliance with all copyright conditions.",
+          "gates": [
+            { "criterion": "Treat and concurrently refer: the patient has psoriatic comorbidities or risk factors that require management", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: the patient has not seen an appropriate healthcare provider for review of their condition in the previous 12 months", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: the patient is taking a medicine that can exacerbate psoriasis", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: quality of life is significantly affected", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: the patient is planning a pregnancy or could be pregnant", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: the patient is immunocompromised", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: 'Consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.' Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+          "gates": [
+            { "criterion": "contraindications and precautions", "on_fail": "STOP" },
+            { "criterion": "drug interactions", "on_fail": "STOP" },
+            { "criterion": "pregnancy and lactation (Treat and concurrently refer: the patient is planning a pregnancy or could be pregnant)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) regarding the typical cycle of psoriasis and the expectations of treatment; individual product and medicine use; how to manage adverse effects; when to seek further care and/or treatment, including recognising infection; when to return for follow-up. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers) and to ensure compliance with all copyright conditions. General advice - at the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: signs or symptoms worsen; new signs or symptoms develop (including systemic signs or symptoms); the face, scalp, genitals, palms, and/or soles become affected; they do not respond adequately to recommended treatment (a new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved); quality of life is significantly affected by symptoms; the condition reoccurs after initial resolution. Common adverse effects of TCS including transient burning, stinging, or pain on application, can generally be reversed by stopping the medicine. Refer to an appropriate healthcare provider when adverse effects cannot be managed in the pharmacy setting. The patient should be advised that most treatments take between 6 to 12 weeks of consistent and correct use to start to be visibly effective. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+          "gates": [
+            { "criterion": "adverse effects cannot be managed in the pharmacy setting", "on_fail": "REFER" },
+            { "criterion": "new signs or symptoms develop (including systemic signs or symptoms)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines. 'Patients should return for a follow-up consultation 2 to 4 weeks after initiation of a new therapy and/or changes to the treatment plan. Clinical review should consider: response to treatment (and compliance); if changes are required to the treatment plan. If a good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only. If there has been an inadequate response, the pharmacist should check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied. Pharmacotherapy for the management of psoriasis may be required longer-term. Pharmacists should refer the patient to an appropriate healthcare provider for review and ongoing management after the acute flare has been managed. An annual review by an appropriate healthcare provider is recommended to assess for adverse effects from TCS therapy. For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. Pharmacists should prescribe a quantity of medicine (including repeats) that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months supply (including repeats).",
+          "gates": [
+            { "criterion": "inadequate response to optimal topical treatment", "on_fail": "REFER" },
+            { "criterion": "the condition reoccurs after initial resolution", "on_fail": "REFER" },
+            { "criterion": "adverse effects cannot be managed in the pharmacy setting", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Topical treatment for the management of acute exacerbations of mild plaque psoriasis",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "The total quantity prescribed should not exceed 12 months supply (including repeats).",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine (including repeats) that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review.",
+      "notes": "Pharmacotherapy per the page 2 flow and page 5: 'pharmacotherapy: - A topical treatment for the management of acute exacerbations of mild plaque psoriasis in accordance with the Therapeutic Guidelines: Dermatology (Psoriasis).' No product name, strength, dose, application frequency or treatment duration is printed anywhere in the guideline - product-level detail must be taken from the specified sections of the current online version of the Therapeutic Guidelines (p.5). Context (p.3): 'There is no cure for psoriasis. Treatment aims to clear lesions and manage symptoms. Most cases of mild plaque psoriasis can be treated with topical therapies.'; 'Psoriasis is a systemic autoimmune disease that is associated with an increased risk of hypertension, obesity, elevated lipid levels, heart disease, diabetes, inflammatory bowel disease, lymphoma, and depression.' Adverse effects (p.6): 'Common adverse effects of TCS including transient burning, stinging, or pain on application, can generally be reversed by stopping the medicine. Refer to an appropriate healthcare provider when adverse effects cannot be managed in the pharmacy setting.' Duration guidance (p.6): 'most treatments take between 6 to 12 weeks of consistent and correct use to start to be visibly effective'; 'a new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved'. Quantity cap (p.6): 'The total quantity prescribed should not exceed 12 months supply (including repeats).' Pregnancy/lactation caveat (p.5): confirm management is appropriate including 'contraindications and precautions; drug interactions; pregnancy and lactation'; Treat and concurrently refer includes 'the patient is planning a pregnancy or could be pregnant' (p.3). first_line true because 'Most cases of mild plaque psoriasis can be treated with topical therapies' (p.3) - no product-level ranking is printed.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Emollients/moisturisers (adjunctive agents)",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Non-pharmacological measure (p.5): 'non-pharmacological measures: - education and advice regarding lifestyle modification, use of adjunctive agents including emollients/moisturisers, and other measures as per the Therapeutic Guidelines: Dermatology (Psoriasis - Advice for managing psoriasis in primary care) and the Australian Medicines Handbook: Psoriasis'. Also (p.6): 'If a good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only.' No product, strength, dose or frequency is printed. Recorded as an adjunctive treatment row rather than a prescribed medicine.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Develop management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "the patient is aged below 16 years (does not preclude a patient from accessing usual pharmacy care)",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "unclear diagnosis (e.g. arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers, and solid tumours)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "psoriatic lesions are infected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "psoriasis is moderate or severe",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "symptoms indicate a type of psoriasis other than mild plaque psoriasis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "the face, scalp, genitals, nails, palms and/or soles are affected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "inadequate response to optimal topical treatment. [page 2 flow: 'Inadequate response to optimal topical treatment or the condition reoccurs.']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Treat and concurrently refer: the patient has psoriatic comorbidities or risk factors that require management (e.g. arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers, and solid tumours)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Treat and concurrently refer: the patient has not seen an appropriate healthcare provider for review of their condition in the previous 12 months",
+      "structured": { "parameter": "time since review of condition by an appropriate healthcare provider", "operator": ">", "value": 12, "unit": "months" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Treat and concurrently refer: the patient is taking a medicine that can exacerbate psoriasis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Treat and concurrently refer: quality of life is significantly affected [page 3 column placement ambiguous - page 2 flow lists this under 'Treat and concurrently refer'; see open question]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Treat and concurrently refer: the patient is planning a pregnancy or could be pregnant",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Treat and concurrently refer: the patient is immunocompromised.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Where appropriate, consider screening for cardiovascular risk and refer if risk factors are identified that require management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Key points" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Psoriasis occurring on the face, nails, scalp, genitals, flexures, and soles is considered to be severe because these areas are difficult to treat and associated with poor cosmetic outcomes.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Key points" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "signs or symptoms worsen [General advice: at the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "new signs or symptoms develop (including systemic signs or symptoms) [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "the face, scalp, genitals, palms, and/or soles become affected [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "they do not respond adequately to recommended treatment: a new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "quality of life is significantly affected by symptoms [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "the condition reoccurs after initial resolution [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Refer to an appropriate healthcare provider when adverse effects cannot be managed in the pharmacy setting.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "Pharmacists should refer the patient to an appropriate healthcare provider for review and ongoing management after the acute flare has been managed.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "moderate to severe plaque psoriasis = PASI > 10",
+      "structured": { "parameter": "PASI score", "operator": ">", "value": 10, "unit": "score" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "moderate to severe plaque psoriasis = PASI > 10 and/or DLQI > 10: the psoriasis is always considered severe when the DLQI score is > 10, regardless of the PASI score.",
+      "structured": { "parameter": "DLQI score", "operator": ">", "value": 10, "unit": "score" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "it may also be considered moderate to severe if it has significant impacts on the patient's quality of life, due to involvement of visible areas, major parts of the scalp, genitals, palms and/or soles, onycholysis of at least 2 fingernails, or pruritus leading to excoriation.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 5, "section_heading": "Assessment of severity" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations: [the seven Refer when triggers - see red_flags RF-1 to RF-7]",
+      "Provide initial treatment and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: [the six treat-and-concurrently-refer triggers - see red_flags RF-8 to RF-13]",
+      "Refer people with all other presentations [than an acute exacerbation of mild plaque psoriasis] to an appropriate healthcare provider.",
+      "Pharmacists should refer the patient to an appropriate healthcare provider for review and ongoing management after the acute flare has been managed.",
+      "An annual review by an appropriate healthcare provider is recommended to assess for adverse effects from TCS therapy.",
+      "Where appropriate, consider screening for cardiovascular risk and refer if risk factors are identified that require management.",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent."
+    ],
+    "urgent": [],
+    "emergency": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:",
+      "Provide initial treatment and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations:"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 3, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "2 to 4 weeks after initiation of a new therapy and/or changes to the treatment plan",
+      "what": "Patients should return for a follow-up consultation. Clinical review should consider: response to treatment (and compliance); if changes are required to the treatment plan.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "2 to 4 weeks (new treatment trial period); up to 3 to 6 months for adequate response to optimal topical treatment",
+      "what": "a new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "when": "6 to 12 weeks of consistent and correct use",
+      "what": "The patient should be advised that most treatments take between 6 to 12 weeks of consistent and correct use to start to be visibly effective.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "when": "In line with recommendations in the Therapeutic Guidelines",
+      "what": "Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines: response to treatment; continue, modify, or stop treatment; communication with other health practitioners.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "Annually",
+      "what": "An annual review by an appropriate healthcare provider is recommended to assess for adverse effects from TCS therapy.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "when": "For patients continuing therapy",
+      "what": "follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "Clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Psoriasis.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+  },
+  "references": [
+    "1. Shumack S, Brown P. Psoriasis. 2023. In: The A-Z of Skin [Internet]. Melbourne: The Australasian College of Dermatologists. Available from: https://www.dermcoll.edu.au/atoz/psoriasis/. [p.8]",
+    "2. NPS MedicineWise. Plaque psoriasis. Surry Hills: NPS MedicineWise; 2022 [cited 2025 April 4]. Available from: https://www.nps.org.au/bdmards/dermatology#hp. [p.8]",
+    "3. Clarke P. Psoriasis. Australian Family Physician. 2012;40:468-73. [p.8]",
+    "4. Oakley AJ, C. Gupta, M. Psoriasis: DermNet New Zealand Trust; 2020 [cited 2022 March 8]. Available from: https://dermnetnz.org/topics/psoriasis. [p.8]",
+    "5. Nair PA, Badri T. Stat Pearls: Psoriasis. Treasure Island, Florida: StatPearls Publishing; 2023 [cited 2025 April 4]. Available from: https://www.ncbi.nlm.nih.gov/books/NBK448194/. [p.8]",
+    "6. Ngan V, Vather D, Oakley A. Guidelines for the managment of psoriasis: DermNet New Zealand Trust; 2020. Available from: https://dermnetnz.org/topics/guidelines-for-the-treatment-of-psoriasis. [p.8]",
+    "7. Chiricozzi A. BMJ Best Practice: Psoriasis: BMJ Publishing Group; 2022 [cited 2023 August 18]. Available from: https://bestpractice.bmj.com/topics/en-gb/74. [p.8]",
+    "8. Oakley A. PASI score: DermNet New Zealand Trust; 2009 [cited 2022 March 2]. Available from: https://dermnetnz.org/topics/pasi-score. [p.8]",
+    "9. Foley P, Gebauer K, Sullivan J, McMeniman E, Shumack S, Ng J, et al. Treatment goals for moderate to severe psoriasis in the era of targeted therapies - Adult patients. Australasian Journal of Dermatology. 2023;64(4):476-87. [p.8]",
+    "10. The Australasian College of Dermatologists. Consensus Statement: Treatment goals for psoriasis, the Australian Psoriasis Treatment Goals Project. Rhodes, NSW: The Australasian College of Dermatologists; 2017 [cited 2022 June 17]. Available from: https://atep.edu.au/wp-content/uploads/2022/07/ACD-Consensus-Statement-Treatment-goals-for-psoriasis-March-2017.pdf. [p.8]",
+    "11. Therapeutic Guidelines: Dermatology (Psoriasis). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=psoriasis. [p.8]",
+    "12. Autralian Medicines Handbook: Drugs for psoriasis. Adelaide: Australian Medicines Handbook Pty Ltd; 2025.. Available from: https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis?menu=vertical. [p.8]"
+  ],
+  "open_questions": [
+    {
+      "topic": "Refer when wording differs between the page 2 flow and the page 3 section",
+      "observed": "Page 2 (Guideline overview): 'the face, scalp, genitals, palms, and/or soles are affected' (no nails) and 'Inadequate response to optimal topical treatment or the condition reoccurs.' Page 3 (Refer when): 'the face, scalp, genitals, nails, palms and/or soles are affected' and 'inadequate response to optimal topical treatment.'",
+      "why_unclear": "Both readings are recorded (EXC-6 and EXC-7 use the page 3 wording with the page 2 variant noted and confidence 'medium'; RF-6/RF-7 the same) rather than silently reconciled, per spec rule 2. 'nails' is corroborated by Key points (p.3) which lists face, nails, scalp, genitals, flexures and soles as severe sites.",
+      "source_page": 3
+    },
+    {
+      "topic": "'Quality of life is significantly affected' - column placement is ambiguous on page 3",
+      "observed": "Page 2 flow lists 'Quality of life is significantly affected' in the right-hand 'Treat and concurrently refer' column. On page 3 the two-column text extraction places the bullet on a line of its own after the last identifiable left-column item, so it may belong to either the 'Refer when' or the 'Treat and concurrently refer' list. The same condition also appears in General advice (p.6) as a reason to see a healthcare provider.",
+      "why_unclear": "Captured as RF-11 under treat-and-concurrently-refer (following the unambiguous page 2 layout) with confidence 'medium' and the ambiguity recorded here; if it is in fact a Refer when trigger it would change eligibility rather than just requiring concurrent referral.",
+      "source_page": 3
+    },
+    {
+      "topic": "No product-level drug names, strengths, doses, frequencies or durations are printed",
+      "observed": "Pharmacotherapy is a single item: 'A topical treatment for the management of acute exacerbations of mild plaque psoriasis in accordance with the Therapeutic Guidelines: Dermatology (Psoriasis)' (p.5). No product name, strength, dose, application frequency or treatment duration appears anywhere in the 9 pages.",
+      "why_unclear": "TX-1 and TX-2 have blank strength/dose/frequency fields; nothing can be transcribed without inventing it. Dosing must come from the specified sections of the current online Therapeutic Guidelines.",
+      "source_page": 5
+    },
+    {
+      "topic": "Combinatorics of the eligibility checklist are inferred, not printed",
+      "observed": "'Service restricted to patients aged 16 years or over' and 'may only be used by pharmacists who...' imply AND for INC-1 to INC-7; 'Refer the patient ... in the following situations:' introduces the seven refer-when items as alternatives, implying OR (EXC-1 to EXC-7).",
+      "why_unclear": "The document never prints 'all of' or 'any of'; the all_of/any_of groups are inferred from that wording per spec rule 4.",
+      "source_page": 3
+    },
+    {
+      "topic": "The two referral lists are printed twice",
+      "observed": "The Refer when and Treat and concurrently refer triggers appear in the right-hand column of the Guideline overview on page 2 and again as the dedicated sections on page 3 ('Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:').",
+      "why_unclear": "The lists were captured once with provenance to page 3 (the dedicated section); the page 2 duplicates and their wording variants are noted above so the duplication is not lost.",
+      "source_page": 3
+    },
+    {
+      "topic": "Referral content spans pages 2 to 6",
+      "observed": "Referral triggers/destinations are printed on p.2 (overview), p.3 (Refer when; Treat and concurrently refer; Key points cardiovascular screening), p.5 (severity thresholds) and p.6 (General advice; Clinical review; adverse effects; post-flare referral).",
+      "why_unclear": "Spec rule for the referral block: shared provenance uses the first page (page 3); the range 2-6 is recorded here.",
+      "source_page": 3
+    },
+    {
+      "topic": "PASI/DLQI scoring is optional as printed",
+      "observed": "'A Psoriasis Area and Severity Index (PASI) score and Dermatology Life Quality Index (DLQI) score may be used to assess severity and responses to treatment' (p.5); 'Refer to Pharmacist resources' section for more information about PASI and DLQI scores.'",
+      "why_unclear": "The thresholds (PASI ≤ 10 and DLQI ≤ 10 for mild) are printed, but the document says the scores 'may be used', so it is not stated whether a score must be calculated for every patient before treatment.",
+      "source_page": 5
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "No version, date, document ID or approving officer appears; page 9 shows footer code \"62’GUA180510-DEC\", 'Produced by Clinical Excellence Division' and '© Department of Health 2026'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 9
+    },
+    {
+      "topic": "No notifiable condition or statutory notification requirement printed",
+      "observed": "The guideline requires communication with other health practitioners and sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent', but mentions no notifiable condition, AIR notification or compulsory GP notification.",
+      "why_unclear": "notifiable.required is null because the document is silent.",
+      "source_page": 6
+    },
+    {
+      "topic": "Source and adaptation acknowledged: originally Queensland Health material",
+      "observed": "Page 9: 'This document is based on clinical guidelines/protocols originally developed by Queensland Health for the Queensland Community Pharmacy Pilots. Queensland Health is acknowledged as the source of the original material.'",
+      "why_unclear": "Recorded for provenance of the instrument; no version of the Queensland originals is cited, so the WA document's own version cannot be derived from it.",
+      "source_page": 9
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm each pharmacist's EACPP approval and authorisation to prescribe under the Medicines and Poisons Regulations 2016 (WA), since 'This document alone does not provide an authorisation for a pharmacist to prescribe'.",
+      "source_page": 1,
+      "reason": "Eligibility to use the guideline is conditional on departmental approval and authorisation that this document cannot evidence."
+    },
+    {
+      "item": "Confirm the controlled version/date of this clinical practice guideline with the Department of Health (no version or date is printed; only footer code \"62’GUA180510-DEC\" and © Department of Health 2026).",
+      "source_page": 9,
+      "reason": "A clinical practice guideline used for funded prescribing must be version-controlled and traceable to an approval date."
+    },
+    {
+      "item": "Confirm which sections of the current online version of the Therapeutic Guidelines are the 'specified sections' that pharmacists must prescribe medicines according to (page 5) - the guideline does not enumerate them.",
+      "source_page": 5,
+      "reason": "INC-7 makes this a mandatory prescribing condition, but without the section list it cannot be evaluated as a hard check before go-live."
+    },
+    {
+      "item": "Obtain product-level drug names, strengths, doses, application frequencies and durations for topical psoriasis treatment (and adjunctive emollients/moisturisers) from the Therapeutic Guidelines: Dermatology (Psoriasis) before any dosing rule is encoded - none are printed in this guideline.",
+      "source_page": 5,
+      "reason": "TX-1 and TX-2 have blank strength/dose/frequency fields; a prescribing support module cannot issue supply instructions from a class name alone."
+    },
+    {
+      "item": "Confirm the operative Refer when wording for the two variants: does 'nails' form part of the site trigger (page 3) or not (page 2), and does 'or the condition reoccurs' form part of the inadequate-response trigger (page 2) or not (page 3)?",
+      "source_page": 3,
+      "reason": "The variants change which patients are ineligible for the service; both readings are recorded (EXC-6, EXC-7) and must be resolved before the rule is enforced."
+    },
+    {
+      "item": "Confirm whether 'Quality of life is significantly affected' is a Refer when trigger (ineligibility) or a Treat-and-concurrently-refer trigger - the page 2 flow and the page 3 column layout can be read differently.",
+      "source_page": 3,
+      "reason": "As RF-11 it means treat and refer concurrently; as a Refer when item it would make the patient ineligible for the prescribing service. Captured with confidence 'medium' pending resolution."
+    },
+    {
+      "item": "Confirm the local process for assessing severity: whether PASI and DLQI must be calculated for every patient (the document says they 'may be used'), which PASI/DLQI tools are used, and how scores are documented.",
+      "source_page": 5,
+      "reason": "Severity thresholds (PASI > 10 and/or DLQI > 10) gate referral, but the scoring step is optional as printed and the resources for scoring are listed only in Pharmacist resources."
+    },
+    {
+      "item": "Confirm the cardiovascular risk screening approach: 'Where appropriate, consider screening for cardiovascular risk and refer if risk factors are identified that require management.'",
+      "source_page": 3,
+      "reason": "'Where appropriate' and 'risk factors ... that require management' are unquantified judgement calls that must be settled as local policy before go-live."
+    },
+    {
+      "item": "Confirm the supply/quantity rules against the review cadence: total quantity (including repeats) must not exceed 12 months supply and must align with expected duration of therapy until the next review, while the follow-up is 2 to 4 weeks after initiation of a new therapy or treatment change.",
+      "source_page": 6,
+      "reason": "Duration-of-therapy vs quantity-supplied vs review interval is left to the pharmacist and local supply policy."
+    },
+    {
+      "item": "Confirm the arrangement for the annual GP/healthcare provider review of topical corticosteroid adverse effects ('An annual review by an appropriate healthcare provider is recommended to assess for adverse effects from TCS therapy') and the post-flare referral for ongoing management.",
+      "source_page": 6,
+      "reason": "Both depend on an external provider; the guideline does not say who initiates or tracks them."
+    },
+    {
+      "item": "Confirm whether the guideline is used with any additional local consent or documentation requirements beyond 'Patient informed consent (including consent for communication with other health practitioners if relevant)'.",
+      "source_page": 2,
+      "reason": "Consent content and recording method are not specified in the document and are left to the service."
+    }
+  ]
+}

@@ -1,0 +1,826 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf",
+    "pdf_sha256": "086dcd2998f180c2d11fd9ffbfee8040fec99d6aeddb1d5a968c23a0caa4a644",
+    "page_count": 16,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Management of Urinary Tract Infections",
+    "instrument_version": "January 2026",
+    "effective_date": "January 2026",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 (Vic) and Drugs, Poisons and Controlled Substances Regulations 2017 (Vic); requirement of the Secretary Approval: Community Pharmacist Program to comply with this Protocol when supplying Schedule 4 poisons for treatment of suspected UTIs under a structured prescribing arrangement (p.5).",
+    "supervision_model": "Structured prescribing arrangement: pharmacists authorised under the Drugs, Poisons and Controlled Substances Regulations 2017 supply the Schedule 4 poisons documented in the Protocol; must have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons; must operate in accordance with the Act, the Regulations and the Pharmacy Board of Australia Code of Conduct (p.5).",
+    "scope_summary": "Victorian Community Pharmacist Program protocol for treatment of suspected urinary tract infections (UTI): triage flowchart (sex, age 18-65, consent, pyelonephritis, cystitis symptom count, alternative causes, exclusion and risk-factor checks), conservative management (analgesia, self-care) as first line, and empirical antibiotic therapy (nitrofurantoin 1st line, fosfomycin 2nd line, trimethoprim 3rd line) for uncomplicated cystitis, with referral/escalation criteria and documentation requirements. Supplementary information covers confirming management is appropriate, the medicines list and communication of the management plan."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'What is the sex of the patient?' - answer 'Female' required to continue through the flowchart (patients recorded as 'Male or individuals who have undergone gender reassignment surgery' are given usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP)",
+        "criteria_group": { "all_of": ["INC-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Is the patient aged between 18 and 65 years?' - Yes required to continue (No -> Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP)",
+        "criteria_group": { "all_of": ["INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'Does the patient consent?*' - Yes required ('Yes: continue to page 7'); '*The patient must be physically present in the pharmacy'",
+        "criteria_group": { "all_of": ["INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-4",
+        "text": "'Is the patient presenting with 2 or more symptoms of acute cystitis?*' - symptoms listed: Dysuria; Urinary frequency; Urinary urgency; Suprapubic pain or discomfort. Footnote: '*If vaginal discharge is absent and at least two symptoms of cystitis are present (i.e. acute dysuria, frequency, urgency), the probability of cystitis is greater than 90%'",
+        "criteria_group": { "all_of": ["INC-4"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Symptoms do not suggest a cause other than acute cystitis (No to 'Do symptoms of medical history (e.g. vaginal discharge, or vulval and vaginal discomfort) suggest a cause other than acute cystitis (e.g. vaginal thrush, bacterial vaginosis, vaginitis or vulvitis, chlamydia, gonorrhoea. trichomoniasis or other)')",
+        "criteria_group": { "all_of": ["INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Patient reports none of the risk factors on page 8 (No to both screening questions), enabling 'Provisional diagnosis for uncomplicated cystitis and proceed to appropriate treatment' and 'Continue to pharmacist care on page 9'. Risk factors: diabetes or medicines that increase the risk of UTI (e.g. SGLT2 inhibitors); reoccurrence of UTI symptoms within 2 weeks of completing appropriate antimicrobial treatment for a previous episode; symptoms of UTI persisting 48-72 hours after starting appropriate antibiotic treatment; 2 or more symptomatic UTIs in previous 6 months OR 3 or more in previous 12 months; long-term inpatient care (including residential aged care facilities); risk factors for sexually transmitted infection (STI); history of pyelonephritis; taking immunosuppressant medicines; being immunocompromised; asplenia; renal disease or impairment; IUD in situ (greater than 3 months).",
+        "criteria_group": { "all_of": ["INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "'Does the patient have signs and symptoms indicating pyelonephritis? (e.g. fever >38oC, chills, nausea, vomiting, flank pain)' - Yes -> 'Immediate referral to Emergency Department'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Do symptoms of medical history (e.g. vaginal discharge, or vulval and vaginal discomfort) suggest a cause other than acute cystitis (e.g. vaginal thrush, bacterial vaginosis, vaginitis or vulvitis, chlamydia, gonorrhoea. trichomoniasis or other)? Yes -> 'Consider appropriateness of Pharmacist Only thrush treatment or refer to GP for investigation of other causes (e.g. infections such as bacterial vaginosis or herpes, trichomoniasis or other) or skin conditions'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Pregnancy or less than 6 weeks post-partum",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Gross haematuria",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Cerebral palsy or other neurological diseases that may affect bladder function",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Recent insertion of IUD (within the last 3 months)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Presence of history of anatomical or functional abnormalities of the urinary tract including: Urinary tract obstruction; Urinary tract abnormality; Urolithiasis; Urinary catheterisation (in situ or in the last 48 hours); Nephrostomy tube; Ureteral stent; Spinal cord injury",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Medicine-level exclusion (not a patient criterion): 'Cefalexin has been excluded from the Medicines List of this Protocol to limit potential overuse and the emergence of cefalexin resistance.'",
+        "criteria_group": { "all_of": ["EXC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 14, "section_heading": "5. Medicines list" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 65,
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Preliminary enquiries, immediate referral and eligibility triage (flowchart pages 6-8)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'What is the sex of the patient?' 'Male or individuals who have undergone gender reassignment surgery' -> 'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP'. 'Female' -> continue to PW-1-S2.",
+          "gates": [ { "criterion": "Patient sex is recorded as 'Female' in the flowchart", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient aged between 18 and 65 years?' No -> 'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP'. Yes -> continue to PW-1-S3.",
+          "gates": [ { "criterion": "Patient is aged between 18 and 65 years", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "'Does the patient consent?*' No -> 'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP'. Yes -> 'Yes: continue on page 7'. '*The patient must be physically present in the pharmacy.'",
+          "gates": [ { "criterion": "Patient consents and is physically present in the pharmacy", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have signs and symptoms indicating pyelonephritis? (e.g. fever >38oC, chills, nausea, vomiting, flank pain)' Yes -> 'Immediate referral to Emergency Department'. No -> continue to PW-1-S5.",
+          "gates": [ { "criterion": "No signs and symptoms indicating pyelonephritis", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient presenting with 2 or more symptoms of acute cystitis?*' (Dysuria; Urinary frequency; Urinary urgency; Suprapubic pain or discomfort). 'No: presenting with only 1 symptom of acute cystitis or atypical symptoms' -> 'Conservative management including symptomatic management treatment with non-prescription medicines (if appropriate) and self-care advice. Refer to GP as patient may benefit form laboratory investigations' then 'go to: PHARMACIST CARE section on page 9 below'. 'Yes' -> continue to PW-1-S6. Footnote: '*If vaginal discharge is absent and at least two symptoms of cystitis are present (i.e. acute dysuria, frequency, urgency), the probability of cystitis is greater than 90%'",
+          "gates": [ { "criterion": "Patient is presenting with 2 or more symptoms of acute cystitis", "on_fail": "SEE_PW-2-S1" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Do symptoms of medical history (e.g. vaginal discharge, or vulval and vaginal discomfort) suggest a cause other than acute cystitis (e.g. vaginal thrush, bacterial vaginosis, vaginitis or vulvitis, chlamydia, gonorrhoea. trichomoniasis or other)' Yes -> 'Consider appropriateness of Pharmacist Only thrush treatment or refer to GP for investigation of other causes (e.g. infections such as bacterial vaginosis or herpes, trichomoniasis or other) or skin conditions'. No -> continue to PW-1-S7.",
+          "gates": [ { "criterion": "Symptoms do not suggest a cause other than acute cystitis", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have any of the following?' (Pregnancy or less than 6 weeks post-partum; Gross haematuria; Cerebral palsy or other neurological diseases that may affect bladder function; Recent insertion of IUD (within the last 3 months); Presence of history of anatomical or functional abnormalities of the urinary tract including urinary tract obstruction, urinary tract abnormality, urolithiasis, urinary catheterisation (in situ or in the last 48 hours), nephrostomy tube, ureteral stent, spinal cord injury). Yes -> 'Immediate referral to GP' and 'Symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice may be provided by pharmacist prior to review by GP'. No -> 'No: continue to page 8'.",
+          "gates": [ { "criterion": "Patient has none of the listed anatomical/functional, pregnancy, haematuria, neurological or recent-IUD conditions", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient report any of the following?' (Having diabetes or using medicines that increase the risk of UTI (e.g. SGLT2 inhibitors); Reoccurrence of UTI symptoms within 2 weeks of completing appropriate antimicrobial treatment for a previous episode; Symptoms of UTI persisting 48-72 hours after starting appropriate antibiotic treatment; 2 or more symptomatic UTIs in previous 6 months OR 3 or more in previous 12 months; Long-term inpatient care (including residential aged care facilities)). Yes -> 'Conservative management including symptomatic management treatment with non-prescription medicines (if appropriate) and self-care advice. Refer to GP as patient may benefit form laboratory investigations' and 'go to: PHARMACIST CARE section on page 9 below'. No -> continue to PW-1-S9.",
+          "gates": [ { "criterion": "Patient reports none of the listed recurrence/comorbidity risk factors", "on_fail": "SEE_PW-2-S1" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient report / present with any of the following?' (Risk factors for sexually transmitted infection (STI) including Age <30 years, Previous STI, Sexual contact without a condom/dental dam outside a mutually monogamous relationship, A new sexual partner in last 60 days, A sexual partner recently treated for an STI, Sexual contact with a sex worker; History of pyelonephritis; Taking immunosuppressant medicines; Being immunocompromised; Asplenia; Renal disease or impairment; IUD in situ (greater than 3 months)). Yes -> 'Conservative management including symptomatic management treatment with non-prescription medicines (if appropriate) and self-care advice. Refer to GP following provisional treatment by pharmacist. Refer patient for STI testing where risk factors are identified' plus 'Antibiotic treatment by pharmacist may still be considered, concurrent to a referral to the GP, if clinically appropriate (e.g. possible delay in access to GP and no contraindications to antibiotics)' and 'go to: ANTIBIOTIC THERAPY section on page 10 below'. No -> 'Provisional diagnosis for uncomplicated cystitis and proceed to appropriate treatment' and 'Continue to pharmacist care on page 9'.",
+          "gates": [ { "criterion": "Patient reports none of the listed STI/immunocompromise/renal/other risk factors", "on_fail": "SEE_PW-3-S1" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "2.2 Pharmacist Care / 2.3 Conservative Management (page 9)",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "TREAT",
+          "description": "'1. Provide the option of conservative management with non-prescription medicines as first line treatment for patients without immune compromise.* Analgesia: Ibuprofen 400mg orally, every 8 hours for up to 3 days. Maximum daily dose of 2.4g in 24 hours'. Footnote: '*For non-pregnant adult females under 65 with mild cystitis symptoms who are not immunocompromised, consider a trial of non-antibiotic therapy to manage symptoms and minimise unnecessary antibiotic use. Many women and gender diverse people under 65 years treated symptomatically (without antibiotic therapy) for acute uncomplicated cystitis become symptom-free within 1 week. The risk of developing acute pyelonephritis or sepsis following uncomplicated cystitis is low (estimated 1% to 5%), and while antibiotics reduce this risk, the benefits should be carefully considered against potential antibiotic adverse effects. Antibiotics are associated with faster symptom resolution, but the absolute difference is typically only a few days.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 9, "section_heading": "2.3 Conservative Management" }
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "EDUCATE",
+          "description": "'2. Provide non-pharmacological and self-care advice. Provide patient with Consumer Medicines Information and/or a Self-Care Fact Card. Provide patient with guidance on recognising signs and symptoms of worsening infection (e.g. fever 38oC or higher, rigors, loin or back pain, vomiting) that require prompt medical review. Increasing water intake (up to 1.5 L daily) may reduce the risk of recurrent UTI in pre-menopausal females who have inadequate fluid intake (<1.5 L per day).'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 9, "section_heading": "2.3 Conservative Management" }
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "FOLLOW_UP",
+          "description": "'If patient continues to have signs and symptoms of worsening infection after 48 hours of conservative management, advise patient to return to pharmacy for review and consider antibiotic therapy' and 'if appropriate, go to: ANTIBIOTIC THERAPY section on page 10 below'.",
+          "gates": [ { "criterion": "Signs and symptoms of worsening infection have resolved after 48 hours of conservative management", "on_fail": "SEE_PW-3-S1" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 9, "section_heading": "2.3 Conservative Management" }
+        }
+      ]
+    },
+    {
+      "id": "PW-3",
+      "name": "2.4 Antibiotic Therapy (page 10), confirm management (page 12) and communicate plan (page 15)",
+      "steps": [
+        {
+          "id": "PW-3-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'4. Confirm management is appropriate - Consult Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: Considerations for nonantibiotic therapy in line with the Therapeutic Guidelines recommendations; Contraindications and precautions; Lactation, including with nitrofurantoin if the infant is under one month or has G6PD deficiency; Medicine interactions, including with over-the-counter products such as urinary alkalinising agents, which significantly reduce the efficacy of nitrofurantoin and fosfomycin.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 12, "section_heading": "4. Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-3-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have allergies, drug-drug interactions or any other contraindications to management options?' Yes -> 'Where antibiotic therapy is considered the appropriate treatment options but all recommended antibiotics under this protocol are contraindicated, refer patient to GP'. No -> 'No: proceed with antibiotic therapy'.",
+          "gates": [ { "criterion": "Patient has no allergies, drug-drug interactions or any other contraindications to management options (at least one recommended antibiotic remains usable)", "on_fail": "REFER" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+        },
+        {
+          "id": "PW-3-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "'1. Provide empirical antibiotic therapy, where indicated': Nitrofurantoin (1st line) 100mg orally, every 6 hours for 5 days (Supply 20 capsules); Fosfomycin (2nd line) 3g orally, as a single dose (Supply 1 sachet); Trimethoprim (3rd line) 300mg orally, daily at night for 3 nights (Supply 3 tablets)* '*Only if the patient has not used trimethoprim or had a trimethoprim-resistant E. coli in the last 3 months'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+        },
+        {
+          "id": "PW-3-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "'Dispense any medications (if supplied) via pharmacy dispensing software and label according to the legislative requirements outlined in the Drugs, Poisons and Controlled Substances Regulations 2017.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+        },
+        {
+          "id": "PW-3-S5",
+          "order": 5,
+          "type": "FOLLOW_UP",
+          "description": "'2. Provide follow-up advice and expectations around duration of symptoms. Symptoms should respond to appropriate antibiotic treatment within 48 hours. If symptoms persist 48-72 hours after finishing antibiotic treatment or symptoms develop that are not symptoms of acute cystitis, patient should be advised to see a GP.' Footnote: '* This guidance has been reviewed in line with the Therapeutic Guidelines: Antibiotic March 2025 update, which reflects that trimethoprim is no longer the first-line empirical recommendation for acute cystitis. Although trimethoprim is well tolerated and effective for acute cystitis if the pathogen is susceptible, the rates of trimethoprim resistance among E. coli urine isolates in Australia have been increasing and are estimated to be around 20% (AURA 2023).'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+        },
+        {
+          "id": "PW-3-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "'6. Communicate agreed management plan' - Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient regarding: Medicine use (e.g. dosing) and how to manage adverse effects if pharmacotherapy is indicated; When to seek further care and/or treatment; When to return to the pharmacist for clinical review; Where to access testing for STIs if risk factors are identified (e.g. with the patient's usual healthcare provider, or via Melbourne Sexual Health Centre or sexual health GP partner clinics).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 15, "section_heading": "6. Communicate agreed management plan" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Ibuprofen",
+      "form": "",
+      "strength": "400mg",
+      "dose": "400mg",
+      "route": "orally",
+      "frequency": "every 8 hours",
+      "duration": "for up to 3 days",
+      "max_quantity": "",
+      "max_dose": "Maximum daily dose of 2.4g in 24 hours",
+      "quantity_to_supply": "",
+      "notes": "Analgesia offered as part of conservative management: 'Offer analgesia, including ibuprofen, to patients with symptoms of acute cystitis.' 'Consider conservative management with non-prescription medicines as first line treatment in patients without immune compromise.' Footnote: 'For non-pregnant adult females under 65 with mild cystitis symptoms who are not immunocompromised, consider a trial of non-antibiotic therapy to manage symptoms and minimise unnecessary antibiotic use.'",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 13, "section_heading": "5. Medicines list" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Nitrofurantoin",
+      "form": "capsules",
+      "strength": "100mg",
+      "dose": "100mg",
+      "route": "orally",
+      "frequency": "every 6 hours",
+      "duration": "for 5 days",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Supply 20 capsules",
+      "notes": "Empirical antibiotic therapy (1st line). Contraindications as printed: Previous serious adverse reaction to nitrofurantoin; Glucose-6-phosphate dehydrogenase (G6PD), enolase, or glutathione peroxidase deficiency (may lead to haemolytic anaemia); Severe renal impairment; Avoid in breastfeeding if infant is under one month or has G6PD deficiency. Confirm management is appropriate: 'Lactation, including with nitrofurantoin if the infant is under one month or has G6PD deficiency'; 'Patients on certain antibiotics (e.g., nitrofurantoin and fosfomycin) should avoid the use of alkalinising agents as they may significantly reduce the efficacy of their antibiotics.'",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 13, "section_heading": "5. Medicines list" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Fosfomycin",
+      "form": "sachet",
+      "strength": "3g",
+      "dose": "3g",
+      "route": "orally",
+      "frequency": "as a single dose (at night)",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Supply 1 sachet",
+      "notes": "Empirical antibiotic therapy (2nd line). Flowchart wording (p.10): 'Fosfomycin (2nd line) 3g orally, as a single dose (Supply 1 sachet)'; Medicines list wording (p.13): 'Fosfomycin (2nd line) 3g orally as a single dose (at night)'. Contraindications as printed: Previous serious adverse reaction or hypersensitivity to fosfomycin; Severe renal impairment; Not recommended in cases of fructose intolerance, glucose-galactose malabsorption or sucrase-isomaltose insufficiency. 'Patients on certain antibiotics (e.g., nitrofurantoin and fosfomycin) should avoid the use of alkalinising agents as they may significantly reduce the efficacy of their antibiotics.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 13, "section_heading": "5. Medicines list" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Trimethoprim",
+      "form": "tablets",
+      "strength": "300mg",
+      "dose": "300mg",
+      "route": "orally",
+      "frequency": "daily at night",
+      "duration": "for 3 nights",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Supply 3 tablets",
+      "notes": "Empirical antibiotic therapy (3rd line). '*Only if the patient has not used trimethoprim or had a trimethoprim-resistant E. coli in the last 3 months'. Contraindications as printed: If the patient has been treated with trimethoprim in the previous 3 months, or had a trimethoprim-resistant E. coli isolate during this time, use an alternative antibiotic for empirical therapy; Previous serious adverse reaction to trimethoprim-containing medicines; Megaloblastic anaemia due to folate deficiency; Other causes of folate deficiency; Other severe blood disorders; Porphyria; Hyperkalaemia; Treatment with methotrexate; Treatment with phenytoin; Treatment with lamivudine. '* This guidance has been reviewed in line with the Therapeutic Guidelines: Antibiotic March 2025 update, which reflects that trimethoprim is no longer the first-line empirical recommendation for acute cystitis ... rates of trimethoprim resistance among E. coli urine isolates in Australia have been increasing and are estimated to be around 20% (AURA 2023).'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 13, "section_heading": "5. Medicines list" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Urinary alkalinising agents",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Not a supply row - guidance from the Medicines list: 'The efficacy of urinary alkalinising agents for the symptomatic treatment of acute cystitis has not been established in trials, but some patients find them useful for symptom relief. Patients on certain antibiotics (e.g., nitrofurantoin and fosfomycin) should avoid the use of alkalinising agents as they may significantly reduce the efficacy of their antibiotics.' Also flagged as a medicine interaction to check: 'Medicine interactions, including with over-the-counter products such as urinary alkalinising agents, which significantly reduce the efficacy of nitrofurantoin and fosfomycin' (p.12).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 13, "section_heading": "5. Medicines list" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Cranberry products, ascorbic acid and methenamine hippurate",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Not a supply row - guidance from the Medicines list: 'Cranberry products, ascorbic acid and methenamine hippurate are not effective for the treatment of acute cystitis.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 13, "section_heading": "5. Medicines list" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Does the patient have signs and symptoms indicating pyelonephritis? (e.g. fever >38oC, chills, nausea, vomiting, flank pain)' -> 'Immediate referral to Emergency Department'",
+      "structured": { "parameter": "temperature", "operator": ">", "value": 38, "unit": "degC" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Pregnancy or less than 6 weeks post-partum' -> 'Immediate referral to GP' (symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice may be provided by pharmacist prior to review by GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Gross haematuria' -> 'Immediate referral to GP' (definition p.5: 'Presence of blood in the urine that is visible to the naked eye')",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Cerebral palsy or other neurological diseases that may affect bladder function' -> 'Immediate referral to GP'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Recent insertion of IUD (within the last 3 months)' -> 'Immediate referral to GP'",
+      "structured": { "parameter": "time since IUD insertion", "operator": "<=", "value": 3, "unit": "months" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Presence of history of anatomical or functional abnormalities of the urinary tract including: Urinary tract obstruction; Urinary tract abnormality; Urolithiasis; Nephrostomy tube; Ureteral stent; Spinal cord injury' -> 'Immediate referral to GP'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'Urinary catheterisation (in situ or in the last 48 hours)' -> 'Immediate referral to GP'",
+      "structured": { "parameter": "urinary catheterisation in situ or within the preceding period", "operator": "<=", "value": 48, "unit": "hours" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'Do symptoms of medical history (e.g. vaginal discharge, or vulval and vaginal discomfort) suggest a cause other than acute cystitis (e.g. vaginal thrush, bacterial vaginosis, vaginitis or vulvitis, chlamydia, gonorrhoea. trichomoniasis or other)' -> 'Consider appropriateness of Pharmacist Only thrush treatment or refer to GP for investigation of other causes (e.g. infections such as bacterial vaginosis or herpes, trichomoniasis or other) or skin conditions'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'Is the patient aged between 18 and 65 years?' - No -> 'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP'",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "18-65", "unit": "years" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'What is the sex of the patient?' - 'Male or individuals who have undergone gender reassignment surgery' -> 'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Does the patient consent?*' - No -> 'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP' (*The patient must be physically present in the pharmacy)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Having diabetes or using medicines that increase the risk of UTI (e.g. SGLT2 inhibitors)' -> 'Conservative management ... Refer to GP as patient may benefit form laboratory investigations'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'Reoccurrence of UTI symptoms within 2 weeks of completing appropriate antimicrobial treatment for a previous episode' -> 'Conservative management ... Refer to GP as patient may benefit form laboratory investigations'",
+      "structured": { "parameter": "interval from completing appropriate antimicrobial treatment for a previous episode to reoccurrence of UTI symptoms", "operator": "<=", "value": 2, "unit": "weeks" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Symptoms of UTI persisting 48-72 hours after starting appropriate antibiotic treatment' -> 'Conservative management ... Refer to GP as patient may benefit form laboratory investigations'",
+      "structured": { "parameter": "duration of UTI symptoms after starting appropriate antibiotic treatment", "operator": ">=", "value": 48, "unit": "hours" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'2 or more symptomatic UTIs in previous 6 months' -> 'Conservative management ... Refer to GP as patient may benefit form laboratory investigations'",
+      "structured": { "parameter": "symptomatic UTIs in previous 6 months", "operator": ">=", "value": 2, "unit": "episodes" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'3 or more in previous 12 months' (symptomatic UTIs) -> 'Conservative management ... Refer to GP as patient may benefit form laboratory investigations'",
+      "structured": { "parameter": "symptomatic UTIs in previous 12 months", "operator": ">=", "value": 3, "unit": "episodes" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'Long-term inpatient care (including residential aged care facilities)' -> 'Conservative management ... Refer to GP as patient may benefit form laboratory investigations'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'Risk factors for sexually transmitted infection (STI) including: Age <30 years; Previous STI; Sexual contact without a condom/dental dam outside a mutually monogamous relationship; A new sexual partner in last 60 days; A sexual partner recently treated for an STI; Sexual contact with a sex worker' -> 'Refer to GP following provisional treatment by pharmacist. Refer patient for STI testing where risk factors are identified.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "STI risk factor sub-item 'Age <30 years' -> 'Refer to GP following provisional treatment by pharmacist. Refer patient for STI testing where risk factors are identified.'",
+      "structured": { "parameter": "age (STI risk factor)", "operator": "<", "value": 30, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'History of pyelonephritis' -> 'Refer to GP following provisional treatment by pharmacist' (antibiotic treatment by pharmacist may still be considered, concurrent to a referral to the GP, if clinically appropriate)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'Taking immunosuppressant medicines' -> 'Refer to GP following provisional treatment by pharmacist'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'Being immunocompromised' -> 'Refer to GP following provisional treatment by pharmacist'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'Asplenia' -> 'Refer to GP following provisional treatment by pharmacist'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'Renal disease or impairment' -> 'Refer to GP following provisional treatment by pharmacist'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'IUD in situ (greater than 3 months)' -> 'Refer to GP following provisional treatment by pharmacist'",
+      "structured": { "parameter": "duration of IUD in situ", "operator": ">", "value": 3, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'Provide patient with guidance on recognising signs and symptoms of worsening infection (e.g. fever 38oC or higher, rigors, loin or back pain, vomiting) that require prompt medical review.'",
+      "structured": { "parameter": "temperature", "operator": ">=", "value": 38, "unit": "degC" },
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 9, "section_heading": "2.3 Conservative Management" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'If symptoms persist 48-72 hours after finishing antibiotic treatment or symptoms develop that are not symptoms of acute cystitis, patient should be advised to see a GP.'",
+      "structured": { "parameter": "symptom duration after finishing antibiotic treatment", "operator": ">=", "value": 48, "unit": "hours" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'Where antibiotic therapy is considered the appropriate treatment options but all recommended antibiotics under this protocol are contraindicated, refer patient to GP' (p.10) / 'Where antibiotic therapy is considered the appropriate treatment option but all recommended antibiotics under this protocol are contraindicated, refer the patient to their GP for further investigation and consultation' (p.14)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to GP as patient may benefit form laboratory investigations",
+      "Refer to GP following provisional treatment by pharmacist",
+      "Refer patient for STI testing where risk factors are identified (e.g. with the patient's usual healthcare provider, or via Melbourne Sexual Health Centre or sexual health GP partner clinics)",
+      "refer the patient to their GP for further investigation and consultation"
+    ],
+    "urgent": [
+      "Immediate referral to GP",
+      "symptoms ... that require prompt medical review",
+      "patient should be advised to see a GP (symptoms persist 48-72 hours after finishing antibiotic treatment)"
+    ],
+    "emergency": [
+      "Immediate referral to Emergency Department (e.g. fever >38oC, chills, nausea, vomiting, flank pain)"
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+  },
+  "review_followup": [
+    {
+      "when": "After 48 hours of conservative management",
+      "what": "'If patient continues to have signs and symptoms of worsening infection after 48 hours of conservative management, advise patient to return to pharmacy for review and consider antibiotic therapy; if appropriate, go to: ANTIBIOTIC THERAPY section on page 10 below.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 9, "section_heading": "2.3 Conservative Management" }
+    },
+    {
+      "when": "Within 48 hours of appropriate antibiotic treatment",
+      "what": "'Symptoms should respond to appropriate antibiotic treatment within 48 hours.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+    },
+    {
+      "when": "48-72 hours after finishing antibiotic treatment",
+      "what": "'If symptoms persist 48-72 hours after finishing antibiotic treatment or symptoms develop that are not symptoms of acute cystitis, patient should be advised to see a GP.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 10, "section_heading": "2.4 Antibiotic Therapy" }
+    },
+    {
+      "when": "As advised during the consultation",
+      "what": "Comprehensive advice should be provided regarding 'When to seek further care and/or treatment' and 'When to return to the pharmacist for clinical review'.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 15, "section_heading": "6. Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must share a copy of the record of the service to the patient and with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply."
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-urinary-tract-infections.pdf", "page": 11, "section_heading": "3. Clinical documentation requirements" }
+  },
+  "references": [
+    "Pharmaceutical Society of Australia. Treatment guideline for pharmacists: Cystitis https://my.psa.org.au/s/article/Treatment-guideline-for-pharmacists-cystitis (page 16)",
+    "Antibiotic [published March 2025]. In: Therapeutic Guidelines. Melbourne: Therapeutic Guidelines Limited; accessed 1 April 2025. https://www.tg.org.au (page 16)",
+    "Australian STI management guidelines for use in primary care. https://sti.guidelines.org.au/sexual-history/ (page 16)",
+    "Professional Practice Standards 2023, version 6. https://www.psa.org.au/practice-support-industry/pps/ (page 16)",
+    "Victorian Community Pharmacist Program - Uncomplicated UTI patient handout: https://www.health.vic.gov.au/primary-care/community-pharmacist-program-resources-for-pharmacists (page 16)",
+    "Better Health Channel: https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/urinary-tract-infections-uti (page 16)",
+    "UTI fact sheet from Kidney Health Australia: https://kidney.org.au/wp-content/uploads/2025/10/KHA-Factsheet-urinary-tract-infections-2018.pdf (page 16)",
+    "PSA self-care fact sheet: https://www.psa.org.au/wp-content/uploads/2023/02/4254-FC-Urinary-tract-infection_ekiosk.pdf (page 16)",
+    "Melbourne Sexual Health Centre for free STI checks: https://www.mshc.org.au/clinics-services/our-services/sti-clinic (page 16)",
+    "Therapeutic Guidelines, Australian Medicines Handbook and other relevant references (to confirm treatment recommendation is appropriate) (page 12)",
+    "Pharmaceutical Society of Australia Treatment guideline for pharmacists: Cystitis (intended use with this protocol) (page 12)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Flowchart column alignment pages 7-8",
+      "observed": "The extracted text of the pages 7-8 flowcharts interleaves the question column, the 'Yes'/'No' branch labels and the outcome columns; e.g. 'Yes' and 'go to: PHARMACIST CARE section on page 9 below' appear on the same lines as question text, and 'No' labels appear after long outcome blocks.",
+      "why_unclear": "Branch (Yes/No) to action mapping cannot be read with certainty from the extraction; steps transcribed best-effort and marked confidence 'medium'.",
+      "source_page": 7
+    },
+    {
+      "topic": "Which branch carries 'go to: PHARMACIST CARE section on page 9 below' (page 8)",
+      "observed": "On page 8 both risk-factor questions show 'go to: PHARMACIST CARE section on page 9 below' alongside the Yes-branch conservative-management text, while the No path of the second question leads to 'Provisional diagnosis for uncomplicated cystitis ... Continue to pharmacist care on page 9'. Page 8 also shows 'go to: ANTIBIOTIC THERAPY section on page 10 below' next to the antibiotic-concurrent-referral text.",
+      "why_unclear": "Text extraction does not preserve the flowchart geometry; the alternative readings are recorded rather than reconciled.",
+      "source_page": 8
+    },
+    {
+      "topic": "Age band boundary inclusivity",
+      "observed": "'Is the patient aged between 18 and 65 years?' - the document does not state whether 18 and 65 are inclusive; the conservative-management footnote separately refers to 'non-pregnant adult females under 65'.",
+      "why_unclear": "Boundary inclusivity is not printed; age_bounds recorded as min 18 / max 65 as printed.",
+      "source_page": 6
+    },
+    {
+      "topic": "Symptom count criteria wording",
+      "observed": "The flowchart lists four symptoms of acute cystitis (Dysuria, Urinary frequency, Urinary urgency, Suprapubic pain or discomfort) and requires '2 or more symptoms', while the footnote names three ('i.e. acute dysuria, frequency, urgency') when stating probability greater than 90% if vaginal discharge is absent.",
+      "why_unclear": "Two slightly different symptom sets are printed; both recorded, neither reconciled.",
+      "source_page": 7
+    },
+    {
+      "topic": "Allergy/contraindication branch on page 10",
+      "observed": "'Does the patient have allergies, drug-drug interactions or any other contraindications to management options? Yes -> Where antibiotic therapy is considered the appropriate treatment options but all recommended antibiotics under this protocol are contraindicated, refer patient to GP'.",
+      "why_unclear": "Unclear whether any single allergy/interaction diverts the patient or only when all recommended antibiotics are contraindicated; the structured gate records the stricter reading and both statements are preserved.",
+      "source_page": 10
+    },
+    {
+      "topic": "Non-supply products named in the Medicines list",
+      "observed": "Cranberry products, ascorbic acid and methenamine hippurate are not effective for the treatment of acute cystitis; urinary alkalinising agents have not been established in trials; both are captured as treatment notes rather than supply rows.",
+      "why_unclear": "Document gives guidance but no dose/supply instruction, so no dosing fields could be transcribed.",
+      "source_page": 13
+    },
+    {
+      "topic": "referral block page range",
+      "observed": "Referral destinations and criteria appear from page 6 (flowchart) through page 15; the shared provenance object for the referral block uses the first page (6).",
+      "why_unclear": "Spec allows one shared provenance for the block; range recorded here.",
+      "source_page": 6
+    },
+    {
+      "topic": "'Male or individuals who have undergone gender reassignment surgery' branch wording",
+      "observed": "The flowchart routes 'Male or individuals who have undergone gender reassignment surgery' to usual care and/or referral to GP; wording transcribed verbatim without interpretation of clinical intent.",
+      "why_unclear": "Document wording is transcribed as printed; no clinical interpretation added.",
+      "source_page": 6
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "'Where the protocol indicates to \"Refer to General Practitioner\", the Pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate. If timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) or an urgent care clinic may be considered as an alternative pathway.'",
+      "source_page": 6,
+      "reason": "Alternative referral destinations (VVED, urgent care clinic) are hedged as 'may be considered'; local policy must confirm approved destinations."
+    },
+    {
+      "item": "Requirement that pharmacists have completed 'the current training requirements specified in the departmental guidance' before supplying Schedule 4 poisons.",
+      "source_page": 5,
+      "reason": "Training requirement points to external departmental guidance; verify per pharmacist before go-live."
+    },
+    {
+      "item": "'Pharmacists are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 5,
+      "reason": "Open-ended professional judgement clause needs a local policy boundary for an automated rules engine."
+    },
+    {
+      "item": "'Provide usual care including symptomatic treatment with non-prescription medicines (if appropriate) and self-care advice and/or refer to GP' for patients outside the flowchart scope (sex, age, consent branches).",
+      "source_page": 6,
+      "reason": "'Usual care' and 'and/or refer to GP' are undefined in the protocol; local policy must define what is provided and when referral is mandatory."
+    },
+    {
+      "item": "Consent covering 'access to the patient's My Health Record for the purpose of checking inclusion/exclusion criteria and uploading information relating to the consultation as required'.",
+      "source_page": 11,
+      "reason": "Depends on local system access and patient consent arrangements."
+    },
+    {
+      "item": "'Consult Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate'.",
+      "source_page": 12,
+      "reason": "External references must be confirmed as current/accessible locally at go-live."
+    },
+    {
+      "item": "'Dispense any medications (if supplied) via pharmacy dispensing software and label according to the legislative requirements outlined in the Drugs, Poisons and Controlled Substances Regulations 2017.'",
+      "source_page": 10,
+      "reason": "Quantity and labelling implementation must be configured in local dispensing software."
+    },
+    {
+      "item": "'Non-antibiotic therapy may be discussed as an option for mild acute cystitis in nonpregnant females under 65 without immune compromise' and 'consider a trial of non-antibiotic therapy to manage symptoms and minimise unnecessary antibiotic use'.",
+      "source_page": 13,
+      "reason": "Clinician-judgement option with no dosing/stop rule printed; local policy must define how it is offered and reviewed."
+    },
+    {
+      "item": "Trimethoprim may only be used 'if the patient has not used trimethoprim or had a trimethoprim-resistant E. coli in the last 3 months'.",
+      "source_page": 10,
+      "reason": "Requires a reliable history/MHR check; local process for verifying prior use must be confirmed."
+    }
+  ]
+}

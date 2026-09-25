@@ -1,0 +1,508 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf",
+    "pdf_sha256": "81d05c8e56d81bb0b66141db6e228377621de4a07b41cc5c0ad6dc19245da867",
+    "page_count": 5,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "Authority – Supply of restricted substances by pharmacists – Hormonal contraception continuation",
+    "instrument_version": "Dated: 25 February 2026 (signed by Dr Kerry Chant, Chief Health Officer, Delegation Number PH380, PH381, PH427; revokes the instrument for continuation of hormonal contraception dated 30 January 2025)",
+    "effective_date": "Commences on publication (no calendar date printed); cancelled on 1 March 2027 unless earlier cancelled",
+    "legal_basis": "Poisons and Therapeutic Goods Act 1966, section 10(4)(d); Poisons and Therapeutic Goods Regulation 2008, clauses 170 and 171 for the purpose of clause 53",
+    "supervision_model": "approved pharmacist (document's own term) — a pharmacist holding general registration under the Health Practitioner Regulation National Law (NSW), employed or engaged in an 'approved pharmacy', who has successfully completed Training Pathway 1 (Australasian College of Pharmaceutical Society of Australia 'Pharmacy Oral Contraceptives: a comprehensive training course for pharmacists (NSW)' OR 'Contraception Essentials' NSW) or Training Pathway 2 (Queensland University of Technology Safe prescribing and quality use of medicines course OR James Cook University Extended community practice pharmacists course subjects PC6300 / PC6100 / PC6200, plus any additional CHO-approved training modules; Pathway 2 pharmacists must also register their details with NSW Health)",
+    "scope_summary": "NSW Health Authority authorising an approved pharmacist to supply listed restricted hormonal contraception substances (single or combined oral progestogen/oestrogen preparations, injectable medroxyprogesterone 150mg/mL, combined intravaginal ethinylestradiol+etonogestrel 2.7+11.7 mg ring) to defined female patient classes for the CONTINUATION (not initiation) of hormonal contraception otherwise than on prescription, subject to prior-supply history (24 months), continuity windows (4-week / 2-week), primarily-contraceptive purpose, a 12-month re-supply limit, in-person consultation, UKMEC 3/4 record consideration and referral circumstances set by the external NSW Pharmacist Practice Standards for Hormonal Contraception."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Column A, row 1: A female patient 18 years of age or over and up to and including aged 49 years who has been supplied or prescribed the oral contraceptive pill by a medical practitioner or nurse practitioner for the previous 24 months and use has either been continuous, or there has been no longer than a 4-week break in the preceding 30 days. (Row starts on page 1; the continuity clause continues at the top of page 2.)",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Column A, row 2: A female patient 25 years of age or over and up to and including 39 years who has been supplied or prescribed injectable medroxyprogesterone (150mg/mL), by a medical practitioner or nurse practitioner for the previous 24 months and treatment has either been continuous, or there has been no longer than a 2-week delay in treatment in the preceding 30 days.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Column A, row 3: A female patient 18 years of age or over and up to and including aged 49 years who has been supplied or prescribed the combined intravaginal form of ethinylestradiol+etonogestrel (2.7+11.7 mg) ring by a medical practitioner or nurse practitioner for the previous 24 months and use has either been continuous or there has been no longer than a 2-week break in the preceding 30 days.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "INC-4",
+        "text": "The pharmacist must only supply the Applicable Restricted Substances for the continuation of hormonal contraception.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-5",
+        "text": "The supply to the applicable patient must be primarily for the purpose of contraception.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-6",
+        "text": "The pharmacist must ensure that the applicable patient has not been supplied an Applicable Restricted Substance by the pharmacist or has not, to the pharmacist's knowledge, been supplied by any other pharmacist acting under this authority for a period exceeding 12 months.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-7",
+        "text": "A consultation in person at an approved pharmacy between the applicable patient and pharmacist must take place prior to supply.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-8",
+        "text": "The pharmacist acts in accordance with NSW Pharmacist Practice Standards for Hormonal Contraception approved by the Chief Health Officer and published on the NSW Health Website, including in relation to any limitations on the supply of Applicable Restricted Substances to an applicable patient based on their age or other factor, and circumstances where a patient must be referred to a medical practitioner or other healthcare professional.",
+        "criteria_group": { "all_of": ["INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": ["INC-1", "INC-2", "INC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Conditional (applies only when supplying injectable medroxyprogesterone): for a supply of injectable medroxyprogesterone (150mg/mL), an approved pharmacist may supply the substance by way of administration to an applicable patient only where the pharmacist has met the training requirements specified in and otherwise complies with administration requirements set out in the NSW Pharmacist Practice Standards for Hormonal Contraception.",
+        "criteria_group": { "all_of": ["INC-2", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "For oral or combined intravaginal ring continuation, the patient is under 18 years of age or over 49 years of age (Column A rows 1 and 3 apply only to a female patient 18 years of age or over and up to and including aged 49 years).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "For injectable continuation, the patient is under 25 years of age or over 39 years of age (Column A row 2 applies only to a female patient 25 years of age or over and up to and including 39 years).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "The patient has not been supplied or prescribed the relevant method (oral contraceptive pill, injectable medroxyprogesterone (150mg/mL), or combined intravaginal ethinylestradiol+etonogestrel (2.7+11.7 mg) ring) by a medical practitioner or nurse practitioner for the previous 24 months.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Continuity window breached: for the oral pill, use has not been continuous and there has been longer than a 4-week break in the preceding 30 days; for injectable, treatment has not been continuous and there has been longer than a 2-week delay in treatment in the preceding 30 days; for the intravaginal ring, use has not been continuous and there has been longer than a 2-week break in the preceding 30 days.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "The applicable patient has been supplied an Applicable Restricted Substance by the pharmacist, or to the pharmacist's knowledge by any other pharmacist acting under this authority, for a period exceeding 12 months.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "The supply is not for the continuation of hormonal contraception (i.e. it is an initiation or some other supply).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "The supply is not primarily for the purpose of contraception.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "A consultation in person at an approved pharmacy between the applicable patient and pharmacist does not take place prior to supply.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "A limitation on supply based on the patient's age or other factor applies under the NSW Pharmacist Practice Standards for Hormonal Contraception, or the referral circumstances in that Practice Standard apply (clause 2(d)). The specific limits/circumstances are not printed in this instrument.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "Conditional (injectable only): supply of injectable medroxyprogesterone (150mg/mL) by way of administration where the pharmacist has not met the training requirements or does not comply with the administration requirements set out in the NSW Pharmacist Practice Standards for Hormonal Contraception (clause 2(e)).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 49,
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "ethinyloestadiol",
+      "form": "single or combined oral form",
+      "strength": "35μg or less",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'a. ethinyloestadiol (35μg or less)' in Column B under 'Single or combined oral forms of:'. Continuation supply only; quantity/duration not printed in this instrument (see NSW Pharmacist Practice Standards for Hormonal Contraception). Spelling differs from the OCP protocol document, which prints 'ethinylestadiol'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "levonorgestrel",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'b. levonorgestrel' under 'Single or combined oral forms of:'. No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "norethisterone",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'c. norethisterone' under 'Single or combined oral forms of:' (list continues from page 1 onto page 2). No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "drospirenone",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'd. drospirenone' under 'Single or combined oral forms of:'. No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "nomegestrol",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'e. nomegestrol' under 'Single or combined oral forms of:'. No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "desogestrel",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'f. desogestrel' under 'Single or combined oral forms of:'. No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "dienogest",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'g. dienogest' under 'Single or combined oral forms of:'. No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "gestodene",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'h. gestodene' under 'Single or combined oral forms of:'. No strength, dose, frequency or duration printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-9",
+      "drug": "medroxyprogesterone",
+      "form": "injectable form",
+      "strength": "150mg/mL",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'Injectable form of: medroxyprogesterone (150mg/mL)'. Continuation only, for female patients 25 to 39 years previously supplied/prescribed this injection for 24 months with no longer than a 2-week delay in the preceding 30 days. Supply by way of administration only where the pharmacist has met the training and administration requirements in the NSW Pharmacist Practice Standards for Hormonal Contraception (clause 2(e)). Dose volume, frequency and duration not printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "TX-10",
+      "drug": "ethinylestradiol+etonogestrel",
+      "form": "combined intravaginal ring",
+      "strength": "2.7+11.7 mg",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Printed as 'Combined intravaginal form of: ethinylestradiol+etonogestrel (2.7+11.7 mg) ring'. Continuation only, for female patients 18 to 49 years previously supplied/prescribed the ring for 24 months with no longer than a 2-week break in the preceding 30 days. Dose, frequency and duration not printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "The pharmacist must ensure that the applicable patient has not been supplied an Applicable Restricted Substances by the pharmacist or has not, to the pharmacist's knowledge, been supplied by any other pharmacist acting under this authority for a period exceeding 12 months.",
+      "structured": { "parameter": "months since last supply under this authority", "operator": "<=", "value": 12, "unit": "months" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "2) Conditions — Limitation on supply" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Column A oral row: A female patient 18 years of age or over and up to and including aged 49 years ... (patient outside this age band is not an applicable patient for oral pill or intravaginal ring continuation).",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "18 to 49 years", "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 1, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Column A injectable row: A female patient 25 years of age or over and up to and including 39 years ... (patient outside this age band is not an applicable patient for injectable medroxyprogesterone continuation).",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "25 to 39 years", "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "The pharmacist must ensure that the applicable patient has not been supplied an Applicable Restricted Substances ... for a period exceeding 12 months; and the pharmacist acts in accordance with ... circumstances where a patient must be referred to a medical practitioner or other healthcare professional.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Continuity window breached — oral: 'there has been no longer than a 4-week break in the preceding 30 days'; injectable: 'no longer than a 2-week delay in treatment in the preceding 30 days'; ring: 'no longer than a 2-week break in the preceding 30 days'.",
+      "structured": { "parameter": "break or delay in treatment in the preceding 30 days", "operator": ">", "value": "4 weeks (oral) / 2 weeks (injectable and ring)", "unit": "weeks" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 2, "section_heading": "1) Authorisation" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Records must contain ... any information known to the pharmacist that is relevant to the applicable patient's diagnosis or treatment (for example, information concerning the patient's medical history, with particular consideration of UKMEC 3 and 4 conditions).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Circumstances where a patient must be referred to a medical practitioner or other healthcare professional as set out in the NSW Pharmacist Practice Standards for Hormonal Contraception approved by the Chief Health Officer and published on the NSW Health Website (clause 2(d)).",
+      "Particular consideration of UKMEC 3 and 4 conditions in the patient's medical history must be recorded (clause 2(h)), referencing the RANZCOG Contraception Clinical Guideline."
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 3, "section_heading": "2) Conditions — Limitation on supply" }
+  },
+  "review_followup": [
+    {
+      "when": "Within a week following the consultation, if the patient consents to the disclosure",
+      "what": "Share a record of the consultation and any subsequent consultations (including adverse events) with the applicable patient's usual treating medical practitioner or medical practice, where the patient has one; communication should ensure patient confidentiality is maintained and use of a secure digital messaging platform is considered best practice.",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 4, "section_heading": "2) Conditions — Limitation on supply" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must seek the applicable patient's consent to share a record of the consultation and any subsequent consultations (including adverse events) with the applicable patient's usual treating medical practitioner or medical practice, where the patient has one; if the patient consents, the record must be shared within a week following the consultation (clause 2(i)).",
+      "Pharmacists who complete Training Pathway 2 must provide NSW Health with their full name, contact details, pharmacist registration number, intended services and location of services via the expanded services application form (clause 4 Definitions)."
+    ],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-supply-restricted-substances.pdf", "page": 4, "section_heading": "4) Definitions" }
+  },
+  "references": [
+    "The Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG) Contraception Clinical Guideline (1991, updated August 2024): https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinical-Guideline.pdf (footnote 1, page 3).",
+    "NSW Pharmacist Practice Standards for Hormonal Contraception approved by the Chief Health Officer and published on the NSW Health Website (clause 2(d)-(e), page 3)."
+  ],
+  "open_questions": [
+    {
+      "topic": "Column A table rows span pages 1-2 in the text extraction",
+      "observed": "Row 1 (oral pill) begins on page 1 with 'A female patient 18 years of age or over and up to and including aged 49 years who has been supplied or prescribed the oral contraceptive pill by a medical practitioner or nurse practitioner for the previous 24 months' and continues on page 2 with 'and use has either been continuous, or there has been no longer than a 4-week break in the preceding 30 days.' Column B drug list likewise spans pages 1-2.",
+      "why_unclear": "Two-column table is reflowed by text extraction; the row is transcribed as one criterion with provenance at the page where the row starts (page 1), with the continuation page recorded here.",
+      "source_page": 1
+    },
+    {
+      "topic": "Clinical limits and referral circumstances are external to this instrument",
+      "observed": "Clause 2(d) defers 'any limitations on the supply of Applicable Restricted Substances to an applicable patient based on their age or other factor, and circumstances where a patient must be referred to a medical practitioner or other healthcare professional' to the NSW Pharmacist Practice Standards for Hormonal Contraception, which is not reproduced in this document. No assessment steps or specific referral triggers are printed.",
+      "why_unclear": "The operative clinical criteria live in a separate published Practice Standard; no diagnosis pathway can be transcribed from this instrument alone.",
+      "source_page": 3
+    },
+    {
+      "topic": "No dose, frequency or supply duration printed for continuation supplies",
+      "observed": "Column B lists substances only (ethinyloestadiol (35μg or less), levonorgestrel, norethisterone, drospirenone, nomegestrol, desogestrel, dienogest, gestodene, medroxyprogesterone (150mg/mL), ethinylestradiol+etonogestrel (2.7+11.7 mg) ring). No dose, frequency, quantity or duration is printed; the only numeric supply constraint is the 12-month re-supply limit in clause 2(c).",
+      "why_unclear": "Quantity/duration detail is deferred to the external Practice Standard; treatment fields are left empty rather than inferred.",
+      "source_page": 2
+    },
+    {
+      "topic": "UKMEC 3 and 4 handling stated only as a record-keeping consideration",
+      "observed": "Clause 2(h) requires records to contain medical history information 'with particular consideration of UKMEC 3 and 4 conditions' (with footnote to the RANZCOG Contraception Clinical Guideline), but the instrument does not state that a UKMEC 3 or 4 condition makes the patient ineligible.",
+      "why_unclear": "The eligibility rule for UKMEC categories is not printed here; captured as a judgement/referral prompt rather than an exclusion.",
+      "source_page": 3
+    },
+    {
+      "topic": "Training pathway table reads imperfectly",
+      "observed": "On page 4 the training options extract as interleaved fragments: 'Australasian College of Pharmaceutical Society of Pharmacy Oral Contraceptives: OR Australia NSW – Contraception / a comprehensive training Essentials; course for pharmacists (NSW);' and 'The Queensland University of Technology's Safe prescribing and quality use of medicines course; OR James Cook University's Extended community practice pharmacists course (subject PC6300).'",
+      "why_unclear": "Two-column table layout is misaligned in text extraction; exact wording/structure of Training Pathway 1 and 2 cannot be transcribed with confidence.",
+      "source_page": 4
+    },
+    {
+      "topic": "No urgent or emergency referral destinations printed",
+      "observed": "The instrument contains no urgent or emergency referral list; the only referral wording is the clause 2(d) cross-reference to the external Practice Standard.",
+      "why_unclear": "Document is silent; empty urgent/emergency arrays reflect the source rather than an extraction gap.",
+      "source_page": 3
+    },
+    {
+      "topic": "Commencement date not printed as a calendar date",
+      "observed": "Clause 5: 'This authority commences on publication.' Clause 6: 'This authority is cancelled on 1 March 2027, unless earlier cancelled.' The instrument is dated 25 February 2026.",
+      "why_unclear": "Effective date depends on the publication date, which is not stated in the document.",
+      "source_page": 5
+    },
+    {
+      "topic": "Notifiable conditions",
+      "observed": "No notifiable-condition or Australian Immunisation Register reporting requirement is printed. 'notifiable.required = true' reflects only the consent-based sharing of the consultation record with the patient's usual GP (clause 2(i)) and the NSW Health registration requirement for Training Pathway 2 pharmacists (clause 4).",
+      "why_unclear": "Document is silent on notifiable conditions; recorded so the flag is not misread.",
+      "source_page": 4
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Load the NSW Pharmacist Practice Standards for Hormonal Contraception (approved by the Chief Health Officer) and transcribe its age/other-factor supply limitations, assessment requirements and referral circumstances before go-live.",
+      "source_page": 3,
+      "reason": "Clause 2(d) makes supply conditional on content that is not printed in this instrument; INC-8/EXC-9/RF-4 cannot be evaluated without it."
+    },
+    {
+      "item": "Confirm the operational rule for the 12-month re-supply limit in clause 2(c), including how 'to the pharmacist's knowledge, been supplied by any other pharmacist acting under this authority' is checked across pharmacies.",
+      "source_page": 2,
+      "reason": "Cross-pharmacy check has no stated data source in the document; must be confirmed before go-live."
+    },
+    {
+      "item": "Confirm which age band applies to each product class (oral and intravaginal ring 18-49 years; injectable medroxyprogesterone 25-39 years) is implemented as product-specific, since eligibility.age_bounds can only hold one band (18-49 recorded).",
+      "source_page": 2,
+      "reason": "Age limits differ by Column A row; a single age_bounds pair cannot express both."
+    },
+    {
+      "item": "Verify the approved pharmacist Training Pathway 1 / Training Pathway 2 wording and course codes (ACPSA 'Pharmacy Oral Contraceptives: a comprehensive training course for pharmacists (NSW)' / 'Contraception Essentials'; QUT Safe prescribing and quality use of medicines course; JCU PC6300, PC6100, PC6200) directly against the PDF.",
+      "source_page": 4,
+      "reason": "Two-column training table extracts as garbled interleaved text; training completion is a precondition of the authority."
+    },
+    {
+      "item": "Confirm the training and administration requirements for supply of injectable medroxyprogesterone (150mg/mL) by way of administration (clause 2(e)) against the external Practice Standard.",
+      "source_page": 3,
+      "reason": "Requirements are referenced but not printed; administration cannot proceed without them."
+    },
+    {
+      "item": "Confirm local policy for the seven (7) year clinical record retention, in-person consultation and display of the pharmacist's AHPRA-registered name at or near the consultation room (clauses 2(f), 2(g), 2(h)).",
+      "source_page": 3,
+      "reason": "Operational requirements left to the pharmacy's implementation; must be confirmed before go-live."
+    },
+    {
+      "item": "Confirm handling of the publication/commencement date and the 1 March 2027 cancellation date in the prescribing module.",
+      "source_page": 5,
+      "reason": "Commencement is 'on publication' with no calendar date printed; expiry must gate the protocol's availability."
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf",
+    "pdf_sha256": "32db1c7dcef641bc3816486c3f2a94ba5ba63a4bd018adaf2b00e9bf29313301",
+    "page_count": 12,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Acute otitis media: Clinical practice guideline",
+    "instrument_version": "No version number printed; footer codes \"62'GUA\" and \"180510-DEC\" (p.12); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division, p.12)",
+    "legal_basis": "Authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.'",
+    "supervision_model": "Pharmacists approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA); 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority' and retain responsibility for clinical assessment and decisions appropriate to the individual (document's own terminology; not labelled collaborative/autonomous).",
+    "scope_summary": "Clinical practice guideline for pharmacist management of acute otitis media (AOM) under the EACPP (WA): service obligations and consent, patient history, examination including otoscopy and TM visualisation, diagnostic criteria for children and adults, Table 1 children at high risk of complications, non-pharmacological measures, pharmacotherapy (oral analgesia, oral antibiotic therapy), confirm management, communicate plan, clinical review (3 months intact TM; 6 weeks small perforation), plus 'Refer when' and 'Treat and concurrently refer' referral triggers. Service restricted to patients aged 2 years or over."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 2 years or over.",
+        "criteria_group": {"all_of": ["INC-2", "INC-3", "INC-4", "INC-7"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 1, "section_heading": "Contents"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": {"all_of": ["INC-1", "INC-3", "INC-4", "INC-7"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-4", "INC-7"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-4",
+        "text": "In both children and adults, diagnosis of AOM is based on clinical history and ear examination using an otoscope.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-7"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-5",
+        "text": "In children, a diagnosis of AOM requires the rapid onset (within 48 hours) of: pain; signs of acute inflammation of the TM (TM is bulging and opaque; TM may be red from inflammation or white from pus in the middle ear); signs of middle ear effusion (otorrhoea can be indicative of TM perforation and middle ear effusion if acute otitis externa (AOE) has been excluded).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-7"], "any_of": ["INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-6",
+        "text": "In adults, unilateral symptoms are most common and include mild to severe ear pain and decreased hearing: an upper respiratory tract infection (URTI) or allergic rhinitis will often precede the onset of AOM; other symptoms in adults include dizziness/vertigo (infrequent), systemic symptoms (particularly fever), partial or complete opacification of the TM, or erythema; in adults, the key signs of AOM are bulging and reduced mobility of the TM.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-7"], "any_of": ["INC-5"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 5, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-7",
+        "text": "The TM must be visualised to confirm a diagnosis of AOM, although this can be difficult in the presence of extensive otorrhoea.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": ["INC-5", "INC-6"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 6, "section_heading": "Ear examination using otoscopy"}
+      }
+    ],
+    "exclusion": [
+      {"id": "EXC-1", "text": "the patient is aged below 2 years (does not preclude a patient from accessing usual pharmacy care)", "criteria_group": {"all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-2", "text": "unclear diagnosis", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-3", "text": "recent significant ear or head trauma (may be associated with hearing loss or balance issues)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-4", "text": "severe symptoms or rapidly worsening symptoms, including intense pain, headache, or facial paralysis/palsy, balance issues, confusion, focal neurological signs and red, swollen, and tender behind the ear", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-5", "text": "signs or symptoms of sepsis (e.g. fever, hypothermia, respiratory distress, tachycardia, rash, hypotension, cold extremities), or other significant systemic symptoms including signs of dehydration, weakness, significant irritability, lethargy, paleness, loss of appetite", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-6", "text": "tympanic membrane (TM) 'red flag' signs: - crust/scab or granulation in attic region (discharge/odour may be present)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-7", "text": "tympanic membrane (TM) 'red flag' signs: - severely retracted (sucked in) TM or retraction pocket in attic area of ear drum", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-8", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-8", "text": "tympanic membrane (TM) 'red flag' signs: - dull white mass behind TM or chalky patches", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-9", "EXC-10", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-9", "text": "tympanic membrane (TM) 'red flag' signs: - perforation or retraction in attic region, near the edge of the TM, or medium to large in size (refer to Figure 1)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-10", "EXC-11"]}, "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-10", "text": "otoscopic examination is not possible or TM cannot be visualised**", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-11"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-11", "text": "TM perforation still evident after 6 weeks following initial consultation", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}}
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": null,
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 1, "section_heading": "Contents"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-2", "EXE-3", "EXE-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 1, "section_heading": "Contents"}
+      },
+      {
+        "id": "EXE-2",
+        "text": "the patient is aged below 2 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-3", "EXE-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}
+      },
+      {
+        "id": "EXE-3",
+        "text": "**If the TM cannot be visualised in a paediatric patient at first presentation and antibiotic therapy is not indicated, they can be advised on appropriate analgesia and asked to return within 48 to 72 hours for reassessment. They should be advised to seek care from an appropriate healthcare provider if their condition deteriorates.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-2", "EXE-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}
+      },
+      {
+        "id": "EXE-4",
+        "text": "All children presenting with signs or symptoms of a complication, or at high risk of complications, must be referred (concurrent to commencement of antibiotic therapy where appropriate) to an appropriate healthcare provider for management.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-2", "EXE-3"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 7, "section_heading": "Table 1: Children at high risk of complications from AOM"}
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Acute otitis media management pathway (Enhanced Access Community Pharmacy Pilot)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service (service restricted to patients aged 2 years or over), and patient informed consent (including consent for communication with other health practitioners if relevant).",
+          "gates": [
+            {"criterion": "Patient is eligible and suitable for management within the scope of the service (aged 2 years or over and no 'Refer when' situation present)", "on_fail": "REFER"},
+            {"criterion": "Patient informed consent obtained (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 2, "section_heading": "Guideline overview"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines - age; weight; pregnancy and lactation status (if applicable); whether the patient identifies as Aboriginal and Torres Strait Islander; nature, severity and frequency of symptoms including pain, itch, discharge, hearing loss, a feeling of fullness, and dizziness/vertigo; onset and duration of symptoms including preceding illnesses; history of head or ear trauma; recent history of URTI; other presenting symptoms including temperature ≥ 38 °C or ≤ 35.5 °C, rash, increased respiratory rate/distress, dehydration and/or reduced urine output, runny nose, sore throat, or cough; precipitating and relieving factors; delayed speech or language development; frequency and method of ear cleaning; family history of ear conditions and hearing loss; previous history of AOM, AOE, or other ear conditions (hearing loss and recent hearing tests, patient age at first episode, under the care of an ENT specialist or audiologist, ear surgery/current or previous tympanostomy tubes (grommets), prior treatment); underlying medical conditions e.g. immunocompromised (including diabetes), cochlear implant, craniofacial abnormalities, persistent hearing loss that mean the patient is at high risk of experiencing AOM complications (refer to Table 1); social history; current and recently ceased treatments; drug allergies/adverse drug reactions; immunisation status as per the Australian Immunisation Handbook.",
+          "gates": [
+            {"criterion": "Diagnosis is clear (no 'unclear diagnosis' trigger)", "on_fail": "REFER"},
+            {"criterion": "No history of recent significant ear or head trauma", "on_fail": "REFER"},
+            {"criterion": "No underlying condition placing the patient at high risk of AOM complications (Table 1)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 5, "section_heading": "Patient history"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination: conduct assessment of vital signs; examine for tender or enlarged cervical lymph nodes; conduct visual examination and palpation of mastoid area. Ear examination using otoscopy: physical examination including otoscopy of both ears is required to differentiate between AOE, AOM, and other ear conditions; ear examination should be conducted in accordance with the Queensland Health and Royal Flying Doctors Primary Clinical Care Manual (an ear differential diagnosis flowchart is included). Before performing the ear examination, the ear canal must be gently cleaned to remove any discharge with a tissue rolled up to a point (dry mopping) to visualise the ear drum. If pain levels allow, consider looking for movement of intact ear drum(s) by pneumatic otoscopy, tympanometry (if no discharge, Type A is normal), or gentle Valsalva (hold nose and blow): if the TM moves freely back and forward, perforation and fluid in the middle ear (AOM) can generally be excluded; reduced mobility of an intact TM is a good indication of the presence of middle ear fluid. Check for other symptoms if required (nose, throat, cough). In AOM with perforation, the pharmacist should document the size and position of the perforation to allow ongoing assessment of progression of the condition and to guide use of therapies. The TM must be visualised to confirm a diagnosis of AOM.",
+          "gates": [
+            {"criterion": "TM visualised to confirm the diagnosis of AOM", "on_fail": "SEE_PW-1-S5"},
+            {"criterion": "Both ears examined by otoscopy after gentle cleaning (dry mopping) of the ear canal", "on_fail": "SEE_PW-1-S5"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 6, "section_heading": "Ear examination using otoscopy"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Diagnostic criteria. In children, a diagnosis of AOM requires the rapid onset (within 48 hours) of: pain; signs of acute inflammation of the TM (TM is bulging and opaque; TM may be red from inflammation or white from pus in the middle ear); signs of middle ear effusion (otorrhoea can be indicative of TM perforation and middle ear effusion if acute otitis externa (AOE) has been excluded). In adults, the key signs of AOM are bulging and reduced mobility of the TM, with unilateral mild to severe ear pain and decreased hearing often preceded by URTI or allergic rhinitis. A red TM or pain alone is not diagnostic of AOM. Pain alone is not sufficient to diagnose AOM - an otoscopy is required to diagnose and exclude other ear conditions with similar presentations.",
+          "gates": [
+            {"criterion": "Rapid onset (within 48 hours) of pain with signs of acute inflammation of the TM and signs of middle ear effusion (children), or bulging and reduced mobility of the TM (adults)", "on_fail": "REFER"},
+            {"criterion": "Diagnosis not based on a red TM or pain alone (otoscopy performed)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Refer when: refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations (RF-1 to RF-11): aged below 2 years; unclear diagnosis; recent significant ear or head trauma; severe symptoms or rapidly worsening symptoms (including intense pain, headache, or facial paralysis/palsy, balance issues, confusion, focal neurological signs and red, swollen, and tender behind the ear); signs or symptoms of sepsis (e.g. fever, hypothermia, respiratory distress, tachycardia, rash, hypotension, cold extremities) or other significant systemic symptoms (dehydration, weakness, significant irritability, lethargy, paleness, loss of appetite); tympanic membrane (TM) 'red flag' signs (crust/scab or granulation in attic region; severely retracted TM or retraction pocket in attic area of ear drum; dull white mass behind TM or chalky patches; perforation or retraction in attic region, near the edge of the TM, or medium to large in size); otoscopic examination is not possible or TM cannot be visualised; TM perforation still evident after 6 weeks following initial consultation. TM presentations that suggest a serious complication require immediate referral to an appropriate healthcare provider.",
+          "gates": [
+            {"criterion": "Any 'Refer when' situation present", "on_fail": "SEE_PW-1-S6"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Develop management plan: non-pharmacological measures - care at home in accordance with The Royal Children's Hospital Melbourne Fact sheet: Ear infections and glue ear and the Australian Medicines Handbook: Drugs for ear infections; if discharge is present, advice and education regarding keeping ears dry and the use of dry mopping with tissue spears (Kimberley Clinical Guideline - Ear Problems in Children contains a guide for dry mopping); pharmacotherapy - oral analgesia in accordance with the Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain - Mild, acute nociceptive pain) and oral antibiotic therapy in accordance with the Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis media); consider immunisation where the patient has not received all routine vaccines in accordance with the Australian Immunisation Handbook. The mainstay of treatment for AOM is conservative management with regular and adequate analgesia; antibiotics can be safely withheld in most cases. Decongestants, antihistamines, or corticosteroids are not effective for AOM and should not be recommended.",
+          "gates": [
+            {"criterion": "Patient eligible for management in the service (aged 2 years or over and no 'Refer when' situation present, see PW-1-S5)", "on_fail": "REFER"},
+            {"criterion": "Complication or high-risk situation absent (no Table 1 high-risk child, no otorrhea, symptoms not worsening after 48 hours of appropriate analgesia and supportive management, no recurrent symptoms, no persistent otitis media with effusion)", "on_fail": "SEE_PW-1-S7"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 8, "section_heading": "Develop management plan"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "Treat (if clinically appropriate) and concurrently refer: provide initial treatment and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: otic discharge/otorrhea present; children presenting with signs and symptoms of a complication or at a high risk of complications from acute otitis media (AOM) (refer to Table 1 - Aboriginal and Torres Strait Islander children, immunocompromised, cochlear implant, craniofacial abnormalities including cleft palate, developmental delay/Down syndrome, severe visual impairment, current hearing loss); symptoms that do not improve or worsen after 48 hours of appropriate analgesia and supportive management; recurrent symptoms (≥ 3 episodes in 6 months or ≥ 4 episodes in 12 months); persistent otitis media with effusion (glue ear). All children presenting with signs or symptoms of a complication, or at high risk of complications, must be referred (concurrent to commencement of antibiotic therapy where appropriate).",
+          "gates": [
+            {"criterion": "Treat-and-concurrently-refer situation present (otorrhea; complication signs or high risk per Table 1; symptoms not improving or worsening after 48 hours of appropriate analgesia and supportive management; recurrent symptoms ≥ 3 episodes in 6 months or ≥ 4 episodes in 12 months; persistent otitis media with effusion)", "on_fail": "SEE_PW-1-S8"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic; pharmacists should carefully assess whether antibiotic therapy is clinically indicated, and if so, consider local antimicrobial resistance patterns and relevant clinical factors when selecting therapy (NB1: There is limited evidence to guide the management of AOM in adult patients; management of AOM in adults is similar to management in children; adequate and regular analgesia is the primary treatment; a shared decision-making approach is required to manage patient expectations of antibiotic treatment. NB2: Antibiotic therapy in paediatric patients should only be commenced in accordance with the Therapeutic Guidelines and the Otitis Media Guidelines for Aboriginal and Torres Strait Islander Children for children. NB3: Antibiotic therapy may be commenced if there is uncertainty with access to follow-up).",
+          "gates": [
+            {"criterion": "Contraindications and precautions, drug interactions, pregnancy and lactation and appropriate antibiotic use confirmed appropriate", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 8, "section_heading": "Confirm management is appropriate"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) regarding individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment (including recognising patient deterioration); when to return for follow-up. Patients commenced on antibiotics who have been concurrently referred should be advised (and/or parents/caregivers) to seek further urgent care where: the response has been inadequate after 48 to 72 hours of antibiotic treatment; signs or symptoms worsen or their condition deteriorates; new signs or symptoms develop, including systemic symptoms; otorrhea continues for ≥ 2 weeks. Patients who have not been prescribed antibiotic therapy at the initial consultation should be advised to see an appropriate healthcare provider if: they develop otic discharge/otorrhoea; their symptoms do not improve after 48 hours of appropriate analgesia and supportive management; their signs or symptoms worsen, new signs or symptoms develop, or symptoms are recurrent (see Refer when). Decongestants, antihistamines, or corticosteroids are not effective for AOM and should not be recommended; antibiotics have limited benefit in AOM and are not required for most patients; pharmacists should address misconceptions regarding antibiotic effectiveness and discuss the relative harms and benefits of treatment. The agreed management plan should be shared with the patient's multidisciplinary healthcare team, with consent.",
+          "gates": [
+            {"criterion": "Patient (and/or parent/caregiver) counselled on individual product and medicine use, adverse effects and when to seek further care", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines; decisions regarding the timing and necessity of clinical review should be individualised to the patient's clinical presentation and response to treatment. Patients with an intact TM should return for a follow up consultation at 3 months to check for persistent fluid behind the TM (if fluid is still present or AOM recurs during this time, refer). Patients with small acute perforations should return for a follow up consultation in 6 weeks to assess healing (if the perforation is still evident, refer). If the TM cannot be visualised in paediatric patients when they first present and antibiotics are not indicated, they should be advised on appropriate analgesia and asked to return within 48 to 72 hours for reassessment and should seek care if their condition deteriorates; if the TM cannot be visualised in adult patients, they should be referred to an appropriate healthcare provider. Advise parents/caregivers of children under the age of 5 years to seek review by an appropriate healthcare provider if there is any concern regarding the child's speech, language, behaviour, or school progress. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+          "gates": [
+            {"criterion": "Response to treatment assessed and follow-up timing determined by TM status (intact TM: 3 months; small acute perforation: 6 weeks; TM not visualised in paediatric patient: 48 to 72 hours)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 10, "section_heading": "Clinical review"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "oral analgesia",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "in accordance with the Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain - Mild, acute nociceptive pain). 'The mainstay of treatment for AOM is conservative management with regular and adequate analgesia. Antibiotics can be safely withheld in most cases and are often inappropriately prescribed.' NB1: 'There is limited evidence to guide the management of AOM in adult patients ... management of AOM in adults is similar to management in children. Adequate and regular analgesia is the primary treatment.' Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. No specific agent, strength, dose, frequency or duration is printed in this document.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 8, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "in accordance with the Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis media). 'Antibiotics have limited benefit in AOM and are not required for most patients: the use of antibiotics can cause harm, including adverse effects, serious hypersensitivity reactions, and can contribute to bacterial resistance.' NB2: 'Antibiotic therapy in paediatric patients should only be commenced in accordance with the Therapeutic Guidelines and the Otitis Media Guidelines for Aboriginal and Torres Strait Islander Children for children.' NB3: 'Antibiotic therapy may be commenced if there is uncertainty with access to follow-up.' Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. No specific agent, strength, dose, frequency or duration is printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 8, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "decongestants, antihistamines, or corticosteroids",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NOT RECOMMENDED: 'Decongestants, antihistamines, or corticosteroids are not effective for AOM and should not be recommended.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}
+    }
+  ],
+  "red_flags": [
+    {"id": "RF-1", "trigger_text": "the patient is aged below 2 years (does not preclude a patient from accessing usual pharmacy care)", "structured": {"parameter": "age", "operator": "<", "value": 2, "unit": "years"}, "action": "NOT_ELIGIBLE", "severity": "low", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-2", "trigger_text": "unclear diagnosis", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-3", "trigger_text": "recent significant ear or head trauma (may be associated with hearing loss or balance issues)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-4", "trigger_text": "severe symptoms or rapidly worsening symptoms, including intense pain, headache, or facial paralysis/palsy, balance issues, confusion, focal neurological signs and red, swollen, and tender behind the ear", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-5", "trigger_text": "signs or symptoms of sepsis (e.g. fever, hypothermia, respiratory distress, tachycardia, rash, hypotension, cold extremities), or other significant systemic symptoms including signs of dehydration, weakness, significant irritability, lethargy, paleness, loss of appetite", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-6", "trigger_text": "tympanic membrane (TM) 'red flag' signs: - crust/scab or granulation in attic region (discharge/odour may be present)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-7", "trigger_text": "tympanic membrane (TM) 'red flag' signs: - severely retracted (sucked in) TM or retraction pocket in attic area of ear drum", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-8", "trigger_text": "tympanic membrane (TM) 'red flag' signs: - dull white mass behind TM or chalky patches", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-9", "trigger_text": "tympanic membrane (TM) 'red flag' signs: - perforation or retraction in attic region, near the edge of the TM, or medium to large in size (refer to Figure 1)", "structured": null, "action": "REFER", "severity": "high", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-10", "trigger_text": "otoscopic examination is not possible or TM cannot be visualised**", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-11", "trigger_text": "TM perforation still evident after 6 weeks following initial consultation", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-12", "trigger_text": "otic discharge/otorrhea present", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-13", "trigger_text": "children presenting with signs and symptoms of a complication or at a high risk of complications from acute otitis media (AOM) (refer to Table 1)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-14", "trigger_text": "symptoms that do not improve or worsen after 48 hours of appropriate analgesia and supportive management", "structured": {"parameter": "hours_of_analgesia_and_supportive_management_without_improvement", "operator": ">", "value": 48, "unit": "hours"}, "action": "REFER", "severity": "high", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-15", "trigger_text": "recurrent symptoms (≥ 3 episodes in 6 months or ≥ 4 episodes in 12 months)", "structured": {"parameter": "episodes_in_6_months", "operator": ">=", "value": 3, "unit": "episodes"}, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-16", "trigger_text": "recurrent symptoms (≥ 3 episodes in 6 months or ≥ 4 episodes in 12 months)", "structured": {"parameter": "episodes_in_12_months", "operator": ">=", "value": 4, "unit": "episodes"}, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-17", "trigger_text": "persistent otitis media with effusion (glue ear).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-18", "trigger_text": "Signs of intracranial complications include severe headache, confusion, focal neurologic signs, facial paralysis/palsy, and dizziness/vertigo. Patients with these signs or symptoms of a complication must be referred for immediate assessment, see Refer when.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 7, "section_heading": "Complications of AOM"}},
+    {"id": "RF-19", "trigger_text": "All children presenting with signs or symptoms of a complication, or at high risk of complications, must be referred (concurrent to commencement of antibiotic therapy where appropriate) to an appropriate healthcare provider for management.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 7, "section_heading": "Table 1: Children at high risk of complications from AOM"}},
+    {"id": "RF-20", "trigger_text": "the response has been inadequate after 48 to 72 hours of antibiotic treatment", "structured": {"parameter": "antibiotic_treatment_duration_without_adequate_response", "operator": "range", "value": [48, 72], "unit": "hours"}, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-21", "trigger_text": "signs or symptoms worsen or their condition deteriorates", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-22", "trigger_text": "new signs or symptoms develop, including systemic symptoms", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-23", "trigger_text": "otorrhea continues for ≥ 2 weeks .", "structured": {"parameter": "otorrhea_duration", "operator": ">=", "value": 2, "unit": "weeks"}, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-24", "trigger_text": "they develop otic discharge/otorrhoea", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-25", "trigger_text": "their symptoms do not improve after 48 hours of appropriate analgesia and supportive management", "structured": {"parameter": "hours_of_analgesia_and_supportive_management_without_improvement", "operator": ">", "value": 48, "unit": "hours"}, "action": "REVIEW_GP", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-26", "trigger_text": "their signs or symptoms worsen, new signs or symptoms develop, or symptoms are recurrent, see Refer when .", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"id": "RF-27", "trigger_text": "Advise parents/caregivers of children under the age of 5 years to seek review by an appropriate healthcare provider if there is any concern regarding the child's speech, language, behaviour, or school progress .", "structured": {"parameter": "age", "operator": "<", "value": 5, "unit": "years"}, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 10, "section_heading": "Pharmacist resources"}},
+    {"id": "RF-28", "trigger_text": "TM presentations that suggest a serious complication require immediate referral to an appropriate healthcare provider, see Refer when.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 6, "section_heading": "Ear examination using otoscopy"}},
+    {"id": "RF-29", "trigger_text": "If the TM cannot be visualised in adult patients, they should be referred to an appropriate healthcare provider", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 6, "section_heading": "Ear examination using otoscopy"}}
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "an appropriate healthcare provider for management of children at high risk of complications (concurrent to commencement of antibiotic therapy where appropriate)"
+    ],
+    "urgent": [
+      "the response has been inadequate after 48 to 72 hours of antibiotic treatment",
+      "signs or symptoms worsen or their condition deteriorates",
+      "new signs or symptoms develop, including systemic symptoms",
+      "otorrhea continues for ≥ 2 weeks"
+    ],
+    "emergency": [
+      "including emergency services, if required",
+      "Patients with these signs or symptoms of a complication must be referred for immediate assessment"
+    ],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 3, "section_heading": "Refer when"}
+  },
+  "review_followup": [
+    {"when": "Patients with an intact TM (follow up consultation at 3 months)", "what": "Check for persistent fluid behind the TM; if fluid is still present or the patient experiences a recurrence of AOM during this time, refer the patient to an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 10, "section_heading": "Clinical review"}},
+    {"when": "Patients with small acute perforations (follow up consultation in 6 weeks)", "what": "Assess healing; if the perforation is still evident, refer the patient to an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 10, "section_heading": "Clinical review"}},
+    {"when": "The TM cannot be visualised in paediatric patients at first presentation and antibiotics are not indicated", "what": "Advise on appropriate analgesia and ask to return within 48 to 72 hours for reassessment; seek care from an appropriate healthcare provider if the condition deteriorates", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 6, "section_heading": "Ear examination using otoscopy"}},
+    {"when": "Clinical review (in line with recommendations in the Therapeutic Guidelines; timing individualised to clinical presentation and response to treatment)", "what": "Clinical review with the pharmacist (or the patient's chosen healthcare provider)", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 10, "section_heading": "Clinical review"}},
+    {"when": "they develop otic discharge/otorrhoea (patients not prescribed antibiotic therapy at the initial consultation)", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "their symptoms do not improve after 48 hours of appropriate analgesia and supportive management (patients not prescribed antibiotic therapy)", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "their signs or symptoms worsen, new signs or symptoms develop, or symptoms are recurrent (patients not prescribed antibiotic therapy)", "what": "see an appropriate healthcare provider (see Refer when)", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "the response has been inadequate after 48 to 72 hours of antibiotic treatment (patients concurrently referred)", "what": "seek further urgent care", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "signs or symptoms worsen or their condition deteriorates (patients concurrently referred)", "what": "seek further urgent care", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "new signs or symptoms develop, including systemic symptoms (patients concurrently referred)", "what": "seek further urgent care", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "otorrhea continues for ≥ 2 weeks (patients concurrently referred)", "what": "seek further urgent care", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}},
+    {"when": "parents/caregivers of children under the age of 5 years have any concern regarding the child's speech, language, behaviour, or school progress", "what": "seek review by an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 10, "section_heading": "Pharmacist resources"}}
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Otitis-media.pdf", "page": 9, "section_heading": "Communicate agreed management plan"}
+  },
+  "references": [
+    "1. Therapeutic Guidelines: Antibiotic (Otitis media). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=otitis-media. [page 11]",
+    "2. Limb C, Lustig L, Durand M. Acute otitis media in adults: Wolters Kluwer; 2024 [cited 2025 April 2]. Available from: https://www.uptodate.com/contents/acute-otitis-media-in-adults. [page 11]",
+    "3. The Royal Children's Hospital. Clinical practice guidelines: acute otitis media. Melbourne: RCHM; 2021 [cited 2025 April 2]. Available from: https://www.rch.org.au/clinicalguide/guideline_index/Acute_otitis_media/. [page 11]",
+    "4. Queensland Health and Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. Cairns: Office of Rural and Remote Health, Queensland Government; 2025 [cited 2025 June 18]. Available from: https://www.health.qld.gov.au/rrcsu/clinical-manuals/primary-clinical-care-manual-pccm. [page 11]",
+    "5. Therapeutic Guidelines: Antibiotic (Otitis externa). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=otitis-externa. [page 11]",
+    "6. Miyamoto R. MSD Manual Professional Version: Otitis Media (Acute): Merck & Co; 2024 [cited 2025 April 2]. Available from: https://www.msdmanuals.com/en-au/professional/ear,-nose,-and-throat-disorders/middle-ear-and-tympanic-membrane-disorders/otitis-media-acute?query=otitis%20media. [page 11]",
+    "7. Remote Primary Health Care Manuals. Clinical Procedures Manual. Alice Springs: Centre for Remote Health; 2022 [cited 2025 April 2]. Available from: https://remotephcmanuals.com.au/. [page 11]",
+    "8. Kimberley Clinical Guidelines: Ear Problems in Children. WA: Kimberley Aboriginal Health Planning Forum; 2025 [cited 2026 Mar 30]. Available from: https://static1.squarespace.com/static/5b5fbd5b9772ae6ed988525c/t/67bfc1ad49afbf7776e19950/1740620208025/Ear_Problems_In_Children_Kimberley_Clinical_Guideline_endorsed+24022025.pdf [page 11]",
+    "9. Leach AJ MP, Coates HLC, et al.,. Otitis media guidelines for Australian Aboriginal and Torres Strait Islander children. Northern Territory: Menzies School of Health Research; 2020. [page 11]",
+    "10. Ear Disease Photo Book. Hole in the Ear Drum Images. Houston, Texas: McGovern Medical School. Department of Otorhinolaryyngology - Head & Neck Surgery; 2026 [cited 2026 Mar 30]. Available from: https://med.uth.edu/orl/online-ear-disease-photo-book/chapter-10-hole-in-the-ear-drum/hole-in-the-ear-drum-images/ [page 11]",
+    "11. The Royal Children's Hospital General Medicine Emergency and Otolaryngology departments. Ear infections and glue ear. Melbourne: RCHM; 2018 [cited 2025 April 2]. Available from: https://www.rch.org.au/kidsinfo/fact_sheets/Ear_infections_and_otitis_media/. [page 11]",
+    "12. Australian Medicines Handbook: Drugs for ear infections. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 2]. Available from: https://amhonline.amh.net.au/chapters/ear-nose-throat-drugs/drugs-ear-infections?menu=vertical. [page 11]",
+    "13. Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain: Mild, acute nociceptive pain). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain. [page 11]",
+    "14. Immunisation for children. Canberra: Department of Health, Disability and Ageing; 2025 [cited 2026 Mar 31]. Available from: https://www.health.gov.au/topics/immunisation/when-to-get-vaccinated/immunisation-for-infants-and-children [page 11]",
+    "15. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. Alice Springs: Centre for Remote Health; 2022 [cited 2025 April 2]. Available from: https://www.remotephcmanuals.com.au/. [page 11]",
+    "16. Queensland Health; Royal Flying Doctors Service (Queensland Section) and Apunipima Cape York Health Council. Chronic Conditions Manual: Prevention and Management of Chronic Conditions in Rural and Remote Australia. Cairns: The Rural and Remote Clinical Support Unit, Torres and Cape Hospital and Health Service; 2024. [page 11]",
+    "17. Clinician Assist WA: Audiology Requests. WA: WA Primary Health Alliance; 2026 [cited 2026 Mar 31]. Available from: https://clinicianassistwa.org.au/261654wa/ [page 11]"
+  ],
+  "open_questions": [
+    {"topic": "Eligibility list has no 'inclusion/exclusion criteria' headings", "observed": "Eligibility is expressed as the cover-page age restriction (page 1), 'Meet service and professional obligations' (page 2), the diagnostic criteria (pages 4-5) and the requirement that the TM be visualised (page 6); the 'Refer when' list (page 3) has been used as the exclusion list.", "why_unclear": "The document does not label these as formal criteria and does not state combinatorics; defaulted to all_of for eligibility/consent/diagnostic method with any_of between the children's and adults' diagnostic criteria, and any_of for exclusion.", "source_page": 3},
+    {"topic": "'Refer when' versus exclusion semantics", "observed": "'Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' (page 3).", "why_unclear": "It is not stated whether treatment may still be provided under the service for these situations; items are recorded both as exclusion criteria and as red flags.", "source_page": 3},
+    {"topic": "Instrument effective date / version not printed", "observed": "Only '© Department of Health 2026' and footer codes \"62'GUA\" and \"180510-DEC\" are printed; no effective date or version number appears.", "why_unclear": "effective_date recorded as 'Not printed'; instrument_version records the printed copyright/codes only.", "source_page": 12},
+    {"topic": "Specific drug regimens absent from the document", "observed": "Pharmacotherapy is delegated to Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis media) and Therapeutic Guidelines: Pain and Analgesia (page 8); no molecule, strength, dose, frequency or duration is printed.", "why_unclear": "Treatment rows therefore carry no agent/dose; regimens must be sourced externally.", "source_page": 8},
+    {"topic": "Temperature thresholds are history items, not referral triggers", "observed": "'other presenting symptoms including temperature ≥ 38 °C or ≤ 35.5 °C, rash, increased respiratory rate/distress, dehydration and/or reduced urine output, runny nose, sore throat, or cough' (page 5, patient history).", "why_unclear": "The document lists these as history items; the referral trigger is the qualitative 'signs or symptoms of sepsis (e.g. fever, hypothermia, ...)' (page 3), so no structured temperature red flag was created.", "source_page": 5},
+    {"topic": "Two recurrence thresholds in one sentence", "observed": "'recurrent symptoms (≥ 3 episodes in 6 months or ≥ 4 episodes in 12 months)' (pages 2 and 4).", "why_unclear": "One sentence expresses two alternatives; recorded as two red flags (RF-15, RF-16) with separate structured thresholds and medium confidence.", "source_page": 4},
+    {"topic": "Figure 1 perforation size table reads imperfectly", "observed": "'Figure 1. Guide for size of perforation of tympanic membrane - Small – Medium – Large – Subtotal; 2% 2% to 30% 30%' (page 7).", "why_unclear": "Column alignment of the size categories and percentages is ambiguous in the text extraction; EXC-9/RF-9 ('medium to large in size') marked confidence 'medium' pending visual check of Figure 1.", "source_page": 7},
+    {"topic": "Children's and adults' diagnostic criteria recorded as alternative branches", "observed": "Diagnosis requires 'the rapid onset (within 48 hours) of' pain, TM inflammation signs and middle-ear effusion signs in children (page 4), while adults' key signs are 'bulging and reduced mobility of the TM' (page 5).", "why_unclear": "The document does not state how the two age-specific criteria sets combine; recorded as any_of [INC-5, INC-6] with all other inclusion criteria all_of.", "source_page": 4},
+    {"topic": "Clinical review interval only specified for two TM states", "observed": "3 months for intact TM and 6 weeks for small acute perforation (page 10); 'Decisions regarding the timing and necessity of clinical review should be individualised'.", "why_unclear": "No interval is printed for other presentations (e.g. no perforation follow-up beyond the above, or after TM visualisation failure beyond 48-72 hours).", "source_page": 10},
+    {"topic": "Pathway gate on_fail not stated by the document", "observed": "Consent (page 2), confirm-management (page 8), educate (page 9) and clinical-review (page 10) steps do not state what happens if the gate fails.", "why_unclear": "on_fail recorded as 'unclear' per spec rather than inferred.", "source_page": 2},
+    {"topic": "Urgent-care list attributed to page 9", "observed": "'seek further urgent care where: ...' (page 9) is directed at patients commenced on antibiotics who have been concurrently referred.", "why_unclear": "Single shared referral provenance uses page 3 (first referral page); the urgent list content is printed on page 9 and the emergency wording on page 3.", "source_page": 3}
+  ],
+  "hugh_to_confirm": [
+    {"item": "Confirm the individual pharmacist is approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA) - 'This document alone does not provide an authorisation for a pharmacist to prescribe'.", "source_page": 1, "reason": "Authorisation is individual and external to the guideline; prerequisite for go-live."},
+    {"item": "Obtain the exact antibiotic agent(s), strength, dose, frequency and duration from the current online Therapeutic Guidelines: Antibiotic (Ear, nose and throat infections - Otitis media).", "source_page": 8, "reason": "No regimen is printed in the protocol; required before a prescribing rules engine can be used."},
+    {"item": "Confirm NB2 requirement: paediatric antibiotic therapy only commenced in accordance with the Therapeutic Guidelines and the Otitis Media Guidelines for Aboriginal and Torres Strait Islander Children for children.", "source_page": 8, "reason": "External paediatric guideline governs; specific to Aboriginal and Torres Strait Islander children."},
+    {"item": "Confirm NB3 local arrangement: 'Antibiotic therapy may be commenced if there is uncertainty with access to follow-up' - define how follow-up access uncertainty is assessed locally.", "source_page": 8, "reason": "Depends on local service configuration and patient circumstances; not further specified."},
+    {"item": "Obtain the exact oral analgesic agent, strength, dose, frequency and duration from Therapeutic Guidelines: Pain and Analgesia (Pharmacological management of acute pain - Mild, acute nociceptive pain).", "source_page": 8, "reason": "No analgesic regimen is printed in the protocol."},
+    {"item": "Confirm local antimicrobial resistance patterns when selecting antibiotic therapy (Reminder: prescribing and use of antibiotics consistent with Therapeutic Guidelines: Antibiotic).", "source_page": 8, "reason": "Region-specific resistance data are external and change over time."},
+    {"item": "Confirm quantity-to-supply / dispensing quantity policy: 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.'", "source_page": 10, "reason": "Quantity is left to pharmacist judgement; no numeric quantity is printed."},
+    {"item": "Confirm local policy on immunisation catch-up: 'consider immunisation where the patient has not received all routine vaccines in accordance with the Australian Immunisation Handbook'.", "source_page": 8, "reason": "Vaccination administration arrangements are outside this guideline."},
+    {"item": "Confirm approach to adult AOM given NB1 ('There is limited evidence to guide the management of AOM in adult patients'; shared decision-making approach required to manage patient expectations of antibiotic treatment).", "source_page": 8, "reason": "Evidence caveat and shared decision-making expectations must be reflected in local policy."},
+    {"item": "Confirm interpretation of Figure 1 perforation sizes (Small – Medium – Large – Subtotal; 2% / 2% to 30% / 30%) against the 'medium to large in size' referral trigger.", "source_page": 7, "reason": "Table/figure alignment is ambiguous in the text extraction; threshold must be visually verified before go-live."},
+    {"item": "Confirm applicability to WA practice of the Queensland Health and Royal Flying Doctor Service Primary Clinical Care Manual, the Kimberley Clinical Guideline - Ear Problems in Children (dry mopping) and the Remote Primary Health Care Manual - Clinical Procedures Manual.", "source_page": 6, "reason": "Cross-jurisdictional/regional source documents govern core examination and dry-mopping procedure."},
+    {"item": "Confirm otoscopy competency, training and equipment requirements for the prescribing pharmacist, and local arrangement for the ear differential diagnosis flowchart.", "source_page": 6, "reason": "Procedure is delegated to external manuals; no competency standard is printed."},
+    {"item": "Confirm clinical review individualisation policy (3 months for intact TM; 6 weeks for small acute perforation; 48 to 72 hours when TM not visualised in a paediatric patient) and the Clinician Assist WA Audiology requests pathway.", "source_page": 10, "reason": "Timing is individualised for presentations not covered by the printed intervals."},
+    {"item": "Confirm EACPP service-level arrangements for consent documentation and communication with other health practitioners.", "source_page": 2, "reason": "Document requires informed consent including consent for communication but does not specify the local process."}
+  ]
+}

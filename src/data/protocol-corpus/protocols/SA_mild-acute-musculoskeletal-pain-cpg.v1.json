@@ -1,0 +1,580 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf",
+    "pdf_sha256": "ef746aaa8346500ccef36bc628fa497cb5b2e045f72489cca02510031b2d76c9",
+    "page_count": 14,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Mild, Acute Musculoskeletal Pain – Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "Authorisation page (p2): 'Community Pharmacy Expanded Scope of Practice Initiative. In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.'",
+    "supervision_model": "Document does not use 'collaborative'/'autonomous' terminology; its own wording: an authorised pharmacist on the register of authorised pharmacists prescribing in accordance with the Community Pharmacist Prescribing Code (p2). Discretion clause (p6 Key points): 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer (13).'",
+    "scope_summary": "SA Health (Community Pharmacy Expanded Scope of Practice Initiative) clinical practice guideline for pharmacist assessment and management of acute mild musculoskeletal (MSK) pain in patients aged 18 years or over. Covers 'Red flag' warning signs necessitating referral to emergency medical care (immediate referral to an emergency department – call 000; urgent referral to an emergency department where the patient may make their own way), referral to a general practitioner (urgent referral within 24 to 48 hours; non-urgent referral), key points (opioids are not required for mild MSK pain and cannot be prescribed by pharmacists; patients aged over 50 years — consider increased risk of serious underlying pathologies such as malignancy and minimal-trauma fractures), patient history, pain history and assessment, examination (vital signs; mechanical versus inflammatory pain — Table 2), investigations, management and treatment plan (non-pharmacological measures plus pharmacotherapy with paracetamol and NSAIDs per Therapeutic Guidelines), confirmation of management, communication of the agreed management plan, general advice, clinical review and resources. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'"
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Presentation is acute mechanical musculoskeletal pain: 'Acute musculoskeletal (MSK) pain is generally mechanical, caused by damage to tissue or structural changes to joints, vertebrae and muscles/soft tissue, often as a result of trauma (jerking movements, vehicle accidents, falls, fractures, sprains, dislocations, and direct blows to the muscle), postural strain, overuse or prolonged immobilisation (3).' 'Acute mechanical MSK pain is a symptom complex, as opposed to a condition, which is expected to be self-limiting (last less than 3 months), with a return to usual function as the underlying injury resolves (8).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Pain is mild: 'Non-pharmacological therapies and lifestyle measures (where there is a proven benefit) and pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for acute, mild MSK pain (11, 12).' Patients who rate pain as moderate to severe, or who have significant functional limitations due to pain, are referred (see EXC-25 / RF-25).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-4",
+        "text": "'A patient history, pain history and assessment, and examination that is tailored to the patient's presentation is required to inform the management approach, including appropriate referral (14, 15).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Gather information and assess patient's needs" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "Patient aged under 18 years — 'Service restricted to patients aged 18 years or over.' (Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.)", "criteria_group": { "all_of": ["EXC-1"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+      { "id": "EXC-2", "text": "Immediate referral to an emergency department – call 000: Acute swelling, erythema and significant reduction in range of motion of a joint.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-3", "text": "Immediate referral to an emergency department – call 000: Digital ischaemia or other signs of neurovascular compromise.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-4", "text": "Immediate referral to an emergency department – call 000: Neurological signs including altered bladder or bowel function.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-5", "text": "Immediate referral to an emergency department – call 000: Suspected nerve damage or mononeuropathy e.g., loss of feeling, weakness, pain or burning and/or paraesthesia ('pins and needles').", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-6", "text": "Immediate referral to an emergency department – call 000: Other non-musculoskeletal systemic symptoms suggestive of serious pathology including fever, malaise, unexplained weight loss, nausea and vomiting.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-7", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: The patient presents with swelling, redness, tenderness and warmth around a joint or within a muscle or other alerting signs that may indicate a serious pathology.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-8", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: History of trauma.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-9", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Acute swelling, erythema and significant reduction in range of motion of a joint. [identical wording also printed under 'Immediate referral … – call 000' on the same page]", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-10", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Digital ischaemia or other signs of neurovascular compromise. [identical wording also printed under 'Immediate referral … – call 000' on the same page]", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-11", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Headache and acute onset of visual or auditory disturbances.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-12", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Systemically unwell (e.g. fever, tachycardia, hypotension).", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-13", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Recent intravenous drug use.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-14", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Risk of minimal-trauma fracture e.g. osteoporosis, history of cancer.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-15", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Severe mechanism of injury.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-16", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: New limb deformity.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-17", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: New onset of skin rash.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-18", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Unilateral calf tenderness with no history of recent trauma.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-19", "text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Pitting oedema.", "criteria_group": { "all_of": [], "any_of": ["EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-20", "text": "Urgent referral within 24 to 48 hours (1): Suspect dislocation, fracture, ligament/tendon rupture.", "criteria_group": { "all_of": [], "any_of": ["EXC-20", "EXC-21"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-21", "text": "Urgent referral within 24 to 48 hours (1): The patient is at high risk of acute rheumatic fever as per Therapeutic Guidelines (4).", "criteria_group": { "all_of": [], "any_of": ["EXC-20", "EXC-21"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-22", "text": "Non-urgent referral: Pain cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain).", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-23", "text": "Non-urgent referral: History of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions).", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-24", "text": "Non-urgent referral: The patient presents with non-musculoskeletal systemic symptoms that may indicate underlying pathology such as fever, malaise or weight loss.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-25", "text": "Non-urgent referral: The patient rates their pain as moderate to severe, or has significant functional limitations due to pain.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-26", "text": "Non-urgent referral: The patient is unable to accurately rate their pain due to cognitive impairment or other special needs.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-27", "text": "Non-urgent referral: There is inadequate response to optimal treatment or pain/other symptoms worsen.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-28", "text": "Non-urgent referral: Pain management is inadequate.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-29", "text": "Non-urgent referral: The patient requests treatment with an opioid.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-30", "text": "Non-urgent referral: The patient is opioid-tolerant or recovering from an opioid use disorder.", "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+      { "id": "EXC-31", "text": "Self-reported pain severity not consistent with other assessment findings: 'If the patient's self-reported pain severity is not consistent with other assessment findings e.g., physical function or examination findings, the patient should be referred to a medical practitioner for comprehensive assessment including socio-psycho-biomedical factors (12).'", "criteria_group": { "all_of": [], "any_of": ["EXC-31"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 8, "section_heading": "Patient history and assessment" } },
+      { "id": "EXC-32", "text": "Opioid treatment not available within this Service: 'Opioids are not required for the management of mild MSK pain and cannot be prescribed by pharmacists.'", "criteria_group": { "all_of": [], "any_of": ["EXC-32"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Key points" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Assessment and management of acute mild musculoskeletal pain",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "REFER",
+          "description": "Red flag screen at presentation — emergency tier (p4): \"'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:\" Two tiers are printed: 'Immediate referral to an emergency department – call 000:' (acute swelling, erythema and significant reduction in range of motion of a joint; digital ischaemia or other signs of neurovascular compromise; neurological signs including altered bladder or bowel function; suspected nerve damage or mononeuropathy e.g., loss of feeling, weakness, pain or burning and/or paraesthesia ('pins and needles'); other non-musculoskeletal systemic symptoms suggestive of serious pathology including fever, malaise, unexplained weight loss, nausea and vomiting) and 'Urgent referral to an emergency department – patient may make their own way to the emergency department:' (13 triggers — see red_flags RF-7 to RF-19 / EXC-7 to EXC-19).",
+          "gates": [
+            { "criterion": "No 'call 000' red flag warning sign present (EXC-2 to EXC-6 / RF-2 to RF-6)", "on_fail": "STOP" },
+            { "criterion": "No 'Urgent referral to an emergency department – patient may make their own way' red flag present (EXC-7 to EXC-19 / RF-7 to RF-19)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "REFER",
+          "description": "Medical practitioner referral screen (p5): 'Refer to a general practitioner (or other medical practitioner where appropriate):' Two tiers are printed: 'Urgent referral within 24 to 48 hours (1):' — Suspect dislocation, fracture, ligament/tendon rupture; The patient is at high risk of acute rheumatic fever as per Therapeutic Guidelines (4). And 'Non-urgent referral:' — nine triggers covering pain that cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain), chronic inflammatory MSK pain/complex rheumatological conditions, non-musculoskeletal systemic symptoms, pain rated moderate to severe or significant functional limitations, inability to rate pain, inadequate response to optimal treatment or worsening, inadequate pain management, request for an opioid, and opioid-tolerant/recovering from opioid use disorder (see EXC-20 to EXC-30 / RF-20 to RF-30).",
+          "gates": [
+            { "criterion": "No 'Urgent referral within 24 to 48 hours' criterion present (EXC-20, EXC-21 / RF-20, RF-21)", "on_fail": "REFER" },
+            { "criterion": "No 'Non-urgent referral' criterion present (EXC-22 to EXC-30 / RF-22 to RF-30)", "on_fail": "REFER" },
+            { "criterion": "Opioid treatment not requested and patient not opioid-tolerant or recovering from an opioid use disorder — 'Opioids are not required for the management of mild MSK pain and cannot be prescribed by pharmacists' (EXC-29, EXC-30, EXC-32)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs — Patient history (p6-p7): 'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines.' The patient history should consider: age; whether the patient identifies as Aboriginal or Torres Strait Islander; pregnancy and breastfeeding status (if applicable); underlying or co-existing medical conditions, including rheumatological and autoimmune conditions such as inflammatory arthritis and psoriasis; family history of inflammatory pain, rheumatological and/or autoimmune conditions e.g., ankylosing spondylitis or inflammatory arthritis; history of trauma, e.g. fall, car accident; non-musculoskeletal symptoms that may indicate serious pathology, including rash, weight-loss or gain, fever, malaise, nausea, vomiting and sweating; recent illnesses, e.g. upper respiratory tract infection, urethritis, urinary tract infection; risk factors for developing acute rheumatic fever as per the Therapeutic Guidelines: Acute rheumatic fever (4); alerting symptoms and features as per the Therapeutic Guidelines: Rheumatology (Clinical assessment of musculoskeletal symptoms in adults) (14); response to any previous treatments; impacts on quality of life including sleep, ability to self-care, mobility, work, leisure, emotional health and relationships; precipitating, aggravating and relieving/alleviating factors; current, recently commenced or recently ceased medication (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); weight, dietary patterns, levels of exercise/physical activity; allergies/adverse drug reactions; alcohol, tobacco and other drug history/status; other psychosocial factors. Table 1 (p7-p8) lists examples of medicines that may cause muscle and joint pain (Antidepressants – SSRIs, SNRIs; Aromatase inhibitors; Beta-blockers; Bisphosphonates; Colchicine; Corticosteroids; Fibrates; Fluroquinolone antibiotics; Isotretinoin; Pregabalin; Statins). Key point (p6): 'In patients aged over 50 years, consider the increased risk of serious underlying pathologies such as malignancy and minimal-trauma fractures. Consider impact of pain on mobility and activities of daily living (ADLs).' Aboriginal and Torres Strait Islander patients (p8): 'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (1).'",
+          "gates": [
+            { "criterion": "Patient aged 18 years or over — 'Service restricted to patients aged 18 years or over' (INC-1 / EXC-1 / RF-1)", "on_fail": "unclear" },
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" },
+            { "criterion": "Pregnancy and breastfeeding status (if applicable) recorded", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Patient history and assessment (p8): 'Pharmacists should be aware of the possibility that a patient seeking treatment for an injury within this Service may have been subjected to domestic violence or abuse, or the injury may be a result of self-harm. If the pharmacist becomes aware of this during the consultation, they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances.' 'Pain history and assessment should be conducted in accordance with the Therapeutic Guidelines: General principles of acute pain management and Assessing a patient with pain (11, 18).' 'Pain severity is subjective and should be interpreted in the context of the patient's presentation as well as additional information gained through the pain history (18).' 'The Therapeutic Guidelines: General principles of acute pain management includes information to assist with determining pain severity (8).'",
+          "gates": [
+            { "criterion": "Self-reported pain severity is consistent with other assessment findings e.g., physical function or examination findings — otherwise 'the patient should be referred to a medical practitioner for comprehensive assessment including socio-psycho-biomedical factors (12)' (EXC-31 / RF-31)", "on_fail": "REFER" },
+            { "criterion": "If domestic violence, abuse or self-harm is identified: appropriate support and assistance provided, including referral to support options depending on the patient circumstances", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 8, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "Examination (p8): 'Apply standard and contact infection precautions when examining patients.' 'Conduct assessment of vital signs – temperature, blood pressure, heart rate, hydration status.' 'The area of pain should be examined in accordance with the Therapeutic Guidelines: Rheumatology (Clinically assessing peripheral musculoskeletal symptoms in adults) (14).' 'To determine appropriate management or referral, it is important to identify the aetiology of the pain (nociceptive, neuropathic, nociplastic, or combination (mixed pain)) and to distinguish pain associated with inflammation from mechanical pain (see Table 2).'",
+          "gates": [
+            { "criterion": "Vital signs assessed – temperature, blood pressure, heart rate, hydration status", "on_fail": "unclear" },
+            { "criterion": "Area of pain examined in accordance with the Therapeutic Guidelines: Rheumatology (Clinically assessing peripheral musculoskeletal symptoms in adults) (14)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 8, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Differentiate mechanical from inflammatory pain and confirm acute duration (p9): 'MSK pain is predominantly nociceptive, with a superficial or deep origin and localisation of pain from the bone, joint or muscles (somatic) (12).' 'Acute pain is defined by a duration of less than 3 months, usually with a nociceptive pain component arising from actual or threatened tissue damage (8, 18).' Table 2. Clinical features/characteristics of mechanical versus inflammatory pain (5, 19, 20) — Inflammatory pain: improves with exercise/movement; does not improve with rest; lasts more than 3 months; patient may experience morning stiffness (for greater than 30 minutes); pain waking patient during second half of the night with improvement on getting up. Mechanical pain (musculoskeletal): may worsen with movement/exercise; often improves with rest; most cases have acute onset lasting less than 3 months; precipitating physical injury may be identifiable. Key point (p6): 'While mechanical pain can lead to inflammation, it is different to inflammatory pain caused by an underlying chronic inflammatory disease such as arthritis, that results in chronic pain and is treated differently (5).'",
+          "gates": [
+            { "criterion": "Pain features consistent with inflammatory pain absent — 'improves with exercise/movement; does not improve with rest; lasts more than 3 months; morning stiffness (for greater than 30 minutes); pain waking patient during second half of the night with improvement on getting up' — otherwise 'Pain cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain)' → non-urgent referral (EXC-22 / RF-22)", "on_fail": "REFER" },
+            { "criterion": "Pain duration less than 3 months (acute, self-limiting) — otherwise chronic pain → non-urgent referral (EXC-22 / RF-22)", "on_fail": "REFER" },
+            { "criterion": "No history of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares) (EXC-23 / RF-23)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 9, "section_heading": "Table 2. Clinical features/characteristics of mechanical versus inflammatory pain (5, 19, 20)" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "INVESTIGATION",
+          "description": "Investigations (p9): 'Referral to a medical practitioner for management, including investigations, may be required for acute pain that does not respond to treatment, or if indicated by patient history and/or pain history e.g., patients presenting with traumatic injuries that may require radiological examination.'",
+          "gates": [
+            { "criterion": "Acute pain responds to treatment and no investigation is indicated by patient history and/or pain history (e.g. traumatic injuries that may require radiological examination)", "on_fail": "REFER" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 9, "section_heading": "Investigations" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "Management and treatment plan (p9): 'Pharmacist management of acute mild MSK pain involves: non-pharmacological/general measures — Advice regarding non-pharmacological pain management strategies for all patients in accordance with the Therapeutic Guidelines: Non-pharmacological management of acute pain (19); pharmacotherapy — In accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (11) and Therapeutic Guidelines: Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adults NB1 (8, 11).' NB1 (p9): 'Oral NSAID selection should be based on patient factors, including contraindications, and balance the risks and benefits. Refer to the Choice of NSAID and approach to NSAID use in patients at increased risk of specific adverse effects section in the Therapeutic Guidelines: Rheumatology (Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adults) (14).' No dose, strength, frequency or duration is printed anywhere in this guideline — pharmacotherapy is paracetamol, NSAIDs (oral and topical), with use of fish oil as per the Therapeutic Guidelines; opioids are not required for mild MSK pain and cannot be prescribed by pharmacists. Confirm management is appropriate (p10): 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+          "gates": [
+            { "criterion": "Treatment recommendation confirmed appropriate per Therapeutic Guidelines, Australian Medicines Handbook and other relevant references, including for contraindications and precautions, drug interactions, and pregnancy and breastfeeding (p10)", "on_fail": "unclear" },
+            { "criterion": "Oral NSAID selection based on patient factors, including contraindications, balancing risks and benefits (NB1, p9)", "on_fail": "unclear" },
+            { "criterion": "No opioid requested and opioids not required for mild MSK pain — 'Opioids are not required for the management of mild MSK pain and cannot be prescribed by pharmacists' (EXC-32)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan (p10): 'Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references should be provided to the patient regarding: the possible diagnosis, management options and expectations for resolution; product and medication use including dosing and treatment regimens with paracetamol and NSAIDS and application instructions for topical NSAIDs; how to manage adverse effects; when to seek further care and/or treatment.' 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' General advice (p10-p11): hot and cold therapy; other interventions based on the reported injury e.g., ice, immobilisation and compression therapy (14, 15, 19); the use of fish oil as per the Therapeutic Guidelines (8, 11, 21); evidence for the use of complementary medicines and possible adverse effects and interactions with conventional medicines. 'The patient should be advised to see their usual medical practitioner if: the pain relief provided is not adequate; or symptoms do not start to improve within 5 days; or their pain or other symptoms worsen; or they experience new pain or symptoms.'",
+          "gates": [
+            { "criterion": "Advice and counselling provided on diagnosis, management options, product/medicine use (paracetamol, NSAIDs, topical NSAID application), adverse effects, and when to seek further care", "on_fail": "unclear" },
+            { "criterion": "Agreed management plan shared with the multidisciplinary healthcare team with the patient's consent", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review (p11): 'Clinical review with the pharmacist is generally not required. If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.' Patient self-review advice (p11): 'The patient should be advised to see their usual medical practitioner if: the pain relief provided is not adequate; or symptoms do not start to improve within 5 days; or their pain or other symptoms worsen; or they experience new pain or symptoms.' Ongoing non-urgent referral triggers (p5): 'There is inadequate response to optimal treatment or pain/other symptoms worsen'; 'Pain management is inadequate'.",
+          "gates": [
+            { "criterion": "Condition improves or resolves", "on_fail": "REFER" },
+            { "criterion": "Symptoms start to improve within 5 days of treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Paracetamol",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p6, Key points): 'Non-pharmacological therapies and lifestyle measures (where there is a proven benefit) and pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for acute, mild MSK pain (11, 12).' Verbatim (p9): 'pharmacotherapy: In accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (11) and Therapeutic Guidelines: Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adultsNB1 (8, 11).' Verbatim (p10): counselling on 'product and medication use including dosing and treatment regimens with paracetamol and NSAIDS'. No form, strength, dose, route, frequency, duration, max dose or quantity to supply is printed in this document — dosing is delegated to the Therapeutic Guidelines (see open_questions / hugh_to_confirm). Document does not designate paracetamol as 'first-line'; it says it 'should be considered in the overall management plan'. Confirm management (p10): pharmacists 'must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Key points" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Non-steroidal anti-inflammatory drugs (NSAIDs) — oral",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p9, NB1): 'Oral NSAID selection should be based on patient factors, including contraindications, and balance the risks and benefits. Refer to the Choice of NSAID and approach to NSAID use in patients at increased risk of specific adverse effects section in the Therapeutic Guidelines: Rheumatology (Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adults) (14).' Route 'oral' is printed ('Oral NSAID selection'); no agent, form, strength, dose, frequency, duration, max dose or quantity to supply is printed. Verbatim (p9): 'In accordance with the Therapeutic Guidelines: Pharmacological management of acute pain (11) and Therapeutic Guidelines: Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adultsNB1 (8, 11).' Confirm management (p10): 'contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Non-steroidal anti-inflammatory drugs (NSAIDs) — topical",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p10, Communicate agreed management plan): counselling on 'product and medication use including dosing and treatment regimens with paracetamol and NSAIDS and application instructions for topical NSAIDs'. Route 'topical' is printed ('topical NSAIDs'); no agent, form, strength, dose, frequency, duration, max dose or quantity to supply is printed in this document. Pregnancy/lactation caveat verbatim (p10): pharmacists must confirm the treatment recommendation is appropriate 'including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Fish oil",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p10, General advice): 'The use of fish oil as per the Therapeutic Guidelines (8, 11, 21).' No product, strength, dose, route, frequency or duration is printed. Also (p11): 'Evidence for the use of complementary medicines and possible adverse effects and interactions with conventional medicines.'",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 10, "section_heading": "General advice" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Opioids (excluded from the Service)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Prohibition captured verbatim (p6, Key points): 'Opioids are not required for the management of mild MSK pain and cannot be prescribed by pharmacists.' Row exists so the prohibition is machine-checkable (EXC-32 / EXC-29 / EXC-30 / RF-29 / RF-30). Related referral triggers verbatim (p5, Non-urgent referral): 'The patient requests treatment with an opioid.'; 'The patient is opioid-tolerant or recovering from an opioid use disorder.' No product, strength, dose, frequency or duration is printed because opioids cannot be prescribed by pharmacists under this Service.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 6, "section_heading": "Key points" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Service restricted to patients aged 18 years or over. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "structured": { "parameter": "age_years", "operator": ">=", "value": 18, "unit": "years" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+    { "id": "RF-2", "trigger_text": "Immediate referral to an emergency department – call 000: Acute swelling, erythema and significant reduction in range of motion of a joint.", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-3", "trigger_text": "Immediate referral to an emergency department – call 000: Digital ischaemia or other signs of neurovascular compromise.", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-4", "trigger_text": "Immediate referral to an emergency department – call 000: Neurological signs including altered bladder or bowel function.", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-5", "trigger_text": "Immediate referral to an emergency department – call 000: Suspected nerve damage or mononeuropathy e.g., loss of feeling, weakness, pain or burning and/or paraesthesia ('pins and needles').", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-6", "trigger_text": "Immediate referral to an emergency department – call 000: Other non-musculoskeletal systemic symptoms suggestive of serious pathology including fever, malaise, unexplained weight loss, nausea and vomiting.", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-7", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: The patient presents with swelling, redness, tenderness and warmth around a joint or within a muscle or other alerting signs that may indicate a serious pathology.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-8", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: History of trauma.", "structured": { "parameter": "history_of_trauma", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-9", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Acute swelling, erythema and significant reduction in range of motion of a joint. [identical wording also printed under 'Immediate referral … – call 000' — see RF-2; both readings recorded as printed]", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-10", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Digital ischaemia or other signs of neurovascular compromise. [identical wording also printed under 'Immediate referral … – call 000' — see RF-3; both readings recorded as printed]", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-11", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Headache and acute onset of visual or auditory disturbances.", "structured": { "parameter": "headache_with_acute_onset_visual_or_auditory_disturbance", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-12", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Systemically unwell (e.g. fever, tachycardia, hypotension).", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-13", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Recent intravenous drug use.", "structured": { "parameter": "recent_intravenous_drug_use", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-14", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Risk of minimal-trauma fracture e.g. osteoporosis, history of cancer.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-15", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Severe mechanism of injury.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-16", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: New limb deformity.", "structured": { "parameter": "new_limb_deformity", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-17", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: New onset of skin rash.", "structured": { "parameter": "new_onset_skin_rash", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-18", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Unilateral calf tenderness with no history of recent trauma.", "structured": { "parameter": "unilateral_calf_tenderness_without_recent_trauma", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-19", "trigger_text": "Urgent referral to an emergency department – patient may make their own way to the emergency department: Pitting oedema.", "structured": { "parameter": "pitting_oedema", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-20", "trigger_text": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours (1): Suspect dislocation, fracture, ligament/tendon rupture.", "structured": null, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-21", "trigger_text": "Urgent referral within 24 to 48 hours (1): The patient is at high risk of acute rheumatic fever as per Therapeutic Guidelines (4).", "structured": null, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-22", "trigger_text": "Non-urgent referral: Pain cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain).", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-23", "trigger_text": "Non-urgent referral: History of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions).", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-24", "trigger_text": "Non-urgent referral: The patient presents with non-musculoskeletal systemic symptoms that may indicate underlying pathology such as fever, malaise or weight loss.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-25", "trigger_text": "Non-urgent referral: The patient rates their pain as moderate to severe, or has significant functional limitations due to pain.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-26", "trigger_text": "Non-urgent referral: The patient is unable to accurately rate their pain due to cognitive impairment or other special needs.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-27", "trigger_text": "Non-urgent referral: There is inadequate response to optimal treatment or pain/other symptoms worsen.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-28", "trigger_text": "Non-urgent referral: Pain management is inadequate.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-29", "trigger_text": "Non-urgent referral: The patient requests treatment with an opioid.", "structured": { "parameter": "patient_requests_opioid", "operator": "==", "value": true, "unit": "" }, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-30", "trigger_text": "Non-urgent referral: The patient is opioid-tolerant or recovering from an opioid use disorder.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" } },
+    { "id": "RF-31", "trigger_text": "'If the patient's self-reported pain severity is not consistent with other assessment findings e.g., physical function or examination findings, the patient should be referred to a medical practitioner for comprehensive assessment including socio-psycho-biomedical factors (12).'", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 8, "section_heading": "Patient history and assessment" } },
+    { "id": "RF-32", "trigger_text": "General advice: 'The patient should be advised to see their usual medical practitioner if: the pain relief provided is not adequate'.", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "General advice" } },
+    { "id": "RF-33", "trigger_text": "General advice: 'The patient should be advised to see their usual medical practitioner if: symptoms do not start to improve within 5 days'.", "structured": { "parameter": "days_without_symptom_improvement", "operator": ">=", "value": 5, "unit": "days" }, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "General advice" } },
+    { "id": "RF-34", "trigger_text": "General advice: 'The patient should be advised to see their usual medical practitioner if: their pain or other symptoms worsen'.", "structured": { "parameter": "pain_or_other_symptoms_worsen", "operator": "==", "value": true, "unit": "" }, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "General advice" } },
+    { "id": "RF-35", "trigger_text": "General advice: 'The patient should be advised to see their usual medical practitioner if: they experience new pain or symptoms'.", "structured": { "parameter": "new_pain_or_symptoms", "operator": "==", "value": true, "unit": "" }, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "General advice" } }
+  ],
+  "referral": {
+    "routine": [
+      "'Refer to a general practitioner (or other medical practitioner where appropriate): Non-urgent referral:' Pain cannot be attributed to acute mechanical MSK pain (chronic pain or inflammatory pain); History of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions); The patient presents with non-musculoskeletal systemic symptoms that may indicate underlying pathology such as fever, malaise or weight loss; The patient rates their pain as moderate to severe, or has significant functional limitations due to pain; The patient is unable to accurately rate their pain due to cognitive impairment or other special needs; There is inadequate response to optimal treatment or pain/other symptoms worsen; Pain management is inadequate; The patient requests treatment with an opioid; The patient is opioid-tolerant or recovering from an opioid use disorder.",
+      "p8: 'If the patient's self-reported pain severity is not consistent with other assessment findings e.g., physical function or examination findings, the patient should be referred to a medical practitioner for comprehensive assessment including socio-psycho-biomedical factors (12).'",
+      "p8 (supporting referral): 'Pharmacists should be aware of the possibility that a patient seeking treatment for an injury within this Service may have been subjected to domestic violence or abuse, or the injury may be a result of self-harm. If the pharmacist becomes aware of this during the consultation, they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances.'",
+      "p11 (General advice): 'The patient should be advised to see their usual medical practitioner if: the pain relief provided is not adequate; or symptoms do not start to improve within 5 days; or their pain or other symptoms worsen; or they experience new pain or symptoms.'",
+      "p11 (Clinical review): 'If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'"
+    ],
+    "urgent": [
+      "'Urgent referral within 24 to 48 hours (1):' Suspect dislocation, fracture, ligament/tendon rupture; The patient is at high risk of acute rheumatic fever as per Therapeutic Guidelines (4)."
+    ],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care (p4): 'Immediate referral to an emergency department – call 000:' Acute swelling, erythema and significant reduction in range of motion of a joint; Digital ischaemia or other signs of neurovascular compromise; Neurological signs including altered bladder or bowel function; Suspected nerve damage or mononeuropathy e.g., loss of feeling, weakness, pain or burning and/or paraesthesia ('pins and needles'); Other non-musculoskeletal systemic symptoms suggestive of serious pathology including fever, malaise, unexplained weight loss, nausea and vomiting.",
+      "p4: 'Urgent referral to an emergency department – patient may make their own way to the emergency department:' The patient presents with swelling, redness, tenderness and warmth around a joint or within a muscle or other alerting signs that may indicate a serious pathology; History of trauma; Acute swelling, erythema and significant reduction in range of motion of a joint; Digital ischaemia or other signs of neurovascular compromise; Headache and acute onset of visual or auditory disturbances; Systemically unwell (e.g. fever, tachycardia, hypotension); Recent intravenous drug use; Risk of minimal-trauma fracture e.g. osteoporosis, history of cancer; Severe mechanism of injury; New limb deformity; New onset of skin rash; Unilateral calf tenderness with no history of recent trauma; Pitting oedema."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review with the pharmacist",
+      "what": "'Clinical review with the pharmacist is generally not required. If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At initial consultation — advise patient to seek their usual medical practitioner if pain relief is not adequate or symptoms do not start to improve within 5 days",
+      "what": "'The patient should be advised to see their usual medical practitioner if: the pain relief provided is not adequate; or symptoms do not start to improve within 5 days'.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "General advice" }
+    },
+    {
+      "when": "If pain or other symptoms worsen, or new pain or symptoms develop",
+      "what": "'The patient should be advised to see their usual medical practitioner if: their pain or other symptoms worsen; or they experience new pain or symptoms.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 11, "section_heading": "General advice" }
+    },
+    {
+      "when": "After treatment — inadequate response to optimal treatment or pain/other symptoms worsen",
+      "what": "Non-urgent referral: 'There is inadequate response to optimal treatment or pain/other symptoms worsen'; 'Pain management is inadequate'.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 5, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate):" }
+    },
+    {
+      "when": "At initial consultation — counselling",
+      "what": "Advice includes 'when to seek further care and/or treatment'; 'the possible diagnosis, management options and expectations for resolution'.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-mild-acute-musculoskeletal-pain-cpg.pdf", "page": 1, "section_heading": "" }
+  },
+  "references": [
+    "[p12] Pharmacist resources: Therapeutic Guidelines: Rheumatology (Assessing peripheral musculoskeletal symptoms in adults; Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adults); Therapeutic Guidelines: Pain and analgesia (Understanding pain; Assessing a patient with pain; General principles of acute pain management; Non-pharmacological management of acute pain; Pharmacological management of acute pain; Assessing peripheral musculoskeletal symptoms in adults); Australian Medicines Handbook (Drugs for pain relief; NSAIDs); CARPA Manual – pain management (acute) (1); Australian Commission on Safety and Quality in Health Care – Low Back Pain Clinical Care Standard (6); Queensland Ambulance Service - Pain assessment (7); National Centre for Complementary and Integrative Health: Pain information for Health Professionals (9); Herbs at a glance (10).",
+    "[p10] Patient resources: SA Health – Conditions – Pain - Low back pain information (2).",
+    "[p13] 1. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[p13] 2. Government of South Australia SA Health. Low back pain Online: SAHealth; 2025 [Available from: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/pain/low+back+pain.",
+    "[p13] 3. UC Davis Health. Pain Management: Types of Pain 2025 [Available from: https://health.ucdavis.edu/conditions/pain-management/types-of-pain.",
+    "[p13] 4. Acute rheumatic fever [Internet]. 2025. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=rheumatic-fever&guidelinename=Antibiotic&sectionId=toc_d1e47#toc_d1e47.",
+    "[p13] 5. Harris C et al. Differentiating Inflammatory and Mechanical Back Pain 2018. Available from: https://nass.co.uk/wp-content/uploads/2020/03/Physiotherapy-modules-1.pdf.",
+    "[p13] 6. Australian Commission on Safety and Quality in Health Care. Clinical Care Standards: Low Back Pain2022.",
+    "[p13] 7. Queensland Government. Clinical Practice Procedures: Pain Assessment. 2019.",
+    "[p13] 8. General principles of acute pain management [Internet]. Therapeutic Guidelines Ltd. 2022. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=general-principles-acute-pain-management.",
+    "[p13] 9. National Center for Complementary and Integrative Health (NIH). Pain Information for Health Professionals 2025 [Available from: https://www.nccih.nih.gov/health/pain-information-for-health-professionals.",
+    "[p13] 10. National Center for Complementary and Integrative Health (NIH). Herbs at a Glance 2025 [Available from: https://www.nccih.nih.gov/health/herbsataglance.",
+    "[p13] 11. Using analgesics to manage acute pain [Internet]. 2022. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=analgesics-acute-pain.",
+    "[p13] 12. Understanding pain [Internet]. 2020. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=understanding-pain&guidelinename=Pain%20and%20Analgesia&sectionId=toc_d1e155#toc_d1e155.",
+    "[p13] 13. NSW Government. NSW Pharmacist Practice Standards for Mild, Acute Muscoskeletal Pain. Online: NSW Health; 2025. [source prints 'Muscoskeletal']",
+    "[p13] 14. Rheumatology [Internet]. 2024. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=principles-analgesic-and-anti-inflammatory-drug-use-musculoskeletal-conditions-in-adults.",
+    "[p13] 15. Schug SA PG, Scott DA, Halliwell R, Trinca J;. Acute Pain Management: Scientific Evidence (4th edition). Melbourne: APM:SE Working Group of the Australian and New Zealand College of Anaesthetists and Faculty of Pain Medicine; 2015.",
+    "[p13] 16. NPS MedicineWise. Fact Sheet: Statin-associated Muscle Symptoms (SAMS). 2021.",
+    "[p13] 17. NPS MedicineWise. Fact Sheet: Assessing and Managing Symptoms in People Taking Statins - SAMS Assessment Guide. 2017.",
+    "[p13] 18. Assessing a patient with pain [Internet]. 2020. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=assessing-pain&guidelinename=Pain%20and%20Analgesia&sectionId=toc_d1e784#toc_d1e784.",
+    "[p13] 19. Nonpharmacological management of acute pain [Internet]. 2020. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=nonpharmacological-management-acute-pain.",
+    "[p13] 20. Grinnell-Merrick LL, Lydon EJ, Mixon AM, Saalfeld W. Evaluating inflammatory versus mechanical back pain in individuals with psoriatic arthritis: a review of the literature. Rheumatology and Therapy. 2020;7(4):667-84.",
+    "[p14] 21. Mild, acute nociceptive pain [Internet]. Therapeutic Guidelines Limited. 2025 [cited 18 June 2025]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain."
+  ],
+  "open_questions": [
+    {
+      "topic": "Criteria combinatorics not explicitly labelled",
+      "observed": "Inclusion uses all_of (INC-1 to INC-4) and each referral tier is grouped as any_of (EXC-2 to EXC-6 'call 000'; EXC-7 to EXC-19 urgent ED; EXC-20 to EXC-21 urgent GP; EXC-22 to EXC-30 non-urgent GP); the document never prints an AND/OR key but states each red flag 'necessitate[s] referral'.",
+      "why_unclear": "Combinatorics derived from wording/structure rather than stated; recorded here per spec rule 4.",
+      "source_page": 4
+    },
+    {
+      "topic": "Two triggers appear under both the 'call 000' and 'patient may make their own way' tiers with identical wording",
+      "observed": "'Acute swelling, erythema and significant reduction in range of motion of a joint' and 'Digital ischaemia or other signs of neurovascular compromise' are printed under 'Immediate referral to an emergency department – call 000' (RF-2, RF-3) and again under 'Urgent referral to an emergency department – patient may make their own way to the emergency department' (RF-9, RF-10) on the same page.",
+      "why_unclear": "Both readings recorded as printed (rule 2); the engine must decide which escalation tier applies when these features are present.",
+      "source_page": 4
+    },
+    {
+      "topic": "No dose, strength, frequency, duration, max dose or quantity printed for any treatment",
+      "observed": "Pharmacotherapy is named only as 'paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)' (p6) 'in accordance with the Therapeutic Guidelines' (p9); 'application instructions for topical NSAIDs' (p10); 'The use of fish oil as per the Therapeutic Guidelines' (p10).",
+      "why_unclear": "Nothing printed to transcribe; dose fields for TX-1 to TX-4 left empty rather than invented; dosing must come from the referenced Therapeutic Guidelines.",
+      "source_page": 9
+    },
+    {
+      "topic": "Referral block spans pages 4-5 (plus p8 and p11 advice)",
+      "observed": "referral.provenance uses page 4 (first page of the 'Red flag' warning signs section); the GP tier continues on p5, the pain-severity-inconsistency referral is on p8, and the patient-advice ('see their usual medical practitioner') list is on p11.",
+      "why_unclear": "Spec requires one shared provenance object for the referral block using the first page; range recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Document version date discrepancy in the printed footers",
+      "observed": "Cover (p1) and footers on p2-p12 print 'Version 1.0 September 2025'; footers on p13 and p14 print 'Version 1.0 July 2025'.",
+      "why_unclear": "Both readings recorded as printed (rule 2); instrument_version recorded as 'Version 1.0 September 2025' (majority + cover date) pending confirmation.",
+      "source_page": 13
+    },
+    {
+      "topic": "Mapping of the document's own urgency tiers to action/severity",
+      "observed": "'Immediate referral to an emergency department – call 000' → ESCALATE_000 / critical; 'Urgent referral to an emergency department – patient may make their own way' → REFER_URGENT / high; 'Urgent referral within 24 to 48 hours' (GP) → REFER_URGENT / medium; 'Non-urgent referral' → REVIEW_GP / low; general advice 'see their usual medical practitioner' → REVIEW_GP / low; age restriction → NOT_ELIGIBLE / medium.",
+      "why_unclear": "The document prints its own tiers but no numeric severity; mapping recorded so it can be re-checked. No urgency word is printed for the p8 pain-severity-inconsistency referral (RF-31 recorded as low).",
+      "source_page": 4
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document",
+      "observed": "Branch outcomes are not printed for every gate. Used: STOP for 'call 000' triggers; REFER for the urgent-ED tier, both GP tiers, inflammatory/chronic pain, pain-severity inconsistency, non-response and the 5-day non-improvement rule; 'unclear' where the document states no consequence (age under 18, history sufficiency, pregnancy/breastfeeding status recording, vital-signs and examination completion, treatment confirmation, NSAID selection factors, counselling completion, plan sharing, domestic-violence support referral).",
+      "why_unclear": "Some branch outcomes are inferred from directive wording rather than printed explicitly.",
+      "source_page": 4
+    },
+    {
+      "topic": "No action printed for a presenter aged under 18 years",
+      "observed": "'Service restricted to patients aged 18 years or over' plus the usual ineligibility statement; no referral action is printed for an under-18 presenter.",
+      "why_unclear": "PW-1-S3 age gate on_fail recorded as 'unclear' because the document states no action beyond ineligibility for the prescribing service.",
+      "source_page": 3
+    },
+    {
+      "topic": "Pain severity scale/tool not specified",
+      "observed": "'Pain severity is subjective and should be interpreted in the context of the patient's presentation' (p8); triggers use 'moderate to severe' (p5) and 'The patient is unable to accurately rate their pain' (p5) with no numeric scale, faces scale or cut-off printed.",
+      "why_unclear": "RF-25 and RF-26 are structured null; severity banding must be judged (or sourced from the referenced Therapeutic Guidelines).",
+      "source_page": 8
+    },
+    {
+      "topic": "No designated first-line pharmacotherapy",
+      "observed": "The document says paracetamol and NSAIDs 'should be considered in the overall management plan for acute, mild MSK pain' (p6) but never uses 'first-line'.",
+      "why_unclear": "first_line recorded as false for TX-1 to TX-5 because the document does not designate one; if local policy designates first-line agents it must be confirmed (hugh_to_confirm).",
+      "source_page": 6
+    },
+    {
+      "topic": "Pregnancy, lactation and paediatric caveats captured verbatim but without therapy-specific guidance",
+      "observed": "History requires 'pregnancy and breastfeeding status (if applicable)' (p6); confirm-management requires checking 'contraindications and precautions; drug interactions; pregnancy and breastfeeding' (p10); service restricted to 18 years or over (p3); no agent-specific pregnancy/lactation dosing or age-band dosing is printed.",
+      "why_unclear": "No MSK-specific pregnancy, lactation or paediatric dosing guidance exists in this document; captured as notes/open question rather than invented.",
+      "source_page": 6
+    },
+    {
+      "topic": "Reference 13 is an NSW standard cited in an SA guideline",
+      "observed": "The professional discretion clause cites '(13)' = 'NSW Government. NSW Pharmacist Practice Standards for Mild, Acute Muscoskeletal Pain. Online: NSW Health; 2025' (p13), and p9 cites '(14)' Therapeutic Guidelines Rheumatology for NSAID choice.",
+      "why_unclear": "Transcribed as printed; whether the NSW practice standard governs SA practice is jurisdictional and is flagged for confirmation.",
+      "source_page": 13
+    },
+    {
+      "topic": "'Systemically unwell', 'Severe mechanism of injury' and 'other alerting signs' are qualitative",
+      "observed": "Triggers printed without thresholds: 'Systemically unwell (e.g. fever, tachycardia, hypotension)'; 'Severe mechanism of injury'; 'other alerting signs that may indicate a serious pathology'; 'Risk of minimal-trauma fracture e.g. osteoporosis, history of cancer'.",
+      "why_unclear": "No numeric or definitive criteria printed; captured with structured: null so the engine surfaces them as judgement prompts.",
+      "source_page": 4
+    },
+    {
+      "topic": "'Urgent referral within 24 to 48 hours (1)' and 'as per Therapeutic Guidelines (4)' carry external citations",
+      "observed": "'The patient is at high risk of acute rheumatic fever as per Therapeutic Guidelines (4)' — the risk criteria are external (reference 4, Acute rheumatic fever); '(1)' is the CARPA Standard Treatment Manual.",
+      "why_unclear": "Only the citation pointers are printed; the criteria themselves cannot be machine-evaluated from this document.",
+      "source_page": 5
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Doses, strengths, forms, frequencies, durations, max doses and quantities to supply for paracetamol, oral NSAIDs, topical NSAIDs and fish oil, from the Therapeutic Guidelines sections cited (Pharmacological management of acute pain; Principles of analgesic and anti-inflammatory drug use for musculoskeletal conditions in adults; Non-pharmacological management of acute pain).",
+      "source_page": 9,
+      "reason": "This guideline prints no dose fields at all; TX-1 to TX-4 dose fields are empty and must be filled before go-live."
+    },
+    {
+      "item": "Which agent(s) the local service treats as preferred/first-line for acute mild MSK pain (the document designates none) and the supply quantity/repeat rule until next review.",
+      "source_page": 6,
+      "reason": "first_line is false for all treatment rows because nothing is designated; local policy must decide before go-live."
+    },
+    {
+      "item": "Operational compliance evidence for each prescribing event: pharmacist 'included on the register of authorised pharmacists' and prescribing 'in accordance with the Community Pharmacist Prescribing Code' (regulation 17A, Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal basis is stated but the record-keeping/verification steps are not; local process must be confirmed before go-live."
+    },
+    {
+      "item": "Confirm the correct instrument version/date — cover and p2-p12 footers print 'Version 1.0 September 2025' while p13-p14 footers print 'Version 1.0 July 2025'.",
+      "source_page": 13,
+      "reason": "The document contradicts itself on its own version date; instrument_version must be verified against the controlled copy."
+    },
+    {
+      "item": "Referral destinations, after-hours pathways and transport arrangements beyond 'Immediate referral to an emergency department – call 000' and 'patient may make their own way to the emergency department'.",
+      "source_page": 4,
+      "reason": "No ED names, addresses, phone numbers or after-hours GP pathways are printed; local pathways must be confirmed."
+    },
+    {
+      "item": "Judgement thresholds for qualitative red flags: 'Systemically unwell (e.g. fever, tachycardia, hypotension)', 'Severe mechanism of injury', 'other alerting signs that may indicate a serious pathology', 'Risk of minimal-trauma fracture e.g. osteoporosis, history of cancer', and which tier applies to the duplicated triggers (acute swelling/erythema/reduced ROM; digital ischaemia).",
+      "source_page": 4,
+      "reason": "The document prints no numeric criteria and duplicates two triggers across the call-000 and self-transport tiers; a single engine rule per trigger must be agreed."
+    },
+    {
+      "item": "Criteria for 'high risk of acute rheumatic fever as per Therapeutic Guidelines (4)' and the CARPA Standard Treatment Manual content referenced for Aboriginal and Torres Strait Islander patients in rural and remote communities.",
+      "source_page": 5,
+      "reason": "External references only; the risk criteria are not printed in this document."
+    },
+    {
+      "item": "Contraindications and precautions, drug interactions, and pregnancy/breastfeeding checks for paracetamol, NSAIDs (oral and topical) and fish oil (per Therapeutic Guidelines, Australian Medicines Handbook and product information).",
+      "source_page": 10,
+      "reason": "Explicitly delegated by 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references ...'."
+    },
+    {
+      "item": "Action for a presenter aged under 18 years (document states ineligibility only, with no referral action).",
+      "source_page": 3,
+      "reason": "No escalation instruction is printed; local policy must define what happens after NOT_ELIGIBLE."
+    },
+    {
+      "item": "Management of a patient identified as subjected to domestic violence or abuse, or an injury resulting from self-harm — the 'support options' list and referral destinations.",
+      "source_page": 8,
+      "reason": "'Referral to support options depending on the patient circumstances' is left undefined; no service list is printed."
+    },
+    {
+      "item": "Sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent' — consent capture and destination list.",
+      "source_page": 10,
+      "reason": "Left to local policy by the document; no consent wording or sharing mechanism is printed."
+    },
+    {
+      "item": "My Health Record access and use during consultations ('Pharmacists can access a range of clinical information in a patient's My Health Record').",
+      "source_page": 8,
+      "reason": "Access arrangements and consent handling are left to local policy/system configuration."
+    },
+    {
+      "item": "Pharmacist professional discretion clause — how 'exercise professional discretion and judgement ... in consultation with the patient and/or their carer' interacts with hard-coded engine rules (and its citation to the NSW Pharmacist Practice Standards, reference 13).",
+      "source_page": 6,
+      "reason": "The document explicitly reserves judgement to the pharmacist and cites an NSW instrument in an SA guideline; the engine needs a documented override/escalation path and jurisdiction check."
+    },
+    {
+      "item": "Practical meaning of the 5-day self-review rule ('symptoms do not start to improve within 5 days') versus 'Clinical review with the pharmacist is generally not required' — which consultations must be booked and how follow-up is recorded.",
+      "source_page": 11,
+      "reason": "The document prints both statements without an operational follow-up process."
+    }
+  ]
+}

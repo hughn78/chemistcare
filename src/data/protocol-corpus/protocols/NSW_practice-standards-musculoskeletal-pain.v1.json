@@ -1,0 +1,868 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf",
+    "pdf_sha256": "deff7e9be7002467f2e19d7d48e20769d2faaa067b19b64f767ca157f51c7bc9",
+    "page_count": 14,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Pharmacist Practice Standards for Management of Mild, Acute Musculoskeletal Pain",
+    "instrument_version": "NSW Health Authority (dated 25 February 2026); approved 25 February 2026",
+    "effective_date": "2026-02-25",
+    "legal_basis": "Not stated as a named regulation or poisons schedule provision. The document states 'Approved Medicines as listed in the NSW Health Authority (dated 25 February 2026)', that supply occurs 'under the Authority', that pharmacists must have 'successfully completed all training requirements detailed in the NSW Health Authority (dated 25 February 2026)', and it is approved by 'Dr Kerry Chant AO PSM, Chief Health Officer and Deputy Secretary, Population and Public Health, 25 February 2026'. Basis for the standard is the Queensland Community Pharmacy Scope of Practice Pilot Mild, Acute Musculoskeletal Pain - Clinical Practice Guideline (2024) plus NSW Health ECAT protocols.",
+    "supervision_model": "'approved pharmacist' / 'participating approved pharmacist' model: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed all training requirements detailed in the NSW Health Authority (dated 25 February 2026).' 'Pharmacists must exercise professional discretion and judgement when applying the information contained within this Practice Standard, The Practice Standard does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.' Community Pharmacy Mild, Acute Musculoskeletal Pain Service.",
+    "scope_summary": "Practice standard for the Community Pharmacy Mild, Acute Musculoskeletal Pain Service (NSW): appropriately trained approved pharmacists assess and manage patients aged >=18 years with mild, acute (acute mechanical, self-limiting <3 months) musculoskeletal pain, provided no red flag or referral criterion is met, with informed clinical and financial consent, patient history/clinical review/examination, a management plan of non-pharmacological measures plus Section A Approved Medicines (oral formulations of celecoxib, etoricoxib, indometacin, ketoprofen, meloxicam, naproxen IR, naproxen MR, piroxicam, diclofenac), counselling, documentation (electronic clinical record, dispensing record, My Health Record upload, records stored securely minimum seven (7) years) and referral rules. Opioids cannot be prescribed under the Authority for this service; clinical review with the pharmacist is generally not required."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Patients must be aged 18 years and older to be eligible for the service.' (flowchart gate: 'Is the patient >=18 years old?' - No branch: 'Not eligible for management under the Authority and Practice Standard. Refer to GP.')",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Flowchart gate: 'Does the patient have any acute respiratory signs, red flags, or exclusions?' - No branch continues to consent (Yes branch: 'Not eligible for management under the Authority and Practice Standard. Refer to Emergency Department or GP.'). Wording quoted verbatim; see open_questions (likely template carry-over in an MSK document).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "unclear",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Flowchart: 'Conduct patient informed consent: • Participation • Financial • Pharmacist communication with other health practitioners' - No branch: 'Not eligible for management under the Authority and Practice Standard. Refer to GP.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+      },
+      {
+        "id": "INC-4",
+        "text": "Flowchart: 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+      },
+      {
+        "id": "INC-5",
+        "text": "'Patients must be physically present in the pharmacy to be eligible for the service.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "Key Points"}
+      },
+      {
+        "id": "INC-6",
+        "text": "'Patients are required to have a consultation with an approved pharmacist before a medication can be supplied under the Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "Key Points"}
+      },
+      {
+        "id": "INC-7",
+        "text": "'Pharmacists must only supply formulations listed in the approved medications within this Practice Standard and Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "Key Points"}
+      },
+      {
+        "id": "INC-8",
+        "text": "'To receive management for mild, acute musculoskeletal pain, the patient must fulfill the eligibility requirements of the Practice Standard. Patients who have requested the service but are not eligible should be referred to their regular medical practitioner or health service.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "Key Points"}
+      },
+      {
+        "id": "INC-9",
+        "text": "'Informed clinical and financial consent should be obtained from the patient prior to providing the service. The pharmacist must seek the patient's consent to share a record of the consultation and any subsequent consultations (including adverse events) with the patient's usual treating medical practitioner or medical practice, where the patient has one.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT"}
+      },
+      {
+        "id": "INC-10",
+        "text": "Presentation consistent with mild, acute mechanical MSK pain: 'Acute mechanical MSK pain is a symptom complex, as opposed to a condition, which is expected to be self-limiting (lasting less than 3 months), with a return to usual function as the underlying injury resolves.' 'Sufficient information should be obtained from the patient to assess if the patient's presenting complaint is consistent with mild, acute MSK pain, determine whether the patient is eligible for the service or meets any referral criteria...'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+      },
+      {
+        "id": "INC-11",
+        "text": "Pain severity within mild range (inverse of the referral criterion 'The patient rates their pain as moderate to severe, or has significant functional limitations due to pain'): the patient rates their pain as mild and has no significant functional limitations due to pain.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "INC-12",
+        "text": "Pharmacist requirement: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed all training requirements detailed in the NSW Health Authority (dated 25 February 2026).'",
+        "criteria_group": {"all_of": ["INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "B. GENERAL REQUIREMENTS"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "'Patients who meet any of the referral criteria below are not eligible for this service and must be referred to their regular medical practitioner or health service, or in instances of urgent care to the Emergency Department. Note that these are not exhaustive lists.' (sentence begins on page 4 and continues on page 5)",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "'Pharmacists must apply clinical judgement and refer any patient not considered appropriate for the service for any reason.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "'The patient has any 'red flag' warning sign (see box above)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "'The patient is aged under 18 years'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "'The pain cannot be attributed to acute mechanical MSK pain e.g. chronic pain or inflammatory pain'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "'The patient has a history of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "'The patient presents with swelling, redness, tenderness and warmth around a joint or within a muscle or other alerting features that may indicate a serious pathology'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "'The patient presents with non-musculoskeletal systemic symptoms that may indicate underlying pathology, such as fever, malaise or weight loss'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "'The patient is at high risk of acute rheumatic fever'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-10",
+        "text": "'The patient rates their pain as moderate to severe, or has significant functional limitations due to pain'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-11",
+        "text": "'The patient is intoxicated due to drugs and/or alcohol' (printed twice in the same referral list: page 5 and page 6)",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-12",
+        "text": "'The patient is unable to accurately rate their pain due to cognitive impairment or other special needs'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-13",
+        "text": "'There is inadequate response to optimal treatment or pain/other symptoms worsen'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-14",
+        "text": "'Pain management is inadequate'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-15",
+        "text": "'The patient requests treatment with an opioid'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-16",
+        "text": "'The patient is opioid-tolerant or recovering from an opioid use disorder'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "EXC-17",
+        "text": "'Opioids are not required for the management of mild MSK pain and cannot be prescribed under the Authority for this service.' (opioid therapy is outside the scope of this instrument)",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'For patients aged over 50 years, consider the increased risk of serious underlying pathologies such as malignancy and minimal-trauma fractures.' (age over 50 does not exclude the patient from the service; the document prints no escalation action or threshold for this consideration)",
+        "criteria_group": {"all_of": ["EXE-1"], "any_of": []},
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 7, "section_heading": "PATIENT HISTORY"},
+        "confidence": "medium"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Patient assessment flowchart and management pathway for mild, acute musculoskeletal pain (Section D flowchart, Sections I-J assessment and management)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Flowchart entry: 'Patient presents to a participating approved pharmacist for management of mild acute musculoskeletal pain'. Age gate: 'Is the patient >=18 years old?' - No branch: 'Not eligible for management under the Authority and Practice Standard. Refer to GP.'",
+          "gates": [{"criterion": "Patient is >=18 years old", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Red flag / exclusion gate: 'Does the patient have any acute respiratory signs, red flags, or exclusions?' (verbatim; see open_questions) - Yes branch: 'Not eligible for management under the Authority and Practice Standard. Refer to Emergency Department or GP.'",
+          "gates": [{"criterion": "No acute signs, red flags or exclusions (none of the Section G red flags or referral criteria met)", "on_fail": "REFER_URGENT"}],
+          "confidence": "unclear",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Conduct patient informed consent: '• Participation • Financial • Pharmacist communication with other health practitioners' - No branch: 'Not eligible for management under the Authority and Practice Standard. Refer to GP.' 'Informed clinical and financial consent should be obtained from the patient prior to providing the service.'",
+          "gates": [{"criterion": "Informed consent obtained for participation, financial consent, and pharmacist communication with other health practitioners", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Flowchart: 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status'.",
+          "gates": [{"criterion": "Patient history and clinical review completed including contraindications, precautions, drug interactions, pregnancy and lactation status", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "PATIENT HISTORY: 'A patient history, pain history and assessment and an examination that is tailored to the patient's presentation is required to inform the management approach, including appropriate referral.' History should include age; pregnancy and lactation status; presenting complaint; mechanism of injury; preceding events (e.g. syncope, chest pain or dizziness); non-musculoskeletal symptoms that may indicate serious pathology (weight loss or gain, fever, malaise, new rash, nausea, vomiting, sweating); alerting symptoms and features as per Therapeutic Guidelines; medical history (rheumatological/autoimmune conditions, cancer, osteoporosis, immunosuppression, ischaemic heart disease, renal disease); surgical history; family history; risk factors for acute rheumatic fever; response to previous treatments; impacts on quality of life; current/recently commenced/ceased medicines; weight, diet, exercise; allergies/adverse drug reactions; alcohol, tobacco and other drug history; other psychosocial factors. 'For patients aged over 50 years, consider the increased risk of serious underlying pathologies such as malignancy and minimal-trauma fractures.' The My Health Record should be reviewed where appropriate and available.",
+          "gates": [{"criterion": "Sufficient information obtained to assess whether the presentation is consistent with mild, acute MSK pain, whether any referral criterion is met, and the safety and appropriateness of any medicines supplied", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "PATIENT HISTORY"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "PAIN HISTORY AND ASSESSMENT: 'Pain history and assessment should be conducted in accordance with the Therapeutic Guidelines: Assessing a patient with pain and General principles of acute pain management.' Pain severity is subjective and interpreted in context. 'If the patient's self-reported pain severity is not consistent with other assessment findings e.g. physical function or examination findings, the patient should be referred to a medical practitioner for comprehensive assessment including socio-psycho-biomedical factors.'",
+          "gates": [{"criterion": "Self-reported pain severity consistent with other assessment findings (physical function, examination findings)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 7, "section_heading": "PAIN HISTORY AND ASSESSMENT"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EXAMINATION",
+          "description": "EXAMINATION: 'Where appropriate, conduct an assessment of vital signs.' Examine the area of pain in accordance with Therapeutic Guidelines: Clinical assessment of musculoskeletal symptoms in adults and (if applicable) Assessment of back and neck pain; refer to NSW Health acute lower back pain assessment and musculoskeletal assessment for additional guidance. 'To determine appropriate management or referral, it is important to identify the aetiology of the pain (nociceptive, neuropathic, nociplastic, or combination (mixed pain)) and to distinguish pain associated with inflammation from mechanical pain (Table 1).' MSK pain is predominantly nociceptive; acute pain is defined by duration of less than 3 months. Table 1 (clinical features of mechanical versus inflammatory pain): inflammatory - improves with exercise/movement, does not improve with rest, lasts more than 3 months, morning stiffness >30 minutes, pain waking during second half of the night with improvement on getting up; mechanical - may worsen with movement/exercise, often improves with rest, most cases acute onset lasting less than 3 months, precipitating physical injury may be identifiable.",
+          "gates": [{"criterion": "Aetiology of pain identified (nociceptive, neuropathic, nociplastic, or mixed) and inflammatory pain distinguished from mechanical pain", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 8, "section_heading": "EXAMINATION"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "INVESTIGATION",
+          "description": "Investigations: 'Referral to a medical practitioner for management, including investigations, may be required for acute pain that does not respond to management, or if indicated by patient history and/or pain history e.g. patients presenting with traumatic injuries that may require radiological examination.'",
+          "gates": [{"criterion": "Acute pain responds to management, or history/pain history does not indicate need for investigations (e.g. radiological examination after traumatic injury)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 8, "section_heading": "Investigations"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "CONFIRM MANAGEMENT IS APPROPRIATE: 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the management is appropriate, including for: • Contraindications and precautions • Drug interactions • Pregnancy and lactation.' NB1: 'NSAID selection should be based on patient factors, including contraindications, and balance the risks and benefits. Refer to Therapeutic Guidelines: Principles of NSAID use for musculoskeletal pain for guidance.'",
+          "gates": [{"criterion": "Contraindications, precautions, drug interactions and pregnancy/lactation checked against Therapeutic Guidelines/AMH and no contraindication to the planned management", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 9, "section_heading": "CONFIRM MANAGEMENT IS APPROPRIATE"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "Establish management plan. 'Pharmacist management of mild, acute MSK pain involves: • Non-pharmacological and lifestyle measures: advice regarding non-pharmacological pain management strategies for all patients in accordance with the Therapeutic Guidelines: Non-pharmacological management of acute pain • Pharmacotherapy: in accordance with the Therapeutic Guidelines: Pharmacological management of acute pain, Principles of NSAID use for musculoskeletal pain and Principles of paracetamol use for musculoskeletal pain.' Approved Medicines (Section A, oral formulations): celecoxib, etoricoxib, indometacin, ketoprofen, meloxicam, naproxen immediate-release, naproxen modified-release, piroxicam, diclofenac. 'Non-pharmacological therapies and lifestyle measures ... and pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for mild, acute MSK pain.' 'Opioids are not required for the management of mild MSK pain and cannot be prescribed under the Authority for this service.' Site-specific advice per Therapeutic Guidelines: Overview of limb conditions, Nonspecific low back pain, Nonspecific neck pain, Nonspecific thoracic pain.",
+          "gates": [
+            {"criterion": "Patient meets all inclusion criteria and no referral criterion/red flag is met", "on_fail": "REFER"},
+            {"criterion": "Only formulations listed in Section A Approved Medicines supplied (opioids cannot be supplied)", "on_fail": "STOP"},
+            {"criterion": "Dose, frequency and duration per Therapeutic Guidelines confirmed for the individual patient", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "COMMUNICATE AGREED MANAGEMENT PLAN: 'Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references should be provided to the patient regarding: • The possible diagnosis, management options and expectations for resolution • Product and medication use including dosing and treatment regimens with paracetamol and NSAIDS and application instructions for topical NSAIDS • How to manage adverse effects • When to seek further care and/or treatment.' GENERAL ADVICE: physical interventions that may provide adequate pain relief on their own e.g. hot and cold therapy; other appropriate interventions based on the reported injury e.g. ice, immobilisation and compression therapy; evidence for complementary medicines and fish oil per Therapeutic Guidelines; possible adverse effects and interactions of complementary medicines with conventional medicines. 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' Flowchart: 'Communicate agreed management plan with patient and patient's medical practitioner. Document all aspects of management plan.'",
+          "gates": [{"criterion": "Advice and counselling provided (possible diagnosis, management options, medicine use incl. dosing and treatment regimens, adverse effects, when to seek further care) and plan communicated with the patient", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 9, "section_heading": "COMMUNICATE AGREED MANAGEMENT PLAN"}
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "FOLLOW_UP",
+          "description": "GENERAL ADVICE / CLINICAL REVIEW: 'The patient should be advised to see a medical practitioner if: • The pain relief provided is not adequate; or • Symptoms do not start to improve within 5 days, or • Their pain or other symptoms worsen; or • They experience new pain or symptoms.' 'Clinical review with the pharmacist is generally not required. If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'",
+          "gates": [{"criterion": "Condition improves or resolves and no escalation trigger (inadequate pain relief, no improvement within 5 days, worsening symptoms, new symptoms) is present", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "CLINICAL REVIEW"}
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "FOLLOW_UP",
+          "description": "CLINICAL DOCUMENTATION AND COMMUNICATION: 'The pharmacist must make an electronic clinical record of the patient consultation, and a record in a pharmacy dispensing system regarding the supply of any medications under this service, in accordance with the Authority.' 'Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.' Key Points: 'Pharmacists must make a full clinical record of the consultation and the details of all consultations and outcomes must be recorded using secure digital software. Records must be stored securely for minimum seven (7) years.' If the patient consents to disclosure, the consultation record 'must be shared within a week following the consultation'.",
+          "gates": [{"criterion": "Electronic clinical record and pharmacy dispensing system record made for the supply; My Health Record updated unless the patient requests otherwise; records stored securely for minimum seven (7) years", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "K. CLINICAL DOCUMENTATION AND COMMUNICATION"}
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "REFER",
+          "description": "Referral destinations when any red flag or referral criterion is met at any gate: 'Patients who meet any of the referral criteria below are not eligible for this service and must be referred to their regular medical practitioner or health service, or in instances of urgent care to the Emergency Department.' Flowchart destinations: 'Refer to GP.' (age under 18, consent not obtained) and 'Refer to Emergency Department or GP.' (red flags/exclusions present). 'Patients who have requested the service but are not eligible should be referred to their regular medical practitioner or health service.'",
+          "gates": [{"criterion": "Any red flag warning sign or Section G referral criterion met at any point in the pathway", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Celecoxib",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Approved Medicines as listed in the NSW Health Authority (dated 25 February 2026) are: Oral formulations of: • Celecoxib'. Dose, frequency, duration, strength, max dose and quantity to supply are not printed in this Practice Standard; the document directs pharmacists to the Therapeutic Guidelines (Pharmacological management of acute pain; Principles of NSAID use for musculoskeletal pain) and to balance NSAID risks and benefits against patient factors including contraindications.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "Etoricoxib",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Etoricoxib' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "Indometacin",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Indometacin' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "Ketoprofen",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Ketoprofen' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "Meloxicam",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Meloxicam' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "Naproxen immediate-release",
+      "form": "oral formulation (immediate-release)",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Naproxen immediate-release' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-7",
+      "drug": "Naproxen modified-release",
+      "form": "oral formulation (modified-release)",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Naproxen modified-release' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-8",
+      "drug": "Piroxicam",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Piroxicam' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-9",
+      "drug": "Diclofenac",
+      "form": "oral formulation",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Oral formulations of: • Diclofenac' - Approved Medicines per the NSW Health Authority (dated 25 February 2026). Dose, frequency, duration and quantity not printed in this Practice Standard; defer to Therapeutic Guidelines and individual patient factors (contraindications, risks vs benefits).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-10",
+      "drug": "Paracetamol",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Mentioned in H. BACKGROUND: 'Non-pharmacological therapies and lifestyle measures (where there is a proven benefit) and pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan for mild, acute MSK pain.' Also referenced in counselling ('dosing and treatment regimens with paracetamol and NSAIDS') and Section J (Therapeutic Guidelines: Principles of paracetamol use for musculoskeletal pain). Paracetamol is NOT listed among the Section A Approved Medicines (oral NSAIDs only) - contradiction recorded in open_questions; whether it may be supplied or only recommended under the Authority must be confirmed. No dose, frequency or quantity printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    }
+  ],
+  "red_flags": [
+    {"id": "RF-1", "trigger_text": "'Acute swelling, erythema and significant reduction in range of motion of a joint' ('Red flag' warning signs that require immediate referral to a medical practitioner)", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-2", "trigger_text": "'Headache and acute onset of visual or auditory disturbances' ('Red flag' warning signs that require immediate referral to a medical practitioner)", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-3", "trigger_text": "'Digital ischaemia or other signs of neurovascular compromise' ('Red flag' warning signs that require immediate referral to a medical practitioner)", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-4", "trigger_text": "'Suspected nerve damage or mononeuropathy e.g. loss of feeling, weakness, pain or burning and/or paraesthesia ('pins and needles')'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-5", "trigger_text": "'Neurological signs, including altered bladder or bowel function'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-6", "trigger_text": "'Other non-musculoskeletal systemic symptoms suggestive of serious pathology including fever, malaise, weight loss, nausea and vomiting'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-7", "trigger_text": "'Systemically unwell (e.g. fever, tachycardia, hypotension)'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "medium", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-8", "trigger_text": "'Recent intravenous drug use'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-9", "trigger_text": "'Risk of minimal-trauma fracture e.g. osteoporosis, history of cancer'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-10", "trigger_text": "'Severe mechanism of injury'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-11", "trigger_text": "'New limb deformity'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-12", "trigger_text": "'New onset of skin rash'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-13", "trigger_text": "'Unilateral calf tenderness with no history of recent trauma'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-14", "trigger_text": "'Pitting oedema'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-15", "trigger_text": "'The patient has any 'red flag' warning sign (see box above)' - 'Patients must be referred to a medical practitioner if they meet any of the following criteria'", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-16", "trigger_text": "'The patient is aged under 18 years' (flowchart: 'Is the patient >=18 years old?' - No: 'Not eligible for management under the Authority and Practice Standard. Refer to GP.')", "structured": {"parameter": "age_years", "operator": "<", "value": 18, "unit": "years"}, "action": "NOT_ELIGIBLE", "severity": "low", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-17", "trigger_text": "'The pain cannot be attributed to acute mechanical MSK pain e.g. chronic pain or inflammatory pain'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-18", "trigger_text": "'The patient has a history of chronic inflammatory MSK pain or complex underlying rheumatological conditions (including acute flares of these conditions)'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-19", "trigger_text": "'The patient presents with swelling, redness, tenderness and warmth around a joint or within a muscle or other alerting features that may indicate a serious pathology'", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-20", "trigger_text": "'The patient presents with non-musculoskeletal systemic symptoms that may indicate underlying pathology, such as fever, malaise or weight loss'", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-21", "trigger_text": "'The patient is at high risk of acute rheumatic fever'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-22", "trigger_text": "'The patient rates their pain as moderate to severe, or has significant functional limitations due to pain'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-23", "trigger_text": "'The patient is intoxicated due to drugs and/or alcohol'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-24", "trigger_text": "'The patient is unable to accurately rate their pain due to cognitive impairment or other special needs'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-25", "trigger_text": "'There is inadequate response to optimal treatment or pain/other symptoms worsen' ('optimal treatment' is not defined in the document - see open_questions)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-26", "trigger_text": "'Pain management is inadequate'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-27", "trigger_text": "'The patient requests treatment with an opioid'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-28", "trigger_text": "'The patient is opioid-tolerant or recovering from an opioid use disorder'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 6, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-29", "trigger_text": "Consent gate failure (flowchart): 'Not eligible for management under the Authority and Practice Standard. Refer to GP.' when participation, financial or communication-with-other-health-practitioners consent is not obtained", "structured": null, "action": "NOT_ELIGIBLE", "severity": "low", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}},
+    {"id": "RF-30", "trigger_text": "'If the patient's self-reported pain severity is not consistent with other assessment findings e.g. physical function or examination findings, the patient should be referred to a medical practitioner for comprehensive assessment including socio-psycho-biomedical factors.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 7, "section_heading": "PAIN HISTORY AND ASSESSMENT"}},
+    {"id": "RF-31", "trigger_text": "'The pain relief provided is not adequate' - 'The patient should be advised to see a medical practitioner if:'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "GENERAL ADVICE"}},
+    {"id": "RF-32", "trigger_text": "'Symptoms do not start to improve within 5 days' - 'The patient should be advised to see a medical practitioner if:'", "structured": {"parameter": "days_without_improvement", "operator": ">=", "value": 5, "unit": "days"}, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "GENERAL ADVICE"}},
+    {"id": "RF-33", "trigger_text": "'Their pain or other symptoms worsen' - 'The patient should be advised to see a medical practitioner if:'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "GENERAL ADVICE"}},
+    {"id": "RF-34", "trigger_text": "'They experience new pain or symptoms' - 'The patient should be advised to see a medical practitioner if:'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "GENERAL ADVICE"}},
+    {"id": "RF-35", "trigger_text": "'If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.' ('Clinical review with the pharmacist is generally not required.')", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "CLINICAL REVIEW"}},
+    {"id": "RF-36", "trigger_text": "'Referral to a medical practitioner for management, including investigations, may be required for acute pain that does not respond to management, or if indicated by patient history and/or pain history e.g. patients presenting with traumatic injuries that may require radiological examination.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 8, "section_heading": "Investigations"}},
+    {"id": "RF-37", "trigger_text": "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration ... Additionally, you must notify the patient's usual general practitioner (if they have one).'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}},
+    {"id": "RF-38", "trigger_text": "'Pharmacists must apply clinical judgement and refer any patient not considered appropriate for the service for any reason.'", "structured": null, "action": "REFER", "severity": "low", "confidence": "medium", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}},
+    {"id": "RF-39", "trigger_text": "'Non-musculoskeletal symptoms that may indicate serious pathology, including weight loss or gain, fever, malaise, new rash, nausea, vomiting and sweating' (patient history items)", "structured": null, "action": "REFER", "severity": "high", "confidence": "medium", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}},
+    {"id": "RF-40", "trigger_text": "'Alerting symptoms and features as per the Therapeutic Guidelines: Clinical assessment of musculoskeletal symptoms in adults and (if applicable) the Therapeutic Guidelines: Assessment of back and neck pain' (specific features are not reproduced in this document)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "unclear", "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}}
+  ],
+  "referral": {
+    "routine": [
+      "Refer to GP.",
+      "their regular medical practitioner or health service",
+      "the patient should be advised to see a medical practitioner"
+    ],
+    "urgent": [
+      "in instances of urgent care to the Emergency Department",
+      "Refer to Emergency Department or GP."
+    ],
+    "emergency": [],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+  },
+  "review_followup": [
+    {
+      "when": "If the pain relief provided is not adequate; if symptoms do not start to improve within 5 days; if pain or other symptoms worsen; or if new pain or symptoms are experienced",
+      "what": "'The patient should be advised to see a medical practitioner'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "GENERAL ADVICE"}
+    },
+    {
+      "when": "If the condition does not improve or resolve after management",
+      "what": "'Clinical review with the pharmacist is generally not required. If the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 10, "section_heading": "CLINICAL REVIEW"}
+    },
+    {
+      "when": "If the patient consents to disclosure of the consultation record",
+      "what": "'If the patient consents to the disclosure, the record must be shared within a week following the consultation' with the patient's usual treating medical practitioner or medical practice, where the patient has one",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT"}
+    },
+    {
+      "when": "If an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine becomes known",
+      "what": "Report to the Therapeutic Goods Administration via the usual processes, by reporting online at https://aems.tga.gov.au/, and notify the patient's usual general practitioner (if they have one)",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}
+    },
+    {
+      "when": "Acute pain does not respond to management, or patient history and/or pain history indicates possible traumatic injury requiring radiological examination",
+      "what": "'Referral to a medical practitioner for management, including investigations, may be required'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 8, "section_heading": "Investigations"}
+    },
+    {
+      "when": "After any consultation under the service",
+      "what": "'Pharmacists must make a full clinical record of the consultation and the details of all consultations and outcomes must be recorded using secure digital software. Records must be stored securely for minimum seven (7) years.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 4, "section_heading": "Key Points"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Uncommon, unexpected or serious adverse event following treatment with an Approved Medicine: report to the Therapeutic Goods Administration via the usual processes, by reporting online at https://aems.tga.gov.au/",
+      "Notify the patient's usual general practitioner (if they have one) when an adverse event becomes known: 'Additionally, you must notify the patient's usual general practitioner (if they have one).'"
+    ],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-musculoskeletal-pain.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}
+  },
+  "references": [
+    "1. Grinnell-Merrick LL, Lydon EJ, Mixon AM, Saalfeld W. Evaluating Inflammatory Versus Mechanical Back Pain in Individuals with Psoriatic Arthritis: A Review of the Literature. Rheumatol Ther. 2020;7(4):667- (page 11)",
+    "2. Harris C, Gurden S, Martindale J, Jeffries C. Differentiating Inflammatory and Mechanical Back Pain. 2018. In: Physiotherapy modules [Internet]. United Kingdom: NASS. Available from: https://nass.co.uk/wp-content/uploads/2020/03/Physiotherapy-modules-1.pdf. (page 11)",
+    "3. Queensland Health: Queensland Community Pharmacy Scope of Practice Pilot Mild, Acute Musculoskeletal Pain - Clinical Practice Guideline; 2024. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0021/1304247/musculoskeletal-pain-guideline.pdf. (page 11)",
+    "4. Schug SA, Palmer GM, Scott DA, Halliwell R, Trinca J. Acute Pain Management: Scientific Evidence. Melbourne: Working Group of the Australian and New Zealand College of Anaesthetists and Faculty of Pain Medicine; 2015. Available from: https://www.anzca.edu.au/getattachment/4c3b03b7-52bf-4c10-9115-83d827c0fc38/Acute-Pain-Management-Scientific-Evidence. (page 11)",
+    "5. Therapeutic Guidelines: Pain and analgesia (Assessing a patient with pain). Melbourne: Therapeutic Guidelines Limited; 2020. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=assessing-pain. (page 11)",
+    "6. Therapeutic Guidelines: Pain and analgesia (General principles of acute pain management). Melbourne: Therapeutic Guidelines Limited; 2020. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=general-principles-acute-pain-management (page 11)",
+    "7. Therapeutic Guidelines: Pain and analgesia (Nonpharmacological management of acute pain). Melbourne: Therapeutic Guidelines Limited; 2020. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=nonpharmacological-management-acute-pain. (page 11-12)",
+    "8. Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain). Melbourne: Therapeutic Guidelines Limited; 2020. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=understanding-pain&guidelinename=auto&sectionId=pharmacological_management_of_acute_pain#pharmacological_management_of_acute_pain (page 12)",
+    "9. Therapeutic Guidelines: Pain and analgesia (Understanding pain). Melbourne: Therapeutic Guidelines Limited; 2020. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=understanding-pain. (page 12)",
+    "10. Therapeutic Guidelines: Rheumatology (Assessment and initial management of musculoskeletal symptoms). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=Assessment_and_initial_management_of_musculoskeletal_symptoms#Assessment_and_initial_management_of_musculoskeletal_symptoms. (page 12)",
+    "11. Therapeutic Guidelines: Rheumatology (Assessment of back and neck pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Assessment-of-back-and-neck-pain_topic_2#c_RHG_Assessment-of-back-and-neck-pain_topic_2. (page 12)",
+    "12. Therapeutic Guidelines: Rheumatology (Clinical assessment of musculoskeletal symptoms in adults). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Clinical-assessment-of-musculoskeletal-symptoms-in-adults_topic_2#c_RHG_Clinical-assessment-of-musculoskeletal-symptoms-in-adults_topic_2 (page 12)",
+    "13. Therapeutic Guidelines: Rheumatology (Complementary medicines for the management of musculoskeletal pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Drugs-that-have-a-limited-role-for-musculoskeletal-pain_topic_3#c_RHG_Drugs-that-have-a-limited-role-for-musculoskeletal-pain_topic_3 (page 12)",
+    "14. Therapeutic Guidelines: Rheumatology (Nonspecific low back pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Nonspecific-low-back-pain_topic_2#c_RHG_Nonspecific-low-back-pain_topic_2 (page 12)",
+    "15. Therapeutic Guidelines: Rheumatology (Nonspecific neck pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Nonspecific-neck-pain_topic_2#c_RHG_Nonspecific-neck-pain_topic_2 (page 12)",
+    "16. Therapeutic Guidelines: Rheumatology (Nonspecific thoracic pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=thoracic-spine-upper-back-pain&guidelinename=Rheumatology&sectionId=toc_d1e834#toc_d1e834 (page 12-13)",
+    "17. Therapeutic Guidelines: Rheumatology (Overview of limb conditions). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Overview-of-limb-conditions_topic_2#c_RHG_Overview-of-limb-conditions_topic_2 (page 13)",
+    "18. Therapeutic Guidelines: Rheumatology (Practical information on drugs used for musculoskeletal and rheumatological conditions). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=Practical_information_on_drugs_used_for_musculoskeletal_and_rheumatological_conditions#Practical_information_on_drugs_used_for_musculoskeletal_and_rheumatological_conditions (page 13)",
+    "19. Therapeutic Guidelines: Rheumatology (Principles of NSAID use for musculoskeletal pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Principles-of-NSAID-use-for-musculoskeletal-pain_topic_2#c_RHG_Principles-of-NSAID-use-for-musculoskeletal-pain_topic_2 (page 13)",
+    "20. Therapeutic Guidelines: Rheumatology (Principles of paracetamol use for musculoskeletal pain). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Rheumatology&topicfile=gout&guidelinename=auto&sectionId=c_RHG_Principles-of-paracetamol-use-for-musculoskeletal-pain_topic_2#c_RHG_Principles-of-paracetamol-use-for-musculoskeletal-pain_topic_2 (page 13)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Flowchart gate wording 'acute respiratory signs' in a musculoskeletal practice standard",
+      "observed": "Page 3 flowchart: 'Does the patient have any acute respiratory signs, red flags, or exclusions?'",
+      "why_unclear": "The service is for mild, acute musculoskeletal pain, so 'acute respiratory' appears to be wording carried over from another template. Both readings are recorded: as printed ('acute respiratory signs') and as possibly intended (any acute signs). Not reconciled.",
+      "source_page": 3
+    },
+    {
+      "topic": "No dose, frequency, strength, duration, max dose or quantity-to-supply printed for any Approved Medicine",
+      "observed": "Section A lists only drug names under 'Oral formulations of:'; Section J and NB1 direct pharmacists to Therapeutic Guidelines: Pharmacological management of acute pain and Principles of NSAID use for musculoskeletal pain.",
+      "why_unclear": "The document deliberately defers dosing to external guidelines that were not supplied with this batch; treatment fields are left empty rather than invented.",
+      "source_page": 2
+    },
+    {
+      "topic": "No emergency (000/ambulance) referral category printed",
+      "observed": "Referral destinations printed are 'their regular medical practitioner or health service', 'GP' and 'in instances of urgent care to the Emergency Department'.",
+      "why_unclear": "There is no explicit emergency/ESCALATE_000 category in this document, so referral.emergency is empty. Whether an emergency escalation pathway exists under local policy is unknown.",
+      "source_page": 5
+    },
+    {
+      "topic": "Paracetamol named as management option but not listed as an Approved Medicine",
+      "observed": "H. BACKGROUND (page 6): 'pharmacotherapy (paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)) should be considered in the overall management plan'; Section A Approved Medicines (page 2) lists oral NSAIDs only. Section J also references Therapeutic Guidelines: Principles of paracetamol use for musculoskeletal pain.",
+      "why_unclear": "Contradiction between background guidance and the approved supply list is recorded without reconciliation; whether paracetamol may be supplied (vs only recommended) under the Authority is not stated.",
+      "source_page": 6
+    },
+    {
+      "topic": "Topical NSAIDs mentioned in counselling though Section A lists oral formulations only",
+      "observed": "Page 9: 'Product and medication use including dosing and treatment regimens with paracetamol and NSAIDS and application instructions for topical NSAIDS'; Section A (page 2) states 'Oral formulations of:' only.",
+      "why_unclear": "Contradiction recorded without reconciliation: topical NSAID supply does not appear to be within the Approved Medicines list but is referred to in the counselling requirements.",
+      "source_page": 9
+    },
+    {
+      "topic": "Legal basis / the 'Authority' instrument not printed",
+      "observed": "'Approved Medicines as listed in the NSW Health Authority (dated 25 February 2026)'; 'under the Authority'; approval signature 'Dr Kerry Chant AO PSM ... 25 February 2026'. No regulation name or poisons schedule provision is printed.",
+      "why_unclear": "The enabling instrument is referenced but not reproduced, so legal_basis describes what is printed and flags the gap.",
+      "source_page": 2
+    },
+    {
+      "topic": "Eligibility combinatorics not stated for the inclusion list",
+      "observed": "The flowchart presents sequential Yes/No gates; Section G states patients 'must be aged 18 years and older' plus 'Patients who meet any of the referral criteria below are not eligible'.",
+      "why_unclear": "The document does not explicitly state AND/OR semantics for the inclusion set; defaulted to all_of per the spec, with INC-2 recorded confidence 'unclear'.",
+      "source_page": 3
+    },
+    {
+      "topic": "Referral/exclusion list explicitly not exhaustive",
+      "observed": "'Note that these are not exhaustive lists.' (page 5) and 'The prompts provided below are not exhaustive, pharmacists should maintain an open mind and be aware of cognitive bias.' (page 6)",
+      "why_unclear": "The document states the lists are incomplete, so the captured exclusion set cannot be treated as complete; clinical judgement catch-all (EXC-2) applies.",
+      "source_page": 5
+    },
+    {
+      "topic": "Duplicate printed referral criterion: intoxication",
+      "observed": "'The patient is intoxicated due to drugs and/or alcohol.' appears as a bullet at the end of page 5 and again as the final bullet on page 6 within the same referral list.",
+      "why_unclear": "Recorded once as EXC-11/RF-23 with a note; unclear whether the repetition is intentional emphasis or a document editing artefact.",
+      "source_page": 6
+    },
+    {
+      "topic": "Multi-page statements and referral-block provenance",
+      "observed": "EXC-1 sentence starts on page 4 and finishes on page 5; the referral destinations appear on pages 3, 4-5 and 10; the red-flag box and referral criteria sit on pages 5-6.",
+      "why_unclear": "Provenance uses the first page marker under which each statement appears; the full page ranges are recorded here as required by the spec.",
+      "source_page": 3
+    },
+    {
+      "topic": "Table 1 (mechanical versus inflammatory pain) is a two-column table extracted with interleaved lines",
+      "observed": "Page 8 Table 1 columns 'Inflammatory pain' and 'Mechanical pain (musculoskeletal)' are interleaved in the plain-text extraction (e.g. '• Improves with exercise/movement • May worsen with').",
+      "why_unclear": "Column boundaries may be misaligned; each feature is attributed to the column it appears to belong to, and this note flags possible mis-association.",
+      "source_page": 8
+    },
+    {
+      "topic": "Specific contraindications, precautions, interactions and pregnancy/lactation rules not printed",
+      "observed": "Section G (page 5) and Section J (page 9) require pharmacists to 'consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions / Drug interactions / Pregnancy and lactation'.",
+      "why_unclear": "No drug-specific contraindication list is reproduced in this document, so none could be transcribed; the check exists only as a pathway gate.",
+      "source_page": 5
+    },
+    {
+      "topic": "'Inadequate response to optimal treatment' - 'optimal treatment' undefined",
+      "observed": "'There is inadequate response to optimal treatment or pain/other symptoms worsen' (page 6).",
+      "why_unclear": "The document does not define what constitutes optimal treatment, its duration, or how response is measured, so the trigger cannot be made evaluable.",
+      "source_page": 6
+    },
+    {
+      "topic": "No fixed clinical review interval printed",
+      "observed": "'Clinical review with the pharmacist is generally not required.' (page 10); escalation triggers are symptom-based (e.g. no improvement within 5 days) rather than a scheduled review.",
+      "why_unclear": "No review timeframe is specified, so review_followup entries are all condition-based; whether a local service requires a scheduled review is unknown.",
+      "source_page": 10
+    },
+    {
+      "topic": "Consent record sharing 'within a week' - exact timeframe ambiguous",
+      "observed": "'If the patient consents to the disclosure, the record must be shared within a week following the consultation' (page 4).",
+      "why_unclear": "'Within a week' could mean 7 calendar days from consultation; the document does not define business days vs calendar days.",
+      "source_page": 4
+    },
+    {
+      "topic": "Patients aged over 50 years - consideration printed with no escalation action",
+      "observed": "'For patients aged over 50 years, consider the increased risk of serious underlying pathologies such as malignancy and minimal-trauma fractures.' (page 7)",
+      "why_unclear": "No threshold, action or referral requirement is printed for this consideration (recorded as exclusion exception EXE-1); unclear whether it is a soft prompt or a mandatory check.",
+      "source_page": 7
+    },
+    {
+      "topic": "Pathway gates with on_fail 'unclear'",
+      "observed": "Steps PW-1-S4, PW-1-S5, PW-1-S9, PW-1-S10 (third gate), PW-1-S11 and PW-1-S13 have gates where the document does not state what happens on failure.",
+      "why_unclear": "The flowchart prints failure branches only for the age, red-flag/exclusion and consent gates; later steps' failure handling is not specified, so 'unclear' is recorded rather than inferred.",
+      "source_page": 3
+    },
+    {
+      "topic": "No first-line ranking among Approved Medicines printed",
+      "observed": "Section A lists nine oral medicines alphabetically with no hierarchy; NB1 says NSAID selection should be based on patient factors.",
+      "why_unclear": "No medicine is designated first-line in the document, so all treatments are recorded first_line=false rather than assuming a preference.",
+      "source_page": 2
+    },
+    {
+      "topic": "Pain severity rating scale/tool not specified",
+      "observed": "'The patient rates their pain as moderate to severe...' (page 5) and 'Pain severity is subjective and should be interpreted in the context of the patient's presentation' (page 7), with no scale (e.g. NRS/VAS) printed.",
+      "why_unclear": "The severity-based inclusion/exclusion cannot be evaluated numerically because no rating instrument or cut-offs are given.",
+      "source_page": 7
+    },
+    {
+      "topic": "Referral block spans pages 3, 4-5 and 10",
+      "observed": "Routine destinations ('Refer to GP.', 'their regular medical practitioner or health service', 'see a medical practitioner') and urgent destination ('Emergency Department') appear across pages 3-5 and 10.",
+      "why_unclear": "One shared provenance object is required for the referral block; page 3 (first appearance) is used and the range is noted here.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Obtain and verify the NSW Health Authority (dated 25 February 2026) - its Approved Medicines list and training requirements are referenced but not reproduced in this document.",
+      "source_page": 2,
+      "reason": "The controlling instrument for supply and training is external to the supplied PDF; scope and eligibility depend on its contents."
+    },
+    {
+      "item": "Dose, frequency, duration, max dose, strength and quantity-to-supply for each Approved Medicine (celecoxib, etoricoxib, indometacin, ketoprofen, meloxicam, naproxen IR/MR, piroxicam, diclofenac) from the relevant Therapeutic Guidelines topics.",
+      "source_page": 2,
+      "reason": "No dosing information is printed in the Practice Standard; a prescribing support module cannot evaluate supply without it."
+    },
+    {
+      "item": "Whether paracetamol and topical NSAIDs may be supplied or only recommended under the Authority (Section A lists oral formulations only, while Background and counselling sections refer to paracetamol and topical NSAIDs).",
+      "source_page": 9,
+      "reason": "Direct contradiction inside the document; affects what the module permits."
+    },
+    {
+      "item": "Legal basis/exemption under which supply occurs ('the Authority' is referenced but no regulation or poisons schedule provision is named).",
+      "source_page": 2,
+      "reason": "Required protocol field; cannot be inferred from the document."
+    },
+    {
+      "item": "Confirm with NSW Health the intended flowchart wording 'Does the patient have any acute respiratory signs, red flags, or exclusions?' for this musculoskeletal service.",
+      "source_page": 3,
+      "reason": "Wording appears to be a template carry-over and gates eligibility; must be clarified before go-live."
+    },
+    {
+      "item": "Local emergency escalation policy (000 / ambulance / immediate emergency care) - no emergency referral category is printed in this document.",
+      "source_page": 5,
+      "reason": "The document routes urgent care to the Emergency Department but never states an emergency/000 action."
+    },
+    {
+      "item": "Referral destinations and timeframes: what constitutes 'urgent care to the Emergency Department' vs 'Refer to GP', and expected timeframes for each.",
+      "source_page": 5,
+      "reason": "Actions differ by destination and urgency; the document gives no timeframe."
+    },
+    {
+      "item": "Local thresholds for the clinical-judgement catch-all 'refer any patient not considered appropriate for the service for any reason'.",
+      "source_page": 5,
+      "reason": "Open-ended exclusion criterion needs local policy to be operable."
+    },
+    {
+      "item": "Which version of the Therapeutic Guidelines (and Australian Medicines Handbook) is authoritative for contraindications, drug interactions, pregnancy/lactation, NSAID selection and paracetamol use.",
+      "source_page": 9,
+      "reason": "The document defers all clinical decision detail to external references that must be pinned for a rules engine."
+    },
+    {
+      "item": "Verification requirements for 'approved pharmacist' status: general registration check and completion of the training detailed in the Authority.",
+      "source_page": 2,
+      "reason": "Practitioner eligibility gate; training provider/curriculum not printed."
+    },
+    {
+      "item": "My Health Record upload default and consent capture, plus record retention (minimum seven (7) years) and the approved secure digital software.",
+      "source_page": 10,
+      "reason": "Documentation obligations mix mandatory rules and patient-choice exceptions; local systems/policy must be confirmed."
+    },
+    {
+      "item": "Pain severity assessment tool and cut-offs to use for 'mild' vs 'moderate to severe' pain.",
+      "source_page": 7,
+      "reason": "Eligibility turns on severity rating but no scale or threshold is printed."
+    },
+    {
+      "item": "Whether 'Clinical review with the pharmacist is generally not required' conflicts with any local service requirement for scheduled follow-up.",
+      "source_page": 10,
+      "reason": "'Generally' is hedged language; local service model may require a review interval."
+    },
+    {
+      "item": "Scope of complementary medicines/fish oil advice under the service ('Evidence for the use of complementary medicines and fish oil as per the Therapeutic Guidelines: Complementary medicines for the management of musculoskeletal pain').",
+      "source_page": 10,
+      "reason": "Advice scope for products outside the Approved Medicines list needs confirmation."
+    },
+    {
+      "item": "Identification of 'participating approved pharmacist' / 'approved pharmacist' and the approved training modules and education providers.",
+      "source_page": 4,
+      "reason": "Service participation criteria are referenced but not enumerated in the document."
+    }
+  ]
+}

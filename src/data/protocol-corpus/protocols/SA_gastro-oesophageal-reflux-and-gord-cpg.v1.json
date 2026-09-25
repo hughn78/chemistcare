@@ -1,0 +1,424 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf",
+    "pdf_sha256": "cfba221cac6ae7293e5f3f7d0ec4d6fc6f1de97a03a976d92dcd9809db1d91fb",
+    "page_count": 12,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Gastro-oesophageal Reflux and Gastro-oesophageal Reflux Disease - Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.",
+    "supervision_model": "Authorised pharmacist prescribing: the pharmacist must be included on the register of authorised pharmacists and the drug must be prescribed in accordance with the Community Pharmacist Prescribing Code (document's own terminology). Pharmacists are advised to exercise professional discretion and judgement; the guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.",
+    "scope_summary": "SA Health clinical practice guideline issued under the Community Pharmacy Expanded Scope of Practice Initiative for assessment and management of gastro-oesophageal reflux and GORD by authorised pharmacist prescribers. Service restricted to patients aged 18 to 50 years of age. The guideline prints no drug doses: non-pharmacological management is per Therapeutic Guidelines diet and lifestyle modification, and pharmacotherapy is directed to the Therapeutic Guidelines sections for mild intermittent symptoms, frequent or severe symptoms (GORD) in adults and gastro-oesophageal reflux during pregnancy, with an explicit caution that long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly. It sets out red flags for immediate (call 000), urgent emergency department, urgent 24-48 hour GP and non-urgent referral, plus examination-based referral triggers."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 to 50 years of age.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 3, "section_heading": "" }
+      },
+      {
+        "id": "INC-2",
+        "text": "a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 2, "section_heading": "Authorisation" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "A clear diagnosis of gastro-oesophageal reflux or GORD cannot be made",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Urgent referral within 24 to 48 hours" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "The patient is being managed by a gastroenterologist",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Reflux suspected to be caused by other medications (such as NSAIDs, calcium channel blockers).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 50,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 3, "section_heading": "" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 3, "section_heading": "" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Gastro-oesophageal reflux and GORD assessment and management pathway",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Screen for 'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care. Immediate referral to an emergency department - call 000: Chest pain / tightness as the primary symptom* with or without Shortness of breath, Diaphoresis, Light-headedness, Radiating pain especially to jaw; Symptoms of anaemia including fatigue, shortness of breath, weakness, dizziness or an irregular heartbeat; Haematemesis or melaena, including 'coffee-ground' vomit; Pregnancy with elevated blood pressure (reflux can be a sign of pre-eclampsia). Urgent referral to an emergency department - patient may make their own way to the emergency department: Abdominal/epigastric pain*; Upper gastrointestinal pain*; Acute back pain; Difficulty or painful swallowing; Vomiting; Jaundice; Severe, frequent or changing symptoms. * Assessment of chest pain and abdominal pain is complex, therefore maintain a high index of suspicion for differential conditions including ischaemic cardiac events (myocardial infarction), ruptured peptic ulcer and ruptured aortic aneurysm. Be aware of cognitive bias, focus on excluding red flags and early referral to a medical practitioner or emergency department.",
+          "gates": [
+            { "criterion": "No 'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care (immediate or urgent emergency department referral)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs - presenting signs and symptoms. The cardinal signs of gastro-oesophageal reflux are heartburn and regurgitation (3, 4). The clinical symptoms of GORD are common to multiple other conditions but can often be differentiated using the patient's history. In addition to the cardinal signs of heartburn and regurgitation other atypical symptoms attributed to reflux include: belching; epigastric pain; dyspepsia; acid brash (saliva mixing with stomach acid in the mouth) (3, 4). Extra-oesophageal symptoms that are associated with, but not specific to gastro-oesophageal reflux, may include: tooth sensitivity, enamel erosion (particularly on palatal surface of upper incisors) and halitosis; pharyngeal and laryngeal signs and symptoms such as hoarseness and throat clearing, persistent cough, sore throat, pharyngitis and sinusitis; chest pain; sleep disturbance; nausea; asthma-like symptoms (cough, wheeze, shortness of breath) (6, 7).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 6, "section_heading": "Presenting signs and symptoms" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Patient history: Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; weight; pregnancy and breastfeeding status (if applicable) - reflux can be a sign of pre-eclampsia which requires urgent medical referral - refer to red flags; nature, severity and frequency of symptoms (typical, atypical and extraoesophageal), including 'red flag' signs and symptoms that may indicate the need for upper gastrointestinal endoscopy (refer Table 1); onset and duration of symptoms; precipitating and relieving factors; underlying medical conditions and conditions that may complicate diagnosis e.g., coronary heart disease and asthma; dietary patterns; current medication (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); consider medications that may exacerbate or cause gastro-oesophageal reflux symptoms, e.g., NSAIDs, bisphosphonates, doxycycline; allergies/adverse drug reactions; pharmacological and non-pharmacological (dietary and lifestyle) strategies tried to treat current symptoms and response.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 7, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Patient history continued: alcohol and drug history; smoking/vaping status. Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "Examination: Where appropriate, conduct assessment of vital signs. Consider abdominal examination including palpating for epigastric mass, abdominal tenderness, guarding/rigidity of abdomen - all warrant referral to GP within 24 hours. Guarding and rigidity of abdomen warrants urgent ED referral. Similarly, evidence of abnormal vital signs may be evidence of decompensated anaemia or acute abdomen warranting urgent ED referral.",
+          "gates": [
+            { "criterion": "No epigastric mass or abdominal tenderness on abdominal examination", "on_fail": "REFER" },
+            { "criterion": "No guarding or rigidity of abdomen and no abnormal vital signs", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Table 1. Red flag signs and symptoms (6): The following signs and symptoms are suggestive of other serious conditions and must be referred to a medical practitioner (as endoscopy may be indicated): symptoms of anaemia; chest pain; difficulty or painful swallowing; new symptoms in an older person; upper GI pain; changing symptoms; haematemesis; severe or frequent symptoms; melaena; jaundice; vomiting/'coffee-ground' vomit; inadequate response to treatment (up to 4-8 weeks of PPI at the standard dose); unexplained weight loss.",
+          "gates": [
+            { "criterion": "None of the Table 1 red flag signs and symptoms are present (symptoms of anaemia; chest pain; difficulty or painful swallowing; new symptoms in an older person; upper GI pain; changing symptoms; haematemesis; severe or frequent symptoms; melaena; jaundice; vomiting/'coffee-ground' vomit; inadequate response to treatment (up to 4-8 weeks of PPI at the standard dose); unexplained weight loss)", "on_fail": "REFER" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 7, "section_heading": "Table 1. Red flag signs and symptoms (6)" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Key points: The cardinal signs of gastro-oesophageal reflux are heartburn and regurgitation (3, 4). The Therapeutic Guidelines defines gastro-oesophageal reflux disease (GORD) as gastro-oesophageal reflux symptoms that are frequent (2 or more episodes per week) and severe enough to impair quality of life, or people who have complications of gastro-oesophageal reflux (6). However, the clinical definition of GORD may differ between resources used in clinical practice. The presumptive clinical diagnosis of gastro-oesophageal reflux and GORD are primarily based on patient reported symptoms (6, 7). However, response to a trial of proton pump inhibitors (PPI) can also be used to diagnose GORD (4, 6). A trial of high dose PPIs has a sensitivity of 80% as a diagnostic test for GORD (3). The causes of gastro-oesophageal reflux and GORD are multifactorial and may involve dysfunctional peristalsis, delayed gastric emptying and impaired or transient relaxation of lower oesophageal sphincter resting tone (3, 7).",
+          "gates": [
+            { "criterion": "A clear diagnosis of gastro-oesophageal reflux or GORD can be made (cardinal signs heartburn and regurgitation; symptoms frequent (2 or more episodes per week) and severe enough to impair quality of life, or complications of gastro-oesophageal reflux)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Key points" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "Management and treatment plan: The initial management of gastro-oesophageal reflux and GORD is based on the severity of symptoms; symptom control is the aim for most patients (6). Pharmacist management of gastro-oesophageal reflux and GORD involves: non-pharmacological / general measures - Advice regarding dietary and lifestyle modification as per the Therapeutic Guidelines: Diet and lifestyle modification for the management of gastro-oesophageal reflux in adults (6); pharmacotherapy - As per the current guidelines and recommendations, e.g. Banks et al., Badillo et al., and the Therapeutic Guidelines: Management of mild intermittent symptoms of gastro-oesophageal reflux in adults, Management of frequent or severe symptoms of gastro-oesophageal reflux disease (GORD) in adultsNB1, 2 and Gastro-oesophageal reflux during pregnancy (3, 4, 6). NB1: The efficacy and availability of PPIs has led to overuse; long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly (2, 6). Key point: Mild intermittent symptoms may be managed with diet and lifestyle modification only, however on demand drug therapy may also be used (6).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding. NB2: Where regular drug therapy is required, consider referral to a medical practitioner for collaborative care and onward referral to a gastroenterologist (6).",
+          "gates": [
+            { "criterion": "Treatment recommendation confirmed appropriate, including for contraindications and precautions, drug interactions, and pregnancy and breastfeeding", "on_fail": "unclear" },
+            { "criterion": "Regular drug therapy is not required (where regular drug therapy is required, consider referral to a medical practitioner for collaborative care and onward referral to a gastroenterologist)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 9, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient regarding: individual medicine use, e.g., initial dosing, maintenance and step-down therapy; how to manage adverse effects; when to seek further care and/or treatment (if 'red flag' signs and symptoms develop or condition significantly worsens); when to return to the pharmacist for clinical review. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and parents/caregivers if applicable), and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. Patient resources: Pharmaceutical Society of Australia - Heartburn and indigestion patient information card (1); Gastroenterological Society of Australia (GESA) Patient Resources - Information about Reflux (5).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 9, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines. Clinical review is recommended 4-8 weeks after initiation of new treatment to assess: adherence to non-pharmacological management strategies and pharmacotherapy; response to treatment and if changes to the treatment plan are required (continue, modify, stop and/or refer); adverse effects. Frequency of further follow up appointments for maintenance and step-down therapy should be based on recommendations in the Therapeutic Guidelines. Pharmacists should generally only prescribe (including repeats) a sufficient quantity of medicine for the period until the patient's next review. Pharmacotherapy for GORD may be required longer-term; patients should be advised to return to their usual medical practitioner for collaborative care if regular pharmacotherapy is required. If there is minimal or no improvement in symptoms after 4 weeks, patient should be referred to a medical practitioner for review and further investigation.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "proton pump inhibitors (PPI)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB1: The efficacy and availability of PPIs has led to overuse; long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly (2, 6). Pharmacotherapy is directed to the Therapeutic Guidelines sections 'Management of mild intermittent symptoms of gastro-oesophageal reflux in adults', 'Management of frequent or severe symptoms of gastro-oesophageal reflux disease (GORD) in adults' and 'Gastro-oesophageal reflux during pregnancy'. The document prints no strength, dose, route, frequency or duration for PPIs (references to 'standard dose' and 'high dose PPIs' are diagnostic/regimen descriptions without printed values); line of therapy is not stated in this document. Contraindications and precautions, drug interactions, and pregnancy and breastfeeding must be confirmed against the Therapeutic Guidelines and Australian Medicines Handbook.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Chest pain / tightness as the primary symptom* with or without the following: Shortness of breath; Diaphoresis; Light-headedness; Radiating pain especially to jaw", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-2", "trigger_text": "Symptoms of anaemia including fatigue, shortness of breath, weakness, dizziness or an irregular heartbeat", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-3", "trigger_text": "Haematemesis or melaena, including 'coffee-ground' vomit", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-4", "trigger_text": "Pregnancy with elevated blood pressure (reflux can be a sign of pre-eclampsia).", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-5", "trigger_text": "Abdominal/epigastric pain*", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-6", "trigger_text": "Upper gastrointestinal pain*", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-7", "trigger_text": "Acute back pain", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-8", "trigger_text": "Difficulty or painful swallowing", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-9", "trigger_text": "Vomiting", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-10", "trigger_text": "Jaundice", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-11", "trigger_text": "Severe, frequent or changing symptoms.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-12", "trigger_text": "A clear diagnosis of gastro-oesophageal reflux or GORD cannot be made", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Urgent referral within 24 to 48 hours" } },
+    { "id": "RF-13", "trigger_text": "New symptoms in patients over the age of 50", "structured": { "parameter": "age", "operator": ">", "value": 50, "unit": "years" }, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Urgent referral within 24 to 48 hours" } },
+    { "id": "RF-14", "trigger_text": "There is an inadequate response to treatment/symptom control is inadequate after 4-8 weeks of PPI therapy at the standard dose, or if symptoms worsen", "structured": { "parameter": "PPI therapy duration", "operator": "range", "value": [4, 8], "unit": "weeks" }, "action": "REVIEW_GP", "severity": "high", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Urgent referral within 24 to 48 hours" } },
+    { "id": "RF-15", "trigger_text": "Unexplained weight loss.", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Urgent referral within 24 to 48 hours" } },
+    { "id": "RF-16", "trigger_text": "The patient is being managed by a gastroenterologist", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral" } },
+    { "id": "RF-17", "trigger_text": "Reflux suspected to be caused by other medications (such as NSAIDs, calcium channel blockers).", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 5, "section_heading": "Non-urgent referral" } },
+    { "id": "RF-18", "trigger_text": "Consider abdominal examination including palpating for epigastric mass, abdominal tenderness, guarding/rigidity of abdomen - all warrant referral to GP within 24 hours.", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Examination" } },
+    { "id": "RF-19", "trigger_text": "Guarding and rigidity of abdomen warrants urgent ED referral.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Examination" } },
+    { "id": "RF-20", "trigger_text": "evidence of abnormal vital signs may be evidence of decompensated anaemia or acute abdomen warranting urgent ED referral.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 8, "section_heading": "Examination" } },
+    { "id": "RF-21", "trigger_text": "Where regular drug therapy is required, consider referral to a medical practitioner for collaborative care and onward referral to a gastroenterologist (6).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" } },
+    { "id": "RF-22", "trigger_text": "If there is minimal or no improvement in symptoms after 4 weeks, patient should be referred to a medical practitioner for review and further investigation.", "structured": { "parameter": "treatment duration without improvement", "operator": ">=", "value": 4, "unit": "weeks" }, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" } },
+    { "id": "RF-23", "trigger_text": "Pharmacotherapy for GORD may be required longer-term; patients should be advised to return to their usual medical practitioner for collaborative care if regular pharmacotherapy is required.", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" } }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to a general practitioner (or other medical practitioner where appropriate) - Non-urgent referral: The patient is being managed by a gastroenterologist",
+      "Non-urgent referral: Reflux suspected to be caused by other medications (such as NSAIDs, calcium channel blockers).",
+      "The following signs and symptoms are suggestive of other serious conditions and must be referred to a medical practitioner (as endoscopy may be indicated)",
+      "Where regular drug therapy is required, consider referral to a medical practitioner for collaborative care and onward referral to a gastroenterologist (6).",
+      "Pharmacotherapy for GORD may be required longer-term; patients should be advised to return to their usual medical practitioner for collaborative care if regular pharmacotherapy is required.",
+      "If there is minimal or no improvement in symptoms after 4 weeks, patient should be referred to a medical practitioner for review and further investigation.",
+      "Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (9)."
+    ],
+    "urgent": [
+      "Urgent referral within 24 to 48 hours: A clear diagnosis of gastro-oesophageal reflux or GORD cannot be made",
+      "Urgent referral within 24 to 48 hours: New symptoms in patients over the age of 50",
+      "Urgent referral within 24 to 48 hours: There is an inadequate response to treatment/symptom control is inadequate after 4-8 weeks of PPI therapy at the standard dose, or if symptoms worsen",
+      "Urgent referral within 24 to 48 hours: Unexplained weight loss.",
+      "Urgent referral to an emergency department - patient may make their own way to the emergency department: Abdominal/epigastric pain*; Upper gastrointestinal pain*; Acute back pain; Difficulty or painful swallowing; Vomiting; Jaundice; Severe, frequent or changing symptoms.",
+      "Consider abdominal examination including palpating for epigastric mass, abdominal tenderness, guarding/rigidity of abdomen - all warrant referral to GP within 24 hours."
+    ],
+    "emergency": [
+      "Immediate referral to an emergency department - call 000: Chest pain / tightness as the primary symptom* with or without Shortness of breath, Diaphoresis, Light-headedness, Radiating pain especially to jaw",
+      "Immediate referral to an emergency department - call 000: Symptoms of anaemia including fatigue, shortness of breath, weakness, dizziness or an irregular heartbeat",
+      "Immediate referral to an emergency department - call 000: Haematemesis or melaena, including 'coffee-ground' vomit",
+      "Immediate referral to an emergency department - call 000: Pregnancy with elevated blood pressure (reflux can be a sign of pre-eclampsia).",
+      "Guarding and rigidity of abdomen warrants urgent ED referral.",
+      "evidence of abnormal vital signs may be evidence of decompensated anaemia or acute abdomen warranting urgent ED referral."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review with the pharmacist, in line with recommendations in the Therapeutic Guidelines and other relevant guidelines",
+      "what": "Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "4-8 weeks after initiation of new treatment",
+      "what": "Assess: adherence to non-pharmacological management strategies and pharmacotherapy; response to treatment and if changes to the treatment plan are required (continue, modify, stop and/or refer); adverse effects.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "Further follow up appointments for maintenance and step-down therapy",
+      "what": "Frequency of further follow up appointments for maintenance and step-down therapy should be based on recommendations in the Therapeutic Guidelines.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "For the period until the patient's next review",
+      "what": "Pharmacists should generally only prescribe (including repeats) a sufficient quantity of medicine for the period until the patient's next review.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "After 4 weeks with minimal or no improvement in symptoms",
+      "what": "Patient should be referred to a medical practitioner for review and further investigation.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "When to return to the pharmacist for clinical review (and when to seek further care and/or treatment if 'red flag' signs and symptoms develop or condition significantly worsens)",
+      "what": "Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 9, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-gastro-oesophageal-reflux-and-gord-cpg.pdf", "page": 1, "section_heading": "" }
+  },
+  "references": [
+    "[page 12] 1. Pharmaceutical Society of Australia. Heatburn and indigestion Online: Pharmaceutical Society of Australia.",
+    "[page 12] 2. Drugs for dyspepsia, reflux and peptic ulcers [Internet]. AMH. 2025 [cited 20 June 2025]. Available from: https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/drugs-dyspepsia-reflux-peptic-ulcers.",
+    "[page 12] 3. Banks M. The modern investigation and management of gastro-oesophageal reflux disease (GORD). Clin Med (Lond). 2009;9(6):600-4.",
+    "[page 12] 4. Badillo R, Francis D. Diagnosis and treatment of gastroesophageal reflux disease. World J Gastrointest Pharmacol Ther. 2014;5(3):105-12.",
+    "[page 12] 5. Australia GSo. Reflux. In: GESA GSoA, editor. 2022 ed2022.",
+    "[page 12] 6. Gastro-oesophageal reflux in adults [Internet]. Therapeutic Guidelines Limited. 2025 [cited 20 June 2025]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Gastrointestinal&topicfile=c_GIG_Gastro-oesophageal-reflux-in-adultstopic_1&guidelinename=auto&sectionId=c_GIG_Gastro-oesophageal-reflux-in-adultstopic_2#c_GIG_Gastro-oesophageal-reflux-in-adultstopic_2.",
+    "[page 12] 7. Gastroesophageal Reflux Disease (GERD) [Internet]. Baylor College of Medicine, DynaMed Continuing Medical Education. 2025 [cited 20 June 2025]. Available from: https://www.dynamed.com/condition/gastroesophageal-reflux-disease-gerd#GUID-FD3E90AA-4DE9-4E28-B233-7DD0A8FA7AB5.",
+    "[page 12] 8. Keung C, Hebbard G. The management of gastro-oesophageal reflux disease. Aust Prescr. 2016;39(1):6-10.",
+    "[page 12] 9. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[page 12] 10. Managing GORD with PPIs in primary care [Internet]. NPS MedicineWise. 2025 [cited 20 June 2025]. Available from: https://www.nps.org.au/professionals/managing-gord-with-ppis-in-primary-care."
+  ],
+  "open_questions": [
+    {
+      "topic": "No dedicated exclusion criteria section",
+      "observed": "The guideline prints no 'Exclusion criteria' section. EXC-1 to EXC-3 are transcribed verbatim from the referral lists on page 5 ('Urgent referral within 24 to 48 hours' and 'Non-urgent referral').",
+      "why_unclear": "The document does not label these as exclusion criteria and does not state AND/OR combinatorics; each bullet is phrased as an independent referral trigger, so the group is modelled as any_of with medium confidence rather than the spec's all_of default. The remaining referral triggers are captured as red_flags (RF-12 to RF-17) and in the referral block.",
+      "source_page": 5
+    },
+    {
+      "topic": "No drug doses printed",
+      "observed": "Pharmacotherapy is directed to the Therapeutic Guidelines sections 'Management of mild intermittent symptoms of gastro-oesophageal reflux in adults', 'Management of frequent or severe symptoms of gastro-oesophageal reflux disease (GORD) in adults' and 'Gastro-oesophageal reflux during pregnancy'. The only quantitative statements are 'standard dose', 'high dose PPIs' (sensitivity 80% as a diagnostic test) and review timepoints (4-8 weeks; 4 weeks).",
+      "why_unclear": "Treatment rows therefore carry empty regimen fields; exact regimens must come from the referenced external guidelines. 'proton pump inhibitors (PPI)' is the only medicine class named as a treatment.",
+      "source_page": 8
+    },
+    {
+      "topic": "Referral block spans multiple pages",
+      "observed": "Referral content appears on pages 4 (emergency lists), 5 (GP referral lists), 7 (Table 1 referral criterion), 8 (abdominal examination and CARPA), 9 (NB2) and 10 (clinical review referral statements).",
+      "why_unclear": "The referral object allows one shared provenance; page 4 (first page of the red-flag section) is used and the range is recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Table 1 duplicates the page 4/5 referral lists",
+      "observed": "Table 1 (page 7) lists red flag signs and symptoms that 'must be referred to a medical practitioner (as endoscopy may be indicated)': symptoms of anaemia, chest pain, difficulty or painful swallowing, new symptoms in an older person, upper GI pain, changing symptoms, haematemesis, severe or frequent symptoms, melaena, jaundice, vomiting/'coffee-ground' vomit, inadequate response to treatment (up to 4-8 weeks of PPI at the standard dose), unexplained weight loss. Most items overlap the page 4 and page 5 lists with slightly different wording; the sentence introducing Table 1 is printed on page 6 under the heading 'Red flag symptoms'.",
+      "why_unclear": "Table 1 is captured once as gated step PW-1-S6 (provenance page 7) rather than duplicated as additional red flag entries; the two-column extraction interleaves the left/right columns ('> symptoms of anaemia > chest pain'), so the reading was reconstructed and the step is marked confidence 'medium'.",
+      "source_page": 7
+    },
+    {
+      "topic": "Red-flag gate simplification",
+      "observed": "Pathway gates use on_fail 'REFER', while the document distinguishes immediate referral (call 000), urgent emergency department referral, urgent referral within 24 to 48 hours, referral to GP within 24 hours and non-urgent referral.",
+      "why_unclear": "Gate on_fail values are limited to REFER/STOP/SEE_<step id>; the urgency distinctions are carried individually in red_flags actions (ESCALATE_000, REFER_URGENT, REVIEW_GP, REFER) and severities.",
+      "source_page": 4
+    },
+    {
+      "topic": "Confirm-management gate outcome not stated",
+      "observed": "The document requires pharmacists to consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate (contraindications and precautions, drug interactions, pregnancy and breastfeeding), but does not say what to do if the recommendation is NOT appropriate.",
+      "why_unclear": "on_fail recorded as 'unclear' because the document states no branch; likely refer or do not supply, but this is not printed.",
+      "source_page": 9
+    },
+    {
+      "topic": "Compound trigger RF-14",
+      "observed": "'There is an inadequate response to treatment/symptom control is inadequate after 4-8 weeks of PPI therapy at the standard dose, or if symptoms worsen' combines a duration (4-8 weeks of PPI therapy) with a qualitative condition (inadequate response) and an alternative condition (symptoms worsen).",
+      "why_unclear": "The structured form carries only the duration range (4-8 weeks); 'inadequate response' and 'symptoms worsen' must be judged qualitatively. Confidence recorded as 'medium'.",
+      "source_page": 5
+    },
+    {
+      "topic": "Exclusion / red-flag duplication",
+      "observed": "EXC-1/RF-12, EXC-2/RF-16 and EXC-3/RF-17 quote the same source statements from page 5.",
+      "why_unclear": "They are retained in both arrays deliberately: eligibility decision list (exclusion) and trigger alert (red_flags), mirroring the treatment of non-urgent referral items in the SA rhinitis guideline.",
+      "source_page": 5
+    },
+    {
+      "topic": "Notification duties silent",
+      "observed": "The document makes no mention of notifiable conditions, GP notification or Australian Immunisation Register notification. It only notes that the agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent (page 9).",
+      "why_unclear": "Document is silent on notification, so notifiable.required is null; nothing was inferred.",
+      "source_page": 0
+    },
+    {
+      "topic": "Age window and referral threshold",
+      "observed": "'Service restricted to patients aged 18 to 50 years of age.' (page 3) and, separately, 'New symptoms in patients over the age of 50' is an urgent 24-48 hour GP referral trigger (page 5). Table 1 also uses the qualitative phrase 'new symptoms in an older person'.",
+      "why_unclear": "age_bounds recorded as min 18 / max 50 from the service restriction; the referral threshold (>50) and the qualitative 'older person' phrase are recorded as red flags rather than reconciled with the age cap.",
+      "source_page": 3
+    },
+    {
+      "topic": "Chest pain / abdominal pain footnote",
+      "observed": "'* Assessment of chest pain and abdominal pain is complex, therefore maintain a high index of suspicion for differential conditions including ischaemic cardiac events (myocardial infarction), ruptured peptic ulcer and ruptured aortic aneurysm. Be aware of cognitive bias, focus on excluding red flags and early referral to a medical practitioner or emergency department.' (page 4, footnote to the starred triggers).",
+      "why_unclear": "Captured verbatim in step PW-1-S1 description rather than as a separate red flag, because it is guidance on assessing RF-1 and RF-5/RF-6 rather than an independent trigger with a single action.",
+      "source_page": 4
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Authorisation precondition: pharmacist must be included on the register of authorised pharmacists and prescribe in accordance with the Community Pharmacist Prescribing Code (regulation 17A of the Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal/jurisdictional precondition for lawful prescribing under the SA service; must be verified against the current register and Code before go-live."
+    },
+    {
+      "item": "Specific medicines, strengths, doses, frequencies and durations for gastro-oesophageal reflux/GORD (delegated to the Therapeutic Guidelines sections for mild intermittent symptoms, frequent or severe symptoms in adults, and gastro-oesophageal reflux during pregnancy).",
+      "source_page": 8,
+      "reason": "No regimen is printed in this guideline; the prescribing module cannot be configured from this document alone and must be confirmed against the external guidelines and local formulary."
+    },
+    {
+      "item": "PPI stewardship caution: 'The efficacy and availability of PPIs has led to overuse; long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly (2, 6).'",
+      "source_page": 8,
+      "reason": "Long-term/regular PPI use must be surfaced as a caution with review prompts; the 'limited number of indications' is not enumerated in this document."
+    },
+    {
+      "item": "NB2 referral branch: 'Where regular drug therapy is required, consider referral to a medical practitioner for collaborative care and onward referral to a gastroenterologist (6).' and page 10 'patients should be advised to return to their usual medical practitioner for collaborative care if regular pharmacotherapy is required'.",
+      "source_page": 9,
+      "reason": "Referral branch for regular/long-term pharmacotherapy must be confirmed and encoded; the document does not define what counts as 'regular drug therapy'."
+    },
+    {
+      "item": "Supply and review limits: 'Pharmacists should generally only prescribe (including repeats) a sufficient quantity of medicine for the period until the patient's next review'; clinical review 4-8 weeks after initiation of new treatment; further follow-up frequency for maintenance and step-down therapy per Therapeutic Guidelines.",
+      "source_page": 10,
+      "reason": "Quantity to supply and maintenance/step-down review intervals are left to an external guideline and pharmacist judgement; local service policy must set concrete numbers."
+    },
+    {
+      "item": "Age handling: service restricted to 18 to 50 years of age, while 'new symptoms in patients over the age of 50' is an urgent referral trigger and Table 1 refers to 'new symptoms in an older person'.",
+      "source_page": 3,
+      "reason": "Age eligibility (>50 not in service) and the referral threshold must be encoded consistently in the module; confirm intended behaviour at the boundary."
+    },
+    {
+      "item": "Endoscopy language: Table 1 red flags are 'suggestive of other serious conditions and must be referred to a medical practitioner (as endoscopy may be indicated)'.",
+      "source_page": 7,
+      "reason": "Endoscopy is not within pharmacist scope; confirm how the endoscopy-indication wording is surfaced in the decision support without implying pharmacist ordering."
+    },
+    {
+      "item": "Professional discretion clause: 'pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'",
+      "source_page": 6,
+      "reason": "Automated checks must be surfaced as decision support rather than absolute rules; confirm how this discretion wording is presented at go-live."
+    }
+  ]
+}

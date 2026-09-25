@@ -1,0 +1,229 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+    "pdf_sha256": "280aea6aac6d0ca92187eaa728985ebc11ecad1cfa605e6426b396d4119e6326",
+    "page_count": 4,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "TAS",
+    "instrument_name": "INFOSHEET - Pharmacist Information Pack: Pharmacist Initiatives (Urinary Tract Infections Pilot and Oral Contraceptive Extended Supply)",
+    "instrument_version": "Not printed (no version number or issue date appears in the document; it is headed only 'INFOSHEET Pharmacist Information Pack')",
+    "effective_date": "Timing table (page 1): UTI Pilot commenced 1 March 2024 and 'Pilot Concludes 1 March 2025'; OCP Extended Supply commences 1 July 2024 (training and applications from June 2024). No effective date is printed for the information pack itself.",
+    "legal_basis": "No regulation or poisons schedule provision is cited in this document. It states: 'Structured prescribing means that participating pharmacists have a limited endorsement to prescribe medicines under a protocol, and within the framework set by the Tasmanian Government.' (page 1)",
+    "supervision_model": "'Structured prescribing model' with 'a limited endorsement to prescribe medicines under a protocol' (page 1); opt-in participation by 'appropriately trained and endorsed community pharmacists' working in 'an approved premises' (page 2); 'Compliance with the management protocols is an essential requirement of participation in the initiatives.' (page 2)",
+    "scope_summary": "SUPPORTING INFORMATION PACK (not a prescribing protocol). Tasmanian Department of Health, Community, Mental Health and Wellbeing information pack for pharmacists describing two pharmacist initiatives: (1) the 12-month statewide Urinary Tract Infections Pilot commenced 1 March 2024, allowing 'appropriately trained and endorsed community pharmacists to practice under a structured prescribing model to assess patients presenting with suspected uncomplicated urinary tract infections (UTIs) and provide antibiotic treatment in specific circumstances'; and (2) the Oral Contraceptive Extended Supply Initiative from 1 July 2024, allowing 'an extended supply (up to 12 months) of the oral contraceptive pill (OCP) to eligible patients under a structured prescribing model'. It covers overview and timing, approval of premises and pharmacists, service provision and booking decisions, the role of the management protocols, declining supply, coordination of care with GPs (consent, My Health Record, consultation summaries, Healthlinks), consultation costs, UTI patient follow-up at day 3-5, data collection, consent, training providers, and adverse outcome / clinical incident steps. It contains NO patient eligibility criteria, NO diagnostic pathway, NO drug doses and NO red-flag thresholds of its own; those are held in the separate UTI and OCP management protocols it refers to (available at https://www.health.tas.gov.au/pharmacyscope)."
+  },
+  "eligibility": {
+    "inclusion": [],
+    "exclusion": [],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": {
+        "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+        "page": 0,
+        "section_heading": ""
+      }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [],
+  "treatments": [],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'People seeking treatment, but who are ineligible under the management protocols, will need to be referred to a GP or another appropriate healthcare provider (e.g. Family Planning Tas, Sexual Health Service).'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+        "page": 3,
+        "section_heading": "Coordination of care between pharmacists and general practitioners"
+      }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Should pharmacists become aware of adverse outcomes involving patients participating in the these initiatives such as adverse drug reactions, escalation of care (e.g. patient requiring hospitalisation) or clinical errors, pharmacists are advised to follow the steps below: 1. Ensure the patient has appropriate clinical care, referral and follow up. 2. Thoroughly document the details of the incident in your electronic clinical system. 3. Inform your professional indemnity insurer. 4. Inform the Department of Health Pharmacy Scope team on pharmacyscope@health.tas.gov.au'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {
+        "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+        "page": 4,
+        "section_heading": "Adverse Outcomes and Clinical Incidents"
+      }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'People seeking treatment, but who are ineligible under the management protocols, will need to be referred to a GP or another appropriate healthcare provider (e.g. Family Planning Tas, Sexual Health Service).' (page 3)",
+      "'The management protocols support decision-making and set out when a patient can be treated for a UTI or have extended supply of the OCP granted, and under what circumstances they will need to be referred to their usual GP or other healthcare provider.' (page 2)",
+      "'If a person does not have a regular GP, it is good practice to encourage the person to obtain one.' (page 3)"
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": {
+      "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+      "page": 3,
+      "section_heading": "Coordination of care between pharmacists and general practitioners"
+    }
+  },
+  "review_followup": [
+    {
+      "when": "Around day 3 to 5 after the consultation (UTI management)",
+      "what": "'The Protocol for Management of Urinary Tract Infections requires the treating pharmacist to arrange follow up with their patient at around day 3 to 5 after their consultation. There is no specified communication method - SMS and phone are suitable including automated services. It is recommended that patients are encouraged that they should see a GP if their symptoms have not resolved and inform them that a voluntary survey from the department will be sent to them shortly.'",
+      "provenance": {
+        "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+        "page": 3,
+        "section_heading": "Patient Follow up (UTI management)"
+      }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'Pharmacists will be required to obtain consent from each patient in order to inform their GP of the consultation and/or treatment.' (page 3)",
+      "'If the patient provides appropriate consent, pharmacists will also be required to update My Health Record with dispensing records of any medication provided.' (page 3)",
+      "'Pharmacists will be required to document each consultation in specified pharmacy software.' (page 3)",
+      "'Pharmacists are encouraged to provide each patient with a printed consultation record and are required to share a copy of the consultation summary with the patient's nominated GP.' (page 3)",
+      "'Information should also be provided to their GP if the patient consents to this information being shared.' (page 3, Declining supply)",
+      "Adverse outcomes (adverse drug reactions, escalation of care such as patient requiring hospitalisation, clinical errors): '1. Ensure the patient has appropriate clinical care, referral and follow up. 2. Thoroughly document the details of the incident in your electronic clinical system. 3. Inform your professional indemnity insurer. 4. Inform the Department of Health Pharmacy Scope team on pharmacyscope@health.tas.gov.au' (page 4)"
+    ],
+    "provenance": {
+      "pdf_file": "tas-pharmacist-prescribing-protocols\\community_phamacist_initiatives_-_pharmacist_information_pack.pdf",
+      "page": 3,
+      "section_heading": "Coordination of care between pharmacists and general practitioners"
+    }
+  },
+  "references": [
+    "Application forms, resources and management protocols: https://www.health.tas.gov.au/pharmacyscope (page 2)",
+    "Department of Health, Community, Mental Health and Wellbeing - Email: pharmacyscope@health.tas.gov.au; www.health.tas.gov.au (pages 2, 3, 4)",
+    "Secure transfer system for consultation summaries: Healthlinks ('The project team strongly recommend that information is sent by a secure transfer system such as Healthlinks.') (page 3)",
+    "Approved training providers (page 4): The Pharmaceutical Society of Australia - UTI Training / OCP Training; The Australasian College of Pharmacy - UTI Training / OCP Training"
+  ],
+  "open_questions": [
+    {
+      "topic": "Document type: supporting information pack, not a prescribing protocol",
+      "observed": "'INFOSHEET Pharmacist Information Pack - Pharmacist Initiatives - Urinary Tract Infections Pilot and Oral Contraceptive Extended Supply'. It describes initiative administration, approvals, service models, costs, consent, training and incident steps. No patient eligibility criteria, diagnostic pathway, drug/dose, or red-flag threshold appears anywhere in the pack, so eligibility/diagnosis_pathways/treatments are empty (per NON-PROTOCOL DOCUMENTS guidance; nothing was fabricated).",
+      "why_unclear": "This is a supporting information pack; the operative clinical criteria live in the separate UTI and OCP management protocols it refers to.",
+      "source_page": 1
+    },
+    {
+      "topic": "No numeric age bound printed",
+      "observed": "The pack prints no patient age limit for either initiative (age_bounds recorded as null/null with page 0 provenance). The only age-adjacent wording is 'suspected uncomplicated urinary tract infections (UTIs)' and 'eligible patients' for the OCP, both undefined here.",
+      "why_unclear": "No eligibility section exists in this document.",
+      "source_page": 0
+    },
+    {
+      "topic": "Patient eligibility criteria are external to this document",
+      "observed": "'The management and treatment for suspected uncomplicated UTIs and the extended supply of the OCP is supported by clear and detailed management protocols.' and 'The protocols have been developed using evidence-based approaches by the Department of Health, with oversight from the Steering Committee and medical experts.' Protocols 'can be obtained by visiting the website at: https://www.health.tas.gov.au/pharmacyscope'.",
+      "why_unclear": "Inclusion/exclusion criteria are not printed in the pack; they cannot be transcribed from this file.",
+      "source_page": 2
+    },
+    {
+      "topic": "Protocol explicitly incomplete by its own statement",
+      "observed": "'The protocols will not cover all possible clinical circumstances and pharmacists are required to exercise their professional judgement in adapting the treatment guideline to individual circumstances.'",
+      "why_unclear": "Open-ended professional-judgement clause; no machine-checkable rule can be derived from it here.",
+      "source_page": 2
+    },
+    {
+      "topic": "Pilot currency: UTI Pilot concluded 1 March 2025",
+      "observed": "Timing table: 'Commencement Date 1 March 2024 / 1 July 2024' and 'Pilot Concludes 1 March 2025 / N/A (UTI Pilot / OCP Extended Supply columns)'. The pack itself prints no review date.",
+      "why_unclear": "The document describes a pilot with a stated conclusion date; whether the pilot (and this pack) remain current is not stated in the file.",
+      "source_page": 1
+    },
+    {
+      "topic": "Timing table extraction",
+      "observed": "Page 1 table rows read: 'Training modules available January 2024 | June 2024'; 'Application forms and resources available January 2024 | June 2024'; 'Applications to be submitted * January/February 2024 | June/July 2024'; 'Endorsement provided to pharmacists * February 2024 | June/July 2024'; 'Commencement Date 1 March 2024 | 1 July 2024'; 'Pilot Concludes 1 March 2025 | N/A'; '* Note: applications and endorsements can continue to be provided past the dates listed in the table'.",
+      "why_unclear": "Two-column table read from linearised text; column mapping (UTI Pilot vs OCP Extended Supply) is inferred from the header line 'UTI Pilot OCP Extended Supply'.",
+      "source_page": 1
+    },
+    {
+      "topic": "RF-2 action mapping (no incident-reporting enum)",
+      "observed": "The 'Adverse Outcomes and Clinical Incidents' steps are an incident-management/escalation instruction (ensure clinical care and referral, document, inform indemnity insurer, inform the Department of Health Pharmacy Scope team), not a patient-referral destination. The PROTOCOL-EXTRACTION-V1 action enum {REFER_URGENT, REFER, ESCALATE_000, REVIEW_GP, NOT_ELIGIBLE} has no incident-reporting value.",
+      "why_unclear": "Encoded as action 'REFER' (step 1 includes 'referral') with confidence 'medium' so the trigger is not lost; the full step list is transcribed verbatim in trigger_text and the notification duties are also recorded under notifiable.conditions.",
+      "source_page": 4
+    },
+    {
+      "topic": "Urgency of the ineligibility referral is not stated",
+      "observed": "'will need to be referred to a GP or another appropriate healthcare provider' - no urgency language (immediate/prompt/urgent) is printed for this referral.",
+      "why_unclear": "Severity recorded as 'medium' (mandatory referral, no urgency language printed); not upgraded further.",
+      "source_page": 3
+    },
+    {
+      "topic": "No notifiable-condition or AIR requirements printed",
+      "observed": "The pack requires GP communication (with consent), My Health Record upload of dispensing records (with consent), documentation in specified pharmacy software, and notification of adverse outcomes to the Department of Health Pharmacy Scope team. It is silent on notifiable conditions and the Australian Immunisation Register.",
+      "why_unclear": "notifiable.required=true reflects the printed GP/My Health Record/documentation/incident-reporting duties only; conditions list carries the page numbers inline.",
+      "source_page": 3
+    },
+    {
+      "topic": "Consultation fee arrangement stated at summary level",
+      "observed": "'The Tasmanian Government will provide pharmacies with a $20 consultation fee for each formal consultation delivered under the UTI pilot project. Services provided as part of this pilot will be free to patients for the period of the pilot. Pharmacies will be able to set and charge a consultation fee for patients seeking a resupply of the oral contraceptive pill.'",
+      "why_unclear": "Commercial/administrative statement, not a clinical rule; recorded here rather than in any structured clinical field.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "'Compliance with the management protocols is an essential requirement of participation in the initiatives' and 'The protocols will not cover all possible clinical circumstances and pharmacists are required to exercise their professional judgement in adapting the treatment guideline to individual circumstances.'",
+      "source_page": 2,
+      "reason": "Professional-judgement clause with no printed boundary; a rules engine needs a local policy statement of what may deviate from the protocol."
+    },
+    {
+      "item": "UTI Pilot conclusion date: 'Pilot Concludes 1 March 2025' while the pack is used alongside Protocol for Management of Urinary Tract Infections v2.0 (May 2025).",
+      "source_page": 1,
+      "reason": "Confirm whether the UTI pilot has been extended/replaced and which protocol version is live before go-live; this pack may be stale."
+    },
+    {
+      "item": "Referral destinations 'a GP or another appropriate healthcare provider (e.g. Family Planning Tas, Sexual Health Service)' and 'their usual GP or other healthcare provider'.",
+      "source_page": 3,
+      "reason": "Destination list is open-ended ('another appropriate healthcare provider'); local policy must define the approved destination set."
+    },
+    {
+      "item": "'Pharmacists will be required to obtain consent from each patient in order to inform their GP ... If the patient provides appropriate consent, pharmacists will also be required to update My Health Record with dispensing records of any medication provided.'",
+      "source_page": 3,
+      "reason": "Depends on consent capture, patient nomination and My Health Record system access in the local pharmacy."
+    },
+    {
+      "item": "'It is recommended that these consultations are fully documented, that patients are fully informed of the reasons that supply is unable to occur and provided with a consultation summary. Information should also be provided to their GP if the patient consents...'",
+      "source_page": 3,
+      "reason": "Mix of 'recommended' and required wording when declining supply; local policy must fix which steps are mandatory."
+    },
+    {
+      "item": "UTI follow-up: 'arrange follow up with their patient at around day 3 to 5 after their consultation. There is no specified communication method - SMS and phone are suitable including automated services.'",
+      "source_page": 3,
+      "reason": "Channel and automation choice is left to each pharmacy; confirm the local follow-up workflow (and that it satisfies the protocol's 3-5 day window)."
+    },
+    {
+      "item": "Service model decisions left to each pharmacy: 'Pharmacies will be able to determine a service provision model which works best for their premises, staffing and the community they serve', 'It is encouraged that pharmacies provide this service during all opening hours', and 'It will be a decision for each pharmacy whether they wish to use a booking process for the consultations, or whether they will accept walk in consultations'.",
+      "source_page": 2,
+      "reason": "Explicitly delegated to local policy; must not be hard-coded as protocol rules."
+    },
+    {
+      "item": "Approval mechanics: premises/individual pharmacist eligibility requirements and approval by the Department of Health ('Premises and individual pharmacists must meet all eligibility requirements and be approved to participate in the initiatives'; application forms to pharmacyscope@health.tas.gov.au).",
+      "source_page": 2,
+      "reason": "The eligibility requirements themselves are not printed in this pack; confirm the current application/approval requirements before go-live."
+    },
+    {
+      "item": "'Each participating pharmacist will be required to successfully complete a specific training module for the management and treatment of suspected uncomplicated UTIs in women and for the extended supply of the OCP.' (training via PSA and Australasian College of Pharmacy; 'there may be costs associated with these courses')",
+      "source_page": 4,
+      "reason": "Approved training courses can change; verify each pharmacist's certificate and that the listed courses are still approved."
+    },
+    {
+      "item": "Adverse outcome reporting: 'Inform the Department of Health Pharmacy Scope team on pharmacyscope@health.tas.gov.au' plus 'Inform your professional indemnity insurer'.",
+      "source_page": 4,
+      "reason": "Incident-reporting pathway is administrative (no matching action enum in the schema); confirm local incident process and evidence capture."
+    },
+    {
+      "item": "'The project team strongly recommend that information is sent by a secure transfer system such as Healthlinks.' and 'Pharmacists will be required to document each consultation in specified pharmacy software.'",
+      "source_page": 3,
+      "reason": "Named systems ('Healthlinks', 'specified pharmacy software') are not enumerated in the document; local configuration required."
+    }
+  ]
+}

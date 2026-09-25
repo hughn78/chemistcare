@@ -1,0 +1,1218 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf",
+    "pdf_sha256": "7fb00204065f8ce6c08b65f4dea99f88c00de9ba2788245c512fe1c00c3784df",
+    "page_count": 22,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Vaccine Administration",
+    "instrument_version": "February 2024",
+    "effective_date": "February 2024",
+    "legal_basis": "Secretary Approval: Community Pharmacist Statewide Pilot - it is 'a requirement of the Secretary Approval: Community Pharmacist Statewide Pilot that pharmacist immunisers have completed the mandatory travel healthcare training ... prior to service provision, and comply with this protocol when administering Schedule 4 poisons (i.e. vaccines)'; pharmacist immunisers must 'operate at all times in accordance with the Drugs, Poisons and Controlled Substances Act 1981, the Drugs, Poisons and Controlled Substances Regulations 2017 and all other applicable Victorian, Commonwealth and national laws', administer only approved vaccines as specified in the Approval in accordance with the current edition of the Australian Immunisation Handbook and National Vaccine Storage Guidelines: Strive for 5, and act consistent with the Board's Code of Conduct (page 4). Pharmacist immunisers are also authorised to administer Schedule 3 poisons (1:1000 adrenaline) if a therapeutic need exists following administration of a Schedule 4 poison, that is, for the treatment of an anaphylactic reaction to a vaccine (page 16).",
+    "supervision_model": "Pharmacist immuniser operating under the Secretary Approval: Community Pharmacist Statewide Pilot; must have 'successfully completed the assessment of an Immuniser program of study', hold 'a current first aid certificate (to be updated every three years) and a cardiopulmonary resuscitation (CPR) certificate (to be updated annually)', and have 'recency of practice and continuing professional development in immunisation'; condition of the Approval that 'at least one other (clinical or non-clinical) staff member, who holds a current first aid and cardiopulmonary resuscitation certificate, is on duty in the pharmacy when the vaccines are administered, and within the line of sight of the person vaccinated for a minimum period of 15 minutes afterwards' (pages 4 and 16). Pharmacists may also be required to operate under multiple Secretary Approvals simultaneously (Pharmacist Immuniser; Pharmacist Immuniser - COVID-19 Vaccine; Community Pharmacist Statewide Pilot) and 'must be aware of the requirements of each Approval ... and comply at all times' (page 16).",
+    "scope_summary": "Victorian Community Pharmacist Statewide Pilot protocol for pharmacist immunisers (February 2024): pre-screening for patient suitability (age under 5 years, Australian Immunisation Handbook contraindications, complex needs per Table 1, additional needs per Table 2), informed consent, pre-vaccination screening (AIH checklist, AIR immunisation status), non-travel vaccination against hepatitis A, hepatitis B, poliomyelitis and typhoid, travel healthcare services (pre-travel risk assessment, travel vaccine recommendation, education and travel health advice), administration of authorised vaccines (hepatitis A, hepatitis B, poliomyelitis, typhoid for people aged 5 years and older; plus influenza, diphtheria-tetanus-pertussis, human papillomavirus, measles, mumps, rubella, meningococcal ACWY, pneumococcal and herpes zoster/shingles for the purpose of overseas travel), after-vaccination care with AEFI reporting to SAEFVIC, documentation to the Australian Immunisation Register, safety measures (15-minute line-of-sight observation, anaphylaxis kit, 1:1000 adrenaline) and cold chain management. Appendix 1 lists exclusions to administering approved vaccines; Appendix 2 lists advice to travelling patients."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Pre-screening question 'Is the patient less than 5 years old?' answered 'No' (patient aged 5 years or older) in order to continue",
+        "criteria_group": { "all_of": ["INC-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Pre-screening question 'Does the patient have contraindications?*' answered 'No' (* 'As defined in the current edition of the Australian Immunisation Handbook')",
+        "criteria_group": { "all_of": ["INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Pre-screening question 'Does the patient have complex needs?*' answered 'No' (* 'As defined in Table 1 below'; Table 1 complex needs require REFERRAL to a GP, travel medicine practitioner or other healthcare provider)",
+        "criteria_group": { "all_of": ["INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Continued from page 3" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Pre-screening question 'Does the patient have additional needs?*' answered 'No' (flow proceeds to Section 2.3); where additional needs are present the pharmacist immuniser 'should Consider REFERRAL to a GP or travel medicine practitioner for further advice and management, particularly where multiple factors apply' and 'may provide general travel health advice and vaccinations where appropriate'",
+        "criteria_group": { "all_of": ["INC-4"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Continued from page 4" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Pharmacist immuniser obtains and documents informed consent regarding: pilot participation; costs (fees applicable to the service, vaccines and any over-the-counter or other products recommended); the vaccines that may be administered; other healthcare costs including seeking additional care with another healthcare provider (e.g. prescription medications, vaccines outside the scope of the pilot); pharmacist immuniser communication with other healthcare practitioners; documentation and record keeping including the requirement to report all vaccines administered under the pilot to the Australian Immunisation Register (AIR) and access to My Health Record",
+        "criteria_group": { "all_of": ["INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "2.3. SEEK PATIENT INFORMED CONSENT" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Pharmacist immuniser completes the Pre-vaccination screening checklist 'as specified in the Australian Immunisation Handbook' and identifies other medical history factors that may need to form part of the vaccination assessment",
+        "criteria_group": { "all_of": ["INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "2.4. PRE-VACCINATION SCREENING" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Immunisation status checked: 'the pharmacist immuniser checks the patient's AIR and any other immunisation record(s), noting: Vaccines recommended under the National Immunisation Program Schedule (NIP) are up-to-date; Medical exemptions pertaining to specific vaccines; Previously received occupational related or travel vaccines'",
+        "criteria_group": { "all_of": ["INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "Immunisation status" }
+      },
+      {
+        "id": "INC-8",
+        "text": "For non-travel vaccination services the pharmacist immuniser considers: eligibility for vaccination against the diseases hepatitis A, hepatitis B, poliomyelitis, typhoid; contraindications to specific vaccines as defined in the Australian Immunisation Handbook; exclusions to administering the relevant vaccine(s) as listed in the Secretary Approval (see Appendix 1); benefits/risks of administering the vaccine(s), including costs to the patient",
+        "criteria_group": { "all_of": ["INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 9, "section_heading": "2.5. NON-TRAVEL VACCINATION" }
+      },
+      {
+        "id": "INC-9",
+        "text": "For travel healthcare services a sufficient-time pre-travel assessment is undertaken that includes 'ascertaining the patient's medical history, vaccination records, current medications, allergies and detailed information about their travel itinerary', with the pre-travel healthcare and risk assessment of patient factors, destination factors and exposure factors 'including, but not limited to those set out in Table 3'",
+        "criteria_group": { "all_of": ["INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 10, "section_heading": "2.6. TRAVEL HEALTHCARE" }
+      },
+      {
+        "id": "INC-10",
+        "text": "The vaccine(s) to be administered are authorised for administration under the Secretary Approval: Community Pharmacist Statewide Pilot and the patient is within the age band printed for that vaccine ('Vaccines should be administered in accordance with the conditions of the Secretary Approval: Community Pharmacist Statewide Pilot. See Appendix 1 for a summary of Approval exclusions.')",
+        "criteria_group": { "all_of": ["INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+      },
+      {
+        "id": "INC-11",
+        "text": "Pharmacist immuniser meets the protocol's practitioner requirements: mandatory travel healthcare training completed prior to service provision; successful assessment of an 'Immuniser program of study'; current first aid certificate (updated every three years) and CPR certificate (updated annually); recency of practice and CPD in immunisation; administers only approved vaccines in accordance with the current Australian Immunisation Handbook and National Vaccine Storage Guidelines: Strive for 5; acts consistent with the Board's Code of Conduct",
+        "criteria_group": { "all_of": ["INC-11"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 4, "section_heading": "1. About" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Patient is less than 5 years old ('Is the patient less than 5 years old?' Yes -> 'Refer to GP, travel medicine practitioner or other healthcare provider'; also listed as a Table 1 complex needs criterion 'People <5 years of age'; Appendix 1 excludes people 'aged 4 years and younger' from the hepatitis A, hepatitis B, poliomyelitis and typhoid vaccines)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Patient has contraindications to the vaccine(s), 'As defined in the current edition of the Australian Immunisation Handbook' (pre-screening question on page 5; repeated in both Appendix 1 exclusion lists: 'vaccination of people with contraindications to specific vaccines, as defined in the Australian Immunisation Handbook')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Complex needs - 'Immunocompromised or immunosuppressed, e.g. history of: haematological or solid organ transplant; active malignancy (cancer); HIV; immunosuppressive or immunomodulatory treatment'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Complex needs - 'Complex medical history, e.g.: multiple medical conditions; haematological or solid organ transplant or malignancy (cancer); untreated or poorly controlled disease (e.g. hypertension, seizures, diabetes, chronic cardiac or respiratory condition); rapid progression/deterioration of disease; recent hospitalisation or surgery (within last 3 months)'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Complex needs - 'Pregnant or planning to become pregnant during travel'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Complex needs - 'History of severe needle phobia'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Complex needs - 'Requiring medical clearance, fit to fly certification, or other specific certification to be completed by a medical practitioner'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Complex needs - 'Requiring or requesting vaccination/s outside pharmacist immuniser scope of practice (e.g. yellow fever, rabies)'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "Complex needs - 'Returned unwell from recent travel'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "Complex needs (itinerary) - 'Destination(s) with risk of and/or requirement for yellow fever vaccination (refer to yellow fever vaccination centre)'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "Complex needs (itinerary) - 'Destination(s) where malaria chemoprophylaxis is likely to be recommended, e.g.: All travellers to sub-Saharan Africa, Papua New Guinea, or the Solomon Islands; Travellers visiting the Amazon rainforest or rural parts of Asia'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "Complex needs (itinerary) - 'Destination(s) and/or activities that pose increased risk of animal bite or delayed/poor access to post-exposure rabies prophylaxis'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "Complex needs (itinerary) - 'Travel for >=1 month to low- and middle-income countries'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "Appendix 1 exclusion for travel vaccines - 'age exclusions (vaccine specific)'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "Appendix 1 exclusion for travel vaccines - 'vaccination of contacts in the event of a case of hepatitis A, diphtheria, measles, mumps, rubella, meningococcal disease or pertussis unless directed by the department' (see EXE-1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "Appendix 1 exclusion for travel vaccines - 'immunisation with normal human immunoglobulin for the prophylaxis of hepatitis A, measles, mumps, rubella or herpes zoster when in contact with a case' (footnote 2: 'Approval to administer vaccines does not include the administration of immunoglobulin preparations.')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "Appendix 1 exclusion for travel vaccines - 'vaccination of people following acute exposure to potentially infected blood or body fluids' (footnote 3: 'Although immunisation is indicated, the final decision that immunisation is indicated should be made by the individual's treating doctor due to the specialist nature of the condition.')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-18",
+        "text": "Appendix 1 exclusion for travel vaccines - 'immunisation with hepatitis B immunoglobulin following acute exposure to potentially infected blood or body fluids' (footnote 2: immunoglobulin preparations are not covered by the Approval)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-19",
+        "text": "Appendix 1 exclusion for travel vaccines - 'vaccination with diphtheria antitoxin' (footnote 2: immunoglobulin preparations not covered)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-20",
+        "text": "Appendix 1 exclusion for travel vaccines - 'vaccination for tetanus prophylaxis related to wound management' (footnote 4: 'Tetanus prone wounds should be reviewed in a medical consultation.')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-21",
+        "text": "Appendix 1 exclusion for travel vaccines - 'immunisation with tetanus immunoglobulin' (footnote 2: immunoglobulin preparations not covered)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR TRAVEL VACCINES" }
+      },
+      {
+        "id": "EXC-22",
+        "text": "Appendix 1 exclusion for hepatitis A, hepatitis B, poliomyelitis and typhoid vaccines - 'aged 4 years and younger'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR HEPATITIS A, HEPATITIS B, POLIOMYELITIS AND TYPHOID VACCINES" }
+      },
+      {
+        "id": "EXC-23",
+        "text": "Appendix 1 exclusion for hepatitis A, hepatitis B, poliomyelitis and typhoid vaccines - 'vaccination of contacts in the case of hepatitis A, unless directed by the department' (see EXE-1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR HEPATITIS A, HEPATITIS B, POLIOMYELITIS AND TYPHOID VACCINES" }
+      },
+      {
+        "id": "EXC-24",
+        "text": "Appendix 1 exclusion for hepatitis A, hepatitis B, poliomyelitis and typhoid vaccines - 'immunisation with normal human immunoglobulin for the prophylaxis of hepatitis A when in contact with a case' (footnote 2: immunoglobulin preparations not covered)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR HEPATITIS A, HEPATITIS B, POLIOMYELITIS AND TYPHOID VACCINES" }
+      },
+      {
+        "id": "EXC-25",
+        "text": "Appendix 1 exclusion for hepatitis A, hepatitis B, poliomyelitis and typhoid vaccines - 'vaccination of people following acute exposure to potentially infected blood or body fluids' (footnote 3: final decision by the individual's treating doctor; same wording printed in the travel vaccines list at EXC-17)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR HEPATITIS A, HEPATITIS B, POLIOMYELITIS AND TYPHOID VACCINES" }
+      },
+      {
+        "id": "EXC-26",
+        "text": "Appendix 1 exclusion for hepatitis A, hepatitis B, poliomyelitis and typhoid vaccines - 'immunisation with hepatitis B immunoglobulin following acute exposure to potentially infected blood or body fluids' (footnote 2: immunoglobulin preparations not covered; same wording printed in the travel vaccines list at EXC-18)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "FOR HEPATITIS A, HEPATITIS B, POLIOMYELITIS AND TYPHOID VACCINES" }
+      }
+    ],
+    "age_bounds": { "min_years": 5, "max_years": null, "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" } },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Contact-vaccination exclusions (EXC-15 and EXC-23) apply only 'unless directed by the department'. Footnote 1: 'A case of this vaccine preventable disease is notifiable to the Department of Health under the Health (Infectious Diseases) Regulation 1990. The department will provide advice on the further management of the case and contacts.'",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "Appendix 1: Exclusions to administering approved vaccine(s)" },
+        "confidence": "high",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }
+      },
+      {
+        "id": "EXE-2",
+        "text": "Footnote 3 to the acute-exposure exclusions (EXC-17 and EXC-25): 'Although immunisation is indicated, the final decision that immunisation is indicated should be made by the individual's treating doctor due to the specialist nature of the condition.'",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 17, "section_heading": "Appendix 1: Exclusions to administering approved vaccine(s)" },
+        "confidence": "high",
+        "criteria_group": { "all_of": ["EXE-2"], "any_of": [] }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pre-screening, consent, screening, service branch, administration and follow-up (Sections 2.2-2.9 and 3.4)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Pre-screening: 'Pharmacist immuniser undertakes pre-screening questions to assess for patient suitability for vaccination under the pilot.' First question: 'Is the patient less than 5 years old?' Yes -> 'Refer to GP, travel medicine practitioner or other healthcare provider'; No -> continue (printed: 'No: continue to page 4'). NOTE printed: 'It may be helpful to provide patients with a pre-travel assessment form or a similar document to fill out either at the time of booking, or while waiting for their appointment. This can aid the pre-screening and risk assessment process and serve as a reminder to patients to bring along any relevant documentation to their appointment.'",
+          "gates": [ { "criterion": "Patient is not less than 5 years old", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have contraindications?*' Yes -> 'Refer to GP, travel medicine practitioner or other healthcare provider'; No -> continue (printed: 'No: continue to page 4' i.e. the complex needs question). '* As defined in the current edition of the Australian Immunisation Handbook'.",
+          "gates": [ { "criterion": "Patient has no contraindications to the vaccine(s), as defined in the current edition of the Australian Immunisation Handbook", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have complex needs?*' Yes -> 'Refer to GP, travel medicine practitioner or other healthcare provider'; No -> continue (printed: 'No: continue to page 5'). '* As defined in Table 1 below'. Table 1: 'Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider' - Patient criteria: people <5 years of age; immunocompromised or immunosuppressed; complex medical history (EXC-3, EXC-4); pregnant or planning to become pregnant during travel; history of severe needle phobia; requiring medical clearance/fit to fly/other certification; requiring or requesting vaccination/s outside pharmacist immuniser scope of practice (e.g. yellow fever, rabies); returned unwell from recent travel. Itinerary criteria: yellow fever destinations; malaria chemoprophylaxis destinations; animal bite/poor rabies post-exposure prophylaxis access; travel for >=1 month to low- and middle-income countries. NOTE printed: 'If referring, remind patient to take any pre-prepared documentation with them to their appointment with the medical practitioner.'",
+          "gates": [ { "criterion": "Patient has no complex needs per Table 1", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Continued from page 3" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have additional needs?*' Yes -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply' (go to PW-1-S5); No -> 'continue to Section 2.3 on page 6' (seek patient informed consent). '* As defined in Table 2 below'. Printed rationale: 'Patients who meet any of the criteria in Table 2 below are likely to have additional needs and pharmacist immunisers should Consider REFERRAL to a GP or travel medicine practitioner for further advice and management, particularly where multiple factors apply. Pharmacist immunisers may provide general travel health advice and vaccinations where appropriate.' NOTE printed: 'Confirm the patient understands that based on their travel healthcare needs, they may require referral to a GP/travel medicine practitioner for a holistic healthcare assessment, prescription medications or other vaccines outside the scope of the pilot (e.g. BCG, yellow fever vaccine), including additional costs that may be incurred in accessing care through multiple providers.'",
+          "gates": [ { "criterion": "Patient has no additional needs per Table 2, or referral to a GP/travel medicine practitioner has been considered (particularly where multiple factors apply)", "on_fail": "SEE_PW-1-S5" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Continued from page 4" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "'Consider REFERRAL to a GP or travel medicine practitioner for further advice and management, particularly where multiple factors apply. Pharmacist immunisers may provide general travel health advice and vaccinations where appropriate.' Table 2 additional needs criteria: >65 years of age; disability; breastfeeding; prescription medication may be needed for their trip; regular prescription medication that cannot be taken into their travel destination; travel to mass gatherings; cruise ship travel; travel to altitudes >2500m above sea level; history of deep vein thrombosis or pulmonary embolism; travel of <1 month with an itinerary including un-common tourist destinations; reason for travel (medical tourism, aid or disaster relief/missionary/healthcare overseas, visiting friends and relatives in low- and middle-income countries); planned adventure or other high-risk activities. The document does not state explicitly whether the vaccination service proceeds after referral is considered (see open_questions).",
+          "gates": [],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "Seek patient informed consent: 'Pharmacist immuniser proceeds to commence patient assessment, including obtaining and documenting informed consent regarding: pilot participation; costs - fees applicable to the service, vaccines and any over-the-counter or other products recommended; the vaccines that may be administered; other healthcare costs - including seeking additional care with another healthcare provider (e.g. for prescription medications, vaccines outside the scope of the pilot); pharmacist immuniser communication with other healthcare practitioners; documentation and record keeping - including requirement to report all vaccines administered under the pilot to the Australian Immunisation Register (AIR), and access to My Health Record.'",
+          "gates": [ { "criterion": "Informed consent obtained and documented on all six listed points", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "2.3. SEEK PATIENT INFORMED CONSENT" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EXAMINATION",
+          "description": "Pre-vaccination screening - checklist and medical history: 'Pharmacist immuniser completes the Pre-vaccination screening checklist as specified in the Australian Immunisation Handbook. The pharmacist immuniser should identify other medical history factors that may need to form part of the vaccination assessment in addition to what is collected in the pre-vaccination screening assessment.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "2.4. PRE-VACCINATION SCREENING" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "INVESTIGATION",
+          "description": "Immunisation status: 'Pharmacist immuniser checks the patient's AIR and any other immunisation record(s), noting: Vaccines recommended under the National Immunisation Program Schedule (NIP) are up-to-date; Medical exemptions pertaining to specific vaccines; Previously received occupational related or travel vaccines. Where any vaccines are identified as overdue, the pharmacist immuniser should consider provision of vaccines in-scope for administration either under the pilot or under relevant Secretary Approvals pertaining to pharmacist immunisers, see Section 3.3 for further details.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "Immunisation status" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Service-type branch as printed: 'For non-travel vaccination services - continue to Section 2.5' (PW-1-S10); 'For travel healthcare services - skip to Section 2.6' (PW-1-S11).",
+          "gates": [ { "criterion": "Service is a non-travel vaccination service", "on_fail": "SEE_PW-1-S11" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 8, "section_heading": "2.4. PRE-VACCINATION SCREENING" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Non-travel vaccination: 'Pharmacist immuniser should consider: eligibility for vaccination against the diseases hepatitis A, hepatitis B, poliomyelitis, typhoid; contraindications to specific vaccines, as defined in the Australian Immunisation Handbook; exclusions to administering the relevant vaccine(s), as listed in the Secretary Approval: Community Pharmacist Statewide Pilot, see Appendix 1; benefits/risks of administering the vaccine(s), including costs to the patient. Refer to Table 1 for criteria for referral of patients with complex needs and consider REFERRAL to GP/other healthcare provider in line with the above Table 2 at Section 2.1. For non-travel vaccination services - skip to Section 2.7' (PW-1-S15).",
+          "gates": [ { "criterion": "No Appendix 1 exclusions and no contraindications to the relevant vaccine(s), and the benefits/risks including costs to the patient are acceptable", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 9, "section_heading": "2.5. NON-TRAVEL VACCINATION" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "HISTORY",
+          "description": "Travel healthcare pre-travel assessment: 'Pre-travel health consultations play a vital role in preparing patients for potential health issues during their journeys... Sufficient time should be allocated for a thorough assessment that includes ascertaining the patient's medical history, vaccination records, current medications, allergies and detailed information about their travel itinerary. Pharmacist immuniser undertakes the pre-travel healthcare and risk assessment of the patient, their destination factors and exposure factors including, but not limited to those set out in Table 3 below.' Table 3 factors - Patient: age; sex; past and current medical history; immune status; allergies/contraindications to any medication including vaccines; current medications; pregnancy (including trimester) and breastfeeding status at destination/s; prior travel experience; prior experience with (if relevant) malaria chemoprophylaxis, altitude/hiking/other planned extreme activities, previous travel-related illness; adventure activities (hiking, cycling, diving, rafting or other water exposure, extreme sports, cave-based activities); planned/potential exposure to altitude or extreme weather, animals, sexually transmitted infections or pregnancy, alcohol or other drugs altering perception; accommodation type; mode of transportation. Destination factors: destinations and transit countries; trip duration (return date or overall length of trip); timing to departure (departure date); season of travel; rural or urban travel; general hygiene standards at destination/s. Exposure factors: reason for travel (tourism; visiting friends and relatives; independent travel or package tour; business; volunteer, missionary, disaster relief or aid work; research or education; pilgrimage/other large gatherings; adoption; seeking healthcare (medical tourism); providing healthcare to others).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 10, "section_heading": "2.6. TRAVEL HEALTHCARE" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Travel vaccine recommendation: 'Using the pharmacist immuniser travel healthcare resources at Section 3.1 of this protocol, the pharmacist immuniser: identifies for the patient/itinerary: routine vaccine(s) due/overdue as per the National Immunisation Program Schedule; required vaccine(s) for destination entry/exit/transit; recommended vaccine(s) due to individual risk assessment. Pharmacist immuniser considers: contraindications to any vaccine(s), as defined in the Australian Immunisation Handbook; exclusions to administering approved vaccine(s), as listed in the Secretary Approval: Community Pharmacist Statewide Pilot, see Appendix 1; required dosing schedule(s) and any spacing required (particularly for live parenteral vaccines) with consideration to time to departure; benefits/risks of administering the vaccine(s), including costs to the patient; requirements to refer patients with additional needs to their nominated GP/travel medicine practitioner for further advice, assessment and or management, including for prescriptions and vaccinations outside the scope of the pilot - see tables in Section 2.2.'",
+          "gates": [ { "criterion": "No contraindications or Appendix 1 exclusions to the recommended vaccine(s), and the patient does not require referral for additional needs or for prescriptions/vaccinations outside the scope of the pilot", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 11, "section_heading": "Travel vaccine recommendation" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "EDUCATE",
+          "description": "'Pharmacist immuniser discusses vaccination recommendations specific to the patient, including: rationale for recommendation(s); efficacy and benefits of recommended vaccine(s); risks of recommended vaccine(s) (and comparison with risk of opting not to vaccinate); common and rare adverse events following immunisation (AEFIs) and their signs/symptoms; cost of vaccination.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 11, "section_heading": "Travel vaccine recommendation" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "Education - individualised and general travel health advice: 'Pharmacist immuniser provides advice/relevant resources to the patient, tailored to their pre-travel assessment including, but not limited to: traveller's diarrhoea; insect and mosquito bite prevention; malaria and other vector-borne disease risks; animal bite and rabies risk prevention; safe food, drinking water and personal hygiene practices; altitude illness; environmental hazards; jet lag; motion sickness; blood-borne and sexually transmitted disease risk prevention; personal safety and security practices; accident prevention and the need for travel insurance; ensuring usual (and any additional) medication supplies are adequate for the trip and can be safely transported (e.g. education on cold chain management, referral for certification to carry certain medications); patient travel healthcare resources at Section 3.2 of this protocol. See Appendix 2 for discussion prompts on preventing and managing the above conditions.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 12, "section_heading": "Education - individualised and general travel health advice" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "TREAT",
+          "description": "Administration of vaccines: 'Vaccines should be administered in accordance with the conditions of the Secretary Approval: Community Pharmacist Statewide Pilot. See Appendix 1 for a summary of Approval exclusions. The below vaccines are authorised for administration under the pilot.' Hepatitis A, Hepatitis B, Poliomyelitis, Typhoid - 'Approval applies to people aged: 5 years and older'. Additionally for the purpose of overseas travel: Influenza (5 years and older); Diphtheria-tetanus-pertussis (12 years and older); Human papillomavirus (age cell not printed on its row - see open_questions); Measles (15 years and older); Mumps, Rubella, Meningococcal ACWY (age cells not printed on their rows - see open_questions); Pneumococcal (50 years and older); Herpes zoster/shingles (age cell not printed on its row - see open_questions). 'NOTE: National Immunisation Program (NIP) or State-funded vaccines should be provided to eligible patients.' 'Combination vaccines may be used, for example where a monovalent vaccine is not registered for use in Australia or where the combination vaccine meets the vaccination requirements of the individual and is recommended for use as per the Australian Immunisation Handbook. Pharmacist immunisers should ensure the relevant vaccine is in scope with relevant Secretary Approvals.' 'An anaphylaxis kit and protocol for responding to anaphylaxis and vasovagal episodes should be checked and available before administering any vaccines.'",
+          "gates": [ { "criterion": "Anaphylaxis kit and protocol for responding to anaphylaxis and vasovagal episodes checked and available before administering any vaccines", "on_fail": "STOP" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "FOLLOW_UP",
+          "description": "Safety measures around administration: 'It is a condition of the Secretary Approval: Community Pharmacist Statewide Pilot that the pharmacist immuniser ensures at least one other (clinical or non-clinical) staff member, who holds a current first aid and cardiopulmonary resuscitation certificate, is on duty in the pharmacy when the vaccines are administered, and within the line of sight of the person vaccinated for a minimum period of 15 minutes afterwards. Pharmacist immunisers are authorised to administer Schedule 3 poisons (1:1000 adrenaline) if a therapeutic need exists following administration of a Schedule 4 poison (that is, for the treatment of an anaphylactic reaction to a vaccine). The patient should be reminded about the potential side effects of vaccination, how to manage them, and who to notify of delayed adverse events that may occur once they have left the pharmacy premises. Further detail is available in the Victorian Pharmacist-Administered Vaccination Program Guidelines.'",
+          "gates": [ { "criterion": "At least one other staff member with current first aid and CPR certificate on duty during administration, and the person vaccinated kept within their line of sight for a minimum period of 15 minutes afterwards", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 16, "section_heading": "3.4. SAFETY MEASURES" }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "FOLLOW_UP",
+          "description": "After vaccination: 'Refer to After vaccination guidance in the Australian Immunisation Handbook. Reporting of adverse events: Pharmacist immunisers must report any Adverse Event Following Immunisation (AEFI) to the Surveillance of Adverse Events Following Vaccination in the Community (SAEFVIC). The SAEFVIC requirements for reporting are available from: https://www.health.vic.gov.au/immunisation/adverse-events-following-immunisation-reporting. Refer to the Victorian Department of Health's Vaccine error management webpage for details on how to prevent and manage vaccine error, including when to report vaccine error to SAEFVIC.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 14, "section_heading": "2.8. AFTER VACCINATION" }
+        },
+        {
+          "id": "PW-1-S18",
+          "order": 18,
+          "type": "FOLLOW_UP",
+          "description": "Documentation and follow-up: 'The pharmacist immuniser is required to report all vaccines administered to the AIR as specified in the Secretary Approval: Community Pharmacist Statewide Pilot, thereby ensuring patients have a complete record of their vaccinations. The pharmacist immuniser should ensure any follow-up visits for vaccination are made and the need to provide any documentation/requested/required by the patient to travel. If authorised, the pharmacist immuniser should send a copy of the documentation to the patient's nominated GP or other healthcare provider.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 14, "section_heading": "2.9. DOCUMENTATION AND FOLLOW-UP" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Hepatitis A",
+      "form": "Vaccine (administered under the pilot)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'The below vaccines are authorised for administration under the pilot. Vaccine - Approval applies to people aged: 5 years and older' (age cell printed on the hepatitis A row and shared with hepatitis B, poliomyelitis and typhoid). Appendix 1 excludes people 'aged 4 years and younger' from this group of vaccines. No dose, route, dosing interval, brand or schedule is printed in this protocol; administration is in accordance with 'the edition of the Australian Immunisation Handbook that is current at the time of vaccine administration'. NOTE printed: 'National Immunisation Program (NIP) or State-funded vaccines should be provided to eligible patients.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Hepatitis B",
+      "form": "Vaccine (administered under the pilot)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'The below vaccines are authorised for administration under the pilot. Vaccine - Approval applies to people aged: 5 years and older' (age cell shared with hepatitis A, poliomyelitis and typhoid). Appendix 1 excludes people 'aged 4 years and younger' and excludes 'immunisation with hepatitis B immunoglobulin following acute exposure to potentially infected blood or body fluids'. No dose, route, dosing interval, brand or schedule is printed in this protocol. NOTE printed: 'National Immunisation Program (NIP) or State-funded vaccines should be provided to eligible patients.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Poliomyelitis",
+      "form": "Vaccine (administered under the pilot)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'The below vaccines are authorised for administration under the pilot. Vaccine - Approval applies to people aged: 5 years and older' (age cell shared with hepatitis A, hepatitis B and typhoid). Appendix 1 excludes people 'aged 4 years and younger'. No dose, route, dosing interval, brand or schedule is printed in this protocol. NOTE printed: 'National Immunisation Program (NIP) or State-funded vaccines should be provided to eligible patients.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Typhoid",
+      "form": "Vaccine (administered under the pilot)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'The below vaccines are authorised for administration under the pilot. Vaccine - Approval applies to people aged: 5 years and older' (age cell shared with hepatitis A, hepatitis B and poliomyelitis). Appendix 1 excludes people 'aged 4 years and younger'. No dose, route, dosing interval, brand or schedule is printed in this protocol. NOTE printed: 'National Immunisation Program (NIP) or State-funded vaccines should be provided to eligible patients.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Influenza",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Additionally, the below vaccines can be administered under the pilot for the purpose of overseas travel. Vaccine - Approval applies to people aged: 5 years and older' (age cell printed on the influenza row). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Diphtheria-tetanus-pertussis",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Additionally, the below vaccines can be administered under the pilot for the purpose of overseas travel. Vaccine - Approval applies to people aged: 12 years and older' (age cell printed on the diphtheria-tetanus-pertussis row). Combination vaccines note printed on this page: 'Combination vaccines may be used, for example where a monovalent vaccine is not registered for use in Australia or where the combination vaccine meets the vaccination requirements of the individual and is recommended for use as per the Australian Immunisation Handbook. Pharmacist immunisers should ensure the relevant vaccine is in scope with relevant Secretary Approvals.' No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Human papillomavirus",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Travel-purpose vaccine row. No age cell is printed on this row; the adjacent printed age cells are '12 years and older' (diphtheria-tetanus-pertussis row) and '15 years and older' (measles row), so the applicable band cannot be determined from the text extraction (confidence 'unclear'; see open_questions). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "Measles",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Additionally, the below vaccines can be administered under the pilot for the purpose of overseas travel. Vaccine - Approval applies to people aged: 15 years and older' (age cell printed on the measles row). Combination vaccines note printed on this page applies (e.g. measles-mumps-rubella combinations; 'Pharmacist immunisers should ensure the relevant vaccine is in scope with relevant Secretary Approvals.'). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-9",
+      "drug": "Mumps",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Travel-purpose vaccine row. No age cell is printed on this row; the adjacent printed age cells are '15 years and older' (measles row) and '50 years and older' (pneumococcal row), so the applicable band cannot be determined from the text extraction (confidence 'unclear'; see open_questions). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-10",
+      "drug": "Rubella",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Travel-purpose vaccine row. No age cell is printed on this row; the adjacent printed age cells are '15 years and older' (measles row) and '50 years and older' (pneumococcal row), so the applicable band cannot be determined from the text extraction (confidence 'unclear'; see open_questions). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-11",
+      "drug": "Meningococcal ACWY",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Travel-purpose vaccine row. No age cell is printed on this row; the adjacent printed age cells are '15 years and older' (measles row) and '50 years and older' (pneumococcal row), so the applicable band cannot be determined from the text extraction (confidence 'unclear'; see open_questions). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-12",
+      "drug": "Pneumococcal",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Additionally, the below vaccines can be administered under the pilot for the purpose of overseas travel. Vaccine - Approval applies to people aged: 50 years and older' (age cell printed on the pneumococcal row). No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    },
+    {
+      "id": "TX-13",
+      "drug": "Herpes zoster/shingles",
+      "form": "Vaccine (administered under the pilot for the purpose of overseas travel)",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Travel-purpose vaccine row. No age cell is printed on this row; the adjacent printed age cell is '50 years and older' (pneumococcal row), so the applicable band cannot be confirmed from the text extraction (confidence 'unclear'; see open_questions). Appendix 1 lists herpes zoster among the conditions for which normal human immunoglobulin prophylaxis is excluded. No dose, route, dosing interval, brand or schedule is printed in this protocol.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 13, "section_heading": "2.7. ADMINISTRATION OF VACCINES" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Is the patient less than 5 years old?' - Yes -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": { "parameter": "age", "operator": "<", "value": 5, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Does the patient have contraindications?*' - Yes -> 'Refer to GP, travel medicine practitioner or other healthcare provider' (* 'As defined in the current edition of the Australian Immunisation Handbook')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Complex needs (Table 1) - 'Immunocompromised or immunosuppressed, e.g. history of: haematological or solid organ transplant; active malignancy (cancer); HIV; immunosuppressive or immunomodulatory treatment' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Complex needs (Table 1) - 'Complex medical history, e.g.: multiple medical conditions; haematological or solid organ transplant or malignancy (cancer); untreated or poorly controlled disease (e.g. hypertension, seizures, diabetes, chronic cardiac or respiratory condition); rapid progression/deterioration of disease; recent hospitalisation or surgery (within last 3 months)' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Complex needs (Table 1) - 'Pregnant or planning to become pregnant during travel' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Complex needs (Table 1) - 'History of severe needle phobia' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Complex needs (Table 1) - 'Requiring medical clearance, fit to fly certification, or other specific certification to be completed by a medical practitioner' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Complex needs (Table 1) - 'Requiring or requesting vaccination/s outside pharmacist immuniser scope of practice (e.g. yellow fever, rabies)' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Complex needs (Table 1) - 'Returned unwell from recent travel.' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Complex needs (Table 1, itinerary) - 'Destination(s) with risk of and/or requirement for yellow fever vaccination (refer to yellow fever vaccination centre)' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Complex needs (Table 1, itinerary) - 'Destination(s) where malaria chemoprophylaxis is likely to be recommended, e.g.: All travellers to sub-Saharan Africa, Papua New Guinea, or the Solomon Islands; Travellers visiting the Amazon rainforest or rural parts of Asia' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Complex needs (Table 1, itinerary) - 'Destination(s) and/or activities that pose increased risk of animal bite or delayed/poor access to post-exposure rabies prophylaxis' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Complex needs (Table 1, itinerary) - 'Travel for >=1 month to low- and middle-income countries' -> 'Refer to GP, travel medicine practitioner or other healthcare provider'",
+      "structured": { "parameter": "trip duration", "operator": ">=", "value": 1, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 6, "section_heading": "Table 1: Complex needs that require REFERRAL to a GP, travel medicine practitioner or other healthcare provider" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Additional needs (Table 2) - '>65 years of age' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": { "parameter": "age", "operator": ">", "value": 65, "unit": "years" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Additional needs (Table 2) - 'Disability' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Additional needs (Table 2) - 'Breastfeeding' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Additional needs (Table 2) - 'Prescription medication may be needed for their trip (e.g., antibiotics, malaria chemoprophylaxis, routine medication prescriptions)' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Additional needs (Table 2) - 'Takes regular prescription medication that cannot be taken into their travel destination' (references printed: Smartraveller - Before you go; Therapeutic Goods Administration - Leaving Australia; Therapeutic Goods Administration - Travelling with medicines and medical devices) -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Additional needs (Table 2, itinerary) - 'Travel to mass gatherings (e.g. religious pilgrimage)' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Additional needs (Table 2, itinerary) - 'Cruise ship travel' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Additional needs (Table 2, itinerary) - 'Travel to altitudes >2500m above sea level' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": { "parameter": "destination altitude", "operator": ">", "value": 2500, "unit": "m" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Additional needs (Table 2) - 'History of deep vein thrombosis or pulmonary embolism' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "Additional needs (Table 2, itinerary) - 'Travel of <1 month but with an itinerary including un-common tourist destinations' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": { "parameter": "trip duration", "operator": "<", "value": 1, "unit": "months" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Additional needs (Table 2) - 'Reason for travel is: Medical tourism (including dental and cosmetic procedures); Aid or disaster relief work, missionary work, or to provide healthcare overseas; To visit friends and relatives in low- and middle-income countries' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "Additional needs (Table 2) - 'Planning to engage in: adventure activities (diving, caving, extreme sports etc); other high-risk activities, such as planned sexual encounters, getting tattoos or body piercings' -> 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 7, "section_heading": "Table 2: Additional needs that may require REFERRAL to a GP/travel medicine practitioner." }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Appendix 2 (Diarrhoea) - 'Consider referral' if antibiotics may also be indicated for self-management",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 18, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "Appendix 2 (Vector-borne diseases including malaria, dengue, chikungunya, Zika, yellow fever, Japanese encephalitis (JE) and tick-borne encephalitis (TBE)) - 'Refer if the itinerary indicates significant risk or requirement for yellow fever, JE or TBE vaccination'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 18, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "Appendix 2 (Vector-borne diseases) - 'Refer if travelling to destinations where malaria chemoprophylaxis is likely to be recommended'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 18, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Appendix 2 (Vector-borne diseases) - 'Refer all pregnant people to a GP if there is a risk of exposure to Zika virus while travelling'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 18, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "Appendix 2 (Deep vein thrombosis (DVT) and pulmonary embolism (PE)) - 'Consider referral for travellers with a history of DVT/PE or those at higher risk to a GP for assessment and advice'; printed risk context: 'risk of DVT/PE is increased for two weeks after a long-haul flight' and 'risk of DVT/PE is increased on flights of four hours duration or more'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 18, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "Appendix 2 (Sexual health and blood-borne pathogens) - 'Refer if requiring prescription for HIV PrEP'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 19, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "Appendix 2 (Rabies) - 'Refer if travel is to high-risk countries* that may warrant pre-exposure rabies vaccination (e.g. increased risk of animal bite or poor or delayed access to post-exposure rabies prophylaxis)' (* low- and middle-income countries list printed as a Wellcome URL)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 19, "section_heading": "Appendix 2: Advice to travelling patients" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "Appendix 2 (Jet lag) - 'Consider referral if prescription of melatonin or short acting hypnotics might be appropriate'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 19, "section_heading": "Appendix 2: Advice to travelling patients" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to GP, travel medicine practitioner or other healthcare provider (pre-screening: patient less than 5 years old; contraindications; complex needs per Table 1)",
+      "Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply (additional needs per Table 2)",
+      "Refer to yellow fever vaccination centre (destination with risk of and/or requirement for yellow fever vaccination)",
+      "Refer if the itinerary indicates significant risk or requirement for yellow fever, JE or TBE vaccination",
+      "Refer if travelling to destinations where malaria chemoprophylaxis is likely to be recommended",
+      "Refer all pregnant people to a GP if there is a risk of exposure to Zika virus while travelling",
+      "Refer if travel is to high-risk countries that may warrant pre-exposure rabies vaccination",
+      "Consider referral if antibiotics may also be indicated for self-management (diarrhoea)",
+      "Consider referral for travellers with a history of DVT/PE or those at higher risk to a GP for assessment and advice",
+      "Refer if requiring prescription for HIV PrEP",
+      "Consider referral if prescription of melatonin or short acting hypnotics might be appropriate",
+      "If authorised, the pharmacist immuniser should send a copy of the documentation to the patient's nominated GP or other healthcare provider"
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 5, "section_heading": "2.2. PRE-SCREENING" }
+  },
+  "review_followup": [
+    {
+      "when": "During and for a minimum of 15 minutes after administration of any vaccine",
+      "what": "'It is a condition of the Secretary Approval: Community Pharmacist Statewide Pilot that the pharmacist immuniser ensures at least one other (clinical or non-clinical) staff member, who holds a current first aid and cardiopulmonary resuscitation certificate, is on duty in the pharmacy when the vaccines are administered, and within the line of sight of the person vaccinated for a minimum period of 15 minutes afterwards.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 16, "section_heading": "3.4. SAFETY MEASURES" }
+    },
+    {
+      "when": "Before the patient leaves the pharmacy premises",
+      "what": "'The patient should be reminded about the potential side effects of vaccination, how to manage them, and who to notify of delayed adverse events that may occur once they have left the pharmacy premises. Further detail is available in the Victorian Pharmacist-Administered Vaccination Program Guidelines.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 16, "section_heading": "3.4. SAFETY MEASURES" }
+    },
+    {
+      "when": "After vaccination (adverse events)",
+      "what": "'Refer to After vaccination guidance in the Australian Immunisation Handbook.' 'Pharmacist immunisers must report any Adverse Event Following Immunisation (AEFI) to the Surveillance of Adverse Events Following Vaccination in the Community (SAEFVIC).' 'Refer to the Victorian Department of Health's Vaccine error management webpage for details on how to prevent and manage vaccine error, including when to report vaccine error to SAEFVIC.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 14, "section_heading": "2.8. AFTER VACCINATION" }
+    },
+    {
+      "when": "After the service (documentation and follow-up visits)",
+      "what": "'The pharmacist immuniser is required to report all vaccines administered to the AIR ... The pharmacist immuniser should ensure any follow-up visits for vaccination are made and the need to provide any documentation/requested/required by the patient to travel. If authorised, the pharmacist immuniser should send a copy of the documentation to the patient's nominated GP or other healthcare provider.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 14, "section_heading": "2.9. DOCUMENTATION AND FOLLOW-UP" }
+    },
+    {
+      "when": "Whenever a cold chain breach is identified (government-funded vaccines)",
+      "what": "'Refer to the Victorian Department of Health's Cold chain management webpage for details on cold chain management, including cold chain breach advice. Pharmacies must report all cold chain breaches for government-funded vaccines.'",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 16, "section_heading": "3.5. COLD CHAIN MANAGEMENT" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'The pharmacist immuniser is required to report all vaccines administered to the AIR as specified in the Secretary Approval: Community Pharmacist Statewide Pilot, thereby ensuring patients have a complete record of their vaccinations.' (page 14)",
+      "'Pharmacist immunisers must report any Adverse Event Following Immunisation (AEFI) to the Surveillance of Adverse Events Following Vaccination in the Community (SAEFVIC).' (page 14)",
+      "Vaccine error: 'Refer to the Victorian Department of Health's Vaccine error management webpage for details on how to prevent and manage vaccine error, including when to report vaccine error to SAEFVIC.' (page 14)",
+      "'Pharmacies must report all cold chain breaches for government-funded vaccines.' (page 16)",
+      "Informed consent must cover 'documentation and record keeping - including requirement to report all vaccines administered under the pilot to the Australian Immunisation Register (AIR), and access to My Health Record.' (page 8)",
+      "Footnote 1: 'A case of this vaccine preventable disease is notifiable to the Department of Health under the Health (Infectious Diseases) Regulation 1990. The department will provide advice on the further management of the case and contacts.' (page 17)"
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-vaccine-administration.pdf", "page": 14, "section_heading": "2.9. DOCUMENTATION AND FOLLOW-UP" }
+  },
+  "references": [
+    "Australian Immunisation Handbook - Vaccination for International Travellers (page 15)",
+    "Australian Department of Health - Travellers' Health Alerts (page 15)",
+    "Department of Foreign Affairs and Trade, safety and security advice - Smartraveller.gov.au (page 15)",
+    "Manual of Travel Medicine - Manual of Travel Medicine (page 15)",
+    "UpToDate - Evidence-Based Clinical Decision Support System (page 15)",
+    "World Health Organization - International Travel and Health (page 15)",
+    "Centers for Disease Control and Prevention (USA) - Travelers' Health and Yellow Book (page 15)",
+    "National Travel Health Network & Centre (UK) - Travel Health Pro (page 15)",
+    "Program for Monitoring Emerging Diseases - ProMed-mail (page 15)",
+    "Smartraveller - Before You Go (page 15)",
+    "Therapeutic Goods Administration - Leaving Australia (page 15)",
+    "Wellcome - Low- and middle-income countries list (page 15)",
+    "Australian Department of Health - Travel health (page 15)",
+    "HealthDirect - Travel health advice (page 15)",
+    "Department of Foreign Affairs and Trade - Taking care of your health (page 15)",
+    "Medicare - How to manage your PBS medicine overseas (page 15)",
+    "Therapeutic Goods Administration - Travelling with medicines or medical devices (page 15)",
+    "Services Australia - Reciprocal Health Care Agreements (page 15)",
+    "World Health Organisation - Travel advice (page 15)",
+    "Centers for Disease Control and Prevention (USA) - Travelers' Health (page 15)",
+    "National Health Service (Scotland) - Fit for Travel (page 15)",
+    "National Travel Health Network and Centre (NaTHNaC) UK - Travel Health Pro (page 15)",
+    "Better Health Channel - Overseas Travel - Health Tips (page 15)",
+    "Department of Health - Yellow fever vaccination centres (page 15)",
+    "National Vaccine Storage Guidelines: Strive for 5 (page 4)",
+    "Australian Immunisation Handbook, current edition at the time of vaccine administration (page 4)",
+    "SAEFVIC adverse events following immunisation reporting: https://www.health.vic.gov.au/immunisation/adverse-events-following-immunisation-reporting (page 14)",
+    "Victorian Department of Health - Vaccine error management webpage (page 14)",
+    "Victorian Pharmacist-Administered Vaccination Program Guidelines (page 16)",
+    "Victorian Department of Health - Cold chain management webpage (page 16)",
+    "Wellcome - Low- and middle-income countries list: https://wellcome.org/grant-funding/guidance/low-and-middle-income-countries (page 6)",
+    "Health (Infectious Diseases) Regulation 1990 (footnote 1, page 17)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Colour key to flowchart boxes cannot be mapped from text extraction",
+      "observed": "Section 2.1 'Key to colours used in this protocol' extracts as three labels: 'Preliminary enquiries', 'Immediate referral to GP' and 'Consider referral to GP'. The pre-screening referral boxes themselves read only 'Refer to GP, travel medicine practitioner or other healthcare provider' or 'Consider referral to GP or travel medicine practitioner'.",
+      "why_unclear": "Colour is not preserved in text extraction, so it cannot be determined which boxes are coloured as 'Immediate referral to GP' versus 'Consider referral to GP'. No red flag has been upgraded to REFER_URGENT on this basis; all are recorded at the urgency the printed text supports.",
+      "source_page": 5
+    },
+    {
+      "topic": "Internal cross-reference page numbers differ from PDF page markers",
+      "observed": "The printed flowchart cross-references use the document's own printed page numbers (e.g. 'No: continue to page 4', 'Continued from page 3', 'continue to Section 2.3 on page 6'), which are offset from the PDF '=== PAGE n ===' markers by two pages (printed page 3 = PDF page 5).",
+      "why_unclear": "Provenance must use the PDF page markers only; the printed page numbers are quoted inside step descriptions but are not used for provenance.",
+      "source_page": 5
+    },
+    {
+      "topic": "Authorised vaccine age-band table: five rows have no printed age cell",
+      "observed": "Section 2.7 prints two tables headed 'Vaccine | Approval applies to people aged:'. First table rows: Hepatitis A, Hepatitis B, Poliomyelitis, Typhoid with the single cell '5 years and older' printed on the hepatitis A row (Appendix 1 separately excludes people 'aged 4 years and younger' for these vaccines). Second table rows: Influenza - '5 years and older'; Diphtheria-tetanus-pertussis - '12 years and older'; Human papillomavirus - no age cell printed; Measles - '15 years and older'; Mumps - no age cell printed; Rubella - no age cell printed; Meningococcal ACWY - no age cell printed; Pneumococcal - '50 years and older'; Herpes zoster/shingles - no age cell printed.",
+      "why_unclear": "The age cells are probably merged cells spanning the rows beneath them, but the merge is not visible in the text extraction. Possible readings recorded without adopting any of them: Human papillomavirus with '12 years and older' (spans with diphtheria-tetanus-pertussis) or '15 years and older'; Mumps, Rubella and Meningococcal ACWY with '15 years and older' (spans with measles) or '50 years and older'; Herpes zoster/shingles with '50 years and older' (spans with pneumococcal). Rows without a printed age cell are recorded with confidence 'unclear' rather than inferring the band.",
+      "source_page": 13
+    },
+    {
+      "topic": "Table 2 criteria recorded as referral red flags rather than eligibility exclusions",
+      "observed": "Table 2 is headed 'Additional needs that may require REFERRAL to a GP/travel medicine practitioner' and the body text says pharmacists 'should Consider REFERRAL ... particularly where multiple factors apply' while 'Pharmacist immunisers may provide general travel health advice and vaccinations where appropriate'. The flowchart branch is Yes -> 'Consider referral', No -> 'continue to Section 2.3'.",
+      "why_unclear": "Table 2 factors are not worded as an absolute bar to vaccination, so they are recorded as REVIEW_GP red flags and a pathway gate rather than as eligibility exclusion criteria. If local policy treats any Table 2 factor as an exclusion, that must be configured locally.",
+      "source_page": 7
+    },
+    {
+      "topic": "Whether the vaccination service proceeds after 'consider referral' for additional needs",
+      "observed": "The Table 2 'Yes' branch says 'Consider referral to GP or travel medicine practitioner, particularly where multiple factors apply' and the body adds that pharmacists 'may provide general travel health advice and vaccinations where appropriate'; the 'No' branch explicitly continues to Section 2.3. No explicit statement covers what happens to the current service after a Table 2 referral is considered.",
+      "why_unclear": "Both readings are possible: (a) referral considered, then the service continues; or (b) the service is handed over to the GP/travel medicine practitioner. The step records the printed wording only.",
+      "source_page": 7
+    },
+    {
+      "topic": "Flowchart and table cell order interleaved in text extraction",
+      "observed": "Pages 5-7 extract the flowchart questions, the footnoted definitions and the referral boxes as interleaved fragments; Table 1 (page 6) and Table 2 (page 7) extract their 'Item' column (Patient/Itinerary) separately from the criteria bullets; Appendix 2 (pages 18-20) extracts the Condition, Discussion areas and Referral to GP columns interleaved line by line.",
+      "why_unclear": "Column/row order in the text extraction does not faithfully reflect the printed table layout. Bullets and referral sentences are transcribed from the interleaved reading and marked 'medium' confidence where the column association could affect meaning.",
+      "source_page": 5
+    },
+    {
+      "topic": "No dose, route, dosing interval, brand or schedule printed for any vaccine",
+      "observed": "The Section 2.7 tables print only the vaccine name and the age band; the protocol elsewhere defers clinical detail to the Australian Immunisation Handbook ('required dosing schedule(s) and any spacing required (particularly for live parenteral vaccines)' must be considered but no schedule is printed) and to Strive for 5 for storage.",
+      "why_unclear": "No dosing fields exist in the source, so strength, dose, route, frequency, duration, max_dose and quantity_to_supply are left empty rather than inferred.",
+      "source_page": 13
+    },
+    {
+      "topic": "Pages 21-22 produced no extracted text",
+      "observed": "The text file contains the markers '=== PAGE 21 ===' and '=== PAGE 22 ===' with no content between them; Appendix 2's three-column table ends on page 20 with the 'Over-the-counter medications and first aid items' row.",
+      "why_unclear": "Cannot confirm from the extraction whether pages 21-22 are genuinely blank/back matter or contain content that did not extract (e.g. images). No structured content has been attributed to those pages.",
+      "source_page": 21
+    },
+    {
+      "topic": "No emergency escalation wording printed; urgent and emergency referral lists are empty",
+      "observed": "The document contains no '000', emergency department, ambulance or 'immediate/urgent' referral destination text (the only urgency language is the colour key label 'Immediate referral to GP', see the colour-key open question). The nearest escalation content is the anaphylaxis kit requirement and authorisation to administer 1:1000 adrenaline for an anaphylactic reaction to a vaccine.",
+      "why_unclear": "No emergency or urgent referral destination can be quoted from the document, so referral.urgent and referral.emergency are empty; local emergency escalation procedure must be configured separately.",
+      "source_page": 16
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Pharmacist immuniser eligibility prerequisites: 'mandatory travel healthcare training ... prior to service provision', successful assessment of an 'Immuniser program of study', current first aid certificate (updated every three years) and CPR certificate (updated annually), and recency of practice/CPD in immunisation.",
+      "source_page": 4,
+      "reason": "Authorisation to use this protocol depends on per-pharmacist credential records that must be verified before go-live."
+    },
+    {
+      "item": "'administer only approved vaccines, as specified in the Secretary Approval: Community Pharmacist Statewide Pilot, in accordance with the requirements of the Approval' - the Secretary Approval itself is a separate document not included here.",
+      "source_page": 4,
+      "reason": "The authoritative approved-vaccine list and any age bands must be reconciled against the current Secretary Approval before the rules engine is used."
+    },
+    {
+      "item": "Contraindications 'As defined in the current edition of the Australian Immunisation Handbook' - an external, version-changing definition.",
+      "source_page": 5,
+      "reason": "The engine cannot embed the AIH; confirm which edition is current at implementation and how contraindication screening is surfaced to the pharmacist."
+    },
+    {
+      "item": "Age bands for the travel-purpose vaccine rows with no printed age cell: Human papillomavirus, Mumps, Rubella, Meningococcal ACWY, Herpes zoster/shingles (printed cells on the same table are 12, 15 and 50 years and older).",
+      "source_page": 13,
+      "reason": "Age eligibility for these five rows is ambiguous in the extraction and must be confirmed against the Secretary Approval/AIH before go-live; recorded confidence 'unclear'."
+    },
+    {
+      "item": "'at least one other (clinical or non-clinical) staff member, who holds a current first aid and cardiopulmonary resuscitation certificate, is on duty in the pharmacy when the vaccines are administered, and within the line of sight of the person vaccinated for a minimum period of 15 minutes afterwards'.",
+      "source_page": 16,
+      "reason": "Staffing and observation conditions are Approval conditions; confirm rostering and the line-of-sight observation process at each pharmacy."
+    },
+    {
+      "item": "'An anaphylaxis kit and protocol for responding to anaphylaxis and vasovagal episodes should be checked and available before administering any vaccines', and authorisation of Schedule 3 poisons (1:1000 adrenaline) for an anaphylactic reaction to a vaccine - no clinical escalation steps or 000/ambulance wording are printed.",
+      "source_page": 13,
+      "reason": "Local kit contents, kit-check process and emergency escalation procedure (including calling 000) are not defined in this document and must be set locally."
+    },
+    {
+      "item": "Section 2.1 colour key includes 'Immediate referral to GP' but the text extraction cannot show which flowchart boxes carry that colour.",
+      "source_page": 5,
+      "reason": "Whether any pre-screening/complex-needs box is an immediate (urgent) referral cannot be established from the text; confirm against the visual PDF before go-live."
+    },
+    {
+      "item": "'Practicing under multiple Secretary Approvals' - Secretary Approval: Pharmacist Immuniser; Secretary Approval: Pharmacist Immuniser - COVID-19 Vaccine; and Secretary Approval: Community Pharmacist Statewide Pilot - 'must be aware of the requirements of each Approval ... and comply at all times'.",
+      "source_page": 16,
+      "reason": "Confirm which Approvals each pharmacy/pharmacist operates under and the separate requirements of each."
+    },
+    {
+      "item": "'If authorised, the pharmacist immuniser should send a copy of the documentation to the patient's nominated GP or other healthcare provider', plus AIR reporting and My Health Record access included in the consent discussion.",
+      "source_page": 14,
+      "reason": "The meaning of 'if authorised' and the consent/authorisation workflow for records sharing are not defined in the document; local policy must specify."
+    },
+    {
+      "item": "'Pharmacies must report all cold chain breaches for government-funded vaccines' per the Victorian Department of Health's Cold chain management webpage.",
+      "source_page": 16,
+      "reason": "Reporting process, timelines and record-keeping for cold chain breaches must be configured locally."
+    },
+    {
+      "item": "'Combination vaccines may be used ... Pharmacist immunisers should ensure the relevant vaccine is in scope with relevant Secretary Approvals.'",
+      "source_page": 13,
+      "reason": "Which combination products are in scope needs confirmation against the Approval; affects hepatitis A/B, diphtheria-tetanus-pertussis and measles-mumps-rubella rows."
+    },
+    {
+      "item": "'NOTE: National Immunisation Program (NIP) or State-funded vaccines should be provided to eligible patients.'",
+      "source_page": 13,
+      "reason": "Funding, stock and eligibility-check arrangements for NIP/State-funded vaccines are not described; confirm local supply and recording process."
+    },
+    {
+      "item": "'Pharmacist immunisers are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 4,
+      "reason": "Open-ended professional judgement clause needs a local policy boundary for an automated rules engine."
+    },
+    {
+      "item": "Table 2 'particularly where multiple factors apply' - no threshold is printed for when additional needs factors require referral.",
+      "source_page": 7,
+      "reason": "Local policy must define how many/which combinations of Table 2 factors trigger referral before the rule can be automated."
+    },
+    {
+      "item": "'Further detail is available in the Victorian Pharmacist-Administered Vaccination Program Guidelines.'",
+      "source_page": 16,
+      "reason": "External guidance is relied on for post-vaccination advice and adverse event detail; confirm which version applies and whether its content must be embedded."
+    }
+  ]
+}

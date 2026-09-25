@@ -1,0 +1,942 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf",
+    "pdf_sha256": "46496f2e815b3d0a139eec19c8c430269c38f23aefe426aaccea27ed96781384",
+    "page_count": 19,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Chronic Conditions Management Pilot – Cardiovascular Disease (CVD) Risk Reduction Program – Lipid Modification – Clinical Protocol",
+    "instrument_version": "Clinical Protocol – V2 (document version history: Version 2.0, 07.04.2026; prior versions 1.0 01.02.2024, 1.1 11.11.2024, 1.2 01.07.2025)",
+    "effective_date": "07.04.2026",
+    "legal_basis": "Not printed in this document: no Act, regulation or poisons schedule provision is named. The document describes itself as a 'Clinical Protocol' that 'forms part of the CVD Risk Reduction Program' (Queensland Community Pharmacy Chronic Conditions Management Pilot) and covers 'protocol-based/structured prescribing of medicines for the management of dyslipidaemia' (p.4). Operating conditions printed: 'When applying the information contained within this clinical protocol, pharmacists should exercise professional discretion and judgement. The protocol supports, but does not replace, the pharmacist's responsibility to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their caregiver.' (p.3).",
+    "supervision_model": "collaborative — document terminology: 'J: Collaborative care' (p.13); patients enrolled at Entry point 1 are managed 'concurrent to referral to an appropriate healthcare provider for further review and collaborative care' (p.4); 'An update must be provided to the patient's usual healthcare provider following each occasion of care' (Entry point 2, p.4); 'When modifying pharmacotherapy regimens for lipid modification that have been prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).' (p.11); 'the protocol supports, but does not replace, the pharmacist's responsibility to make decisions appropriate to the circumstances of the individual' (p.3).",
+    "scope_summary": "Queensland Community Pharmacy Chronic Conditions Management Pilot clinical protocol (V2) for the CVD Risk Reduction Program: Lipid Modification. It sets eligibility/ineligibility (aged 18–79, pregnancy, complex CVD, secondary dyslipidaemia, abnormal pathology, lipid targets not reached after 6 months etc.), the A–K assessment and management pathway (eligibility, consent/enrolment, CVD risk assessment, history, measurements, test review, non-pharmacological measures, pharmacotherapy with up to two agents — statins, ezetimibe, fenofibrate — monitoring with lipid target tables, confirmation of plan, communication, collaborative care, ongoing review), referral triggers, an Appendix CVD Risk Management Plan and a reference list. It is used in conjunction with the Clinical Protocol: Hypertension and Clinical Protocol: Blood Glucose Management."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Person aged ≥18 years and ≤79 years' (Figure 1 eligibility box); equivalently patients 'are aged <18 years or >79 years' are ineligible. Eligibility must be assessed at each consultation, as eligibility may change due to changes in health status or demographic factors.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Confirm the patient does not meet any ineligibility criteria (refer to page 1)' — i.e. none of the 'Patients who are ineligible for the Program' criteria (EXC-1 to EXC-29) are met; 'Confirm eligibility to participate in the Program (see Eligibility)' and 'Consider program eligibility at every consultation, as eligibility can change at any time.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Entry point 1: 'Patients without a previous diagnosis of dyslipidaemia, who do not meet any ineligibility criteria, may be enrolled in the Program and commence management (with non-pharmacological measures and pharmacotherapy, if indicated) concurrent to referral to an appropriate healthcare provider for further review and collaborative care.'",
+        "criteria_group": { "all_of": [], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Lipid modification" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Entry point 2: 'Patients with an existing diagnosis of dyslipidaemia, who do not meet any ineligibility criteria, may be enrolled in the Program and commence ongoing monitoring and management (with non-pharmacological measures and pharmacotherapy, if indicated). An update must be provided to the patient's usual healthcare provider following each occasion of care.'",
+        "criteria_group": { "all_of": [], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Lipid modification" }
+      },
+      {
+        "id": "INC-5",
+        "text": "'Provide Program overview, gain consent and enrol in Program' and 'Document informed consent from the patient for participation, as per the Pilot Handbook.' (program overview includes aims, expected outcomes, timeframes, costs, how medicines may be managed and how medicine costs may differ when prescribed by a pharmacist, other interventions, and that the patient may leave the Program at any time).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Overview of the CVD Risk Reduction Program: Lipid modification (continued from page 4)" }
+      },
+      {
+        "id": "INC-6",
+        "text": "'All patients entering the CVD Risk Reduction Program for Lipid Modification must have their CVD risk assessed (see Clinical Protocol: Hypertension for detail on CVD risk assessment)'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Continuing participation: 'their condition remains eligible to be managed in the Program'.",
+        "criteria_group": { "all_of": ["INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 14, "section_heading": "K: Clinical review and ongoing collaboration (continued from page 13)" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Continuing participation: 'they wish to remain in the Program and continue to consent'.",
+        "criteria_group": { "all_of": ["INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 14, "section_heading": "K: Clinical review and ongoing collaboration (continued from page 13)" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Continuing participation: 'they attend scheduled reviews'.",
+        "criteria_group": { "all_of": ["INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 14, "section_heading": "K: Clinical review and ongoing collaboration (continued from page 13)" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "'are aged <18 years or >79 years'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-2", "text": "'are planning a pregnancy or are pregnant'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-3", "text": "'have an existing diagnosis of: – stage 3-5 chronic kidney disease (CKD)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-4", "text": "'have an existing diagnosis of: familial hypercholesterolaemia'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-5", "text": "'have an existing diagnosis of: type 1 diabetes'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-6", "text": "'have an existing diagnosis of: retinopathy, neuropathy or nephropathy (persistent albuminuria: urinary albumin creatinine ratio (uACR) ≥3 mg/mmol or eGFR <60 mL/min/1.73m2)' [extraction splits 'urinary albumin / creatinine ratio' across a line; see open_questions]", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "medium", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-7", "text": "'complex cardiovascular disease (CVD): severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-8", "text": "'complex cardiovascular disease (CVD): congenital heart disease'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-9", "text": "'complex cardiovascular disease (CVD): rheumatic heart disease'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-10", "text": "'complex cardiovascular disease (CVD): heart failure'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-11", "text": "'complex cardiovascular disease (CVD): arrythmias'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-12", "text": "'complex cardiovascular disease (CVD): atrial fibrillation'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-13", "text": "'complex cardiovascular disease (CVD): other conditions including peripheral arterial disease, heart block, pericarditis, valvular disease, pulmonary hypertension, angina, cardiomyopathy and cardiomegaly, aortic aneurysm'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-14", "text": "'• have poorly controlled asthma, moderate or severe chronic obstructive pulmonary disease (COPD), severe obstructive sleep apnoea (OSA) or another serious respiratory illness.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-15", "text": "'• have a history of: – cardiothoracic surgery'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-16", "text": "'• have a history of: – acute coronary syndrome (e.g., myocardial infarction)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-17", "text": "'• have a history of: – stroke or other cerebrovascular disease'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-18", "text": "'• have a history of: – hypertensive urgency or emergency.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-19", "text": "'• have a current deep vein thrombosis (diagnosed by a medical practitioner)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-20", "text": "'• have a current pulmonary embolism (diagnosed by a medical practitioner) or a history of pulmonary embolism'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-21", "text": "'• are currently prescribed anticoagulant therapy'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-22", "text": "'• are currently receiving, or have received within the past 12 months, specialist treatment from a cardiologist, endocrinologist or nephrologist, unless they have a written referral from their treating specialist or general practitioner to participate in the Program'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-23", "text": "'• are suspected to have dyslipidaemia with a secondary cause (e.g. hypothyroidism, cholestasis, nephrotic syndrome)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-24", "text": "'• have: – unexplained fluctuations in blood pressure (BP)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-25", "text": "'• have: – total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-26", "text": "'• have: – severe hyperglycaemia (glycated haemoglobin (HbA1c) ≥10% or blood glucose level (BGL) ≥20.0 mmol/L), or hypoglycaemia (BGL <4.0 mmol/L)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-27", "text": "'• have: – another high risk or abnormal pathology result (e.g., abnormal liver function, abnormal FBC, raised CK) that cannot be managed in the Program.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-28", "text": "'• are found to have an abnormal lipid profile (but not severely elevated levels), and their CVD risk cannot be determined as they are in a population that the risk calculator is not validated for (e.g., 18 to 29 years old)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-29", "text": "'• do not reach their lipid levels clinical targets after 6 months of lipid modifying therapy.' Restated at p.14: 'Patients are not eligible for participation in the Program if their clinical targets have not been reached after 6 months of lipid modifying therapy.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 79,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Exception to EXC-22: 'unless they have a written referral from their treating specialist or general practitioner to participate in the Program' — patients who have received specialist treatment from a cardiologist, endocrinologist or nephrologist (currently or within the past 12 months) may participate when a written referral to participate is held.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "Carve-out from the ineligibility list — 'Treat (if clinically indicated) and concurrently refer': 'Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have type 2 diabetes managed with insulin'. (Note: this protocol does not exclude type 2 diabetes managed with insulin outright, unlike the Blood Glucose Management protocol.)",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2", "EXE-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+      },
+      {
+        "id": "EXE-3",
+        "text": "Carve-out from the ineligibility list — 'Treat (if clinically indicated) and concurrently refer': 'Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.' (Only 'current deep vein thrombosis' is an outright exclusion — EXC-19.)",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2", "EXE-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+      },
+      {
+        "id": "EXE-4",
+        "text": "'Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "CVD Risk Reduction Program: Lipid Modification — sections A to K (assessment and management pathway)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "A: Program eligibility — 'Confirm eligibility to participate in the Program (see Eligibility).'; 'Consider program eligibility at every consultation, as eligibility can change at any time.'; 'Refer the patient to their usual healthcare provider with comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program.' Figure 1 eligibility box: 'Person aged ≥18 years and ≤79 years' and 'Confirm the patient does not meet any ineligibility criteria (refer to page 1)'. Entry points (p.4): Entry point 1 — no previous diagnosis of dyslipidaemia, no ineligibility criteria, enrol with management concurrent to referral; Entry point 2 — existing diagnosis of dyslipidaemia, no ineligibility criteria, enrol with ongoing monitoring and management and update the usual healthcare provider after each occasion of care.",
+          "gates": [ { "criterion": "Patient is aged ≥18 years and ≤79 years and does not meet any ineligibility criteria (EXC-1 to EXC-29)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 6, "section_heading": "A: Program eligibility" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EDUCATE",
+          "description": "Provide an overview of the Program including aims, expected outcomes and what the Program may involve: 'timeframes for management of the condition, such as the number of appointments and testing required, and the costs involved'; 'how the patient's medicines may be managed and how medicine costs may differ when prescribed by a pharmacist'; 'other interventions that may be recommended as part of the Program e.g., smoking cessation and weight management'; 'that the patient may leave the Program, including by opting out or becoming ineligible, at any time, and be referred to an appropriate healthcare provider.' Then 'Provide Program overview, gain consent and enrol in Program' and 'Document informed consent from the patient for participation, as per the Pilot Handbook.'",
+          "gates": [ { "criterion": "Informed consent documented from the patient for participation, as per the Pilot Handbook", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Lipid modification" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "INVESTIGATION",
+          "description": "Assess CVD risk: 'All patients entering the CVD Risk Reduction Program for Lipid Modification must have their CVD risk assessed (see Clinical Protocol: Hypertension for detail on CVD risk assessment).' 'Reassess CVD risk every 5 years for patients at low CVD risk, or every 2 years for patients at intermediate CVD risk (or sooner where there is a significant change to risk factors) (1).' 'For patients already receiving pharmacological therapy to reduce their cardiovascular risk, or who have previously been assessed as high-risk, review individual risk factors. Formal reassessment of overall CVD risk is not recommended for these patients (1).' Risk category (High / Intermediate / Low / Severe hyperlipidaemia) drives the Table 1 approach to lipid modification (p.10).",
+          "gates": [ { "criterion": "CVD risk assessed before/when entering the Program (detail in the Clinical Protocol: Hypertension)", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "B: Patient history — 'Obtain sufficient information to assess the patient's condition, and the safety and appropriateness of any recommendations and medicines for the patient.' Consider: age; ethnic or cultural background, including Aboriginal and/or Torres Strait Islander status; lactation status; previous and current medical conditions; clinical signs of undiagnosed familial hypercholesterolaemia (e.g., tendon xanthomata, corneal arcus before 45 years of age, xanthelasma); alarm signs and symptoms that require further investigation (e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting); family history of CVD, including familial hypercholesterolaemia; smoking status and history (tobacco, cannabis, vaping, passive smoking or other exposure); all current and recently ceased treatments; drug and non-drug allergies and adverse drug reactions; recent pathology results, including lipid profile, liver and thyroid function tests; diet/nutrition status and weight; levels of physical activity; recreational or illicit drug use, and alcohol use; specialist involvement in care. Reminder: 'Pharmacists can access a range of clinical information in a patient's My Health Record...'",
+          "gates": [ { "criterion": "No alarm signs and symptoms that require further investigation are identified (e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting) and no clinical signs of undiagnosed familial hypercholesterolaemia are present", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 7, "section_heading": "B: Patient history" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "C: Take measurements — 1) BP: 'Conduct BP measurements in accordance with the National Heart Foundation of Australia Guidelines for the diagnosis and management of hypertension in adults 2016 (5).' 'Take three measurements and average the last two. Where there is variation >10 mmHg systolic or >6 mmHg diastolic, have the patient rest quietly for 5 minutes then remeasure.' 2) Weight and height: measure to calculate BMI (Heart Foundation BMI calculator (6); Department of Health and Aging - BMI and waist measurement (7) for BMI ranges and exceptions). 3) Waist circumference: measure waist (Heart Foundation resource (8)) and interpret per Department of Health and Aging - BMI and waist measurement (7).",
+          "gates": [ { "criterion": "BP readings are within ≤10 mmHg systolic and ≤6 mmHg diastolic variation (on fail: have the patient rest quietly for 5 minutes then remeasure)", "on_fail": "SEE_PW-1-S5" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 7, "section_heading": "C: Take measurements" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "D: Review test results — 'Where recent test results are unavailable, undertake appropriate testing (point of care testing (PoCT) and/or laboratory testing). Refer to the Pilot Handbook for further information regarding options for requesting laboratory testing.' Lipid profile: 'Patients with abnormal lipid levels identified during CVD risk assessment should have a repeat fasting lipid profile conducted on another day to confirm the result and inform management (9).' Other testing: 'Consider if any other PoCT or laboratory testing (e.g., liver function, renal function, full blood count, creatine kinase) is needed to inform patient management.'",
+          "gates": [ { "criterion": "Abnormal lipid levels identified during CVD risk assessment are confirmed by a repeat fasting lipid profile conducted on another day before management is informed", "on_fail": "SEE_PW-1-S6" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 8, "section_heading": "D: Review test results" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "E: Non-pharmacological measures — 'Provide all patients with information about non-pharmacological measures, regardless of whether pharmacotherapy is prescribed.' 'The 5As Framework for behavioural risk modification may be used ... in accordance with the ... SNAP guide (10).' 'Lifestyle modification (e.g. dietary changes, physical activity) can improve lipid concentrations (2).' Smoking and vaping cessation (guidelines (11), (12)); Weight management ('Lipid concentrations are shown to improve with weight loss in patients who are overweight or obese (2)'). Diet and nutrition: patients with dyslipidaemia should (2, 15) '• reduce saturated and trans-fat intake by replacing them with mono and poly-unsaturated fats (avocado, nuts, seeds and vegetable oils) • increase fibre intake (particularly soluble fibre e.g., oats, psyllium and legumes) • use products enriched with plant sterols • include soy protein in their diet through soy milk and/or soy cheese • aim for 2-3 servings of oily fish per week (salmon, mackerel and tuna).' 'Encourage all patients with an intermediate or high CVD risk to see a dietitian for individualised nutritional advice.' Physical activity: in line with Physical activity and exercise guidelines for all Australians (16); 'Referral to an exercise physiologist and/or physiotherapist to develop an exercise plan may be required.' Alcohol consumption: 'Alcohol consumption has a mixed effect on lipid profile.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 8, "section_heading": "E: Non-pharmacological measures" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "F: Pharmacotherapy — 'Pharmacists may prescribe up to two agents (dual-therapy) from the following list in line with the current online version of Therapeutic Guidelines: Cardiovascular (Lipid modification) (2): • statins (first line therapy unless contraindicated or not tolerated). Initiate high dose of a high potency statin if the patient has a high CVD risk or LDL-C levels are >4.0 mmol/L • ezetimibe (may be used as monotherapy if statins are contraindicated or not tolerated) • fenofibrate (may be used as additional therapy to meet triglyceride targets).' 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.' Table 1 approach: High CVD risk — 'Pharmacotherapy is recommended for all patients in addition to lifestyle modification'; Intermediate CVD risk — 'Consider lipid modifying pharmacotherapy depending on the clinical context; A trial of lifestyle modification may be sufficient to manage CVD risk; Discuss the potential benefits and harms of treatment with the patient and encourage shared decision-making.'; Low CVD risk — 'Pharmacotherapy is not routinely recommended; If dyslipidaemia is present, discuss lifestyle modification. Lipid-modifying pharmacotherapy can be considered in those who do not reach the LDL-C target with lifestyle support'; Severe hyperlipidaemia (serum total cholesterol ≥7.5 mmol/L or LDL cholesterol ≥5 mmol/L) — 'Manage regardless of AusCVDRisk calculator results. Refer these patients to their usual healthcare provider for management.'; Abnormal lipid levels (but not severe hyperlipidaemia) in patients who cannot have their CVD risk calculated — 'Refer these patients to their usual healthcare provider for review and possible management.' Before initiating/modifying consider age, liver function, CVD risk, current lipid profile, related comorbidities, clinical targets, contraindications/adverse reactions/drug interactions, response to previous interventions and patient preference (including cost). Prescriptions (including repeats) 'should provide enough medicine for the period until the patient's next scheduled review.' Pharmacists may modify/adjust existing lipid modification pharmacotherapy if 'patient's response is inadequate (within appropriate clinical timeframes)' or 'patient is experiencing intolerable or unmanageable adverse effects'; when modifying regimens prescribed by another healthcare provider, 'attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).'",
+          "gates": [ { "criterion": "No more than two agents (dual-therapy) are prescribed from the permitted list (statins, ezetimibe, fenofibrate), and any combination product only includes medicines able to be prescribed under the Program", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 11, "section_heading": "Pharmacotherapy treatment options under the Program" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "FOLLOW_UP",
+          "description": "G: Monitoring and clinical targets — 'Monitor response to new or changed pharmacotherapy by measuring lipid concentrations after 6 weeks (see Table 3 for target levels) (2).' 'If already prescribed a statin but not reaching clinical targets (2): • review adherence and address any issues • consider increasing the dose of the statin (if not already at maximum dose) or switching to a high potency statin • consider adding a second medicine and modify the dose to optimise management: – ezetimibe (if LDL-C targets are not being met) – fenofibrate (if triglyceride targets are not being met on a combination of statin and fish oil).' 'If clinical targets have not been reached 6 months after commencing lipid modifying therapy, refer the patient to an appropriate healthcare provider for ongoing management. If clinical targets have been reached after 6 months in the Program, continue to monitor response to therapy.' Table 2 (tests/monitoring per drug class) and Table 3 (target levels of cholesterol) apply.",
+          "gates": [
+            { "criterion": "Lipid concentrations measured 6 weeks after new or changed pharmacotherapy show response to therapy and the medicine is tolerated", "on_fail": "SEE_PW-1-S8" },
+            { "criterion": "Clinical targets reached (and stable) after 6 months of lipid modifying therapy", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 11, "section_heading": "G: Monitoring and clinical targets" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "H: Confirm management plan is appropriate — 'Consult the Therapeutic Guidelines (2), the Australian Medicines Handbook (19) and other relevant resources to confirm that management is appropriate, including: contraindications and precautions; drug and disease interactions; lactation status.'",
+          "gates": [ { "criterion": "Contraindications and precautions, drug and disease interactions, and lactation status confirmed appropriate against Therapeutic Guidelines, the Australian Medicines Handbook and other relevant resources", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "H: Confirm management plan is appropriate" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "I: Communicate agreed management plan — 'Provide comprehensive advice (including supporting written information) to the patient regarding: individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for clinical review.' 'Document the agreed management plan and individualised clinical targets within the patient's CVD Risk Management Plan.' 'It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources provided to patients (and caregivers if applicable) and that they comply with all copyright conditions.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "I: Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "REFER",
+          "description": "J: Collaborative care — 'Provide a copy of the patient's CVD Risk Management Plan to the patient's usual healthcare provider (and any other relevant health professionals involved in the patient's care). The communication should also include (if relevant): relevant medical history and pathology/PoCT results; changes to existing pharmacotherapy or new pharmacotherapy prescribed; a summary of advice provided to the patient including recommendations for multidisciplinary care and referrals; the next scheduled review appointment.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "J: Collaborative care" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "FOLLOW_UP",
+          "description": "K: Clinical review and ongoing collaboration — 'All patients should undergo regular clinical review to participate in the Program. Review patients 6 weeks after initiating or modifying the treatment regimen or sooner, if required or as recommended (2).' 'Prior to each periodic review, arrange any relevant laboratory tests (that are not performed by PoCT) required for monitoring.' At each appointment review: ongoing eligibility; patient history; BP measurements; pathology or PoCT; changes to CVD risk factors; response to current management and adherence to lifestyle modification; prescribed pharmacotherapy; CVD Risk Management Plan and clinical targets. 'Provide an update to the patient's usual healthcare provider following each occasion of care including when any changes are made to the patient's management plan.' 'Patients are not eligible for participation in the Program if their clinical targets have not been reached after 6 months of lipid modifying therapy.' 'Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.'",
+          "gates": [ { "criterion": "Patient's condition remains eligible to be managed in the Program, they wish to remain in the Program and continue to consent, and they attend scheduled reviews", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "K: Clinical review and ongoing collaboration" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Statins (HMG CoA Reductase Inhibitors)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No specific statin, dose, strength, route, frequency or quantity is printed in this protocol; prescribing must follow 'the current online version of Therapeutic Guidelines: Cardiovascular (Lipid modification) (2)'. 'statins (first line therapy unless contraindicated or not tolerated). Initiate high dose of a high potency statin if the patient has a high CVD risk or LDL-C levels are >4.0 mmol/L'. Escalation when not at target (p.11-12): 'review adherence and address any issues'; 'consider increasing the dose of the statin (if not already at maximum dose) or switching to a high potency statin'; 'consider adding a second medicine ... ezetimibe (if LDL-C targets are not being met) – fenofibrate (if triglyceride targets are not being met on a combination of statin and fish oil).' Monitoring (Table 2, p.12): 'Blood tests for baseline liver function and creatine kinase (CK) should be taken before initiating and re-tested if clinically indicated.' Pregnancy/lactation/paediatric caveats (verbatim): patients who 'are planning a pregnancy or are pregnant' and those 'aged <18 years or >79 years' are ineligible for the Program (p.1); 'lactation status' must be considered in patient history (p.7) and confirmed under 'H: Confirm management plan is appropriate — ... lactation status' (p.12). Prescriptions (including repeats) 'should provide enough medicine for the period until the patient's next scheduled review' (p.10).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 11, "section_heading": "Pharmacotherapy treatment options under the Program" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Ezetimibe",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No dose, strength, route, frequency or quantity is printed; follow the current online Therapeutic Guidelines: Cardiovascular (Lipid modification). 'ezetimibe (may be used as monotherapy if statins are contraindicated or not tolerated)'. Add-on use: 'consider adding a second medicine ... ezetimibe (if LDL-C targets are not being met)' (p.12). One of the agents pharmacists may prescribe (up to two agents/dual-therapy). Pregnancy/lactation/paediatric caveats (verbatim): 'are planning a pregnancy or are pregnant' and 'aged <18 years or >79 years' are ineligible (p.1); 'lactation status' considered in history (p.7) and confirmed at plan check (p.12).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 11, "section_heading": "Pharmacotherapy treatment options under the Program" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Fenofibrate",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No dose, strength, route, frequency or quantity is printed; follow the current online Therapeutic Guidelines: Cardiovascular (Lipid modification). 'fenofibrate (may be used as additional therapy to meet triglyceride targets).' Add-on use: 'consider adding a second medicine ... fenofibrate (if triglyceride targets are not being met on a combination of statin and fish oil)' (p.12). Monitoring (Table 2, p.12): 'Blood tests for full blood count and liver function should be taken before initiating and at 3 monthly intervals during the first year of treatment.' 'Serum CK should be taken before initiating and repeated regularly if using in combination with a statin.' 'Monitor renal function and reduce dose if CrCl is 30–60 mL/minute.' 'HDL - paradoxical decrease in HDL concentration has occurred weeks to years after starting fenofibrate; consider stopping fenofibrate if HDL is markedly decreased from baseline.' Pregnancy/lactation/paediatric caveats (verbatim): 'are planning a pregnancy or are pregnant' and 'aged <18 years or >79 years' are ineligible (p.1); 'lactation status' considered in history (p.7) and confirmed at plan check (p.12).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 11, "section_heading": "Pharmacotherapy treatment options under the Program" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Fish oil",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Not a prescribable row — fish oil is referenced only as background therapy in the escalation rule: 'fenofibrate (if triglyceride targets are not being met on a combination of statin and fish oil)' (p.12). It is not listed among the agents pharmacists may prescribe under the Program (statins, ezetimibe, fenofibrate), so no dose/supply fields are printed. Pregnancy/lactation/paediatric caveats (verbatim): 'are planning a pregnancy or are pregnant' and 'aged <18 years or >79 years' are ineligible for the Program (p.1); 'lactation status' considered in history (p.7) and confirmed at plan check (p.12).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "G: Monitoring and clinical targets (continued from page 11)" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic)' (systolic component; also listed as ineligibility 'severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic)').",
+      "structured": { "parameter": "systolic blood pressure", "operator": ">=", "value": 180, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic)' (diastolic component; also listed as ineligibility 'severe (Grade 3) hypertension').",
+      "structured": { "parameter": "diastolic blood pressure", "operator": ">=", "value": 110, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • HbA1c ≥10% or BGL ≥20.0 mmol/L' (HbA1c component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "HbA1c", "operator": ">=", "value": 10, "unit": "%" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • HbA1c ≥10% or BGL ≥20.0 mmol/L' (BGL component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "blood glucose level (BGL)", "operator": ">=", "value": 20.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L' (total cholesterol component; also an ineligibility criterion at p.2). Table 1 (p.10) adds for the same threshold: 'Severe hyperlipidaemia (serum total cholesterol ≥7.5 mmol/L or LDL cholesterol ≥5 mmol/L) • Manage regardless of AusCVDRisk calculator results. • Refer these patients to their usual healthcare provider for management.'",
+      "structured": { "parameter": "total cholesterol", "operator": ">=", "value": 7.5, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L' (LDL-C component; also an ineligibility criterion at p.2). Table 1 (p.10) adds: 'Severe hyperlipidaemia (serum total cholesterol ≥7.5 mmol/L or LDL cholesterol ≥5 mmol/L) • Manage regardless of AusCVDRisk calculator results. • Refer these patients to their usual healthcare provider for management.'",
+      "structured": { "parameter": "LDL-C", "operator": ">=", "value": 5.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L' (triglycerides component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "triglycerides", "operator": ">=", "value": 6, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2' (uACR component; also part of the ineligibility criterion for nephropathy at p.1).",
+      "structured": { "parameter": "urinary albumin-creatinine ratio (uACR)", "operator": ">=", "value": 3, "unit": "mg/mmol" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2' (eGFR component; also part of the ineligibility criterion for nephropathy at p.1).",
+      "structured": { "parameter": "eGFR", "operator": "<", "value": 60, "unit": "mL/min/1.73m2" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Ineligibility criterion: 'severe hyperglycaemia (glycated haemoglobin (HbA1c) ≥10% or blood glucose level (BGL) ≥20.0 mmol/L), or hypoglycaemia (BGL <4.0 mmol/L)' — hypoglycaemia component (HbA1c ≥10% and BGL ≥20.0 mmol/L are captured as RF-3/RF-4 via Figure 1).",
+      "structured": { "parameter": "blood glucose level (BGL)", "operator": "<", "value": 4.0, "unit": "mmol/L" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program. Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.' (Applies whenever any EXC-1 to EXC-29 criterion is met.)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'are aged <18 years or >79 years' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "18-79", "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'are planning a pregnancy or are pregnant' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'have an existing diagnosis of: – stage 3-5 chronic kidney disease (CKD) – familial hypercholesterolaemia – type 1 diabetes – retinopathy, neuropathy or nephropathy (persistent albuminuria: urinary albumin creatinine ratio (uACR) ≥3 mg/mmol or eGFR <60 mL/min/1.73m2)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11; uACR/eGFR thresholds also trigger referral via RF-8/RF-9)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'– complex cardiovascular disease (CVD): severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic); congenital heart disease; rheumatic heart disease; heart failure; arrythmias; atrial fibrillation; other conditions including peripheral arterial disease, heart block, pericarditis, valvular disease, pulmonary hypertension, angina, cardiomyopathy and cardiomegaly, aortic aneurysm' (patients who are ineligible for the Program; hypertension thresholds also trigger referral via RF-1/RF-2)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'• have poorly controlled asthma, moderate or severe chronic obstructive pulmonary disease (COPD), severe obstructive sleep apnoea (OSA) or another serious respiratory illness.' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'• have a history of: – cardiothoracic surgery – acute coronary syndrome (e.g., myocardial infarction) – stroke or other cerebrovascular disease – hypertensive urgency or emergency.' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'• have a current deep vein thrombosis (diagnosed by a medical practitioner)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'• have a current pulmonary embolism (diagnosed by a medical practitioner) or a history of pulmonary embolism' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'• are currently prescribed anticoagulant therapy' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'• are currently receiving, or have received within the past 12 months, specialist treatment from a cardiologist, endocrinologist or nephrologist, unless they have a written referral from their treating specialist or general practitioner to participate in the Program' (patients who are ineligible unless the written-referral exception EXE-1 applies; referred with comprehensive clinical handover per RF-11)",
+      "structured": { "parameter": "time since specialist treatment from a cardiologist, endocrinologist or nephrologist", "operator": "<=", "value": 12, "unit": "months" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'• are suspected to have dyslipidaemia with a secondary cause (e.g. hypothyroidism, cholestasis, nephrotic syndrome)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'• have: – unexplained fluctuations in blood pressure (BP)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11). Qualitative trigger — no numeric definition is printed.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'• have: – another high risk or abnormal pathology result (e.g., abnormal liver function, abnormal FBC, raised CK) that cannot be managed in the Program.' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'• are found to have an abnormal lipid profile (but not severely elevated levels), and their CVD risk cannot be determined as they are in a population that the risk calculator is not validated for (e.g., 18 to 29 years old)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11). Table 1 (p.11) restates: 'Abnormal lipid levels (but not severe hyperlipidaemia) in patients who cannot have their CVD risk calculated — Patients that belong to a population for which the Australian CVD risk calculator has not been validated, e.g. type 1 diabetes. • Refer these patients to their usual healthcare provider for review and possible management.'",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'• do not reach their lipid levels clinical targets after 6 months of lipid modifying therapy.' / Figure 1 (p.6): 'Refer patient to their usual healthcare provider with a comprehensive clinical handover if their clinical targets have not been reached (and stable) after 6 months of lipid modifying therapy.' / p.12: 'If clinical targets have not been reached 6 months after commencing lipid modifying therapy, refer the patient to an appropriate healthcare provider for ongoing management.' / p.14: 'Patients are not eligible for participation in the Program if their clinical targets have not been reached after 6 months of lipid modifying therapy.'",
+      "structured": { "parameter": "duration of lipid modifying therapy without lipid clinical targets being reached", "operator": ">=", "value": 6, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'Treat (if clinically indicated) and concurrently refer — Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have type 2 diabetes managed with insulin'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'Treat (if clinically indicated) and concurrently refer — Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'alarm signs and symptoms that require further investigation (e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting)' (B: Patient history). Destination of the 'further investigation' is not stated in the document.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 7, "section_heading": "B: Patient history" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'Refer the patient to their usual healthcare provider with a comprehensive clinical handover should the patient become ineligible for management under the Program or choose to exit the Program.' / 'Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 14, "section_heading": "K: Clinical review and ongoing collaboration (continued from page 13)" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "Figure 1 (p.5): 'Refer patient to their usual healthcare provider with a comprehensive clinical handover if they are not eligible for enrolment in the Program' (patient eligibility box A).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "Figure 1 (p.6): 'Consider the patient's ongoing eligibility — The patient's eligibility for the Program may change at any point. Refer the patient to their usual healthcare provider with a comprehensive clinical handover should the patient become ineligible for management under the Program or choose to exit the Program.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 6, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: lipid modification (continued from page 5)" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "Table 1 (p.10-11): 'Severe hyperlipidaemia (serum total cholesterol ≥7.5 mmol/L or LDL cholesterol ≥5 mmol/L) • Manage regardless of AusCVDRisk calculator results. • Refer these patients to their usual healthcare provider for management.' — note the conflict with the ineligibility list (p.2), which makes the same lipid thresholds an exclusion criterion; both readings are recorded (see open_questions).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 10, "section_heading": "Table 1. Approach to lipid modification (1, 2)" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to their usual healthcare provider with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program (p.1)",
+      "Entry point 1: enrolment 'concurrent to referral to an appropriate healthcare provider for further review and collaborative care' (p.4)",
+      "Figure 1: 'Refer to an appropriate healthcare provider where: • BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic) • HbA1c ≥10% or BGL ≥20.0 mmol/L • Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L • uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2' (p.5)",
+      "'Treat (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have type 2 diabetes managed with insulin • have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.' (p.2)",
+      "Table 1: 'Severe hyperlipidaemia (serum total cholesterol ≥7.5 mmol/L or LDL cholesterol ≥5 mmol/L) • Manage regardless of AusCVDRisk calculator results. • Refer these patients to their usual healthcare provider for management.' (p.10)",
+      "Table 1: 'Abnormal lipid levels (but not severe hyperlipidaemia) in patients who cannot have their CVD risk calculated ... • Refer these patients to their usual healthcare provider for review and possible management.' (p.11)",
+      "'If clinical targets have not been reached 6 months after commencing lipid modifying therapy, refer the patient to an appropriate healthcare provider for ongoing management.' (p.12)",
+      "'Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.' (p.14)",
+      "'Encourage all patients with an intermediate or high CVD risk to see a dietitian for individualised nutritional advice.' (p.9)",
+      "'Referral to an exercise physiologist and/or physiotherapist to develop an exercise plan may be required.' (p.9)",
+      "Appendix lifestyle prescription: 'If required: Refer to a GP, exercise physiologist, physiotherapist or other supports for safe exercise'; 'If required: Refer to Management for Overweight and Obesity - Clinical Practice Guideline and/or other supports e.g.,dietitian'; 'If required: Smoking (or vaping) cessation ... Quitline or GP'; 'If required: Refer to a GP, psychologist or other mental health clinician for mental health support' (p.16)"
+    ],
+    "urgent": [],
+    "emergency": [
+      "'or emergency services, if required' — referral option stated for patients who are, or become, ineligible for management under the Program: 'Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover' (p.1)",
+      "Appendix CVD Risk Management Plan records 'Closest 24-hour emergency services: Name, address and phone number' in the Healthcare team table (p.17)"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+  },
+  "review_followup": [
+    {
+      "when": "After 6 weeks of new or changed pharmacotherapy",
+      "what": "'Monitor response to new or changed pharmacotherapy by measuring lipid concentrations after 6 weeks (see Table 3 for target levels) (2).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 11, "section_heading": "G: Monitoring and clinical targets" }
+    },
+    {
+      "when": "6 weeks after initiating or modifying the treatment regimen, or sooner if required or as recommended",
+      "what": "'All patients should undergo regular clinical review to participate in the Program. Review patients 6 weeks after initiating or modifying the treatment regimen or sooner, if required or as recommended (2).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "K: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "Prior to each periodic review",
+      "what": "'Prior to each periodic review, arrange any relevant laboratory tests (that are not performed by PoCT) required for monitoring.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "K: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "At each appointment (scheduled or unscheduled)",
+      "what": "Review: 'the patient's ongoing eligibility for the Program; patient history to reflect changes in the preceding period; BP measurements; pathology or undertake any required PoCT (as applicable); changes to CVD risk factors; patient's response to current management and adherence to lifestyle modification; prescribed pharmacotherapy and modify the treatment regimen in line with Therapeutic Guidelines or consider other medicine-related issues (e.g., adherence); CVD Risk Management Plan, document and update clinical targets, if required.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "K: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "6 months after commencing lipid modifying therapy",
+      "what": "'If clinical targets have not been reached 6 months after commencing lipid modifying therapy, refer the patient to an appropriate healthcare provider for ongoing management. If clinical targets have been reached after 6 months in the Program, continue to monitor response to therapy.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "G: Monitoring and clinical targets (continued from page 11)" }
+    },
+    {
+      "when": "On another day after abnormal lipid levels are identified during CVD risk assessment",
+      "what": "'Patients with abnormal lipid levels identified during CVD risk assessment should have a repeat fasting lipid profile conducted on another day to confirm the result and inform management (9).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 8, "section_heading": "D: Review test results" }
+    },
+    {
+      "when": "Every 5 years (low CVD risk) or every 2 years (intermediate CVD risk), or sooner where there is a significant change to risk factors",
+      "what": "'Reassess CVD risk every 5 years for patients at low CVD risk, or every 2 years for patients at intermediate CVD risk (or sooner where there is a significant change to risk factors) (1).' Patients already on pharmacological therapy to reduce cardiovascular risk, or previously assessed as high-risk: 'review individual risk factors. Formal reassessment of overall CVD risk is not recommended for these patients (1).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Lipid modification" }
+    },
+    {
+      "when": "Before initiating statins, then re-tested if clinically indicated",
+      "what": "Table 2 (Statins (HMG CoA Reductase Inhibitors)): 'Blood tests for baseline liver function and creatine kinase (CK) should be taken before initiating and re-tested if clinically indicated.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "Table 2. Tests and monitoring required for lipid modifying therapies (1, 2)" }
+    },
+    {
+      "when": "Before initiating fenofibrate and at 3 monthly intervals during the first year of treatment",
+      "what": "Table 2 (Fenofibrate): 'Blood tests for full blood count and liver function should be taken before initiating and at 3 monthly intervals during the first year of treatment.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "Table 2. Tests and monitoring required for lipid modifying therapies (1, 2)" }
+    },
+    {
+      "when": "Before initiating fenofibrate, then repeated regularly if used in combination with a statin",
+      "what": "Table 2 (Fenofibrate): 'Serum CK should be taken before initiating and repeated regularly if using in combination with a statin.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "Table 2. Tests and monitoring required for lipid modifying therapies (1, 2)" }
+    },
+    {
+      "when": "Ongoing while taking fenofibrate (dose reduction trigger at CrCl 30–60 mL/minute)",
+      "what": "Table 2 (Fenofibrate): 'Monitor renal function and reduce dose if CrCl is 30–60 mL/minute.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "Table 2. Tests and monitoring required for lipid modifying therapies (1, 2)" }
+    },
+    {
+      "when": "Weeks to years after starting fenofibrate (HDL monitoring)",
+      "what": "Table 2 (Fenofibrate): 'HDL - paradoxical decrease in HDL concentration has occurred weeks to years after starting fenofibrate; consider stopping fenofibrate if HDL is markedly decreased from baseline.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "Table 2. Tests and monitoring required for lipid modifying therapies (1, 2)" }
+    },
+    {
+      "when": "Target levels applied per CVD risk category (Table 3)",
+      "what": "Table 3. Target levels of cholesterol (2, 9): 'LDL-C • High CVD risk: at least 50% reduction from baseline and <1.8 mmol/L, whichever is lowest • Intermediate CVD risk: <2.6 mmol/L • Low CVD risk: <3 mmol/L'; 'Non–HDL-C • High CVD risk: <2.6 mmol/L • Intermediate CVD risk: <3.4 mmol/L • Low CVD risk: <3.8 mmol/L'; 'Triglycerides • High CVD risk: <1.7 mmol/L • Intermediate and low CVD risk: <2.0 mmol/L'.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 12, "section_heading": "Table 3. Target levels of cholesterol (2, 9)" }
+    },
+    {
+      "when": "Recorded in the CVD Risk Management Plan (Appendix 1) at enrolment and updated at review",
+      "what": "Targets printed in the plan template: 'Blood lipids (cholesterol)' — 'Total cholesterol: Less than 5.5/ 4.0 mmol/L', 'LDL-C: Less than 2.0 mmol/L', 'HDL-C: Higher than 1.0 mmol/L', 'Triglycerides: Less than 2.0 mmol/L' (headed 'Blood lipid targets (individualise as required)'); also 'My risk of type 2 diabetes Low (score), Moderate (score), High (score) (delete if already diagnosed with T2DM)'.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 15, "section_heading": "Appendix 1 – CVD Risk Management Plan" }
+    },
+    {
+      "when": "As advised in the consultation (I: Communicate agreed management plan)",
+      "what": "Provide comprehensive advice (including supporting written information) regarding 'individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for clinical review.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 13, "section_heading": "I: Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Entry point 2: 'An update must be provided to the patient's usual healthcare provider following each occasion of care.' (p.4)",
+      "'When modifying pharmacotherapy regimens for lipid modification that have been prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).' (p.11)",
+      "'J: Collaborative care — Provide a copy of the patient's CVD Risk Management Plan to the patient's usual healthcare provider (and any other relevant health professionals involved in the patient's care).' Communication should include relevant medical history and pathology/PoCT results, pharmacotherapy changes, summary of advice including referrals, and the next scheduled review appointment. (p.13)",
+      "'Provide an update to the patient's usual healthcare provider following each occasion of care including when any changes are made to the patient's management plan.' (p.14)",
+      "'Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program.' (p.1)"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-dyslipidaemia-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Lipid modification" }
+  },
+  "references": [
+    "1. Commonwealth of Australia: Department of Health. Australian Guideline for assessing and managing cardiovascular disease risk. Department of Health and Aged Care; 2023 [cited 2025 Nov 3]. Available from: https://www.cvdcheck.org.au/overview. (page 19)",
+    "2. Therapeutic Guidelines: Cardiovascular. Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Cardiovascular&etgAccess=true. (page 19)",
+    "3. National Heart Foundation of Australia. Key Statistics: Cardiovascular Disease: National Heart Foundation of Australia; 2025 [cited 2026 Mar 2]. Available from: https://www.heartfoundation.org.au/your-heart/evidence-and-statistics/key-stats-cardiovascular-disease. (page 19)",
+    "4. National Heart Foundation of Australia. Practical guide to pharmacological lipid management. National Heart Foundation of Australia; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/heart-health-check-toolkit/pharmacological-lipid. (page 19)",
+    "5. National Heart Foundation of Australia. Guideline for the diagnosis and management of hypertension in adults. Melbourne: National Heart Foundation of Australia; 2016. (page 19)",
+    "6. National Heart Foundation of Australia. What's your body mass index (BMI)?; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/bmi-calculator. (page 19)",
+    "7. Commonwealth of Australia: Department of Health. Body mass index (BMI) and waist measurement Canberra: Commonwealth of Australia: Department of Health; 2021 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/health-topics/overweight-and-obesity/bmi-and-waist. (page 19)",
+    "8. National Heart Foundation of Australia. What waist measurements mean for your heart. Melbourne: National Heart Foundation of Australia; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/heart-health-check-toolkit/waist-measurement. (page 19)",
+    "9. The Royal Australian College of General Practitioners (RACGP). Guidelines for preventive activities in general practice (10th edition). East Melbourne: RACGP; 2024. (page 19)",
+    "10. The Royal Australian College of General Practitioners (RACGP). Smoking, nutrition, alcohol, physical activity (SNAP): A population health guide to behavioural risk factors in general practice. East Melbourne: RACGP; 2015. [cited 2025 Nov 3]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/snap. (page 19)",
+    "11. Queensland Health. Guidelines for acute common conditions and health and wellbeing services. Queensland Health; 2025. Available from: https://www.health.qld.gov.au/clinical-practice/guidelines-procedures/community-pharmacy-pilots/resources/acute-common-conditions. (page 19)",
+    "12. Clinical Excellence Queensland. E-cigarette and vaping cessation guide: Queensland respiratory and sleep clinical network. Queensland Health; 2024 [cited 2026 February 24]. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0030/1427763/vaping-cessation-guide.pdf. (page 19)",
+    "13. Casas R, Castro-Barquero S, Estruch R, Sacanella E. Nutrition and Cardiovascular Health. Int J Mol Sci. 2018;19(12). (page 19)",
+    "14. National Health and Medical Research Council. Australian Dietary Guidelines. Canberra: National Health and Medical Research Council; 2013. (page 19)",
+    "15. Tangney CC, Rosenson RS. Lipid management with diet or dietary supplements. UpToDate; 2026 [cited 2026 Feb 3]. At: https://www.uptodate.com/contents/lipid-management-with-diet-or-dietary-supplements. (page 19)",
+    "16. Australian Government Department of Health and Aged Care. Physical activity and exercise guidelines for all Australians. Canberra: Australian Government Department of Health and Aged Care; 2022 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/health-topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians. (page 19)",
+    "17. National Health and Medical Research Council: Australian Research Council and Universities Australia. Australian Guidelines to Reduce Health Risks from Drinking Alcohol. Canberra: Commonwealth of Australia; 2020. (page 19)",
+    "18. The Royal Australian College of General Practitioners (RACGP). Handbook of Non-Drug Interventions (HANDI). East Melbourne: RACGP 2023. (page 19)",
+    "19. Australian Medicines Handbook: Drugs for dyslipidaemia. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 Nov 3]. Available from: https://amhonline.amh.net.au/chapters/cardiovascular-drugs/drugs-dyslipidaemia?menu=vertical. (page 19)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Legal basis not printed",
+      "observed": "The document names no Act, regulation or poisons schedule provision; it only describes itself as a 'Clinical Protocol' of the Queensland Community Pharmacy Chronic Conditions Management Pilot covering 'protocol-based/structured prescribing of medicines for the management of dyslipidaemia' (p.4) with pharmacists to 'exercise professional discretion and judgement' (p.3).",
+      "why_unclear": "Spec requires legal_basis naming the regulation/schedule provision; nothing printed to transcribe, so it is recorded as not printed rather than inferred.",
+      "source_page": 4
+    },
+    {
+      "topic": "No doses, strengths, quantities or schedules printed for lipid-modifying agents",
+      "observed": "F: Pharmacotherapy lists agents only (statins — 'Initiate high dose of a high potency statin if the patient has a high CVD risk or LDL-C levels are >4.0 mmol/L', ezetimibe, fenofibrate) and defers to 'the current online version of Therapeutic Guidelines: Cardiovascular (Lipid modification) (2)'. Table 2 gives testing requirements only.",
+      "why_unclear": "Dosing fields (form, strength, dose, route, frequency, duration, max_quantity, quantity_to_supply) are left blank because no numeric dosing is printed; the specific statin and what counts as a 'high potency' statin are not named.",
+      "source_page": 11
+    },
+    {
+      "topic": "Severe hyperlipidaemia: 'manage regardless and refer' (Table 1) vs ineligibility list",
+      "observed": "Table 1 (p.10) says for 'Severe hyperlipidaemia (serum total cholesterol ≥7.5 mmol/L or LDL cholesterol ≥5 mmol/L)': 'Manage regardless of AusCVDRisk calculator results. • Refer these patients to their usual healthcare provider for management.' The ineligibility list (p.2) says patients with 'total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L' are ineligible for the Program (which itself triggers referral with comprehensive clinical handover).",
+      "why_unclear": "The two statements are not obviously reconcilable (ineligible-and-refer vs manage-regardless-and-refer); both readings recorded without resolution.",
+      "source_page": 10
+    },
+    {
+      "topic": "'appropriate clinical timeframes' never defined",
+      "observed": "'Pharmacists may modify or adjust existing lipid modification pharmacotherapy, including if the: • patient's response is inadequate (within appropriate clinical timeframes)' (p.11).",
+      "why_unclear": "No numeric timeframe is printed; the only fixed interval in the protocol is the 6-month target rule (p.12). Recorded as printed and flagged for local policy.",
+      "source_page": 11
+    },
+    {
+      "topic": "Table 1 approach rows split across pages 10-11",
+      "observed": "The 'Severe hyperlipidaemia' row begins on page 10 and continues on page 11, and the 'Abnormal lipid levels (but not severe hyperlipidaemia) in patients who cannot have their CVD risk calculated' row sits entirely on page 11; column alignment in the extraction is approximate.",
+      "why_unclear": "Table row/column boundaries cannot be read with certainty from the extraction; rows transcribed best-effort and flagged for verification against the PDF.",
+      "source_page": 10
+    },
+    {
+      "topic": "'urinary albumin creatinine ratio' hyphen lost in extraction",
+      "observed": "Page 1 extracts as 'persistent albuminuria: urinary albumin / creatinine ratio (uACR) ≥3 mg/mmol' split across a line break; the companion Blood Glucose Management protocol prints 'urinary albumin-creatinine ratio (uACR)'.",
+      "why_unclear": "Hyphenation cannot be confirmed from this extraction; transcribed as extracted with confidence 'medium' and both readings noted.",
+      "source_page": 1
+    },
+    {
+      "topic": "Referral block page range",
+      "observed": "Referral destinations and criteria appear from page 1 (eligibility) through page 14 (ongoing eligibility), plus appendix referral prompts on page 16.",
+      "why_unclear": "Spec allows one shared provenance object for the referral block; first page (1) used and the range recorded here.",
+      "source_page": 1
+    },
+    {
+      "topic": "Pathway gates where the document states no consequence",
+      "observed": "Three gates are recorded with on_fail 'unclear': (a) 'All patients entering ... must have their CVD risk assessed' (p.5); (b) 'alarm signs and symptoms that require further investigation' / signs of undiagnosed familial hypercholesterolaemia (p.7); (c) confirming management is appropriate incl. lactation status (p.12).",
+      "why_unclear": "The document does not say what happens when these requirements are not met (refer? stop? recheck?), so no on_fail was inferred.",
+      "source_page": 7
+    },
+    {
+      "topic": "effective_date derived from version history",
+      "observed": "Document footer/title states 'Clinical Protocol – V2'; the version table on page 18 shows 'Version 2.0 | 07.04.2026 | Updates across sections to reflect contemporary guidance and improve usability.' No separate 'effective date' line is printed.",
+      "why_unclear": "effective_date taken from the version-history date for Version 2.0; confirm it is the operative date rather than a publication date.",
+      "source_page": 18
+    },
+    {
+      "topic": "No statutory notifiable-condition requirement stated",
+      "observed": "The document requires updates/copies to the patient's usual healthcare provider but says nothing about notifiable conditions or statutory notifications; My Health Record is mentioned only as an information source (p.7).",
+      "why_unclear": "notifiable.required is set true only for the printed healthcare-provider notification duties; silence on statutory notification recorded here.",
+      "source_page": 7
+    },
+    {
+      "topic": "Referral urgency tiers",
+      "observed": "No non-emergency 'urgent' referral wording is printed; the only escalation above routine is '(or emergency services, if required)' (p.1) and the Appendix entry 'Closest 24-hour emergency services' (p.17).",
+      "why_unclear": "referral.urgent is empty because the document genuinely prints no urgent-tier destination; recorded rather than inferred.",
+      "source_page": 1
+    },
+    {
+      "topic": "Appendix lipid target 'Less than 5.5/ 4.0 mmol/L'",
+      "observed": "CVD Risk Management Plan prints 'Total cholesterol: Less than 5.5/ 4.0 mmol/L' — two values separated by a slash with no explanation (p.15).",
+      "why_unclear": "Ambiguous as printed (possibly two alternative targets or a stray character); transcribed verbatim without interpretation.",
+      "source_page": 15
+    },
+    {
+      "topic": "Fish oil referenced but not a prescribable agent",
+      "observed": "The escalation rule mentions 'fenofibrate (if triglyceride targets are not being met on a combination of statin and fish oil)' (p.12), but fish oil is not listed among the agents pharmacists may prescribe under the Program (statins, ezetimibe, fenofibrate).",
+      "why_unclear": "Status of fish oil (who supplies it, at what dose) is not defined in the document; captured as a non-supply treatment row with empty dosing fields.",
+      "source_page": 12
+    },
+    {
+      "topic": "Clinical signs of undiagnosed familial hypercholesterolaemia — no stated action",
+      "observed": "'Consider: ... clinical signs of undiagnosed familial hypercholesterolaemia (e.g., tendon xanthomata, corneal arcus before 45 years of age, xanthelasma)' (p.7), while an existing diagnosis of familial hypercholesterolaemia is an ineligibility criterion (p.1).",
+      "why_unclear": "The document does not state what to do when these signs are found (recheck eligibility? refer? test?); captured in the pathway history step with gate on_fail 'unclear'.",
+      "source_page": 7
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Legal basis of the protocol (which Queensland regulation/poisons schedule provision the pilot operates under).",
+      "source_page": 4,
+      "reason": "The document prints no Act or regulation; must be confirmed with Queensland Health before go-live (spec rule 7)."
+    },
+    {
+      "item": "Which statin, at what dose/potency, and the meaning of 'high dose of a high potency statin' (initiate when 'high CVD risk or LDL-C levels are >4.0 mmol/L'), plus doses for ezetimibe and fenofibrate.",
+      "source_page": 11,
+      "reason": "No dosing is printed; the protocol defers to 'the current online version of Therapeutic Guidelines: Cardiovascular (Lipid modification)'. Local formulary/dosing data must be sourced and verified before the rules engine can prescribe."
+    },
+    {
+      "item": "'Pharmacists may prescribe up to two agents (dual-therapy)' and 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.'",
+      "source_page": 11,
+      "reason": "The two-agent cap and the set of permitted combination products must be encoded as a local hard rule; the permitted product list is not printed."
+    },
+    {
+      "item": "'patient's response is inadequate (within appropriate clinical timeframes)' as the trigger to modify existing lipid modification pharmacotherapy.",
+      "source_page": 11,
+      "reason": "Undefined timeframe; local policy must set the numeric timeframe (distinct from the printed 6-month target rule)."
+    },
+    {
+      "item": "'When applying the information contained within this clinical protocol, pharmacists should exercise professional discretion and judgement. The protocol supports, but does not replace, the pharmacist's responsibility to make decisions appropriate to the circumstances of the individual...'",
+      "source_page": 3,
+      "reason": "Open-ended professional judgement clause needs a defined boundary before an automated rules engine can rely on it."
+    },
+    {
+      "item": "Referral destinations expressed as 'their usual healthcare provider', 'an appropriate healthcare provider' and 'emergency services, if required'.",
+      "source_page": 1,
+      "reason": "Destinations are undefined; local policy must map each trigger to an approved destination/urgency."
+    },
+    {
+      "item": "Conflicting handling of severe hyperlipidaemia: Table 1 'Manage regardless of AusCVDRisk calculator results. • Refer these patients to their usual healthcare provider for management.' vs ineligibility criterion 'total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L'.",
+      "source_page": 10,
+      "reason": "Operational handling (enrol-and-manage vs screen-out-and-refer) must be resolved with Queensland Health before go-live; both readings recorded in open_questions."
+    },
+    {
+      "item": "'Document informed consent from the patient for participation, as per the Pilot Handbook.'",
+      "source_page": 5,
+      "reason": "Consent process lives in an external document (Pilot Handbook); confirm the local consent wording/record before go-live."
+    },
+    {
+      "item": "'Where recent test results are unavailable, undertake appropriate testing (point of care testing (PoCT) and/or laboratory testing). Refer to the Pilot Handbook for further information regarding options for requesting laboratory testing.'",
+      "source_page": 8,
+      "reason": "PoCT/laboratory request arrangements are delegated to the Pilot Handbook; local ordering pathways and pathology request forms must be confirmed."
+    },
+    {
+      "item": "Written referral exception to specialist-treatment ineligibility: 'unless they have a written referral from their treating specialist or general practitioner to participate in the Program'.",
+      "source_page": 2,
+      "reason": "Local process for verifying/holding the written referral (e.g. copy on file, My Health Record) must be confirmed."
+    },
+    {
+      "item": "Table 2 monitoring schedule (statin baseline liver function and CK; fenofibrate FBC and liver function before initiating and 3-monthly in the first year, serum CK, renal function dose reduction if CrCl is 30–60 mL/minute, HDL stop-review).",
+      "source_page": 12,
+      "reason": "Monitoring intervals and the CrCl-based dose-reduction rule must be configured as schedulable checks in the local system and aligned with local pathology ordering."
+    },
+    {
+      "item": "Individualised lipid targets (Table 3 risk-category targets vs Appendix plan targets 'individualise as required') and shared decision-making: 'Patients should be involved in shared decision-making and the development of their CVD Risk Management Plan, including setting of appropriate targets.'",
+      "source_page": 12,
+      "reason": "Two target sets are printed and the appendix targets are marked 'individualise as required'; local defaults and the allowed target range must be confirmed before automated target checks."
+    },
+    {
+      "item": "'When modifying pharmacotherapy regimens for lipid modification that have been prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).'",
+      "source_page": 11,
+      "reason": "'Attempt to notify' and 'whichever is most appropriate' leave the collaboration workflow to local policy; define the notification method and fallback."
+    },
+    {
+      "item": "Fish oil use: 'fenofibrate (if triglyceride targets are not being met on a combination of statin and fish oil)' — fish oil is referenced but not listed as a prescribable agent under the Program.",
+      "source_page": 12,
+      "reason": "Local policy must state whether fish oil can be supplied/prescribed under the Program or is expected to be patient-purchased/already prescribed."
+    },
+    {
+      "item": "Intermediate CVD risk option: 'Consider lipid modifying pharmacotherapy depending on the clinical context • A trial of lifestyle modification may be sufficient ... • Discuss the potential benefits and harms of treatment with the patient and encourage shared decision-making.'",
+      "source_page": 10,
+      "reason": "Clinician-judgement branch with no decision rule printed; local policy must define how the decision is recorded and when pharmacotherapy is started."
+    }
+  ]
+}

@@ -1,0 +1,523 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf",
+    "pdf_sha256": "cc57779baa4a310ccbe189acc9251542e171b489b0bf098bcdb8d6da7c9c24f0",
+    "page_count": 28,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Chronic Conditions Management Pilot - Cardiovascular Disease (CVD) Risk Reduction Program - Hypertension Clinical Protocol",
+    "instrument_version": "V2 (Version 2.0, 07.04.2026)",
+    "effective_date": "07.04.2026",
+    "legal_basis": "Not printed in this document. The protocol is issued by the Queensland Government as part of the Queensland Community Pharmacy Chronic Conditions Management Pilot; no regulation or poisons schedule provision is cited in the text (see open_questions).",
+    "supervision_model": "collaborative (document terminology: 'protocol-based/structured prescribing of medicines' and 'Collaborative care' section L; an update must be provided to the patient's usual healthcare provider following each occasion of care)",
+    "scope_summary": "Clinical protocol for the Queensland Community Pharmacy Chronic Conditions Management Pilot CVD Risk Reduction Program: Hypertension. Covers program eligibility (adults aged 18-79 years), CVD risk assessment (patient history, measurements, AUSDRISK, pathology review, AusCVDRisk), development and implementation of a hypertension management plan (non-pharmacological measures, pharmacotherapy with up to two agents from four permitted classes, monitoring and clinical targets) and ongoing management/collaborative care. Should be used in conjunction with the Clinical Protocol: Lipid Modification and/or the Clinical Protocol: Blood Glucose Management as required."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Person aged ≥18 years and ≤79 years",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": ["INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Confirm the patient does not meet any ineligibility criteria (refer to page 1)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": ["INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Document informed consent from the patient for participation, as per the Pilot Handbook.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": ["INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Entry point 1: Patients without a previous diagnosis of hypertension, who do not meet any ineligibility criteria, may be enrolled in the Program and commence management (with non-pharmacological measures and pharmacotherapy, if indicated) concurrent to referral to an appropriate healthcare provider for further review and collaborative care.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": ["INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension management" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Entry point 2: Patients with an existing diagnosis of hypertension, who do not meet any ineligibility criteria, may be enrolled in the Program and commence ongoing monitoring and management (with non-pharmacological measures and pharmacotherapy, if indicated). An update must be provided to the patient's usual healthcare provider following each occasion of care.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": ["INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension management" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "are aged <18 years or >79 years", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-2", "text": "are planning a pregnancy or are pregnant", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-3", "text": "have an existing diagnosis of: stages 3-5 chronic kidney disease (CKD)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-4", "text": "have an existing diagnosis of: familial hypercholesterolaemia", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-5", "text": "have an existing diagnosis of: type 1 diabetes", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-6", "text": "have an existing diagnosis of: retinopathy, neuropathy or nephropathy (persistent albuminuria: urinary albumin-creatinine ratio (uACR) ≥3 mg/mmol or eGFR <60 mL/min/1.73m2)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-7", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-8", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): congenital heart disease", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-9", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): rheumatic heart disease", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-10", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): heart failure", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-11", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): arrythmias", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-12", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): atrial fibrillation", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-13", "text": "have an existing diagnosis of: complex cardiovascular disease (CVD): other conditions including peripheral arterial disease, heart block, pericarditis, valvular disease, pulmonary hypertension, angina, cardiomyopathy and cardiomegaly, aortic aneurysm", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-14", "text": "have poorly controlled asthma, moderate or severe chronic obstructive pulmonary disease (COPD), severe obstructive sleep apnoea (OSA) or another serious respiratory illness.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-15", "text": "have a history of: cardiothoracic surgery", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-16", "text": "have a history of: acute coronary syndrome (e.g. myocardial infarction)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-17", "text": "have a history of: stroke or other cerebrovascular disease", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-18", "text": "have a history of: hypertensive urgency or emergency.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-19", "text": "have a current deep vein thrombosis (diagnosed by a medical practitioner)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-20", "text": "have a current pulmonary embolism (diagnosed by a medical practitioner) or a history of pulmonary embolism", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-21", "text": "are currently prescribed anticoagulant therapy", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-22", "text": "are currently receiving, or have received within the past 12 months, specialist treatment from a cardiologist, endocrinologist or nephrologist, unless they have a written referral from their treating specialist or general practitioner to participate in the Program", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-23", "text": "are suspected to have hypertension with a secondary cause (e.g. renal disease, hyperaldosteronism, thyroid disease, medicines such as a NSAID or corticosteroid)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-24", "text": "have: unexplained fluctuations in blood pressure (BP)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-25", "text": "have: total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-26", "text": "have: severe hyperglycaemia (glycated haemoglobin (HbA1c) ≥10% or, blood glucose level (BGL) ≥20.0 mmol/L), or hypoglycaemia (BGL <4.0 mmol/L)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-27", "text": "have: another high risk or abnormal pathology result (e.g., proteinuria, raised CK) that cannot be managed in the Program.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-28", "text": "do not reach (and stabilise) at their blood pressure clinical target after 4-6 weeks of treatment with 2 first line antihypertensives at maximum tolerated doses.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28"] }, "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 79,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "unless they have a written referral from their treating specialist or general practitioner to participate in the Program (exception to EXC-22: specialist treatment from a cardiologist, endocrinologist or nephrologist within the past 12 months)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-22"] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "CVD risk assessment and hypertension management (Program steps A-M)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "A: Program eligibility. Confirm eligibility to participate in the Program (see Eligibility). Consider program eligibility at every consultation, as eligibility can change at any time. Refer the patient to their usual healthcare provider with comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program.",
+          "gates": [
+            { "criterion": "Person aged ≥18 years and ≤79 years", "on_fail": "REFER" },
+            { "criterion": "Patient does not meet any ineligibility criteria (EXC-1 to EXC-28)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 7, "section_heading": "A: Program eligibility" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EDUCATE",
+          "description": "Provide Program overview, gain consent and enrol in Program. Provide an overview of the Program including the aims, expected outcomes, timeframes for management (number of appointments and testing required, and the costs involved), how the patient's medicines may be managed and how medicine costs may differ when prescribed by a pharmacist, other interventions (e.g., smoking cessation and weight management), and that the patient may leave the Program (by opting out or becoming ineligible) at any time and may be referred to an appropriate healthcare provider. Document informed consent from the patient for participation, as per the Pilot Handbook.",
+          "gates": [
+            { "criterion": "Patient meets inclusion criteria INC-1 to INC-5 (eligible for enrolment)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "B: Patient history. Obtain sufficient information to assess the patient's condition, and the safety and appropriateness of any recommendations and medicines for the patient. Consider: age; ethnic or cultural background, including Aboriginal and/or Torres Strait Islander status; lactation status; history of hypertensive disorders of pregnancy (including pre-eclampsia) or gestational diabetes; previous and current medical conditions associated with increased CVD risk (OSA, mental health conditions, thyroid and endocrine disorders, PCOS, menopause especially if premature, CKD, rheumatoid arthritis and other chronic autoimmune inflammatory conditions); alarm signs and symptoms that require further investigation e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting, lethargy; family history of CVD, particularly premature CVD (coronary heart disease or stroke in a first-degree female relative aged <65 years or a first degree male relative aged <55 years); smoking status and history (tobacco, cannabis, vaping, passive smoking, or other exposure to smoke); all current and recently ceased treatments; drug allergies and adverse drug reactions; recent pathology results including eGFR and electrolytes; diet/nutrition status and weight; levels of physical activity; recreational or illicit drug use, and alcohol use; specialist involvement in care.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 7, "section_heading": "B: Patient history" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EXAMINATION",
+          "description": "C: Take measurements. 1) BP: In-pharmacy BP measurements are required for the purposes of calculating the CVD risk score; conduct all BP measurements in accordance with the National Heart Foundation of Australia - Guidelines for the diagnosis and management of hypertension in adults 2016; take three measurements and average the last two. Where there is variation >10 mmHg systolic or >6 mmHg diastolic, have the patient rest quietly for 5 minutes then remeasure. 2) Weight and height: take weight and height measurements to calculate the person's body mass index (BMI). 3) Waist circumference: measure waist and interpret in accordance with the Department of Health and Aging - BMI and waist measurement.",
+          "gates": [
+            { "criterion": "BP measurement variation is not >10 mmHg systolic or >6 mmHg diastolic", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 8, "section_heading": "C: Take measurements" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "INVESTIGATION",
+          "description": "D: Estimate type 2 diabetes risk (if applicable). Assess the patient's risk of developing type 2 diabetes (in the next 5 years) for non-Indigenous adults aged >40 years who do not have an existing diagnosis of diabetes using the validated Australian type 2 Diabetes Risk Assessment Tool (AUSDRISK). Reassess the risk every 3 years. Aboriginal and Torres Strait Islander peoples aged >18 years are considered high risk of developing type 2 diabetes. Document does not state what to do when the patient is outside this group (gate on_fail unclear).",
+          "gates": [
+            { "criterion": "Patient is a non-Indigenous adult aged >40 years without an existing diagnosis of diabetes (AUSDRISK applies)", "on_fail": "unclear" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 8, "section_heading": "D: Estimate type 2 diabetes risk (if applicable)" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "E: Review test results. Relevant test results based on the patient presentation are outlined in Table 1 (HbA1c or fasting blood glucose; uACR and eGFR; full lipid assessment - total cholesterol, LDL-C, HDL-C and triglycerides). Where recent test results are unavailable, undertake appropriate testing (point of care testing (PoCT) and/or laboratory testing). Refer to the Pilot Handbook for further information regarding options for requesting laboratory testing. Guidance on the review of test results is included in Appendix 1.",
+          "gates": [
+            { "criterion": "Recent relevant test results available", "on_fail": "SEE_PW-1-S6" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 8, "section_heading": "E: Review test results" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "INVESTIGATION",
+          "description": "F: Estimate CVD risk. Assess CVD risk using the AusCVDRisk calculator in the following patient groups: all patients aged 45 - 79 years; patients with diabetes aged 35 - 79 years; Aboriginal and/or Torres Strait Islander people aged 30 - 79 years. Consider modifiable and non-modifiable risk factors, related comorbidities (Appendix 2) and test results (Appendix 1); these may re-classify the patient to a lower or higher risk category. Consider assessing individual risk factors and test results for patients ≥18 years where assessment of CVD risk using the AusCVDRisk calculator has not been validated (e.g., type 1 diabetes) - document does not state this as the gate-failure branch (on_fail unclear). All patients, regardless of their age, are considered high risk if they have a diagnosis of moderate-to-severe chronic kidney disease or familial hypercholesterolaemia. Interpret CVD risk scores in accordance with the Australian Guideline for assessing and managing cardiovascular disease risk.",
+          "gates": [
+            { "criterion": "Patient is in a validated AusCVDRisk group (aged 45-79 years; diabetes aged 35-79 years; Aboriginal and/or Torres Strait Islander aged 30-79 years)", "on_fail": "unclear" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 10, "section_heading": "F: Estimate CVD risk" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Determine treatment approach. Branches (explicit, per page 11 and Figure 1): (a) If person has low CVD risk AND test results within normal ranges (BP, HbA1c, FBG, uACR, eGFR and lipid profile): provide advice for lifestyle modification and discharge from the Program. (b) Where a patient has a previous diagnosis of, or test results indicative of, hypertension, type 2 diabetes and/or dyslipidaemia: these patients may be enrolled in the Program and commence collaborative care / managed in accordance with the relevant CVD Risk Reduction Program protocols (refer to the CVD Risk Reduction Program protocols for the management of type 2 diabetes and/or dyslipidaemia, as required by the patient presentation). (c) Otherwise proceed to the hypertension management plan (PW-1-S9 onwards). The remainder of this protocol is relevant to the management of hypertension only.",
+          "gates": [
+            { "criterion": "Patient estimated at low risk of CVD who does not require further management for modifiable CVD risk factors", "on_fail": "SEE_PW-1-S9" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 11, "section_heading": "Determine treatment approach" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "G: Non-pharmacological measures. Provide all patients with information about non-pharmacological measures, regardless of whether pharmacotherapy is prescribed. The 5As Framework for behavioural risk modification may be used as the basis for identifying modifiable lifestyle risk factors in accordance with the RACGP SNAP guide. Smoking and vaping cessation; weight management; diet and nutrition (patients with hypertension should be advised to reduce salt intake to <4 g per day; encourage all patients with intermediate or high CVD risk to see a dietitian); physical activity (in line with Physical activity and exercise guidelines for all Australians; referral to an exercise physiologist and/or physiotherapist to develop an exercise plan may be required); alcohol consumption (in people who drink more than 2 standard drinks per day, reducing alcohol intake can lower BP).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 12, "section_heading": "G: Non-pharmacological measures" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "H: Pharmacotherapy. Pharmacotherapy involves initial management of hypertension and maintenance management (including adjusting pharmacotherapy as needed). Antihypertensive pharmacotherapy must be in accordance with the current online versions of Therapeutic Guidelines: Cardiovascular (Blood pressure reduction - Hypertension and blood pressure reduction) and the Australian Medicines Handbook - Antihypertensives. To determine whether pharmacotherapy should be initiated (or modified), consider the patients: age; renal function; CVD risk; current BP; related comorbidities; clinical targets relevant to the individual; contraindications, adverse reactions and drug interactions; response to previous interventions to reduce BP; patient preference (including cost). Pharmacists may prescribe up to two agents (dual-therapy) from the following list: angiotensin converting enzyme inhibitors (ACE inhibitors); angiotensin receptor blockers (ARBs); dihydropyridine calcium channel blockers; thiazide and thiazide-related diuretics. Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program. Where pharmacotherapy is prescribed, the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review. Table 2 covers hypertension in patients aged ≥ 45 years (≥ 30 years for Aboriginal and/or Torres Strait Islander people); Table 3 covers hypertension in younger patients (aged <45 years/<30 years for Aboriginal and/or Torres Strait Islander people).",
+          "gates": [
+            { "criterion": "Pharmacotherapy indicated for the patient's CVD risk category and BP (Table 2 page 14 / Table 3 page 16)", "on_fail": "SEE_PW-1-S9" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 13, "section_heading": "H: Pharmacotherapy" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "TREAT",
+          "description": "Table 2. Initiation of pharmacotherapy for hypertension in patients aged ≥ 45 years (≥ 30 years for Aboriginal and Torres Strait Islander people). Start the chosen antihypertensive at a low to moderate dose and titrate as required. Low CVD Risk: ≥160/100 mmHg - pharmacotherapy is recommended, treat to a target of 140/90 mmHg (or lower if drug therapy is tolerated), review 4-6 weeks after pharmacotherapy initiation; ≥140/90 mmHg but <160/100 mmHg - reinforce lifestyle modification and repeat BP measurement in 2 months; if no reduction in BP after 2 months consider initiating pharmacotherapy (in the context of other risk factors), if BP reduced after 2 months but still >140/90 mmHg reinforce lifestyle modification and repeat BP measurement in 4 months, if BP reduced to <140/90 mmHg discharge patient if other risk factors have been managed or continue to monitor BP at future appointments. Intermediate CVD Risk: ≥160/100 mmHg - pharmacotherapy recommended, treat to target 140/90 mmHg (or lower if tolerated), review 4-6 weeks; ≥140/90 mmHg but <160/100 mmHg - reinforce lifestyle modification, review and repeat BP in 2 months (branches as for Low CVD Risk); if the patient has a family history of premature CVD, pharmacotherapy is recommended initially with review 4-6 weeks after pharmacotherapy initiation. High CVD Risk: ≥130/85 mmHg - pharmacotherapy is recommended (continued on page 15: treat to a target of SBP 120 mmHg; even if target is not reached, any sustained reduction in BP reduces the risk of morbidity and mortality due to CVD; review 4-6 weeks after pharmacotherapy initiation); <130/85 mmHg - reinforce lifestyle modification and monitor BP at 6 monthly intervals. Text for the High CVD Risk ≥130/85 mmHg row is split across the page 14/15 break (see open_questions).",
+          "gates": [
+            { "criterion": "BP meets the pharmacotherapy threshold for the patient's CVD risk category (Table 2)", "on_fail": "SEE_PW-1-S9" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 14, "section_heading": "Table 2. Initiation of pharmacotherapy for hypertension in patients aged ≥ 45 years (≥ 30 years for Aboriginal and Torres Strait Islander people)" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "TREAT",
+          "description": "Table 3. Initiating pharmacotherapy for hypertension in younger patients (aged <45 years/<30 years for Aboriginal and/or Torres Strait Islander people). ≥160/100 mmHg: patient not suitable for Program, refer to an appropriate healthcare provider for investigation and ongoing management. ≥140/90 mmHg: reinforce lifestyle modification and repeat BP measurement in 3 months; consider ambulatory monitoring (refer to Guidelines for the diagnosis and management of hypertension in adults). If no reduction in BP after 3 months: refer to an appropriate healthcare provider for investigation and ongoing management. If BP reduced after 3 months (but still >140/90 mmHg): consider initiating pharmacotherapy (in the context of other risk factors); repeat BP measurement in 4-6 weeks; if BP remains >140/90 mmHg: refer to an appropriate healthcare provider for investigation and ongoing management. If BP reduced to <140/90 mmHg: consider discharge if all other risk factors have been managed; otherwise, continue to monitor BP at subsequent appointments. Higher BP in younger patients is associated with increased rates of left ventricular hypertrophy; investigation of secondary hypertension is of considerable importance in younger patients.",
+          "gates": [
+            { "criterion": "Younger patient's BP is <160/100 mmHg (suitable to continue in Program)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 3. Initiating pharmacotherapy for hypertension in younger patients (aged <45 years/<30 years for Aboriginal and/or Torres Strait Islander people" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "INVESTIGATION",
+          "description": "Table 4. Monitoring for antihypertensive pharmacotherapy (pathology testing required before pharmacotherapy is initiated or modified, and during treatment). ACE Inhibitors: check renal function (eGFR) and electrolytes before commencing and 1-2 weeks later; a small rise in serum creatinine (up to 25%) or serum potassium (within the normal range) should not necessarily prompt dose reduction or cessation. ARBs (sartans): check renal function (eGFR) and electrolytes before commencing and 1-2 weeks later (same creatinine/potassium caveat). Dihydropyridine calcium channel blockers: monitor for vasodilatory adverse effects - may require dose reduction. Thiazide and thiazide-related diuretics: electrolytes, specifically plasma sodium and potassium concentration should be reviewed 3-6 weeks after commencing; patients with sodium and potassium outside of normal ranges/reference intervals should be referred to an appropriate healthcare provider for comprehensive management; the RCPA reference interval for sodium is 135-145 mmol/L; potassium reference interval is 3.5-5.2 mmol/L.",
+          "gates": [
+            { "criterion": "Plasma sodium and potassium within normal ranges/reference intervals (sodium 135-145 mmol/L; potassium 3.5-5.2 mmol/L)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 4. Monitoring for antihypertensive pharmacotherapy" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "FOLLOW_UP",
+          "description": "I: Monitoring and clinical targets. Monitor response to new or changed pharmacotherapy by checking BP after 4-6 weeks. If the response to new or changed pharmacotherapy is inadequate or the medicine is not tolerated: review adherence and address any issues; consider adding a second medicine from a different class from the above list (noting ACE-inhibitors and ARBs should not be used in combination unless under specialist supervision) [page 17]; change the medicine class. If the patient is already taking two medicines from different classes but the BP target has still not been reached and the medicines are well tolerated, increase the dose of one of the medicines incrementally to the maximum tolerated dose, then increase the dose of the second medicine, if required [page 17]. If BP still remains above target 4-6 weeks after treatment with two first line antihypertensives at maximum tolerated doses, refer the patient to an appropriate healthcare provider for ongoing management [page 17]. If after three months of treatment the BP target has been reached and is stable, continue monitoring response to therapy [page 17].",
+          "gates": [
+            { "criterion": "BP at clinical target 4-6 weeks after treatment with two first line antihypertensives at maximum tolerated doses", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "I: Monitoring and clinical targets" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "J: Confirm management plan is appropriate. Consult the Therapeutic Guidelines, the Australian Medicines Handbook and other relevant references to confirm that management is appropriate, including: contraindications and precautions; drug and disease interactions; lactation status.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 17, "section_heading": "J: Confirm management plan is appropriate" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "EDUCATE",
+          "description": "K: Communicate agreed management plan. Provide comprehensive advice (including supporting written information) to the patient regarding: individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for clinical review. Document the agreed management plan and individualised clinical targets within the patient's CVD Risk Management Plan.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 17, "section_heading": "K: Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "REFER",
+          "description": "L: Collaborative care. Provide a copy of the patient's CVD Risk Management Plan to the patient's usual healthcare provider (and any other relevant health professionals involved in the patients care). The communication should also include (if relevant): relevant medical history and pathology/PoCT results; changes to existing pharmacotherapy or new pharmacotherapy prescribed; a summary of advice provided to the patient including recommendations for multidisciplinary care and referrals; the next scheduled review appointment.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 17, "section_heading": "L: Collaborative care" }
+        },
+        {
+          "id": "PW-1-S18",
+          "order": 18,
+          "type": "FOLLOW_UP",
+          "description": "M: Clinical review and ongoing collaboration. All patients should undergo regular clinical review to participate in the Program. Review patients 4-6 weeks after initiating or modifying the treatment regimen, or sooner, if required or as recommended. Prior to each periodic review, arrange any relevant laboratory tests (that are not performed by PoCT) required for monitoring. At each appointment (scheduled or unscheduled), review: the patient's ongoing eligibility for the Program; patient history changes; BP measurements; pathology or required PoCT; changes to CVD risk factors; response to current management and adherence to lifestyle modification; prescribed pharmacotherapy (modify in line with Therapeutic Guidelines or consider other medicine-related issues e.g. adherence); CVD Risk Management Plan and clinical targets. Provide an update to the patient's usual healthcare provider following each occasion of care including when any changes are made to the patient's management plan. Patients may continue to participate provided: their condition remains eligible to be managed in the Program; they wish to remain in the Program and continue to consent; they attend scheduled reviews. Patients are not eligible for ongoing participation if their clinical targets have not been reached (and stable) after 4-6 weeks of treatment with 2 first line antihypertensives at maximum tolerated doses (page 18; page 6 states 'after 3 months' - see open_questions, confidence unclear). Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.",
+          "gates": [
+            { "criterion": "Condition remains eligible to be managed in the Program, patient wishes to remain and continues to consent, and patient attends scheduled reviews", "on_fail": "REFER" },
+            { "criterion": "Clinical targets reached (and stable) after 4-6 weeks of treatment with 2 first line antihypertensives at maximum tolerated doses", "on_fail": "REFER" }
+          ],
+          "confidence": "unclear",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 18, "section_heading": "M: Clinical review and ongoing collaboration" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "angiotensin converting enzyme inhibitors (ACE inhibitors)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review",
+      "notes": "Class-level protocol entry: no specific medicine, form, strength, dose, route, frequency or duration is printed in this protocol. Printed text (page 13, H: Pharmacotherapy): 'Pharmacists may prescribe up to two agents (dual-therapy) from the following list in line with the current online version of Therapeutic Guidelines Cardiovascular: (Blood pressure reduction - Hypertension and blood pressure reduction) (2): angiotensin converting enzyme inhibitors (ACE inhibitors)'. 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.' 'Antihypertensive pharmacotherapy must be in accordance with the current online versions of Therapeutic Guidelines: Cardiovascular ... and the Australian Medicines Handbook - Antihypertensives (21).' 'Start the chosen antihypertensive at a low to moderate dose and titrate as required' (page 14). Only dosing ceiling printed is 'maximum tolerated doses' (pages 2, 17, 18). Protocol contraindication statement (page 17, I: Monitoring and clinical targets): 'ACE-inhibitors and ARBs should not be used in combination unless under specialist supervision'. Monitoring (page 16, Table 4): 'Check renal function (eGFR) and electrolytes before commencing and 1-2 weeks later'; 'A small rise in serum creatinine (up to 25%) or serum potassium (within the normal range) should not necessarily prompt dose reduction or cessation'. Pregnancy caveat (page 1, Eligibility for the Program): patients who 'are planning a pregnancy or are pregnant' are ineligible for the Program. Lactation caveat (page 7, B: Patient history; page 17, J: Confirm management plan is appropriate): consider lactation status; confirm management appropriate including lactation status.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 13, "section_heading": "H: Pharmacotherapy" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "angiotensin receptor blockers (ARBs)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review",
+      "notes": "Class-level protocol entry: no specific medicine, form, strength, dose, route, frequency or duration is printed in this protocol. Printed text (page 13, H: Pharmacotherapy): 'Pharmacists may prescribe up to two agents (dual-therapy) from the following list ...: angiotensin receptor blockers (ARBs)'. 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.' 'Start the chosen antihypertensive at a low to moderate dose and titrate as required' (page 14). Only dosing ceiling printed is 'maximum tolerated doses' (pages 2, 17, 18). Protocol contraindication statement (page 17, I: Monitoring and clinical targets): 'ACE-inhibitors and ARBs should not be used in combination unless under specialist supervision'. Monitoring (page 16, Table 4): 'Check renal function (eGFR) and electrolytes before commencing and 1-2 weeks later'. Pregnancy caveat (page 1, Eligibility for the Program): patients who 'are planning a pregnancy or are pregnant' are ineligible for the Program. Lactation caveat (page 7, B: Patient history; page 17, J: Confirm management plan is appropriate): consider lactation status; confirm management appropriate including lactation status. Note: page 15 example - 'candesartan used for migraine prevention' (consider if the medicine is also used for treatment of another condition).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 13, "section_heading": "H: Pharmacotherapy" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "dihydropyridine calcium channel blockers",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review",
+      "notes": "Class-level protocol entry: no specific medicine, form, strength, dose, route, frequency or duration is printed in this protocol. Printed text (page 13, H: Pharmacotherapy): 'Pharmacists may prescribe up to two agents (dual-therapy) from the following list ...: dihydropyridine calcium channel blockers'. 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.' 'Start the chosen antihypertensive at a low to moderate dose and titrate as required' (page 14). Only dosing ceiling printed is 'maximum tolerated doses' (pages 2, 17, 18). Monitoring (page 16, Table 4): 'Monitor for vasodilatory adverse effects - may require dose reduction'. Pregnancy caveat (page 1, Eligibility for the Program): patients who 'are planning a pregnancy or are pregnant' are ineligible for the Program. Lactation caveat (page 7, B: Patient history; page 17, J: Confirm management plan is appropriate): consider lactation status; confirm management appropriate including lactation status.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 13, "section_heading": "H: Pharmacotherapy" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "thiazide and thiazide-related diuretics",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review",
+      "notes": "Class-level protocol entry: no specific medicine, form, strength, dose, route, frequency or duration is printed in this protocol. Printed text (page 13, H: Pharmacotherapy): 'Pharmacists may prescribe up to two agents (dual-therapy) from the following list ...: thiazide and thiazide-related diuretics'. 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.' 'Start the chosen antihypertensive at a low to moderate dose and titrate as required' (page 14). Only dosing ceiling printed is 'maximum tolerated doses' (pages 2, 17, 18). Monitoring (page 16, Table 4): 'Electrolytes, specifically plasma sodium and potassium concentration should be reviewed 3-6 weeks after commencing'; 'Patients with sodium and potassium outside of normal ranges/reference intervals should be referred to an appropriate healthcare provider for comprehensive management'; 'The Royal College of Pathologists of Australasia (RCPA) reference interval for sodium is 135-145 mmol/L; potassium reference interval is 3.5-5.2 mmol/L (24)'. Pregnancy caveat (page 1, Eligibility for the Program): patients who 'are planning a pregnancy or are pregnant' are ineligible for the Program. Lactation caveat (page 7, B: Patient history; page 17, J: Confirm management plan is appropriate): consider lactation status; confirm management appropriate including lactation status.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 13, "section_heading": "H: Pharmacotherapy" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic", "structured": { "parameter": "systolic blood pressure", "operator": ">=", "value": 180, "unit": "mmHg" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-2", "trigger_text": "BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic", "structured": { "parameter": "diastolic blood pressure", "operator": ">=", "value": 110, "unit": "mmHg" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-3", "trigger_text": "HbA1c ≥10% or BGL ≥20.0 mmol/L", "structured": { "parameter": "HbA1c", "operator": ">=", "value": 10, "unit": "%" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-4", "trigger_text": "HbA1c ≥10% or BGL ≥20.0 mmol/L", "structured": { "parameter": "blood glucose level (BGL)", "operator": ">=", "value": 20.0, "unit": "mmol/L" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-5", "trigger_text": "Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L", "structured": { "parameter": "total cholesterol", "operator": ">=", "value": 7.5, "unit": "mmol/L" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-6", "trigger_text": "Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L", "structured": { "parameter": "LDL-C", "operator": ">=", "value": 5.0, "unit": "mmol/L" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-7", "trigger_text": "Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L", "structured": { "parameter": "triglycerides", "operator": ">=", "value": 6, "unit": "mmol/L" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-8", "trigger_text": "uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2", "structured": { "parameter": "urinary albumin-creatinine ratio (uACR)", "operator": ">=", "value": 3, "unit": "mg/mmol" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-9", "trigger_text": "uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2", "structured": { "parameter": "eGFR", "operator": "<", "value": 60, "unit": "mL/min/1.73m2" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension" } },
+    { "id": "RF-10", "trigger_text": "Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: have type 2 diabetes managed with insulin", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Treat (if clinically indicated) and concurrently refer" } },
+    { "id": "RF-11", "trigger_text": "Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 2, "section_heading": "Treat (if clinically indicated) and concurrently refer" } },
+    { "id": "RF-12", "trigger_text": "Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+    { "id": "RF-13", "trigger_text": "alarm signs and symptoms that require further investigation e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting, lethargy", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 7, "section_heading": "B: Patient history" } },
+    { "id": "RF-14", "trigger_text": "Severe hyperglycaemia (9) - urgent referral to an appropriate healthcare provider required.", "structured": { "parameter": "HbA1c", "operator": ">=", "value": 10, "unit": "%" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 20, "section_heading": "Table 6. Interpretation of HbA1c, FBG and/or OGTT results" } },
+    { "id": "RF-15", "trigger_text": "Unwell patients with signs of ketosis, dehydration, vomiting, infection, altered consciousness, confusion or delirium, or suspicion of type 1 diabetes require immediate transport to closest emergency medical care.", "structured": null, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 20, "section_heading": "Table 6. Interpretation of HbA1c, FBG and/or OGTT results" } },
+    { "id": "RF-16", "trigger_text": "Patients with sodium and potassium outside of normal ranges/reference intervals should be referred to an appropriate healthcare provider for comprehensive management.", "structured": { "parameter": "plasma sodium and potassium", "operator": "not_in", "value": "RCPA reference interval: sodium 135-145 mmol/L; potassium 3.5-5.2 mmol/L", "unit": "mmol/L" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 4. Monitoring for antihypertensive pharmacotherapy" } },
+    { "id": "RF-17", "trigger_text": "If BP still remains above target 4-6 weeks after treatment with two first line antihypertensives at maximum tolerated doses, refer the patient to an appropriate healthcare provider for ongoing management.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 17, "section_heading": "I: Monitoring and clinical targets" } },
+    { "id": "RF-18", "trigger_text": "Patients are not eligible for ongoing participation in the Program if their clinical targets have not been reached (and stable) after 4-6 weeks of treatment with 2 first line antihypertensives at maximum tolerated doses.", "structured": null, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 18, "section_heading": "M: Clinical review and ongoing collaboration" } },
+    { "id": "RF-19", "trigger_text": "≥160/100 mmHg - Patient not suitable for Program, refer to an appropriate healthcare provider for investigation and ongoing management.", "structured": { "parameter": "systolic blood pressure (younger patients)", "operator": ">=", "value": 160, "unit": "mmHg" }, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 3. Initiating pharmacotherapy for hypertension in younger patients (aged <45 years/<30 years for Aboriginal and/or Torres Strait Islander people" } },
+    { "id": "RF-20", "trigger_text": "≥160/100 mmHg - Patient not suitable for Program, refer to an appropriate healthcare provider for investigation and ongoing management.", "structured": { "parameter": "diastolic blood pressure (younger patients)", "operator": ">=", "value": 100, "unit": "mmHg" }, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 3. Initiating pharmacotherapy for hypertension in younger patients (aged <45 years/<30 years for Aboriginal and/or Torres Strait Islander people" } }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program. Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+      "Entry point 1: Patients without a previous diagnosis of hypertension ... may be enrolled in the Program and commence management (with non-pharmacological measures and pharmacotherapy, if indicated) concurrent to referral to an appropriate healthcare provider for further review and collaborative care.",
+      "Provide a copy of the patient's CVD Risk Management Plan to the patient's usual healthcare provider (and any other relevant health professionals involved in the patients care).",
+      "Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.",
+      "When modifying pharmacotherapy regimens for hypertension that have been prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate)."
+    ],
+    "urgent": [
+      "Refer to an appropriate healthcare provider if: BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic",
+      "Refer to an appropriate healthcare provider if: HbA1c ≥10% or BGL ≥20.0 mmol/L",
+      "Refer to an appropriate healthcare provider if: Total Cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L",
+      "Refer to an appropriate healthcare provider if: uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2",
+      "Severe hyperglycaemia (9) - urgent referral to an appropriate healthcare provider required.",
+      "If BP still remains above target 4-6 weeks after treatment with two first line antihypertensives at maximum tolerated doses, refer the patient to an appropriate healthcare provider for ongoing management.",
+      "Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: have type 2 diabetes managed with insulin; have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.",
+      "Patient not suitable for Program (BP ≥160/100 mmHg, younger patients), refer to an appropriate healthcare provider for investigation and ongoing management."
+    ],
+    "emergency": [
+      "Unwell patients with signs of ketosis, dehydration, vomiting, infection, altered consciousness, confusion or delirium, or suspicion of type 1 diabetes require immediate transport to closest emergency medical care.",
+      "Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program."
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+  },
+  "review_followup": [
+    { "when": "4-6 weeks after initiating or modifying the treatment regimen, or sooner, if required or as recommended", "what": "Regular clinical review: review ongoing eligibility, patient history, BP measurements, pathology or required PoCT, changes to CVD risk factors, response/adherence, prescribed pharmacotherapy and the CVD Risk Management Plan; prior to each periodic review arrange relevant laboratory tests (that are not performed by PoCT); provide an update to the patient's usual healthcare provider following each occasion of care.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 18, "section_heading": "M: Clinical review and ongoing collaboration" } },
+    { "when": "Monitor response to new or changed pharmacotherapy by checking BP after 4-6 weeks", "what": "Check BP response to new or changed pharmacotherapy; if inadequate or medicine not tolerated, review adherence, consider adding a second medicine from a different class or change the medicine class.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "I: Monitoring and clinical targets" } },
+    { "when": "Review 4-6 weeks after pharmacotherapy initiation", "what": "Review BP after pharmacotherapy initiation (Table 2, all CVD risk bands where pharmacotherapy is initiated).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 14, "section_heading": "Table 2. Initiation of pharmacotherapy for hypertension in patients aged ≥ 45 years (≥ 30 years for Aboriginal and Torres Strait Islander people)" } },
+    { "when": "Every 5 years for patients at low CVD risk, or every 2 years for patients at intermediate CVD risk (or sooner where there is a significant change to risk factors)", "what": "Reassess CVD risk. For patients already receiving pharmacological therapy to reduce cardiovascular risk, or previously assessed as high-risk, review individual risk factors - formal reassessment of overall CVD risk is not recommended for these patients.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: CVD risk assessment and hypertension management" } },
+    { "when": "2 months after BP measurement (Low or Intermediate CVD risk, BP ≥140/90 mmHg but <160/100 mmHg)", "what": "Reinforce lifestyle modification and repeat BP measurement; if no reduction in BP after 2 months consider initiating pharmacotherapy (in the context of other risk factors); if BP reduced but still >140/90 mmHg reinforce lifestyle modification and repeat BP measurement in 4 months; if BP reduced to <140/90 mmHg discharge if other risk factors managed or continue monitoring BP.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 14, "section_heading": "Table 2. Initiation of pharmacotherapy for hypertension in patients aged ≥ 45 years (≥ 30 years for Aboriginal and Torres Strait Islander people)" } },
+    { "when": "6 monthly intervals (High CVD risk, <130/85 mmHg)", "what": "Reinforce lifestyle modification and monitor BP at 6 monthly intervals.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 15, "section_heading": "Table 2. Initiation of pharmacotherapy for hypertension in patients aged ≥ 45 years (≥ 30 years for Aboriginal and Torres Strait Islander people)" } },
+    { "when": "3 months after lifestyle modification (younger patients, BP ≥140/90 mmHg)", "what": "Reinforce lifestyle modification and repeat BP measurement in 3 months; consider ambulatory monitoring. If no reduction in BP after 3 months: refer for investigation and ongoing management.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 3. Initiating pharmacotherapy for hypertension in younger patients (aged <45 years/<30 years for Aboriginal and/or Torres Strait Islander people" } },
+    { "when": "Before commencing ACE inhibitors or ARBs, and 1-2 weeks later", "what": "Check renal function (eGFR) and electrolytes. A small rise in serum creatinine (up to 25%) or serum potassium (within the normal range) should not necessarily prompt dose reduction or cessation.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 4. Monitoring for antihypertensive pharmacotherapy" } },
+    { "when": "3-6 weeks after commencing thiazide and thiazide-related diuretics", "what": "Review electrolytes, specifically plasma sodium and potassium concentration; refer to an appropriate healthcare provider if outside normal ranges/reference intervals.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 16, "section_heading": "Table 4. Monitoring for antihypertensive pharmacotherapy" } },
+    { "when": "Every 3 years", "what": "Reassess the risk of developing type 2 diabetes using AUSDRISK.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 8, "section_heading": "D: Estimate type 2 diabetes risk (if applicable)" } },
+    { "when": "After three months of treatment with the BP target reached and stable", "what": "Continue monitoring response to therapy.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 17, "section_heading": "I: Monitoring and clinical targets" } }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-hypertension-protocol.pdf", "page": 18, "section_heading": "M: Clinical review and ongoing collaboration" }
+  },
+  "references": [
+    "[p.27] 1. Commonwealth of Australia: Department of Health. Australian Guideline for assessing and managing cardiovascular disease risk. Department of Health and Aged Care; 2023. [cited 2025 Nov 3]. Available from: https://www.cvdcheck.org.au/overview.",
+    "[p.27] 2. Therapeutic Guidelines: Cardiovascular. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Cardiovascular&amp;etgAccess=true.",
+    "[p.27] 3. National Heart Foundation of Australia. Key Statistics: Cardiovascular Disease: National Heart Foundation of Australia; 2025 [cited 2026 Mar 2]. Available from: https://www.heartfoundation.org.au/your-heart/evidence-and-statistics/key-stats-cardiovascular-disease.",
+    "[p.27] 4. National Heart Foundation of Australia. Guideline for the diagnosis and management of hypertension in adults. Melbourne: National Heart Foundation of Australia; 2016.",
+    "[p.27] 5. National Heart Foundation of Australia. What's your body mass index (BMI)?; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/bmi-calculator.",
+    "[p.27] 6. Commonwealth of Australia: Department of Health. Body mass index (BMI) and waist measurement Canberra: Commonwealth of Australia: Department of Health; 2021 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/health-topics/overweight-and-obesity/bmi-and-waist.",
+    "[p.27] 7. National Heart Foundation of Australia. What waist measurements mean for your heart. Melbourne: National Heart Foundation of Australia; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/your-heart/waist-measurement.",
+    "[p.27] 8. Commonwealth of Australia: Department of Health. The Australian Type 2 Diabetes Risk Assessment Tool (AUSDRISK) Canberra: Commonwealth of Australia: Department of Health; 2020 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/resources/apps-and-tools/the-australian-type-2-diabetes-risk-assessment-tool-ausdrisk.",
+    "[p.27] 9. Therapeutic Guidelines: Diabetes. Melbourne: Therapeutic Guidelines Limited; 2019 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Diabetes&etgAccess=true.",
+    "[p.27] 10. The Royal Australian College of General Practitioners (RACGP). Management of type 2 diabetes: a handbook for general practice. East Melbourne: RACGP; 2024 [cited 2025 Nov 3]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/management-of-type-2-diabetes/defining-and-diagnosing-type-2-diabetes.",
+    "[p.27] 11. Kidney Health Australia. Chronic Kidney Disease (CKD) Management in Primary Care Guideline (5th edition). Melbourne; 2024.",
+    "[p.27] 12. The Royal Australian College of General Practitioners (RACGP). Guidelines for preventive activities in general practice (10th edition). East Melbourne: RACGP; 2024.",
+    "[p.27] 13. The Royal Australian College of General Practitioners (RACGP). Smoking, nutrition, alcohol, physical activity (SNAP): A population health guide to behavioural risk factors in general practice. East Melbourne: RACGP; 2015 [cited 2025 Nov 3]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/snap.",
+    "[p.27] 14. Queensland Health. Guidelines for acute common conditions and health and wellbeing services. Queensland Health; 2025. Available from: https://www.health.qld.gov.au/clinical-practice/guidelines-procedures/community-pharmacy-pilots/resources/acute-common-conditions.",
+    "[p.27] 15. Clinical Excellence Queensland. E-cigarette and vaping cessation guide: Queensland respiratory and sleep clinical network. Queensland Health; 2024 [cited 2026 February 24]. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0030/1427763/vaping-cessation-guide.pdf.",
+    "[p.27] 16. Casas R, Castro-Barquero S, Estruch R, Sacanella E. Nutrition and Cardiovascular Health. Int J Mol Sci. 2018;19(12).",
+    "[p.27] 17. National Health and Medical Research Council. Australian Dietary Guidelines. Canberra: National Health and Medical Research Council; 2013.",
+    "[p.27] 18. Australian Government Department of Health and Aged Care. Physical activity and exercise guidelines for all Australians. Canberra: Australian Government Department of Health and Aged Care; 2022 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/health-topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians?utm_source=health.gov.au&utm_medium=callout-auto&utm_campaign=digital_transformation.",
+    "[p.27] 19. National Health and Medical Research Council: Australian Research Council and Universities Australia. Australian Guidelines to Reduce Health Risks from Drinking Alcohol. Canberra: Commonwealth of Australia; 2020.",
+    "[p.27] 20. The Royal Australian College of General Practitioners (RACGP). Handbook of Non-Drug Interventions (HANDI). East Melbourne: RACGP; 2023.",
+    "[p.27] 21. Australian Medicines Handbook: Antihypertensives. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 Nov 3]. Available from: https://amhonline.amh.net.au/chapters/cardiovascular-drugs/antihypertensives?menu=vertical .",
+    "[p.27] 22. Pawliczak F, Bielecka-Dabrowa A, Maciejewski M, Banach M. Treating mild hypertension in young adults: is pharmacotherapy necessary? Expert Opinion on Pharmacotherapy. 2020;21(10):1115-8.",
+    "[p.28] 23. Hinton TC, Adams ZH, Baker RP, Hope KA, Paton JFR, Hart EC, et al. Investigation and Treatment of High Blood Pressure in Young People. Hypertension. 2020;75(1):16-22.",
+    "[p.28] 24. The Royal College of Pathologists of Australasia. RCPA Manual. Surry Hills, NSW: RCPA; 2024 [cited 2025 Nov 3]. Available from: https://www.rcpa.edu.au/Manuals/RCPA-Manual.",
+    "[p.28] 25. Gabb GM, Mangoni AA, Anderson CS, Cowley D, Dowden JS, Golledge J, et al. Guideline for the diagnosis and management of hypertension in adults - 2016. Med J Aust. 2016;205(2):85-9.",
+    "[p.28] 26. Pathology Tests Explained. Lipid profile (cholesterol and triglycerides); 2025 [cited 2025 Nov 3]. Available from: https://pathologytestsexplained.org.au/ptests.php?q=Lipid+profile+%28cholesterol+and+triglycerides%29.",
+    "[p.28] 27. Brett T, Arnold-Reed D. Familial hypercholesterolaemia: a guide for general practice. Australian Journal for General Practitioners. 2019;48:650-2.",
+    "[p.28] 28. Australian Chronic Disease Prevention Alliance. Health Professionals: Australian Chronic Disease Prevention Alliance; 2025 [cited 2025 Nov 3]. Available from: https://www.cvdcheck.org.au/for-health-professionals.",
+    "[p.28] 29. National Heart Foundation of Australia. Are you at risk of heart disease? National Heart Foundation of Australia; 2025 [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/your-heart/are-you-at-risk-of-heart-disease.",
+    "[p.28] 30. Australian Institute of Health and Welfare. Sleep problems as a risk factor for chronic conditions. Canberra: Australian Institute of Health and Welfare; 2021.",
+    "[p.28] 31. Therapeutic Guidelines: Respiratory (Obstructive sleep apnoea in adults). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Respiratory&topicfile=obstructive-sleep-apnoea-adults.",
+    "[p.28] 32. Toronto Western Hospital University Health Network. The Official STOP-Bang Questionnaire. Toronto: University of Toronto; 2012 [cited 2025 Nov 3]. Available from: http://www.stopbang.ca/osa/screening.php."
+  ],
+  "open_questions": [
+    {
+      "topic": "Contradictory timeframe for failure to reach clinical targets on 2 first line antihypertensives",
+      "observed": "Both readings recorded, not reconciled. Page 2 (Eligibility for the Program): patients are ineligible if they 'do not reach (and stabilise) at their blood pressure clinical target after 4-6 weeks of treatment with 2 first line antihypertensives at maximum tolerated doses'. Page 6 (Figure 1): handover if 'their clinical targets have not been reached (and stable) after 3 months of treatment with 2 first line antihypertensives at maximum tolerated doses'. Page 18 (M: Clinical review and ongoing collaboration): 'not eligible for ongoing participation ... if their clinical targets have not been reached (and stable) after 4-6 weeks of treatment with 2 first line antihypertensives at maximum tolerated doses'. Page 17 refers to checking BP '4-6 weeks after treatment with two first line antihypertensives at maximum tolerated doses' and to 'three months of treatment' for continuing monitoring.",
+      "why_unclear": "The document prints two different timeframes (4-6 weeks vs 3 months) for the same decision; engine cannot choose between them.",
+      "source_page": 2
+    },
+    {
+      "topic": "legal_basis not printed",
+      "observed": "No regulation, poisons schedule provision or statutory instrument is cited anywhere in the 28-page document; it is issued by Queensland Health as a Pilot Clinical Protocol under the Queensland Community Pharmacy Chronic Conditions Management Pilot.",
+      "why_unclear": "Spec requires legal_basis (which regulation/poisons schedule provision the protocol operates under); the source is silent.",
+      "source_page": 1
+    },
+    {
+      "topic": "referral block page range",
+      "observed": "The referral block (routine/urgent/emergency) quotes content spanning pages 1 to 20 of the PDF; shared provenance uses page 1 (first page) per spec.",
+      "why_unclear": "Spec requires a single shared provenance for the referral block; range noted here.",
+      "source_page": 1
+    },
+    {
+      "topic": "Gates where the document does not state the failure branch",
+      "observed": "PW-1-S5 gate ('D: Estimate type 2 diabetes risk (if applicable)' - non-Indigenous adults aged >40 years without diabetes) and PW-1-S7 gate (AusCVDRisk validated age groups) are marked on_fail 'unclear'. The document's related guidance ('Aboriginal and Torres Strait Islander peoples aged >18 years are considered high risk'; 'Consider assessing individual risk factors ... for patients ≥18 years where assessment ... has not been validated') is transcribed in the step descriptions but is not stated as the gate-failure branch.",
+      "why_unclear": "Spec rule 5: where the document does not say the branch, use 'unclear' and record an open question.",
+      "source_page": 8
+    },
+    {
+      "topic": "Table 2 High CVD Risk row split across page 14/15",
+      "observed": "Page 14 ends the High CVD Risk row with '≥130/85 mmHg - Pharmacotherapy is recommended.' and page 15 continues with 'Treat to a target of SBP 120 mmHg. Even if target is not reached, any sustained reduction in BP reduces the risk of morbidity and mortality due to CVD. Review 4-6 weeks after pharmacotherapy initiation.' followed by '<130/85 mmHg - Reinforce lifestyle modification and monitor BP at 6 monthly intervals.'",
+      "why_unclear": "Table row is split by the page break in the text extraction; row-to-cell attribution reconstructed with confidence 'medium' (both readings consistent with the printed layout).",
+      "source_page": 15
+    },
+    {
+      "topic": "Table 3 row/column reconstruction (younger patients)",
+      "observed": "Text extraction prints the BP threshold column ('≥160/100 mmHg', '≥140/90 mmHg') and the recommendation cell ('Patient not suitable for Program, refer to an appropriate healthcare provider for investigation and ongoing management.') on separate lines; RF-19/RF-20 join them as a single table row with confidence 'medium'.",
+      "why_unclear": "Table cells extracted as separate lines; row association inferred from document layout.",
+      "source_page": 16
+    },
+    {
+      "topic": "notifiable requirements silent",
+      "observed": "The document does not mention notifiable conditions, Australian Immunisation Register/AIR reporting, or mandatory notifications. It does require 'an update to the patient's usual healthcare provider following each occasion of care' and comprehensive clinical handover on ineligibility.",
+      "why_unclear": "Spec: notifiable.required is null if the document is silent.",
+      "source_page": 18
+    }
+  ],
+  "hugh_to_confirm": [
+    { "item": "Specific medicines, strengths, doses, routes and frequencies within the four permitted classes (ACE inhibitors, ARBs, dihydropyridine calcium channel blockers, thiazide and thiazide-related diuretics) are not printed - protocol defers to Therapeutic Guidelines: Cardiovascular and Australian Medicines Handbook - Antihypertensives", "source_page": 13, "reason": "No drug-level dosing data exists in the source; an approved local medicine/strength/dose list must be confirmed before go-live." },
+    { "item": "'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program' - no list of permitted combination products is printed", "source_page": 13, "reason": "Local policy must confirm which combination products are permitted." },
+    { "item": "Informed consent process 'as per the Pilot Handbook'", "source_page": 5, "reason": "Consent documentation is defined in a separate document not provided; local process must be confirmed." },
+    { "item": "'Refer to the Pilot Handbook for further information regarding options for requesting laboratory testing'", "source_page": 8, "reason": "Local laboratory/PoCT ordering process is not specified in this protocol." },
+    { "item": "Point-of-care testing (PoCT) and/or laboratory testing where recent results are unavailable", "source_page": 8, "reason": "Pharmacy PoCT capability and local pathology pathways must be confirmed before go-live." },
+    { "item": "Antihypertensive pharmacotherapy must follow 'the current online versions of Therapeutic Guidelines: Cardiovascular (Blood pressure reduction - Hypertension and blood pressure reduction)' and 'Australian Medicines Handbook - Antihypertensives'", "source_page": 13, "reason": "External living references - the versions in force at go-live must be confirmed and re-checked periodically." },
+    { "item": "Legal basis/authority under which pharmacists prescribe in the CVD Risk Reduction Program is not cited in this protocol", "source_page": 1, "reason": "Jurisdictional authority must be verified against the pilot's authorising instrument before go-live." },
+    { "item": "Timeframe that triggers loss of eligibility / referral when clinical targets not reached (4-6 weeks on pages 2 and 18 vs 3 months on page 6)", "source_page": 2, "reason": "Seeded rule cannot be built from contradictory printed timeframes; both readings recorded in open_questions and must be resolved before go-live." },
+    { "item": "Where pharmacotherapy is prescribed, prescriptions (including repeats) 'should provide enough medicine for the period until the patient's next scheduled review' - no maximum quantity or 12-month cap is printed for this Program", "source_page": 13, "reason": "Supply-quantity limits are left to the pharmacist's judgement/local policy and must be confirmed before go-live." }
+  ]
+}

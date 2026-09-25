@@ -1,0 +1,821 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf",
+    "pdf_sha256": "fa80f7f426fb30dc38d7eb0ff17fb9af30ecd0f4a73e6c51d450308ef4a69f0c",
+    "page_count": 12,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Pharmacist Practice Standards for Acne (Community Pharmacy Acne Service Practice Standard)",
+    "instrument_version": "NSW Health Authority dated 05 August 2026; approved 05 AUGUST 2026",
+    "effective_date": "2026-08-05",
+    "legal_basis": "NSW Health Authority (dated 05 August 2026); pharmacists must hold general registration under the Health Practitioner Regulation National Law (NSW) and have completed the training requirements detailed in the NSW Health Authority (dated 05 August 2026). Approved medicines are listed in the NSW Health Authority (dated 05 August 2026).",
+    "supervision_model": "approved pharmacist - appropriately trained approved pharmacists manage eligible patients under the NSW Health Authority (dated 05 August 2026); pharmacists must exercise professional discretion and judgement when applying the Practice Standard",
+    "scope_summary": "NSW Health practice standard for approved pharmacists managing eligible patients with acne in a community pharmacy: approved topical medicines, patient assessment flowchart, consent, patient eligibility and referral criteria, general measures and pharmacotherapy, follow-up review at 6 weeks, clinical documentation and communication."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Patients must be aged 12 years and older to be eligible for the service.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Patients must be physically present in the pharmacy to be eligible for management.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Patients are required to have a consultation with an approved pharmacist before a medication can be supplied under the Authority.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+      },
+      {
+        "id": "INC-4",
+        "text": "To receive management for acne under this service, the patient must fulfill the eligibility requirements of the Practice Standard.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Informed clinical and financial consent must be obtained from the patient prior to providing care under this practice standard.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Patient presents to a participating approved pharmacist for management of acne.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+      },
+      {
+        "id": "INC-7",
+        "text": "The patient has no red flags, or exclusions (checked against Section G - Patient eligibility and referral criteria).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "A clear diagnosis of acne vulgaris cannot be made (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "The patient is below 12 years of age (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "The acne is classified as moderate-severe, cystic or scarring, or the patient has a family history of scarring acne (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "The patient is planning a pregnancy or is pregnant (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "The patient is of childbearing age and is requiring a teratogenic medication and is not using effective contraception (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "A female patient with Polyendocrine Metabolic Ovarian Syndrome (PMOS) or presents with signs of androgenisation including hirsutism, obesity, and/or menstrual irregularity (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "The patient is taking medicine that can cause or aggravate acne (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "The condition is having a marked negative psychological, emotional or social effect on the patient (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "Signs of inflammation/worsening of acne in response to therapy initiated by pharmacist after 6 weeks as part of this service (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "If there is no change to baseline and acne is comedonal/non inflammatory at the initial 6-week review, an alternative agent may be used with review in a further 6 weeks. If there is no improvement after the subsequent 6-week review, no further therapy can be provided, and the pharmacist must refer to GP. (Referral criteria table: Treat: No; Referral: GP.)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "The patient has an inadequate response to therapy initiated by a pharmacist after 3 months as part of this service (Referral criteria table: Treat: No; Referral: GP).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 12,
+      "max_years": null,
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Patient assessment flowchart",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient presents to a participating approved pharmacist for management of acne.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Is the patient >=12 years old? If No: 'Not eligible for management under the Authority and Practice Standard. Refer to GP.'",
+          "gates": [{ "criterion": "Patient is >=12 years old", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Check Section G (Patient eligibility and referral criteria) to determine if patient may be treated and/or must be referred for GP or ED management. Does the patient have any red flags, or exclusions?",
+          "gates": [{ "criterion": "Patient has no red flags and no exclusions under Section G", "on_fail": "REFER" }],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Obtain patient (or guardian) informed consent: Participation; Financial; Pharmacist communication with other practitioner. If No consent: 'Pharmacist must not proceed to provide management under the Authority and Practice Standard. Refer to GP in circumstances of declined consent.'",
+          "gates": [{ "criterion": "Informed consent obtained (participation, financial, communication with other practitioner)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status. Patient history should include age (including age of onset); onset, duration, nature, location and severity of lesions; underlying medical conditions (such as PMOS); pregnancy and lactation status; plans to become pregnant; menstrual history; signs of androgenisation in women; joint, bone, or systemic symptoms (in severe acne, these patients require referral); current and recently commenced medications; drug allergies, adverse effects and/or sensitivities; family history of acne; current and past management strategies; response to previous acne management; acne aggravating factors; psychologic impacts of acne. The My Health Record should be reviewed where appropriate and available.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 6, "section_heading": "PATIENT HISTORY" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EXAMINATION",
+          "description": "Examination/diagnosis: acne is diagnosed by identifying typical lesions such as closed and open comedones, inflammatory papules and pustules, and inflamed nodules in a characteristic distribution (face, chest, shoulders, back, upper arms). For an accurate diagnosis of acne, comedones, pustules and papules must be present. Acne severity defined as mild, moderate-severe or severe per Therapeutic Guidelines; patients with psychological impact or decreased quality of life are classified into higher severity regardless of morphological severity.",
+          "gates": [{ "criterion": "Comedones, pustules and papules present for accurate diagnosis of acne", "on_fail": "REFER" }],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 7, "section_heading": "EXAMINATION" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "Establish management plan.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan with patient and patient's medical practitioner. Document all aspects of management plan.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Management and treatment plan",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "EDUCATE",
+          "description": "General measures: advice regarding skin care and minimising exposure to aggravating factors, in accordance with the Therapeutic Guidelines: Acne (General measures for acne) and the Australasian College of Dermatologists: A-Z of Skin: Acne.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 7, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Pharmacotherapy in accordance with Therapeutic guidelines: Acne: over-the-counter topical acne products; topical retinoids (and combination products with benzoyl peroxide); topical antibiotics (and combination products with benzoyl peroxide or retinoids). Approved medicines: Adapalene 0.1-0.3% (topical), Tretinoin 0.025% (topical), Trifarotene 0.005% (topical), Clindamycin 1% (topical). Other specifications: supply of oral antibiotics, spironolactone, the oral contraceptive pill or oral isotretinoin as mentioned in the Therapeutic Guidelines: Acne is not permitted under this practice standard; Australian state and territory law restricts the prescription of oral isotretinoin to specialist physicians and dermatologists; pharmacists must advise women of childbearing age to use effective contraception to prevent pregnancy in any case where therapy with a teratogenic topical agent is being considered.",
+          "gates": [
+            { "criterion": "Only formulations listed in the NSW Health Authority (dated 05 August 2026) are supplied", "on_fail": "STOP" },
+            { "criterion": "No supply of oral antibiotics, spironolactone, the oral contraceptive pill or oral isotretinoin under this practice standard", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "The exclusive use of topical clindamycin therapy is limited to 3 months. Topical clindamycin therapy and should be paired with benzoyl peroxide to avoid antibiotic resistance.",
+          "gates": [{ "criterion": "Topical clindamycin therapy is paired with benzoyl peroxide and exclusive use does not exceed 3 months", "on_fail": "unclear" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "Presentations related to androgenisation and PMOS are required to be referred to a medical practitioner, pharmacists cannot initiate therapy for these patients. Patients with a marked negative emotional and social effect require immediate referral to a medical practitioner.",
+          "gates": [{ "criterion": "No presentation related to androgenisation or PMOS and no marked negative emotional and social effect", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references regarding: individual product and medicine use, including initial dosing, application, administration, maintenance and step-down therapy; how to manage adverse effects; strategies to assist adherence to therapies; when to seek further care and/or treatment from a medical practitioner.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+        },
+        {
+          "id": "PW-2-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "The agreed management plan must be documented in the patient electronic clinical record and shared with members of the patient's multidisciplinary team, in accordance with the Authority. Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+        }
+      ]
+    },
+    {
+      "id": "PW-3",
+      "name": "Follow-up care and review",
+      "steps": [
+        {
+          "id": "PW-3-S1",
+          "order": 1,
+          "type": "FOLLOW_UP",
+          "description": "Patients should be advised that meaningful clinical improvement may require several weeks of treatment and to return for a follow up consultation at 6 weeks after commencing treatment.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        },
+        {
+          "id": "PW-3-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "At the 6-week review, assess response to pharmacist-initiated therapy: signs of inflammation/worsening of acne, change to baseline, and whether acne is comedonal/non inflammatory.",
+          "gates": [],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        },
+        {
+          "id": "PW-3-S3",
+          "order": 3,
+          "type": "REFER",
+          "description": "If there are signs of inflammation/worsening of acne in response to therapy initiated by pharmacist, the pharmacist must refer the patient to their GP (at the 6-week review).",
+          "gates": [{ "criterion": "Signs of inflammation/worsening of acne in response to therapy initiated by pharmacist at the 6-week review", "on_fail": "SEE_PW-3-S4" }],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        },
+        {
+          "id": "PW-3-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "If there is no change to baseline and acne is comedonal/non inflammatory, an alternative agent may be used with review in a further 6 weeks.",
+          "gates": [{ "criterion": "No change to baseline and acne is comedonal/non inflammatory at the initial 6-week review", "on_fail": "unclear" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        },
+        {
+          "id": "PW-3-S5",
+          "order": 5,
+          "type": "FOLLOW_UP",
+          "description": "Review in a further 6 weeks after the alternative agent (the subsequent 6-week review).",
+          "gates": [{ "criterion": "Alternative agent used at the initial 6-week review", "on_fail": "unclear" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        },
+        {
+          "id": "PW-3-S6",
+          "order": 6,
+          "type": "REFER",
+          "description": "If there is no improvement after the subsequent 6-week review, no further therapy can be provided, and the pharmacist must refer to GP.",
+          "gates": [{ "criterion": "No improvement after the subsequent 6-week review", "on_fail": "unclear" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        },
+        {
+          "id": "PW-3-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "Pharmacists must refer patients to a medical practitioner for any of the following reasons: the acne worsens; if there is inadequate response to therapy after 3 months of treatment; the condition is having a marked negative emotional effect on the patient; the patient experiences serious or life-threatening adverse effects from treatment; adverse effects cannot be managed in the pharmacy setting.",
+          "gates": [{ "criterion": "Any of: the acne worsens; inadequate response to therapy after 3 months of treatment; marked negative emotional effect on the patient; serious or life-threatening adverse effects from treatment; adverse effects cannot be managed in the pharmacy setting", "on_fail": "unclear" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Adapalene",
+      "form": "topical",
+      "strength": "0.1-0.3%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "up to a total of 6 weeks of therapy",
+      "notes": "Approved medicine: 'a. Adapalene 0.1-0.3% (topical)' listed in the NSW Health Authority (dated 05 August 2026). 'Pharmacists must only supply formulations listed in the Authority.' 'Pharmacists can supply up to a total of 6 weeks of therapy.' (p4). 'Supply of oral antibiotics, spironolactone, the oral contraceptive pill or oral isotretinoin as mentioned in the Therapeutic Guidelines: Acne is not permitted under this practice standard.' (p8). Caveat (p8): 'Pharmacists must advise women of childbearing age to use effective contraception to prevent pregnancy in any case where therapy with a teratogenic topical agent is being considered.' Pregnancy/lactation (p3): patient history and clinical review must include review of contraindications, precautions, drug interactions, pregnancy and lactation status; (p5) 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.' Dose, frequency and application instructions are not printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Tretinoin",
+      "form": "topical",
+      "strength": "0.025%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "up to a total of 6 weeks of therapy",
+      "notes": "Approved medicine: 'b. Tretinoin 0.025% (topical)' listed in the NSW Health Authority (dated 05 August 2026). 'Pharmacists must only supply formulations listed in the Authority.' 'Pharmacists can supply up to a total of 6 weeks of therapy.' (p4). 'Supply of oral antibiotics, spironolactone, the oral contraceptive pill or oral isotretinoin as mentioned in the Therapeutic Guidelines: Acne is not permitted under this practice standard.' (p8). Caveat (p8): 'Pharmacists must advise women of childbearing age to use effective contraception to prevent pregnancy in any case where therapy with a teratogenic topical agent is being considered.' Pregnancy/lactation (p3): patient history and clinical review must include review of contraindications, precautions, drug interactions, pregnancy and lactation status; (p5) 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.' Dose, frequency and application instructions are not printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Trifarotene",
+      "form": "topical",
+      "strength": "0.005%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "up to a total of 6 weeks of therapy",
+      "notes": "Approved medicine: 'c. Trifarotene 0.005% (topical)' listed in the NSW Health Authority (dated 05 August 2026). 'Pharmacists must only supply formulations listed in the Authority.' 'Pharmacists can supply up to a total of 6 weeks of therapy.' (p4). 'Supply of oral antibiotics, spironolactone, the oral contraceptive pill or oral isotretinoin as mentioned in the Therapeutic Guidelines: Acne is not permitted under this practice standard.' (p8). Caveat (p8): 'Pharmacists must advise women of childbearing age to use effective contraception to prevent pregnancy in any case where therapy with a teratogenic topical agent is being considered.' Pregnancy/lactation (p3): patient history and clinical review must include review of contraindications, precautions, drug interactions, pregnancy and lactation status; (p5) 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.' Dose, frequency and application instructions are not printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Clindamycin",
+      "form": "topical",
+      "strength": "1%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "up to a total of 6 weeks of therapy",
+      "notes": "Approved medicine: 'd. Clindamycin 1% (topical)' listed in the NSW Health Authority (dated 05 August 2026). 'The exclusive use of topical clindamycin therapy is limited to 3 months.' 'Topical clindamycin therapy and should be paired with benzoyl peroxide to avoid antibiotic resistance.' (p8). 'Pharmacists must only supply formulations listed in the Authority.' 'Pharmacists can supply up to a total of 6 weeks of therapy.' (p4). 'Supply of oral antibiotics, spironolactone, the oral contraceptive pill or oral isotretinoin as mentioned in the Therapeutic Guidelines: Acne is not permitted under this practice standard.' (p8). Pregnancy/lactation (p3): patient history and clinical review must include review of contraindications, precautions, drug interactions, pregnancy and lactation status; (p5) 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.' Dose, frequency and application instructions are not printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "A clear diagnosis of acne vulgaris cannot be made",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "The patient is below 12 years of age - 'Not eligible for management under the Authority and Practice Standard. Refer to GP.' (Referral criteria table: Treat: No; Referral: GP)",
+      "structured": { "parameter": "age", "operator": "<", "value": 12, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "The acne is classified as moderate-severe, cystic or scarring, or the patient has a family history of scarring acne",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "The patient is planning a pregnancy or is pregnant",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "The patient is of childbearing age and is requiring a teratogenic medication and is not using effective contraception",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "A female patient with Polyendocrine Metabolic Ovarian Syndrome (PMOS) or presents with signs of androgenisation including hirsutism, obesity, and/or menstrual irregularity",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "The patient is taking medicine that can cause or aggravate acne",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "The condition is having a marked negative psychological, emotional or social effect on the patient",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Signs of inflammation/worsening of acne in response to therapy initiated by pharmacist after 6 weeks as part of this service",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "If there is no improvement after the subsequent 6-week review, no further therapy can be provided, and the pharmacist must refer to GP.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "The patient has an inadequate response to therapy initiated by a pharmacist after 3 months as part of this service",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 5, "section_heading": "Referral criteria" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Refer patients immediately to medical care if any psychological distress is suspected.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 6, "section_heading": "H. BACKGROUND" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Joint, bone, or systemic symptoms (in severe acne, these patients require referral)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 6, "section_heading": "PATIENT HISTORY" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Patients presenting with moderate or severe acne require referral to a medical practitioner and are beyond the scope of this practice standard.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 7, "section_heading": "EXAMINATION" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Presentations related to androgenisation and PMOS are required to be referred to a medical practitioner, pharmacists cannot initiate therapy for these patients.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Patients with a marked negative emotional and social effect require immediate referral to a medical practitioner.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "If there are signs of inflammation/worsening of acne in response to therapy initiated by pharmacist, the pharmacist must refer the patient to their GP (6-week review).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "the acne worsens",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "if there is inadequate response to therapy after 3 months of treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "the condition is having a marked negative emotional effect on the patient",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "the patient experiences serious or life-threatening adverse effects from treatment",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "adverse effects cannot be managed in the pharmacy setting",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an approved medicine, this should be reported to the Therapeutic Goods Administration ... Additionally, the patient's usual general practitioner must be notified (if they have one).",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Patients who have requested the service but are not eligible for management should be referred to their regular medical practitioner or health service.",
+      "Patients who require non-urgent referral to GP or healthcare provider are to be referred (in accordance with the usual referral processes).",
+      "Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care for any reason."
+    ],
+    "urgent": [
+      "Patients who meet any of the urgent referral criteria below are not eligible for this service and require immediate referral to their regular medical practitioner, health service, or Emergency Department (ED) as indicated in the table.",
+      "Refer patients immediately to medical care if any psychological distress is suspected.",
+      "Patients with a marked negative emotional and social effect require immediate referral to a medical practitioner."
+    ],
+    "emergency": [
+      "Emergency Department (ED) as indicated in the table."
+    ],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+  },
+  "review_followup": [
+    {
+      "when": "6 weeks after commencing treatment",
+      "what": "Return for a follow up consultation / clinical review with the pharmacist; meaningful clinical improvement may require several weeks of treatment. At the 6-week review assess for signs of inflammation/worsening (refer to GP), or no change to baseline with comedonal/non inflammatory acne (alternative agent may be used with review in a further 6 weeks).",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 8, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "when": "A further 6 weeks after the initial 6-week review (subsequent 6-week review)",
+      "what": "Review response to the alternative agent. If there is no improvement after the subsequent 6-week review, no further therapy can be provided, and the pharmacist must refer to GP.",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "when": "After 3 months of treatment",
+      "what": "Assess response; if there is inadequate response to therapy after 3 months of treatment, the pharmacist must refer the patient to a medical practitioner.",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW" }
+    },
+    {
+      "when": "Within a week following the consultation (if the patient consents to disclosure)",
+      "what": "The record of the consultation and any subsequent consultations (including adverse events) must be shared with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an approved medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/.",
+      "Additionally, the patient's usual general practitioner must be notified (if they have one).",
+      "Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient."
+    ],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-acne.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS" }
+  },
+  "references": [
+    "1. American Academy of Dermatology Association: Acne: Tips for managing; 2022 [cited 2025]. Available from: https://www.aad.org/public/diseases/acne/skin-care/tips?NoAds (p10)",
+    "2. Australian Medicines Handbook: Drugs for acne. Adelaide: Australian Medicines Handbook Pty Ltd; 2022 [cited 2025]. (p10)",
+    "3. Cole, G. Acne. Emedicinehealth; [cited 2025]. Available from: https://www.emedicinehealth.com/acne/article_em.htm (p10)",
+    "4. Graber E. Acne vulgaris: Overview of management. UpToDate; 2024 [cited 2025]. (p10)",
+    "5. Huang T, Krassas G, Cook D. Acne Best practice management. Australian Family Physician. 2010;39(9). (p10)",
+    "6. Oakley A. Acne: DermNet New Zealand Trust; 2014 [cited 2025]. Available from: https://dermnetnz.org/topics/acne (p10)",
+    "7. See J. A-Z of skin: Acne Vulgaris. The Australasian College of Dermatologists; 2023 [cited 2025]. (p10)",
+    "8. The Australasian College of Dermatologists: Your guide to acne. YouTube; 2017 [cited 2025]. (p10)",
+    "9. Therapeutic Guidelines: Acne. Melbourne: Therapeutic Guidelines Limited; 2022. [cited 2025] (p10)",
+    "10. Therapeutic Guidelines: Dermatology (Acne). Melbourne: Therapeutic Guidelines Limited; 2022 [cited 2025]. (p10)",
+    "11. Thiboutot D and Zaenglein A. Pathogenesis, clinical manifestations, and diagnosis of acne vulgaris. UpToDate; 2024 [cited 2025]. (p10)",
+    "12. UpToDate: Patient education: Acne (Beyond the Basics); 2024 [cited 2025]. (p10)",
+    "13. UpToDate: Patient education: Acne (The Basics); 2025 [cited 2025]. (p11)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Page footer numbering differs from extraction page markers",
+      "observed": "Printed footers read 'Page 1 of 13' to 'Page 13 of 13' but the text extraction has 12 === PAGE n === markers, and footers from marker page 4 onward read one higher than the marker (marker PAGE 4 ends 'Page 5 of 13').",
+      "why_unclear": "Per spec, provenance uses the === PAGE n === markers only; footer numbers were not used. Discrepancy may indicate an unnumbered page in the source PDF.",
+      "source_page": 4
+    },
+    {
+      "topic": "Flowchart box order reconstructed from diagram layout",
+      "observed": "Section D flowchart text is interleaved in the extraction, e.g. 'Is the patient >=12 years old? No' followed by 'Not eligible for management under the Authority and Practice Standard. Refer to GP.' and Yes/No branch labels appear detached from boxes.",
+      "why_unclear": "Step order and on_fail assignments were inferred from the diagram layout; branch wording is transcribed verbatim but exact arrow routing cannot be confirmed from the text extraction. Confidence marked medium on PW-1-S3 and PW-1-S6.",
+      "source_page": 3
+    },
+    {
+      "topic": "Referral criteria table headers garbled in extraction",
+      "observed": "Table header row reads 'Referral criteria Treat Referral' followed by reversed/mirrored text 'tnialpmoc gnitneserp fo sliateD' (reads 'Details of presenting complaint' reversed).",
+      "why_unclear": "Column alignment of the table could be imperfect; rows were transcribed as Treat: No, Referral: GP, which is consistent across every visible row. EXC-1 and EXC-10 confidence marked medium.",
+      "source_page": 5
+    },
+    {
+      "topic": "Urgent referral criteria mention ED but every table row shows GP",
+      "observed": "Introductory bullet says patients meeting the urgent referral criteria 'require immediate referral to their regular medical practitioner, health service, or Emergency Department (ED) as indicated in the table', but all 11 rows show Referral: GP and no row indicates ED.",
+      "why_unclear": "No row explicitly indicates an ED destination; red flags from this table were coded REFER_URGENT (per 'immediate referral' wording) with the destination recorded as GP as printed. Row-level urgency wording is the table's, not individually stated per row.",
+      "source_page": 5
+    },
+    {
+      "topic": "Dose, frequency and application instructions not printed",
+      "observed": "Approved medicines list strengths only (Adapalene 0.1-0.3%, Tretinoin 0.025%, Trifarotene 0.005%, Clindamycin 1%); dosing detail is deferred to 'Therapeutic Guidelines: Acne' and the training modules.",
+      "why_unclear": "dose, frequency, duration and application fields left empty rather than invented; must be sourced from the Therapeutic Guidelines/Authority before go-live.",
+      "source_page": 2
+    },
+    {
+      "topic": "Which approved topical agents are teratogenic is not identified",
+      "observed": "Document requires advice that women of childbearing age use effective contraception 'in any case where therapy with a teratogenic topical agent is being considered' but does not say which of the approved medicines are teratogenic.",
+      "why_unclear": "Caveat transcribed verbatim into every treatment's notes rather than mapped to specific drugs, to avoid inventing a drug-level contraindication.",
+      "source_page": 8
+    },
+    {
+      "topic": "Relationship between 6-week supply cap, 6-week reviews and 3-month clindamycin limit",
+      "observed": "'Pharmacists can supply up to a total of 6 weeks of therapy' (p4); review at 6 weeks then a further 6 weeks if an alternative agent is used (p5/p9); 'The exclusive use of topical clindamycin therapy is limited to 3 months' (p8); refer if inadequate response after 3 months.",
+      "why_unclear": "The document does not state how the 6-week total supply cap interacts with a further 6-week alternative course or the 3-month clindamycin limit (e.g. whether further supply requires a new course/consultation).",
+      "source_page": 4
+    },
+    {
+      "topic": "Branch actions not stated for several follow-up gates",
+      "observed": "PW-3-S4, PW-3-S5, PW-3-S6 and PW-2-S3 use on_fail 'unclear'; the document does not say what to do when there is improvement at the subsequent 6-week review, when the review is not attended, when no change criteria are not met (other than the inflammation branch), or when clindamycin is used without benzoyl peroxide.",
+      "why_unclear": "Spec requires 'unclear' plus an open question where the document does not dictate the branch.",
+      "source_page": 9
+    },
+    {
+      "topic": "No first-line designation printed",
+      "observed": "Four approved medicines are listed with no ranking, sequencing or first-line statement; pharmacotherapy categories are given 'In accordance with Therapeutic guidelines: Acne'.",
+      "why_unclear": "first_line set to false for all treatments because the document does not designate a first-line agent.",
+      "source_page": 2
+    },
+    {
+      "topic": "Referral block quotes span pages 4-6",
+      "observed": "referral.routine quotes are from pages 4-5, urgent quotes from pages 5-6, emergency fragment from page 5.",
+      "why_unclear": "Spec requires one shared provenance object for the referral block using the first page; page range recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Notifiable conditions span pages 2 and 8",
+      "observed": "TGA adverse event reporting and GP notification wording is on page 2; My Health Record upload requirement is on page 8 (also repeated in section K on page 9).",
+      "why_unclear": "Shared provenance uses the first page (2) per spec; range recorded here.",
+      "source_page": 2
+    },
+    {
+      "topic": "Referral criteria list stated as not exhaustive",
+      "observed": "'Note that these are not exhaustive lists.' and 'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care for any reason.'",
+      "why_unclear": "The exclusion/referral lists cannot be treated as complete; the engine must allow pharmacist-initiated referral for any reason.",
+      "source_page": 5
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Verify the current NSW Health Authority (dated 05 August 2026) approved medicines list and any subsequent amendments before go-live.",
+      "source_page": 2,
+      "reason": "The approved medicines list is held in an external Authority document not included in this protocol PDF."
+    },
+    {
+      "item": "Confirm each pharmacist using the module has completed the training requirements detailed in the NSW Health Authority (dated 05 August 2026) and holds general registration under the Health Practitioner Regulation National Law (NSW).",
+      "source_page": 2,
+      "reason": "Training requirements are detailed in an external document; pharmacist authorisation to practise under the standard must be verified locally."
+    },
+    {
+      "item": "Confirm local process for TGA adverse event reporting via https://aems.tga.gov.au/ and notification of the patient's usual GP.",
+      "source_page": 2,
+      "reason": "Reporting is directed to be done 'via the usual processes', which is left to local policy."
+    },
+    {
+      "item": "Confirm consent record-sharing within a week of consultation and secure digital record retention (minimum seven (7) years, or for patients under 18 until the patient has attained the age of 25 years).",
+      "source_page": 4,
+      "reason": "Documentation, storage and sharing arrangements depend on local pharmacy systems and policy."
+    },
+    {
+      "item": "Confirm My Health Record upload workflow and patient opt-out handling for each supply.",
+      "source_page": 8,
+      "reason": "Upload requirement is stated but the operational process is left to the pharmacy's local workflow."
+    },
+    {
+      "item": "Confirm which approved topical agents are treated as teratogenic for the contraception advice requirement.",
+      "source_page": 8,
+      "reason": "Document refers to a 'teratogenic topical agent' without naming agents; a drug-level counselling rule cannot be finalised until this is confirmed."
+    },
+    {
+      "item": "Confirm local policy on exercising professional discretion and judgement when applying the Practice Standard (does not override the pharmacist's responsibility to make decisions appropriate to the individual circumstance).",
+      "source_page": 4,
+      "reason": "The standard explicitly defers to pharmacist judgement and consultation with the patient, which is a local policy/governance decision."
+    }
+  ]
+}

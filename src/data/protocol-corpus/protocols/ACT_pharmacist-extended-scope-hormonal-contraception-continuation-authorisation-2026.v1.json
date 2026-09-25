@@ -1,0 +1,1599 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf",
+    "pdf_sha256": "d31d57d5072bfea57e3d23394b3ce25616677cf19101fa5d02f933b1f31dcbd5",
+    "page_count": 20,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "ACT",
+    "instrument_name": "Medicines, Poisons and Therapeutic Goods (Pharmacist Extended Scope of Practice – Hormonal Contraception Continuation) Authorisation 2026 (No 1)",
+    "instrument_version": "Notifiable instrument NI2026–189 (No 1); revokes Medicines, Poisons and Therapeutic Goods (Pharmacist Extended Scope of Practice – Hormonal Contraception) Authorisation 2025 (No 1) – NI2025 – 611",
+    "effective_date": "10 April 2026 (signed by Dr Sally Singleton, Acting Chief Health Officer); 'This instrument commences the day after notification.'",
+    "legal_basis": "Made under the Medicines, Poisons and Therapeutic Goods Regulation 2008, Section 490A (Approvals of dealings by health practitioners – Act, s 20 (1) (c)). Schedule 1 (the ACT Pharmacist Extended Scope of Practice Hormonal Contraception Continuation Authorisation) is 'made under schedule 490A of the Medicines, Poisons and Therapeutic Goods Regulation 2008 for the purposes of establishing conditions and criteria under which a registered pharmacist may continue the supply of the particular medicine or class of medicine to which the authorisation relates in the absence of a supply authority (prescription)'. Operates alongside the Medicines, Poisons and Therapeutic Goods Act 2008 and Regulation 2008; supply is made without a prescription subject to Parts A–F. 'Contravening any condition of this authorisation is grounds for disciplinary action under Section 140 of the Medicines, Poisons and Therapeutic Goods Act 2008 ... A contravention of Section 140 of the Act may result in disciplinary action under Section 141'. No poisons/schedule provision (e.g. Schedule 4) is printed in the instrument.",
+    "supervision_model": "Autonomous under conditions: 'A registered pharmacist may deal with a medicine or a class of medicine to which the authorisation relates to under their own authority (without a prescription)' to a person, subject to: the medicine being listed under Part A – Medicines Authorisations; patient eligibility under Part A; other Part A conditions; prescribed training requirements under Part B – Pharmacist Training Requirements; patient and pharmacist both physically present at a pharmacy meeting Part C – Premises Standard; Part D – Record Keeping Requirements; Part E – Clinical Protocols (the Appendix 1 flowchart); Ahpra/Pharmacy Board Code of Conduct and ethical standards (breaches handled under Part F – Governance and Complaints); and consideration of Appendix 2 – Supplementary Information and Notes. DMPA (depot medroxyprogesterone) administration must only be performed by pharmacists who have successfully completed the PSA Administering Medicines by Injection Course or a similar course approved by the Chief Pharmacist, otherwise the patient must be referred for deep IM administration. A pharmacist is 'a person who holds registration under the Health Practitioner Regulation National Law (ACT) and is employed or engaged in a pharmacy that meets the requirements in Part C'.",
+    "scope_summary": "ACT notifiable legislative instrument NI2026–189 (2026 No 1) that authorises appropriately trained and registered pharmacists to continue (resupply only) specified hormonal contraception medicines without a prescription for eligible patients — 'Resupply is for continuation only: initiation or therapy changes are NOT permitted' — for a period not exceeding 12 months. Contains Parts A–F conditions (approved medicines, eligible patients, other conditions, adverse-event reporting, training, premises, record keeping, clinical protocols, governance), Appendix 1 clinical protocol flowchart (adapted from the NSW Pharmacist Practice Standards for the Continuation of Hormonal Contraception created by NSW Health, adapted for the ACT and used with permission), Appendix 2 supplemental information and 30 references. Approved medicines printed: single or combined oral forms — ethinylestradiol (35mcg or less), levonorgestrel, norethisterone, drospirenone, nomegestrol, desogestrel, dienogest, gestodene; injective form — medroxyprogesterone (150 mg/mL); combined intravaginal form — ethinylestradiol+etonogestrel (2.7+11.7 mg) ring; Table 1 prints formulation rows with estrogen/progestogen doses and brand examples."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Patient presents to a participating pharmacist requesting continuation of hormonal contraception",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Is the patient a person with a uterus? (flowchart gate answered Yes)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Is the patient aged between 18-49? (flowchart gate answered Yes; DMPA additionally restricted to 25-39 years — see INC-14/EXC-19)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-4",
+        "text": "Is the patient taking an approved hormonal contraceptive listed in the Health and Community Services authority? (flowchart gate answered Yes)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-5",
+        "text": "Was the patient initiated on hormonal contraception by their GP (or other authorised prescribing health care professional) primarily for the purpose of contraception and have they been stabilised on that hormonal contraception for 2 years continuously? (flowchart gate answered Yes)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-6",
+        "text": "Has the patient seen their GP (or other authorised prescribing health care professional) for review of that contraception in: For DMPA: the last year? For OCP or vaginal ring: the last 2 years? (flowchart gate answered Yes)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-7",
+        "text": "Has the patient been continuously using hormonal contraception: without a break for two years (OR branch of the printed 'OR' in the same flowchart box)",
+        "criteria_group": {"all_of": [], "any_of": ["INC-7", "INC-8"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Has the patient been continuously using hormonal contraception: had a break of less than 2 weeks in the preceding 30 days? (OR branch of the printed 'OR' in the same flowchart box)",
+        "criteria_group": {"all_of": [], "any_of": ["INC-7", "INC-8"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "INC-9",
+        "text": "The supply to the patient must be primarily for the purpose of contraception",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "iii. Other Conditions"}
+      },
+      {
+        "id": "INC-10",
+        "text": "The patient must have been treated with the eligible medicine for the past 24 months and that use has been continuous",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "iii. Other Conditions"}
+      },
+      {
+        "id": "INC-11",
+        "text": "Eligible pharmacists can supply single or combined oral contraception or combined intravaginal form of hormonal contraception to women and people with a uterus aged 18 years to 49 years who have been supplied or prescribed the same form of hormonal contraception by a medical practitioner or nurse practitioner for the previous 24 months, with continuous use.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "ii. Eligible Patients"}
+      },
+      {
+        "id": "INC-12",
+        "text": "The pharmacist must ensure the patient will not be supplied any hormonal contraception continuation by a pharmacist acting under this authority for a period exceeding 12 months",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "iii. Other Conditions"}
+      },
+      {
+        "id": "INC-13",
+        "text": "The patient and the pharmacist must both be physically present at a pharmacy that meets the listed requirements of Part C – Premises Standard",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "iii. Other Conditions"}
+      },
+      {
+        "id": "INC-14",
+        "text": "Eligible pharmacists can supply injectable medroxyprogesterone (150mg/ml) to women and people with a uterus aged 25 years to 39 years who have been supplied or prescribed injectable medroxyprogesterone (150mg/mL), by a medical practitioner or nurse practitioner for the previous 24 months, with continuous use. (DMPA-specific eligibility condition; applies only where the injectable form is being supplied.)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "ii. Eligible Patients"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Is the patient a person with a uterus? → Not eligible for resupply under this Authorisation. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Is the patient aged between 18-49? → Not eligible for resupply under this Authorisation. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "Is the patient taking an approved hormonal contraceptive listed in the Health and Community Services authority? → Not eligible for resupply under this Authorisation. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "Was the patient initiated on hormonal contraception by their GP (or other authorised prescribing health care professional) primarily for the purpose of contraception and have they been stabilised on that hormonal contraception for 2 years continuously? → Not eligible for resupply under this Authorisation. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "Has the patient seen their GP (or other authorised prescribing health care professional) for review of that contraception in: For DMPA: the last year? For OCP or vaginal ring: the last 2 years? → Not eligible for resupply under this Authorisation. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "If >2 weeks (for DMPA) or >4 weeks break (for OCP or vaginal ring), not eligible for resupply. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "Resupply is not considered safe or appropriate → Not eligible for resupply under this Authorisation. Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "Patient has contraindications for resupply → Not eligible for resupply under this Authorisation. Immediately Refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "UKMEC3 and 4 contraindications",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-10",
+        "text": "Changes in bleeding pattern (including heavy/irregular/prolonged vaginal bleeding and development/accompaniment of other symptoms)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-11",
+        "text": "Drug interactions",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-12",
+        "text": "Pregnancy and lactation status",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-13",
+        "text": "Potential pregnancy",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-14",
+        "text": "Unexplained and un-investigated symptoms including vaginal bleeding, severe or painful menstrual bleedings, irregular periods, amenorrhoea, or pain/discomfort with sexual intercourse",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-15",
+        "text": "Measure BP: Do not supply if BP > 145mmHg systolic or >90mmHg diastolic",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-16",
+        "text": "Measure weight and height (BMI) for combined OCP, vaginal ring and DMPA: Do not resupply if BMI >= 35km/m2",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "unclear",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-17",
+        "text": "Pharmacists may resupply hormonal contraceptives listed. Resupply is for continuation only: initiation or therapy changes are NOT permitted.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+      },
+      {
+        "id": "EXC-18",
+        "text": "patients with a UKMEC category 3 or 4 condition are not eligible for resupply and require a referral",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+      },
+      {
+        "id": "EXC-19",
+        "text": "DMPA: patient requesting continuation is not aged 25 to 39 years (inclusive) — printed: 'Continuation of DMPA under this service is permitted for patients aged 25 to 39 years old (inclusive) only.'",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+      },
+      {
+        "id": "EXC-20",
+        "text": "Combined hormonal contraception: patient vapes with nicotine and is aged 35 years or older — printed: 'any vaping in those aged 35 years and older will be MEC 4 (i.e. absolutely contraindicated) for use of combined hormonal contraception.'",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+      },
+      {
+        "id": "EXC-21",
+        "text": "Combined hormonal contraception: patient is over 35 and smokes — printed: 'Women over 35 who smoke should be advised to stop combined hormonal contraception as the risk of mortality associated with smoking becomes clinically significant at this point. Smoking cessation advice should also be provided.'",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Women over 40"}
+      },
+      {
+        "id": "EXC-22",
+        "text": "Combined hormonal contraception: patient is over 50 — printed: 'Women over 50 should be advised to no longer use combined hormonal contraception as there are safer methods of contraception at this point.[5]'",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Women over 40"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 49,
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "ii. Eligible Patients"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "If 2-4 weeks break (for OCP or vaginal ring) in the preceding 30 days, resupply 1 month of hormonal contraception and refer to GP.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-2", "EXE-3"]},
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"},
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "All patients seeking contraception who have not had a cervical screening test (CST) in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents. They are still eligible for the hormonal contraception resupply service.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-2", "EXE-3"]},
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"},
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-3",
+        "text": "Note that a single elevated BP reading is not enough to classify an individual as hypertensive (note that activity immediately prior to consultation should also be taken into consideration) and a second BP reading should be taken at the end of the consultation.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-2", "EXE-3"]},
+        "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "EXAMINATION"},
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol (patient flowchart)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient presents to a participating pharmacist requesting continuation of hormonal contraception (entry point of the flowchart).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Is the patient a person with a uterus?",
+          "gates": [{"criterion": "Is the patient a person with a uterus?", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Is the patient aged between 18-49?",
+          "gates": [{"criterion": "Is the patient aged between 18-49?", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Is the patient taking an approved hormonal contraceptive listed in the Health and Community Services authority?",
+          "gates": [{"criterion": "Is the patient taking an approved hormonal contraceptive listed in the Health and Community Services authority?", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Was the patient initiated on hormonal contraception by their GP (or other authorised prescribing health care professional) primarily for the purpose of contraception and have they been stabilised on that hormonal contraception for 2 years continuously?",
+          "gates": [{"criterion": "Initiated by GP (or other authorised prescribing health care professional) primarily for contraception and stabilised on that hormonal contraception for 2 years continuously", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Has the patient seen their GP (or other authorised prescribing health care professional) for review of that contraception in: For DMPA: the last year? For OCP or vaginal ring: the last 2 years?",
+          "gates": [{"criterion": "GP (or other authorised prescribing health care professional) review of that contraception within the last year for DMPA, or within the last 2 years for OCP or vaginal ring", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Has the patient been continuously using hormonal contraception: • without a break for two years, OR • had a break of less than 2 weeks in the preceding 30 days?",
+          "gates": [{"criterion": "Has the patient been continuously using hormonal contraception: without a break for two years, OR had a break of less than 2 weeks in the preceding 30 days?", "on_fail": "SEE_PW-1-S8"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "Branch handling when the continuous-use requirement is not met (breaks and possible pregnancy): 'If 2-4 weeks break (for OCP or vaginal ring) in the preceding 30 days, resupply 1 month of hormonal contraception and refer to GP.' 'If >2 weeks (for DMPA) or >4 weeks break (for OCP or vaginal ring), not eligible for resupply. Refer to GP.' 'Consider the need for emergency contraception and/or testing to exclude pregnancy' '(note: pregnancy tests can give a false negative result if unprotected sex was <21 days earlier).' 'Advise patient to use additional contraception (eg barrier methods) until GP review.'",
+          "gates": [],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Conduct patient informed consent: • Participation • Financial • Pharmacist communications with other health practitioners",
+          "gates": [{"criterion": "Patient informed consent obtained covering Participation, Financial, and Pharmacist communications with other health practitioners", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "HISTORY",
+          "description": "Assess patient needs to determine if resupply is safe and appropriate: • Review patient MyHealth record, where appropriate • Check adherence and satisfaction with hormonal contraceptive • Discuss other contraceptive options such as the use of the long-acting reversible contraception (LARCs) with women seeking contraception as per the Royal Australia and New Zealand College of Obstetricians and Gynaecologists (RANZCOG) recommendations",
+          "gates": [{"criterion": "Resupply is assessed as safe and appropriate", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EXAMINATION",
+          "description": "Conduct clinical review and record all findings: • Measure BP: Do not supply if BP > 145mmHg systolic or >90mmHg diastolic • Measure weight and height (BMI) for combined OCP, vaginal ring and DMPA: Do not resupply if BMI >= 35km/m2 • Adverse effects to hormonal contraception • Changes in bleeding patterns • Changes in health that would be a contraindication to ongoing use: angina, heart attack, stroke/TIA, breast cancer, liver disease, DVT/PE, migraine with/without aura, new headaches, increased VTE risk (eg recent major surgery) • Asses risk factors for bone density and cardiovascular disease annually for DMPA • New and current medications • Medication allergies and/or adverse effects, including with hormonal contraceptive • STI screening (recommended for anyone who is sexually active and engaging in unprotected sex)",
+          "gates": [
+            {"criterion": "BP not > 145mmHg systolic or >90mmHg diastolic (do not supply if exceeded)", "on_fail": "REFER"},
+            {"criterion": "BMI < 35km/m2 for combined OCP, vaginal ring and DMPA (do not resupply if >=)", "on_fail": "STOP"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm hormonal contraception is appropriate and meeting patient's needs, consider these contraindications: • UKMEC3 and 4 contraindications • Changes in bleeding pattern (including heavy/irregular/prolonged vaginal bleeding and development/accompaniment of other symptoms) • Drug interactions • Pregnancy and lactation status • Potential pregnancy • Unexplained and un-investigated symptoms including vaginal bleeding, severe or painful menstrual bleedings, irregular periods, amenorrhoea, or pain/discomfort with sexual intercourse",
+          "gates": [{"criterion": "Patient has no contraindications for resupply (no UKMEC3 and 4 contraindications, no changes in bleeding pattern, no drug interactions, no pregnancy/lactation or potential pregnancy, no unexplained and un-investigated symptoms)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "TREAT",
+          "description": "Pharmacists may resupply hormonal contraceptives listed. Resupply is for continuation only: initiation or therapy changes are NOT permitted. • Patients 18-39 (OCP and vaginal ring): resupply of up to 12-months of the current hormonal contraceptive is permitted, provided the patient had had a contraceptive review reviewed by a medical practitioner within the last 2 years. • Patients 40-49 (OCP and vaginal ring): only one resupply of the original manufacturer's pack of the current hormonal contraceptive is permitted before GP review is required. DMPA: resupply is permitted for patients aged 25 to 39 years old (inclusive) only. Resupply is permitted for up to 12-months only. Patient requires GP reassessment after this resupply period. Must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course or similar course approved by the Chief Pharmacist. Otherwise, patient needs to be referred to their GP ore relevant health service for deep IM administration. • Vaginal ring: Patients needing assistance with insertion must be referred to their GP.",
+          "gates": [
+            {"criterion": "Supply is continuation only — initiation or therapy changes are NOT permitted", "on_fail": "STOP"},
+            {"criterion": "DMPA administered only by pharmacists successfully completing the PSA Administering Medicines by Injection Course or similar course approved by the Chief Pharmacist", "on_fail": "REFER"},
+            {"criterion": "Vaginal ring patient does not need assistance with insertion", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "Provide non-pharmacological and women's health advice: see Supplementary Information below",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan with the patient and patient's medical practitioner",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "FOLLOW_UP",
+          "description": "Documentation: Pharmacist must make a full clinical record of the consultation and the details of all consultations and outcomes must be recorded using secure digital software. Records must be stored securely for a minimum of (7) years.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Appendix 2 – Supplemental Information and Notes (assessment, safety and referral guidance supporting the flowchart)",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient History: Sufficient information must be obtained from the patient to assess the safety and appropriateness of resupply of the hormonal contraception. The patient's My Health Record should be reviewed where appropriate and available. The patient history should include: Age; Pregnancy and breastfeeding status; Underlying medical conditions, including new or recently diagnosed medical conditions (see UK Medical Eligibility Criteria [UKMEC] 3 and 4[1]) which may be a contraindication to hormonal contraception e.g. migraine with aura (patients with a UKMEC category 3 or 4 condition are not eligible for resupply and require a referral) or impact on contraceptive effectiveness and choice; Current medications, including adherence and satisfaction with hormonal contraception; Drug allergies/adverse effects, including any adverse effects of hormonal contraception; Prior use of contraceptives, tolerability, and adverse effects; Smoking status, including vaping (There is an increased risk of using hormonal contraception in smokers over 35 years); Any unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding; Any headaches indicative of migraines; Last Cervical Screening Test and Breast check; HPV vaccination status.",
+          "gates": [{"criterion": "Sufficient information obtained to assess the safety and appropriateness of resupply", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Sexual and social history: In addition to a standard patient history, pharmacists should consider taking a brief sexual history from the patient to inform shared decision making/appropriateness of hormonal contraception continuation. Issues that may be relevant include previous use and experiences with contraception, current relationship status, and risk factors for STIs, including any known STI history of current and/or recent partner (if applicable).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Sexual and social history"}
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "EXAMINATION: The pharmacist should measure blood pressure (BP) for all patients, and measure the patient's height and weight to calculate BMI (for patients requesting continuation of the combined hormonal OCP, vaginal ring and DMPA) to determine the patient's suitability for continuing their hormonal contraceptive and record this information in their clinical software program. Note that a single elevated BP reading is not enough to classify an individual as hypertensive (note that activity immediately prior to consultation should also be taken into consideration) and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner or health service for further assessment and selection of an appropriate contraceptive method. BP should be monitored and recorded every 12 months. BMI should be calculated on the first presentation, and professional judgement exercised regarding whether BMI needs to be recalculated on subsequent presentations.",
+          "gates": [{"criterion": "BP not elevated on the second reading taken at the end of the consultation", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "EXAMINATION"}
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Excluding pregnancy: If the patient has been using the hormonal contraception consistently and reliably, they can be reasonably assumed not to be pregnant. However, if the patient has not been using the method reliably and consistently and has had unprotected sex, then there is a risk of pregnancy. Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception. Note that pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier.",
+          "gates": [{"criterion": "Pregnancy reasonably excluded before continuation of hormonal contraception", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Excluding pregnancy"}
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Bleeding pattern and menstrual history: Any changes in vaginal bleeding and the development or accompaniment of other symptoms may indicate underlying pathology. This requires referral to a medical practitioner or health service for further investigation and management. Changes in bleeding pattern may include abnormalities in frequency (e.g. heavy bleeding), irregular bleeding, prolonged menstrual bleeding, abnormalities in volume, intermenstrual bleeding, and post-coital bleeding. Development or accompaniment of other symptoms may include dysmenorrhea (pain and cramping with bleeding), vaginal discharge, dyspareunia (pain with intercourse), changes in bladder or bowel function, weight gain or loss, headaches, visual disturbances, hirsutism, and acne.",
+          "gates": [{"criterion": "No changes in vaginal bleeding and no development or accompaniment of other symptoms", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 13, "section_heading": "Bleeding pattern and menstrual history"}
+        },
+        {
+          "id": "PW-2-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "Sexually transmitted infection (STI) screening: STI screening is recommended for anyone who is sexually active and engaging in unprotected sex, has a new partner since their last STI test, or thinks they may be at risk. Pharmacists should recommend STI testing for individuals who may be at risk even if the individual does not report any symptoms. Presence of genitourinary symptoms that might suggest a STI: changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria.",
+          "gates": [{"criterion": "Patient is sexually active and engaging in unprotected sex, has a new partner since their last STI test, or thinks they may be at risk", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 13, "section_heading": "Sexually transmitted infection (STI) screening"}
+        },
+        {
+          "id": "PW-2-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "CONTRAINDICATIONS TO HORMONAL CONTRACEPTION: To determine whether continuation of hormonal contraception is safe and appropriate, pharmacists must understand the contraindications and precautions of the different hormonal contraceptives. Pharmacists can find further information in the Therapeutic Guidelines - Contraception and the current versions of the Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG) and the College of Sexual and Reproductive Healthcare (previously known as FSRH) documentation. Pharmacists must consult these resources and remain up to date with revisions to safely undertake this service (CoSRH: UK Medical Eligibility Criteria for Contraceptive Use; FSRH Guideline Combined Hormonal Contraception; FSRH Clinical Guideline: Progestogen-only Pills; FSRH Progestogen-only Injectable Contraception; RANZCOG Contraception Clinical Guideline).",
+          "gates": [{"criterion": "Pharmacist has consulted Therapeutic Guidelines - Contraception and current RANZCOG and CoSRH/FSRH documentation and remains up to date with revisions", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 17, "section_heading": "CONTRAINDICATIONS TO HORMONAL CONTRACEPTION"}
+        },
+        {
+          "id": "PW-2-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Provision of non-pharmacological and women's health advice: comprehensive counselling covering adverse effects, instructions for use and patient expectations as per the Therapeutic Guidelines, Australian Medicines Handbook, UKMEC and other relevant resources; Consumer Medicines Information and/or other resources/handouts; counselling on how to take, side effects to expect/manage, when the hormonal contraception is less effective, what to do in the event of a missed pill /late injection/late insertion of next vaginal ring, adherence and avoiding starting/stopping the pill; educate patients on the importance of getting regular women's health and sexual/reproductive health checks; encourage appointments for cervical screening (routine screening available from age 25, recommended every five years), breast checks (available for all women from age 40; actively invited from age 50), and STI screening; sexual health promotion advice including condoms; discussion of LARCs as per RANZCOG recommendations.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 15, "section_heading": "Provision of non-pharmacological and women's health advice"}
+        },
+        {
+          "id": "PW-2-S9",
+          "order": 9,
+          "type": "REFER",
+          "description": "Sexual and domestic abuse: Pharmacists must be aware of the possibility that a woman seeking contraception may be and/or has been subjected to sexual violence or abuse (assault or sexual coercion), either within a relationship or outside of a relationship. If the pharmacist becomes aware of this during the consultation, they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances: Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services. If required, emergency contraception may be supplied as per standard pharmacy care, or the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Sexual and domestic abuse"}
+        },
+        {
+          "id": "PW-2-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "Depot medroxyprogesterone acetate (DMPA) injection: Continuation of DMPA under this service is permitted for patients aged 25 to 39 years old (inclusive) only. Continuation of DMPA under this service is permitted for up to 12-months only. Patients require GP reassessment after this period. DMPA is associated with a reduction in bone mineral density (BMD) during use, which usually recovers after discontinuation. As per RANZCOG, women using DMPA should be reviewed every 2 years by their medical practitioner or health service to assess individual situations and to discuss the benefits and potential risks. The Therapeutic Guidelines recommend review for osteoporosis and cardiovascular risk factors annually. For women with multiple lifestyle and/or medical risk factors for osteopenia, osteoporosis, CV disease or VTE, other methods of contraception may be more appropriate. Use of DMPA by perimenopausal women needs to be reviewed by a medical practitioner or health service. DMPA injection must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course or a similar course approved by the Chief Pharmacist. Otherwise, the patient needs to be referred to their GP or relevant health service for deep IM administration.",
+          "gates": [
+            {"criterion": "Patient aged 25 to 39 years old (inclusive) for DMPA continuation", "on_fail": "REFER"},
+            {"criterion": "DMPA administered only by pharmacists successfully completing the PSA Administering Medicines by Injection Course or a similar course approved by the Chief Pharmacist", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+        },
+        {
+          "id": "PW-2-S11",
+          "order": 11,
+          "type": "REFER",
+          "description": "Combined Hormonal Vaginal Ring: Pharmacists must not assist with physical insertion of a combined hormonal vaginal ring. Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider. The combined hormonal vaginal ring works in the same way as combined oral hormonal contraception and is treated similarly in terms of contraindications, complications, side effects and most drug interactions.",
+          "gates": [{"criterion": "Patient does not require assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 17, "section_heading": "Combined Hormonal Vaginal Ring"}
+        },
+        {
+          "id": "PW-2-S12",
+          "order": 12,
+          "type": "FOLLOW_UP",
+          "description": "Clinical Documentation and Communication: Where a patient has a My Health Record, the pharmacist should ensure the details of the hormonal contraception supply are uploaded to the patient's My Health Record, unless requested otherwise by the patient.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Clinical Documentation and Communication"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "ethinylestradiol + levonorgestrel",
+      "form": "Oral tablet",
+      "strength": "ethinylestradiol 20 micrograms + levonorgestrel 100 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table 1 columns printed: 'Estrogen dose (micrograms)', 'Progestogen dose (micrograms)', 'Brand name examples'. Section header: 'Monophasic oral formulations: low-dose estrogen' within 'Combined oral contraceptive pills – to women aged 18 years to 49 years'. Brand name examples: Femme-Tab ED 20/100, Loette, Microgynon 20 ED, Micronelle 20 ED. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: low-dose estrogen"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "drospirenone",
+      "form": "Oral tablet",
+      "strength": "drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: low-dose estrogen'. Brand name examples: Bella, Brooke, Rosie, Yana, Yaz. Estrogen dose column value is not present in the extracted row; the estrogen component is NOT asserted — see open_questions OQ-1. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: low-dose estrogen"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "estradiol + nomegestrol",
+      "form": "Oral tablet",
+      "strength": "estradiol 1500 micrograms + nomegestrol 2500 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: low-dose estrogen'. Brand name example: Zoely. Estradiol is printed in Table 1 but is not named in the Part A i approved-medicine bullet list — see open_questions OQ-4 / hugh_to_confirm HTC-2. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: low-dose estrogen"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "ethinylestradiol + levonorgestrel",
+      "form": "Oral tablet",
+      "strength": "ethinylestradiol 30 micrograms + levonorgestrel 150 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen' within 'Combined oral contraceptive pills – to women aged 18 years to 49 years'. Brand name examples: Eleanor 150/30 ED, Evelyn 150/30 ED, Femme-Tab ED 30/150, Lenest 30 ED, Leveth 150/30 ED, Levlen ED, Microgynon 30 ED, Micronelle 30 ED, Monofeme Seasonique. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "desogestrel",
+      "form": "Oral tablet",
+      "strength": "desogestrel 150 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples: Madeline, Marvelon. Estrogen dose column value is not present in the extracted row; estrogen component NOT asserted — see open_questions OQ-1. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "dienogest",
+      "form": "Oral tablet",
+      "strength": "dienogest 2000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name example: Valette. Estrogen dose column value is not present in the extracted row; estrogen component NOT asserted — see open_questions OQ-1. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-7",
+      "drug": "drospirenone",
+      "form": "Oral tablet",
+      "strength": "drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples: Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena. Estrogen dose column value is not present in the extracted row; estrogen component NOT asserted — see open_questions OQ-1. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-8",
+      "drug": "gestodene",
+      "form": "Oral tablet",
+      "strength": "gestodene 75 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name example: Minulet. Estrogen dose column value is not present in the extracted row; estrogen component NOT asserted — see open_questions OQ-1. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-9",
+      "drug": "ethinylestradiol + norethisterone",
+      "form": "Oral tablet",
+      "strength": "ethinylestradiol 35 micrograms + norethisterone 500 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples: Brevinor, Norimin. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-10",
+      "drug": "norethisterone",
+      "form": "Oral tablet",
+      "strength": "norethisterone 1000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples: Brevinor-1, Norimin-1, Pirmella. Estrogen dose column value is not present in the extracted row; estrogen component NOT asserted — see open_questions OQ-1. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-11",
+      "drug": "estetrol + drospirenone",
+      "form": "Oral tablet",
+      "strength": "estetrol 14200 (14.2 mg) + drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Monophasic oral formulations: standard-dose estrogen'. Brand name example: Nextstellis. Estetrol is printed in Table 1 but is not named in the Part A i approved-medicine bullet list — see open_questions OQ-4 / hugh_to_confirm HTC-2. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Monophasic oral formulations: standard-dose estrogen"}
+    },
+    {
+      "id": "TX-12",
+      "drug": "ethinylestradiol + levonorgestrel",
+      "form": "Oral tablet (triphasic)",
+      "strength": "Phase 1 (6 pills): ethinylestradiol 30 + levonorgestrel 50; Phase 2 (10 pills: ethinylestradiol 40 + levonorgestrel 75; Phase 3 (10 pills): ethinylestradiol 30 + levonorgestrel 125 (doses in micrograms per Table 1 column headers; 'Phase 2 (10 pills:' transcribed as printed without closing parenthesis)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Triphasic: low or standard dose estrogen'. Brand name examples printed on the Phase 1 line: Logynon ED, Trifeme, Triquilar ED (whether these brands apply to all three phases is not stated — see open_questions OQ-2). Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Triphasic: low or standard dose estrogen"}
+    },
+    {
+      "id": "TX-13",
+      "drug": "levonorgestrel",
+      "form": "Oral tablet (progestogen only pill)",
+      "strength": "levonorgestrel 30 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Progestogen only pills (POP) oral contraception'; column header 'Progestogen dose'. Brand name example: Microlut. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Progestogen only pills (POP) oral contraception"}
+    },
+    {
+      "id": "TX-14",
+      "drug": "norethisterone",
+      "form": "Oral tablet (progestogen only pill)",
+      "strength": "norethisterone 350 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Progestogen only pills (POP) oral contraception'; column header 'Progestogen dose'. Brand name example: Noriday. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Progestogen only pills (POP) oral contraception"}
+    },
+    {
+      "id": "TX-15",
+      "drug": "drospirenone",
+      "form": "Oral tablet (progestogen only pill)",
+      "strength": "drospirenone 4 mg",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Progestogen only pills (POP) oral contraception'; column header 'Progestogen dose'. Brand name example: Slinda. Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Progestogen only pills (POP) oral contraception"}
+    },
+    {
+      "id": "TX-16",
+      "drug": "medroxyprogesterone",
+      "form": "Injection (depot)",
+      "strength": "medroxyprogesterone 150 mg/mL",
+      "dose": "",
+      "route": "intramuscular (deep IM)",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Depot medroxyprogesterone injection – to women aged 25 years to 39 years only'; column header 'Progestogen dose'. Brand name examples: Depo-Provera, Depo-Ralovera. Route 'deep IM' is the instrument's wording for administration (PW-1-S13 / PW-2-S10). Administration conditions (PSA Administering Medicines by Injection Course or similar course approved by the Chief Pharmacist; otherwise refer for deep IM administration) and the 25-39 years age band are set in PW-1-S13; continuation for up to 12-months only with GP reassessment after this period. No dose volume/frequency instruction is printed in this instrument — see open_questions OQ-5.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Depot medroxyprogesterone injection – to women aged 25 years to 39 years only"}
+    },
+    {
+      "id": "TX-17",
+      "drug": "ethinylestradiol + etonogestrel",
+      "form": "Intravaginal ring (combined)",
+      "strength": "ethinylestradiol 2.7 mg (15 mcg/24 hours) + etonogestrel 11.7 mg (120 mcg/24 hours)",
+      "dose": "",
+      "route": "intravaginal",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Section header: 'Combined hormonal contraceptive vaginal ring – to women aged 18 years to 49 years'. Brand name example: NuvaRing (the extracted row wraps 'hours)' after the brand name — see open_questions OQ-3). Pharmacists must not assist with physical insertion (PW-2-S11). Continuation/resupply only; quantity limits are set in PW-1-S13.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 4, "section_heading": "Combined hormonal contraceptive vaginal ring – to women aged 18 years to 49 years"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Is the patient a person with a uterus? → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Is the patient aged between 18-49? → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": {"parameter": "age", "operator": "not_in", "value": "18-49", "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Is the patient taking an approved hormonal contraceptive listed in the Health and Community Services authority? → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Was the patient initiated on hormonal contraception by their GP (or other authorised prescribing health care professional) primarily for the purpose of contraception and have they been stabilised on that hormonal contraception for 2 years continuously? → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": {"parameter": "duration of continuous use of hormonal contraception", "operator": "<", "value": 2, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Has the patient seen their GP (or other authorised prescribing health care professional) for review of that contraception in: For DMPA: the last year? → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": {"parameter": "time since GP or other authorised prescribing health professional review of contraception (DMPA)", "operator": ">", "value": 1, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Has the patient seen their GP (or other authorised prescribing health care professional) for review of that contraception in: For OCP or vaginal ring: the last 2 years? → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": {"parameter": "time since GP or other authorised prescribing health professional review of contraception (OCP or vaginal ring)", "operator": ">", "value": 2, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "If 2-4 weeks break (for OCP or vaginal ring) in the preceding 30 days, resupply 1 month of hormonal contraception and refer to GP.",
+      "structured": {"parameter": "break duration in preceding 30 days (OCP or vaginal ring)", "operator": "range", "value": [2, 4], "unit": "weeks"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "If >2 weeks (for DMPA) or >4 weeks break (for OCP or vaginal ring), not eligible for resupply. Refer to GP. [DMPA threshold captured in structured form]",
+      "structured": {"parameter": "break duration in preceding 30 days (DMPA)", "operator": ">", "value": 2, "unit": "weeks"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "If >2 weeks (for DMPA) or >4 weeks break (for OCP or vaginal ring), not eligible for resupply. Refer to GP. [OCP or vaginal ring threshold captured in structured form]",
+      "structured": {"parameter": "break duration in preceding 30 days (OCP or vaginal ring)", "operator": ">", "value": 4, "unit": "weeks"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Consider the need for emergency contraception and/or testing to exclude pregnancy (note: pregnancy tests can give a false negative result if unprotected sex was <21 days earlier). Advise patient to use additional contraception (eg barrier methods) until GP review.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Resupply is not considered safe or appropriate → Not eligible for resupply under this Authorisation. Refer to GP.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Patient has contraindications for resupply → Not eligible for resupply under this Authorisation. Immediately Refer to GP.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Measure BP: Do not supply if BP > 145mmHg systolic or >90mmHg diastolic",
+      "structured": {"parameter": "systolic blood pressure", "operator": ">", "value": 145, "unit": "mmHg"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Measure BP: Do not supply if BP > 145mmHg systolic or >90mmHg diastolic",
+      "structured": {"parameter": "diastolic blood pressure", "operator": ">", "value": 90, "unit": "mmHg"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Measure weight and height (BMI) for combined OCP, vaginal ring and DMPA: Do not resupply if BMI >= 35km/m2",
+      "structured": {"parameter": "BMI", "operator": ">=", "value": 35, "unit": "km/m2"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Vaginal ring: Patients needing assistance with insertion must be referred to their GP.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "DMPA: ... Must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course or similar course approved by the Chief Pharmacist. Otherwise, patient needs to be referred to their GP ore relevant health service for deep IM administration. ('ore' transcribed as printed)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Patients who have requested the service but are not eligible for resupply should be referred to their regular medical practitioner or health service.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 11, "section_heading": "Key points"}
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Must only be administered by pharmacists successfully completing the Pharmaceutical Society of Australia (PSA) Administering medicines by injection course or a similar course approved by the Chief Pharmacist. Otherwise refer the patient to their GP or relevant health service for deep IM administration.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 11, "section_heading": "Key points"}
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Vaginal ring: Patients requiring additional assistance with insertion should be referred to a medical practitioner or health service.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 11, "section_heading": "Key points"}
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "patients with a UKMEC category 3 or 4 condition are not eligible for resupply and require a referral",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "If a patient frequently takes pill breaks, pharmacists should use professional judgement and consider referring the patient to explore alternative contraception options e.g. long-acting reversible contraception (LARCs).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "any vaping in those aged 35 years and older will be MEC 4 (i.e. absolutely contraindicated) for use of combined hormonal contraception.",
+      "structured": {"parameter": "age (vaping with nicotine)", "operator": ">=", "value": 35, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "All patients seeking contraception who have not had a cervical screening test (CST) in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents. They are still eligible for the hormonal contraception resupply service.",
+      "structured": {"parameter": "years since cervical screening test", "operator": ">", "value": 5, "unit": "years"},
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 12, "section_heading": "Patient History"}
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "If the patient may be at increased risk of HIV and other STIs, pharmacists should advise them to seek review from their GP or a sexual health service for further assessment, testing, and discussion of HIV and STI prevention options.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 13, "section_heading": "Sexually transmitted infection (STI) screening"}
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Presence of genitourinary symptoms that might suggest a STI: changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 13, "section_heading": "Sexually transmitted infection (STI) screening"}
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "Any changes in vaginal bleeding and the development or accompaniment of other symptoms may indicate underlying pathology. This requires referral to a medical practitioner or health service for further investigation and management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 13, "section_heading": "Bleeding pattern and menstrual history"}
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "As a result, choice of contraceptive method needs to be reviewed with their medical practitioner or health service.",
+      "structured": {"parameter": "age", "operator": ">", "value": 40, "unit": "years"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 13, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Women over 35 who smoke should be advised to stop combined hormonal contraception as the risk of mortality associated with smoking becomes clinically significant at this point. Smoking cessation advice should also be provided.",
+      "structured": {"parameter": "age", "operator": ">", "value": 35, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "Women over 50 should be advised to no longer use combined hormonal contraception as there are safer methods of contraception at this point.[5]",
+      "structured": {"parameter": "age", "operator": ">", "value": 50, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "Women over 40 using DMPA injections should be regularly asked about additional risk factors for osteoporosis or osteopenia and referred to their healthcare provider if these risks are present.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "If BP remains elevated, the patient should be referred to a medical practitioner or health service for further assessment and selection of an appropriate contraceptive method.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "EXAMINATION"}
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "If the pharmacist becomes aware of this during the consultation, they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances: Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Sexual and domestic abuse"}
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "Pharmacists may refer individuals assigned and/or presumed female at birth who are at risk of pregnancy to a general practitioner or specialist sexual health services, if not already engaging with these services, to ensure that they receive comprehensive and culturally safe sexual healthcare that is tailored to their individual needs.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 15, "section_heading": "Transgender, gender diverse and non-binary people"}
+    },
+    {
+      "id": "RF-35",
+      "trigger_text": "If patients have a concern with the type of hormonal contraception they are using, encourage them to speak with their medical practitioner or health service and make appropriate referrals.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 15, "section_heading": "Provision of non-pharmacological and women's health advice"}
+    },
+    {
+      "id": "RF-36",
+      "trigger_text": "Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Excluding pregnancy"}
+    },
+    {
+      "id": "RF-37",
+      "trigger_text": "Use of DMPA by perimenopausal women needs to be reviewed by a medical practitioner or health service.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "RF-38",
+      "trigger_text": "For women with multiple lifestyle and/or medical risk factors for osteopenia, osteoporosis, CV disease or VTE, other methods of contraception may be more appropriate.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "RF-39",
+      "trigger_text": "As per RANZCOG, women using DMPA should be reviewed every 2 years by their medical practitioner or health service to assess individual situations and to discuss the benefits and potential risks. The Therapeutic Guidelines recommend review for osteoporosis and cardiovascular risk factors annually.",
+      "structured": {"parameter": "time since DMPA review", "operator": ">=", "value": 2, "unit": "years"},
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "RF-40",
+      "trigger_text": "Pharmacists must not assist with physical insertion of a combined hormonal vaginal ring. Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 17, "section_heading": "Combined Hormonal Vaginal Ring"}
+    },
+    {
+      "id": "RF-41",
+      "trigger_text": "If required, emergency contraception may be supplied as per standard pharmacy care, or the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "Sexual and domestic abuse"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Not eligible for resupply under this Authorisation. Refer to GP. (Appendix 1 flowchart fail branches: not a person with a uterus; age not 18-49; not taking an approved hormonal contraceptive; not initiated/stabilised for 2 years continuously; no GP review within the last year for DMPA or last 2 years for OCP or vaginal ring; resupply not considered safe or appropriate)",
+      "If >2 weeks (for DMPA) or >4 weeks break (for OCP or vaginal ring), not eligible for resupply. Refer to GP.",
+      "If 2-4 weeks break (for OCP or vaginal ring) in the preceding 30 days, resupply 1 month of hormonal contraception and refer to GP.",
+      "Patients who have requested the service but are not eligible for resupply should be referred to their regular medical practitioner or health service.",
+      "Otherwise refer the patient to their GP or relevant health service for deep IM administration. (DMPA not administered by a pharmacist who has completed the PSA Administering Medicines by Injection Course or a similar course approved by the Chief Pharmacist)",
+      "Vaginal ring: Patients requiring additional assistance with insertion should be referred to a medical practitioner or health service.",
+      "Vaginal ring: Patients needing assistance with insertion must be referred to their GP.",
+      "Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider.",
+      "patients with a UKMEC category 3 or 4 condition are not eligible for resupply and require a referral",
+      "This requires referral to a medical practitioner or health service for further investigation and management. (any changes in vaginal bleeding and the development or accompaniment of other symptoms)",
+      "If the patient may be at increased risk of HIV and other STIs, pharmacists should advise them to seek review from their GP or a sexual health service for further assessment, testing, and discussion of HIV and STI prevention options.",
+      "a referral provided if the patient consents (cervical screening test not had in the previous 5 years — see a medical practitioner for a CST; still eligible for resupply)",
+      "Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services.",
+      "referred to their healthcare provider if these risks are present (women over 40 using DMPA injections with additional risk factors for osteoporosis or osteopenia)",
+      "Pharmacists may refer individuals assigned and/or presumed female at birth who are at risk of pregnancy to a general practitioner or specialist sexual health services, if not already engaging with these services.",
+      "Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.",
+      "If BP remains elevated, the patient should be referred to a medical practitioner or health service for further assessment and selection of an appropriate contraceptive method.",
+      "the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device"
+    ],
+    "urgent": [
+      "Not eligible for resupply under this Authorisation. Immediately Refer to GP. (patient has contraindications for resupply)"
+    ],
+    "emergency": [],
+    "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+  },
+  "review_followup": [
+    {
+      "id": "FU-1",
+      "when": "Following the consultation, where the patient consents to disclosure",
+      "what": "The record of the consultation and any subsequent consultations (including adverse events) must be shared with the patient's usual treating medical practitioner or medical practice within seven (7) days following the consultation.",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 7, "section_heading": "Part D - Record Keeping Requirements"}
+    },
+    {
+      "id": "FU-2",
+      "when": "If 2-4 weeks break (for OCP or vaginal ring) in the preceding 30 days",
+      "what": "Resupply 1 month of hormonal contraception and refer to GP.",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 9, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "FU-3",
+      "when": "After one resupply of the original manufacturer's pack (patients 40-49, OCP and vaginal ring)",
+      "what": "GP review is required: 'only one resupply of the original manufacturer's pack of the current hormonal contraceptive is permitted before GP review is required.'",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "FU-4",
+      "when": "After the permitted DMPA resupply period of up to 12-months",
+      "what": "'Patient requires GP reassessment after this resupply period.' (DMPA: resupply permitted for up to 12-months only)",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 10, "section_heading": "Appendix 1 – Hormonal Contraception Continuation Clinical Protocol"}
+    },
+    {
+      "id": "FU-5",
+      "when": "Every 12 months",
+      "what": "'BP should be monitored and recorded every 12 months.'",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 14, "section_heading": "EXAMINATION"}
+    },
+    {
+      "id": "FU-6",
+      "when": "Every 2 years for women using DMPA (RANZCOG); annually for osteoporosis and cardiovascular risk factors (Therapeutic Guidelines)",
+      "what": "Review by their medical practitioner or health service to assess individual situations and to discuss the benefits and potential risks; The Therapeutic Guidelines recommend review for osteoporosis and cardiovascular risk factors annually.",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 16, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "FU-7",
+      "when": "When continuation supply under this authority would reach 12 months",
+      "what": "'The pharmacist must ensure the patient will not be supplied any hormonal contraception continuation by a pharmacist acting under this authority for a period exceeding 12 months'.",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "iii. Other Conditions"}
+    },
+    {
+      "id": "FU-8",
+      "when": "Before the next resupply (record keeping)",
+      "what": "Pharmacists are required to make a full clinical record of the consultation using secure digital software; records must be stored securely for a minimum of seven years, and a record of the consultation should be shared with the patient's usual treating medical practitioner with the client's consent.",
+      "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 7, "section_heading": "Part D - Record Keeping Requirements"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/"
+    ],
+    "provenance": {"pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2026-189-pharmacist-extended-scope-hormonal-contraception-continuation-authorisation-2026.pdf", "page": 5, "section_heading": "iv. Adverse Events"}
+  },
+  "references": [
+    "[p19] 1. ASHM, \"Australian STI Management Guidelines for use in Primary Care,\" 2024. [Online]. Available: https://sti.guidelines.org.au/sexual-history/",
+    "[p19] 2. ASHM, \"Australian STI Management Guidelines for use in Primary Care Aboriginal and Torres Strait Islander People,\" April 2024. [Online]. Available: https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torresstrait-islander-people/",
+    "[p19] 3. Australian Government Department of Health, Disability and Ageing, \"National Cervical Screening Program,\" October 2025. [Online]. Available: https://www.health.gov.au/our-work/national-cervical-screening-program",
+    "[p19] 4. Australian Institute of Family Studies, \"Reproductive coercion and abuse,\" May 2023. [Online]. Available: https://aifs.gov.au/resources/practice-guides/reproductive-coercion-and-abuse",
+    "[p19] 5. Australian Institute of Health and Welfare, \"Family, domestic and sexual violence,\" February 2026. [Online]. Available: https://www.aihw.gov.au/family-domestic-and-sexual-violence",
+    "[p19] 6. Cancer Council Australia, \"A guide to: Breast screening,\" 2026. [Online]. Available: https://www.cancer.org.au/cancer-information/causes-and-prevention/early-detection-and-screening/breast-cancer-screening",
+    "[p19] 7. Cancer Council Australia, \"National cervical screening program,\" July 2024. [Online]. Available: https://www.cancer.org.au/clinical-guidelines/cervical-cancer/cervical-screening",
+    "[p19] 8. College of Sexual and Reproductive Healthcare, \"Standards and Guidance,\" 2026. [Online]. Available: https://www.cosrh.org/Public/Public/Standards-and-Guidelines.aspx?hkey=c7f3aafd-dd3a-4edc-b335-94b0369a7c89",
+    "[p19] 9. College of Sexual and Reproductive Healthcare, \"UK Medical Eligibility Criteria for Contraceptive Use\" 2025. [Online]. Available: https://www.cosrh.org/Common/Uploaded%20files/documents/UKMEC_2025.pdf",
+    "[p19] 10. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Combined Hormonal Contraception,\" January 2019, amended October 2023. [Online]. Available: https://www.cosrh.org/Common/Uploaded%20files/documents/fsrh-guideline-combined-hormonal-contraception-october-2023.pdf",
+    "[p19] 11. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Contraception for Women Aged Over 40 Years,\" August 2017, amended May 2025. [Online]. Available: https://www.cosrh.org/Common/Uploaded%20files/documents/fsrh-guideline-contraception-for-women-aged-over-40-years.pdf",
+    "[p19] 12. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Progestogen-only Injectables,\" December 2014, Amended July 2023. [Online]. Available: https://www.cosrh.org/Common/Uploaded%20files/documents/progestogen-only-injectable-december-2014-amended-11july2023.pdf",
+    "[p19] 13. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Progestogen-only Pills,\" August 2022, amended July 2023. [Online]. Available: https://www.cosrh.org/Common/Uploaded%20files/documents/fsrh-ceu-clinical-guideline-progestogen-only-pills-aug22-amended-11july-2023-.pdf",
+    "[p19] 14. Family Planning Alliance Australia, \"Vaping and medical eligibility for hormonal contraception,\" January 2020. [Online]. Available: https://shq.org.au/wp-content/uploads/2021/01/Vaping-and-medical-eligibility-for-hormonal-contraception_Dec20.pdf",
+    "[p20] 15. Family Planning Australia, \"Combined Hormonal Contraceptive Pill Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/combined-hormonal-contraceptive-pill/",
+    "[p20] 16. Family Planning Australia, \"Combined Hormonal Contraceptive Pill Troubleshooting Clinical Fact Sheet,\" September 2025. [Online]. Available: https://intheknow.org.au/resources/hub/contraceptive-pill-troubleshooting-clinical-factsheet/",
+    "[p20] 17. Family Planning Australia, \"Contraception Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/contraception-2/",
+    "[p20] 18. Family Planning Australia, \"Contraceptive Injection Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/contraceptive-injection/",
+    "[p20] 19. Family Planning Australia, \"LARC Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/larc/",
+    "[p20] 20. Family Planning NSW, \"Long Acting Reversible Contraception (LARC),\" February 2020. [Online]. Available: https://www.fpnsw.org.au/factsheets/individuals/contraception/long-acting-reversible-contraception-larc",
+    "[p20] 21. Family Planning Australia, \"Progestogen-only Pills (Drospirenone) Clinical Fact Sheet,\" August 2025. [Online]. Available: https://intheknow.org.au/resources/hub/progestogen-only-pills-drospirenone/",
+    "[p20] 22. Family Planning Australia, \"Progestogen-only Pills (POP) Clinical Fact Sheet,\" August 2025. [Online]. Available: https://intheknow.org.au/resources/hub/progestogen-only-pills-pop/",
+    "[p20] 23. Family Planning Australia, \"Vaginal Ring (Nuvaring) Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/vaginal-ring/",
+    "[p20] 24. Family Planning Australia, \"Vaginal Ring Troubleshooting Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/vaginal-ring-troubleshooting/",
+    "[p20] 25. NSW Government Communities and Justice, \"Domestic, family and sexual violence,\" October 2025. [Online]. Available: https://dcj.nsw.gov.au/children-and-families/family-domestic-and-sexual-violence.html",
+    "[p20] 26. Pharmaceutical Society of Australia (PSA), \"Administering medicines by injection,\" 2026. [Online]. Available: https://www.psa.org.au/programs/administering-medicines-by-injection/",
+    "[p20] 27. Pharmaceutical Society of Australia (PSA), \"Guidelines for pharmacists administering medicines by injection,\" November 2020. [Online]. Available: https://my.psa.org.au/servlet/fileField?entityId=ka10o000000QN7DAAW&field=PDF_File_Member_Content Body s",
+    "[p20] 28. Therapeutic Guidelines, \"Sexual and Reproductive Health,\" 2023.",
+    "[p20] 29. The Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG), \"Contraception Clinical Guideline,\" 2024. [Online]. Available: https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinical-Guideline.pdf",
+    "[p20] 30. The Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG), \"Consensus Statement: Reducing Unintended Pregnancy for Australian Women Through Increased Access to Long-acting Reversible Contraceptive Methods,\" July 2017. [Online]. Available: https://ranzcog.edu.au/womens-health/statements-guidelines/"
+  ],
+  "open_questions": [
+    {
+      "id": "OQ-1",
+      "topic": "Table 1 rows where the estrogen dose column is missing in the text extraction",
+      "observed": "Rows print only the progestogen and brands: 'drospirenone 3000 Bella, Brooke, Rosie, Yana, Yaz' (low-dose group); 'desogestrel 150 Madeline, Marvelon', 'dienogest 2000 Valette', 'drospirenone 3000 Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena', 'gestodene 75 Minulet', 'norethisterone 1000 Brevinor-1, Norimin-1, Pirmella' (standard-dose group). The estrogen dose value may continue from the preceding row (ethinylestradiol 20 / ethinylestradiol 30 respectively) but this is NOT asserted; TX-2, TX-5, TX-6, TX-7, TX-8 and TX-10 carry confidence 'unclear'.",
+      "why_unclear": "Table row alignment in the text extraction is ambiguous; spec forbids silently reconciling.",
+      "source_page": 4
+    },
+    {
+      "id": "OQ-2",
+      "topic": "Triphasic Table 1 row alignment",
+      "observed": "'Phase 1 (6 pills): ethinylestradiol 30 + levonorgestrel 50 Logynon ED, Trifeme, Triquilar ED' / 'Phase 2 (10 pills: ethinylestradiol 40 + levonorgestrel 75' (opening parenthesis not closed as printed) / 'Phase 3 (10 pills): ethinylestradiol 30 + levonorgestrel 125'. Brand names appear only on the Phase 1 line; whether they apply to all phases is not stated.",
+      "why_unclear": "Wrapped/merged table cells and a printed typographical omission make brand-to-phase attribution ambiguous; TX-12 confidence 'medium'.",
+      "source_page": 4
+    },
+    {
+      "id": "OQ-3",
+      "topic": "Vaginal ring Table 1 row cell wrap",
+      "observed": "Extracted row reads 'ethinylestradiol 2.7 mg (15 mcg/24 hours) etonogestrel 11.7 mg (120 mcg/24 NuvaRing hours)' — 'hours)' appears after the brand name because of a wrapped cell.",
+      "why_unclear": "Read as ethinylestradiol 2.7 mg (15 mcg/24 hours) + etonogestrel 11.7 mg (120 mcg/24 hours), brand NuvaRing; confidence 'medium' pending visual check of the PDF table.",
+      "source_page": 4
+    },
+    {
+      "id": "OQ-4",
+      "topic": "Approved-medicine bullet list versus Table 1 rows (estradiol, estetrol)",
+      "observed": "Part A i prints 'Single or combined oral forms: • ethinylestradiol (35mcg or less) • levonorgestrel • norethisterone • drospirenone • nomegestrol • desogestrel • dienogest • gestodene', 'Injective form: • medroxyprogesterone (150 mg/mL)' and 'Combined intravaginal form: • ethinylestradiol+etonogestrel (2.7+11.7 mg) ring'; Table 1 additionally prints formulation rows containing estradiol 1500 + nomegestrol 2500 (Zoely) and estetrol 14200 (14.2 mg) + drospirenone 3000 (Nextstellis), neither estradiol nor estetrol being named in the Part A i bullet list.",
+      "why_unclear": "The instrument does not state whether the Table 1 estradiol/estetrol rows are inside the approved bullet list; both readings are recorded and escalated to hugh_to_confirm.",
+      "source_page": 4
+    },
+    {
+      "id": "OQ-5",
+      "topic": "No per-product dose or frequency printed",
+      "observed": "Table 1 prints formulation rows (estrogen dose, progestogen dose, brand name examples) only; the instrument prints no dose, frequency, duration or quantity instruction per product (apart from the resupply quantity limits in Appendix 1).",
+      "why_unclear": "Treatment rows therefore leave dose/frequency/duration/max_quantity/max_dose/quantity_to_supply empty rather than inferred from external references.",
+      "source_page": 4
+    },
+    {
+      "id": "OQ-6",
+      "topic": "No first-line agent designated",
+      "observed": "The instrument lists approved medicines and formulations but does not designate any medicine as first-line.",
+      "why_unclear": "first_line set to false for all treatment rows because no ranking is printed.",
+      "source_page": 4
+    },
+    {
+      "id": "OQ-7",
+      "topic": "Exact effective/commencement date",
+      "observed": "'2 Commencement — This instrument commences the day after notification.' The signature line prints 'Dr Sally Singleton, Acting Chief Health Officer, 10 April 2026'.",
+      "why_unclear": "The actual notification date (and therefore the commencement date) is not printed in the document; effective_date records the signature date plus the printed commencement rule.",
+      "source_page": 1
+    },
+    {
+      "id": "OQ-8",
+      "topic": "Legal basis provision citation differs between the title block and Schedule 1",
+      "observed": "Title block: 'made under the Medicines, Poisons and Therapeutic Goods Regulation 2008, Section 490A (Approvals of dealings by health practitioners – Act, s 20 (1) (c))'. Schedule 1 Introduction: 'made under schedule 490A of the Medicines, Poisons and Therapeutic Goods Regulation 2008'.",
+      "why_unclear": "Both printed citations are recorded verbatim in legal_basis; the instrument does not reconcile 'Section 490A' with 'schedule 490A'.",
+      "source_page": 1
+    },
+    {
+      "id": "OQ-9",
+      "topic": "Flowchart branch routing for breaks and emergency contraception",
+      "observed": "Page 9 prints the boxes 'If 2-4 weeks break (for OCP or vaginal ring) in the preceding 30 days, resupply 1 month of hormonal contraception and refer to GP.', 'If >2 weeks (for DMPA) or >4 weeks break (for OCP or vaginal ring), not eligible for resupply. Refer to GP.', 'Consider the need for emergency contraception and/or testing to exclude pregnancy', 'Advise patient to use additional contraception (eg barrier methods) until GP review.' alongside 'Yes' and 'No' labels in a multi-column layout.",
+      "why_unclear": "The text extraction does not preserve the flowchart connectors, so the exact order/parent of each box cannot be confirmed; they are modelled as one branch (PW-1-S8) reached when PW-1-S7 fails, confidence 'medium'.",
+      "source_page": 9
+    },
+    {
+      "id": "OQ-10",
+      "topic": "DMPA 25-39 age band is not in the flowchart age box",
+      "observed": "The flowchart asks only 'Is the patient aged between 18-49?' (page 9), while Part A ii and the Appendix 1 resupply box restrict DMPA/medroxyprogesterone to '25 years to 39 years' (pages 5, 10, 16).",
+      "why_unclear": "Both readings recorded: age_bounds 18-49 (page 5) plus DMPA-specific criteria INC-14/EXC-19. An evaluator following only the flowchart age box would pass a 40-49 year old requesting DMPA until reaching the resupply step.",
+      "source_page": 9
+    },
+    {
+      "id": "OQ-11",
+      "topic": "Criteria group composition (AND/OR semantics)",
+      "observed": "The flowchart applies its gates sequentially (each failed gate gives 'Not eligible for resupply ... Refer to GP'), and the continuous-use box prints its own 'OR'.",
+      "why_unclear": "Inclusion is modelled as all_of [INC-1..INC-6, INC-9..INC-14] plus a separate any_of pair [INC-7, INC-8]; the schema cannot express '(all_of group) AND (any_of pair)' as one criteria_group, so the any_of pair must be evaluated in addition to the all_of group. Exclusions are modelled as any_of across all EXC ids (each printed fail branch excludes independently).",
+      "source_page": 9
+    },
+    {
+      "id": "OQ-12",
+      "topic": "Gates where the document does not print the consequence of failure",
+      "observed": "No consequence is printed for: consent not obtained (PW-1-S9); STI screening not indicated (PW-2-S6); contraindication resources not consulted (PW-2-S7); patient history incomplete (PW-2-S1).",
+      "why_unclear": "on_fail recorded as 'unclear' per spec; the document's silence is recorded rather than inferred.",
+      "source_page": 9
+    },
+    {
+      "id": "OQ-13",
+      "topic": "referral block page span",
+      "observed": "Referral destinations and criteria are printed across pages 9, 10, 11, 12, 13, 14, 15, 16 and 17.",
+      "why_unclear": "The schema allows one shared provenance object for the referral block; page 9 (first page) is used and the span 9-17 is recorded here.",
+      "source_page": 9
+    },
+    {
+      "id": "OQ-14",
+      "topic": "No emergency (000 / emergency department) escalation pathway printed",
+      "observed": "The instrument contains no instruction to call 000 or refer to an emergency department; escalation options printed are GP, medical practitioner, health service, local hospital, sexual health clinic, community-based sexual violence support services and (for adverse events) the TGA.",
+      "why_unclear": "referral.emergency is left empty because the document genuinely prints none; local emergency escalation policy must be confirmed (hugh_to_confirm HTC-9).",
+      "source_page": 9
+    },
+    {
+      "id": "OQ-15",
+      "topic": "BMI threshold unit printed as 'km/m2'",
+      "observed": "'Do not resupply if BMI >= 35km/m2' — the unit is printed as km/m2 (kilometres per square metre), which is not a valid BMI unit.",
+      "why_unclear": "Transcribed exactly as printed; confidence 'unclear'; intended unit almost certainly kg/m2 but not asserted (hugh_to_confirm HTC-4).",
+      "source_page": 10
+    },
+    {
+      "id": "OQ-16",
+      "topic": "Action when the BMI threshold is met",
+      "observed": "Appendix 1 says only 'Do not resupply if BMI >= 35km/m2'; unlike the BP rule (where Appendix 2 says refer if BP remains elevated), no referral destination or further action is printed for BMI.",
+      "why_unclear": "PW-1-S11 BMI gate on_fail recorded as 'STOP' because the document states only that resupply must not occur.",
+      "source_page": 10
+    },
+    {
+      "id": "OQ-17",
+      "topic": "Two BP rules — hard threshold versus repeat reading",
+      "observed": "Page 10: 'Measure BP: Do not supply if BP > 145mmHg systolic or >90mmHg diastolic'. Page 14: 'a single elevated BP reading is not enough to classify an individual as hypertensive ... a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred ...' and 'BP should be monitored and recorded every 12 months.'",
+      "why_unclear": "Both readings are recorded (EXC-15, RF-13, RF-14, EXE-3, RF-32, PW-1-S11, PW-2-S3); the instrument does not state how the hard threshold interacts with the repeat-reading rule.",
+      "source_page": 10
+    },
+    {
+      "id": "OQ-18",
+      "topic": "Genitourinary symptom list has no printed action",
+      "observed": "'Presence of genitourinary symptoms that might suggest a STI: changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria.' — the document lists these symptoms but prints no explicit referral or escalation action for them.",
+      "why_unclear": "RF-26 records the symptom list verbatim with action REVIEW_GP mapped from the surrounding STI screening/seek-review guidance, confidence 'medium'.",
+      "source_page": 13
+    },
+    {
+      "id": "OQ-19",
+      "topic": "Discretionary (non-mandatory) reporting to Ahpra / ACT Health Services Commissioner",
+      "observed": "'Reports of unsafe practices, poor clinical practice or failure to adhere to the Code of Conduct may be reported to Ahpra and/or the ACT Health Services Commissioner.'",
+      "why_unclear": "Wording is discretionary ('may'), so it is not recorded as a required notification; notifiable.required reflects only the TGA adverse-event reporting requirement on page 5.",
+      "source_page": 8
+    },
+    {
+      "id": "OQ-20",
+      "topic": "Typographical error transcribed verbatim",
+      "observed": "Page 10 flowchart prints 'patient needs to be referred to their GP ore relevant health service for deep IM administration' ('ore' as printed).",
+      "why_unclear": "Transcribed verbatim rather than corrected, per the transcribe-exactly rule; later pages (11, 16) print the same sentence with 'or'.",
+      "source_page": 10
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "id": "HTC-1",
+      "item": "Exact commencement/effective date (instrument 'commences the day after notification'; signed 10 April 2026)",
+      "source_page": 1,
+      "reason": "Commencement date cannot be derived from the printed text; needed for go-live date gating and version control."
+    },
+    {
+      "id": "HTC-2",
+      "item": "Whether Zoely (estradiol 1500 + nomegestrol 2500) and Nextstellis (estetrol 14200 (14.2 mg) + drospirenone 3000) are within the authorisation, given Part A i names only ethinylestradiol as the oral estrogen",
+      "source_page": 4,
+      "reason": "Part A i approved-medicine bullet list and Table 1 rows differ; supply must not be enabled for a product that is not actually authorised."
+    },
+    {
+      "id": "HTC-3",
+      "item": "DMPA age band 25-39 years (inclusive) must be enforced in addition to the flowchart's 18-49 age gate",
+      "source_page": 10,
+      "reason": "The flowchart age box does not print the DMPA restriction; the engine must implement both checks (see OQ-10)."
+    },
+    {
+      "id": "HTC-4",
+      "item": "BMI threshold unit printed as '35km/m2' (presumed kg/m2)",
+      "source_page": 10,
+      "reason": "Unit as printed is not a valid BMI unit; intended unit must be confirmed before encoding the numeric check (see OQ-15)."
+    },
+    {
+      "id": "HTC-5",
+      "item": "Part B pharmacist training requirements: current Ahpra/Pharmacy Board registration plus one accredited course (PSA Contraception Essentials; Australasian College of Pharmacy Oral Contraceptives; JCU PC6100 + PC6200 with QUT Safe prescribing and quality use of medicines or JCU PC6300; or any other accredited training recognised or required by the Chief Health Officer)",
+      "source_page": 6,
+      "reason": "Supply is conditional on the individual pharmacist's training; per-operator verification needed before go-live."
+    },
+    {
+      "id": "HTC-6",
+      "item": "DMPA administration restricted to pharmacists who have completed the PSA Administering Medicines by Injection Course or a similar course approved by the Chief Pharmacist; otherwise refer for deep IM administration",
+      "source_page": 6,
+      "reason": "Per-pharmacist capability gate that changes the eligible pathway (supply vs refer); must be confirmed per operator."
+    },
+    {
+      "id": "HTC-7",
+      "item": "Part C premises standard: up-to-date Health Direct service availability listing and consulting-room requirements (sole use, fully enclosed/privacy, lighting, temperature, hand sanitisation, floor area)",
+      "source_page": 6,
+      "reason": "Supply is conditional on the pharmacy meeting Part C; site-level confirmation required."
+    },
+    {
+      "id": "HTC-8",
+      "item": "Part D record keeping: secure digital software, minimum seven-year retention, patient identification, date, pharmacist name and HPI-I, consent and referral records; consent-based sharing of the consultation record with the patient's usual treating medical practitioner within seven (7) days; My Health Record upload unless the patient requests otherwise",
+      "source_page": 7,
+      "reason": "Operational/local policy requirements that depend on the pharmacy's systems and workflow."
+    },
+    {
+      "id": "HTC-9",
+      "item": "Emergency escalation pathway (000 / emergency department) — the instrument prints none",
+      "source_page": 9,
+      "reason": "A local emergency escalation policy must be defined before go-live (see OQ-14)."
+    },
+    {
+      "id": "HTC-10",
+      "item": "Which UKMEC edition/version is applied (CoSRH 'UK Medical Eligibility Criteria for Contraceptive Use' 2025 is referenced; UKMEC 3 and 4 criteria are not reproduced in the instrument)",
+      "source_page": 12,
+      "reason": "Contraindication determination relies on an external table that the instrument does not print; version must be pinned."
+    },
+    {
+      "id": "HTC-11",
+      "item": "PBS Continued Dispensing Arrangements for supplying the contraceptive pill (mentioned as an option that may reduce cost to the patient)",
+      "source_page": 11,
+      "reason": "Claiming/eligibility logic is out of scope for this extraction (OpenScript private/non-PBS — D-001); local process must be confirmed."
+    },
+    {
+      "id": "HTC-12",
+      "item": "Professional indemnity insurance cover for administering medicines by injection ('It is advisable pharmacists contact their professional indemnity insurer to confirm they are covered')",
+      "source_page": 16,
+      "reason": "The document advises a per-pharmacist check; must be confirmed before DMPA administration is enabled."
+    },
+    {
+      "id": "HTC-13",
+      "item": "2-4 week break branch: resupply exactly '1 month of hormonal contraception' then refer to GP — pack-size handling for a 1-month supply",
+      "source_page": 9,
+      "reason": "Operational quantity limit must be encoded exactly as printed; interaction with pack sizes is not stated."
+    },
+    {
+      "id": "HTC-14",
+      "item": "Definition of 'the original manufacturer's pack' for patients 40-49 (OCP and vaginal ring): only one resupply permitted before GP review",
+      "source_page": 10,
+      "reason": "Pack size varies by brand/product and the instrument does not define it; quantity limit must be confirmed per brand."
+    },
+    {
+      "id": "HTC-15",
+      "item": "TGA AEMS adverse-event reporting workflow for uncommon, unexpected or serious adverse events (https://aems.tga.gov.au/)",
+      "source_page": 5,
+      "reason": "Notification requirement must be configured into the local reporting workflow before go-live."
+    },
+    {
+      "id": "HTC-16",
+      "item": "Sharing the consultation record with the patient's usual treating medical practitioner within 7 days is conditional on patient consent; secure digital messaging platform is 'considered best practice'",
+      "source_page": 7,
+      "reason": "Consent capture and messaging workflow are left to local policy."
+    }
+  ]
+}

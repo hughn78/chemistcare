@@ -1,0 +1,774 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf",
+    "pdf_sha256": "49c4b12e2a15b4c3cf6e689b1622db2dbfa48c3cec66c412fd29f7a26d6fe4a6",
+    "page_count": 7,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Chronic Conditions Management Pilot – Chronic Obstructive Pulmonary Disease (COPD) Monitoring Program – Pilot Clinical Protocol",
+    "instrument_version": "Pilot Clinical Protocol – V2 (document version history page is not present in the extracted text)",
+    "effective_date": "",
+    "legal_basis": "",
+    "supervision_model": "Not stated using 'collaborative'/'autonomous' prescribing terminology in the extracted text. The protocol requires that when modifying pharmacotherapy within the Program that has been prescribed by another healthcare provider, changes are attempted in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate), and that a copy of the patient's COPD Action Plan is provided to their usual healthcare provider and other relevant healthcare professionals involved in the patient's respiratory care (L: Collaborative care).",
+    "scope_summary": "Queensland Community Pharmacy Chronic Conditions Management Pilot clinical protocol for the Chronic Obstructive Pulmonary Disease (COPD) Monitoring Program. Eligibility is assessed at each consultation (patient must not meet any ineligibility criterion; the visible list starts with age <35 years, pregnancy, respiratory distress, exercise-related chest tightness without other COPD symptoms, and features of a respiratory condition other than COPD). Patients with symptoms and features of mild COPD and asthma (including co-existing asthma and COPD) are managed under the Improved Asthma Symptom Control Program protocol after confirming COPD Monitoring Program eligibility. Readable content covers non-pharmacological measures and optimising function (smoking/vaping cessation, immunisation, physical activity, pulmonary rehabilitation referral, diet/nutrition, weight management, lung cancer screening referral), pharmacotherapy for stable mild COPD as a three-step stepwise pathway per Therapeutic Guidelines: Respiratory (Step 1 short-acting bronchodilator therapy; Step 2 long-acting bronchodilator monotherapy; Step 3 long-acting bronchodilator dual therapy), inhaler considerations, management and treatment of COPD exacerbations (including an up-to-5-day prednis(ol)one self-initiation prescription with no repeats and antibiotic-restriction/referral rules), confirmation and communication of the management plan, collaborative care, and the start of clinical review and ongoing collaboration. NOTE: the text extraction is materially incomplete and glyph-corrupted - only 7 extraction pages were produced from a document whose footers show 'Page 14 of 27' etc., so large parts of the protocol (sections A-H, continuation of the ineligibility list, most of section M, appendices and reference list) are absent (see open_questions). Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Patient is aged 35 years or over (derived from the ineligibility criterion 'are aged <35 years'; no upper age bound appears in the extracted text).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "INC-2",
+        "text": "The patient does not meet any of the ineligibility criteria listed under 'Patients who are ineligible for the Program'; eligibility must be assessed at each consultation as eligibility may change due to changes in health status or demographic factors (previously eligible patients may become ineligible and previously ineligible patients may become eligible).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Patient has COPD managed under the Program, where 'Pharmacotherapy for stable mild COPD within the Program must be in accordance with the current online version of the Therapeutic Guidelines: Respiratory (Stable chronic obstructive pulmonary disease (COPD) - Stepwise management of stable COPD)'. Patients with symptoms and features of mild COPD and asthma (including co-existing asthma and COPD) are instead managed under the Improved Asthma Symptom Control Program clinical protocol, but COPD Monitoring Program eligibility must be confirmed before commencing treatment.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "are aged <35 years",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "are planning a pregnancy or are pregnant",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "are experiencing respiratory distress (e.g., unable to complete a whole sentence in one breath)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "during/after exercise experience chest tightness or discomfort (without other symptoms of COPD) - consider possibility of a cardiovascular condition/event",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "have clinical features, symptoms or findings suggestive of a respiratory condition other than COPD that is not suitable for management under the Program",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 35,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "Patients with symptoms and features of mild COPD and asthma (including those with a diagnosis of co-existing asthma and COPD) are managed under the clinical protocol for the Improved Asthma Symptom Control Program; confirm that the patient meets the eligibility criteria of the COPD Monitoring Program before commencing treatment.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Program eligibility assessment and referral (assessed at each consultation)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Eligibility for the Program. Eligibility for participation in the Chronic Obstructive Pulmonary Disease (COPD) Program must be assessed at each consultation, as eligibility may change due to changes in health status or demographic factors (i.e. patients who were previously eligible may become ineligible and patients who were ineligible may become eligible). Confirm the patient does not meet any ineligibility criterion. The visible ineligibility criteria are: are aged <35 years; are planning a pregnancy or are pregnant; are experiencing respiratory distress (e.g., unable to complete a whole sentence in one breath); during/after exercise experience chest tightness or discomfort (without other symptoms of COPD) - consider possibility of a cardiovascular condition/event; have clinical features, symptoms or findings suggestive of a respiratory condition other than COPD that is not suitable for management under the Program. The ineligibility list continues into content that is not present in this text extraction (see OQ-1). Manage patients with symptoms and features of mild COPD and asthma (including those with a diagnosis of co-existing asthma and COPD) under the clinical protocol for the Improved Asthma Symptom Control Program; confirm that the patient meets the eligibility criteria of the COPD Monitoring Program before commencing treatment.",
+          "gates": [
+            { "criterion": "Eligibility confirmed at this consultation and no ineligibility criterion is met (full ineligibility list must be applied - see OQ-1)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "REFER",
+          "description": "Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program. Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+          "gates": [
+            { "criterion": "Patient remains eligible for the Program and wishes to continue", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Non-pharmacological measures and optimising function",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "TREAT",
+          "description": "Smoking and vaping cessation, and immunisation. Detailed guidance for pharmacists supporting smoking cessation is contained in the Smoking Cessation Clinical Practice Guideline and supporting vaping cessation is contained in the E-cigarette and Vaping Cessation Guide. Immunisation: consider the immunisation status of patients with COPD, including for pneumococcal disease, RSV, COVID-19, influenza, pertussis and herpes zoster. Provide advice regarding the appropriateness based on the individual clinical circumstances, individual vaccine information provided by the TGA, current Australian Technical Advisory Group on Immunisation (ATAGI) advice and the current version of the Australian Immunisation Handbook (partially glyph-corrupted in the extraction).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 2, "section_heading": "Immunisation" }
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Optimising function - physical activity and referral for pulmonary rehabilitation. Many patients with COPD have a sedentary lifestyle and find physical activity difficult (part of this sentence is glyph-corrupted in the extraction); physical activity can improve exercise capacity and quality of life and reduce hospitalisations and improve quality of life. Encourage patients with COPD to undertake physical activity in line with recommendations for their age group in the Physical activity and exercise guidelines for all Australians; doing any amount of physical activity is better than none and patients should be encouraged to gradually build up to the recommendations. Encourage patients experiencing difficulty with physical activity to see a physiotherapist or exercise physiologist. Referral for pulmonary rehabilitation: pulmonary rehabilitation improves exercise capacity, mental health and quality of life regardless of COPD severity and can reduce the frequency of hospitalisations for exacerbations; encourage patients with COPD to participate in a pulmonary rehabilitation program when symptomatic and after an exacerbation; information about pulmonary rehabilitation programs (and other services including psychosocial support) available throughout Queensland, including how referrals can be made, can be found on the Lung Foundation Australia - Find a Service website.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 2, "section_heading": "Optimising function" }
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "Diet and nutrition, weight management, and referral for lung cancer screening. Malnutrition, obesity and poor nutritional status, generally resulting from suboptimal eating habits, sedentary lifestyle, smoking and corticosteroid use is common in patients with COPD, and has been shown to contribute to morbidity and mortality. Advice should focus on a balanced diet with foods from each of the 5 food groups in appropriate portions to maintain a healthy weight, in accordance with the Australian Dietary Guidelines. Weight management: encourage underweight and overweight patients to see a dietitian for tailored nutritional advice; detailed guidance for pharmacists supporting weight management is contained in the Management of Overweight and Obesity Clinical Practice Guideline. Referral for lung cancer screening: the screening criteria and program name are glyph-corrupted in the extraction (see OQ-2); eligible patients are referred using the National Lung Cancer Screening Program information for healthcare providers.",
+          "gates": [],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 3, "section_heading": "Weight management" }
+        }
+      ]
+    },
+    {
+      "id": "PW-3",
+      "name": "Pharmacotherapy for stable COPD, inhaler management, plan confirmation and communication",
+      "steps": [
+        {
+          "id": "PW-3-S1",
+          "order": 1,
+          "type": "TREAT",
+          "description": "I: Pharmacotherapy - stepwise pharmacotherapy for stable COPD. As COPD progresses, management using non-pharmacological measures alone may become inadequate and pharmacotherapy may be required to relieve symptoms, reduce the frequency of exacerbations and improve overall quality of life. Where pharmacotherapy is prescribed, the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review. Patients entering the program with an existing medicine regimen: ask for the patient's most recent COPD Action Plan (if they have one) and consider whether the most recently prescribed pharmacotherapy is appropriate for the patient's symptoms and medical history, and optimised for the patient including inhaler technique and adherence. When modifying pharmacotherapy within the Program that has been prescribed by another healthcare provider, attempt to make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate). Pharmacists may modify or deprescribe pharmacotherapy, particularly if the patient's response is inadequate (within appropriate clinical timeframes), the patient is experiencing intolerable/unmanageable adverse effects, the patient is unable to use the prescribed device correctly after appropriate training, or modification is clinically warranted and safe to do so; consider if the medicine is also used for another condition (e.g. maintenance oral corticosteroids for another condition). Pharmacotherapy for stable mild COPD within the Program must be in accordance with the current online version of the Therapeutic Guidelines: Respiratory (Stable chronic obstructive pulmonary disease (COPD) - Stepwise management of stable COPD), specifically: Step 1: Short-acting bronchodilator therapy; Step 2: Long-acting bronchodilator monotherapy; Step 3: Long-acting bronchodilator dual therapy. Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.",
+          "gates": [
+            { "criterion": "Pharmacotherapy sits within Step 1 to Step 3 of the Therapeutic Guidelines: Respiratory stepwise management of stable COPD, and includes only medicines able to be prescribed under the Program", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 3, "section_heading": "Stepwise pharmacotherapy for stable COPD" }
+        },
+        {
+          "id": "PW-3-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Key considerations for the stepwise pathway. The entry point to the stepwise pathway should be individualised to the patient's previous medical and medication history. Patients with a new diagnosis of COPD or managing COPD with non-pharmacological measures should generally initiate pharmacotherapy at Step 1. When commencing any medicine, patients should be advised to return if they experience adverse effects, an increase in symptom frequency or type, more severe symptoms or an exacerbation. Refer patients initiated on Step 3 Long-acting bronchodilator dual therapy (i.e. LAMA + LABA) where the condition has not stabilised or has worsened after 1 month to an appropriate healthcare provider for ongoing management.",
+          "gates": [
+            { "criterion": "Condition has stabilised within 1 month of initiating Step 3 long-acting bronchodilator dual therapy (LAMA + LABA)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Key considerations" }
+        },
+        {
+          "id": "PW-3-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "Inhaler considerations. The choice of medicine and device should consider patient preference and their ability to use the device correctly with appropriate training, considering factors such as the inspiratory effort required, patient age, inspiratory effort capability, developmental stage, cognition and dexterity, and the environmental impact of the device (when in use and when disposed of). Recommend use of a spacer for people using pressured metered dose inhalers (with a face mask if required) to reduce issues with coordination, maximise lung deposition and reduce adverse effects of some medicines. Minimise the number of inhalers prescribed, and the different types of inhaler devices, where possible to avoid confusion; if the use of more than one inhaler device type is unavoidable, provide clear instructions for correct device use and handling and any differences (inspiratory effort required, shaking, storage, cleaning, disposal). Demonstrate the correct use of the patient's prescribed device (which may differ between brands) using a placebo inhaler and provide an inhaler-specific checklist. Review inhaler technique and adherence at every opportunity, even if the same inhaler or inhaler device has been used long-term. Further resources: National Asthma Council of Australia Inhaler technique for people with asthma or COPD, and Lung Foundation inhaler technique checklist (device specific checklists).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Inhaler considerations" }
+        },
+        {
+          "id": "PW-3-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "J: Confirm management plan is appropriate. Consult the Therapeutic Guidelines: Respiratory and the Australian Medicines Handbook and other relevant references to confirm that management is appropriate, including for: suitability of inhaler device; contraindications and precautions; drug interactions; lactation status.",
+          "gates": [
+            { "criterion": "Management confirmed appropriate for inhaler device suitability, contraindications and precautions, drug interactions, and lactation status", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 6, "section_heading": "J: Confirm management plan is appropriate" }
+        },
+        {
+          "id": "PW-3-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "K: Communicate agreed management plan. Provide comprehensive advice (including supporting written information when required) to the patient regarding: individual product and medicine use (e.g., dosing and inhaler technique); how to manage adverse effects; non-pharmacological measures; how to self-manage their COPD (see Develop and implement a management plan); when to seek further care and/or treatment; when to return for clinical review. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources provided to patients (and/or caregivers if applicable), and compliance with all copyright conditions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 6, "section_heading": "K: Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-3-S6",
+          "order": 6,
+          "type": "REFER",
+          "description": "L: Collaborative care. Provide a copy of the patient's COPD Action Plan to their usual healthcare provider (and any other relevant healthcare professionals involved in the patient's respiratory care). The communication should also include (if appropriate): relevant medical history, results of any spirometry testing conducted and level of symptom control (CAAT score); changes to existing pharmacotherapy prescribed for COPD or new pharmacotherapy (including for exacerbations); a summary of advice provided to the patient including recommendations for multidisciplinary care and referrals; the next scheduled review appointment.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 6, "section_heading": "L: Collaborative care" }
+        }
+      ]
+    },
+    {
+      "id": "PW-4",
+      "name": "Recognition, self-management and review of COPD exacerbations, and ongoing clinical review",
+      "steps": [
+        {
+          "id": "PW-4-S1",
+          "order": 1,
+          "type": "TREAT",
+          "description": "Management and treatment of COPD exacerbations. Advise all patients on how to recognise an exacerbation, including the signs and symptoms that indicate the need for emergency medical care, and to commence treatment at the onset of symptoms; this should be included in the patient's COPD Action Plan. The source title immediately before 'Chapter 4: Management of exacerbations' is glyph-corrupted in the extraction, but the guidance has information to support pharmacists in assessing the severity of an exacerbation and differentiating conditions that may mimic or worsen exacerbation-like symptoms i.e., heart failure, pulmonary embolism.",
+          "gates": [],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Management and treatment of COPD exacerbations" }
+        },
+        {
+          "id": "PW-4-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Patient self-management of symptoms consistent with mild and moderate exacerbations, as per the Therapeutic Guidelines: Treatment of a COPD exacerbation. Instruct patients to use their bronchodilator as often as needed, clearly detailing the maximum dose that can be taken at one time and the maximum dose that can be taken in one 24-hour period (numeric values not printed in this document); ipratropium is contraindicated in patients taking a LAMA and has a slower onset of effect than salbutamol. Provide and dispense a prescription for up to 5 days treatment of prednis(ol)one with no repeats as part of the patient's written COPD Action Plan to self-initiate if symptoms persist or recur within four hours after reliever use. Instruct patients that they must arrange medical practitioner review as soon as possible after starting prednis(ol)one for the management of worsening COPD symptoms. Antibiotic therapy is only required when an exacerbation is triggered by a bacterial infection; refer a patient suspected of having a bacterial infection to an appropriate healthcare provider. Signs suggestive of bacterial infection or pneumonia include increased sputum volume, increased purulence and a possible change in colour, abnormally rapid breathing while at rest, fever and other infection signs (partly glyph-corrupted in the extraction); sputum colour (green) alone is not a reliable indicator of bacterial infection and needs to be interpreted in the context of the other signs and symptoms; sputum culture is not routinely recommended for COPD exacerbations. Advise all patients to return to the pharmacist (or their chosen healthcare provider) for review of their COPD Action Plan after an exacerbation, even if it was mild and self-managed.",
+          "gates": [
+            { "criterion": "Exacerbation is consistent with mild or moderate symptoms suitable for self-management under the written COPD Action Plan", "on_fail": "ESCALATE_000" },
+            { "criterion": "No signs suggestive of bacterial infection or pneumonia (otherwise refer to an appropriate healthcare provider)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+        },
+        {
+          "id": "PW-4-S3",
+          "order": 3,
+          "type": "REFER",
+          "description": "Advise patients to seek emergency care/call an ambulance (even if they have self-initiated prednis(ol)one) if: they have severe breathing difficulties; they have chest pain, 'fluttering' in the chest or an abnormally slow or racing heartbeat (arrythmia) (COPD exacerbations may present similarly to cardiovascular disease); they cannot manage or function at home e.g., can't walk between rooms, eat or sleep due to breathlessness; they cannot tolerate oral prednis(ol)one; they have drowsiness or confusion that may indicate hypercapnia or risk of hypercapnia; they notice the onset or worsening of central cyanosis; the oxygen saturation reading stated in the protocol (glyph-corrupted in the extraction, see OQ-3); they have leg swelling (peripheral oedema); they notice fluctuating blood pressure; bacterial infection or pneumonia is suspected; symptoms remain uncontrolled despite treatment with an inhaled bronchodilator and prednis(ol)one.",
+          "gates": [
+            { "criterion": "None of the 'seek emergency care/call an ambulance' criteria are present", "on_fail": "ESCALATE_000" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+        },
+        {
+          "id": "PW-4-S4",
+          "order": 4,
+          "type": "FOLLOW_UP",
+          "description": "Ongoing management and monitoring - M: Clinical review and ongoing collaboration. All patients should undergo regular clinical review to participate in the Program, as per the current online version of the Therapeutic Guidelines. The detailed review timeframes and collaboration requirements that follow this sentence are on pages that are not present in this text extraction (extraction page 7 is empty; see OQ-1).",
+          "gates": [
+            { "criterion": "Patient attends regular clinical review (required to participate in the Program)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 6, "section_heading": "Ongoing management and monitoring" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "short-acting bronchodilator (Step 1 therapy)",
+      "form": "inhaled (inhaler device, with spacer for pressurised metered dose inhalers)",
+      "strength": "not printed in this protocol",
+      "dose": "not printed in this protocol; patients are instructed to use their bronchodilator as often as needed with the maximum single dose and maximum 24-hour dose clearly detailed in the COPD Action Plan (values not printed)",
+      "route": "inhaled",
+      "frequency": "not printed in this protocol",
+      "duration": "ongoing until step up or review",
+      "max_quantity": "Prescription(s) including repeats should provide enough medicine for the period until the patient's next scheduled review",
+      "max_dose": "Maximum dose at one time and maximum dose in one 24-hour period must be clearly detailed (values not printed in this protocol)",
+      "quantity_to_supply": "Enough for the period until the patient's next scheduled review (including repeats)",
+      "notes": "Step 1 of the stepwise pathway per Therapeutic Guidelines: Respiratory (Stable COPD - Stepwise management of stable COPD). Patients with a new diagnosis of COPD or managing COPD with non-pharmacological measures should generally initiate pharmacotherapy at Step 1. Specific drug, strength, dose and frequency are delegated to the current online Therapeutic Guidelines: Respiratory (see OQ-6).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 3, "section_heading": "Stepwise pharmacotherapy for stable COPD" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "long-acting bronchodilator monotherapy (Step 2 therapy)",
+      "form": "inhaled",
+      "strength": "not printed in this protocol",
+      "dose": "not printed in this protocol",
+      "route": "inhaled",
+      "frequency": "not printed in this protocol",
+      "duration": "ongoing until step up or review",
+      "max_quantity": "Prescription(s) including repeats should provide enough medicine for the period until the patient's next scheduled review",
+      "max_dose": "",
+      "quantity_to_supply": "Enough for the period until the patient's next scheduled review (including repeats)",
+      "notes": "Step 2: Long-acting bronchodilator monotherapy. Entry point to the stepwise pathway is individualised to the patient's previous medical and medication history.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 3, "section_heading": "Stepwise pharmacotherapy for stable COPD" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "long-acting bronchodilator dual therapy (LAMA + LABA) (Step 3 therapy)",
+      "form": "inhaled",
+      "strength": "not printed in this protocol",
+      "dose": "not printed in this protocol",
+      "route": "inhaled",
+      "frequency": "not printed in this protocol",
+      "duration": "ongoing; refer if the condition has not stabilised or has worsened after 1 month",
+      "max_quantity": "Prescription(s) including repeats should provide enough medicine for the period until the patient's next scheduled review",
+      "max_dose": "",
+      "quantity_to_supply": "Enough for the period until the patient's next scheduled review (including repeats)",
+      "notes": "Step 3: Long-acting bronchodilator dual therapy. Refer patients initiated on Step 3 dual therapy (i.e. LAMA + LABA) where the condition has not stabilised or has worsened after 1 month to an appropriate healthcare provider for ongoing management. Combination products can be prescribed if appropriate but must only include medicines able to be prescribed under the Program.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 3, "section_heading": "Stepwise pharmacotherapy for stable COPD" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "prednis(ol)one",
+      "form": "oral (only the number of tablets required for up to a 5-day course)",
+      "strength": "not printed in this protocol",
+      "dose": "up to 5 days treatment (self-initiated course)",
+      "route": "oral",
+      "frequency": "as directed in the written COPD Action Plan for self-initiation",
+      "duration": "up to 5 days",
+      "max_quantity": "No repeats must be issued",
+      "max_dose": "up to 5-day course",
+      "quantity_to_supply": "Up to a 5-day course with no repeats, provided as part of the written COPD Action Plan",
+      "notes": "Provide and dispense a prescription for up to 5 days treatment of prednis(ol)one with no repeats as part of the patient's written COPD Action Plan to self-initiate if symptoms persist or recur within four hours after reliever use. Patients must arrange medical practitioner review as soon as possible after starting prednis(ol)one for the management of worsening COPD symptoms. Patients who cannot tolerate oral prednis(ol)one require emergency care/call an ambulance. Consider whether maintenance oral corticosteroids are used for another condition when adjusting medicines. No tablet strength or count is printed in this protocol (see OQ-7).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "ipratropium",
+      "form": "inhaled",
+      "strength": "not printed in this protocol",
+      "dose": "not printed in this protocol",
+      "route": "inhaled",
+      "frequency": "not printed in this protocol",
+      "duration": "not printed in this protocol",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Ipratropium is contraindicated in patients taking a LAMA and has a slower onset of effect than salbutamol. Named only as a caution within the exacerbation self-management section; no dose is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Antibiotic therapy is only required when an exacerbation is triggered by a bacterial infection. A patient suspected of having a bacterial infection must be referred to an appropriate healthcare provider for review (the extraction shows the antibiotic detail in a glyph-corrupted sentence referencing external guidance). Signs suggestive of bacterial infection or pneumonia include increased sputum volume, increased purulence and a possible change in colour, abnormally rapid breathing while at rest and fever (partly glyph-corrupted); sputum colour alone is not a reliable indicator; sputum culture is not routinely recommended for COPD exacerbations. No antibiotic drug, dose or duration is printed in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Advise patients to seek emergency care/call an ambulance (even if they have self-initiated prednis(ol)one): they have severe breathing difficulties",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "they have chest pain, 'fluttering' in the chest or an abnormally slow or racing heartbeat (arrythmia) (COPD exacerbations may present similarly to cardiovascular disease)",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "they cannot manage or function at home e.g., can't walk between rooms, eat or sleep due to breathlessness",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "they cannot tolerate oral prednis(ol)one",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "they have drowsiness or confusion that may indicate hypercapnia or risk of hypercapnia",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "they notice the onset or worsening of central cyanosis",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "oxygen saturation reading outside the threshold stated in the protocol (source text glyph-corrupted: 'oxygen (cid:6)(cid:21)(cid:0)(cid:3) S2 (cid:28) ... V (cid:8) R ...' - numeric threshold not recoverable from this extraction, see OQ-3)",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "low",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "they have leg swelling (peripheral oedema)",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "they notice fluctuating blood pressure",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "bacterial infection or pneumonia is suspected (listed among criteria to seek emergency care/call an ambulance; the protocol also instructs: refer a patient suspected of having a bacterial infection to an appropriate healthcare provider)",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "symptoms remain uncontrolled despite treatment with an inhaled bronchodilator and prednis(ol)one",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "are aged <35 years (ineligible for the Program)",
+      "structured": { "parameter": "age", "operator": "<", "value": 35, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "are planning a pregnancy or are pregnant",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "are experiencing respiratory distress (e.g., unable to complete a whole sentence in one breath) - also renders the patient ineligible for the Program",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "during/after exercise experience chest tightness or discomfort (without other symptoms of COPD) - consider possibility of a cardiovascular condition/event",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "have clinical features, symptoms or findings suggestive of a respiratory condition other than COPD that is not suitable for management under the Program",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "initiated on Step 3 Long-acting bronchodilator dual therapy (i.e. LAMA + LABA) where the condition has not stabilised or has worsened after 1 month - refer to an appropriate healthcare provider for ongoing management",
+      "structured": { "parameter": "months on Step 3 dual therapy without stabilisation or with worsening", "operator": ">=", "value": 1, "unit": "months" },
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Key considerations" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "when commencing any medicine, the patient experiences adverse effects, an increase in symptom frequency or type, more severe symptoms, or an exacerbation (patients are advised to return)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Key considerations" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "signs suggestive of bacterial infection or pneumonia: increased sputum volume, increased purulence and a possible change in colour, abnormally rapid breathing while at rest, and fever/other infection signs (partly glyph-corrupted in the extraction) - refer to an appropriate healthcare provider; sputum colour alone is not a reliable indicator and must be interpreted in context; sputum culture is not routinely recommended for COPD exacerbations",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "patient's usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program",
+      "patient's usual healthcare provider and other relevant healthcare professionals involved in respiratory care: copy of the COPD Action Plan plus medical history, spirometry results and symptom control (CAAT score), pharmacotherapy changes, summary of advice and referrals, next scheduled review appointment (L: Collaborative care)",
+      "physiotherapist or exercise physiologist for patients experiencing difficulty with physical activity",
+      "dietitian for underweight and overweight patients for tailored nutritional advice",
+      "pulmonary rehabilitation program when symptomatic and after an exacerbation (Lung Foundation Australia - Find a Service, which also lists other services including psychosocial support)",
+      "National Lung Cancer Screening Program (criteria glyph-corrupted in the extraction - see OQ-2)",
+      "appropriate healthcare provider for a patient suspected of having a bacterial infection",
+      "original prescriber or the patient's usual healthcare provider when modifying pharmacotherapy prescribed by another healthcare provider"
+    ],
+    "urgent": [
+      "appropriate healthcare provider for ongoing management for patients initiated on Step 3 long-acting bronchodilator dual therapy (LAMA + LABA) where the condition has not stabilised or has worsened after 1 month",
+      "medical practitioner review as soon as possible after starting prednis(ol)one for the management of worsening COPD symptoms",
+      "appropriate healthcare provider where symptoms remain uncontrolled despite treatment with an inhaled bronchodilator and prednis(ol)one"
+    ],
+    "emergency": [
+      "emergency services / call an ambulance (even if the patient has self-initiated prednis(ol)one) for: severe breathing difficulties; chest pain, 'fluttering' in the chest or an abnormally slow or racing heartbeat; inability to manage or function at home; inability to tolerate oral prednis(ol)one; drowsiness or confusion indicating hypercapnia or risk of hypercapnia; onset or worsening of central cyanosis; the oxygen saturation threshold stated in the protocol (glyph-corrupted); leg swelling (peripheral oedema); fluctuating blood pressure; suspected bacterial infection or pneumonia; symptoms uncontrolled despite an inhaled bronchodilator and prednis(ol)one",
+      "usual healthcare provider (or emergency services, if required) when the patient is, or becomes, ineligible - comprehensive clinical handover"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+  },
+  "review_followup": [
+    {
+      "when": "At each consultation",
+      "what": "Eligibility for participation in the COPD Program must be assessed at each consultation, as eligibility may change due to changes in health status or demographic factors.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "when": "Until the patient's next scheduled review (at each prescribing decision)",
+      "what": "Where pharmacotherapy is prescribed, the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 3, "section_heading": "I: Pharmacotherapy" }
+    },
+    {
+      "when": "After commencing any medicine",
+      "what": "Patients should be advised to return if they experience adverse effects, an increase in symptom frequency or type, more severe symptoms or an exacerbation.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Key considerations" }
+    },
+    {
+      "when": "After 1 month on Step 3 long-acting bronchodilator dual therapy",
+      "what": "Refer patients where the condition has not stabilised or has worsened after 1 month to an appropriate healthcare provider for ongoing management.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Key considerations" }
+    },
+    {
+      "when": "As soon as possible after starting prednis(ol)one",
+      "what": "Instruct patients that they must arrange medical practitioner review as soon as possible after starting prednis(ol)one for the management of worsening COPD symptoms.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "when": "After any exacerbation, even if it was mild and self-managed",
+      "what": "Advise all patients to return to the pharmacist (or their chosen healthcare provider) for review of their COPD Action Plan after an exacerbation.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 5, "section_heading": "Patient self-management of symptoms consistent with mild and moderate exacerbations" }
+    },
+    {
+      "when": "At every opportunity",
+      "what": "Review inhaler technique and adherence, even if the same inhaler or inhaler device has been used long-term.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 4, "section_heading": "Inhaler considerations" }
+    },
+    {
+      "when": "Regular clinical review (required to participate in the Program)",
+      "what": "All patients should undergo regular clinical review to participate in the Program, as per the current online version of the Therapeutic Guidelines. Detailed review timeframes are not present in this text extraction (see OQ-1).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 6, "section_heading": "Ongoing management and monitoring" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\copd-protocol.pdf", "page": 0, "section_heading": "" }
+  },
+  "references": [],
+  "open_questions": [
+    {
+      "topic": "Extraction materially incomplete (7 extraction pages from a document footered 'of 27')",
+      "observed": "The extracted text has 7 pages of which page 7 is empty; page footers read 'Page 14 of 27', 'Page 15 of 27', 'Page 16 of 27', 'Page 17 of 27'. Sections A to H (program overview, patient history, physical examination, spirometry, symptom assessment), the continuation of the ineligibility list, most of section M (clinical review timeframes), the appendices and the reference list are absent. Provenance pages in this file use extraction page indices 1-7 (not the printed page numbers).",
+      "why_unclear": "Source text available to this extraction is partial; absent content could not be coded rather than invented.",
+      "source_page": 1
+    },
+    {
+      "topic": "Glyph corruption ((cid:NN) sequences) makes several decisions unreadable",
+      "observed": "Large passages render as (cid:...) codes, including: the oxygen saturation emergency threshold on extraction page 5; the lung cancer screening referral criteria and program name on extraction page 3; parts of the bacterial-infection sign list on extraction page 5; parts of the smoking cessation, immunisation (ATAGI/Australian Immunisation Handbook) and physical activity sentences on extraction page 2; and the source title before 'Chapter 4: Management of exacerbations' on extraction page 4.",
+      "why_unclear": "Embedded font encoding was not resolved by the text extractor; values were not guessed.",
+      "source_page": 5
+    },
+    {
+      "topic": "Oxygen saturation emergency threshold not recoverable",
+      "observed": "The emergency/call-an-ambulance list contains an item beginning 'oxygen (cid:6)(cid:21) S2 (cid:28) ... V (cid:8) R ...' which almost certainly states an SpO2 threshold, but the number is not recoverable. Recorded as RF-7 with confidence 'low' and no structured value.",
+      "why_unclear": "Numeric threshold is required to implement an automated emergency check.",
+      "source_page": 5
+    },
+    {
+      "topic": "Ineligibility list truncated",
+      "observed": "Only the first five ineligibility bullets are present (aged <35 years; pregnancy; respiratory distress; exercise-related chest tightness; other respiratory condition). Comparable protocols (see the Improved Asthma Symptom Control Program protocol) contain far longer lists covering exacerbation history, comorbidities, spirometry findings and specialist treatment - none of which appear here.",
+      "why_unclear": "List continuation sits on pages not present in this extraction.",
+      "source_page": 1
+    },
+    {
+      "topic": "No upper age bound printed",
+      "observed": "Only a minimum age is stated ('are aged <35 years' is ineligible), so age_bounds.max_years = null.",
+      "why_unclear": "Document (as extracted) states only a lower bound; an upper bound may exist on missing pages.",
+      "source_page": 1
+    },
+    {
+      "topic": "Legal basis and effective date not printed",
+      "observed": "No regulation, poisons schedule provision or other legal instrument is cited, and no version history/copyright page is present in the extraction (cover shows only 'Pilot Clinical Protocol - V2'); protocol.legal_basis and protocol.effective_date left empty.",
+      "why_unclear": "Nothing in the extracted text to attribute to a page.",
+      "source_page": 1
+    },
+    {
+      "topic": "Bronchodilator maximum doses not printed",
+      "observed": "Patients must be instructed to use their bronchodilator as often as needed, with 'the maximum dose that can be taken at one time, and the maximum dose that can be taken in one 24-hour period' clearly detailed - but no numbers are printed; they are delegated to Therapeutic Guidelines: Treatment of a COPD exacerbation.",
+      "why_unclear": "Required numeric limits live in an external online guideline.",
+      "source_page": 5
+    },
+    {
+      "topic": "Prednis(ol)one regimen detail not printed",
+      "observed": "'up to 5 days treatment of prednis(ol)one with no repeats' self-initiated if symptoms persist or recur within four hours after reliever use - no tablet strength, dose per day or tablet count is printed, and no appropriateness criteria (age, comorbidity, access) are given for issuing the prescription.",
+      "why_unclear": "Quantity and dosing detail absent from the protocol text.",
+      "source_page": 5
+    },
+    {
+      "topic": "Stepwise drug, strength and dose detail not printed",
+      "observed": "Step 1 (short-acting bronchodilator therapy), Step 2 (long-acting bronchodilator monotherapy) and Step 3 (long-acting bronchodilator dual therapy) are named without any drug, strength, dose or frequency; these are delegated to the current online Therapeutic Guidelines: Respiratory (Stable COPD - Stepwise management of stable COPD).",
+      "why_unclear": "Class-level steps only; no prescription-ready detail in this document.",
+      "source_page": 3
+    },
+    {
+      "topic": "Reference list absent (in-text numerals unresolved)",
+      "observed": "In-text citation numerals (1, 2, 3, 4, 6, 11, 21, 22, 23, 24, 25, 26, 27) appear throughout, but the bibliography pages are not in the extraction, so references was left as an empty list rather than guessed.",
+      "why_unclear": "Citations cannot be resolved to sources without the reference list pages.",
+      "source_page": 2
+    },
+    {
+      "topic": "Notifiable conditions not visible",
+      "observed": "The extracted pages do not mention notifiable conditions, GP notification or Australian Immunisation Register/AIR notification, although immunisation status is considered; content covering this (if any) may be on absent pages.",
+      "why_unclear": "Document (as extracted) is silent, so notifiable.required set to null with no page-attributable statement.",
+      "source_page": 2
+    },
+    {
+      "topic": "CAAT score instrument not defined in extracted text",
+      "observed": "L: Collaborative care requires reporting 'level of symptom control (CAAT score)', but the assessment instrument and its thresholds appear on absent pages.",
+      "why_unclear": "Acronym used without definition in the extracted content.",
+      "source_page": 6
+    },
+    {
+      "topic": "Antibiotic prescribing authority unclear",
+      "observed": "The protocol states antibiotic therapy is only required when an exacerbation is triggered by a bacterial infection and instructs referral of suspected bacterial infection; the underlying guidance sentence is glyph-corrupted and it is not stated whether pharmacists may prescribe antibiotics under the Program.",
+      "why_unclear": "Prescribing vs referral-only position cannot be determined from the extracted text.",
+      "source_page": 5
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Re-extract this PDF with a renderer/OCR path that resolves the embedded font glyph codes and captures all 27 printed pages, then re-run extraction (decision-critical values such as the oxygen saturation emergency threshold, lung cancer screening criteria and the full ineligibility list are unrecoverable from the current text).",
+      "source_page": 5,
+      "reason": "The current text file is partial (7 pages, page 7 empty) and heavily (cid:NN) corrupted; this JSON is explicitly a best-effort coding of the readable content."
+    },
+    {
+      "item": "Full ineligibility list for the COPD Monitoring Program - only five criteria are visible in the extraction (aged <35 years, pregnancy, respiratory distress, exercise-related chest tightness without other COPD symptoms, features of another respiratory condition).",
+      "source_page": 1,
+      "reason": "Eligibility gate PW-1-S1 cannot be implemented until the complete list is confirmed."
+    },
+    {
+      "item": "Oxygen saturation (SpO2) threshold that triggers emergency care/call an ambulance.",
+      "source_page": 5,
+      "reason": "Glyph-corrupted in the extraction; required for a structured emergency rule (RF-7 currently has no structured value)."
+    },
+    {
+      "item": "National Lung Cancer Screening Program referral criteria (sentence glyph-corrupted) and eligibility for referral from the Program.",
+      "source_page": 3,
+      "reason": "Referral rule cannot be reproduced faithfully from the current text."
+    },
+    {
+      "item": "Pinned Therapeutic Guidelines: Respiratory (Stable COPD - Stepwise management of stable COPD) and (Treatment of a COPD exacerbation): drugs, strengths, doses, frequencies, and Step 1-3 definitions.",
+      "source_page": 3,
+      "reason": "All pharmacotherapy detail is delegated to the current online guideline; must be pinned before go-live."
+    },
+    {
+      "item": "Prednis(ol)one 5-day self-initiated prescription details: tablet strength, dose per day, total tablets, appropriateness criteria for issuing it, and no-repeat supply arrangements.",
+      "source_page": 5,
+      "reason": "Quantity and dosing are not printed; this is a controlled prescribing decision."
+    },
+    {
+      "item": "Bronchodilator maximum single dose and maximum 24-hour dose to be printed in each COPD Action Plan, plus the ipratropium/LAMA interaction counselling detail.",
+      "source_page": 5,
+      "reason": "The protocol requires these numbers to be clearly detailed but does not print them."
+    },
+    {
+      "item": "Clinical review timeframes under 'M: Clinical review and ongoing collaboration' (the sentence starts on extraction page 6; the detail is on absent pages), including how often a patient must be reviewed to remain a Program participant.",
+      "source_page": 6,
+      "reason": "Review cadence is a core workflow rule and is missing from the extracted content."
+    },
+    {
+      "item": "Provenance page numbering convention: this file uses extraction page indices 1-7, while the document footers show printed pages 14-17 of 27. Confirm whether re-extraction should renumber provenance to printed pages.",
+      "source_page": 1,
+      "reason": "Determines whether citations remain stable across re-extractions."
+    },
+    {
+      "item": "Legal basis / authorising instrument for the Queensland Community Pharmacy Chronic Conditions Management Pilot COPD Monitoring Program, and the protocol's effective date (no version history page present in the extraction).",
+      "source_page": 1,
+      "reason": "protocol.legal_basis and protocol.effective_date are empty pending confirmation."
+    },
+    {
+      "item": "COPD Action Plan template and mandatory contents (referenced throughout but reproduced only as requirements to communicate it), plus the CAAT symptom-control instrument and thresholds.",
+      "source_page": 6,
+      "reason": "Required outputs of every consultation are defined elsewhere."
+    },
+    {
+      "item": "Antibiotic therapy position: is pharmacist prescribing permitted for an exacerbation triggered by bacterial infection, or is referral to an appropriate healthcare provider always required?",
+      "source_page": 5,
+      "reason": "The governing sentence is glyph-corrupted; the distinction changes the pathway gate in PW-4-S2."
+    },
+    {
+      "item": "Professional discretion / supervision clause wording for this protocol (not present in the extracted pages) and how discretion interacts with automated eligibility and emergency checks.",
+      "source_page": 1,
+      "reason": "supervision_model was summarised from collaborative-care requirements only."
+    }
+  ]
+}

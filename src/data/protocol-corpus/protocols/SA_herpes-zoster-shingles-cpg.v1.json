@@ -1,0 +1,611 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf",
+    "pdf_sha256": "795cfda30fa9ef0e1da97f7176b9f645d020471070f23810f8ebb5a002a81056",
+    "page_count": 14,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Herpes Zoster (Shingles) - Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.",
+    "supervision_model": "Authorised pharmacist prescribing: the pharmacist must be included on the register of authorised pharmacists and the drug must be prescribed in accordance with the Community Pharmacist Prescribing Code (regulation 17A of the Controlled Substances (Poisons) Regulations 2011). Pharmacists are advised to exercise professional discretion and judgement; the guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.",
+    "scope_summary": "SA Health clinical practice guideline issued under the Community Pharmacy Expanded Scope of Practice Initiative for assessment and management of herpes zoster (shingles) by authorised pharmacist prescribers. Service restricted to patients aged 18 years or over. The guideline prints no drug doses: supportive management covers lesion care, transmission precautions and zoster vaccination advice, and pharmacotherapy is delegated to the Therapeutic Guidelines: Shingles (Herpes Zoster) for antiviral therapy (indicated for immunocompetent adults presenting within 72 hours of rash onset, all immunocompromised patients regardless of time lapsed, and zoster ophthalmicus regardless of time lapsed) and to the Therapeutic Guidelines analgesia sections for mild nociceptive pain (oral paracetamol or NSAIDs); neuropathic pain or moderate to severe nociceptive pain requires referral to a medical practitioner. It sets out red flags for urgent emergency department referral (eye or ear symptoms; neurological symptoms; severe headache, fever with facial involvement), urgent referral to a GP within 24 hours, and initial treatment with concurrent referral, plus complications of HZ and pregnancy triggers. Confirmatory pathology testing (initiated by a medical practitioner) is required where diagnosis is uncertain or the patient has been previously vaccinated against HZ. Clinical review is recommended 48-72 hours after initial presentation. Acknowledges the Queensland Community Pharmacy Scope of Practice Pilot Herpes Zoster (Shingles) Clinical Practice Guideline v1.1 as its basis."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 3, "section_heading": "" }
+      },
+      {
+        "id": "INC-2",
+        "text": "a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 2, "section_heading": "Authorisation" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Eye or ear symptoms",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Neurological symptoms",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Severe headache, fever with facial involvement.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "The diagnosis is unclear, including if the patient presents with an atypical cutaneous presentation",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "The patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Antiviral treatment is indicated but the patient is allergic to valaciclovir, famciclovir and/or aciclovir",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "The condition does not respond to optimal treatment or worsens.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 3, "section_heading": "" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 3, "section_heading": "" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Herpes zoster (shingles) assessment and management pathway",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: Urgent referral to an emergency department - patient may make their own way to the emergency department: Eye or ear symptoms; Neurological symptoms; Severe headache, fever with facial involvement. Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours: The diagnosis is unclear, including if the patient presents with an atypical cutaneous presentation; The patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history); Antiviral treatment is indicated but the patient is allergic to valaciclovir, famciclovir and/or aciclovir; The condition does not respond to optimal treatment or worsens.",
+          "gates": [
+            { "criterion": "No 'Red flag' warning signs necessitating referral to emergency medical care are present (eye or ear symptoms; neurological symptoms; severe headache, fever with facial involvement)", "on_fail": "REFER" },
+            { "criterion": "The diagnosis is clear and the presentation is not atypical, and no trigger for urgent referral to a general practitioner within 24 hours is present (pregnancy without a past history of VZV or uncertain history; allergy to valaciclovir, famciclovir and/or aciclovir when antiviral treatment is indicated; condition does not respond to optimal treatment or worsens)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Treat (if clinically appropriate) and concurrently refer: Provide initial treatment (antiviral therapy and pain relief) and concurrently refer to a general practitioner (or other medical practitioner where appropriate) in the following situations: The patient is immunocompromised; The patient presents with superinfection of herpes zoster (HZ) skin lesions; The patient presents with a multidermatomal rash or disseminated zoster; The patient presents with complications of HZ, including postherpetic neuralgia (PHN) or specific zoster syndromes; Patient presents with HZ affecting the face or genitals; Pain management is required for neuropathic pain or moderate to severe nociceptive pain associated with shingles or PHN; The patient is pregnant and has a definite history of previous VZV infection; The patient has been previously vaccinated against HZ.",
+          "gates": [
+            { "criterion": "None of the treat-and-concurrently-refer situations is present (immunocompromised; superinfection of HZ skin lesions; multidermatomal rash or disseminated zoster; complications of HZ including PHN or specific zoster syndromes; HZ affecting the face or genitals; pain management required for neuropathic pain or moderate to severe nociceptive pain associated with shingles or PHN; pregnant with a definite history of previous VZV infection; previously vaccinated against HZ) - if present, provide initial treatment (antiviral therapy and pain relief) and concurrently refer", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Key points: Herpes zoster (HZ) can occur in anyone who has previously been infected with varicella zoster virus (VZV) at any age, and the risk increases with age (3, 4). Early identification and management with antivirals and analgesia (within 72 hours of the onset of the rash) reduces the acute pain, rash duration, viral shedding and potential for ocular complications of HZ (6, 7). Vaccination is the most effective prevention for HZ and its complications (3, 6). The National Immunisation Program (NIP) recommends HZ vaccination for patients at risk (1). Under the South Australian Public Health Act 2011, VZV infection (chicken pox or shingles) is a pathological diagnosis notifiable condition; clinical notification is generally not required. When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Key points" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs: Typical presentations of HZ can be diagnosed based on the patient history and examination for the characteristic appearance and distribution of the rash (2-4, 6, 14). The clinical presentation will vary depending on the patient's age, general health and affected dermatome (2). Rural communities and Aboriginal and Torres Strait Islander people in South Australia are more likely to present late, atypically, or with complications of herpes zoster due to systemic healthcare access barriers.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 6, "section_heading": "Gather information and assess patient's needs" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Presenting signs and symptoms - Prodromal symptoms: Prodromal symptoms may be observed between 48 to 72 hours before the localised, characteristic vesicular rash becomes evident (1, 2, 8, 14): localised nerve pain (usually described as stabbing, prickling or burning); lethargy, fever, headache; abnormal skin sensations such as burning, itching, hyperesthesia and/or paraesthesia; photophobia (approximately 80% of cases) (2, 6, 14). Rash: The HZ rash is typically unilateral with a dermatomal distribution and distinct anterior and posterior midline cut-offs, however some satellite lesions may also appear (1, 2, 7, 8, 14). New lesions will continue to erupt for 3 to 5 days within the locality of the affected nerve, becoming pustular, before scabbing and crusting over between 7 to 10 days (2, 4, 6, 14). The most commonly affected areas are the chest, neck, forehead (ophthalmic) and lumbar/sacral sensory nerve supply regions (2, 6, 8, 14). When the ocular nerves are affected (herpes zoster ophthalmicus), the patient will present with a blistering rash around the eye/eyelid with associated pain, swelling and redness (8, 14). Urgent referral to a medical practitioner is required. If the facial nerve is affected (herpes zoster oticus/Ramsay Hunt syndrome), symptoms include earache, blistering in and around the ear canal, with or without external ear and facial paralysis (14).",
+          "gates": [
+            { "criterion": "No eye or ear involvement (herpes zoster ophthalmicus or facial nerve involvement/Ramsay Hunt syndrome) - urgent referral to a medical practitioner is required when the ocular nerves are affected", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 6, "section_heading": "Presenting signs and symptoms" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Complications of HZ: Complications occur in approximately 13% to 26% of patients with HZ (most prevalent in older people and those who are immunocompromised) and will require referral to a medical practitioner at presentation or at any stage if a complication develops (1, 6). Postherpetic neuralgia (PHN): neuropathic pain that persists for at least 3 months beyond the duration of the rash or reoccurs (occurs in 10 to 50% of patients, with the incidence increasing with age) (1, 4, 6, 8, 15); postherpetic pain may be sharp/shooting and intermittent, or described as constant burning, often with extreme sensitivity to touch (allodynia) (2, 15, 16). Herpes zoster ophthalmicus: HZ affecting the ophthalmic branch of the trigeminal nerve with a high incidence of eye complications (6, 15); occurs in 10-25% of cases and commonly causes keratitis (approximately two thirds of cases) as well as conjunctivitis, uveitis, retinitis and glaucoma (6); vesicles on the nose have been found to be predictive of eye involvement (6). Herpes zoster oticus (Ramsay Hunt syndrome): HZ affecting the facial nerve resulting in ear pain, taste loss, facial weakness or paralysis, and other neurological symptoms (6, 8). Disseminated zoster (VZV dissemination): whilst most individuals have some lesions external to the primary dermatome, disseminated zoster is defined as 20 lesions outside of the dermatome and may be clinically indistinguishable from varicella infection (4); viral dissemination to the central nervous system and viscera (lungs, gut, liver and brain) may occur; occurs most frequently in immunocompromised patients, although rare overall (1). Other complications: neurological complications such as meningoencephalitis and myelitis (particularly in the elderly); secondary bacterial skin infections (referral to a medical practitioner for swab and culture is required); scarring; pneumonia (1).",
+          "gates": [
+            { "criterion": "No complications of HZ are present at presentation and none develop at any stage (complications require referral to a medical practitioner at presentation or at any stage)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 6, "section_heading": "Complications of HZ" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "HZ in pregnancy: Pregnant women who are exposed to VZV (chicken pox or HZ) for the first time (no or uncertain history of previous chicken pox infection) may develop chicken pox which can have serious consequences, including maternal mortality and morbidity, fetal varicella syndrome and the associated abnormalities (10, 17). Urgent referral to a medical practitioner is required as zoster immunoglobulin (ZIG) should be given to all seronegative women within 96 hours (1). Unlike chicken pox, it is thought that HZ contracted during a healthy pregnancy is not associated with intrauterine infection or an increased fetal risk (10).",
+          "gates": [
+            { "criterion": "No first-time VZV exposure in pregnancy (no or uncertain history of previous chicken pox infection) - urgent referral to a medical practitioner is required so zoster immunoglobulin (ZIG) can be given to all seronegative women within 96 hours", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "HZ in pregnancy" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "HISTORY",
+          "description": "Patient history: Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and breastfeeding status (if applicable); nature, severity and frequency of symptoms; nature of rash (distribution, appearance, number of lesions); onset and duration of symptoms; precipitating and relieving factors; history of VZV infection; underlying medical conditions e.g., immunocompromise (auto-immune diseases including diabetes, rheumatoid arthritis, HIV, cancer, conditions treated with immune suppressants, or renal impairment); current medications (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); medication and other strategies tried to treat current symptoms; drug allergies/adverse drug effects; immunisation status as per the Australian Immunisation Handbook (HZ and varicella vaccinations). Aboriginal and Torres Strait Islander patients: Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (9). Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 8, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EXAMINATION",
+          "description": "Examination: Apply standard and contact infection precautions when examining patients. Conduct assessment of vital signs - temperature, blood pressure, heart rate, hydration status. Examination of the rash and documentation of its characteristics and location, as well as any signs of complications is important for the diagnosis of HZ and the exclusion of other conditions with similar presentations. Laboratory confirmation is generally not required for typical presentations and uncomplicated cases of HZ (6, 18). Confirmatory pathology testing (initiated by a medical practitioner) is required for cases where diagnosis is uncertain, or in cases of HZ in people who have been previously vaccinated against HZ. A low threshold for referral to medical practitioner for testing should be encouraged as it can be very helpful to test early to confirm or exclude herpes zoster as the potential cause, thereby potentially altering management, i.e., stopping antivirals and changing therapy. Arranging testing should not defer commencement of antivirals for suspected herpes zoster.",
+          "gates": [
+            { "criterion": "Typical presentation and uncomplicated case of HZ (laboratory confirmation is generally not required) - confirmatory pathology testing, initiated by a medical practitioner, is required where the diagnosis is uncertain or the patient has been previously vaccinated against HZ, and arranging testing must not defer commencement of antivirals", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 8, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "Management and treatment plan: Antiviral treatment can reduce acute pain, duration of the rash, viral shedding and ocular complications, if commenced within 72 hours of the first appearance of the rash but is not indicated in all patients (7). Pharmacist management of HZ involves: supportive management - education and advice regarding care for lesions (use of dressings, cleaning and appropriate clothing); education and advice regarding transmission precautions in accordance with the SA Health - Chickenpox and Shingles - Including Symptoms, Treatment and Prevention (11). Pharmacotherapy - antiviral therapy in accordance with the Therapeutic Guidelines: Shingles (Herpes Zoster)NB1 (15); analgesia for mild nociceptive shingles painNB2 in accordance with the Therapeutic Guidelines: Acute pain associated with shingles (herpes zoster) and Mild, acute nociceptive pain (oral paracetamol or nonsteroidal anti-inflammatory drugs (NSAIDs)) (4, 15). NB1: Antiviral therapy is indicated for the following groups: immunocompetent adults who present within 72 hours of the onset of the rash; all immunocompromised patients (including those with a HIV infection) regardless of the time lapsed since rash onset; patients with zoster ophthalmicus, regardless of the time lapsed from rash onset (6, 7). NB2: Patients reporting neuropathic pain or moderate to severe nociceptive pain should be referred to a medical practitioner.",
+          "gates": [
+            { "criterion": "Antiviral therapy is indicated for the patient: immunocompetent adults presenting within 72 hours of the onset of the rash, all immunocompromised patients (including those with a HIV infection) regardless of time lapsed, or zoster ophthalmicus regardless of time lapsed (antiviral treatment is not indicated in all patients)", "on_fail": "unclear" },
+            { "criterion": "The patient does not report neuropathic pain or moderate to severe nociceptive pain associated with shingles or PHN (NB2: such patients should be referred to a medical practitioner)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Public health notification: Under the SA Health Notifiable disease reporting page (12), VZV infection (chicken pox or shingles) is prescribed as a pathological diagnosis notifiable condition (as opposed to a clinical diagnosis notifiable condition) and must be notified in accordance with section 72 and 73 of the Public Health Act 2011 (13). Clinical notification (based on a diagnosis made on the basis of clinical evidence) is generally not required; however, if the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing. Cases of HZ confirmed by pathology testing must be notified by medical practitioners and pathology services.",
+          "gates": [
+            { "criterion": "Clinical notification is not required (clinical notification is generally not required; confirmed cases are notified by medical practitioners and pathology services) and, where diagnosis is uncertain or the patient has previously been vaccinated against HZ, the patient is referred to a medical practitioner who may initiate pathology testing", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 9, "section_heading": "Public health notification" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook, Australian Immunisation Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.",
+          "gates": [
+            { "criterion": "Treatment recommendation confirmed appropriate, including for contraindications and precautions, drug interactions, and pregnancy and breastfeeding", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient regarding: medicine use e.g., dosing; how to manage adverse effects; recommendations for vaccination against HZ; when to seek further care and/or treatment, including recognising superinfection and HZ complications; when to return to the pharmacist for clinical review. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and parents/caregivers if applicable), and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "General advice: All patients should be advised to contact a medical practitioner if: they are not responding to treatment; and/or their clinical signs and symptoms worsen; and/or they are experiencing complications (as soon as the complications become evident); and/or they are having unmanageable adverse effects. The incubation period of VZV ranges between 10 and 21 days (14 to 16 days on average) (11). Skin lesions usually heal within 2-4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease (4). As the rash resolves, the pain and systemic symptoms also subside with recovery complete in 2 to 4 weeks in most cases (2, 6).",
+          "gates": [
+            { "criterion": "Patient is responding to treatment, clinical signs and symptoms are not worsening, no complications are evident, and adverse effects are manageable", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "Preventing transmission: The patient should be advised to inform any high-risk contacts (pregnant women, neonates in first month of life and immunocompromised individuals) who have had significant exposure to a person with active VZV (household contacts or where there has been direct face-to-face contact for 5 minutes or being within the same room for at least an hour) to seek medical care as soon as possible (11). People with HZ are infectious from 2 days prior to the onset of the rash, until vesicles have dried and scabbed (at least 5 days after the onset of the rash) (11, 19). Rashes should be covered with appropriate dressings until the patient is no longer infectious and contact with pregnant women and immunocompromised people must be avoided (11, 19). A patient handout on Chickenpox and shingles can be found on the SA Health webpage (11).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "Preventing transmission" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "EDUCATE",
+          "description": "Zoster vaccination: Vaccination against HZ is the best way to prevent HZ and reduce the risk of complications but is not indicated during an acute HZ episode or to treat PHN (1). People who have had a previous episode of HZ can be vaccinated against a recurrence; the interval between the episode and vaccination is dependent on the patient's immune status (1). Refer to the Australian Immunisation Handbook for HZ vaccination information and recommendations (1). The optimal age to be vaccinated against HZ and the vaccine type will differ based on immune status, duration of protection of chosen vaccine and the individual's choice (19).",
+          "gates": [
+            { "criterion": "Vaccination is not being given during an acute HZ episode and is not being given to treat PHN (vaccination against HZ is not indicated during an acute HZ episode or to treat PHN)", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "Zoster vaccination" }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines. Clinical review is recommended 48-72 hours after the initial presentation to assess for: progression of the rash (particularly if the patient presented with prodromal symptoms prior to rash onset); the clinical signs or symptoms of HZ; screening for complications of HZ; adverse effects.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "antiviral therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Antiviral therapy in accordance with the Therapeutic Guidelines: Shingles (Herpes Zoster)NB1 (15). Antiviral treatment can reduce acute pain, duration of the rash, viral shedding and ocular complications, if commenced within 72 hours of the first appearance of the rash but is not indicated in all patients (7). NB1: Antiviral therapy is indicated for the following groups: immunocompetent adults who present within 72 hours of the onset of the rash; all immunocompromised patients (including those with a HIV infection) regardless of the time lapsed since rash onset; patients with zoster ophthalmicus, regardless of the time lapsed from rash onset (6, 7). The document prints no drug name as a regimen, and no strength, dose, route, frequency, duration or quantity: valaciclovir, famciclovir and aciclovir are named only in the exclusion 'Antiviral treatment is indicated but the patient is allergic to valaciclovir, famciclovir and/or aciclovir'. Line of therapy is not stated in this document. Exact regimens must be confirmed against the referenced Therapeutic Guidelines.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "paracetamol",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Analgesia for mild nociceptive shingles painNB2 in accordance with the Therapeutic Guidelines: Acute pain associated with shingles (herpes zoster) and Mild, acute nociceptive pain (oral paracetamol or nonsteroidal anti-inflammatory drugs (NSAIDs)) (4, 15). NB2: Patients reporting neuropathic pain or moderate to severe nociceptive pain should be referred to a medical practitioner. No strength, dose, frequency, duration or quantity is printed; line of therapy is not stated. Contraindications and precautions, drug interactions, and pregnancy and breastfeeding must be confirmed against the Therapeutic Guidelines and Australian Medicines Handbook.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "nonsteroidal anti-inflammatory drugs (NSAIDs)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Named as the alternative to oral paracetamol for analgesia of mild nociceptive shingles pain, per the Therapeutic Guidelines: Acute pain associated with shingles (herpes zoster) and Mild, acute nociceptive pain (4, 15). NB2: Patients reporting neuropathic pain or moderate to severe nociceptive pain should be referred to a medical practitioner. No strength, dose, frequency, duration or quantity is printed; line of therapy is not stated.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 9, "section_heading": "Management and treatment plan" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Eye or ear symptoms", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-2", "trigger_text": "Neurological symptoms", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-3", "trigger_text": "Severe headache, fever with facial involvement.", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" } },
+    { "id": "RF-4", "trigger_text": "The diagnosis is unclear, including if the patient presents with an atypical cutaneous presentation", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" } },
+    { "id": "RF-5", "trigger_text": "The patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history)", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" } },
+    { "id": "RF-6", "trigger_text": "Antiviral treatment is indicated but the patient is allergic to valaciclovir, famciclovir and/or aciclovir", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" } },
+    { "id": "RF-7", "trigger_text": "The condition does not respond to optimal treatment or worsens.", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 hours" } },
+    { "id": "RF-8", "trigger_text": "The patient is immunocompromised", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-9", "trigger_text": "The patient presents with superinfection of herpes zoster (HZ) skin lesions", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-10", "trigger_text": "The patient presents with a multidermatomal rash or disseminated zoster", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-11", "trigger_text": "The patient presents with complications of HZ, including postherpetic neuralgia (PHN) or specific zoster syndromes", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-12", "trigger_text": "Patient presents with HZ affecting the face or genitals", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-13", "trigger_text": "Pain management is required for neuropathic pain or moderate to severe nociceptive pain associated with shingles or PHN", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-14", "trigger_text": "The patient is pregnant and has a definite history of previous VZV infection.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-15", "trigger_text": "The patient has been previously vaccinated against HZ.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-16", "trigger_text": "When the ocular nerves are affected (herpes zoster ophthalmicus), the patient will present with a blistering rash around the eye/eyelid with associated pain, swelling and redness (8, 14). Urgent referral to a medical practitioner is required.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 6, "section_heading": "Presenting signs and symptoms" } },
+    { "id": "RF-17", "trigger_text": "Postherpetic neuralgia (PHN): neuropathic pain that persists for at least 3 months beyond the duration of the rash or reoccurs (occurs in 10 to 50% of patients, with the incidence increasing with age)", "structured": { "parameter": "duration of neuropathic pain beyond the rash", "operator": ">=", "value": 3, "unit": "months" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 6, "section_heading": "Complications of HZ" } },
+    { "id": "RF-18", "trigger_text": "Herpes zoster oticus (Ramsay Hunt syndrome): HZ affecting the facial nerve resulting in ear pain, taste loss, facial weakness or paralysis, and other neurological symptoms (6, 8).", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "Complications of HZ" } },
+    { "id": "RF-19", "trigger_text": "Disseminated zoster (VZV dissemination) is defined as 20 lesions outside of the dermatome and may be clinically indistinguishable from varicella infection (4); viral dissemination to the central nervous system and viscera (lungs, gut, liver and brain) may occur.", "structured": { "parameter": "lesions outside the primary dermatome", "operator": ">=", "value": 20, "unit": "lesions" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "Complications of HZ" } },
+    { "id": "RF-20", "trigger_text": "Neurological complications such as meningoencephalitis and myelitis (particularly in the elderly).", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "Complications of HZ" } },
+    { "id": "RF-21", "trigger_text": "Secondary bacterial skin infections (referral to a medical practitioner for swab and culture is required).", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "Complications of HZ" } },
+    { "id": "RF-22", "trigger_text": "Scarring (listed as a complication of HZ; complications require referral to a medical practitioner at presentation or at any stage if a complication develops).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "Complications of HZ" } },
+    { "id": "RF-23", "trigger_text": "Pneumonia (1) (listed as a complication of HZ; complications require referral to a medical practitioner at presentation or at any stage if a complication develops).", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "Complications of HZ" } },
+    { "id": "RF-24", "trigger_text": "Pregnant women who are exposed to VZV (chicken pox or HZ) for the first time (no or uncertain history of previous chicken pox infection). Urgent referral to a medical practitioner is required as zoster immunoglobulin (ZIG) should be given to all seronegative women within 96 hours (1).", "structured": { "parameter": "time to zoster immunoglobulin (ZIG) for seronegative women", "operator": "<=", "value": 96, "unit": "hours" }, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 7, "section_heading": "HZ in pregnancy" } },
+    { "id": "RF-25", "trigger_text": "they are not responding to treatment", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "General advice" } },
+    { "id": "RF-26", "trigger_text": "their clinical signs and symptoms worsen", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "General advice" } },
+    { "id": "RF-27", "trigger_text": "they are experiencing complications (as soon as the complications become evident)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "General advice" } },
+    { "id": "RF-28", "trigger_text": "they are having unmanageable adverse effects.", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "General advice" } },
+    { "id": "RF-29", "trigger_text": "if the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "Public health notification" } }
+  ],
+  "referral": {
+    "routine": [
+      "Complications of HZ (approximately 13% to 26% of patients with HZ) will require referral to a medical practitioner at presentation or at any stage if a complication develops (1, 6).",
+      "Secondary bacterial skin infections (referral to a medical practitioner for swab and culture is required).",
+      "Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (9).",
+      "A low threshold for referral to medical practitioner for testing should be encouraged as it can be very helpful to test early to confirm or exclude herpes zoster as the potential cause, thereby potentially altering management.",
+      "The patient should be advised to inform any high-risk contacts (pregnant women, neonates in first month of life and immunocompromised individuals) who have had significant exposure to a person with active VZV (household contacts or where there has been direct face-to-face contact for 5 minutes or being within the same room for at least an hour) to seek medical care as soon as possible (11)."
+    ],
+    "urgent": [
+      "Urgent referral within 24 hours: The diagnosis is unclear, including if the patient presents with an atypical cutaneous presentation",
+      "Urgent referral within 24 hours: The patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history)",
+      "Urgent referral within 24 hours: Antiviral treatment is indicated but the patient is allergic to valaciclovir, famciclovir and/or aciclovir",
+      "Urgent referral within 24 hours: The condition does not respond to optimal treatment or worsens.",
+      "Provide initial treatment (antiviral therapy and pain relief) and concurrently refer to a general practitioner (or other medical practitioner where appropriate) in the following situations: The patient is immunocompromised; The patient presents with superinfection of herpes zoster (HZ) skin lesions; The patient presents with a multidermatomal rash or disseminated zoster; The patient presents with complications of HZ, including postherpetic neuralgia (PHN) or specific zoster syndromes; Patient presents with HZ affecting the face or genitals; Pain management is required for neuropathic pain or moderate to severe nociceptive pain associated with shingles or PHN; The patient is pregnant and has a definite history of previous VZV infection; The patient has been previously vaccinated against HZ.",
+      "When the ocular nerves are affected (herpes zoster ophthalmicus) ... Urgent referral to a medical practitioner is required.",
+      "Urgent referral to a medical practitioner is required as zoster immunoglobulin (ZIG) should be given to all seronegative women within 96 hours (1).",
+      "If the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.",
+      "Patients reporting neuropathic pain or moderate to severe nociceptive pain should be referred to a medical practitioner."
+    ],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care - Urgent referral to an emergency department, patient may make their own way to the emergency department: Eye or ear symptoms",
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care - Urgent referral to an emergency department, patient may make their own way to the emergency department: Neurological symptoms",
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care - Urgent referral to an emergency department, patient may make their own way to the emergency department: Severe headache, fever with facial involvement."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care" }
+  },
+  "review_followup": [
+    {
+      "when": "In line with recommendations in the Therapeutic Guidelines and other relevant guidelines",
+      "what": "Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "48-72 hours after the initial presentation",
+      "what": "Assess for: progression of the rash (particularly if the patient presented with prodromal symptoms prior to rash onset); the clinical signs or symptoms of HZ; screening for complications of HZ; adverse effects.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "When to return to the pharmacist for clinical review (including recognising superinfection and HZ complications, and when to seek further care and/or treatment)",
+      "what": "Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+    },
+    {
+      "when": "If the patient is not responding to treatment, clinical signs and symptoms worsen, complications become evident, or adverse effects are unmanageable",
+      "what": "All patients should be advised to contact a medical practitioner.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 10, "section_heading": "General advice" }
+    },
+    {
+      "when": "Expected course of disease (context for clinical review)",
+      "what": "Skin lesions usually heal within 2-4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease (4). As the rash resolves, the pain and systemic symptoms also subside with recovery complete in 2 to 4 weeks in most cases (2, 6).",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 11, "section_heading": "General advice" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "VZV infection (chicken pox or shingles) is prescribed as a pathological diagnosis notifiable condition (as opposed to a clinical diagnosis notifiable condition) and must be notified in accordance with section 72 and 73 of the Public Health Act 2011 (13). Clinical notification (based on a diagnosis made on the basis of clinical evidence) is generally not required; however, if the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing. Cases of HZ confirmed by pathology testing must be notified by medical practitioners and pathology services."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-herpes-zoster-shingles-cpg.pdf", "page": 9, "section_heading": "Public health notification" }
+  },
+  "references": [
+    "[page 13] 1. Australian Immunisation Handbook [Internet]. Australian Government Department of Health and Aged Care. 2022. Available from: immunisationhandbook.health.gov.au.",
+    "[page 13] 2. DermNet. Herpes zoster 2015 [Available from: https://dermnetnz.org/topics/herpes-zoster.",
+    "[page 13] 3. Cunningham AL, Breuer J, Dwyer DE, Gronow DW, Helme RD, Litt JC, et al. The prevention and management of herpes zoster. Medical Journal of Australia. 2008;188(3):171-6.",
+    "[page 13] 4. Herpes Zoster [Internet]. Baylor College of Medicine, DynaMed Continuing Medical Education 2025. Available from: https://www.dynamed.com/condition/herpes-zoster#GUID-D685B0B2-2A61-46D3-AC91-65116C395AF6.",
+    "[page 13] 5. DermNet. Blistering skin conditions 2015 [Available from: https://dermnetnz.org/topics/blistering-skin-conditions.",
+    "[page 13] 6. Wehrhahn M, Dwyer D. Herpes zoster: epidemiology, clinical features, treatment and prevention. Australian Prescriber. 2012;35(5).",
+    "[page 13] 7. Antibiotic Treatment [Internet]. 2025. Available from: https://tgldcdp.tg.org.au/viewTopic/?guidelinePage=Antibiotic&etgAccess=true#.",
+    "[page 13] 8. Herpes Zoster [Internet]. Merck & Co., Inc. 2023. Available from: https://www.msdmanuals.com/professional/infectious-diseases/herpesviruses/herpes-zoster?query=herpes%20zoster.",
+    "[page 13] 9. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[page 13] 10. Government of South Australia SA Health. Clinical Guideline Varicella Zoster (chicken pox) in Pregnancy. In: Health S, editor. Online: Government of South Australia SA Health; 2015. p. 12.",
+    "[page 13] 11. Government of South Australia SA Health. Chickenpox and Shingles - Including Symptoms, Treatment and Prevention. In: Health S, editor. Online: Government of South Australia SA Health; 2024.",
+    "[page 13] 12. Government of South Australia SA Health. Notifiable Conditions - What To Know When You Have One. In: Health S, editor. Online: Government of South Australia SA Health; 2023.",
+    "[page 13] 13. Government of South Australia SA Health. South Australian Public Health Act 2011. In: Health S, editor. 2011 ed. Adelaide: Government of South Australia SA Health; 2011. p. 92.",
+    "[page 13] 14. Corden E. How to identify and treat herpes zoster (shingles). 2014.",
+    "[page 13] 15. Shingles (Herpes Zoster) [Internet]. Therapeutic Guidelines Limited. 2025 [cited 7 July 2025]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=bartonella-infections&guidelinename=auto&sectionId=c_ABG_Shingles-herpes-zoster_topic_2#c_ABG_Shingles-herpes-zoster_topic_2.",
+    "[page 13] 16. Keung C, G H. The management of gastro-oesophageal reflux disease. Australian Prescriber. 2016;39(1):6-10.",
+    "[page 13] 17. Pupco A, Bozzo P, Koren G. Herpes zoster during pregnancy. Canadian Family Physician. 2011;57(10):1133-.",
+    "[page 13] 18. Werner R, Nikkels A, Marinović B, Schäfer M, Czarnecka Operacz M, Agius AM, et al. European consensus based (S2k) guideline on the Management of Herpes Zoster-guided by the European dermatology forum (EDF) in cooperation with the European academy of dermatology and venereology (EADV), part 2: treatment. Journal of the European Academy of Dermatology and Venereology. 2017;31(1):20-9.",
+    "[page 13] 19. Zoster (shingles) [Internet]. NCIRS. 2025. Available from: https://ncirs.org.au/ncirs-fact-sheets-faqs-and-other-resources/zoster-shingles."
+  ],
+  "open_questions": [
+    {
+      "topic": "No dedicated exclusion criteria section",
+      "observed": "The guideline prints no 'Exclusion criteria' section. EXC-1 to EXC-3 are transcribed from the emergency red-flag list and EXC-4 to EXC-7 from the 'Urgent referral within 24 hours' list, all on page 4. The only eligibility statements printed are 'Service restricted to patients aged 18 years or over' and the ineligibility exception on page 3.",
+      "why_unclear": "The document does not label these as exclusion criteria and does not state AND/OR combinatorics; each bullet is phrased as an independent referral trigger, so the group is modelled as any_of with medium confidence rather than the spec's all_of default. The 'Treat (if clinically appropriate) and concurrently refer' items on page 5 are deliberately NOT modelled as exclusions because the document has the pharmacist provide initial treatment for those patients; they are captured as red flags (RF-8 to RF-15).",
+      "source_page": 4
+    },
+    {
+      "topic": "EXC-7 is a post-initiation trigger modelled as an exclusion",
+      "observed": "'The condition does not respond to optimal treatment or worsens.' is a trigger that can only occur after treatment has started, yet it sits in the same printed list as presentation-time exclusions.",
+      "why_unclear": "It is modelled as an exclusion (and as RF-7 with REVIEW_GP within 24 hours) because it removes the patient from pharmacist management; the engine should treat it as a continuing-eligibility check rather than an intake check.",
+      "source_page": 4
+    },
+    {
+      "topic": "Emergency wording contains no call-000 / ambulance instruction",
+      "observed": "The heading reads 'necessitate referral to emergency medical care' with the subheading 'Urgent referral to an emergency department - patient may make their own way to the emergency department'. No 'call 000' or ambulance instruction appears anywhere in the document.",
+      "why_unclear": "Emergency-tier red flags (RF-1 to RF-3) use action REFER_URGENT with severity critical rather than ESCALATE_000, because the document explicitly contemplates the patient self-presenting to the emergency department. Confirm whether the service wants a call-000 branch for eye/ear, neurological or severe-headache-with-facial-involvement presentations.",
+      "source_page": 4
+    },
+    {
+      "topic": "Exclusion / red-flag duplication",
+      "observed": "EXC-1/RF-1, EXC-2/RF-2, EXC-3/RF-3, EXC-4/RF-4, EXC-5/RF-5, EXC-6/RF-6 and EXC-7/RF-7 quote the same source statements from page 4; RF-25/RF-26 restate the page 4 non-response/worsening trigger as patient advice, and RF-29 restates RF-4/RF-15 with the pathology-testing action.",
+      "why_unclear": "They are retained in both arrays deliberately: eligibility decision list (exclusion) and trigger alert (red_flags), mirroring the treatment of referral items in the SA rhinitis and GORD guidelines.",
+      "source_page": 4
+    },
+    {
+      "topic": "Treat-and-concurrently-refer branch has no printed stop rule",
+      "observed": "For the eight page-5 situations the document says 'Provide initial treatment (antiviral therapy and pain relief) and concurrently refer' - the pharmacist is not told to stop treating.",
+      "why_unclear": "Gate PW-1-S2 uses on_fail 'REFER' because the gate vocabulary only offers REFER/STOP/SEE_<step id>; the 'provide initial treatment concurrently' instruction is preserved verbatim in the criterion and description so the branch is not read as a stop-treating rule.",
+      "source_page": 5
+    },
+    {
+      "topic": "No drug doses printed",
+      "observed": "Pharmacotherapy is directed to the Therapeutic Guidelines: Shingles (Herpes Zoster) for antiviral therapy and to the Therapeutic Guidelines analgesia sections for mild nociceptive pain (oral paracetamol or NSAIDs). The only quantitative treatment statements are the 72-hour antiviral window and the NB1 indication groups; valaciclovir, famciclovir and aciclovir appear only in the allergy exclusion.",
+      "why_unclear": "Treatment rows TX-1 to TX-3 therefore carry empty regimen fields (route 'oral' retained for TX-2/TX-3 because it is printed); exact drugs, strengths, doses, frequencies and durations must come from the referenced external guidelines. Line of therapy is not stated, so first_line is false.",
+      "source_page": 9
+    },
+    {
+      "topic": "Antiviral-indication gate has no printed failure branch",
+      "observed": "NB1 lists the groups for which antiviral therapy is indicated and states it 'is not indicated in all patients', but the document does not say what to do for a patient outside those groups.",
+      "why_unclear": "Gate on_fail recorded as 'unclear': the apparent intent is simply not to prescribe antivirals (supportive management and mild-pain analgesia may continue), but no branch is printed.",
+      "source_page": 9
+    },
+    {
+      "topic": "Confirm-management gate outcome not stated",
+      "observed": "The document requires pharmacists to consult the Therapeutic Guidelines, Australian Medicines Handbook, Australian Immunisation Handbook and other relevant references to confirm the treatment recommendation is appropriate (contraindications and precautions, drug interactions, pregnancy and breastfeeding), but does not say what to do if the recommendation is NOT appropriate.",
+      "why_unclear": "on_fail recorded as 'unclear' because the document states no branch; likely refer or do not supply, but this is not printed.",
+      "source_page": 10
+    },
+    {
+      "topic": "Referral block spans multiple pages",
+      "observed": "Referral content appears on pages 4 (emergency and 24-hour GP lists), 5 (treat-and-refer list), 6 (ophthalmicus; complications), 7 (secondary bacterial infection; ZIG in pregnancy), 8 (CARPA), 9 (testing threshold; NB2) and 10-11 (pathology-testing referral; high-risk contacts).",
+      "why_unclear": "The referral object allows one shared provenance; page 4 (first page of the red-flag section) is used and the range is recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Notifiable duty sits with medical practitioners, not pharmacists",
+      "observed": "VZV infection is a pathological diagnosis notifiable condition under the SA Public Health Act 2011, but 'Clinical notification ... is generally not required' and 'Cases of HZ confirmed by pathology testing must be notified by medical practitioners and pathology services'.",
+      "why_unclear": "notifiable.required is set to true because the document devotes a section to notification duties, but the printed duty holders are medical practitioners and pathology services; no pharmacist notification action is printed. Confirm whether the module should surface this as an informational notice only.",
+      "source_page": 9
+    },
+    {
+      "topic": "Section headings carried across page breaks",
+      "observed": "'Examination' starts on page 8 and its laboratory-confirmation text continues on page 9; 'Public health notification' starts on page 9 and continues on page 10; 'General advice' starts on page 10 (mid-list: 'they are having unmanageable adverse effects') and continues on page 11.",
+      "why_unclear": "Each item is recorded once with the first-page heading and page number; no content was dropped, but provenance page for the continuation material is the start page (RF-28 uses page 11 where the bullet resumes).",
+      "source_page": 8
+    },
+    {
+      "topic": "Scarring and pneumonia as referral triggers",
+      "observed": "'Scarring' and 'Pneumonia (1)' are listed under 'Other complications' of HZ, which the preceding paragraph says 'will require referral to a medical practitioner at presentation or at any stage if a complication develops'; no separate action is printed for either bullet.",
+      "why_unclear": "RF-22 (scarring) is recorded with confidence 'medium' and severity 'medium' because treating scarring alone as a referral trigger is an interpretation of the general complications statement; RF-23 (pneumonia) is recorded at high severity.",
+      "source_page": 7
+    },
+    {
+      "topic": "Vaccination details delegated to external handbook",
+      "observed": "The guideline states vaccination is the best prevention, that it is not indicated during an acute HZ episode or to treat PHN, that the interval after a previous HZ episode depends on immune status, and that 'the optimal age to be vaccinated against HZ and the vaccine type will differ based on immune status, duration of protection of chosen vaccine and the individual's choice'. No product, schedule, age or interval is printed.",
+      "why_unclear": "All vaccination parameters must come from the Australian Immunisation Handbook (referenced on page 11); nothing was inferred for the module.",
+      "source_page": 11
+    },
+    {
+      "topic": "Reference 16 appears unrelated to herpes zoster",
+      "observed": "Appendix 1 reference 16 is 'Keung C, G H. The management of gastro-oesophageal reflux disease. Australian Prescriber. 2016;39(1):6-10.', and reference 15 (the Therapeutic Guidelines link) carries a 'bartonella-infections' topicfile parameter.",
+      "why_unclear": "Both transcribed exactly as printed; they look like carry-over citations from another SA guideline (the GORD citation matches the GORD CPG reference list) and are not relied on for any extracted criterion, treatment or trigger.",
+      "source_page": 13
+    },
+    {
+      "topic": "Age bound is open-ended",
+      "observed": "'Service restricted to patients aged 18 years or over.' (page 3); no upper age limit is printed anywhere in the document.",
+      "why_unclear": "age_bounds recorded as min 18 with max_years null; note that risk 'increases with age' (page 5) and complications are 'most prevalent in older people', but no numeric ceiling or age-based referral threshold exists.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Authorisation precondition: pharmacist must be included on the register of authorised pharmacists and prescribe in accordance with the Community Pharmacist Prescribing Code (regulation 17A of the Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal/jurisdictional precondition for lawful prescribing under the SA service; must be verified against the current register and Code before go-live."
+    },
+    {
+      "item": "Age restriction: 'Service restricted to patients aged 18 years or over' (no upper bound).",
+      "source_page": 3,
+      "reason": "Encode as a hard eligibility check at intake; confirm intended behaviour for patients under 18 (usual pharmacy care only, per the page 3 ineligibility exception)."
+    },
+    {
+      "item": "Exact antiviral regimens (drug, strength, dose, route, frequency, duration, quantity) delegated to the Therapeutic Guidelines: Shingles (Herpes Zoster) - not printed in this guideline.",
+      "source_page": 9,
+      "reason": "No regimen is printed, so the prescribing module cannot be configured from this document alone; must be confirmed against the external guideline and local formulary."
+    },
+    {
+      "item": "NB1 antiviral indication groups and the 72-hour window: immunocompetent adults within 72 hours of rash onset; all immunocompromised patients (including HIV) regardless of time lapsed; zoster ophthalmicus regardless of time lapsed; antivirals 'not indicated in all patients'.",
+      "source_page": 9,
+      "reason": "These three groups are the service's treatment-eligibility logic; encode exactly and confirm handling for a patient outside all three groups (no branch is printed)."
+    },
+    {
+      "item": "NB2 / analgesia boundary: analgesia is for MILD nociceptive pain only (oral paracetamol or NSAIDs per Therapeutic Guidelines); 'Patients reporting neuropathic pain or moderate to severe nociceptive pain should be referred to a medical practitioner.'",
+      "source_page": 9,
+      "reason": "Hard referral branch that must be encoded; confirm how pain severity is assessed in the module and which analgesic strengths/quantities are permitted."
+    },
+    {
+      "item": "Treat-and-concurrently-refer list (8 situations: immunocompromised; superinfection; multidermatomal/disseminated zoster; complications incl. PHN or specific zoster syndromes; face or genitals; neuropathic or moderate-severe nociceptive pain; pregnant with definite previous VZV history; previously vaccinated against HZ).",
+      "source_page": 5,
+      "reason": "The module must both start initial treatment (antiviral therapy and pain relief) and raise a concurrent GP referral; confirm this dual action is representable and how urgency is communicated."
+    },
+    {
+      "item": "Red-flag urgency tiers: emergency-department referral (eye or ear symptoms; neurological symptoms; severe headache, fever with facial involvement) with no call-000 wording, versus urgent referral within 24 hours to a GP (4 triggers).",
+      "source_page": 4,
+      "reason": "Confirm the escalation UX for the emergency tier (patient self-presents to ED) and encode the 24-hour GP timeframe as a service-level SLA."
+    },
+    {
+      "item": "Confirmatory pathology testing: 'initiated by a medical practitioner', required where diagnosis is uncertain or the patient has been previously vaccinated against HZ; low threshold for referral; 'Arranging testing should not defer commencement of antivirals for suspected herpes zoster.'",
+      "source_page": 9,
+      "reason": "Pharmacists do not order pathology; the decision support must prompt referral without delaying antiviral initiation - confirm wording and that the anti-deferral rule is surfaced."
+    },
+    {
+      "item": "Clinical review 48-72 hours after initial presentation, assessing rash progression (especially after prodrome), clinical signs/symptoms, complications and adverse effects.",
+      "source_page": 11,
+      "reason": "Concrete follow-up interval must be encoded as a reminder/task; confirm how the review is scheduled and what happens if the patient does not attend."
+    },
+    {
+      "item": "Notifiable condition handling: VZV infection is a pathological diagnosis notifiable condition (Public Health Act 2011, sections 72 and 73); clinical notification generally not required; confirmed cases notified by medical practitioners and pathology services.",
+      "source_page": 9,
+      "reason": "Confirm the module presents this as informational only (no pharmacist notification action) while still flagging uncertain-diagnosis and previously-vaccinated patients for medical review."
+    },
+    {
+      "item": "Transmission advice parameters: infectious from 2 days before rash onset until vesicles have dried and scabbed (at least 5 days); high-risk contacts (pregnant women, neonates in first month of life, immunocompromised) after household exposure or direct face-to-face contact for 5 minutes / same room for at least an hour; cover lesions with dressings; SA Health patient handout.",
+      "source_page": 11,
+      "reason": "These are patient-facing counselling values that must be quoted exactly in the education material; confirm the handout link and that the exposure thresholds drive any contact advice."
+    },
+    {
+      "item": "Zoster vaccination advice: not indicated during an acute HZ episode or to treat PHN; interval after a previous HZ episode depends on immune status; optimal age and vaccine type per Australian Immunisation Handbook.",
+      "source_page": 11,
+      "reason": "Vaccination is outside the prescribing module's printed regimens; confirm whether the service refers, advises only, or links to the Australian Immunisation Handbook."
+    },
+    {
+      "item": "Professional discretion clause: 'pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'",
+      "source_page": 5,
+      "reason": "Automated checks must be surfaced as decision support rather than absolute rules; confirm how this discretion wording is presented at go-live."
+    }
+  ]
+}

@@ -1,0 +1,2776 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+    "pdf_sha256": "422517e47397ee715013c9d8d64b1c61ea30a28f75960816eebc4b68ed0ebb48",
+    "page_count": 30,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Improved Asthma Symptom Control Program - Clinical practice protocol",
+    "instrument_version": "No version number or date printed (page 30 footer codes read \"62'GUA\" and \"180510-DEC\"); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+    "supervision_model": "Approved/authorised pharmacist prescribing under the EACPP (document's own terminology) with collaborative care: 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1). Entry Point 1 (possible but no previous diagnosis) permits pharmacotherapy only to Level 1 or 2 with concurrent referral, and 'Further program participation is not permitted until spirometry has been performed and collaborative management with a medical practitioner has been established.' (p.3)",
+    "scope_summary": "EACPP clinical practice protocol for the Improved Asthma Symptom Control Program, community-based service for patients with asthma symptoms or an existing diagnosis of asthma, aged 16 to 65 years. Two entry points (p.3): Entry Point 1 - possible but no previous diagnosis, manage with non-pharmacological measures and pharmacotherapy to Level 1 or 2 only with concurrent referral until spirometry and collaborative care are established; Entry Point 2 - existing diagnosis, commence ongoing monitoring and management. Flow (p.6-7): eligibility -> history -> physical examination -> spirometry (conduct/interpret) -> assess symptom control -> commence collaborative care -> management plan (non-pharmacological plus pharmacotherapy Levels 1-3 per the 2025 Australian Asthma Handbook) -> confirm management appropriate -> communicate plan (written Asthma Action Plan) -> collaborative care -> clinical review. Page 4 lists 25 ineligibility criteria, page 5 four treat-and-concurrently-refer criteria, pages 17-18 cover exacerbation self-management including pharmacist-initiated prednis(ol)one, and page 19 lists indications for review by an appropriate healthcare provider."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Patient aged 16 to 65 years.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 6,
+          "section_heading": "Guideline overview"
+        }
+      },
+      {
+        "id": "INC-2",
+        "text": "Confirm the patient does not meet any ineligibility criteria (refer to page 4).",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 6,
+          "section_heading": "Guideline overview"
+        }
+      },
+      {
+        "id": "INC-3",
+        "text": "Entry Point 1: Patients with possible but no previous diagnosis of asthma, who do not meet any ineligibility criteria, may be enrolled in the program and commence management (with non-pharmacological measures and pharmacotherapy to Level 1 or 2 only, if indicated) with concurrent referral to an appropriate healthcare provider for further review and collaborative care. Further program participation is not permitted until spirometry has been performed and collaborative management with a medical practitioner has been established.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 3,
+          "section_heading": "How to use this document"
+        }
+      },
+      {
+        "id": "INC-4",
+        "text": "Entry Point 2: Patients with an existing diagnosis of asthma, who do not meet any ineligibility criteria, may be enrolled in the program and commence ongoing monitoring and management (with non-pharmacological measures and pharmacotherapy, if indicated). An update must be provided to the patient's usual healthcare provider following each occasion of care.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 3,
+          "section_heading": "How to use this document"
+        }
+      },
+      {
+        "id": "INC-5",
+        "text": "Provide program overview, gain consent and enrol in program.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 6,
+          "section_heading": "Guideline overview"
+        }
+      },
+      {
+        "id": "INC-6",
+        "text": "Document informed consent from the patient for participation, as per the Pilot Handbook.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 3,
+          "section_heading": "How to use this document"
+        }
+      },
+      {
+        "id": "INC-7",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 1,
+          "section_heading": "Eligibility for the program"
+        }
+      },
+      {
+        "id": "INC-8",
+        "text": "Consider program eligibility at every consultation, as eligibility may change at any time. Refer the patient to their usual healthcare provider with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the program.",
+        "criteria_group": {
+          "all_of": [
+            "INC-1",
+            "INC-2",
+            "INC-5",
+            "INC-6",
+            "INC-7",
+            "INC-8"
+          ],
+          "any_of": [
+            "INC-3",
+            "INC-4"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 9,
+          "section_heading": "Program eligibility"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Are aged < 16 years or > 65 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Are planning a pregnancy or are pregnant",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Are experiencing respiratory distress (e.g. unable to complete a sentence in one breath)",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-4",
+        "text": "During/after exercise experience chest tightness or discomfort (without other symptoms of asthma) - consider possibility of a cardiovascular condition/event",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Have a suspected respiratory bacterial infection that requires antibiotic therapy: - the patient may continue to be managed in the program (if otherwise appropriate) following concurrent referral to a medical practitioner for review for antibiotic therapy",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "medium",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Have Chronic Obstructive Pulmonary Disease (COPD)",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Have a previous diagnosis of severe asthma or restrictive lung disease (e.g. pulmonary fibrosis, interstitial lung disease, asbestosis, silicosis, sarcoidosis), have clinical features or symptoms suggestive of a respiratory condition other than asthma",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Are on maintenance oral corticosteroid (OCS) therapy for asthma",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-9",
+        "text": "Are actively receiving or have previously received within the past 12 months (without required follow-up appointments), specialist treatment for asthma or another respiratory condition (unless they have a written referral from their treating specialist or general practitioner to participate in the program)",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "medium",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-10",
+        "text": "Have type 1 diabetes",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-11",
+        "text": "Have poorly controlled type 2 diabetes",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-12",
+        "text": "Have heart failure, pulmonary hypertension, or Cor pulmonale",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-13",
+        "text": "Are involved in competitive sport and subject to anti-doping policies",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-14",
+        "text": "Have a suspected or confirmed food allergy associated with anaphylaxis or respiratory symptoms",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-15",
+        "text": "Have a history of anaphylaxis",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-16",
+        "text": "Have any alarm signs and symptoms including haemoptysis, chest pain, unexplained weight loss or gain, night sweats, fever, signs of bronchiectasis, recurrent pneumonia, orthopnoea, or oedema (prompt medical review is required)",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-17",
+        "text": "Have a history of severe asthma exacerbation/s requiring (for asthma): - intubation/intensive care unit (ICU) admission (ever) - hospitalisation or emergency department (ED) visit in the past month - >= 2 ED visits in the past year - any hospitalisations in the past year",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-18",
+        "text": "Have a history of sudden-onset acute asthma",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-19",
+        "text": "Have suspected occupational asthma",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-20",
+        "text": "Have Exercise-Induced-Bronchoconstriction (EIB) without any other evidence of asthma",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-21",
+        "text": "Have poor asthma symptom control, despite current treatment consistent with 'recommended' Level 3 pharmacotherapy as per the Australian Asthma Handbook (i.e. medium dose Inhaled corticosteroid (ICS)-formoterol maintenance-and-reliever therapy) and require treatment consistent with Level 4",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-22",
+        "text": "Are using treatment consistent or equivalent with Level 4 pharmacotherapy as per the Australian Asthma Handbook",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-23",
+        "text": "Have contraindications to spirometry (that will not resolve with time) and who do not have an existing diagnosis of asthma",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-24",
+        "text": "Have spirometry results that: - are difficult to interpret or are unexpected for asthma - indicate alarm symptoms or findings - do not demonstrate reversible airflow limitation or expiratory airflow limitation - show abnormal restrictive or mixed ventilatory patterns",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXC-25",
+        "text": "Have a forced expiratory volume in 1 second (FEV1) of < 60 per cent predicted.",
+        "criteria_group": {
+          "all_of": [],
+          "any_of": [
+            "EXC-1",
+            "EXC-2",
+            "EXC-3",
+            "EXC-4",
+            "EXC-5",
+            "EXC-6",
+            "EXC-7",
+            "EXC-8",
+            "EXC-9",
+            "EXC-10",
+            "EXC-11",
+            "EXC-12",
+            "EXC-13",
+            "EXC-14",
+            "EXC-15",
+            "EXC-16",
+            "EXC-17",
+            "EXC-18",
+            "EXC-19",
+            "EXC-20",
+            "EXC-21",
+            "EXC-22",
+            "EXC-23",
+            "EXC-24",
+            "EXC-25"
+          ]
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": 65,
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 6,
+        "section_heading": "Guideline overview"
+      }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": {
+          "all_of": [
+            "EXE-1"
+          ],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 1,
+          "section_heading": "Eligibility for the program"
+        }
+      },
+      {
+        "id": "EXE-2",
+        "text": "the patient may continue to be managed in the program (if otherwise appropriate) following concurrent referral to a medical practitioner for review for antibiotic therapy [exception within EXC-5, suspected respiratory bacterial infection requiring antibiotic therapy]",
+        "criteria_group": {
+          "all_of": [
+            "EXE-2"
+          ],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXE-3",
+        "text": "(unless they have a written referral from their treating specialist or general practitioner to participate in the program) [exception within EXC-9, specialist treatment within the past 12 months]",
+        "criteria_group": {
+          "all_of": [
+            "EXE-3"
+          ],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 4,
+          "section_heading": "Patients who are ineligible for the program"
+        }
+      },
+      {
+        "id": "EXE-4",
+        "text": "Does not preclude a patient from accessing usual pharmacy care [printed against the age criterion 'Are aged < 16 years or > 65 years' and against 'the patient is aged below 16 or above 65 years (does not preclude a patient from accessing usual pharmacy care)']",
+        "criteria_group": {
+          "all_of": [
+            "EXE-4"
+          ],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {
+          "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+          "page": 6,
+          "section_heading": "Guideline overview"
+        }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Improved Asthma Symptom Control Program - guideline overview flow (pages 6-7), elaborated pages 9-19",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Patient eligibility for the program: 'Patient aged 16 to 65 years'; 'Confirm the patient does not meet any ineligibility criteria (refer to page 4)'. Refer when: 'the patient is aged below 16 or above 65 years (does not preclude a patient from accessing usual pharmacy care)' or 'if they are, or become, ineligible for the program'.",
+          "gates": [
+            {
+              "criterion": "Patient aged 16 to 65 years",
+              "on_fail": "REFER"
+            },
+            {
+              "criterion": "Patient does not meet any of the ineligibility criteria on page 4",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 6,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EDUCATE",
+          "description": "Provide program overview, gain consent and enrol in program (overview content listed under 'There are 2 entry points for enrolment in the program' includes programme aims, expected outcomes, timeframes and costs, medicine management, other interventions, and the patient may leave the program at any time). Document informed consent from the patient for participation, as per the Pilot Handbook.",
+          "gates": [
+            {
+              "criterion": "Informed consent from the patient for participation documented as per the Pilot Handbook",
+              "on_fail": "unclear"
+            }
+          ],
+          "confidence": "medium",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 6,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Take a detailed patient history. Including: patient characteristics; symptoms (current and history); medical history (consider contraindications to spirometry and conditions that impact asthma management/control); lifestyle/social/family history; review previous lung function test results (if available); most recent asthma action plan (if applicable).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 6,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Patient history (detailed): 'Obtain sufficient information to assess the safety and appropriateness of any recommendations and medicines.' Consider: age; ethnic or cultural background, including Aboriginal and/or Torres Strait Islander status; lactation status; previous and current medical conditions including systemic and/or chronic conditions (refer to Appendix 2; consider contraindications to spirometry); previous diagnosis of asthma (date of diagnosis, last medical review, previous lung function test results, current or most recently prescribed treatment, previous use of oral corticosteroids, frequency of rapid-acting bronchodilator use (i.e. SABA or ICS-formoterol), most recent Asthma Action Plan); history of acute asthma and asthma exacerbations, including hospitalisations and ED visits; personal and/or family history of asthma or allergies; specialist care for any respiratory condition; previous and current respiratory symptoms (onset and severity, pattern, impact on daily activities including sleep and exercise); triggers, aggravating and precipitating factors (Appendix 4); relieving factors e.g. rapid-acting bronchodilator use; alarm signs and symptoms that require further investigation e.g. haemoptysis, chest pain, unexplained weight loss or gain, night sweats, fever, signs of bronchiectasis, recurrent pneumonia, orthopnoea, or oedema; all current and recently ceased treatments; drug and non-drug allergies, and adverse drug reactions; smoking status and history; home and work environment; diet/nutrition status and weight; levels of physical activity; recreational or illicit drug use and alcohol use; vaccination status (particularly COVID, influenza, RSV, pneumococcal, and pertussis).",
+          "gates": [
+            {
+              "criterion": "No alarm signs and symptoms that require further investigation (haemoptysis, chest pain, unexplained weight loss or gain, night sweats, fever, signs of bronchiectasis, recurrent pneumonia, orthopnoea, or oedema)",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 9,
+            "section_heading": "Patient history"
+          }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "Conduct physical examination - including chest auscultation.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 6,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EXAMINATION",
+          "description": "Perform a physical examination (including chest auscultation and an inspection of the upper respiratory tract) to check for signs that suggest a comorbid or an alternative diagnosis. Consider: wheeze (widespread expiratory wheeze is suggestive of asthma but is not specific; wheeze may be absent in asthma; inspiratory wheeze is not a feature of asthma); presence of heart murmurs; crackles are not a feature of asthma (presence suggests another diagnosis, even if possibly co-existing with asthma). Look for signs of allergic rhinitis, nasal polyps, or rhinosinusitis in the upper respiratory tract; look for signs of atopic dermatitis. 'If COPD is suspected, the patient should be referred to a medical practitioner for further management.'",
+          "gates": [
+            {
+              "criterion": "Physical examination does not suggest a comorbid or an alternative diagnosis (e.g. crackles, heart murmurs, inspiratory wheeze, features of COPD)",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 10,
+            "section_heading": "Physical examination"
+          }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "INVESTIGATION",
+          "description": "Conduct (or refer for) spirometry testing. 'Spirometry is required for a patient with suspected asthma, who has not been previously diagnosed, to confirm variable expiratory airflow limitation.' Spirometry is also recommended for a patient with an existing diagnosis of asthma: at initial presentation to establish baseline performance; if variable respiratory symptoms are reported but there is no available documented variable airflow limitation; if they have poor symptom control or have been experiencing exacerbations; after 3 to 6 months of using ICS containing treatment to establish a personal best for future comparison; as part of routine periodic review (approximately every 2 years) to assess risk of exacerbations and decline in lung function. Pharmacists may conduct spirometry in the community pharmacy setting in accordance with National Asthma Council Australia Spirometry Handbook for Primary Care if appropriately trained with appropriate equipment and quality assurance and audit processes; alternatively refer to an appropriate healthcare provider that performs lung function testing. Do not delay asthma treatment if clinically indicated while awaiting spirometry: if the patient does not have a prior diagnosis of asthma and asthma is suspected, therapy should be limited to Level 1 or Level 2 treatment only and spirometry performed within 3 months; an Asthma Action Plan should not be prepared if diagnosis has not been confirmed on spirometry; oral corticosteroids should not be supplied as part of an Asthma Action Plan before spirometry is performed that supports a diagnosis of asthma.",
+          "gates": [
+            {
+              "criterion": "Spirometry performed (or referred for) in accordance with the Spirometry Handbook; for suspected asthma without prior diagnosis spirometry performed within 3 months",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 10,
+            "section_heading": "Conduct (or refer for) spirometry testing"
+          }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "If the patient presents with acute respiratory symptoms that suggest an asthma exacerbation without a previous diagnosis (Entry Point 1), the patient must be referred to their usual healthcare provider (or emergency services, if required) before they can enter the program. Standard pharmacy care may be provided. If the patient has a previous diagnosis of asthma these should be managed as Management and treatment and investigations (including spirometry) performed after resolution of acute symptoms.",
+          "gates": [
+            {
+              "criterion": "Acute respiratory symptoms that suggest an asthma exacerbation are present in a patient without a previous diagnosis (Entry Point 1)",
+              "on_fail": "STOP"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 11,
+            "section_heading": "Conduct (or refer for) spirometry testing"
+          }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Interpret spirometry (if applicable). Consider results in context of patient history and physical examination. Spirometry findings consistent with variable expiratory limitation include: positive bronchodilator responsiveness test - clinically significant FEV1 increase of >= 200 mL and >= 12 per cent from baseline pre-bronchodilator result (10 to 15 minutes after bronchodilator), or in those not already using ICS - clinically significant increase in pre-bronchodilator FEV1 (>= 200 mL and >= 12 per cent) measured before and after 4 weeks of maintenance inhaled corticosteroid (ICS) (or ICS-long acting beta2 agonist (LABA)) treatment. Refer the patient to their usual healthcare provider with a comprehensive clinical handover if spirometry results: do not demonstrate reversible airflow limitation or expiratory airflow limitation; suggest abnormal restrictive or mixed ventilatory patterns; are inconsistent with asthma (or difficult to interpret).",
+          "gates": [
+            {
+              "criterion": "Spirometry results demonstrate variable expiratory airflow limitation consistent with asthma",
+              "on_fail": "REFER"
+            },
+            {
+              "criterion": "Spirometry results are interpretable and not unexpected for asthma",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 6,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Interpret spirometry testing in accordance with the current online version of the Therapeutic Guidelines: Respiratory (Pulmonary function testing - Spirometry) and the National Asthma Council Australia Spirometry Handbook for Primary Care (see Appendix 5). 'Any uncertainty on interpretation should be referred to a medical practitioner for review.' 'There is no single conclusive test for asthma. Diagnosis is based on patient history, physical examination, and spirometry. A diagnosis of asthma can be made if all the following apply: the patient has a history of recurrent or persistent respiratory symptoms that vary in frequency and severity; the patient's signs and symptoms are unlikely to be due to an alternative diagnosis; variable expiratory airflow limitation is demonstrated (and/or elevated fractional exhaled nitric oxide (FeNO) if testing is available).'",
+          "gates": [
+            {
+              "criterion": "Interpretation of spirometry is certain and diagnosis of asthma is confirmed (history of recurrent or persistent respiratory symptoms, unlikely alternative diagnosis, variable expiratory airflow limitation demonstrated)",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 11,
+            "section_heading": "Interpret spirometry testing"
+          }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Assess symptom control. 'Assess and document symptom control throughout the program at every review.' Asthma symptom control can be assessed using the Australian Asthma Handbook - Classification of recent asthma symptom control in adults and adolescents or a validated questionnaire (see Appendix 6). Classification is based on symptoms over the previous 4 weeks: good control = all of daytime symptoms on 2 or fewer days per week, need for reliever on 2 or fewer days per week, no limitation of activities, no symptoms during night or on waking; poor control = any of daytime symptoms on more than 2 days per week, need for reliever on more than 2 days per week, any limitation of activities, any symptoms during night or on waking. An ACT score >= 20 indicates asthma may be well controlled; an ACT score <= 19 indicates asthma may be poorly controlled, with an ACT score <= 15 indicating very poor control.",
+          "gates": [
+            {
+              "criterion": "Asthma symptom control assessed and documented at every review (good control per Appendix 6 classification or ACT >= 20)",
+              "on_fail": "unclear"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 12,
+            "section_heading": "Assess symptom control"
+          }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "REFER",
+          "description": "Commence collaborative care (after eligibility, history, examination, spirometry and symptom control assessment). Optimal management of asthma involves a multidisciplinary and collaborative team-based approach (and as such communication and clinical handover with other care providers is essential).",
+          "gates": [
+            {
+              "criterion": "Collaborative care with the patient's usual healthcare provider commenced (for Entry Point 1: collaborative management with a medical practitioner established before further program participation)",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 6,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "TREAT",
+          "description": "Develop and implement management plan. Non-pharmacological measures (provide to all patients regardless of whether pharmacotherapy is prescribed): trigger avoidance including immunisation status; smoking and/or vaping cessation; weight management; diet and nutrition; physical activity; pulmonary rehabilitation (if applicable). Pharmacotherapy: initial and/or maintenance management of asthma - treatment Levels 1 to 3 as per 2025 Australian Asthma Handbook; inhaler considerations; adjusting pharmacotherapy; management of asthma exacerbations and acute asthma. Each patient with a confirmed diagnosis of asthma on spirometry should have an individualised written Asthma Action Plan (or existing plan updated) using a validated template, plus an accompanying individualised lifestyle prescription (Appendix 7). Refer the patient to their usual healthcare provider with a comprehensive clinical handover if: symptoms are not controlled with treatment consistent with 'recommended' Level 3 pharmacotherapy and they require treatment consistent with Level 4.",
+          "gates": [
+            {
+              "criterion": "Symptoms controlled with treatment consistent with 'recommended' Level 3 pharmacotherapy (i.e. treatment consistent with Level 4 is not required)",
+              "on_fail": "REFER"
+            },
+            {
+              "criterion": "Patient still eligible for the program and collaborative care established",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 7,
+            "section_heading": "Guideline overview"
+          }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "TREAT",
+          "description": "Pharmacotherapy for initial and/or maintenance management of asthma must be in accordance with the current online version of the Therapeutic Guidelines: Respiratory (Maintenance management of asthma in adults and adolescents), considering the pharmacotherapy recommendations in the current online version of the Australian Asthma Handbook; if the two differ, refer to the Australian Asthma Handbook when making clinical decisions. Key considerations: ICS containing medicines are indicated for all adults and adolescents with asthma; short-acting beta2 agonist (SABA) used alone as needed (without ICS containing treatment) should not be recommended or used for the management of asthma, even if symptoms are infrequent; as-needed low-dose budesonide-formoterol ('recommended' Level 1 treatment) is the least intensive treatment option appropriate for adults and adolescents with asthma; long acting beta2 agonists (LABAs) should never be used without ICS in asthma; montelukast no longer has a role in the routine management of asthma in adolescents and adults - pharmacists must not initiate montelukast under the program or prescribe continued montelukast therapy initiated by a specialist or GP (patients prescribed montelukast must be counselled on neuropsychiatric adverse effects and referred to their specialist provider or general practitioner); patients should not commence an 'alternative pathway' of any level of treatment without consultation with a medical practitioner; for patients with predictable EIB, recommend a dose of their rapid-acting bronchodilator 15 minutes before exercise commences; prescribe asthma medicines delivered via inhaler device, not nebulisation (nebulisation is unnecessary, except in some cases of severe acute asthma).",
+          "gates": [
+            {
+              "criterion": "Prescribing within treatment Levels 1 to 3 ('recommended' pathway) per the current online Therapeutic Guidelines and Australian Asthma Handbook",
+              "on_fail": "REFER"
+            },
+            {
+              "criterion": "Combination products include only medicines able to be prescribed under the program",
+              "on_fail": "unclear"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 14,
+            "section_heading": "Pharmacotherapy for initial and/or maintenance management of asthma"
+          }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "Inhaler considerations: the choice of medicine and inhaler device should consider patient preference and ability to use the device correctly with appropriate training (inspiratory effort required, patient age, inspiratory effort capability, developmental stage, cognition and dexterity, environmental impact); recommend the use of a spacer device with pressurised metered dose inhalers (consider if a face mask is required); minimise the number of inhalers prescribed and the different types of inhaler devices where possible; demonstrate the correct use of the prescribed inhaler device using a placebo inhaler and provide an inhaler-specific checklist; review inhaler technique and adherence, including dispensing history, at every opportunity, even if the same inhaler or device has been used long-term.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 15,
+            "section_heading": "Inhaler considerations"
+          }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "TREAT",
+          "description": "Adjusting pharmacotherapy (step up, step down, or switch from 'alternative' pharmacotherapy to 'recommended' treatment) in accordance with the current online Therapeutic Guidelines: Respiratory (Summary of stepwise maintenance management). Before stepping up: confirm the patient remains eligible for the program; confirm stepping up is appropriate for the presentation; consider common causes of failure to achieve good symptom control (poor adherence, incorrect inhaler technique, trigger exposure, comorbid or alternative diagnoses); if using 'alternative' Level 2 or Level 3 treatment, consider switching to the corresponding 'recommended' Level treatment before considering a dose increase; refer patients to an appropriate healthcare provider for ongoing management if symptoms are not controlled or have worsened on 'recommended' Level 3 treatment. Stepping down: consider stepping down if prescribed Level 2 or Level 3 treatment (by one treatment Level, with review in 4 to 8 weeks, then at 3 months) if good asthma symptom control maintained for 3 months, symptom control at Level 2 or Level 3 achieved in 1 to 2 months, and low risk of exacerbations; stepping down should not be attempted if the person is exposed to triggers or is travelling; do not withdraw ICS containing treatment completely even if symptoms are infrequent and asthma is well controlled.",
+          "gates": [
+            {
+              "criterion": "Patient remains eligible for the program and stepping up/down is appropriate for the presentation",
+              "on_fail": "REFER"
+            },
+            {
+              "criterion": "Symptoms not controlled or worsened on 'recommended' Level 3 treatment is absent (otherwise refer for ongoing management)",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 16,
+            "section_heading": "Adjusting pharmacotherapy"
+          }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management plan is appropriate. Consult the Therapeutic Guidelines, Australian Medicines Handbook, Australian Asthma Handbook and other relevant references to confirm that management is appropriate, including for: suitability of inhaler device(s) selected; contraindications and precautions; drug interactions; lactation status.",
+          "gates": [
+            {
+              "criterion": "Management appropriate for: inhaler device suitability, contraindications and precautions, drug interactions, lactation status",
+              "on_fail": "unclear"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 18,
+            "section_heading": "Confirm management plan is appropriate"
+          }
+        },
+        {
+          "id": "PW-1-S18",
+          "order": 18,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: provide comprehensive advice (including supporting written information when required) regarding individual product and medicine use (e.g. medication dosing and inhaler technique), how to manage adverse effects, non-pharmacological measures, how to self-manage their asthma, when to seek further care and/or treatment, when to return for clinical review; provide the patient with an individualised written Asthma Action Plan (or update an existing plan) customised to their management regimen.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 18,
+            "section_heading": "Communicate agreed management plan"
+          }
+        },
+        {
+          "id": "PW-1-S19",
+          "order": 19,
+          "type": "REFER",
+          "description": "Collaborative care: provide a copy of the patient's Asthma Action Plan to their usual healthcare provider (and any other relevant health professionals involved in the patient's care). The communication should also include (if appropriate): relevant medical history, results of any spirometry testing conducted, and level of symptom control; changes to existing pharmacotherapy or new pharmacotherapy (including pharmacotherapy for asthma exacerbations); a summary of advice provided to the patient including recommendations for multidisciplinary care and referrals; the next scheduled review appointment. Provide an update to the patient's usual healthcare provider following each occasion of care, including when any changes are made to the patient's management plan.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 18,
+            "section_heading": "Collaborative care"
+          }
+        },
+        {
+          "id": "PW-1-S20",
+          "order": 20,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review and ongoing collaboration: all patients should undergo regular clinical review. Review within 2 to 3 months of commencement of management and/or initiation of new pharmacotherapy (including when stepping up treatment); within 1 to 2 months after a step down of treatment; after 2 to 3 months of stable pharmacotherapy at treatment Levels 2 to 3; at least once a year if stable; after any asthma exacerbation, including when oral corticosteroids (OCS) are self-initiated (review by a medical practitioner must occur first). At each appointment (scheduled or unscheduled) thoroughly review the patient's ongoing eligibility for the program, symptom control and exacerbations, patient history changes, inhaler technique, potential adverse effects, Asthma Action Plan, pharmacotherapy need, supply until next review, and referrals. Patients may continue to participate providing their condition remains eligible, they wish to remain in the program, and they attend scheduled reviews; refer all patients (with their consent) who are no longer eligible or suitable, or who do not wish to continue, to an appropriate healthcare provider.",
+          "gates": [
+            {
+              "criterion": "Condition remains eligible to be managed in the program, patient wishes to remain, and patient attends scheduled reviews",
+              "on_fail": "REFER"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 18,
+            "section_heading": "Clinical review and ongoing collaboration"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Asthma exacerbations and acute asthma - Asthma Action Plan guidance, escalation and pharmacist-initiated prednis(ol)one (pages 17-18)",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "EDUCATE",
+          "description": "Management and treatment of asthma exacerbations and acute asthma - include in the patient's Asthma Action Plan: how to recognise an asthma exacerbation and acute asthma (Australian Asthma Handbook - Definition and classification of asthma exacerbations); the signs and symptoms that indicate the need for emergency medical care, and how to manage these according to the National Asthma Council Australia's First Aid for Asthma chart and the Therapeutic Guidelines: Respiratory (Acute asthma - First aid for acute asthma for patients and community members). Risk factors for life-threatening acute asthma include history of severe exacerbation/s, frequent SABA use, co-existing cardiovascular disease and adverse psychosocial or behavioural factors including socioeconomic disadvantage, psychiatric illness, and social isolation.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 17,
+            "section_heading": "Management and treatment of asthma exacerbations and acute asthma"
+          }
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Patient self-management of asthma exacerbations and acute asthma: include in the patient's Asthma Action Plan guidance on appropriate self-management (severe and life-threatening acute asthma must be managed in an acute care setting). This guidance should include rapid severity assessment and pharmacotherapy as per the Therapeutic Guidelines: Respiratory (Acute asthma) and Australian Asthma Handbook - Adjusting treatment / Managing acute asthma in adults and adolescents in primary care. Instruct patients to use their rapid-acting bronchodilator as often as needed when symptoms are worsening (i.e. symptoms are more frequent, are recurring after reliever use, or are not promptly relieved). Clearly detail the maximum dose that can be taken at one time and the maximum dose that can be taken in one 24-hour period as per the Australian Asthma Handbook - Medicines Guide.",
+          "gates": [
+            {
+              "criterion": "Asthma Action Plan in place with clearly detailed maximum dose at one time and maximum dose in one 24-hour period",
+              "on_fail": "unclear"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 17,
+            "section_heading": "Patient self-management of asthma exacerbations and acute asthma"
+          }
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "Provide and dispense a single prescription for up to 5 days treatment of prednis(ol)one up to a maximum dose of 50mg per day with no repeats as part of the patient's written Asthma Action Plan to self-initiate if: symptoms do not improve with escalation of rapid-acting bronchodilator or ICS/formoterol as per Asthma Action Plan over 24 to 48hrs, and immediate review by a medical practitioner is unavailable. Pharmacist-initiated prednis(ol)one prescriptions can only be dispensed in line with an existing Asthma Action Plan for one single occasion in individuals who may come to serious harm due to difficulty accessing unscheduled healthcare (e.g. > 2hrs from healthcare facility). Subsequent prescriptions for stand-by prednis(ol)one can only be provided by a medical practitioner. Advise the patient that prednis(ol)one should only be used if they experience a severe asthma exacerbation as per the above guidance, and not for any other purpose. Prescribe and dispense only the number of tablets required for up to a 5-day course of prednis(ol)one. Do not issue repeats. Factors to consider in determining appropriateness of the prescription include patient age, access to a pharmacy, and ability to self-manage asthma. If a prescription is not provided, provide detailed instructions for when these patients should seek medical review for their worsening asthma. All patients using prednis(ol)one must also be provided with verbal and written materials about harm of OCS dose accumulation over time.",
+          "gates": [
+            {
+              "criterion": "Existing written Asthma Action Plan in place with prednis(ol)one self-initiation criteria",
+              "on_fail": "STOP"
+            },
+            {
+              "criterion": "Symptoms do not improve with escalation of rapid-acting bronchodilator or ICS/formoterol as per Asthma Action Plan over 24 to 48hrs",
+              "on_fail": "unclear"
+            },
+            {
+              "criterion": "Immediate review by a medical practitioner is unavailable",
+              "on_fail": "unclear"
+            },
+            {
+              "criterion": "Dispensed only once - 'for one single occasion' (subsequent stand-by prescriptions only from a medical practitioner)",
+              "on_fail": "STOP"
+            },
+            {
+              "criterion": "Patient may come to serious harm due to difficulty accessing unscheduled healthcare (e.g. > 2hrs from healthcare facility)",
+              "on_fail": "STOP"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 17,
+            "section_heading": "Patient self-management of asthma exacerbations and acute asthma"
+          }
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "FOLLOW_UP",
+          "description": "Patients who self-initiate prednis(ol)one must be followed by review by medical practitioner within 1 to 2 weeks. Instruct patients that they must arrange medical practitioner review as soon as possible after starting prednis(ol)one (including those with prescriptions from a general practitioner). At this review, the medical practitioner may choose to prescribe further OCS if clinically indicated.",
+          "gates": [
+            {
+              "criterion": "Patient self-initiated prednis(ol)one",
+              "on_fail": "STOP"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 17,
+            "section_heading": "Patient self-management of asthma exacerbations and acute asthma"
+          }
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Advise patients to seek emergency care/call an ambulance (even if they have self-initiated prednis(ol)one) if any of: they have severe breathing difficulties; their symptoms get worse very quickly; their rapid-acting bronchodilator has little or no effect; they have difficulty speaking sentences; they experience blue lips or drowsiness; they experience any other signs of severe or life-threatening acute asthma. For more information see the Australian Asthma Handbook - Definition and classification of asthma exacerbations and Managing acute asthma in adults and adolescents in primary care.",
+          "gates": [
+            {
+              "criterion": "Any of: severe breathing difficulties; symptoms get worse very quickly; rapid-acting bronchodilator has little or no effect; difficulty speaking sentences; blue lips or drowsiness; any other signs of severe or life-threatening acute asthma",
+              "on_fail": "STOP"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 18,
+            "section_heading": "Communicate agreed management plan"
+          }
+        },
+        {
+          "id": "PW-2-S6",
+          "order": 6,
+          "type": "FOLLOW_UP",
+          "description": "Advise all patients to return to the pharmacist (or their chosen healthcare provider) for review of their Asthma Action Plan after an asthma exacerbation, even if it was mild and self-managed.",
+          "gates": [
+            {
+              "criterion": "Asthma exacerbation occurred (even if mild and self-managed)",
+              "on_fail": "STOP"
+            }
+          ],
+          "confidence": "high",
+          "provenance": {
+            "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+            "page": 18,
+            "section_heading": "Communicate agreed management plan"
+          }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "prednis(ol)one",
+      "form": "tablets",
+      "strength": "",
+      "dose": "up to a maximum dose of 50mg per day",
+      "route": "",
+      "frequency": "",
+      "duration": "up to 5 days treatment (a 5-day course)",
+      "max_quantity": "a single prescription with no repeats; 'Prescribe and dispense only the number of tablets required for up to a 5-day course of prednis(ol)one. Do not issue repeats.'",
+      "max_dose": "50mg per day",
+      "quantity_to_supply": "only the number of tablets required for up to a 5-day course; no repeats",
+      "notes": "Self-initiation supply as part of the patient's written Asthma Action Plan only, if: symptoms do not improve with escalation of rapid-acting bronchodilator or ICS/formoterol as per Asthma Action Plan over 24 to 48hrs, AND immediate review by a medical practitioner is unavailable. 'Pharmacist-initiated prednis(ol)one prescriptions can only be dispensed in line with an existing Asthma Action Plan for one single occasion in individuals who may come to serious harm due to difficulty accessing unscheduled healthcare (e.g. > 2hrs from healthcare facility). Subsequent prescriptions for stand-by prednis(ol)one can only be provided by a medical practitioner.' 'Advise the patient that prednis(ol)one should only be used if they experience a severe asthma exacerbation as per the above guidance, and not for any other purpose.' Factors to consider in determining appropriateness of the prescription include patient age, access to a pharmacy, and ability to self-manage asthma. All patients using prednis(ol)one must be provided with verbal and written materials about harm of OCS dose accumulation over time. Route/strength per tablet not printed beyond the 50mg per day maximum; maximum dose at one time and maximum dose in one 24-hour period are 'as per the Australian Asthma Handbook - Medicines Guide' and are not printed in this document. 'Oral corticosteroids should not be supplied as part of an Asthma Action Plan before spirometry is performed that supports a diagnosis of asthma' (p.11).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 17,
+        "section_heading": "Patient self-management of asthma exacerbations and acute asthma"
+      }
+    },
+    {
+      "id": "TX-2",
+      "drug": "budesonide-formoterol",
+      "form": "",
+      "strength": "low-dose",
+      "dose": "",
+      "route": "",
+      "frequency": "as-needed",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'As-needed low-dose budesonide-formoterol ('recommended' Level 1 treatment) is the least intensive treatment option appropriate for adults and adolescents with asthma.' 'Most patients can commence and continue maintenance treatment with as-needed low-dose budesonide-formoterol ('recommended' Level 1 treatment).' No product-level dose, device, route or quantity is printed in this protocol; treatment levels are defined in the Australian Asthma Handbook and Therapeutic Guidelines: Respiratory. Where pharmacotherapy is prescribed, the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review (p.13).",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 14,
+        "section_heading": "Key considerations"
+      }
+    },
+    {
+      "id": "TX-3",
+      "drug": "inhaled corticosteroid (ICS)-formoterol maintenance-and-reliever therapy",
+      "form": "",
+      "strength": "medium dose Inhaled corticosteroid (ICS)",
+      "dose": "",
+      "route": "",
+      "frequency": "maintenance-and-reliever therapy",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'recommended' Level 3 pharmacotherapy as per the Australian Asthma Handbook, described in this protocol as '(i.e. medium dose Inhaled corticosteroid (ICS)-formoterol maintenance-and-reliever therapy)'. Patients with poor asthma symptom control despite this treatment who require treatment consistent with Level 4 are ineligible (p.4) and must be referred. 'Consider starting treatment with a regimen that includes maintenance ICS (at Level 2 or Level 3) if the patient has frequent or severe symptoms, has had a previous severe exacerbation, or is at high risk of exacerbations.' No product-level dose, device or quantity printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "TX-4",
+      "drug": "montelukast",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "DO NOT INITIATE UNDER THIS PROGRAM (protocol prohibition, verbatim p.15): 'Montelukast no longer has a role in the routine management of asthma in adolescents and adults. Pharmacists must not initiate montelukast under the program or prescribe continued montelukast therapy initiated by a specialist or GP. Patients should be referred to a medical practitioner for review of ongoing need and prescription before reentering the program.' 'Montelukast is associated with potential neuropsychiatric adverse events. Pharmacists must not initiate montelukast under the program and must not prescribe continued monteleukast therapy initiated by a specialist or GP. Patients prescribed montelukast must be counselled accordingly, see the Therapeutic Goods Administration Safety Update January 2025 and referred to their specialist provider or general practitioner.' 'Counsel relevant patients on the risk of neuropsychiatric adverse effects with montelukast, see the Therapeutic Goods Administration Safety Update January 2025.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 15,
+        "section_heading": "Key considerations"
+      }
+    },
+    {
+      "id": "TX-5",
+      "drug": "short-acting beta2 agonist (SABA) used alone as needed (without ICS containing treatment)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "as needed",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "MUST NOT BE USED for asthma management (protocol prohibition, verbatim p.8 and p.15): 'As-needed SABA alone (without ICS) should never be prescribed or recommended to manage asthma. ICS-containing medicines are indicated for all adults and adolescents with asthma.' 'SABA alone (without ICS) used as needed should not be recommended or used for the management of asthma, even if symptoms are infrequent.' Patients 'requiring >=12 short-acting beta2 agonist (SABA) canisters in a year or equivalent over 3 months' require treat-and-concurrently-refer (p.5); SABA use > 2 times per week or >=3 canisters per year is an indication for review by an appropriate healthcare provider (p.19).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 15,
+        "section_heading": "Key considerations"
+      }
+    },
+    {
+      "id": "TX-6",
+      "drug": "long acting beta2 agonist (LABA) used without ICS",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "MUST NOT BE USED without ICS in asthma (protocol prohibition, verbatim p.14): 'Long acting beta2 agonists (LABAs) should never be used without ICS in asthma.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 14,
+        "section_heading": "Key considerations"
+      }
+    },
+    {
+      "id": "TX-7",
+      "drug": "rapid-acting bronchodilator",
+      "form": "",
+      "strength": "",
+      "dose": "a dose of their rapid-acting bronchodilator",
+      "route": "",
+      "frequency": "15 minutes before exercise commences (for patients with a diagnosis of asthma who experience predictable EIB)",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'For patients with a diagnosis of asthma who experience predictable EIB, recommend they use a dose of their rapid-acting bronchodilator 15 minutes before exercise commences (see the Australian Asthma Handbook - Exercise and asthma)' (p.15). Separately, 'Instruct patients to use their rapid-acting bronchodilator as often as needed when symptoms are worsening' with the maximum dose at one time and in one 24-hour period detailed 'as per the Australian Asthma Handbook - Medicines Guide' (p.17) - those numeric limits are not printed in this protocol. Patients with EIB but without any other evidence of asthma should be referred to a medical practitioner (p.8).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 15,
+        "section_heading": "Key considerations"
+      }
+    },
+    {
+      "id": "TX-8",
+      "drug": "inhaled corticosteroid (ICS)-containing medicines",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'ICS containing medicines are indicated for all adults and adolescents with asthma' (p.14); 'All adults and adolescents with asthma should be prescribed ICS' (p.15); 'Do not withdraw ICS containing treatment completely, even if symptoms are infrequent and asthma is well controlled. 'Recommended' Level 1 pharmacotherapy is suitable for most patients with asthma long-term.' (p.16). Doses/devices are defined by the Australian Asthma Handbook treatment levels and are not printed here.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 15,
+        "section_heading": "Key considerations"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Have any alarm signs and symptoms including haemoptysis, chest pain, unexplained weight loss or gain, night sweats, fever, signs of bronchiectasis, recurrent pneumonia, orthopnoea, or oedema (prompt medical review is required)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Are experiencing respiratory distress (e.g. unable to complete a sentence in one breath)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "During/after exercise experience chest tightness or discomfort (without other symptoms of asthma) - consider possibility of a cardiovascular condition/event",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Have a forced expiratory volume in 1 second (FEV1) of < 60 per cent predicted.",
+      "structured": {
+        "parameter": "FEV1 percent predicted",
+        "operator": "<",
+        "value": 60,
+        "unit": "per cent predicted"
+      },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Have a history of severe asthma exacerbation/s requiring (for asthma): - intubation/intensive care unit (ICU) admission (ever) - hospitalisation or emergency department (ED) visit in the past month - >= 2 ED visits in the past year - any hospitalisations in the past year",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Have spirometry results that: - are difficult to interpret or are unexpected for asthma - indicate alarm symptoms or findings - do not demonstrate reversible airflow limitation or expiratory airflow limitation - show abnormal restrictive or mixed ventilatory patterns",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Have poor asthma symptom control, despite current treatment consistent with 'recommended' Level 3 pharmacotherapy as per the Australian Asthma Handbook (i.e. medium dose Inhaled corticosteroid (ICS)-formoterol maintenance-and-reliever therapy) and require treatment consistent with Level 4",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 4,
+        "section_heading": "Patients who are ineligible for the program"
+      }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "have well controlled type 2 diabetes",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 5,
+        "section_heading": "Treat (if clinically appropriate) and concurrently refer"
+      }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "have chronic rhinosinusitis or obstructive sleep apnoea (OSA)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 5,
+        "section_heading": "Treat (if clinically appropriate) and concurrently refer"
+      }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "require >=12 short-acting beta2 agonist (SABA) canisters in a year or equivalent over 3 months",
+      "structured": {
+        "parameter": "short-acting beta2 agonist (SABA) canisters",
+        "operator": ">=",
+        "value": 12,
+        "unit": "canisters in a year or equivalent over 3 months"
+      },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 5,
+        "section_heading": "Treat (if clinically appropriate) and concurrently refer"
+      }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "have suspected or confirmed aspirin (or non-steroidal anti-inflammatory drug (NSAID)) -exacerbated respiratory disease.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 5,
+        "section_heading": "Treat (if clinically appropriate) and concurrently refer"
+      }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Refer the patient to their usual healthcare provider with a comprehensive clinical handover if spirometry results: do not demonstrate reversible airflow limitation or expiratory airflow limitation; suggest abnormal restrictive or mixed ventilatory patterns; are inconsistent with asthma (or difficult to interpret).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 6,
+        "section_heading": "Guideline overview"
+      }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "symptoms are not controlled with treatment consistent with 'recommended' Level 3 pharmacotherapy and they require treatment consistent with Level 4",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 7,
+        "section_heading": "Guideline overview"
+      }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Patients with EIB but without any other evidence of asthma should be referred to a medical practitioner for management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 8,
+        "section_heading": "Key points"
+      }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Patients presenting with symptoms of both [COPD and asthma] should be referred onto a medical practitioner for ongoing management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 8,
+        "section_heading": "Key points"
+      }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "If COPD is suspected, the patient should be referred to a medical practitioner for further management.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 10,
+        "section_heading": "Co-existing asthma and COPD"
+      }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "If there is any concern or doubt about the safety or suitability of performing spirometry, refer the patient to an appropriate healthcare provider for management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 11,
+        "section_heading": "Conduct (or refer for) spirometry testing"
+      }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "If the patient presents with acute respiratory symptoms that suggest an asthma exacerbation without a previous diagnosis (Entry Point 1), the patient must be referred to their usual healthcare provider (or emergency services, if required) before they can enter the program.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 11,
+        "section_heading": "Conduct (or refer for) spirometry testing"
+      }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Any uncertainty on interpretation [of spirometry] should be referred to a medical practitioner for review.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 11,
+        "section_heading": "Interpret spirometry testing"
+      }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "any exacerbation on existing asthma pharmacotherapy (requires referral to a medical practitioner)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 14,
+        "section_heading": "Pharmacotherapy for initial and/or maintenance management of asthma"
+      }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Patients prescribed montelukast must be counselled accordingly, see the Therapeutic Goods Administration Safety Update January 2025 and referred to their specialist provider or general practitioner.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 15,
+        "section_heading": "Key considerations"
+      }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Refer patients to an appropriate healthcare provider for ongoing management if symptoms are not controlled or have worsened on 'recommended' Level 3 treatment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 16,
+        "section_heading": "Adjusting pharmacotherapy"
+      }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "they have severe breathing difficulties",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "their symptoms get worse very quickly",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "their rapid-acting bronchodilator has little or no effect",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "they have difficulty speaking sentences",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "they experience blue lips or drowsiness",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "they experience any other signs of severe or life-threatening acute asthma.",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "there is deterioration in their condition (i.e. signs of poor asthma control)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "they are needing to use their rapid-acting bronchodilator > 2 times per week or use >=3 canisters per year",
+      "structured": {
+        "parameter": "rapid-acting bronchodilator use",
+        "operator": ">",
+        "value": 2,
+        "unit": "times per week"
+      },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "they are needing to use their rapid-acting bronchodilator > 2 times per week or use >=3 canisters per year",
+      "structured": {
+        "parameter": "rapid-acting bronchodilator canisters",
+        "operator": ">=",
+        "value": 3,
+        "unit": "canisters per year"
+      },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "their symptoms have not improved after changes to therapy and regular and correct inhaler use after 3 months and ACQ5 remains >= 1.0 or ACT< 20",
+      "structured": {
+        "parameter": "Asthma Control Questionnaire-5 (ACQ5) score",
+        "operator": ">=",
+        "value": 1.0,
+        "unit": "score"
+      },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "they experience intolerable adverse effects with their treatment",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "they have difficulty using their inhaler device",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-35",
+      "trigger_text": "any alarm signs or symptoms occur (see Eligibility criteria)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-36",
+      "trigger_text": "any comorbid conditions become uncontrolled, or any new conditions occur, that may complicate asthma management or control (see Appendix 2).",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    },
+    {
+      "id": "RF-37",
+      "trigger_text": "the patient is, or becomes, ineligible for management under the program (Refer the patient to their usual healthcare provider with a comprehensive clinical handover)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 9,
+        "section_heading": "Program eligibility"
+      }
+    },
+    {
+      "id": "RF-38",
+      "trigger_text": "Refer all patients (with their consent) who are no longer eligible or suitable for management within the program, or who do not wish to continue in the program, to an appropriate healthcare provider.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 19,
+        "section_heading": "Indications for review by an appropriate healthcare provider"
+      }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to their usual healthcare provider with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the program. Ineligibility for treatment as part of a pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+      "Refer when: the patient is aged below 16 or above 65 years (does not preclude a patient from accessing usual pharmacy care); if they are, or become, ineligible for the program.",
+      "Treat (if clinically appropriate) and concurrently refer: Provide treatment (if clinically appropriate and concurrently refer) the patient to an appropriate healthcare provider for further review if they: have well controlled type 2 diabetes; have chronic rhinosinusitis or obstructive sleep apnoea (OSA); require >=12 short-acting beta2 agonist (SABA) canisters in a year or equivalent over 3 months; have suspected or confirmed aspirin (or non-steroidal anti-inflammatory drug (NSAID)) -exacerbated respiratory disease.",
+      "Other referral criteria: Once a patient enters the Improved Asthma Symptom Control Program their eligibility and need for referral may change due to changes in health status, symptoms, or demographic factors. Always ensure the patient is reassessed for eligibility at each consultation. Further referral criteria are included in Indications for review by an appropriate healthcare provider.",
+      "Provide a copy of the patient's Asthma Action Plan to their usual healthcare provider (and any other relevant health professionals involved in the patient's care), including medical history, spirometry results, level of symptom control, pharmacotherapy changes, summary of advice and referrals, and the next scheduled review appointment.",
+      "Refer all patients (with their consent) who are no longer eligible or suitable for management within the program, or who do not wish to continue in the program, to an appropriate healthcare provider."
+    ],
+    "urgent": [
+      "Have any alarm signs and symptoms including haemoptysis, chest pain, unexplained weight loss or gain, night sweats, fever, signs of bronchiectasis, recurrent pneumonia, orthopnoea, or oedema (prompt medical review is required)",
+      "Advise the patient to be reviewed by an appropriate healthcare provider as soon as possible if: there is deterioration in their condition; they are needing to use their rapid-acting bronchodilator > 2 times per week or use >=3 canisters per year; their symptoms have not improved after changes to therapy and regular and correct inhaler use after 3 months and ACQ5 remains >= 1.0 or ACT< 20; they experience intolerable adverse effects; they have difficulty using their inhaler device; any alarm signs or symptoms occur; any comorbid conditions become uncontrolled or any new conditions occur that may complicate asthma management or control"
+    ],
+    "emergency": [
+      "Advise patients to seek emergency care/call an ambulance (even if they have self-initiated prednis(ol)one) if: they have severe breathing difficulties; their symptoms get worse very quickly; their rapid-acting bronchodilator has little or no effect; they have difficulty speaking sentences; they experience blue lips or drowsiness; they experience any other signs of severe or life-threatening acute asthma.",
+      "Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the program.",
+      "If the patient presents with acute respiratory symptoms that suggest an asthma exacerbation without a previous diagnosis (Entry Point 1), the patient must be referred to their usual healthcare provider (or emergency services, if required) before they can enter the program.",
+      "severe and life-threatening acute asthma must be managed in an acute care setting"
+    ],
+    "provenance": {
+      "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+      "page": 1,
+      "section_heading": "Eligibility for the program"
+    }
+  },
+  "review_followup": [
+    {
+      "when": "within 2 to 3 months of commencement of management and/or initiation of new pharmacotherapy (including when stepping up treatment)",
+      "what": "Clinical review (shorter review periods may be clinically necessary).",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Clinical review and ongoing collaboration"
+      }
+    },
+    {
+      "when": "within 1 to 2 months after a step down of treatment",
+      "what": "Clinical review.",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Clinical review and ongoing collaboration"
+      }
+    },
+    {
+      "when": "after 2 to 3 months of stable pharmacotherapy at treatment Levels 2 to 3",
+      "what": "Clinical review (see Adjusting pharmacotherapy).",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Clinical review and ongoing collaboration"
+      }
+    },
+    {
+      "when": "at least once a year if stable",
+      "what": "Clinical review.",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Clinical review and ongoing collaboration"
+      }
+    },
+    {
+      "when": "after any asthma exacerbation, including when oral corticosteroids (OCS) are self-initiated",
+      "what": "Clinical review - 'review by a medical practitioner must occur first'.",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 7,
+        "section_heading": "Guideline overview"
+      }
+    },
+    {
+      "when": "within 1 to 2 weeks after self-initiating prednis(ol)one",
+      "what": "'Patients who self-initiate prednis(ol)one must be followed by review by medical practitioner within 1 to 2 weeks'; patients must arrange medical practitioner review as soon as possible after starting prednis(ol)one (including those with prescriptions from a general practitioner).",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 17,
+        "section_heading": "Patient self-management of asthma exacerbations and acute asthma"
+      }
+    },
+    {
+      "when": "after an asthma exacerbation, even if it was mild and self-managed",
+      "what": "'Advise all patients to return to the pharmacist (or their chosen healthcare provider) for review of their Asthma Action Plan'.",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 18,
+        "section_heading": "Communicate agreed management plan"
+      }
+    },
+    {
+      "when": "after 3 to 6 months of using ICS containing treatment",
+      "what": "Repeat spirometry to establish a personal best for future comparison.",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 11,
+        "section_heading": "Conduct (or refer for) spirometry testing"
+      }
+    },
+    {
+      "when": "as part of routine periodic review (approximately every 2 years)",
+      "what": "Repeat spirometry to assess risk of exacerbations and decline in lung function (even if good symptom control is reported).",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 11,
+        "section_heading": "Conduct (or refer for) spirometry testing"
+      }
+    },
+    {
+      "when": "at every consultation / every occasion of care",
+      "what": "Consider program eligibility at every consultation, as eligibility may change at any time; provide an update to the patient's usual healthcare provider following each occasion of care, including when any changes are made to the management plan.",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 9,
+        "section_heading": "Program eligibility"
+      }
+    },
+    {
+      "when": "within 3 months (for patients without a prior diagnosis of asthma where asthma is suspected, awaiting spirometry)",
+      "what": "Spirometry performed within 3 months (therapy limited to Level 1 or Level 2 treatment only while awaiting spirometry).",
+      "provenance": {
+        "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+        "page": 11,
+        "section_heading": "Conduct (or refer for) spirometry testing"
+      }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "An update must be provided to the patient's usual healthcare provider following each occasion of care (Entry Point 2, p.3).",
+      "Provide an update to the patient's usual healthcare provider following each occasion of care, including when any changes are made to the patient's management plan (p.18).",
+      "Provide a copy of the patient's Asthma Action Plan to their usual healthcare provider (and any other relevant health professionals involved in the patient's care) (p.18)."
+    ],
+    "provenance": {
+      "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Asthma.pdf",
+      "page": 3,
+      "section_heading": "How to use this document"
+    }
+  },
+  "references": [
+    "1. National Asthma Council Australia. Australian Asthma Handbook, The National Guidelines for Health Professionals. National Asthma Council Australia; 2025 [cited 2025 Nov 3]. Available from: https://www.asthmahandbook.org.au/. [p.28]",
+    "2. Global Initiative for Asthma (GINA). Global Strategy for Asthma Management and Prevention 2025: GINA; 2025 [cited 2026 Feb 9]. Available from: https://ginasthma.org/2025-gina-strategy-report/. [p.28]",
+    "3. Australian Institute of Health and Welfare. Asthma. Canberra: AIHW, Australian Government; 2024 [cited 2025 Nov 3]. Available from: http://www.aihw.gov.au/reports/chronic-respiratory-conditions/asthma. [p.28]",
+    "4. GOLD Science Committee. Global Strategy for the Prevention, Diagnosis and Management of Chronic Obstructive Pulmonary Disease: Global Initiative for Chronic Obstructive Lung Disease; 2026 [cited 2026 Feb 9]. Available from: https://goldcopd.org/2026-gold-report-and-pocket-guide/. [p.28]",
+    "5. Australian Institute of Health and Welfare. Asthma, associated comorbidities and risk factors. Canberra: AIHW, Australian Government; 2020. [p.28]",
+    "6. National Asthma Council Australia. The Spirometry Handbook for primary care. Melbourne: National Asthma Council of Australia; 2023 [cited 2025 Nov 3]. Available from: https://www.nationalasthma.org.au/living-with-asthma/resources/health-professionals/information-paper/spirometry-handbook. [p.28]",
+    "7. Graham BL, Steenbruggen I, Miller MR, Barjaktarevic IZ, Cooper BG, Hall GL, et al. Standardization of Spirometry 2019 Update. An Official American Thoracic Society and European Respiratory Society Technical Statement. American Journal of Respiratory and Critical Care Medicine. 2019;200(8):e70-e88. [p.28]",
+    "8. Therapeutic Guidelines: Respiratory (Pulmonary function testing). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Respiratory&topicfile=fitness-for-surgery&guidelinename=Respiratory&sectionId=toc_d1e202#toc_d1e155. [p.28]",
+    "9. Australian Medicines Handbook: Drugs for asthma and chronic obstructive pulmonary disease. Adelaide: Australian Medicines Handbook Pty Ltd; 2026 [cited 2026 Feb 2]. Available from: https://amhonline.amh.net.au/chapters/respiratory-drugs/drugs-asthma-chronic-obstructive-pulmonary-disease?menu=vertical. [p.28]",
+    "10. Therapeutic Guidelines: Respiratory (Asthma). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Respiratory&amp;etgAccess=true. [p.28]",
+    "11. National Asthma Council Australia. Asthma action plan library: National Asthma Council Australia; 2025 [cited 2026 Feb 11]. Available from: https://www.nationalasthma.org.au/health-professionals/asthma-action-plans/asthma-action-plan-library. [p.28]",
+    "12. Australian Government Department of Health, Disability and Ageing. Australian Technical Advisory Group on Immunisation (ATAGI). Australian Government Department of Health, Disability and Ageing; 2025. Available from: https://www.health.gov.au/committees-and-groups/atagi?language=en. [p.28]",
+    "13. Government of Western Australia. Smoking and vaping cessation resources; 2025. Available from: https://www.health.wa.gov.au/Articles/S_T/Smoking-and-vaping-cessation-resources [p.28]",
+    "14. National Health and Medical Research Council. Australian Dietary Guidelines. Canberra: National Health and Medical Research Council; 2013. Available from: https://www.eatforhealth.gov.au/guidelines/guidelines. [p.28]",
+    "15. Australian Government Department of Health and Aged Care. Physical activity and exercise guidelines for all Australians. Canberra: Australian Government Department of Health and Aged Care; 2022. Available from: https://www.health.gov.au/topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians [p.28]",
+    "16. The Lung Foundation of Australia. Pulmonary Rehabilitation - Clinical tools and training. Queensland: Lung Foundation Australia; 2025. Available from: https://lungfoundation.com.au/health-professionals/clinical-tools-and-training/pulmonary-rehabilitation-health-professionals/. [p.28]",
+    "17. Nyenhuis SM. Complementary, alternative, and integrative therapies for asthma. In: UpToDate, Connor RF (Ed), Wolters Kluwer. 2026 [cited 2026 Feb 11]. Available from: https://www.uptodate.com/contents/complementary-alternative-and-integrative-therapies-for-asthma. [p.28]",
+    "18. Australian Government Department of Health, Disability and Ageing - Therapeutic Goods Administration. Therapeutic Goods Administration Safety Update January 2025. Australian Government Department of Health, Disability and Ageing; 2025. Available from: https://www.tga.gov.au/news/safety-updates/more-prominent-safety-warnings-about-neuropsychiatric-effects-montelukast. [p.29]",
+    "19. National Asthma Council Australia. Inhaler Technique for People with Asthma or COPD. National Asthma Council of Australia; 2018 [cited 2025 Nov 3]. Available from: https://www.nationalasthma.org.au/living-with-asthma/resources/health-professionals/information-paper/hp-inhaler-technique-for-people-with-asthma-or-copd. [p.29]",
+    "20. National Asthma Council Australia. Inhaler Technique Checklists: National Asthma Council Australia; 2025 [cited 2025 Nov 3]. Available from: https://www.nationalasthma.org.au/living-with-asthma/resources/health-professionals/charts/inhaler-technique-checklists. [p.29]",
+    "21. National Asthma Council Australia. Asthma first aid: National Asthma Council Australia; 2025 [cited 2025 Nov 3]. Available from: https://www.nationalasthma.org.au/asthma-first-aid. [p.29]",
+    "22. Boulet LP. Influence of comorbid conditions on asthma. European Respiratory Journal. 2009 Apr;33(4):897-906. [p.29]",
+    "23. Moll M, Lutz SM, Ghosh AJ, Sakornsakolpat P, Hersh CP, Beaty TH, et al. Relative contributions of family history and a polygenic risk score on COPD and related outcomes: COPDGene and ECLIPSE studies. BMJ Open Respiratory Research. 2020;7:e000755. [p.29]",
+    "24. Yang IA, George J, McDonald CF, Disler R, Ordman R, Goodwin A, et al. The COPD-X Plan: Australian and New Zealand Guidelines for the Management of Chronic Obstructive Pulmonary Disease. 2025 [cited 2026 Feb 9]. Available from: https://copdx.org.au/copd-x-plan/. [p.29]",
+    "25. National Asthma Council Australia. Healthy in the heat: National Asthma Council Australia; 2023 [cited 2026 Feb 9]. Available from: https://www.nationalasthma.org.au/living-with-asthma/resources/patients-carers/factsheets/healthy-in-the-heat. [p.29]",
+    "26. European Respiratory Society and Global Lung Function Institute. Global Lung Function Initiative calculators for Spirometry, TLCO and Lung volume: Global Lung Function Institute; 2021. Available from: https://gli-calculator.ersnet.org/index.html. [p.29]",
+    "27. Quanjer PH, Stanojevic S, Cole TJ, Baur X, Hall GL, Culver BH, et al. Multi-ethnic reference values for spirometry for the 3-95-yr age range: the global lung function 2012 equations. European Respiratory Journal. 2012;40(6):1324. [p.29]",
+    "28. QualityMetric incorporated. Asthma Control Test: Glaxo Smith Kline; 2025. Available from: https://www.asthmacontroltest.com/en-au/welcome. [p.29]"
+  ],
+  "open_questions": [
+    {
+      "topic": "Two-column ineligibility list on page 4 - ordering reconstructed",
+      "observed": "Page 4 prints 25 ineligibility bullets across two columns; the flat text extraction interleaves the columns line by line. Columns were reconstructed by x-coordinate (left column first: EXC-1 to EXC-15; right column second: EXC-16 to EXC-25).",
+      "why_unclear": "If the printed reading order is row-wise rather than column-wise, the checklist order differs (the criteria set is unchanged). No criterion text is affected.",
+      "source_page": 4
+    },
+    {
+      "topic": "Ambiguous wording of EXC-5 (suspected respiratory bacterial infection)",
+      "observed": "The bullet reads 'Have a suspected respiratory bacterial infection that requires antibiotic therapy:' followed by the indented sub-bullet '- the patient may continue to be managed in the program (if otherwise appropriate) following concurrent referral to a medical practitioner for review for antibiotic therapy', inside a list titled 'Patients who are ineligible for the program'.",
+      "why_unclear": "It is not stated whether such patients are ineligible (with a permitted continuation), eligible-with-compulsory-referral, or ineligible only when the referral cannot be arranged. Recorded as EXC-5 (confidence medium) plus exception EXE-2.",
+      "source_page": 4
+    },
+    {
+      "topic": "EXC-9 word order / specialist-treatment window",
+      "observed": "'Are actively receiving or have previously received within the past 12 months (without required follow-up appointments), specialist treatment for asthma or another respiratory condition (unless they have a written referral from their treating specialist or general practitioner to participate in the program)'.",
+      "why_unclear": "The parenthetical '(without required follow-up appointments)' sits between 'received' and 'specialist treatment'; it is not printed whether it modifies active treatment, past treatment, or follow-up status. Transcribed as printed; exception EXE-3 recorded for the written-referral clause.",
+      "source_page": 4
+    },
+    {
+      "topic": "Inclusive/exclusive age boundaries",
+      "observed": "Inclusion side states 'Patient aged 16 to 65 years'; exclusion side states 'Are aged < 16 years or > 65 years'. Both readings agree that 16 and 65 are inclusive.",
+      "why_unclear": "No ambiguity found; recorded to document that age_bounds 16/65 is the printed pair.",
+      "source_page": 6
+    },
+    {
+      "topic": "Gate on_fail not stated for several pathway gates",
+      "observed": "The document does not state what happens when: consent cannot be documented (PW-1-S2), symptom control is not at target at assessment (PW-1-S11), the management plan is not confirmed appropriate (PW-1-S17), combination products include non-programme medicines (PW-1-S14), or the prednis(ol)one self-initiation criteria are not both met (PW-2-S3, other than 'If a prescription is not provided, provide detailed instructions for when these patients should seek medical review').",
+      "why_unclear": "Spec requires on_fail 'unclear' plus an open question where the document is silent; these are recorded as 'unclear' rather than inferred.",
+      "source_page": 17
+    },
+    {
+      "topic": "No product-level dosing for maintenance pharmacotherapy",
+      "observed": "Treatment Levels 1 to 3, inhaler devices, strengths, doses, frequencies and quantities are not printed; they are delegated to the current online Therapeutic Guidelines: Respiratory (Maintenance management of asthma in adults and adolescents) and the 2025 Australian Asthma Handbook. Only prednis(ol)one (up to 50mg per day, up to 5 days) carries printed numbers.",
+      "why_unclear": "TX-2, TX-3, TX-5, TX-6, TX-8 therefore have blank dose/strength/quantity fields; nothing can be transcribed without inventing it.",
+      "source_page": 14
+    },
+    {
+      "topic": "Maximum single and 24-hour rapid-acting bronchodilator doses not printed",
+      "observed": "'Clearly detail the maximum dose that can be taken at one time and the maximum dose that can be taken in one 24-hour period as per the Australian Asthma Handbook - Medicines Guide.'",
+      "why_unclear": "The numeric limits are external to this document, so TX-1/TX-7 max_dose cannot be filled beyond the printed 50mg per day prednis(ol)one cap.",
+      "source_page": 17
+    },
+    {
+      "topic": "Referral block spans pages 1 to 19",
+      "observed": "Referral destinations and criteria appear on pages 1, 3, 5, 6, 7, 9, 11, 18 and 19.",
+      "why_unclear": "Spec allows one shared provenance for the referral block using the first page; first page recorded as 1 with the range noted here.",
+      "source_page": 1
+    },
+    {
+      "topic": "Severity of treat-and-concurrently-refer criteria",
+      "observed": "Page 5 lists four criteria under 'Treat (if clinically appropriate) and concurrently refer' with no urgency language; page 4 alarm signs carry '(prompt medical review is required)' and page 18 lists ambulance triggers.",
+      "why_unclear": "Severity for the page 5 criteria was set to 'low' (routine review) because no urgency is printed; alarm signs set to 'high' and ambulance triggers to 'critical' on the document's own wording.",
+      "source_page": 5
+    },
+    {
+      "topic": "No version number or effective date printed",
+      "observed": "Page 30 footer codes read \"62'GUA\" and \"180510-DEC\"; the document shows © Department of Health 2026 and references the 2025 Australian Asthma Handbook, but no protocol version/date.",
+      "why_unclear": "instrument_version and effective_date could not be filled from a printed identifier.",
+      "source_page": 30
+    },
+    {
+      "topic": "Pilot Handbook not included",
+      "observed": "'Document informed consent from the patient for participation, as per the Pilot Handbook.' The Pilot Handbook is a separate document.",
+      "why_unclear": "The consent documentation requirements cannot be transcribed from this protocol.",
+      "source_page": 3
+    },
+    {
+      "topic": "Two separate prednis(ol)one prescriptions pathways",
+      "observed": "Page 17 both provides 'a single prescription ... with no repeats' and states 'Subsequent prescriptions for stand-by prednis(ol)one can only be provided by a medical practitioner', plus a GP-prescription path ('including those with prescriptions from a general practitioner').",
+      "why_unclear": "How a patient obtains a stand-by supply after the single pharmacist occasion (and whether a new Asthma Action Plan is required) is not specified in this document.",
+      "source_page": 17
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Encode treatment Levels 1 to 3 (drug, strength, dose, route, frequency, device) from the current online Therapeutic Guidelines: Respiratory (Maintenance management of asthma in adults and adolescents) and the 2025 Australian Asthma Handbook before any dosing rule is used - none are printed in this protocol.",
+      "source_page": 14,
+      "reason": "TX-2, TX-3, TX-5, TX-6 and TX-8 have blank dose/strength/quantity fields; a prescribing support module cannot issue supply instructions without the external treatment-level tables."
+    },
+    {
+      "item": "Confirm the rule for resolving differences between the two source guidelines: 'If the Australian Asthma Handbook and Therapeutic Guidelines differ, refer to the Australian Asthma Handbook when making clinical decisions.'",
+      "source_page": 14,
+      "reason": "This precedence rule drives every pharmacotherapy decision and must be confirmed as the go-live behaviour of the rules engine."
+    },
+    {
+      "item": "Confirm pharmacist EACPP approval and authorisation status per the Medicines and Poisons Regulations 2016 (WA): 'This document alone does not provide an authorisation for a pharmacist to prescribe.'",
+      "source_page": 1,
+      "reason": "Prescribing under the protocol is conditional on individual Department of Health approval, which is not verifiable from the document."
+    },
+    {
+      "item": "Obtain the Pilot Handbook consent documentation requirements referenced by 'Document informed consent from the patient for participation, as per the Pilot Handbook.'",
+      "source_page": 3,
+      "reason": "Consent is a gating step (PW-1-S2) but its required content and record format are external to this protocol."
+    },
+    {
+      "item": "Confirm local process for verifying the prednis(ol)one access criterion 'individuals who may come to serious harm due to difficulty accessing unscheduled healthcare (e.g. > 2hrs from healthcare facility)' and the 'one single occasion' limit.",
+      "source_page": 17,
+      "reason": "Both are hard dispensing conditions that must be checked at supply, but the document gives no verification method, distance measurement or register."
+    },
+    {
+      "item": "Confirm the numeric maximum dose at one time and in one 24-hour period for rapid-acting bronchodilators from the Australian Asthma Handbook - Medicines Guide (not printed here) before encoding maximum-dose checks.",
+      "source_page": 17,
+      "reason": "The protocol instructs pharmacists to detail these limits in the Asthma Action Plan but does not print them."
+    },
+    {
+      "item": "Confirm spirometry capability requirements for this pharmacy: pharmacist training, appropriate equipment, and quality assurance and audit processes per the National Asthma Council Australia Spirometry Handbook for Primary Care, or the referral alternative for lung function testing.",
+      "source_page": 11,
+      "reason": "Whether spirometry can be conducted on site versus referred is a local capability decision that gates Entry Point 1 participation."
+    },
+    {
+      "item": "Confirm local policy on 'alternative pathway' treatment: 'Patients should not commence an alternative pathway of any level of treatment without consultation with a medical practitioner.'",
+      "source_page": 15,
+      "reason": "The protocol forbids starting alternative-pathway regimens without medical consultation but does not define the consultation/recording process."
+    },
+    {
+      "item": "Confirm the montelukast handling pathway: counselling content per the TGA Safety Update January 2025 and referral to specialist provider or GP, plus 'review of ongoing need and prescription before reentering the program'.",
+      "source_page": 15,
+      "reason": "Montelukast cannot be initiated or continued by the pharmacist; the re-entry/referral workflow is not specified in the document."
+    },
+    {
+      "item": "Confirm local supply policy for 'the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review'.",
+      "source_page": 13,
+      "reason": "Quantity-to-supply depends on the local review schedule; no quantity caps are printed in this protocol (unlike other EACPP guidelines that cap total supply)."
+    },
+    {
+      "item": "Confirm how the program handles pregnant/planning-pregnancy patients and patients aged < 16 or > 65 (all ineligible) in the rules engine: referral destination and whether usual pharmacy care advice is auto-issued.",
+      "source_page": 4,
+      "reason": "The document requires a comprehensive clinical handover to the usual healthcare provider but does not specify destination, timing or scripted advice."
+    },
+    {
+      "item": "Confirm which review timeframe applies when several overlap (e.g. step up plus exacerbation): the document lists within 2 to 3 months, within 1 to 2 months after step down, after 2 to 3 months stable at Levels 2-3, at least once a year if stable, and 1 to 2 weeks after self-initiated prednis(ol)one, noting 'shorter review periods may be clinically necessary'.",
+      "source_page": 18,
+      "reason": "Precedence between overlapping review intervals is left to clinical judgement and must be decided locally."
+    }
+  ]
+}

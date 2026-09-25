@@ -1,0 +1,1094 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf",
+    "pdf_sha256": "16df9aca3f2c74567e90f1ee5394084d99003a4e2d77e5d102ba4102dad240f3",
+    "page_count": 20,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Management of Acute Mild Musculoskeletal Pain",
+    "instrument_version": "May 2026",
+    "effective_date": "May 2026",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 and Drugs, Poisons and Controlled Substances Regulations 2017 (Victoria); Secretary Approval: Community Pharmacist Program. Supply of the Schedule 4 poisons documented in this Protocol for the purpose of managing acute, mild musculoskeletal pain under a structured prescribing arrangement. Requirement of the Secretary Approval: Community Pharmacist Program that pharmacists comply with this Protocol and have completed the designated pharmacist training course before supplying Schedule 4 poisons. Pharmacists must operate at all times in accordance with the Drugs, Poisons and Controlled Substances Act 1981, the Regulations and all other applicable Victorian, Commonwealth and national laws, and act consistently with the Pharmacy Board of Australia's Code of Conduct.",
+    "supervision_model": "structured prescribing arrangement (pharmacists authorised under the Drugs, Poisons and Controlled Substances Regulations 2017 to supply Schedule 4 poisons documented in the Protocol; must comply with the Protocol and have completed the designated pharmacist training course before supplying Schedule 4 poisons)",
+    "scope_summary": "The Victorian Community Pharmacist Program protocol (May 2026) for managing acute, mild musculoskeletal pain in patients aged 18-65 years who request a comprehensive pharmacist assessment and consultation. Covers eligibility screening (age, service request, paracetamol trial ineffective, no NSAID contraindications/high gastrointestinal risk, consent with patient physically present, no red flag warning signs, no exclusion criteria, confirmed acute mild MSK pain), clinical review (patient history, pain history, examination), non-pharmacological advice, pharmacotherapy (regular oral paracetamol first-line; topical NSAIDs if paracetamol inadequate; one NSAID from Medicines List: Usual Pharmacist Care or Medicines List: The Program with maximum quantity sufficient for 5 days duration), communication/documentation requirements, and follow-up. Supporting sections cover patient history, pain assessment, examination with inflammatory vs mechanical pain differentiation, management plan confirmation and medicines lists."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Is the patient between 18-65 years old? (Yes required to continue through the flowchart)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Is the patient requesting a comprehensive assessment and consultation by the pharmacist for their suspected, acute, mild, MSK pain this presentation? (Yes required to continue)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-3",
+        "text": "For the purposes of this service, mild pain is defined as a pain score of less than 5 (0-10 numeric rating scale used as a guide to pain severity, where 0 indicates no pain and 10 indicates the worst pain). Pain scores should not be used in isolation and must be interpreted in conjunction with clinical history and examination findings.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-4",
+        "text": "Has the patient trialed paracetamol at an appropriate dose, which has been ineffective for management of their acute, mild, MSK pain? (Yes required to continue to pg. 6)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+      },
+      {
+        "id": "INC-5",
+        "text": "Does the patient have any known contraindications to NSAID use or is at high risk of experiencing gastrointestinal adverse effects (e.g. NSAID-induced ulcers)? No, to continue (patients at high risk of experiencing gastrointestinal adverse effects are excluded from this service and should not receive NSAIDs under this protocol).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      },
+      {
+        "id": "INC-6",
+        "text": "Does the patient consent to participate in the Program? Yes required. *The patient must be physically present at the pharmacy.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      },
+      {
+        "id": "INC-7",
+        "text": "Does the patient have any 'red flag' warning signs? No to all (No to all: Continue to pg. 8).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 7, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Does the patient meet these exclusion criteria warranting referral? No, to all (No, to all: continue to the confirmed-diagnosis question).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 8, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      },
+      {
+        "id": "INC-9",
+        "text": "Patient is confirmed to have acute, mild, MSK pain this presentation? Yes: Continue to pg. 9.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 8, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Pain cannot be attributed to acute, mechanical MSK trauma or injury (e.g. has characteristics of chronic pain) - refer to Table1.1",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Chest pain (including chest wall pain) where a serious non-musculoskeletal cause cannot be confidently excluded, or where symptoms are atypical, exertional, radiating, associated with systemic features, or occur in patients with significant cardiovascular risk",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "History of chronic inflammatory pain or underlying rheumatological conditions (including an acute flare of these conditions)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "Presents with swelling, redness, tenderness and warmth around a joint or within a muscle or other signs indicating serious pathology",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "At high risk of acute rheumatic fever (refer to: Therapeutic Guidelines: Acute rheumatic fever)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "Patient rates pain as moderate to severe",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "Significant functional limitations due to pain",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "Patient is intoxicated due to drugs and/or alcohol",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "Patient is unable to accurately describe pain due to cognitive impairment or other special needs",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-10",
+        "text": "Inadequate response to optimal treatment or pain/other symptoms worsens within 5 days",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-11",
+        "text": "Requesting treatment with an opioid or other therapies not in scope of this practice",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-12",
+        "text": "Patient is opioid-tolerant or recovering from an opioid use disorder",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-13",
+        "text": "Presenting with traumatic injuries that may require radiological examination",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-14",
+        "text": "History of NSAID-exacerbated respiratory disease/aspirin sensitivity, or previous bronchospasm/wheeze/acute asthma symptoms after aspirin or any NSAID",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+      },
+      {
+        "id": "EXC-15",
+        "text": "Patients at high risk of experiencing gastrointestinal adverse effects are excluded from this service and should not receive NSAIDs under this protocol.",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 9, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      },
+      {
+        "id": "EXC-16",
+        "text": "Examples of contraindications: pregnancy, renal impairment with eGFR < 30mL/min, severe hepatic impairment, active peptic ulcer disease, GI bleeding or moderate to severe heart failure with reduced ejection fraction (known contraindications to NSAID use - Yes branch excludes and refers)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      },
+      {
+        "id": "EXC-17",
+        "text": "Examples of risk factors for NSAID-induced ulcers: history of peptic ulcer disease or GI bleeding, Helicobacter pylori infection, concomitant drugs (anticoagulants, antiplatelets excluding low dose aspirin, SSRIs, SNRIs, corticosteroids), significant comorbidity or smoking) (high risk of gastrointestinal adverse effects - Yes branch excludes and refers)",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17"]},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 65,
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Section 2 flowchart: eligibility, screening and supply decision (pg. 5-10)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Preliminary enquiries. Question: 'Is the patient between 18-65 years old?'. If No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner'. If Yes: continue to PW-1-S2. Note (pg. 5): where the protocol indicates to 'Refer to General Practitioner', the Pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate; if timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) or an urgent care clinic may be considered as an alternative pathway.",
+          "gates": [{"criterion": "Patient is between 18-65 years old", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Question: 'Is the patient requesting a comprehensive assessment and consultation by the pharmacist for their suspected, acute, mild, MSK pain this presentation?'. If No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner'. If Yes: continue. Note: 'Pharmacists may use a 0-10 numeric rating scale as a guide to pain severity, where 0 indicates no pain and 10 indicates the worst pain. For the purposes of this service, mild pain is defined as a pain score of less than 5. Pain scores should not be used in isolation and must be interpreted in conjunction with clinical history and examination findings.'",
+          "gates": [
+            {"criterion": "Patient is requesting a comprehensive assessment and consultation by the pharmacist for their suspected, acute, mild, MSK pain this presentation", "on_fail": "REFER"},
+            {"criterion": "Mild pain defined as a pain score of less than 5 on a 0-10 numeric rating scale used as a guide and interpreted with clinical history and examination findings", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Question: 'Has the patient trialed paracetamol at an appropriate dose, which has been ineffective for management of their acute, mild, MSK pain?'. If No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner'. Note printed alongside: 'Combination of NSAID with paracetamol provides additive and synergistic effects; improved pain relief can be achieved compared with use of either drug alone.' If Yes: 'Continue to pg. 6'.",
+          "gates": [{"criterion": "Patient has trialed paracetamol at an appropriate dose, which has been ineffective for management of their acute, mild, MSK pain", "on_fail": "REFER"}],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient have any known contraindications to NSAID use or is at high risk of experiencing gastrointestinal adverse effects (e.g. NSAID-induced ulcers)?'. Yes: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner'. No: continue. 'Examples of contraindications: pregnancy, renal impairment with eGFR < 30mL/min, severe hepatic impairment, active peptic ulcer disease, GI bleeding or moderate to severe heart failure with reduced ejection fraction'. 'Examples of risk factors for NSAID-induced ulcers: history of peptic ulcer disease or GI bleeding, Helicobacter pylori infection, concomitant drugs (anticoagulants, antiplatelets excluding low dose aspirin, SSRIs, SNRIs, corticosteroids), significant comorbidity or smoking)'. 'Refer to Therapeutic Guidelines: Risk factors for NSAID-induced ulcers'.",
+          "gates": [{"criterion": "No known contraindications to NSAID use and not at high risk of experiencing gastrointestinal adverse effects (e.g. NSAID-induced ulcers)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Question: 'Does the patient consent to participate in the Program?*' with footnote '*The patient must be physically present at the pharmacy.'. If No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner'. If Yes: 'Conduct clinical review and assessment of the patient, gathering the following information: Patient history; Pain and pain history; Examination. Refer to Supplementary information: 4. Gather information and assess patient's needs.'",
+          "gates": [
+            {"criterion": "Patient consents to participate in the Program", "on_fail": "REFER"},
+            {"criterion": "Patient is physically present at the pharmacy", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "Conduct clinical review and assessment of the patient, gathering the following information: 'Patient history', 'Pain and pain history', 'Examination'. 'Refer to Supplementary information: 4. Gather information and assess patient's needs.' Then 'Continue to pg. 7'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient have any 'red flag' warning signs?' Screen for: acute swelling, erythema and significant reduction in range of motion of a joint; headache and/or acute onset of visual or auditory disturbances, or symptoms suggestive of known or suspected concussion; signs of vascular compromise (e.g. cold, pale, numb or painful extremity); suspected nerve damage or mononeuropathy (e.g. loss of feeling, weakness, 'pins and needles', burning pain and/or paresthesia); neurological signs (e.g. altered bowel or bladder function); systemic signs and/or symptoms suggestive of serious pathology including weight loss, nausea and vomiting, fever, malaise, tachycardia, hypotension; recent intravenous drug use; risk of fracture (e.g. osteoporosis (and associated therapies including bisphosphonates or denosumab), significant trauma or history of cancer); unilateral calf tenderness with no history of recent trauma or risk factors for DVT; pitting oedema; new onset limb deformity; new onset of skin rash; severe or high-risk mechanism of injury (e.g. cyclist/motorcyclist impact >30 km/hr, high-speed traffic incident, pedestrian impact, fall or falling object >3 m). Yes: 'Refer to a medical practitioner immediately'. 'No to all: Continue to pg. 8'.",
+          "gates": [{"criterion": "No 'red flag' warning signs (No to all)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 7, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Does the patient meet these exclusion criteria warranting referral?' Criteria (also listed at pg. 15): pain cannot be attributed to acute, mechanical MSK trauma or injury (e.g. has characteristics of chronic pain); chest pain (including chest wall pain) where a serious non-musculoskeletal cause cannot be confidently excluded; history of chronic inflammatory pain or underlying rheumatological conditions; swelling, redness, tenderness and warmth around a joint or within a muscle or other signs indicating serious pathology; at high risk of acute rheumatic fever; patient rates pain as moderate to severe; significant functional limitations due to pain; patient is intoxicated due to drugs and/or alcohol; patient is unable to accurately describe pain due to cognitive impairment or other special needs; inadequate response to optimal treatment or pain/other symptoms worsens within 5 days; requesting treatment with an opioid or other therapies not in scope of this practice; patient is opioid-tolerant or recovering from an opioid use disorder; presenting with traumatic injuries that may require radiological examination; history of NSAID-exacerbated respiratory disease/aspirin sensitivity, or previous bronchospasm/wheeze/acute asthma symptoms after aspirin or any NSAID. Yes: 'Refer to General Practitioner' AND 'Consider engaging the patient with a physiotherapist or osteopath'. 'No, to all': continue.",
+          "gates": [{"criterion": "No, to all exclusion criteria warranting referral", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 8, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Question: 'Patient is confirmed to have acute, mild, MSK pain this presentation?'. No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner' AND/OR 'Consider engaging the patient with a physiotherapist or osteopath if indicated'. Yes: 'Continue to pg. 9'.",
+          "gates": [{"criterion": "Patient is confirmed to have acute, mild, MSK pain this presentation", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 8, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "Question: 'Is the patient requesting a medication that they have used before from Medicines List: The Program if appropriate for the treatment of a prior episode of acute, mild, MSK pain that has been effective?'. Yes: 'Provide the medication as outlined by the Medicines List: The Program if appropriate'. No: 'Provide one NSAID listed under the Medicines section of the protocol.' (see PW-1-S11).",
+          "gates": [{"criterion": "Patient requests a medication they have used before from Medicines List: The Program that was effective for a prior episode of acute, mild, MSK pain", "on_fail": "SEE_PW-1-S11"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 9, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "TREAT",
+          "description": "'Provide one NSAID listed under the Medicines section of the protocol. The choice of NSAID depends on the patient's: Past medical history, allergies and precautions; Risk of CV events: Pharmacists may use the AusCVD risk calculator where cardiovascular risk status is uncertain.' 'Patients at high risk of experiencing gastrointestinal adverse effects are excluded from this service and should not receive NSAIDs under this protocol.' Patient is not at high CV event risk: 'Choose any NSAID - Refer to Medicines section of the protocol for options' (Medicines List: Usual Pharmacist Care and Medicines List: The Program: ibuprofen, diclofenac, naproxen, naproxen sodium, celecoxib, meloxicam; first-line pharmacotherapy remains regular oral paracetamol, with topical NSAIDs trialled if paracetamol is inadequate). Patient is at high CV event risk: 'Preferred NSAIDs' - 'Celecoxib 200mg, oral, daily or less' OR 'Naproxen 500mg, oral, twice daily or less' OR 'Ibuprofen at doses of 1200mg, oral, daily (in 3-4 divided doses) or less' AND 'AVOID DICLOFENAC and MELOXICAM'.",
+          "gates": [
+            {"criterion": "NSAID chosen from the Medicines section based on past medical history, allergies and precautions and risk of CV events (AusCVD risk calculator where cardiovascular risk status is uncertain)", "on_fail": "unclear"},
+            {"criterion": "If patient is at high CV event risk: choose a Preferred NSAID (Celecoxib 200mg, oral, daily or less OR Naproxen 500mg, oral, twice daily or less OR Ibuprofen at doses of 1200mg, oral, daily (in 3-4 divided doses) or less) AND AVOID DICLOFENAC and MELOXICAM", "on_fail": "unclear"},
+            {"criterion": "Patient is not at high risk of experiencing gastrointestinal adverse effects (excluded from this service and should not receive NSAIDs under this protocol)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 9, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "EDUCATE",
+          "description": "'Provide non-pharmacological and self-care advice:' - 'Refer to the Therapeutic Guidelines: Principles of nonpharmacological management for acute soft-tissue limb conditions for strategies to help with acute, subacute and nonacute stage of injury'; 'Reduced activity (which may include immobilisation) for no longer than 24 hours'; 'Encourage PRICE (protection, rest, ice, compression and elevation) for up to 24 hours of soft-tissue limb conditions'; 'Practice optimal loading beyond 24-48 hours of injury'; 'Avoid heat, alcohol, massage and vigorous exercise within first 48 hours of soft-tissue limb conditions'; 'Ensure rehabilitation in the nonacute stage of injury to improve recovery'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 9, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "TREAT",
+          "description": "'Confirm management plan is appropriate with regards to contraindications, precautions, interactions and lactation status.'",
+          "gates": [{"criterion": "Management plan is appropriate with regards to contraindications, precautions, interactions and lactation status", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 10, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "'Communicate agreed treatment plan to patient and other healthcare professionals:' - 'Dispense medications via pharmacy dispensing program'; 'Counselling for the NSAID given (e.g., dose, duration, potential side effects)'; 'Duration of treatment and expectations around resolution of symptoms'; 'Consider engaging with or referral to a physiotherapist or osteopath'; 'Advise when to seek further care e.g. pain relief provided is not adequate, symptoms do not start to improve within 5 days, or if pain or other symptoms worsen'. 'Document the consultation and share a record of the service with the patient, patient's usual treating GP or medical practice where the patient has one'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 10, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Supplementary information: gather information, assess and manage (pg. 13-20)",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "'Sufficient information must be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines for the patient. Consider:' age; 'Pregnancy and lactation status, including patients planning pregnancy (if applicable)'; co-existing or underlying medical conditions (rheumatological and autoimmune conditions, cancer, osteoporosis, immunosuppression, gastrointestinal, cardiovascular, and renal disease); family history of inflammatory pain, rheumatological and/or autoimmune conditions; surgical history including recent spinal, joint or dental procedures and prosthetic joints or implants; 'Cardiovascular risk assessment, including history of established cardiovascular disease and, where appropriate, estimation of absolute cardiovascular risk using the AusCVD risk calculator'; 'Risk factors for developing ARF as per the Therapeutic Guidelines: Acute rheumatic fever'; onset, duration, nature, location, severity of musculoskeletal pain and mechanism of injury, radiation and associated symptoms; other signs and symptoms that may indicate serious pathology; weight, dietary patterns, level of exercise and/or physical activity; precipitating, aggravating and relieving/alleviating factors; response to pharmacotherapy for previous episodes of acute, mild, MSK pain; impacts to quality of life; current, recently commenced or recently ceased medications; 'Drug allergies/adverse drug effects including NSAID-exacerbated asthma' ('Poorly controlled or recently unstable asthma ... or current clinically significant asthma symptoms'); alcohol, tobacco and other drug history/status ('Consider recency of last intravenous drug use'); mechanism of injury including speed, height of fall and forces involved; workplace injury; suspected non-accidental injury (e.g. domestic abuse, self-harm); other psychosocial factors. 'The patient's MHR can be used to access a range of clinical information including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [{"criterion": "High-risk mechanisms of injury absent - 'High-risk mechanisms of injury are not compatible with acute, mild MSK pain and require referral for medical assessment, even if initial pain appears mild.'", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 13, "section_heading": "4.1. Patient history"}
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "'Pain and history assessment should be conducted in accordance with the Therapeutic Guidelines: General principles of acute pain management and Therapeutic Guidelines: Assessing a patient with pain.' 'Acute MSK pain is primarily nociceptive and mechanical in nature ... Injury is the most common cause of acute, mechanical MSK pain and is expected to be self-limiting (lasting less than 3 months), with a return to usual function as the underlying injury resolves.' 'Pain severity is subjective and should be interpreted in context of the patient's presentation as well as additional information obtained through the history.' 'If the patient's reported pain severity does not align with other objective assessments (e.g. physical function or examination findings), refer the patient to a healthcare provider for a thorough evaluation that includes consideration of socio-psycho-biomedical factors. Refer to Therapeutic Guidelines: Understanding pain.'",
+          "gates": [{"criterion": "Reported pain severity aligns with other objective assessments (e.g. physical function or examination findings)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 14, "section_heading": "4.2. Pain and pain history assessment"}
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "'The area(s) of pain should be examined in accordance with the Therapeutic Guidelines: Overview of the clinical assessment of musculoskeletal symptoms in adults and if applicable, Therapeutic Guidelines: Assessment of back and neck pain and/or Therapeutic Guidelines: Overview of limb conditions.' 'To guide proper management or referral, it is crucial to identify the underlying cause of the pain and differentiate between pain related to inflammation from a chronic condition compared to mechanical pain. See Table 1.1.' Table 1.1 Clinical features/characteristics of inflammatory versus mechanical pain: inflammatory pain - improves with exercise/movement, does not improve with rest, lasts more than 3 months, morning stiffness (for greater than 30 minutes), pain waking patient during second half of the night with improvement when getting up; mechanical (musculoskeletal) pain - may worsen with exercise/movement, often improves with rest, acute onset lasting less than 3 months, precipitating physical injury may be identifiable.",
+          "gates": [{"criterion": "Underlying cause of pain identified and inflammatory versus mechanical pain differentiated using Table 1.1", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 14, "section_heading": "4.3. Examination"}
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "'When appropriate, assess signs and symptoms to identify 'red flags' and/or exclusion criteria. Patients who have any 'red flag' or exclusion criteria are not eligible for this service and must be referred immediately to their regular medical practitioner, health service or the Emergency Department if requiring urgent care.'",
+          "gates": [{"criterion": "No 'red flag' and no exclusion criteria present (patient remains eligible for the service)", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 14, "section_heading": "4.3. Examination"}
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "'Pharmacist management of acute, mild MSK pain involves: 1. Non-pharmacological management strategies and lifestyle measures in accordance with the Therapeutic Guidelines: Non-pharmacological management of acute pain' ('Pharmacists should provide advice on both non-pharmacological and pharmacological strategies ... Consider engaging with or referring the patient to a physiotherapist or osteopath to assist with recovery and management.'); '2. Pharmacotherapy in accordance with Therapeutic Guidelines: Pharmacological management of acute pain' - 'The recommended first-line pharmacotherapy treatment is regular oral paracetamol. Patients can also trial topical NSAIDs (minimal systemic absorption compared to oral NSAIDs) if paracetamol is inadequate.' 'If oral NSAID therapy is required, use the lowest effective dose of NSAID for the shortest amount of time possible. There is no rationale for using more than one NSAID at a time (excluding low-dose aspirin).' 'Combine NSAID with paracetamol for synergistic effects as improved pain relief can be achieved when using the combination compared to using either drug alone.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 16, "section_heading": "5. Management and treatment plan"}
+        },
+        {
+          "id": "PW-2-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the treatment recommendation is appropriate, including for: Contraindications and precautions; Drug interactions; Lactation status.'",
+          "gates": [{"criterion": "Treatment recommendation confirmed appropriate for contraindications and precautions, drug interactions and lactation status", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 16, "section_heading": "5.1. Confirm management is appropriate"}
+        },
+        {
+          "id": "PW-2-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "'According to Therapeutic Guidelines: Principles of NSAID use for musculoskeletal pain, all NSAIDs are first-line, except for diclofenac, which is second-line due to its higher risk of contributing to CV events. There is little difference in anti-inflammatory efficacy between NSAIDs - choice should be based on individual response and tolerance, patient factors (including precautions, past medical history) and a balance of the risk and benefits. Opioids and neuropathic agents are not indicated for the management of most acute, mild MSK pain and cannot be provided as part of this Program.' 'Where a patient has elected for 'a comprehensive assessment and consultation by the pharmacist' and confirmed to be experiencing a current episode of acute, mild, MSK pain, the pharmacist may provide any medication from Medicines List: Usual Pharmacist Care or Medicines List: The Program as clinically appropriate.' Medicines List: Usual Pharmacist Care (ibuprofen, diclofenac, celecoxib) may also be provided outside of the Program under relevant Schedule 2 or Schedule 3 requirements; Medicines List: The Program authorises a maximum quantity sufficient for 5 days duration (diclofenac, naproxen, naproxen sodium, celecoxib, meloxicam).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "6. Medicines"}
+        },
+        {
+          "id": "PW-2-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "'Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references should be provided to the patient regarding: Management options and expectations for resolution; Product and medication use including dosing, treatment regimens, application instructions (where indicated) and duration; How to manage adverse effects of treatment; Non-pharmacological, general and preventative measures; When to seek further care and/or treatment, including recognising red flag symptoms.' 'The agreed management plan should be shared with the patient's multidisciplinary healthcare team and MHR, with the patient's consent.' General advice (7.1): physical interventions may provide adequate pain relief on their own (e.g. heat therapy); reduced activity/immobilisation no longer than 24 hours; PRICE for up to 24 hours; optimal loading beyond 24-48 hours; avoid heat, alcohol, massage and vigorous exercise within first 48 hours; rehabilitation in the nonacute stage; support patients using complementary or non-evidence-based therapies by explaining current evidence, potential harms and interactions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 19, "section_heading": "7. Communicate agreed management plan"}
+        },
+        {
+          "id": "PW-2-S9",
+          "order": 9,
+          "type": "FOLLOW_UP",
+          "description": "'If follow up and clinical review is required and/or the condition does not improve or resolve, the patient should be advised to see a medical practitioner for further investigation.'",
+          "gates": [{"criterion": "Condition improves or resolves with the agreed management plan", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 20, "section_heading": "8. Follow up / clinical review"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Paracetamol",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "regular",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'The recommended first-line pharmacotherapy treatment is regular oral paracetamol.' 'Patients can also trial topical NSAIDs (minimal systemic absorption compared to oral NSAIDs) if paracetamol is inadequate.' No numeric dose, frequency or duration is printed in this protocol; the flowchart requires the patient to have 'trialled paracetamol at an appropriate dose, which has been ineffective' (pg. 5). Caveat verbatim (pg. 10): 'Confirm management plan is appropriate with regards to contraindications, precautions, interactions and lactation status.' Contraindications/precautions, drug interactions and lactation status must be confirmed against Therapeutic Guidelines and Australian Medicines Handbook (pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 16, "section_heading": "5. Management and treatment plan"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "Topical NSAIDs",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Patients can also trial topical NSAIDs (minimal systemic absorption compared to oral NSAIDs) if paracetamol is inadequate.' No specific product, strength or dose is printed. Lactation status to be confirmed per pg. 16 (Therapeutic Guidelines, Australian Medicines Handbook).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 16, "section_heading": "5. Management and treatment plan"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "Ibuprofen",
+      "form": "Tablet",
+      "strength": "200mg, 400mg",
+      "dose": "200mg-400mg",
+      "route": "oral",
+      "frequency": "THREE to FOUR times daily",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: Usual Pharmacist Care (Non-selective NSAIDs (COX-1 and COX-2 inhibitors)). 'These medications can also be provided by the pharmacist outside of the Program or when 'usual pharmacist care' has been identified as appropriate for the patient in accordance with their relevant Schedule 2 or Schedule 3 requirements.' NSAIDs are first-line except diclofenac (second-line, higher risk of contributing to CV events) - pg. 17. Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: Usual Pharmacist Care"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "Diclofenac",
+      "form": "Tablet or Capsule",
+      "strength": "12.5mg, 25mg",
+      "dose": "25mg-50mg",
+      "route": "oral",
+      "frequency": "TWO to THREE times daily",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: Usual Pharmacist Care (Non-selective NSAIDs (COX-1 and COX-2 inhibitors)). 'all NSAIDs are first-line, except for diclofenac, which is second-line due to its higher risk of contributing to CV events' (pg. 17). 'AVOID DICLOFENAC and MELOXICAM' where the patient is at high CV event risk (pg. 9). Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: Usual Pharmacist Care"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "Celecoxib",
+      "form": "Capsule",
+      "strength": "200mg",
+      "dose": "200mg",
+      "route": "oral",
+      "frequency": "ONCE or TWICE daily",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: Usual Pharmacist Care (Selective NSAIDs (COX-2 inhibitors)). NSAIDs are first-line except diclofenac (pg. 17). 'Celecoxib 200mg, oral, daily or less' is a Preferred NSAID when the patient is at high CV event risk (pg. 9). Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: Usual Pharmacist Care"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "Diclofenac",
+      "form": "Immediate-release tablet",
+      "strength": "25mg, 50mg",
+      "dose": "25mg-50mg",
+      "route": "oral",
+      "frequency": "TWO to THREE times daily",
+      "duration": "5 days",
+      "max_quantity": "maximum quantity sufficient for 5 days duration",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: The Program (Non-selective NSAIDs (COX-1 and COX-2 inhibitors)). 'The Program authorises that pharmacists can supply a maximum quantity sufficient for 5 days duration of the medicines listed below for the treatment of acute, mild MSK pain.' Diclofenac is second-line due to higher risk of contributing to CV events (pg. 17) and 'AVOID DICLOFENAC and MELOXICAM' where the patient is at high CV event risk (pg. 9). Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: The Program"}
+    },
+    {
+      "id": "TX-7",
+      "drug": "Naproxen",
+      "form": "Immediate-release tablet",
+      "strength": "250mg, 500mg",
+      "dose": "250mg-500mg",
+      "route": "oral",
+      "frequency": "TWICE daily",
+      "duration": "5 days",
+      "max_quantity": "maximum quantity sufficient for 5 days duration",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: The Program (Non-selective NSAIDs (COX-1 and COX-2 inhibitors)). 'The Program authorises that pharmacists can supply a maximum quantity sufficient for 5 days duration of the medicines listed below for the treatment of acute, mild MSK pain.' 'Naproxen 500mg, oral, twice daily or less' is a Preferred NSAID when the patient is at high CV event risk (pg. 9). Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: The Program"}
+    },
+    {
+      "id": "TX-8",
+      "drug": "Naproxen",
+      "form": "Extended-release tablet",
+      "strength": "750mg, 1000mg",
+      "dose": "750mg-1000mg",
+      "route": "oral",
+      "frequency": "ONCE daily",
+      "duration": "5 days",
+      "max_quantity": "maximum quantity sufficient for 5 days duration",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: The Program (Non-selective NSAIDs (COX-1 and COX-2 inhibitors)). 'The Program authorises that pharmacists can supply a maximum quantity sufficient for 5 days duration of the medicines listed below for the treatment of acute, mild MSK pain.' Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: The Program"}
+    },
+    {
+      "id": "TX-9",
+      "drug": "Naproxen sodium (equivalent to 500mg naproxen)",
+      "form": "Immediate-release tablet",
+      "strength": "550mg (equivalent to 500mg naproxen)",
+      "dose": "550mg, oral, STAT then 275mg, oral",
+      "route": "oral",
+      "frequency": "every 6 to 8 hours",
+      "duration": "5 days",
+      "max_quantity": "maximum quantity sufficient for 5 days duration",
+      "max_dose": "maximum dose of 1375mg per 24 hours",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: The Program (Non-selective NSAIDs (COX-1 and COX-2 inhibitors)). Dose printed as '550mg, oral, STAT then 275mg, oral, every 6 to 8 hours' with '(maximum dose of 1375mg per 24 hours)'. 'The Program authorises that pharmacists can supply a maximum quantity sufficient for 5 days duration of the medicines listed below for the treatment of acute, mild MSK pain.' Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 17, "section_heading": "Medicines List: The Program"}
+    },
+    {
+      "id": "TX-10",
+      "drug": "Celecoxib",
+      "form": "Capsule",
+      "strength": "100mg, 200mg",
+      "dose": "100mg-200mg",
+      "route": "oral",
+      "frequency": "ONCE or TWICE daily",
+      "duration": "5 days",
+      "max_quantity": "maximum quantity sufficient for 5 days duration",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: The Program (continued) (Selective NSAIDs (COX-2 inhibitors)). 'The Program authorises that pharmacists can supply a maximum quantity sufficient for 5 days duration of the medicines listed below for the treatment of acute, mild MSK pain.' 'Celecoxib 200mg, oral, daily or less' is a Preferred NSAID when the patient is at high CV event risk (pg. 9). Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 18, "section_heading": "Medicines List: The Program (continued)"}
+    },
+    {
+      "id": "TX-11",
+      "drug": "Meloxicam",
+      "form": "Tablet or Capsule",
+      "strength": "7.5mg, 15mg",
+      "dose": "7.5mg-15mg",
+      "route": "oral",
+      "frequency": "ONCE daily",
+      "duration": "5 days",
+      "max_quantity": "maximum quantity sufficient for 5 days duration",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Medicines List: The Program (continued) (Selective NSAIDs (COX-2 inhibitors)). 'The Program authorises that pharmacists can supply a maximum quantity sufficient for 5 days duration of the medicines listed below for the treatment of acute, mild MSK pain.' 'AVOID DICLOFENAC and MELOXICAM' where the patient is at high CV event risk (pg. 9). Pregnancy is an example contraindication to NSAID use (pg. 6); confirm plan against contraindications, precautions, interactions and lactation status (pg. 10, pg. 16).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 18, "section_heading": "Medicines List: The Program (continued)"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Acute swelling, erythema and significant reduction in range of motion of a joint",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Headache and/or acute onset of visual or auditory disturbances, or symptoms suggestive of known or suspected concussion",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Vascular compromise (e.g. cold, pale, numb or painful extremity)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Suspected nerve damage or mononeuropathy (e.g. loss of feeling, weakness, 'pins and needles', burning pain and/or paresthesia)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Neurological signs (e.g. altered bowel or bladder function)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Systemic signs and/or symptoms suggestive of serious pathology including weight loss, nausea and vomiting, fever, malaise, tachycardia, hypotension",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Recent intravenous drug use",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Risk of fracture (e.g. osteoporosis (and associated therapies including bisphosphonates or denosumab), significant trauma or history of cancer)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Unilateral calf tenderness with no history of recent trauma or risk factors for DVT",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Pitting oedema",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "New onset limb deformity",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "New onset of skin rash",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Severe or high-risk mechanism of injury (e.g. cyclist/motorcyclist impact >30 km/hr, high-speed traffic incident, pedestrian impact, fall or falling object >3 m) - cyclist/motorcyclist impact >30 km/hr",
+      "structured": {"parameter": "cyclist/motorcyclist impact speed", "operator": ">", "value": 30, "unit": "km/hr"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "fall or falling object >3 m (within 'Severe or high-risk mechanism of injury')",
+      "structured": {"parameter": "fall or falling object height", "operator": ">", "value": 3, "unit": "m"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "'Red flag' warning signs requiring immediate referral to a medical practitioner:"}
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Is the patient between 18-65 years old? (No branch: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner')",
+      "structured": {"parameter": "age", "operator": "not_in", "value": "18-65", "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Is the patient requesting a comprehensive assessment and consultation by the pharmacist for their suspected, acute, mild, MSK pain this presentation? (No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner')",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Has the patient trialed paracetamol at an appropriate dose, which has been ineffective for management of their acute, mild, MSK pain? (No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner')",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Does the patient have any known contraindications to NSAID use or is at high risk of experiencing gastrointestinal adverse effects (e.g. NSAID-induced ulcers)? (Yes: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Examples of contraindications: pregnancy, renal impairment with eGFR < 30mL/min, severe hepatic impairment, active peptic ulcer disease, GI bleeding or moderate to severe heart failure with reduced ejection fraction",
+      "structured": {"parameter": "eGFR", "operator": "<", "value": 30, "unit": "mL/min"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Examples of risk factors for NSAID-induced ulcers: history of peptic ulcer disease or GI bleeding, Helicobacter pylori infection, concomitant drugs (anticoagulants, antiplatelets excluding low dose aspirin, SSRIs, SNRIs, corticosteroids), significant comorbidity or smoking)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Does the patient consent to participate in the Program?* *The patient must be physically present at the pharmacy. (No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner')",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 6, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Patient is confirmed to have acute, mild, MSK pain this presentation? (No: 'Provide usual pharmacist care, including non-pharmacological management.' AND/OR 'Refer to General Practitioner' AND/OR 'Consider engaging the patient with a physiotherapist or osteopath if indicated')",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 8, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "Inadequate response to optimal treatment or pain/other symptoms worsens within 5 days",
+      "structured": {"parameter": "days until pain/other symptoms worsen", "operator": "<=", "value": 5, "unit": "days"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 15, "section_heading": "Exclusion criteria warranting referral:"}
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "If the patient's reported pain severity does not align with other objective assessments (e.g. physical function or examination findings), refer the patient to a healthcare provider for a thorough evaluation that includes consideration of socio-psycho-biomedical factors",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 14, "section_heading": "4.2. Pain and pain history assessment"}
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "High-risk mechanisms of injury are not compatible with acute, mild MSK pain and require referral for medical assessment, even if initial pain appears mild.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 13, "section_heading": "4.1. Patient history"}
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Patients should be advised to see a medical practitioner if: Pain relief provided is not adequate",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 19, "section_heading": "7.1. General advice"}
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "Patients should be advised to see a medical practitioner if: Symptoms do not start to improve within 5 days",
+      "structured": {"parameter": "days until symptoms start to improve", "operator": ">", "value": 5, "unit": "days"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 19, "section_heading": "7.1. General advice"}
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "Patients should be advised to see a medical practitioner if: Pain or other symptoms worsen",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 19, "section_heading": "7.1. General advice"}
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Patients should be advised to see a medical practitioner if: Experience new pain or symptoms",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 19, "section_heading": "7.1. General advice"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to General Practitioner",
+      "Where the protocol indicates to 'Refer to General Practitioner', the Pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate",
+      "If timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) or an urgent care clinic may be considered as an alternative pathway",
+      "Consider engaging the patient with a physiotherapist or osteopath",
+      "Consider engaging with or referral to a physiotherapist or osteopath"
+    ],
+    "urgent": [
+      "Refer to a medical practitioner immediately",
+      "must be referred immediately to their regular medical practitioner, health service"
+    ],
+    "emergency": [
+      "the Emergency Department if requiring urgent care"
+    ],
+    "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol"}
+  },
+  "review_followup": [
+    {
+      "when": "If follow up and clinical review is required and/or the condition does not improve or resolve",
+      "what": "the patient should be advised to see a medical practitioner for further investigation",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 20, "section_heading": "8. Follow up / clinical review"}
+    },
+    {
+      "when": "Pain relief provided is not adequate; or symptoms do not start to improve within 5 days; or pain or other symptoms worsen; or experience new pain or symptoms",
+      "what": "Patients should be advised to see a medical practitioner",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 19, "section_heading": "7.1. General advice"}
+    },
+    {
+      "when": "After the consultation (and at the point of communicating the agreed plan)",
+      "what": "Advise when to seek further care e.g. pain relief provided is not adequate, symptoms do not start to improve within 5 days, or if pain or other symptoms worsen; document the consultation and share a record of the service with the patient, patient's usual treating GP or medical practice where the patient has one",
+      "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 10, "section_heading": "2. Protocol for the Management of Acute, Mild Musculoskeletal Pain"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must share a copy of the record of the service with the patient and with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply.",
+      "Consent given by the patient regarding access to the patient's MHR for the purpose of checking inclusion/exclusion criteria and uploading information relating to the consultation as required"
+    ],
+    "provenance": {"pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-mild-musculoskeletal-pain.pdf", "page": 11, "section_heading": "3. Clinical Documentation Requirements"}
+  },
+  "references": [
+    "Therapeutic Guidelines: Risk factors for NSAID-induced ulcers (p6)",
+    "Therapeutic Guidelines: Acute rheumatic fever (p8, p13, p15)",
+    "Therapeutic Guidelines: General principles of acute pain management (p14)",
+    "Therapeutic Guidelines: Assessing a patient with pain (p14)",
+    "Therapeutic Guidelines: Understanding pain (p14)",
+    "Therapeutic Guidelines: Overview of the clinical assessment of musculoskeletal symptoms in adults (p14)",
+    "Therapeutic Guidelines: Assessment of back and neck pain (p14)",
+    "Therapeutic Guidelines: Overview of limb conditions (p14)",
+    "Therapeutic Guidelines: Principles of nonpharmacological management for acute soft-tissue limb conditions (p9, p19)",
+    "Therapeutic Guidelines: Non-pharmacological management of acute pain (p16)",
+    "Therapeutic Guidelines: Pharmacological management of acute pain (p16)",
+    "Therapeutic Guidelines: Principles of NSAID use for musculoskeletal pain (p17)",
+    "Australian Medicines Handbook (p16, p17, p19)",
+    "AusCVD risk calculator (p9, p13)",
+    "Therapeutic Guidelines: Rheumatology (p20)",
+    "Therapeutic Guidelines: Pain and analgesia (p20)",
+    "Australian Medicines Handbook: Drugs for pain relief (p20)",
+    "Australian Medicines Handbook: Non-steroidal anti-inflammatory drugs (p20)",
+    "Physiopedia: Peace and Love Principle (p20)",
+    "Australian and New Zealand College of Anaesthetists and Faculty of Pain - Acute Pain Management: Scientific Evidence (p20)",
+    "Australian Prescriber: Choosing a nonsteroidal anti-inflammatory drug for pain (p20)",
+    "Rheumatic Heart Disease Australia: ARF RHD Guideline and risk calculator (p20)",
+    "Professional Practice Standards - Version 6 (p20)",
+    "Better Health Channel: Pain and pain management - adults (p20)",
+    "Better Health Channel: Bones, muscles and joints (p20)",
+    "Better Health Channel: Medications - non-steroidal anti-inflammatory drugs (p20)",
+    "Health Direct: Sprains and strains (p20)",
+    "Health Direct: Anti-inflammatory medicines (NSAIDs) (p20)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Flowchart text extraction is column-scrambled on pages 5-10",
+      "observed": "Branch labels and actions are interleaved (e.g. p8 'Yes AND' fragments, 'No, to all', 'No AND' adjacent to unrelated branch text); branch-to-action mapping for the eligibility flowchart was inferred from reading order of the extracted text.",
+      "why_unclear": "Extraction order may not match the visual flowchart layout; gate pass/fail directions should be checked against the rendered PDF.",
+      "source_page": 5
+    },
+    {
+      "topic": "Paracetamol trial gate note placement (p5)",
+      "observed": "'Note: Combination of NSAID with paracetamol provides additive and synergistic effects; improved pain relief can be achieved compared with use of either drug alone.' is printed adjacent to the No/AND-OR branch of 'Has the patient trialed paracetamol at an appropriate dose, which has been ineffective...?'.",
+      "why_unclear": "Cannot determine from the extraction whether the note attaches to the No branch, the Yes branch, or the gate generally.",
+      "source_page": 5
+    },
+    {
+      "topic": "Age bound inclusivity",
+      "observed": "'Is the patient between 18-65 years old?' - the word 'between' is not specified as inclusive or exclusive of 18 and 65.",
+      "why_unclear": "Inclusion of exactly 18-year-old and 65-year-old patients cannot be determined from the printed text.",
+      "source_page": 5
+    },
+    {
+      "topic": "Preferred NSAID doses (high CV event risk) vs Medicines List doses",
+      "observed": "p9 'Preferred NSAIDs': 'Celecoxib 200mg, oral, daily or less', 'Naproxen 500mg, oral, twice daily or less', 'Ibuprofen at doses of 1200mg, oral, daily (in 3-4 divided doses) or less'; Medicines List (p17-18): ibuprofen 200mg-400mg THREE to FOUR times daily, celecoxib 100mg-200mg ONCE or TWICE daily.",
+      "why_unclear": "The relationship between the CV-risk preference box and the medicines lists is not stated; both transcribed as printed with no reconciliation (e.g. ibuprofen 1200mg/day in 3-4 divided doses vs 200mg-400mg THREE to FOUR times daily).",
+      "source_page": 9
+    },
+    {
+      "topic": "Severe/high-risk mechanism of injury bullet contains multiple examples",
+      "observed": "'Severe or high-risk mechanism of injury (e.g. cyclist/motorcyclist impact >30 km/hr, high-speed traffic incident, pedestrian impact, fall or falling object >3 m)' split across RF-13 (structured >30 km/hr) and RF-14 (structured >3 m); 'high-speed traffic incident' and 'pedestrian impact' have no numeric threshold.",
+      "why_unclear": "A single structured rule cannot hold two different parameters; the remaining examples stay qualitative.",
+      "source_page": 15
+    },
+    {
+      "topic": "Referral block spans pages 5-14",
+      "observed": "Routine referral wording (incl. VVED/urgent care alternative) is on p5; 'Refer to a medical practitioner immediately' is on p7; 'referred immediately to their regular medical practitioner, health service or the Emergency Department if requiring urgent care' is on p14.",
+      "why_unclear": "Shared provenance for the referral block uses the first page (5); the block content spans pages 5-14.",
+      "source_page": 5
+    },
+    {
+      "topic": "Unstated fail actions for confirmation/differentiation gates",
+      "observed": "Gates PW-1-S11 (NSAID chosen appropriately / preferred NSAID at high CV risk), PW-1-S13 ('Confirm management plan is appropriate...'), PW-2-S3 (inflammatory vs mechanical differentiation) and PW-2-S6 ('Confirm management is appropriate...') carry on_fail 'unclear'.",
+      "why_unclear": "The document does not state the action if these checks fail; only red-flag/exclusion failure actions are printed (refer immediately / not eligible).",
+      "source_page": 10
+    },
+    {
+      "topic": "Exclusion criteria kept in eligibility.exclusion rather than duplicated in red_flags",
+      "observed": "'Exclusion criteria warranting referral' (p8 flowchart, p15 list, EXC-1..EXC-14) captured in eligibility.exclusion with an any_of group; the referral action is represented by pathway gate PW-1-S8 (on_fail REFER) rather than duplicating all items in red_flags.",
+      "why_unclear": "Choice made to avoid the same text carrying two different action codes (NOT_ELIGIBLE vs REFER); confirm consumer expectations.",
+      "source_page": 15
+    },
+    {
+      "topic": "notifiable classification basis",
+      "observed": "The document mandates sharing the record of the service with the patient and their usual treating medical practitioner/medical practice, records in pharmacy software and an approved Victorian DH IT system, and MHR upload of consultation information (p11); it is silent on notifiable conditions and the AIR.",
+      "why_unclear": "required set to true based on mandated GP record sharing; no notifiable-condition list printed.",
+      "source_page": 11
+    },
+    {
+      "topic": "Page 6 NSAID risk-factor bullet extraction artefact",
+      "observed": "Risk-factor bullet ends '... significant comorbidity or smoking)' with an unbalanced closing parenthesis in the extracted text.",
+      "why_unclear": "Possible extraction artefact from the two-column flowchart layout; quoted as printed.",
+      "source_page": 6
+    },
+    {
+      "topic": "Same exclusion list printed twice (p8 and p15)",
+      "observed": "The exclusion criteria appear in the flowchart (p8, heading 'Does the patient meet these exclusion criteria warranting referral?') and as a list on p15 ('Exclusion criteria warranting referral:'); provenance taken from p15 where the list is cleanly printed.",
+      "why_unclear": "Minor wording differences between the two printings (e.g. 'refer to Table 1.1' vs 'refer to Table1.1'); no clinical difference identified.",
+      "source_page": 8
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm the pharmacist has completed the designated pharmacist training course before supplying Schedule 4 poisons (requirement of the Secretary Approval: Community Pharmacist Program).",
+      "source_page": 4,
+      "reason": "Individual training/authorisation status cannot be verified from the protocol document."
+    },
+    {
+      "item": "'Pharmacists are expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 4,
+      "reason": "Protocol delegates adaptation of guidelines to professional judgment; local policy must define acceptable adaptation before go-live."
+    },
+    {
+      "item": "Referral destination flexibility: where the protocol indicates 'Refer to General Practitioner' the pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate; if timely GP access is not available, VVED or an urgent care clinic may be considered as an alternative pathway.",
+      "source_page": 5,
+      "reason": "Jurisdictional/local pathway availability (VVED, urgent care clinics, which practitioners count) must be confirmed for implementation."
+    },
+    {
+      "item": "Pain severity measurement: 'Pharmacists may use a 0-10 numeric rating scale as a guide to pain severity' with mild pain defined as a pain score of less than 5; pain scores must not be used in isolation.",
+      "source_page": 5,
+      "reason": "Scale use is optional ('may use') and the cut-off is a service definition; confirm local documentation and interpretation policy."
+    },
+    {
+      "item": "Use of the AusCVD risk calculator where cardiovascular risk status is uncertain to guide NSAID choice.",
+      "source_page": 9,
+      "reason": "External tool availability, version and how a 'high CV event risk' result maps to the preferred NSAID list must be confirmed locally."
+    },
+    {
+      "item": "'Consider engaging the patient with a physiotherapist or osteopath' / 'Consider engaging with or referral to a physiotherapist or osteopath'.",
+      "source_page": 8,
+      "reason": "Local referral/engagement arrangements and funding are not specified by the protocol."
+    },
+    {
+      "item": "Record the supply in the pharmacy software and an IT system approved by the Victorian Department of Health.",
+      "source_page": 11,
+      "reason": "Which approved IT system is in use locally, and the record/upload workflow, must be confirmed."
+    },
+    {
+      "item": "First-line paracetamol dosing: protocol prints 'regular oral paracetamol' and 'trialled paracetamol at an appropriate dose' without any numeric dose, frequency or duration.",
+      "source_page": 16,
+      "reason": "Dose/regimen is left to Therapeutic Guidelines; a specific rule must be confirmed before go-live."
+    },
+    {
+      "item": "Effective date/version: only 'May 2026' is printed (cover and copyright page); no version number or separate effective date is printed.",
+      "source_page": 1,
+      "reason": "instrument_version and effective_date were derived from the printed date; confirm the authoritative effective date."
+    },
+    {
+      "item": "Supply cap for Medicines List: The Program - 'a maximum quantity sufficient for 5 days duration of the medicines listed below'.",
+      "source_page": 17,
+      "reason": "Quantity-to-supply per strength/statement of the max days must be confirmed against local dispensing implementation."
+    },
+    {
+      "item": "Where a patient has elected for 'a comprehensive assessment and consultation by the pharmacist' and is confirmed to have a current episode of acute, mild MSK pain, the pharmacist may provide any medication from Medicines List: Usual Pharmacist Care or Medicines List: The Program as clinically appropriate.",
+      "source_page": 17,
+      "reason": "'As clinically appropriate' is a discretionary clause; local formulary/scope rules need confirmation (note S2/S3 supply outside the Program)."
+    }
+  ]
+}

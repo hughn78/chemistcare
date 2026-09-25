@@ -1,0 +1,628 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf",
+    "pdf_sha256": "03d11ac86edf13daf78959ee8d9f831d28b0228f459e6e667a94008cef5e6547",
+    "page_count": 24,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Oral Health Risk Assessment and Fluoride Application – Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "Authorisation page (p2): 'Community Pharmacy Expanded Scope of Practice Initiative. In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.'",
+    "supervision_model": "Document does not use 'collaborative'/'autonomous' terminology; its own wording: an authorised pharmacist on the register of authorised pharmacists prescribing in accordance with the Community Pharmacist Prescribing Code (p2). Discretion clause (p5 Key points): 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.' Risk status determination (p6/p7): 'There is no arbitrary scoring system ... Pharmacists must use their professional judgement to evaluate the child's risk status.'",
+    "scope_summary": "SA Health (Community Pharmacy Expanded Scope of Practice Initiative) clinical practice guideline for pharmacist oral health risk assessment and application of high-strength fluoride varnish in patients aged 18 months to 17 years. Covers 'Red flag' warning signs necessitating referral to emergency medical care (immediate referral to an emergency department – call 000: difficulty swallowing or breathing), referral to a dental or medical practitioner (immediate referral same day; urgent referral within 3 days; refer when screened high/moderate risk but varnish contraindicated), concurrent referral while administering varnish (high/moderate risk, white spot or advancing decay, no dental visit in previous 12 months), key points (caries mechanism; high-strength fluoride varnish every six months; eligible patients either referred by a dental practitioner or assessed by the pharmacist at moderate/high risk; varnish contains 22.6 mg/mL (22600 ppm) fluoride ion; only registered product is Duraphat® 5% w/v sodium fluoride varnish), risk assessment and screening (18 months to 5 years — Appendix 1 plus 'lift the lip' visual screening; 6 to 17 years — Appendix 3 questionnaire), patient history, Aboriginal and Torres Strait Islander patients (CARPA), dental history, confirming management per Queensland Health Guidelines for Fluoride Varnish (QH-GDL-410:2013) and product information, contraindications and precautions, drug interactions, pregnancy and breastfeeding, topical fluoride varnish application (at-risk surfaces, twice per year), post-application advice, adverse effects, general and preventative advice (toothbrushing, toothpaste fluoride strength by age, dietary advice), patient and pharmacist resources, and Appendices 1-5 (risk assessment tools, clinical photographs, Duraphat® application procedure with age-based doses, references). 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'"
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Service restricted to patients aged 18 months to 17 years.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Patients may either be referred by a dental practitioner (an oral health therapist, dental therapist, oral hygienist or dentist), or assessed by the pharmacist as being at moderate or high risk of tooth decay or poor oral health, to be eligible and suitable for varnish application.' (p5 Key points) Application indicated (p10): 'If the patient is assessed to be at a moderate or high risk of tooth decay, or has been referred by a dental practitioner for the procedure, the parent/caregiver should be advised that a high strength fluoride varnish application is indicated.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'In order to assess the patient's suitability for an application of high-strength fluoride varnish, and/or whether a referral to a dental practitioner is required, an oral health risk assessment must be undertaken by the pharmacist.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 6, "section_heading": "Gather information and assess patient's needs" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Varnish is administered only if clinically appropriate and without doubt about suitability: 'Administer fluoride varnish (if clinically appropriate) and concurrently refer' (p5). 'Where there is any doubt about the suitability of a child or adolescent, the pharmacist should not undertake the procedure and refer the patient to their preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic.' (p9) Contraindications and precautions must be excluded (p9-p10, see EXC-11 to EXC-19).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Confirm management is appropriate" }
+      },
+      {
+        "id": "INC-5",
+        "text": "'Pharmacists should refer to the Queensland Health Guidelines for Fluoride Varnish (QH-GDL-410:2013) AND specific product information provided by the manufacturer and TGA to confirm the application of high-strength fluoride varnish is appropriate for each patient, including: contraindications and precautions; drug interactions; pregnancy and breastfeeding (2).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Confirm management is appropriate" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "'Red flag' warning signs necessitating referral to emergency medical care: 'Immediate referral to an emergency department – call 000: Difficulty swallowing or breathing.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-2", "text": "'Red flag' warning signs necessitating referral to a dental or medical practitioner — 'Immediate referral (same day):' 'Recent orofacial trauma (not yet seen by a dental and/or medical practitioner)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-3", "text": "'Immediate referral (same day):' 'Facial swelling or fever from an oral infection'.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-4", "text": "'Immediate referral (same day):' 'A toothache that is getting worse, despite taking regular analgesia'.", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-5", "text": "'Immediate referral (same day):' 'Uncontrolled bleeding post extraction.'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-6", "text": "'Urgent referral (within 3 days):' 'Advanced decay (discolouration and cavitation)'.", "criteria_group": { "all_of": [], "any_of": ["EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-7", "text": "'Urgent referral (within 3 days):' 'A visible abscess'.", "criteria_group": { "all_of": [], "any_of": ["EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-8", "text": "'Urgent referral (within 3 days):' 'A toothache that is not impacting daily functioning and can be managed with over-the-counter analgesics'.", "criteria_group": { "all_of": [], "any_of": ["EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-9", "text": "'Urgent referral (within 3 days):' 'Mouth ulcerations, pigmented lesions, or abnormal appearance of tongue / palate.'", "criteria_group": { "all_of": [], "any_of": ["EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+      { "id": "EXC-10", "text": "'Refer to a dental or medical practitioner when: The patient is screened at high or moderate risk of tooth decay/poor oral health but the application of high-strength fluoride varnish is contraindicated.'", "criteria_group": { "all_of": [], "any_of": ["EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "Refer to a dental or medical practitioner when:" } },
+      { "id": "EXC-11", "text": "Contraindication to professional application of high-strength fluoride varnish (Duraphat® - as per the manufacturer's instructions for use): 'history of hypersensitivity/allergic reaction to colophony (natural resin) e.g., sticking plasters or medical adhesives'.", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-12", "text": "Contraindication: 'current systemic illness e.g., colds, influenza'.", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-13", "text": "Contraindication: 'severe or uncontrolled bronchial asthma'.", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-14", "text": "Contraindication: 'ulcerative gingivitis, stomatitis or other pathology of the soft tissues in or around the mouth e.g., herpetic stomatitis or aphthous ulcers, recent facial trauma/oral infection'.", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-15", "text": "Contraindication: 'previous adverse experiences or reactions to fluoride varnish (2).'", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-16", "text": "Additional contraindication: the patient 'has had a professional topical fluoride treatment in the past 3 months'.", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-17", "text": "Additional contraindication: the patient 'has severe or uncontrolled bronchial asthma' [identical wording to EXC-13, printed in both the manufacturer list and the additional list].", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-18", "text": "Additional contraindication: the patient 'has been hospitalised for any allergic reaction in the past 12 months (13).'", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 10, "section_heading": "Contraindications and precautions" } },
+      { "id": "EXC-19", "text": "Pregnancy/breastfeeding avoidance: 'Duraphat® contains 33.8% volume of ethanol (up to 0.2g of alcohol per dose), as such it should be avoided for patients who are pregnant or breastfeeding (2).'", "criteria_group": { "all_of": [], "any_of": ["EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 10, "section_heading": "Pregnancy and breastfeeding" } },
+      { "id": "EXC-20", "text": "'Where there is any doubt about the suitability of a child or adolescent, the pharmacist should not undertake the procedure and refer the patient to their preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic.'", "criteria_group": { "all_of": [], "any_of": ["EXC-20"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Confirm management is appropriate" } },
+      { "id": "EXC-21", "text": "Outside the service age range: 'Service restricted to patients aged 18 months to 17 years.' ('Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.')", "criteria_group": { "all_of": [], "any_of": ["EXC-21"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } }
+    ],
+    "age_bounds": {
+      "min_years": 1.5,
+      "max_years": 17,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "High/moderate risk still receives varnish plus referral: 'Administer fluoride varnish (if clinically appropriate) and concurrently refer: If the patient is screened at high or moderate risk of tooth decay/poor oral health'.", "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" }, "confidence": "high" },
+      { "id": "EXE-2", "text": "Early lesions still receive varnish plus referral: 'If the patient presents with white spot lesions or advancing decay (brown spot lesions – no cavitation evident)'.", "criteria_group": { "all_of": ["EXE-2"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" }, "confidence": "high" },
+      { "id": "EXE-3", "text": "No dental visit in 12 months does not block varnish: 'If the patient has not seen a dental practitioner in the previous 12 months.' (vadminister varnish and concurrently refer)", "criteria_group": { "all_of": ["EXE-3"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" }, "confidence": "high" },
+      { "id": "EXE-4", "text": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "criteria_group": { "all_of": ["EXE-4"], "any_of": [] }, "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }, "confidence": "high" }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Oral health risk assessment, red-flag triage and fluoride varnish application",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "REFER",
+          "description": "Red-flag triage screen at presentation (p4-p5): ''Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: Immediate referral to an emergency department – call 000: Difficulty swallowing or breathing.' ''Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner: Immediate referral (same day): Recent orofacial trauma (not yet seen by a dental and/or medical practitioner); Facial swelling or fever from an oral infection; A toothache that is getting worse, despite taking regular analgesia; Uncontrolled bleeding post extraction. Urgent referral (within 3 days): Advanced decay (discolouration and cavitation); A visible abscess; A toothache that is not impacting daily functioning and can be managed with over-the-counter analgesics; Mouth ulcerations, pigmented lesions, or abnormal appearance of tongue / palate. Refer to a dental or medical practitioner when: The patient is screened at high or moderate risk of tooth decay/poor oral health but the application of high-strength fluoride varnish is contraindicated.'",
+          "gates": [
+            { "criterion": "No emergency sign present: no 'Difficulty swallowing or breathing' (Immediate referral to an emergency department – call 000)", "on_fail": "STOP" },
+            { "criterion": "No same-day sign present: no recent orofacial trauma (not yet seen by a dental and/or medical practitioner); no facial swelling or fever from an oral infection; no toothache getting worse despite regular analgesia; no uncontrolled bleeding post extraction", "on_fail": "REFER" },
+            { "criterion": "No within-3-days sign present: no advanced decay (discolouration and cavitation); no visible abscess; no toothache that is not impacting daily functioning and can be managed with over-the-counter analgesics; no mouth ulcerations, pigmented lesions, or abnormal appearance of tongue / palate", "on_fail": "REFER" },
+            { "criterion": "If screened at high or moderate risk of tooth decay/poor oral health, the application of high-strength fluoride varnish is not contraindicated", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Risk assessment and screening — 18 months to 5 years of age (p6-p7): risk assessment per Appendix 1; 'There is no arbitrary scoring system for risk status due to the variability of the interaction between risk factors and protective factors. Pharmacists must use their professional judgement to evaluate the child's risk status.' 'A child with no obvious clinical signs of decay, only a few moderate level risk factors and multiple protective factors may be deemed low risk.' 'If the child has at least one high risk factor, regardless of the number of protective factors, they would generally be considered at least moderate risk of tooth decay and poor oral health and fluoride application should be considered if appropriate.' Visual screening using the 'lift the lip' technique: 'The parent or caregiver should lift the upper lip of the child in front of the pharmacist so that the front teeth and gums are clearly visible to look for signs of decay (8).' 'A torch may be used ... and a piece of gauze may be used to clean visible plaque and debris off teeth for better visibility (13).' Look for: 'signs of tooth decay (white spot lesions, brown spot lesions, cavitation (holes))'; 'facial trauma (loose or broken teeth, lacerations on gums)'; 'oral infection, facial swelling/asymmetry due to spreading infection'; 'gum disease (red, swollen gums)'; 'other relevant findings including mouth ulcers and possible signs of fluorosis.' Appendix 2 provides descriptions and clinical photographs of common oral presentations.",
+          "gates": [
+            { "criterion": "Visual 'lift the lip' screening completed with the parent/caregiver (signs of decay, facial trauma, oral infection/facial swelling, gum disease, mouth ulcers/fluorosis)", "on_fail": "unclear" },
+            { "criterion": "Appendix 1 risk factors and protective factors evaluated with professional judgement (no arbitrary scoring system; at least one high risk factor = at least moderate risk)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 6, "section_heading": "Risk assessment and screening - 18 months to 5 years of age" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Risk assessment — 6 years to 17 years of age (p7): 'For children and adolescents aged between 6 and 17 years of age, a risk assessment questionnaire is completed with the patient and parent/caregiver. No visual screening is required, although signs of poor oral health may be easily observable, such as plaque accumulation, decay in front teeth, gingivitis or bad breath.' Risk assessment per Appendix 3; 'There is no arbitrary scoring system ... Pharmacists must use their professional judgement to evaluate the child's risk status' (low risk vs 'at least one high risk factor ... at least moderate risk'). 'As part of the risk assessment, all children and adolescents (and their parent/caregiver) should be asked about their current oral hygiene routines, including frequency of brushing, type of toothpaste (fluoride strength) and toothbrush used, and the use of any other oral hygiene aids including mouthwash and flossing.'",
+          "gates": [
+            { "criterion": "Appendix 3 risk assessment questionnaire completed with the patient and parent/caregiver", "on_fail": "unclear" },
+            { "criterion": "Current oral hygiene routines asked (frequency of brushing, type of toothpaste (fluoride strength), toothbrush used, mouthwash, flossing)", "on_fail": "unclear" },
+            { "criterion": "Risk status evaluated with professional judgement (Appendix 3 risk factors and protective factors; at least one high risk factor = at least moderate risk)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 7, "section_heading": "Risk assessment - 6 years to 17 years of age" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Patient history (p8): 'Sufficient information should be obtained from the patient and their parent/caregiver to assess the safety and appropriateness of any recommendations. The patient history (in addition to the risk assessment questionnaire) should consider: age; pregnancy and breastfeeding status (if applicable); current medical conditions or special health care needs that may impact on oral health status and the safe use of topical fluoride: asthma (severity and current level of symptom control), history of hospitalisation for allergic reactions; current illness e.g., colds, influenza, current infection of HSV; current and recently commenced medication (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/adverse drug events; hypersensitivity/allergic reaction to colophony (natural resin) e.g., band-aids or medical adhesives; smoking status (including vaping).' 'Aboriginal and Torres Strait Islander patients — Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (13).' 'Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [
+            { "criterion": "Sufficient information obtained from the patient and parent/caregiver to assess the safety and appropriateness of any recommendations (all listed history items considered)", "on_fail": "unclear" },
+            { "criterion": "My Health Record accessed/reviewed where available (medication history, allergies, current medical conditions)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 8, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Dental history (p8-p9): 'Consider the following: Does the patient have a dental practitioner / clinic that they visit routinely? When did the patient last see a dental practitioner? What was the reason e.g., emergency treatment, toothache, routine check-up? When was the last topical fluoride application? Previous adverse experiences with fluoride varnish. History of recent orofacial trauma (within the last 6 months), oral infections, toothaches or other oral pain (including use of analgesics), soft tissue pathology in or around the mouth (ulcerative gingivitis, herpetic stomatitis or aphthous ulcers). Impacts of oral health on quality of life including sleep and school attendance. Oral hygiene routines including toothbrushing frequency, use of fluoridated products (toothpaste, mouth wash). Consumption of fluoridated water.'",
+          "gates": [
+            { "criterion": "Dental history obtained: routine dental practitioner/clinic; date and reason of last visit; last topical fluoride application and previous adverse experiences with fluoride varnish; orofacial trauma within the last 6 months, oral infections, toothaches/oral pain, soft tissue pathology; quality-of-life impacts; oral hygiene routines; consumption of fluoridated water", "on_fail": "unclear" },
+            { "criterion": "No professional topical fluoride treatment in the past 3 months (checked against dental history)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 8, "section_heading": "Dental history" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate (p9): 'Pharmacists should refer to the Queensland Health Guidelines for Fluoride Varnish (QH-GDL-410:2013) AND specific product information provided by the manufacturer and TGA to confirm the application of high-strength fluoride varnish is appropriate for each patient, including: contraindications and precautions; drug interactions; pregnancy and breastfeeding (2). General information only is provided within this guideline. Where there is any doubt about the suitability of a child or adolescent, the pharmacist should not undertake the procedure and refer the patient to their preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic. Visit SA Dental • Dental services for all kids under 18 & eligible adults to find the nearest clinic, including School Dental Service clinics (19).'",
+          "gates": [
+            { "criterion": "Application confirmed appropriate for this patient per QH-GDL-410:2013 AND specific product information (contraindications and precautions; drug interactions; pregnancy and breastfeeding)", "on_fail": "REFER" },
+            { "criterion": "No doubt about the suitability of the child or adolescent", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Contraindications and precautions screen (p9-p10): 'Contraindications for the professional application of high-strength fluoride varnish (Duraphat® - as per the manufacturer's instructions for use) include: history of hypersensitivity/allergic reaction to colophony (natural resin) e.g., sticking plasters or medical adhesives; current systemic illness e.g., colds, influenza; severe or uncontrolled bronchial asthma; ulcerative gingivitis, stomatitis or other pathology of the soft tissues in or around the mouth e.g., herpetic stomatitis or aphthous ulcers, recent facial trauma/oral infection; previous adverse experiences or reactions to fluoride varnish (2). Additional contraindications include where the patient: has had a professional topical fluoride treatment in the past 3 months; has severe or uncontrolled bronchial asthma; has been hospitalised for any allergic reaction in the past 12 months (13).' Drug Interactions (p10): 'No other high dose fluoride products (such as fluoride gels) should be used. The presence of alcohol in the formula should be considered (2).' Pregnancy and breastfeeding (p10): 'Duraphat® contains 33.8% volume of ethanol (up to 0.2g of alcohol per dose), as such it should be avoided for patients who are pregnant or breastfeeding (2).'",
+          "gates": [
+            { "criterion": "No history of hypersensitivity/allergic reaction to colophony (natural resin) e.g., sticking plasters or medical adhesives", "on_fail": "REFER" },
+            { "criterion": "No current systemic illness e.g., colds, influenza", "on_fail": "REFER" },
+            { "criterion": "No severe or uncontrolled bronchial asthma", "on_fail": "REFER" },
+            { "criterion": "No ulcerative gingivitis, stomatitis or other pathology of the soft tissues in or around the mouth e.g., herpetic stomatitis or aphthous ulcers, recent facial trauma/oral infection", "on_fail": "REFER" },
+            { "criterion": "No previous adverse experiences or reactions to fluoride varnish", "on_fail": "REFER" },
+            { "criterion": "No professional topical fluoride treatment in the past 3 months", "on_fail": "REFER" },
+            { "criterion": "Not hospitalised for any allergic reaction in the past 12 months", "on_fail": "REFER" },
+            { "criterion": "Patient is not pregnant or breastfeeding (Duraphat® contains 33.8% volume of ethanol — 'it should be avoided for patients who are pregnant or breastfeeding')", "on_fail": "REFER" },
+            { "criterion": "No other high dose fluoride products (such as fluoride gels) being used, and the presence of alcohol in the formula has been considered", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "Concurrent referral rule (p5): 'Administer fluoride varnish (if clinically appropriate) and concurrently refer: If the patient is screened at high or moderate risk of tooth decay/poor oral health; If the patient presents with white spot lesions or advancing decay (brown spot lesions – no cavitation evident); If the patient has not seen a dental practitioner in the previous 12 months.' Referral destinations (p9): 'their preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic'; 'Visit SA Dental • Dental services for all kids under 18 & eligible adults to find the nearest clinic, including School Dental Service clinics (19).' Appendix 1 (p15) and Appendix 3 (p19-p20) add routine referral requirements, e.g. 'Routine referral to a dental practitioner (including public dental clinic) is required if the child has not had a dental check-up (not just emergency treatment) in the past 12 months.'",
+          "gates": [
+            { "criterion": "Referral arranged where any concurrent-referral trigger is present (high/moderate risk screening; white spot lesions or advancing decay – brown spot lesions with no cavitation evident; not seen a dental practitioner in the previous 12 months)", "on_fail": "REFER" },
+            { "criterion": "Referral destination recorded (preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic, including School Dental Service clinics)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "TREAT",
+          "description": "Topical fluoride varnish application (p5, p10-p11, p21-p22): eligibility (p5): 'Patients may either be referred by a dental practitioner (an oral health therapist, dental therapist, oral hygienist or dentist), or assessed by the pharmacist as being at moderate or high risk of tooth decay or poor oral health, to be eligible and suitable for varnish application.' 'Fluoride varnish contains 22.6 mg/mL (22600 ppm) fluoride ion suspended in an alcohol and resin base (2, 9, 10). The only fluoride varnish currently registered in Australia to prevent caries is Duraphat® 5% w/v sodium fluoride varnish (2, 10, 15).' At-risk tooth surfaces (p10): 'a tooth surface that has signs of early decay (white spot or brown spot lesions); a tooth surface directly abutting a decayed tooth surface (in between two teeth); the four front primary teeth in the upper jaw (present in children up to the age of 6-7 years); chewing (occlusal) surfaces and interproximal surfaces (in between) of permanent molars and pre-molars (if present).' Frequency (p11): 'The recommended frequency of fluoride varnish application is twice per year.' Dose (p21, as per the manufacturer's instructions for use, varies based on age and dentition type): '18 months up to 6 years dosage: 0.25ml Duraphat® (5.6mg fluoride) (primary dentition)'; '6 to 14 years dosage: 0.4ml Duraphat® (9.04mg fluoride) (mixed dentition)'; '15 to 17 years dosage: up to 0.75ml Duraphat® (16.95mg fluoride) (permanent dentition)'. 'A single use, Duraphat® Dosage Pad that indicates the amount of fluoride to be applied, or Duraphat® Varnish Single Dose (0.4ml) must be used to ensure the correct amount of varnish is dispensed and applied.' Application procedure (p21-p22, contextualised for the community pharmacy setting): explain the procedure; don appropriate PPE; position the patient ('lift the lip' technique for young children; older children sit facing the pharmacist with head tilted slightly back); dispense the correct amount for the age using a single use dosage pad or single dose pack; remove visible plaque with cotton gauze or brushing with a wet toothbrush (without toothpaste); dry teeth with cotton gauze (one quadrant at a time; isolation with finger and thumb or rolled gauze); 'Apply a thin layer of the varnish to 2-3 teeth (as required) in 1 quadrant at a time using a disposable microbrush/applicator, starting with the upper front teeth, moving to the back, then lower teeth. Do not overload the applicator and periodically check the tongue and cheeks for varnish and wipe away as required.'; for restless young children prioritise the upper front teeth; finish by checking tongue and soft tissues for residue. Note (p22): 'Duraphat is indicated as a spot application fluoride treatment for at-risk tooth surfaces. It should not be applied to the whole dentition in one session (systemic treatment) (2).'",
+          "gates": [
+            { "criterion": "Patient assessed to be at moderate or high risk of tooth decay, or referred by a dental practitioner for the procedure", "on_fail": "STOP" },
+            { "criterion": "Age- and dentition-appropriate dose dispensed using a single use Duraphat® Dosage Pad or Duraphat® Varnish Single Dose (0.4ml) pack: 18 months up to 6 years 0.25ml (5.6mg fluoride); 6 to 14 years 0.4ml (9.04mg fluoride); 15 to 17 years up to 0.75ml (16.95mg fluoride)", "on_fail": "STOP" },
+            { "criterion": "Varnish applied as a spot application to at-risk tooth surfaces only — 'It should not be applied to the whole dentition in one session (systemic treatment)'", "on_fail": "STOP" },
+            { "criterion": "No professional topical fluoride treatment in the past 3 months (recommended frequency of application is twice per year)", "on_fail": "REFER" },
+            { "criterion": "Pre-procedure advice given (teeth may appear yellow for up to 24 hours; soft foods can be consumed after 30 minutes but harder foods cannot be chewed for at least 4 hours)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 10, "section_heading": "Topical fluoride varnish application" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "EDUCATE",
+          "description": "Post-application and general/preventative advice (p11-p12): 'Patients and parents/caregivers should be provided with post-application instructions and advice before the procedure is undertaken. The efficacy of fluoride varnish depends on the length of time it can remain undisturbed on the teeth surfaces. As such, patients should be advised to: avoid eating and drinking for at least 30 minutes after application, after which time soft food and fluids can be consumed; not chew food for at least 4 hours after application; not brush teeth for at least 4 hours after application (10).' Parents/caregivers 'should be advised that topical fluoride varnish is a preventative treatment and cannot reverse advanced tooth decay (although it may halt further development), treat dental infections or relieve dental pain.' General and preventative advice: regular check-ups with a dental practitioner; anticipatory guidance on toothbrushing, flossing and other oral hygiene aids tailored to age. Children aged 18 months to 5 years: 'children aged between 18 months and 5 years should have their teeth cleaned twice daily by a parent with a pea sized amount of toothpaste containing 500-550 ppm fluoride. A small, soft bristled toothbrush should be used and the child instructed to spit and not swallow the toothpaste and not to rinse after brushing (20, 21).' Children and adolescents aged 6 to 17 years: 'Teeth should be cleaned twice daily (or more frequently) with a soft bristled toothbrush and a toothpaste containing 1000-1500 ppm fluoride ... Toothpaste should not be swallowed, and the patient should avoid rinsing after brushing (20, 21).' 'Floss should be used to clean in between teeth.' 'Disclosure tablets may be used to demonstrate effective methods of plaque removal.' High strength fluoride products: 'Advice on the use of higher strength fluoride toothpastes and mouthwashes should be sought from a dental practitioner for patients at high risk of decay, and the use of high-concentration fluoride toothpaste must be guided by the Australian Pharmaceutical Formulary and Handbook (psa.org.au) (22).' Dietary advice (p12): 'Advise patients/carers to avoid sugary foods and drinks (e.g., especially sugars that are in sticky forms, sugary and acidic drinks, and carbohydrates as snacks between meals) that can weaken enamel, increasing the risk of tooth decay.'",
+          "gates": [
+            { "criterion": "Post-application instructions provided before the procedure (avoid eating and drinking for at least 30 minutes; no chewing food for at least 4 hours; no brushing teeth for at least 4 hours)", "on_fail": "unclear" },
+            { "criterion": "Expectations advised (teeth may appear yellow for up to 24 hours; soft foods after 30 minutes; harder foods not chewed for at least 4 hours; varnish cannot reverse advanced tooth decay, treat dental infections or relieve dental pain)", "on_fail": "unclear" },
+            { "criterion": "Age-appropriate toothbrushing and toothpaste advice given (18 months to 5 years: twice daily, pea sized amount, 500-550 ppm fluoride, spit and not swallow, no rinsing; 6 to 17 years: twice daily or more frequently, soft bristled brush, 1000-1500 ppm fluoride, no swallowing, no rinsing, floss)", "on_fail": "unclear" },
+            { "criterion": "Regular dental check-ups, high-strength fluoride product advice (dental practitioner / APF-guided) and dietary advice provided", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Post application" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Adverse effects counselling and repeat interval (p11): 'Accidental ingestion of large amounts of fluoride may result in acute burning in the mouth and/or a sore tongue. Nausea, vomiting and diarrhoea may occur soon after ingestion (within 30 minutes) and may be accompanied by salivation, haematemesis, and epigastric cramping abdominal pain. These symptoms may persist for up to 24 hours. The manufacturer also states that: Swelling of the oral mucosa, ulcerative gingivitis and stomatitis have been observed in exceptional cases in sensitive individuals and/or individuals with a tendency to allergic reactions (especially after extensive application). Asthma attacks may occur in rare cases in people with bronchial asthma. Retching or vomiting may occur after a high dosage/extensive application in those with gastric sensitivity (2).' 'If necessary, the varnish layer can easily be removed from the mouth by brushing and rinsing (2).' 'The recommended frequency of fluoride varnish application is twice per year.' 'There is no published evidence that has found the professional application of fluoride varnish is a risk factor for enamel fluorosis in children of any age (8).'",
+          "gates": [
+            { "criterion": "Adverse-effect warning signs explained (acute burning in the mouth and/or sore tongue; nausea, vomiting and diarrhoea within 30 minutes; symptoms may persist up to 24 hours; swelling of the oral mucosa, ulcerative gingivitis and stomatitis in sensitive individuals; asthma attacks in bronchial asthma; retching or vomiting after high dosage/extensive application with gastric sensitivity)", "on_fail": "unclear" },
+            { "criterion": "Patient/parent advised the varnish layer can easily be removed by brushing and rinsing if necessary", "on_fail": "unclear" },
+            { "criterion": "Next application scheduled per recommended frequency of twice per year (at least 3 months since last professional topical fluoride treatment)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Adverse effects" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    { "id": "TX-1", "drug": "Duraphat® 5% w/v sodium fluoride varnish", "form": "topical varnish (alcohol and resin base)", "strength": "5% w/v sodium fluoride; 22.6 mg/mL (22600 ppm) fluoride ion", "dose": "0.25ml Duraphat® (5.6mg fluoride) — 18 months up to 6 years (primary dentition)", "route": "topical — applied to at-risk tooth surfaces", "frequency": "twice per year", "duration": "", "max_quantity": "single use dosage pad or single dose pack", "max_dose": "", "quantity_to_supply": "0.25ml per application (Duraphat® Dosage Pad or Duraphat® Varnish Single Dose (0.4ml) pack must be used)", "notes": "Dose 'As per the manufacturer's instructions for use ... varies based on age (and subsequently, dentition type)' (p21). 'The only fluoride varnish currently registered in Australia to prevent caries is Duraphat® 5% w/v sodium fluoride varnish (2, 10, 15)' (p5) — basis for first_line=true. 'Duraphat is indicated as a spot application fluoride treatment for at-risk tooth surfaces. It should not be applied to the whole dentition in one session (systemic treatment) (2).' Contraindicated in pregnancy/breastfeeding (33.8% volume of ethanol) and if professional topical fluoride in past 3 months (p9-p10).", "first_line": true, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 21, "section_heading": "Appendix 4 – Duraphat® application" } },
+    { "id": "TX-2", "drug": "Duraphat® 5% w/v sodium fluoride varnish", "form": "topical varnish (alcohol and resin base)", "strength": "5% w/v sodium fluoride; 22.6 mg/mL (22600 ppm) fluoride ion", "dose": "0.4ml Duraphat® (9.04mg fluoride) — 6 to 14 years (mixed dentition)", "route": "topical — applied to at-risk tooth surfaces", "frequency": "twice per year", "duration": "", "max_quantity": "single use dosage pad or single dose pack", "max_dose": "", "quantity_to_supply": "0.4ml per application (Duraphat® Dosage Pad or Duraphat® Varnish Single Dose (0.4ml) pack must be used)", "notes": "Dose per manufacturer's instructions for use (p21). Spot application to at-risk tooth surfaces only; not whole dentition (p22). Contraindicated in pregnancy/breastfeeding and if professional topical fluoride in past 3 months (p9-p10).", "first_line": true, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 21, "section_heading": "Appendix 4 – Duraphat® application" } },
+    { "id": "TX-3", "drug": "Duraphat® 5% w/v sodium fluoride varnish", "form": "topical varnish (alcohol and resin base)", "strength": "5% w/v sodium fluoride; 22.6 mg/mL (22600 ppm) fluoride ion", "dose": "up to 0.75ml Duraphat® (16.95mg fluoride) — 15 to 17 years (permanent dentition)", "route": "topical — applied to at-risk tooth surfaces", "frequency": "twice per year", "duration": "", "max_quantity": "single use dosage pad or single dose pack", "max_dose": "up to 0.75ml Duraphat® (16.95mg fluoride)", "quantity_to_supply": "up to 0.75ml per application (Duraphat® Dosage Pad must be used to ensure the correct amount)", "notes": "Dose printed as 'up to 0.75ml' — a maximum, not a fixed dose (p21). Spot application to at-risk tooth surfaces only (p22). Contraindicated in pregnancy/breastfeeding and if professional topical fluoride in past 3 months (p9-p10).", "first_line": true, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 21, "section_heading": "Appendix 4 – Duraphat® application" } },
+    { "id": "TX-4", "drug": "fluoride toothpaste 500-550 ppm (children 18 months to 5 years)", "form": "toothpaste", "strength": "500-550 ppm fluoride", "dose": "pea sized amount", "route": "topical — oral brushing", "frequency": "twice daily (teeth cleaned twice daily by a parent)", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "Anticipatory guidance (p12): 'children aged between 18 months and 5 years should have their teeth cleaned twice daily by a parent with a pea sized amount of toothpaste containing 500-550 ppm fluoride. A small, soft bristled toothbrush should be used and the child instructed to spit and not swallow the toothpaste and not to rinse after brushing (20, 21).' Advice only — not supplied under this service. 'the use of high-concentration fluoride toothpaste must be guided by the Australian Pharmaceutical Formulary and Handbook (psa.org.au) (22).'", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 12, "section_heading": "General and preventative advice" } },
+    { "id": "TX-5", "drug": "fluoride toothpaste 1000-1500 ppm (children and adolescents 6 to 17 years)", "form": "toothpaste", "strength": "1000-1500 ppm fluoride", "dose": "", "route": "topical — oral brushing", "frequency": "twice daily (or more frequently)", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "", "notes": "Anticipatory guidance (p12): 'Teeth should be cleaned twice daily (or more frequently) with a soft bristled toothbrush and a toothpaste containing 1000-1500 ppm fluoride (a standard toothpaste readily available at supermarkets or the pharmacy). Toothpaste should not be swallowed, and the patient should avoid rinsing after brushing (20, 21).' 'Floss should be used to clean in between teeth.' Advice only — not supplied under this service.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 12, "section_heading": "General and preventative advice" } }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: 'Immediate referral to an emergency department – call 000: Difficulty swallowing or breathing.'", "structured": { "parameter": "difficulty_swallowing_or_breathing", "operator": "==", "value": true, "unit": "" }, "action": "ESCALATE_000", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+    { "id": "RF-2", "trigger_text": "'Red flag' warning signs ... necessitate referral to a dental or medical practitioner: 'Immediate referral (same day):' 'Recent orofacial trauma (not yet seen by a dental and/or medical practitioner)'.", "structured": { "parameter": "recent_orofacial_trauma_not_yet_seen", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-3", "trigger_text": "'Immediate referral (same day):' 'Facial swelling or fever from an oral infection'.", "structured": { "parameter": "facial_swelling_or_fever_from_oral_infection", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-4", "trigger_text": "'Immediate referral (same day):' 'A toothache that is getting worse, despite taking regular analgesia'.", "structured": { "parameter": "toothache_worsening_despite_regular_analgesia", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-5", "trigger_text": "'Immediate referral (same day):' 'Uncontrolled bleeding post extraction.'", "structured": { "parameter": "uncontrolled_bleeding_post_extraction", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-6", "trigger_text": "'Urgent referral (within 3 days):' 'Advanced decay (discolouration and cavitation)'.", "structured": { "parameter": "advanced_decay_discolouration_and_cavitation", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-7", "trigger_text": "'Urgent referral (within 3 days):' 'A visible abscess'.", "structured": { "parameter": "visible_abscess", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-8", "trigger_text": "'Urgent referral (within 3 days):' 'A toothache that is not impacting daily functioning and can be managed with over-the-counter analgesics' [as printed — recorded verbatim; note the same-day tier covers toothache getting worse despite regular analgesia].", "structured": { "parameter": "toothache_not_impacting_daily_function_manageable_with_otc_analgesics", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-9", "trigger_text": "'Urgent referral (within 3 days):' 'Mouth ulcerations, pigmented lesions, or abnormal appearance of tongue / palate.'", "structured": { "parameter": "mouth_ulcerations_pigmented_lesions_or_abnormal_tongue_or_palate", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner:" } },
+    { "id": "RF-10", "trigger_text": "'Refer to a dental or medical practitioner when: The patient is screened at high or moderate risk of tooth decay/poor oral health but the application of high-strength fluoride varnish is contraindicated.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "Refer to a dental or medical practitioner when:" } },
+    { "id": "RF-11", "trigger_text": "'Administer fluoride varnish (if clinically appropriate) and concurrently refer:' 'If the patient is screened at high or moderate risk of tooth decay/poor oral health'.", "structured": { "parameter": "risk_status", "operator": "in", "value": ["moderate", "high"], "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" } },
+    { "id": "RF-12", "trigger_text": "'Administer fluoride varnish (if clinically appropriate) and concurrently refer:' 'If the patient presents with white spot lesions or advancing decay (brown spot lesions – no cavitation evident)'.", "structured": { "parameter": "white_spot_lesions_or_advancing_brown_spot_decay_without_cavitation", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" } },
+    { "id": "RF-13", "trigger_text": "'Administer fluoride varnish (if clinically appropriate) and concurrently refer:' 'If the patient has not seen a dental practitioner in the previous 12 months.'", "structured": { "parameter": "months_since_dental_practitioner_visit", "operator": ">=", "value": 12, "unit": "months" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" } },
+    { "id": "RF-14", "trigger_text": "'Where there is any doubt about the suitability of a child or adolescent, the pharmacist should not undertake the procedure and refer the patient to their preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic.'", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Confirm management is appropriate" } },
+    { "id": "RF-15", "trigger_text": "'Recurrent severe or multiple ulcers may require a medical or dental referral to investigate the possibility of herpes simplex virus (HSV), or other infections (26).'", "structured": { "parameter": "recurrent_severe_or_multiple_mouth_ulcers", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 17, "section_heading": "Appendix 2 – Clinical photographs" } },
+    { "id": "RF-16", "trigger_text": "'Advice on the use of higher strength fluoride toothpastes and mouthwashes should be sought from a dental practitioner for patients at high risk of decay, and the use of high-concentration fluoride toothpaste must be guided by the Australian Pharmaceutical Formulary and Handbook (psa.org.au) (22).'", "structured": null, "action": "REVIEW_GP", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 12, "section_heading": "High strength fluoride products" } },
+    { "id": "RF-17", "trigger_text": "'Duraphat® contains 33.8% volume of ethanol (up to 0.2g of alcohol per dose), as such it should be avoided for patients who are pregnant or breastfeeding (2).'", "structured": { "parameter": "pregnant_or_breastfeeding", "operator": "==", "value": true, "unit": "" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 10, "section_heading": "Pregnancy and breastfeeding" } },
+    { "id": "RF-18", "trigger_text": "Appendix 1 (18 months to 5 years): 'Individual or family history of decay (including parent/primary caregiver and siblings with fillings, teeth extracted or active untreated decay).' Risk level 'Moderate to high'. 'Routine referral to a dental practitioner (including public dental clinic) is required if the child has not had a dental check-up (not just emergency treatment) in the past 12 months.'", "structured": { "parameter": "months_since_routine_dental_checkup", "operator": ">=", "value": 12, "unit": "months" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-19", "trigger_text": "Appendix 1: 'Child takes a bottle or sippy cup to bed with fluid other than water, including on demand breastfeeding.' Risk level 'High'. 'Routine referral to a dental practitioner (including public dental clinic) is required.'", "structured": { "parameter": "bottle_or_sippy_cup_to_bed_with_fluid_other_than_water", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-20", "trigger_text": "Appendix 1: 'Special health care needs and/or regular medications that have a high sugar content or may cause dry mouth.' Risk level 'Moderate'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "special_health_care_needs_or_regular_medications_high_sugar_or_dry_mouth", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-21", "trigger_text": "Appendix 1: 'White spot lesions visible on any teeth or obvious decay (brown spots, holes/cavitation) (see Appendix 2).' Risk level 'High'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "white_spot_lesions_or_obvious_decay", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-22", "trigger_text": "Appendix 1: 'Visible plaque accumulation.' Risk level 'Moderate'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "visible_plaque_accumulation", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-23", "trigger_text": "Appendix 1: 'Gingivitis (bleeding, swollen or red (as opposed to pink) gums).' Risk level 'Moderate'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "gingivitis_bleeding_swollen_or_red_gums", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-24", "trigger_text": "Appendix 1: 'Toothache, recent trauma (not yet seen by a dental practitioner), facial swelling from infection or visible abscess (see Appendix 2).' Risk level 'High'. 'Immediate referral to the nearest dental practitioner or a medical practitioner/emergency department is required.'", "structured": { "parameter": "toothache_recent_trauma_facial_swelling_from_infection_or_visible_abscess", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" } },
+    { "id": "RF-25", "trigger_text": "Appendix 3 (6-17 years): 'Child/adolescent comes from a low socio-economic background.' Risk level 'High'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "low_socio_economic_background", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-26", "trigger_text": "Appendix 3: 'Frequent snacking and consumption of sugary and/or acidic drinks (3 or more snacks and drinks per day). Consider diets high in sugar and processed carbohydrates, and consumption of regular and diet soft drinks, cordial, sports drinks, juice, iced (or regular) coffee and flavoured milk.' Risk level 'High'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "snacks_and_sugary_or_acidic_drinks_per_day", "operator": ">=", "value": 3, "unit": "per day" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-27", "trigger_text": "Appendix 3: 'Special health care needs and/or regular medications with high sugar content or that may cause dry mouth.' Risk level 'Moderate'. 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended.'", "structured": { "parameter": "special_health_care_needs_or_regular_medications_high_sugar_or_dry_mouth", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-28", "trigger_text": "Appendix 3: 'Personal or family history of previous decay (fillings or teeth extracted).' Risk level 'Moderate to high'. 'Routine referral to a dental practitioner is required if the child/adolescent has not had a routine dental check-up in the past 12 months.'", "structured": { "parameter": "months_since_routine_dental_checkup", "operator": ">=", "value": 12, "unit": "months" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-29", "trigger_text": "Appendix 3: 'Visible decay (brown spots, holes/cavitation) (see Appendix 2).' Risk level 'High'. 'Routine referral to a dental practitioner is required.'", "structured": { "parameter": "visible_decay_brown_spots_or_cavitation", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-30", "trigger_text": "Appendix 3: 'Visible plaque accumulation.' Risk level 'Moderate'. 'Routine referral to a dental practitioner is highly recommended.'", "structured": { "parameter": "visible_plaque_accumulation", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-31", "trigger_text": "Appendix 3: 'Gingivitis (bleeding, swollen or red (as opposed to pink) gums).' Risk level 'Moderate'. 'Routine referral to a dental practitioner is highly recommended.'", "structured": { "parameter": "gingivitis_bleeding_swollen_or_red_gums", "operator": "==", "value": true, "unit": "" }, "action": "REFER", "severity": "low", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 19, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-32", "trigger_text": "Appendix 3: 'Toothache, recent trauma (not yet seen by a dental practitioner), facial swelling from infection or visible abscess (see Appendix 2).' Risk level 'High'. 'Immediate referral to the nearest dental practitioner or a medical practitioner/ emergency department is required.' (continues from p19 onto p20)", "structured": { "parameter": "toothache_recent_trauma_facial_swelling_from_infection_or_visible_abscess", "operator": "==", "value": true, "unit": "" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 20, "section_heading": "Appendix 3 – Risk assessment and screening tool 6-17 years" } },
+    { "id": "RF-33", "trigger_text": "'Accidental ingestion of large amounts of fluoride may result in acute burning in the mouth and/or a sore tongue. Nausea, vomiting and diarrhoea may occur soon after ingestion (within 30 minutes) and may be accompanied by salivation, haematemesis, and epigastric cramping abdominal pain. These symptoms may persist for up to 24 hours.'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Adverse effects" } },
+    { "id": "RF-34", "trigger_text": "Manufacturer's statements on adverse effects: 'Swelling of the oral mucosa, ulcerative gingivitis and stomatitis have been observed in exceptional cases in sensitive individuals and/or individuals with a tendency to allergic reactions (especially after extensive application).'; 'Asthma attacks may occur in rare cases in people with bronchial asthma.'; 'Retching or vomiting may occur after a high dosage/extensive application in those with gastric sensitivity (2).' 'If necessary, the varnish layer can easily be removed from the mouth by brushing and rinsing (2).'", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Adverse effects" } }
+  ],
+  "referral": {
+    "routine": [
+      "'Refer to a dental or medical practitioner when: The patient is screened at high or moderate risk of tooth decay/poor oral health but the application of high-strength fluoride varnish is contraindicated.' (p4)",
+      "p5: 'Administer fluoride varnish (if clinically appropriate) and concurrently refer:' high or moderate risk screening; white spot lesions or advancing decay (brown spot lesions – no cavitation evident); not seen a dental practitioner in the previous 12 months.",
+      "p9: 'refer the patient to their preferred dental practitioner, closest public dental service or Aboriginal and Torres Strait Islander Community Controlled dental clinic. Visit SA Dental • Dental services for all kids under 18 & eligible adults to find the nearest clinic, including School Dental Service clinics (19).'",
+      "Appendix 1 (p15): 'Routine referral to a dental practitioner (including public dental clinic) is required if the child has not had a dental check-up (not just emergency treatment) in the past 12 months'; 'Routine referral ... is required' (bottle/sippy cup to bed with fluid other than water); 'Routine referral ... is highly recommended' (snacking/diet row context, special health care needs/medications, white spot lesions or obvious decay, visible plaque accumulation, gingivitis).",
+      "Appendix 3 (p19): 'Routine referral to a dental practitioner (including public dental clinic) is highly recommended' (low socio-economic background; frequent snacking/sugary drinks; special health care needs/medications; visible plaque; gingivitis); 'Routine referral ... is required' (visible decay); 'Routine referral to a dental practitioner is required if the child/adolescent has not had a routine dental check-up in the past 12 months' (personal or family history of previous decay).",
+      "p12 (High strength fluoride products): 'Advice on the use of higher strength fluoride toothpastes and mouthwashes should be sought from a dental practitioner for patients at high risk of decay'.",
+      "p17 (Appendix 2): 'Recurrent severe or multiple ulcers may require a medical or dental referral to investigate the possibility of herpes simplex virus (HSV), or other infections (26).'"
+    ],
+    "urgent": [
+      "p4: 'Red flag' warning signs at patient presentation that necessitate referral to a dental or medical practitioner: 'Immediate referral (same day):' Recent orofacial trauma (not yet seen by a dental and/or medical practitioner); Facial swelling or fever from an oral infection; A toothache that is getting worse, despite taking regular analgesia; Uncontrolled bleeding post extraction.",
+      "p4: 'Urgent referral (within 3 days):' Advanced decay (discolouration and cavitation); A visible abscess; A toothache that is not impacting daily functioning and can be managed with over-the-counter analgesics; Mouth ulcerations, pigmented lesions, or abnormal appearance of tongue / palate.",
+      "Appendix 1 (p15) / Appendix 3 (p20): 'Immediate referral to the nearest dental practitioner or a medical practitioner/emergency department is required' for 'Toothache, recent trauma (not yet seen by a dental practitioner), facial swelling from infection or visible abscess'."
+    ],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care (p4): 'Immediate referral to an emergency department – call 000:' Difficulty swallowing or breathing.",
+      "p15/p20 (Appendices 1 and 3): 'Immediate referral to the nearest dental practitioner or a medical practitioner/emergency department is required' for toothache, recent trauma, facial swelling from infection or visible abscess."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+  },
+  "review_followup": [
+    {
+      "when": "Repeat fluoride varnish application",
+      "what": "'The recommended frequency of fluoride varnish application is twice per year.' (p11) 'the application of high-strength fluoride varnish to teeth every six monthns can reduce dental decay and prevent progression of early-stage carious lesions (8-10)' (p5, printed 'six months'). Contraindicated if a professional topical fluoride treatment has occurred in the past 3 months (p9).",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Topical fluoride varnish application" }
+    },
+    {
+      "when": "Before the procedure — expectations",
+      "what": "'they should be advised prior to the procedure that: Teeth may appear yellow for up to 24 hours due to the tint of the varnish, before it wears off and tooth colour returns to normal. Soft foods can be consumed after 30 minutes but harder foods cannot be chewed for at least 4 hours (it is important that the varnish is left undisturbed for as long as possible) (10).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Topical fluoride varnish application" }
+    },
+    {
+      "when": "After the procedure (first 30 minutes / 4 hours)",
+      "what": "'patients should be advised to: avoid eating and drinking for at least 30 minutes after application, after which time soft food and fluids can be consumed; not chew food for at least 4 hours after application; not brush teeth for at least 4 hours after application (10).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Post application" }
+    },
+    {
+      "when": "Ongoing — general and preventative advice",
+      "what": "'patients should be reminded of the importance of regular check-ups with a dental practitioner and provided with appropriate information to enable effective home care. Anticipatory guidance should include instruction on toothbrushing, flossing and the use of other oral hygiene aids tailored to the patient's age.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 12, "section_heading": "General and preventative advice" }
+    },
+    {
+      "when": "If the patient has not seen a dental practitioner in the previous 12 months",
+      "what": "'Administer fluoride varnish (if clinically appropriate) and concurrently refer' (p5); Appendix 1/3: 'Routine referral to a dental practitioner (including public dental clinic) is required if the child has not had a dental check-up (not just emergency treatment) in the past 12 months.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 5, "section_heading": "Administer fluoride varnish (if clinically appropriate) and concurrently refer:" }
+    },
+    {
+      "when": "If a professional topical fluoride treatment has occurred in the past 3 months",
+      "what": "Do not apply: 'Additional contraindications include where the patient: has had a professional topical fluoride treatment in the past 3 months' (p9) — wait until eligible under the twice-per-year recommended frequency.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 9, "section_heading": "Contraindications and precautions" }
+    },
+    {
+      "when": "If adverse effects occur after application",
+      "what": "'These symptoms may persist for up to 24 hours.' 'If necessary, the varnish layer can easily be removed from the mouth by brushing and rinsing (2).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 11, "section_heading": "Adverse effects" }
+    },
+    {
+      "when": "Routine referral rows — check-up status",
+      "what": "Appendix 1 (p15) and Appendix 3 (p19): routine referral to a dental practitioner (including public dental clinic) where the child/adolescent has not had a routine dental check-up in the past 12 months; 'Recurrent severe or multiple ulcers may require a medical or dental referral to investigate the possibility of herpes simplex virus (HSV), or other infections (26)' (p17).",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 15, "section_heading": "Appendix 1 – Risk assessment tool (18 months to 5 years)" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-oral-health-risk-assessment-and-fluoride-application-cpg.pdf", "page": 1, "section_heading": "" }
+  },
+  "references": [
+    "[p13] Patient resources: National Institute of Dental and Craniofacial Research — The Tooth Decay Process: How to Reverse it and Avoid a Cavity (1); Australian Dental Association - Brushing factsheet (5); NSW Health - Resources for Aboriginal and Torres Strait Islander People (7); School Dental Service clinics - Kids • SA Dental (12).",
+    "[p13] Pharmacist resources: Queensland Health Guidelines — Fluoride Varnish (QH-GDL-410:2013) (2, 3); Fluoride - Prevention of Dental Caries and Maintenance of Oral Health (QH-GDL-411:2013) (6); SA Dental - Lift the Lip Program (11); Remote Primary Health Care Manual - Clinical Procedure Manual (13); Queensland Health and Royal Flying Doctors Service (Queensland branch) – Primary Clinical Care Manual 11th edition 2022 (14); Northern Territory Department of Health - Healthy Smiles: Oral health and fluoride vanish [as printed] information for health professionals (8); Department of Health Victoria – Evidence-based oral health promotion resource; Australian Dental Association - Practical Guidelines for the use of Fluorides; MIMS Online - Duraphat (16); Fluoride Safety and Water Fluoridation Maps - The University of Adelaide (17, 18); Adelaide Dental Hospital – 1300 008 222.",
+    "[p23] 1. National Institute of Dental and Craniofacial Research. The Tooth Decay Process: How to Reverse It and Avoid a Cavity 2025 [Available from: https://www.nidcr.nih.gov/health-info/tooth-decay/more-info/tooth-decay-process.",
+    "[p23] 2. Australian Government Department of Health DaA. DURAPHAT 22,600ppmF sodium fluoride 50mg/mL varnish tube (23279). 2025.",
+    "[p23] 3. Queensland Department of Health. Queensland Health Guideline: Fluoride Varnish. 2023.",
+    "[p23] 4. Caries [Internet]. Merck & Co., Inc. 2024. Available from: https://www.msdmanuals.com/professional/dental-disorders/common-dental-disorders/caries?ruleredirectid=741query=tooth%20decay.",
+    "[p23] 5. Australian Dental Association (ADA). Brushing Teeth 2025 [Available from: https://teeth.org.au/brushing-teeth.",
+    "[p23] 6. Queensland Department of Health. Queensland Health Guideline: Fluoride – Prevention of Dental Caries and Maintenance of Oral Health. 2023.",
+    "[p23] 7. NSW Government. Resources for Aboriginal and Torres Strait Islander People: NSW Health; 2025 [Available from: https://www.health.nsw.gov.au/oralhealth/prevention/Pages/resources-aboriginal-and-torres-strait-islander-people.aspx.",
+    "[p23] 8. Australian Indigenous HealthInfoNet. Healthy smiles: oral health and fluoride varnish information for health professionals. 2011.",
+    "[p23] 9. Government of South Australia Preventive Health SA. Preventive Dental Care 2025 [Available from: https://www.preventivehealth.sa.gov.au/healthy-living/being-active-healthy/preventive-dental-care.",
+    "[p23] 10. SA Dental. Fluoride 2025 [Available from: https://www.dental.sa.gov.au/advice/fluoride.",
+    "[p23] 11. Government of South Australia SA Dental. Lift the Lip Program 2025 [Available from: https://www.dental.sa.gov.au/professionals/programs/lift-the-lip.",
+    "[p23] 12. Government of South Australia SA Dental. Kids 2025 [Available from: https://www.dental.sa.gov.au/kids.",
+    "[p23] 13. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[p23] 14. Queensland Health Royal Flying Doctor Service. Primary clinical care manual. 12 ed. Queensland Health RFDS, editor. Cairns, QLD.: Office for Rural and Remote Health, Queensland Government.; 2022.",
+    "[p23] 15. Marinho VC. Cochrane fluoride reviews: an overview of the evidence on caries prevention with fluoride treatments. Faculty Dental Journal. 2014;5(2):78-83.",
+    "[p23] 16. eMIMS [Internet]. 2025. Available from: https://app.emimselite.com/.",
+    "[p23] 17. The University of Adelaide. Fluoride Safety. 1997.",
+    "[p23] 18. The University of Adelaide. Water Fluoridation Maps 2022 [Available from: https://health.adelaide.edu.au/arcpoh/dperu/fluoride-update/water-fluoridation-maps.",
+    "[p23] 19. Government of South Australia SA Dental. Find a Clinic in Your Area 2025 [Available from: https://www.dental.sa.gov.au/.",
+    "[p23] 20. Australian Dental Association (ADA). Policy Statement 2.2.1 - Fluoride Use. 2023.",
+    "[p23] 21. Australian Dental Association (ADA). ADA Guidelines for the Use of Fluoride. 2020.",
+    "[p23] 22. Australian Pharmaceutical Formulary, [Internet]. APF. 2025.",
+    "[p23] 23. SA Dental. Nutrition 2025 [Available from: https://www.dental.sa.gov.au/advice/nutrition.",
+    "[p23] 24. Queensland Department of Health. Lifth [as printed] the Lip Referral Pathway for Health Professionals. 2017.",
+    "[p23] 25. Ramos-Gomez F, Ng M-W. Into the future: keeping healthy teeth caries free: pediatric CAMBRA protocols. Journal of the California Dental Association. 2011;39(10):723-33.",
+    "[p23] 26. Dermnet. Mouth Ulcer 2016 [Available from: https://dermnetnz.org/topics/mouth-ulcer.",
+    "[p23] 27. The University of Adelaide. The use of fluorides in Australia: Information for Dental Practitioners 2022 [Available from: https://health.adelaide.edu.au/arcpoh/dperu/ua/media/557/practice-sheet-use-of-fluorides-in-australia.pdf.",
+    "[p23] 28. American Academy of Pediatric D. Guideline on caries-risk assessment and management for infants, children, and adolescents. Pediatr Dent. 2013;35(5):E157-64.",
+    "[p14] Acknowledgements: 'SA Health acknowledges and thanks Queensland Health for consent to use the Queensland Community Pharmacy Scope of Practice Pilot Oral Health Risk Assessment and Fluoride Application – Clinical Practice Guideline v1.1 as the basis for this guideline.'"
+  ],
+  "open_questions": [
+    {
+      "topic": "No arbitrary risk scoring system — risk status is professional judgement",
+      "observed": "p6/p7: 'There is no arbitrary scoring system for risk status due to the variability of the interaction between risk factors and protective factors. Pharmacists must use their professional judgement to evaluate the child's risk status.' Rules printed: 'A child with no obvious clinical signs of decay, only a few moderate level risk factors and multiple protective factors may be deemed low risk.' 'If the child has at least one high risk factor, regardless of the number of protective factors, they would generally be considered at least moderate risk of tooth decay and poor oral health.'",
+      "why_unclear": "Risk categories cannot be computed from the document; all risk-evaluation gates recorded as 'unclear' and RF-11 structured uses operator 'in' with values [moderate, high] as the printed eligibility band.",
+      "source_page": 6
+    },
+    {
+      "topic": "Mapping of the document's own urgency language to action/severity",
+      "observed": "'Immediate referral to an emergency department – call 000' → ESCALATE_000 / critical; 'Immediate referral (same day)' → REFER_URGENT / high; 'Immediate referral to the nearest dental practitioner or a medical practitioner/emergency department is required' (Appendix 1/3) → REFER_URGENT / high; 'Urgent referral (within 3 days)' → REFER_URGENT / medium; 'is required' (routine rows) → REFER / medium; 'is highly recommended' → REFER / low; 'concurrently refer' → REFER / low; 'may require a medical or dental referral' → REFER / medium; 'advice ... should be sought from a dental practitioner' → REVIEW_GP / low; pregnancy/breastfeeding avoidance → NOT_ELIGIBLE / medium; age restriction → NOT_ELIGIBLE / medium.",
+      "why_unclear": "The document prints its own tiers but no numeric severity; mapping recorded so it can be re-checked against local policy.",
+      "source_page": 4
+    },
+    {
+      "topic": "Table-layout artifacts in Appendix 1 and Appendix 3 (risk-level cells interleaved with referral text)",
+      "observed": "In the extracted text the 'Risk level' column values (e.g. 'Moderate to high', 'High', 'Moderate') are interleaved with the referral-note cells — e.g. p15 row 1 reads 'Moderate to / Routine referral ... is high / required if the child ...'. Rows were reconstructed by pairing each risk factor with its level and referral statement.",
+      "why_unclear": "Reconstruction from an imperfect table extraction; risk levels and referral notes recorded with confidence 'high' where unambiguous, but rows should be checked against the PDF tables (rule: mark ambiguous rows 'unclear').",
+      "source_page": 15
+    },
+    {
+      "topic": "'Toothache not impacting daily functioning' sits in the 3-day tier while 'toothache getting worse despite regular analgesia' sits in the same-day tier",
+      "observed": "p4: 'Urgent referral (within 3 days): A toothache that is not impacting daily functioning and can be managed with over-the-counter analgesics'; 'Immediate referral (same day): A toothache that is getting worse, despite taking regular analgesia'.",
+      "why_unclear": "Both tiers recorded verbatim as printed (rule 2); the ordering may appear counterintuitive but was not reconciled or altered.",
+      "source_page": 4
+    },
+    {
+      "topic": "Age-boundary overlap in the Duraphat® dose bands",
+      "observed": "p21: '18 months up to 6 years dosage: 0.25ml Duraphat® (5.6mg fluoride)'; '6 to 14 years dosage: 0.4ml Duraphat® (9.04mg fluoride)'; '15 to 17 years dosage: up to 0.75ml Duraphat® (16.95mg fluoride)'. Service age range is '18 months to 17 years' (p3).",
+      "why_unclear": "Age 6 appears in both the first and second bands ('up to 6 years' vs '6 to 14 years'); both readings recorded, TX-1/TX-2 boundaries flagged for hugh_to_confirm. The 14/15 boundary is unambiguous for completed years.",
+      "source_page": 21
+    },
+    {
+      "topic": "Dose wording: 'up to 0.75ml' for 15 to 17 years",
+      "observed": "p21: '15 to 17 years dosage: up to 0.75ml Duraphat® (16.95mg fluoride) (permanent dentition)' — the only band printed with 'up to' (a maximum rather than a fixed dose).",
+      "why_unclear": "Recorded verbatim; TX-3 max_dose repeats the ceiling and dose keeps 'up to' rather than being normalised to a fixed dose.",
+      "source_page": 21
+    },
+    {
+      "topic": "'Severe or uncontrolled bronchial asthma' is printed twice in the contraindication lists",
+      "observed": "p9: manufacturer's list contains 'severe or uncontrolled bronchial asthma'; the additional list repeats 'has severe or uncontrolled bronchial asthma'.",
+      "why_unclear": "Both printed instances recorded (EXC-13 and EXC-17, cross-referenced in EXC-17's text) rather than de-duplicated silently (rule 2).",
+      "source_page": 9
+    },
+    {
+      "topic": "Pregnancy/breastfeeding: ethanol-driven avoidance versus product-information check",
+      "observed": "p9 lists 'pregnancy and breastfeeding' among what must be confirmed from product information; p10: 'Duraphat® contains 33.8% volume of ethanol (up to 0.2g of alcohol per dose), as such it should be avoided for patients who are pregnant or breastfeeding (2).'",
+      "why_unclear": "Recorded as an exclusion (EXC-19) and a gate (PW-1-S7) at confidence 'high' per the printed 'should be avoided'; whether this is absolute or a risk-benefit decision for a clinician is not stated.",
+      "source_page": 10
+    },
+    {
+      "topic": "3-month contraindication versus twice-per-year recommended frequency",
+      "observed": "'Additional contraindications include where the patient: has had a professional topical fluoride treatment in the past 3 months' (p9); 'The recommended frequency of fluoride varnish application is twice per year.' (p11); p5: 'every six months'.",
+      "why_unclear": "The two intervals are compatible (6-monthly dosing clears the 3-month exclusion) but the document never states the interaction; recorded in review_followup and gates rather than reconciled.",
+      "source_page": 9
+    },
+    {
+      "topic": "first_line recorded true without the word 'first-line' being printed",
+      "observed": "p5: 'The only fluoride varnish currently registered in Australia to prevent caries is Duraphat® 5% w/v sodium fluoride varnish (2, 10, 15).'",
+      "why_unclear": "first_line=true for TX-1 to TX-3 rests on this exclusivity statement ('only registered product'), not on a printed first-line designation; flagged for hugh_to_confirm so local policy can confirm.",
+      "source_page": 5
+    },
+    {
+      "topic": "Risk-factor rows without referral statements are recorded as risk data only, not red flags",
+      "observed": "Appendix 1 rows without a printed referral note: 'Child has a bottle or sippy cup with a fluid other than water, plain milk or plain formula during the day' (Moderate); 'Snacking between meals ...' (Moderate to high). Appendix 3 rows without a referral note: 'Child/adolescent is a recent immigrant, a language other than English is primarily spoken at home, or of Aboriginal and Torres Strait Islander background' (Moderate); 'Child/adolescent has orthodontic or other dental appliances that may make cleaning teeth difficult' (Moderate).",
+      "why_unclear": "Only rows with printed referral statements became red flags; the remaining rows feed risk evaluation gates (professional judgement).",
+      "source_page": 15
+    },
+    {
+      "topic": "Gate on_fail values not printed for screening, history, advice and counselling steps",
+      "observed": "Used: STOP for the call-000 tier and for not-indicated/wrong-dose/non-spot-application treatment failures; REFER for the same-day, within-3-days, contraindication, doubt, concurrent-referral and 3-month-interval failures; 'unclear' where the document states no consequence (lift-the-lip screening completion, questionnaire completion, hygiene questions, history sufficiency, My Health Record review, destination recording, post-application and preventative advice, adverse-effects counselling, repeat scheduling).",
+      "why_unclear": "Some branch outcomes are inferred from directive wording rather than printed explicitly (rule 5).",
+      "source_page": 4
+    },
+    {
+      "topic": "Referral block spans pages 4-5 plus appendices (p15, p17, p19-p20)",
+      "observed": "referral.provenance uses page 4 (first page of the red-flag section); concurrent-referral triggers are on p5, the doubt rule on p9, the ulcers note on p17, and the Appendix 1/3 rows on p15 and p19-p20.",
+      "why_unclear": "Spec requires one shared provenance object for the referral block using the first page; ranges recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Figures and clinical photographs carry content that cannot be extracted as text",
+      "observed": "Figure 1 (p7, lift-the-lip positioning), Figure 2 (p10, common areas of decay), Appendix 2 clinical photographs (p17-p18: healthy teeth and gums; white spot lesions; advancing decay; abscess; gingivitis; mouth ulcers; dental fluorosis) with descriptive text.",
+      "why_unclear": "Descriptions transcribed verbatim; the images themselves (and any lesion they depict beyond the text) are not machine-readable from the text layer.",
+      "source_page": 17
+    },
+    {
+      "topic": "Guideline is adapted from Queensland instruments",
+      "observed": "p14 Acknowledgements: 'consent to use the Queensland Community Pharmacy Scope of Practice Pilot Oral Health Risk Assessment and Fluoride Application – Clinical Practice Guideline v1.1 as the basis for this guideline'; p9: 'refer to the Queensland Health Guidelines for Fluoride Varnish (QH-GDL-410:2013)'; p21: application procedure 'based on the Queensland Health Fluoride Varnish Guideline (QH-GDL-410:2013) and the Remote Primary Health Care Manual – Clinical Procedure Manual'.",
+      "why_unclear": "SA instrument relies on external Queensland/NT manuals for the operative clinical detail; jurisdictional currency of those documents must be confirmed (hugh_to_confirm).",
+      "source_page": 14
+    },
+    {
+      "topic": "Aboriginal and Torres Strait Islander patients — CARPA referral is to a manual, not a practitioner",
+      "observed": "p8: 'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (13).'",
+      "why_unclear": "Not a patient-referral trigger, so not recorded as a red flag; noted here because it directs clinical decisions to an external manual (reference 13).",
+      "source_page": 8
+    },
+    {
+      "topic": "Smoking and vaping status is collected but its role is not stated",
+      "observed": "p8 patient history: 'smoking status (including vaping)'.",
+      "why_unclear": "No rule, threshold or consequence is printed for smoking/vaping in this guideline (unlike the OCP protocol); captured in history gates only.",
+      "source_page": 8
+    },
+    {
+      "topic": "Toothpaste fluoride strengths printed as ranges with units",
+      "observed": "p12: 'toothpaste containing 500-550 ppm fluoride' (18 months to 5 years); 'a toothpaste containing 1000-1500 ppm fluoride' (6 to 17 years).",
+      "why_unclear": "Transcribed exactly as printed (no normalisation); TX-4/TX-5 strength fields carry the printed ranges.",
+      "source_page": 12
+    },
+    {
+      "topic": "No clinical documentation/record-keeping section in this guideline",
+      "observed": "Unlike the sibling SA protocols, this document prints no record-making, dispensing-record, My Health Record upload (only an access reminder, p8), consent or HPI-I requirements.",
+      "why_unclear": "Nothing to transcribe into pathway documentation steps; local record-keeping requirements are flagged for hugh_to_confirm rather than invented.",
+      "source_page": 8
+    },
+    {
+      "topic": "Alcohol content statements differ in form",
+      "observed": "p10 Drug Interactions: 'The presence of alcohol in the formula should be considered (2).'; p10 Pregnancy and breastfeeding: 'Duraphat® contains 33.8% volume of ethanol (up to 0.2g of alcohol per dose)'.",
+      "why_unclear": "Both statements recorded verbatim; whether '33.8% volume of ethanol' and 'up to 0.2g of alcohol per dose' are consistent for each dose band is a product-information question.",
+      "source_page": 10
+    },
+    {
+      "topic": "No action printed for a presenter outside 18 months to 17 years",
+      "observed": "'Service restricted to patients aged 18 months to 17 years' (p3) with no referral/escalation instruction for under-18-months or over-17-year-old presenters (the usual ineligibility statement follows).",
+      "why_unclear": "PW-1-S1 has no age gate; EXC-21 records ineligibility and the open item is what happens after NOT_ELIGIBLE (hugh_to_confirm).",
+      "source_page": 3
+    },
+    {
+      "topic": "Adverse-effect guidance gives no escalation threshold",
+      "observed": "p11 describes ingestion symptoms ('may persist for up to 24 hours') and manufacturer warnings, plus 'If necessary, the varnish layer can easily be removed from the mouth by brushing and rinsing (2).'",
+      "why_unclear": "No 'when to seek emergency care' instruction is printed for adverse effects; RF-33/RF-34 recorded as REVIEW_GP / medium as the mildest defensible mapping, with the mapping note above.",
+      "source_page": 11
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Duraphat® dose-band boundaries: which dose applies exactly at age 6 ('18 months up to 6 years' vs '6 to 14 years') and confirmation of the 14/15 and 17-year edges against the manufacturer's instructions for use.",
+      "source_page": 21,
+      "reason": "The printed bands overlap at 6 years; TX-1/TX-2 cannot both be right for that birthday without a local rule."
+    },
+    {
+      "item": "Confirm current product information for Duraphat® (5% w/v sodium fluoride; 22.6 mg/mL / 22600 ppm fluoride ion; 33.8% volume of ethanol; 0.25ml/0.4ml/0.75ml dose volumes; single dose 0.4ml pack) against reference 2 (DURAPHAT 22,600ppmF sodium fluoride 50mg/mL varnish tube (23279), 2025).",
+      "source_page": 5,
+      "reason": "All dose, strength and ethanol fields come from the guideline's restatement of the manufacturer's instructions; PI changes would invalidate the treatment rows."
+    },
+    {
+      "item": "Local policy confirmation of first_line=true for Duraphat® (basis: 'The only fluoride varnish currently registered in Australia to prevent caries is Duraphat® 5% w/v sodium fluoride varnish' — the term 'first-line' is not printed).",
+      "source_page": 5,
+      "reason": "If another varnish is stocked or registered later, the exclusivity basis and first_line flags must be revisited."
+    },
+    {
+      "item": "How the engine should treat risk status given 'There is no arbitrary scoring system ... Pharmacists must use their professional judgement' — encode 'at least one high risk factor → at least moderate risk' as a hard rule or keep all risk gates as judgement prompts.",
+      "source_page": 6,
+      "reason": "The only machine-usable rule is the high-risk-factor → at least moderate risk statement; everything else is judgement and must not be over-hardcoded."
+    },
+    {
+      "item": "Referral destination configuration: preferred dental practitioner, closest public dental service, Aboriginal and Torres Strait Islander Community Controlled dental clinic, School Dental Service clinics, Adelaide Dental Hospital (1300 008 222) — names, addresses, hours, after-hours pathways.",
+      "source_page": 9,
+      "reason": "Only roles and one phone number are printed; the engine needs concrete destinations per region."
+    },
+    {
+      "item": "Local emergency pathway for the call-000 tier ('Difficulty swallowing or breathing') — ambulance activation, nearest ED, and how the same-day dental/medical referrals are executed after hours.",
+      "source_page": 4,
+      "reason": "No local escalation procedure, ED list or after-hours arrangement is printed."
+    },
+    {
+      "item": "Currency of the external clinical authorities the guideline delegates to: Queensland Health Guidelines for Fluoride Varnish (QH-GDL-410:2013), QH-GDL-411:2013, CARPA Standard Treatment Manual (8th ed), Primary Clinical Care Manual 11th edition 2022, and the Queensland pilot CPG v1.1 on which this SA guideline is based.",
+      "source_page": 9,
+      "reason": "SA operative detail (procedure, contraindications) is sourced from Queensland/NT documents whose versions must be verified as current for SA practice."
+    },
+    {
+      "item": "Documentation, consent and record-keeping requirements for the procedure in children (parent/caregiver consent, clinical record of risk assessment, dose applied, batch/lot, adverse events) — this guideline prints none.",
+      "source_page": 8,
+      "reason": "No record or consent section exists in this document; local requirements must be defined before go-live rather than assumed."
+    },
+    {
+      "item": "Equipment, infection-control and supply list (Appendix 4: hand sanitiser, dosage pad, cotton gauze, disposable microbrush/applicator, gloves, protective eyewear, single use surgical mask, apron (optional), single use bib, clean dry toothbrush) — procurement and local IPC policy alignment.",
+      "source_page": 21,
+      "reason": "Equipment is printed but local IPC standards, stock lines and single-use requirements are not."
+    },
+    {
+      "item": "Frequency enforcement: 'twice per year' application and the 'professional topical fluoride treatment in the past 3 months' contraindication — how the interval is tracked (dispensing system, clinical record, My Health Record).",
+      "source_page": 11,
+      "reason": "The rules exist but no tracking mechanism or source of truth for 'last application' is printed."
+    },
+    {
+      "item": "My Health Record access during consultations (p8 reminder) — access arrangements, consent handling and what is uploaded, if anything, for this service.",
+      "source_page": 8,
+      "reason": "The document mentions access only; unlike the OCP protocol it prescribes no upload requirement."
+    },
+    {
+      "item": "High-strength fluoride toothpaste and mouthwash advice: which products are stocked/advised and confirmation that advice 'must be guided by the Australian Pharmaceutical Formulary and Handbook (psa.org.au)'.",
+      "source_page": 12,
+      "reason": "Products and strengths are delegated to the APF and a dental practitioner; local advice sheets must be prepared."
+    },
+    {
+      "item": "Treatment of presenters outside 18 months to 17 years after NOT_ELIGIBLE (no action printed) and handling of the 18-month boundary in practice.",
+      "source_page": 3,
+      "reason": "No escalation instruction is printed for out-of-band ages; local policy must define the pathway (usual pharmacy care statement only)."
+    },
+    {
+      "item": "Pregnancy/breastfeeding pathway: Duraphat® 'should be avoided' due to ethanol — where those patients are referred and whether any alternative is offered under this service.",
+      "source_page": 10,
+      "reason": "Avoidance is printed but no alternative arrangement or referral destination is stated."
+    },
+    {
+      "item": "Adverse-effect escalation thresholds: when acute burning, nausea/vomiting/diarrhoea after ingestion, asthma attacks, or swelling/ulcerative gingivitis require medical review versus simple varnish removal by brushing and rinsing.",
+      "source_page": 11,
+      "reason": "Symptoms are described with no care-escalation instruction; RF-33/RF-34 severity mapping (medium) needs local confirmation."
+    },
+    {
+      "item": "Encoding of the Appendix 1/Appendix 3 'Moderate to high' risk rows and the conditional referral rules ('required if ... not had a dental check-up in the past 12 months') as engine conditions, including table-layout verification against the PDF.",
+      "source_page": 15,
+      "reason": "Combined risk-level labels and interleaved table extraction need visual verification before the rules are trusted."
+    },
+    {
+      "item": "Written patient/caregiver resources for post-application advice (30-minute/4-hour rules, yellow tint), anticipatory guidance and dietary advice — which SA Health/ADA resources to supply (references 1, 5, 12, 23 listed as patient resources).",
+      "source_page": 13,
+      "reason": "The guideline requires advice be given but does not prescribe a handout; local materials must be selected."
+    },
+    {
+      "item": "Pharmacist training/competency expectation for the procedure (PPE, lift-the-lip screening, varnish application) — the document relies on the register-of-authorised-pharmacists basis and professional judgement, with no separate training appendix for this skill.",
+      "source_page": 2,
+      "reason": "Unlike the OCP protocol (Appendix 1 training), no competency program is listed for oral health assessment/varnish application."
+    },
+    {
+      "item": "Operational compliance evidence for each prescribing event: pharmacist 'included on the register of authorised pharmacists' and prescribing 'in accordance with the Community Pharmacist Prescribing Code' (regulation 17A, Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal basis is stated but the record-keeping/verification steps are not; local process must be confirmed before go-live."
+    },
+    {
+      "item": "Confirm instrument version/date against the controlled copy — cover and footers print 'Version 1.0 September 2025' consistently across p1-p24.",
+      "source_page": 1,
+      "reason": "No version discrepancy was found (unlike sibling files), but the controlled copy should still be verified at go-live."
+    }
+  ]
+}

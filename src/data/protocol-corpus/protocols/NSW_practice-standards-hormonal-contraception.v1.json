@@ -1,0 +1,1029 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf",
+    "pdf_sha256": "f652491cb3f7570fa9cfc9ca3b74450c419df352933fe0f8ef8350f2d1a21c5d",
+    "page_count": 19,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Pharmacist Practice Standards for the Continuation of Hormonal Contraception",
+    "instrument_version": "NSW Health Authority (25 February 2026)",
+    "effective_date": "2026-02-25",
+    "legal_basis": "Not explicitly stated as a regulation or poisons schedule provision. The document states Approved Medicines 'are listed in the NSW Health Authority (25 February 2026)' and is 'Approved Dr Kerry Chant AO PSM, Chief Health Officer and Deputy Secretary, Population and Public Health, 25 February 2026'.",
+    "supervision_model": "appropriately trained authorised pharmacists: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 25 February 2026).' Continuation/resupply only - 'pharmacists are not permitted to initiate or change therapy'. DMPA administration additionally requires 'pharmacists successfully completing the Pharmaceutical Society of Australia (PSA) Administering Medicines by Injection Course'.",
+    "scope_summary": "Practice standard governing the Community Pharmacy Hormonal Contraception Continuation (Resupply) Service in NSW: authorised pharmacists may supply continuation (resupply) of listed approved hormonal contraceptive formulations - single or combined oral forms, injectable medroxyprogesterone, and the combined intravaginal ring - to eligible patients already established on therapy, with patient assessment, blood pressure monitoring, consent, documentation, counselling and referral requirements. Not a treatment-initiation protocol."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Continuation of the patient's current hormonal contraception that has been prescribed primarily for the purpose of contraception (service-wide requirement).",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-2",
+        "text": "The patient has been reviewed by their treating medical practitioner or health service for the purposes of contraception within the last 2 years for the OCP and vaginal ring, or the last year for DMPA.",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Therapy is continuation only - 'pharmacists are not permitted to initiate or change therapy'.",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-4",
+        "text": "'Pharmacists must only provide continuation of formulations listed in the Authority.'",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-5",
+        "text": "'Patients must be physically present in the pharmacy to be eligible for continuation of hormonal contraception.'",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-6",
+        "text": "'Patients are required to have a pharmacist consultation, including blood pressure monitoring, before a hormonal contraceptive method may be resupplied.'",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-10",
+        "text": "Pharmacist requirement: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 25 February 2026).'",
+        "criteria_group": {
+          "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-10"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 3, "section_heading": "B. GENERAL REQUIREMENTS"}
+      },
+      {
+        "id": "INC-7",
+        "text": "DMPA-specific: 'Continuation of DMPA under this service is permitted for patients aged 25 to 39 years old (inclusive) only.'",
+        "criteria_group": {
+          "all_of": ["INC-7", "INC-8", "INC-9"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+      },
+      {
+        "id": "INC-8",
+        "text": "DMPA-specific: 'Continuation of DMPA under this service is permitted for up to 12-months only. Patients require GP reassessment after this period.'",
+        "criteria_group": {
+          "all_of": ["INC-7", "INC-8", "INC-9"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+      },
+      {
+        "id": "INC-9",
+        "text": "DMPA-specific: 'DMPA injection must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course. Otherwise, the patient needs to be referred to their GP or relevant health service for deep IM administration.'",
+        "criteria_group": {
+          "all_of": ["INC-7", "INC-8", "INC-9"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 13, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "'patients with a UKMEC category 3 or 4 condition are not eligible for continuation and require a referral' (e.g. migraine with aura, listed as a contraindication to hormonal contraception).",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Vaping with nicotine is considered equivalent to cigarette smoking in relation to the MEC: 'any vaping in those aged 35 years and older will be MEC 4 (i.e. absolutely contraindicated) for use of combined hormonal contraception' (combined OCP and vaginal ring).",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Smoking status, including vaping"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "'There is an increased risk of using combined hormonal contraception (combined OCP and vaginal ring) in smokers over 35 years or those who have quit smoking over the last year.'",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Smoking status, including vaping"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "'Women over 35 who smoke should be advised to stop combined hormonal contraception as the risk of mortality associated with smoking becomes clinically significant at this point.'",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "'Women over 50, should be advised to no longer use combined hormonal contraception as there are safer methods of contraception at this stage.'",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "Pregnancy not excluded: 'if the patient has not been using the method reliably and consistently and has had unprotected sex, then there is a risk of pregnancy. Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.'",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Excluding pregnancy"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "'Vaginal ring: Patients needing assistance with insertion must be referred to a medical practitioner or health service.'",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "'Pharmacists must not assist with physical insertion of a combined hormonal vaginal ring.' Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider.",
+        "criteria_group": {
+          "all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8"],
+          "any_of": []
+        },
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 13, "section_heading": "Combined Hormonal Vaginal Ring"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'All patients seeking contraception who have not had a cervical screening test (CST) in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents. They are still eligible for the Community Pharmacy Hormonal Contraception Continuation service.'",
+        "criteria_group": {"all_of": ["EXE-1", "EXE-2"], "any_of": []},
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "PATIENT HISTORY"},
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "'Despite a natural decline in fertility, women over 40 require ongoing contraception until they reach menopause if they wish to avoid unplanned pregnancy.' (i.e. age over 40 is not itself an exclusion from ongoing contraception.)",
+        "criteria_group": {"all_of": ["EXE-1", "EXE-2"], "any_of": []},
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"},
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Community Pharmacy Hormonal Contraception Continuation (Resupply) - patient assessment and supply pathway",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Confirm service eligibility before assessment: patient must be physically present in the pharmacy; the current hormonal contraception must have been prescribed primarily for the purpose of contraception; the formulation must be listed in the Approved Medicines (NSW Health Authority, 25 February 2026); the patient must have been reviewed by their treating medical practitioner or health service for contraception within the last 2 years (OCP and vaginal ring) or the last year (DMPA); pharmacists are not permitted to initiate or change therapy. 'Patients who have requested the service but are not eligible for continuation should be referred to their regular medical practitioner or health service.'",
+          "gates": [
+            {"criterion": "Patient is physically present in the pharmacy", "on_fail": "REFER"},
+            {"criterion": "Current hormonal contraception prescribed primarily for the purpose of contraception", "on_fail": "REFER"},
+            {"criterion": "Formulation listed in the Approved Medicines (NSW Health Authority, 25 February 2026)", "on_fail": "REFER"},
+            {"criterion": "Reviewed by treating medical practitioner or health service for contraception within the last 2 years (OCP and vaginal ring) or the last year (DMPA)", "on_fail": "REFER"},
+            {"criterion": "Request is continuation only (no initiation or change of therapy)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Obtain informed clinical and financial consent: 'Informed clinical and financial consent must be obtained from the patient prior to providing care under these Practice Standards.' Also seek consent to share a record of the consultation (including adverse events) with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+          "gates": [
+            {"criterion": "Informed clinical and financial consent obtained prior to providing care", "on_fail": "STOP"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 7, "section_heading": "F. PATIENT CONSENT"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Patient history tailored to the patient's presentation ('The prompts provided below are not exhaustive, pharmacists should maintain an open mind and be aware of cognitive bias'). Include: Age; Pregnancy and breastfeeding status; Underlying medical conditions, including new or recently diagnosed medical conditions (see UKMEC 3 and 4); Current medications, including adherence and satisfaction, and whether use of hormonal contraception has been continuous; Drug allergies/adverse effects; Prior use of contraceptives, tolerability, and adverse effects; Smoking status, including vaping; Any unexplained and un-investigated vaginal bleeding or acute, severe menstrual bleeding; Any headaches indicative of migraines; Last Cervical Screening Test and Breast check; HPV vaccination status. Review My Health Record where appropriate and available.",
+          "gates": [
+            {"criterion": "No UKMEC category 3 or 4 condition present (e.g. migraine with aura) - 'patients with a UKMEC category 3 or 4 condition are not eligible for continuation and require a referral'", "on_fail": "REFER"},
+            {"criterion": "Sufficient information obtained from the patient to assess the safety and appropriateness of continuation", "on_fail": "unclear"},
+            {"criterion": "Use of hormonal contraception has been continuous (if a patient frequently takes pill breaks, use professional judgement and consider referring to explore alternative contraception options e.g. LARCs)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Sexual and social history and STI screening consideration: consider a brief sexual history to inform shared decision making and assess appropriateness of continuation (previous use and experiences with contraception, current relationship status, risk factors for STIs, including any known STI history of current and/or recent partner). STI screening is recommended for anyone who is sexually active and engaging in unprotected sex, has a new partner since their last STI test, or thinks they may be at risk; recommend STI testing for individuals who may be at risk even if asymptomatic. Note presence of genitourinary symptoms that might suggest a STI: changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria. Consider the STI Testing Guideline for Aboriginal and Torres Strait Islander People for priority populations.",
+          "gates": [
+            {"criterion": "No genitourinary symptoms that might suggest a STI (changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria)", "on_fail": "unclear"},
+            {"criterion": "Patient not at increased risk of HIV and other STIs", "on_fail": "SEE_PW-1-S11"}
+          ],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Sexually transmitted infection (STI) screening"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "Examination: 'The pharmacist should measure blood pressure (BP) for all patients, and the patient's height and weight to calculate BMI (for patients requesting continuation of the combined hormonal OCP, vaginal ring and DMPA) to determine the patient's suitability for continuing their hormonal contraceptive and record this information in their clinical software program.' A single elevated BP reading is not enough to classify an individual as hypertensive (activity immediately prior to consultation should also be taken into consideration) and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner or health service for further assessment and selection of an appropriate contraceptive method. BP should be monitored and recorded every 12 months. BMI should be calculated on the first presentation, and professional judgement exercised regarding whether BMI needs to be recalculated on subsequent presentations.",
+          "gates": [
+            {"criterion": "Second BP reading at the end of the consultation is not elevated (i.e. BP does not remain elevated)", "on_fail": "REFER"},
+            {"criterion": "BP measured for all patients; height and weight measured to calculate BMI for combined hormonal OCP, vaginal ring and DMPA continuation", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "EXAMINATION"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Exclude pregnancy before continuation: 'If the patient has been using the hormonal contraception consistently and reliably, they can be reasonably assumed not to be pregnant.' If the patient has not been using the method reliably and consistently and has had unprotected sex, there is a risk of pregnancy; pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation, otherwise refer the patient to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception. Note that pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier.",
+          "gates": [
+            {"criterion": "Patient using hormonal contraception consistently and reliably (reasonably assumed not pregnant)", "on_fail": "REFER"},
+            {"criterion": "Pregnancy excluded by all reasonable steps and assessment before continuation", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Excluding pregnancy"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "Supply continuation (resupply) of an Approved Medicine formulation listed in the Authority (NSW Health Authority, 25 February 2026): single or combined oral forms of ethinylestadiol (35 g or less), levonorgestrel, norethisterone, drospirenone, nomegestrol, desogestrel, dienogest, gestodene; injectable form of medroxyprogesterone (150mg/mL); combined intravaginal form of ethinylestradiol+etonogestrel (2.7+11.7 mg) ring. Formulations, brand examples and doses as printed in Table 1: Formulations approved as part of the continuation service. Pharmacists can provide continuation up to 12-months of the patient's current hormonal contraception (footnote: for patients aged 40-49 pharmacists can only provide one original manufacturer's pack - only one resupply is allowed before the patient will need to be reviewed by their GP or other authorising prescribing healthcare practitioner).",
+          "gates": [
+            {"criterion": "Pharmacist consultation, including blood pressure monitoring, completed before a hormonal contraceptive method may be resupplied", "on_fail": "STOP"},
+            {"criterion": "Continuation within 12-months of the patient's current hormonal contraception (one original manufacturer's pack only for patients aged 40-49)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "DMPA (depot medroxyprogesterone acetate) continuation branch: continuation permitted for patients aged 25 to 39 years old (inclusive) only; continuation permitted for up to 12-months only; patients require GP reassessment after this period. 'DMPA injection must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course. Otherwise, the patient needs to be referred to their GP or relevant health service for deep IM administration.' DMPA is associated with a reduction in bone mineral density (BMD) during use, which usually recovers after discontinuation; women using DMPA should be reviewed every 2 years by their medical practitioner or health service (RANZCOG), with annual review for osteoporosis and cardiovascular risk factors (Therapeutic Guidelines). Use of DMPA by perimenopausal women needs to be reviewed by a medical practitioner or health service.",
+          "gates": [
+            {"criterion": "Patient aged 25 to 39 years old (inclusive)", "on_fail": "REFER"},
+            {"criterion": "Continuation of DMPA within 12-months (GP reassessment required after this period)", "on_fail": "REFER"},
+            {"criterion": "Administering pharmacist successfully completed the PSA Administering Medicines by Injection Course", "on_fail": "REFER"},
+            {"criterion": "Patient is not perimenopausal, or perimenopausal use has been reviewed by a medical practitioner or health service", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "TREAT",
+          "description": "Combined hormonal vaginal ring continuation branch: 'Pharmacists must not assist with physical insertion of a combined hormonal vaginal ring.' Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider (also: patients needing assistance with insertion must be referred to a medical practitioner or health service). The ring 'works in the same way as combined oral hormonal contraception and is treated similarly in terms of contraindications, complications, side effects and most drug interactions'; may be a useful option when a combined hormonal contraceptive is desired but non-oral option is preferred (e.g. malabsorptive conditions).",
+          "gates": [
+            {"criterion": "Patient does not require assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement", "on_fail": "REFER"},
+            {"criterion": "Pharmacist does not attempt physical insertion of the ring", "on_fail": "STOP"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 13, "section_heading": "Combined Hormonal Vaginal Ring"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "EDUCATE",
+          "description": "Counselling and women's health advice: comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook, UKMEC and other relevant resources - Consumer Medicines Information and/or handouts endorsed by relevant organisations; appropriate counselling on the hormonal contraception supplied (how to take, side effects to expect/how to manage, when the hormonal contraceptive is less effective, what to do in the event of a missed pill/late injection/late insertion of next vaginal ring, reiterate the importance of adherence and avoiding breaks in contraceptive use to avoid risk of pregnancy); educate patients on the importance of getting regular women's health and sexual/reproductive health checks. Encourage patients with concerns about the type of hormonal contraception they are using to speak with their medical practitioner or health service and make appropriate referrals. Discuss LARCs with patients when appropriate, as per RANZCOG recommendations.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 11, "section_heading": "Provision of non-pharmacological and women's health advice"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "Sexual health promotion and screening advice: condoms, when used correctly and consistently, are safe and highly effective in preventing transmission of most STIs (including HIV) and in reducing the risk of unplanned pregnancy; condoms are safe, inexpensive, and widely available. 'If the patient may be at increased risk of HIV and other STIs, pharmacists should advise them to seek review from their GP or a sexual health service for further assessment, testing, and discussion of HIV and STI prevention options.' Offer preventative healthcare referrals/education: cervical screening - routine screening available from age 25, recommended every five years; breast checks - personal or family history of breast cancer: advise seeing medical practitioner or health service; breast screening available for all women from age 40 (actively invited from age 50); STI screening as indicated.",
+          "gates": [
+            {"criterion": "Patient not at increased risk of HIV and other STIs (if at increased risk, advise seek review from GP or sexual health service)", "on_fail": "SEE_PW-1-S11"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Sexual and social history"}
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "FOLLOW_UP",
+          "description": "Documentation and communication: 'The pharmacist must make an electronic clinical record, and a record in a pharmacy dispensing system regarding the supply of any medications under these services, in accordance with the Authority.' Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient. The pharmacist must share a copy of the record of the service with the patient and, if the patient consents, with the patient's usual treating medical practitioner or medical practice, where the patient has one, within a week following the consultation. Consultations and outcomes must be recorded using secure digital software; records must be stored securely for minimum seven (7) years. BP should be monitored and recorded every 12 months.",
+          "gates": [
+            {"criterion": "Electronic clinical record and pharmacy dispensing system record made for the supply", "on_fail": "STOP"},
+            {"criterion": "Copy of the service record shared with the patient (and with usual treating medical practitioner/medical practice if the patient consents) within a week following the consultation", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 14, "section_heading": "H. CLINICAL DOCUMENATION AND COMMUNICATION"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "ethinylestadiol",
+      "form": "single or combined oral form",
+      "strength": "35 g or less",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Transcribed exactly as printed: 'a. ethinylestadiol (35 g or less)' (source spelling 'ethinylestadiol'; a stray 'mu' character appears on the following line of the text extraction - see open_questions). Table 1 lists ethinylestradiol estrogen doses in micrograms: 20 [NB1] (with levonorgestrel 100), 30 [NB1] (with levonorgestrel 150; desogestrel 150; dienogest 2000; drospirenone 3000; gestodene 75; Seasonique [NB2]), 35 (with norethisterone 500 or 1000); triphasic Phase 1 (6 pills): ethinylestradiol 30 + levonorgestrel 50, Phase 3 (10 pills): ethinylestradiol 30 + levonorgestrel 125. Brand examples: Femme-Tab ED 20/100, Loette, Microgynon 20 ED, Micronelle 20 ED, Eleanor 150/30 ED, Evelyn 150/30 ED, Lenest 30 ED, Leveth 150/30 ED, Levlen ED, Microgynon 30 ED, Micronelle 30 ED, Monofeme, Seasonique, Madeline, Marvelon, Valette, Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena, Minulet, Brevinor, Norimin, Brevinor-1, Norimin-1, Pirmella, Logynon ED, Trifeme, Triquilar ED. Pregnancy caveat (verbatim): 'if the patient has not been using the method reliably and consistently and has had unprotected sex, then there is a risk of pregnancy. Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.' Lactation caveat (verbatim): patient history 'should include: Age; Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction is printed in this document. Paediatric/age caveats (verbatim): 'Cervical screening - routine screening is available for people from the age of 25 and is recommended every five years'; DMPA continuation 'permitted for patients aged 25 to 39 years old (inclusive) only'; footnote 'For patients aged 40-49: pharmacists can only provide one original manufacturer's pack'. Contraindications within protocol: 'patients with a UKMEC category 3 or 4 condition are not eligible for continuation and require a referral'; combined hormonal contraception in smokers over 35 years or those who have quit smoking over the last year carries increased risk; vaping at aged 35 years and older is MEC 4 (absolutely contraindicated) for combined hormonal contraception; 'Women over 50, should be advised to no longer use combined hormonal contraception'. No dose/frequency is printed - this is a continuation (resupply) service only and 'pharmacists are not permitted to initiate or change therapy'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "levonorgestrel",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed strengths (Table 1, exactly as printed): progestogen only pill 'Levonorgestrel 30 micrograms' (brand example Microlut); combined oral with ethinylestradiol 20 + levonorgestrel 100, ethinylestradiol 30 + levonorgestrel 150, triphasic Phase 1 (6 pills) ethinylestradiol 30 + levonorgestrel 50 and Phase 3 (10 pills) ethinylestradiol 30 + levonorgestrel 125 (micrograms). No dose/frequency printed - continuation (resupply) service only; 'pharmacists are not permitted to initiate or change therapy'. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction printed. Paediatric caveat: DMPA continuation limited to 'patients aged 25 to 39 years old (inclusive)' (not applicable to oral levonorgestrel).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "norethisterone",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed strengths (Table 1, exactly as printed): progestogen only pill 'Norethisterone 350 micrograms' (brand example Noriday); combined oral 'ethinylestradiol 35' with 'norethisterone 500' (Brevinor, Norimin) and 'norethisterone 1000' (Brevinor-1, Norimin-1, Pirmella) - estrogen/progestogen columns read in micrograms. No dose/frequency printed - continuation (resupply) service only. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 3, "section_heading": "Table 1: Formulations approved as part of the continuation service"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "drospirenone",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed strengths (Table 1, exactly as printed): progestogen only pill 'Drospirenone 4 mg' (Slinda); combined oral rows 'drospirenone 3000' (micrograms) with brand examples Bella, Brooke, Rosie, Yana, Yaz (monophasic low-dose and standard-dose sections) and Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena. The estrogen column for the drospirenone rows did not extract cleanly (misaligned table row - see open_questions). No dose/frequency printed - continuation (resupply) service only. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction printed.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 3, "section_heading": "Table 1: Formulations approved as part of the continuation service"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "nomegestrol",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed row (Table 1, monophasic oral formulations: low-dose estrogen, exactly as printed): 'estradiol 1500 nomegestrol 2500 Zoely' (micrograms column headers 'Estrogen dose (micrograms)' / 'Progestogen dose (micrograms)'). No dose/frequency printed - continuation (resupply) service only. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "Table 1: Formulations approved as part of the continuation service"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "desogestrel",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed row (Table 1, monophasic oral formulations: standard-dose estrogen, exactly as printed): 'ethinylestradiol 30 [NB1]' with 'desogestrel 150' (micrograms), brand examples Madeline, Marvelon (row also prints 'Seasonique [NB2]'). No dose/frequency printed - continuation (resupply) service only. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "Table 1: Formulations approved as part of the continuation service"}
+    },
+    {
+      "id": "TX-7",
+      "drug": "dienogest",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed row (Table 1, monophasic oral formulations: standard-dose estrogen, exactly as printed): 'dienogest 2000' (micrograms) with ethinylestradiol 30 [NB1], brand example Valette. No dose/frequency printed - continuation (resupply) service only. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "Table 1: Formulations approved as part of the continuation service"}
+    },
+    {
+      "id": "TX-8",
+      "drug": "gestodene",
+      "form": "single or combined oral form",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Printed row (Table 1, page 3, exactly as printed): 'gestodene 75' (micrograms) with ethinylestradiol 30, brand example Minulet. No dose/frequency printed - continuation (resupply) service only. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 3, "section_heading": "Table 1: Formulations approved as part of the continuation service"}
+    },
+    {
+      "id": "TX-9",
+      "drug": "medroxyprogesterone",
+      "form": "injectable form (Depot medroxyprogesterone injection)",
+      "strength": "150mg/mL",
+      "dose": "",
+      "route": "deep IM",
+      "frequency": "",
+      "duration": "continuation of DMPA under this service is permitted for up to 12-months only; Patients require GP reassessment after this period",
+      "max_quantity": "up to 12-months",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of DMPA continuation (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "Brand examples (Table 1): Depo-Provera, Depo-Ralovera; 'Medroxyprogesterone 150 mg/mL'. Paediatric/age caveat (verbatim): 'Continuation of DMPA under this service is permitted for patients aged 25 to 39 years old (inclusive) only.' Administration caveat (verbatim): 'DMPA injection must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course. Otherwise, the patient needs to be referred to their GP or relevant health service for deep IM administration. Pharmacists performing this function should be familiar with, and practice in accordance to the PSA Guidelines for pharmacists administering medicines by injection. It is advisable pharmacists contact their professional indemnity insurer to confirm they are covered to administer medicines by injection under their policy.' Bone/other caveats (verbatim): 'DMPA is associated with a reduction in bone mineral density (BMD) during use, which usually recovers after discontinuation.'; 'As per RANZCOG, women using DMPA should be reviewed every 2 years by their medical practitioner or health service to assess individual situations and to discuss the benefits and potential risks. The Therapeutic Guidelines recommend review for osteoporosis and cardiovascular risk factors annually.'; 'For women with multiple lifestyle and/or medical risk factors for osteopenia, osteoporosis, CV disease or VTE, other methods of contraception may be more appropriate.'; 'Use of DMPA by perimenopausal women needs to be reviewed by a medical practitioner or health service.'; 'Women over 40 using DMPA injections should be regularly asked about additional risk factors for osteoporosis or osteopenia and referred to their healthcare provider if these risks are present.' Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction printed. No dose volume or dosing interval is printed in this document (see open_questions).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-10",
+      "drug": "ethinylestradiol+etonogestrel",
+      "form": "combined intravaginal form of ring",
+      "strength": "2.7+11.7 mg",
+      "dose": "",
+      "route": "intravaginal",
+      "frequency": "",
+      "duration": "continuation up to 12-months of the patient's current hormonal contraception",
+      "max_quantity": "up to 12-months; for patients aged 40-49 only one original manufacturer's pack",
+      "max_dose": "",
+      "quantity_to_supply": "up to 12-months of the patient's current hormonal contraception (patients aged 40-49: only one original manufacturer's pack)",
+      "notes": "As printed: 'j. ethinylestradiol+etonogestrel (2.7+11.7 mg) ring'. Table 1 row (exactly as printed): 'Etonogestrel 11.7 mg (120 microg/24 hours)', 'Ethinylestradiol 2.7 mg (15 microg/24 hours)', brand example NuvaRing. Insertion caveat (verbatim): 'Pharmacists must not assist with physical insertion of a combined hormonal vaginal ring.'; 'Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider.'; 'Patients needing assistance with insertion must be referred to a medical practitioner or health service.' Other caveats (verbatim): 'The combined hormonal vaginal ring works in the same way as combined oral hormonal contraception and is treated similarly in terms of contraindications, complications, side effects and most drug interactions. It may be a useful option when a combined hormonal contraceptive is desired but non-oral option is preferred (e.g. malabsorptive conditions).' Contraindications: same as combined oral hormonal contraception, incl. UKMEC category 3 or 4 conditions, smokers over 35 years or those who have quit smoking over the last year, vaping aged 35+ (MEC 4), women over 50 advised to no longer use combined hormonal contraception. Pregnancy caveat (verbatim): 'Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception.' Lactation caveat (verbatim): patient history should include 'Pregnancy and breastfeeding status' - no method-specific breastfeeding restriction printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Be a contraindication to hormonal contraception e.g. migraine with aura (patients with a UKMEC category 3 or 4 condition are not eligible for continuation and require a referral)'",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Until further evidence is available, vaping with nicotine is considered equivalent to cigarette smoking in relation to the MEC for contraceptive use. As it is not possible to determine equivalency of exposure between vaping and smoking, any vaping in those aged 35 years and older will be MEC 4 (i.e. absolutely contraindicated) for use of combined hormonal contraception.'",
+      "structured": {"parameter": "age", "operator": ">=", "value": 35, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Smoking status, including vaping"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'There is an increased risk of using combined hormonal contraception (combined OCP and vaginal ring) in smokers over 35 years or those who have quit smoking over the last year.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Smoking status, including vaping"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Women over 35 who smoke should be advised to stop combined hormonal contraception as the risk of mortality associated with smoking becomes clinically significant at this point.'",
+      "structured": {"parameter": "age", "operator": ">", "value": 35, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Women over 50, should be advised to no longer use combined hormonal contraception as there are safer methods of contraception at this stage.'",
+      "structured": {"parameter": "age", "operator": ">", "value": 50, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Note that a single elevated BP reading is not enough to classify an individual as hypertensive (note that activity immediately prior to consultation should also be taken into consideration) and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner or health service for further assessment and selection of an appropriate contraceptive method.' (no numeric BP threshold printed)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 10, "section_heading": "EXAMINATION"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'Any changes in vaginal bleeding and the development or accompaniment of other symptoms may indicate underlying pathology. This requires referral to a medical practitioner or health service for further investigation and management.' Changes in bleeding pattern may include abnormalities in frequency (e.g. heavy bleeding), irregular bleeding, prolonged menstrual bleeding, abnormalities in volume, intermenstrual bleeding, and post-coital bleeding; accompanying symptoms may include dysmenorrhea, vaginal discharge, dyspareunia, changes in bladder or bowel function, weight gain or loss, headaches, visual disturbances, hirsutism, and acne.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Bleeding pattern and menstrual history"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'However, if the patient has not been using the method reliably and consistently and has had unprotected sex, then there is a risk of pregnancy. Pharmacists should take all reasonable steps and assessment to exclude pregnancy before continuation of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Excluding pregnancy"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'Patients requiring assistance with insertion, reinsertion, troubleshooting of placement, or clinical assessment related to discomfort, expulsion, pain, abnormal bleeding, suspected infection, or any concern about correct placement must be referred to their GP or another appropriate health provider.' ('Pharmacists must not assist with physical insertion of a combined hormonal vaginal ring.')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 13, "section_heading": "Combined Hormonal Vaginal Ring"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'DMPA injection must only be administered by pharmacists successfully completing the PSA Administering Medicines by Injection Course. Otherwise, the patient needs to be referred to their GP or relevant health service for deep IM administration.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 13, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Continuation of DMPA under this service is permitted for patients aged 25 to 39 years old (inclusive) only.'",
+      "structured": {"parameter": "age", "operator": "not_in", "value": "25-39 inclusive", "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Use of DMPA by perimenopausal women needs to be reviewed by a medical practitioner or health service.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 13, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'Women over 40 using DMPA injections should be regularly asked about additional risk factors for osteoporosis or osteopenia and referred to their healthcare provider if these risks are present.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'As per the College of Sexual and Reproductive Health (CoSRH), women over 40 have an age-related increased background risk of cardiovascular disease, obesity, breast cancer and most gynaecological cancers. As a result, choice of contraceptive method needs to be reviewed with their medical practitioner or health service.'",
+      "structured": {"parameter": "age", "operator": ">", "value": 40, "unit": "years"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 9, "section_heading": "Women over 40"}
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'If the pharmacist becomes aware of this during the consultation, they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances: Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services.' (awareness that a woman seeking contraception may be and/or has been subjected to sexual violence or abuse (assault or sexual coercion))",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 10, "section_heading": "Sexual and domestic abuse"}
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'If the patient may be at increased risk of HIV and other STIs, pharmacists should advise them to seek review from their GP or a sexual health service for further assessment, testing, and discussion of HIV and STI prevention options.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Sexual and social history"}
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'Presence of genitourinary symptoms that might suggest a STI: changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria.' (document states no explicit action for these symptoms; STI screening/testing is recommended for those at risk)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "Sexually transmitted infection (STI) screening"}
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'If a patient frequently takes pill breaks, pharmacists should use professional judgement and consider referring the patient to explore alternative contraception options e.g. long-acting reversible contraception (LARCs).'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'All patients seeking contraception who have not had a cervical screening test (CST) in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents.' (such patients 'are still eligible for the Community Pharmacy Hormonal Contraception Continuation service')",
+      "structured": {"parameter": "years_since_last_cervical_screening_test", "operator": ">", "value": 5, "unit": "years"},
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 8, "section_heading": "PATIENT HISTORY"}
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/. Additionally, you must notify the patient's usual general practitioner (if they have one).'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 3, "section_heading": "C. ADVERSE EVENTS"}
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'Breast checks - people who have a personal or family history of breast cancer, should be advised to see their medical practitioner or health service for advice regarding frequency and type of screening.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 11, "section_heading": "Provision of non-pharmacological and women's health advice"}
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'If patients have a concern with the type of hormonal contraception they are using, encourage them to speak with their medical practitioner or health service and make appropriate referrals.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 11, "section_heading": "Provision of non-pharmacological and women's health advice"}
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'Pharmacists may refer individuals assigned and/or presumed female at birth who are at risk of pregnancy to a general practitioner or specialist sexual health services, if not already engaging with these services, to ensure that they receive comprehensive and culturally safe sexual healthcare that is tailored to their individual needs.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 10, "section_heading": "Transgender, gender diverse and non-binary people"}
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'It may be necessary (but not always) and beneficial to refer Aboriginal and Torres Strait Islander people seeking contraception to a medical practitioner or health service where the person has an existing relationship (if the person consents).'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 11, "section_heading": "Aboriginal and Torres Strait Islander people"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'Patients who have requested the service but are not eligible for continuation should be referred to their regular medical practitioner or health service.'",
+      "'patients with a UKMEC category 3 or 4 condition are not eligible for continuation and require a referral'",
+      "'If BP remains elevated, the patient should be referred to a medical practitioner or health service for further assessment and selection of an appropriate contraceptive method.'",
+      "'This requires referral to a medical practitioner or health service for further investigation and management.' (changes in vaginal bleeding / accompanying symptoms)",
+      "'the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception.'",
+      "'Vaginal ring: Patients needing assistance with insertion must be referred to a medical practitioner or health service.'",
+      "'Otherwise, the patient needs to be referred to their GP or relevant health service for deep IM administration.' (DMPA, pharmacist without PSA injection course)",
+      "'Otherwise refer the patient to their GP or relevant health service for deep IM administration.'",
+      "'All patients seeking contraception who have not had a cervical screening test (CST) in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents.'",
+      "'they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances: Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services.'",
+      "'pharmacists should advise them to seek review from their GP or a sexual health service' (increased risk of HIV and other STIs)",
+      "'consider referring the patient to explore alternative contraception options e.g. long-acting reversible contraception (LARCs).' (frequent pill breaks)",
+      "'women should be reviewed every 2 years by their medical practitioner or health service' / 'referred to their healthcare provider if these risks are present' (DMPA, women over 40 with osteoporosis/osteopenia risk factors)"
+    ],
+    "urgent": [
+      "'Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services. A list of family violence statewide support services including confidential crisis support, information and counselling in NSW is available at NSW Government domestic, family and sexual violence' (when the pharmacist becomes aware of sexual violence or abuse during the consultation)"
+    ],
+    "emergency": [],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+  },
+  "review_followup": [
+    {
+      "when": "Every 12 months",
+      "what": "'BP should be monitored and recorded every 12 months.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 10, "section_heading": "EXAMINATION"}
+    },
+    {
+      "when": "After 12 months of DMPA continuation",
+      "what": "'Continuation of DMPA under this service is permitted for up to 12-months only. Patients require GP reassessment after this period.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "when": "For patients aged 40-49, after one resupply",
+      "what": "'For patients aged 40-49: pharmacists can only provide one original manufacturer's pack (only one resupply is allowed before the patient will need to be reviewed by their GP or other authorising prescribing healthcare practitioner).'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+    },
+    {
+      "when": "Every 2 years for women using DMPA (and annually for osteoporosis and cardiovascular risk factors)",
+      "what": "'As per RANZCOG, women using DMPA should be reviewed every 2 years by their medical practitioner or health service to assess individual situations and to discuss the benefits and potential risks. The Therapeutic Guidelines recommend review for osteoporosis and cardiovascular risk factors annually.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 12, "section_heading": "Depot medroxyprogesterone acetate (DMPA) injection"}
+    },
+    {
+      "when": "Within a week following the consultation",
+      "what": "'The pharmacist must share a copy of the record of the service with the patient and, if the patient consents, with the patient's usual treating medical practitioner or medical practice, where the patient has one, within a week following the consultation.' ('If the patient consents to the disclosure, the record must be shared within a week following the consultation.')",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 14, "section_heading": "H. CLINICAL DOCUMENATION AND COMMUNICATION"}
+    },
+    {
+      "when": "Minimum seven (7) years after the consultation",
+      "what": "'Records must be stored securely for minimum seven (7) years.' ('Pharmacists must make a full clinical record of the consultation and the details of all consultations and outcomes must be recorded using secure digital software.')",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+    },
+    {
+      "when": "Routine screening from age 25, recommended every five years",
+      "what": "'Cervical screening - routine screening is available for people from the age of 25 and is recommended every five years'; breast screening available for all women from age 40 (women are actively invited from age 50); STI screening for anyone sexually active with unprotected sex, a new partner since last STI test, or who thinks they may be at risk.",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 11, "section_heading": "Provision of non-pharmacological and women's health advice"}
+    },
+    {
+      "when": "At continuation resupply (before supply)",
+      "what": "Patients are required to have a pharmacist consultation, including blood pressure monitoring, before a hormonal contraceptive method may be resupplied.",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 6, "section_heading": "Key points"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/.'",
+      "'Additionally, you must notify the patient's usual general practitioner (if they have one).'",
+      "'Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.'",
+      "'The pharmacist must make an electronic clinical record, and a record in a pharmacy dispensing system regarding the supply of any medications under these services, in accordance with the Authority.'"
+    ],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-hormonal-contraception.pdf", "page": 3, "section_heading": "C. ADVERSE EVENTS"}
+  },
+  "references": [
+    "1. ASHM, \"Australian STI Management Guidelines for use in Primary Care,\" 2024. [Online]. Available: https://sti.guidelines.org.au/sexual-history/ (page 15)",
+    "2. ASHM, \"Australian STI Management Guidelines for use in Primary Care Aboriginal and Torres Strait Islander People,\" April 2024. [Online]. Available: https://sti.guidelines.org.au/populations-and-situations/aboriginal-and-torres-strait-islander-people/ (page 15)",
+    "3. Australian Government Department of Health, Disability and Ageing, \"National Cervical Screening Program,\" October 2025. [Online]. Available: https://www.health.gov.au/our-work/national-cervical-screening-program (page 15)",
+    "4. Australian Institute of Family Studies, \"Reproductive coercion and abuse,\" May 2023. [Online]. Available: https://aifs.gov.au/resources/practice-guides/reproductive-coercion-and-abuse (page 15)",
+    "5. Australian Institute of Health and Welfare, \"Family, domestic and sexual violence,\" February 2026. [Online]. Available: https://www.aihw.gov.au/family-domestic-and-sexual-violence (page 15)",
+    "6. Cancer Council Australia, \"A guide to: Breast screening,\" 2026. [Online]. Available: https://www.cancer.org.au/cancer-information/causes-and-prevention/early-detection-and-screening/breast-cancer-screening (page 15)",
+    "7. Cancer Council Australia, \"National cervical screening program,\" July 2024. [Online]. Available: https://www.cancer.org.au/clinical-guidelines/cervical-cancer/cervical-cancer-screening (page 16)",
+    "8. College of Sexual and Reproductive Healthcare (CoSRH), \"Standards and Guidance,\" 2026. [Online]. Available: https://www.cosrh.org/Public/Public/Standards-and-Guidelines.aspx?hkey=c7f3aafd-dd3a-4edc-b335-94b0369a7c89 (page 16)",
+    "9. College of Sexual and Reproductive Healthcare (CoSRH), \"UK Medical Eligibility Criteria for Contraceptive Use\" 2025. [Online]. Available: www.cosrh.org/Common/Uploaded%20files/documents/UKMEC_2025.pdf (page 16)",
+    "10. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Combined Hormonal Contraception,\" January 2019, amended October 2023. [Online]. Available: https://www.fsrh.org/Common/Uploaded%20files/documents/fsrh-guideline-combined-hormonal-contraception-october-2023.pdf (page 16)",
+    "11. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Contraception for Women Aged Over 40 Years,\" August 2017, amended May 2025. [Online]. Available: https://www.cosrh.org/Common/Uploaded%20files/documents/fsrh-guideline-contraception-for-women-aged-over-40-years.pdf (page 16)",
+    "12. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Progestogen-only Injectables,\" December 2014, Amended July 2023. [Online]. Available: https://www.fsrh.org/Common/Uploaded%20files/documents/progestogen-only-injectable-december-2014-amended-11july2023.pdf (page 16)",
+    "13. Faculty of Sexual and Reproductive Healthcare (FSRH), \"Guideline: Progestogen-only Pills,\" August 2022, amended July 2023. [Online]. Available: https://www.fsrh.org/Common/Uploaded%20files/documents/fsrh-ceu-clinical-guideline-progestogen-only-pills-aug22-amended-11july-2023-.pdf (page 16)",
+    "14. Family Planning Alliance Australia, \"Vaping and medical eligibility for hormonal contraception,\" January 2020. [Online]. Available: https://shvic.org.au/assets/img/content/Vaping-and-medical-eligibility-for-hormonal-contraception_Dec20.pdf (page 16)",
+    "15. Family Planning Australia, \"Combined Hormonal Contraceptive Pill Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/combined-hormonal-contraceptive-pill/ (page 16)",
+    "16. Family Planning Australia, \"Combined Hormonal Contraceptive Pill Troubleshooting Clinical Fact Sheet,\" September 2025. [Online]. Available: https://intheknow.org.au/resources/hub/contraceptive-pill-troubleshooting-clinical-factsheet/ (page 16)",
+    "17. Family Planning Australia, \"Contraception Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/contraception-2/ (page 17)",
+    "18. Family Planning Australia, \"Contraceptive Injection Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/contraceptive-injection/ (page 17)",
+    "19. Family Planning Australia, \"LARC Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/larc/ (page 17)",
+    "20. Family Planning NSW, \"Long Acting Reversible Contraception (LARC),\" February 2020. [Online]. Available: https://www.fpnsw.org.au/factsheets/individuals/contraception/long-acting-reversible-contraception-larc (page 17)",
+    "21. Family Planning Australia, \"Progestogen-only Pills (Drospirenone) Clinical Fact Sheet,\" August 2025. [Online]. Available: https://intheknow.org.au/resources/hub/progestogen-only-pills-drospirenone/ (page 17)",
+    "22. Family Planning Australia, \"Progestogen-only Pills (POP) Clinical Fact Sheet,\" August 2025. [Online]. Available: https://intheknow.org.au/resources/hub/progestogen-only-pills-pop/ (page 17)",
+    "23. Family Planning Australia, \"Vaginal Ring (Nuvaring) Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/vaginal-ring/ (page 17)",
+    "24. Family Planning Australia, \"Vaginal Ring Troubleshooting Clinical Fact Sheet,\" July 2025. [Online]. Available: https://intheknow.org.au/resources/hub/vaginal-ring-troubleshooting/ (page 17)",
+    "25. NSW Government Communities and Justice, \"Domestic, family and sexual violence,\" October 2025. [Online]. Available: https://dcj.nsw.gov.au/children-and-families/family-domestic-and-sexual-violence.html (page 17)",
+    "26. Pharmaceutical Society of Australia (PSA), \"Administering medicines by injection,\" 2026. [Online]. Available: https://www.psa.org.au/programs/administering-medicines-by-injection/ (page 17)",
+    "27. Pharmaceutical Society of Australia (PSA), \"Guidelines for pharmacists administering medicines by injection,\" November 2020. [Online]. Available: https://my.psa.org.au/servlet/fileField?entityId=ka10o000000QN7DAAW&field=PDF_File_Member_Content__Body__s (page 17)",
+    "28. Therapeutic Guidelines, \"Sexual and Reproductive Health,\" 2023. [Online]. Available: https://tgldcdp.tg.org.au.acs.hcn.com.au/topicTeaser?guidelinePage=Sexual%20and%20Reproductive%20Health&etgAccess=true (page 17)",
+    "29. The Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG), \"Contraception Clinical Guideline,\" 2024. [Online]. Available: https://ranzcog.edu.au/wp-content/uploads/Contraception-Clinical-Guideline.pdf (page 18)",
+    "30. The Royal Australian and New Zealand College of Obstetricians and Gynaecologists (RANZCOG), \"Consensus Statement: Reducing Unintended Pregnancy for Australian Women Through Increased Access to Long-acting Reversible Contraceptive Methods,\" July 2017. [Online]. Available: https://ranzcog.edu.au/wp-content/uploads/2022/05/Long-Acting-Reversible-Contraception-LARC-Consensus-Statement.pdf (page 18)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Patient Assessment Flowchart (section D) not machine-readable",
+      "observed": "Pages 4 and 5 contain only 'D. PATIENT ASSESSMENT FLOWCHART', the introductory sentence and 'Page 4/5 of 19' - the flowchart itself is an image with no extractable text.",
+      "why_unclear": "The flowchart is described as the instrument that should 'assess the eligibility, identity and govern supply of suitable treatments, and guide associated referral requirements', but its decision nodes, gates and branches cannot be transcribed from the text extraction. PW-1 was reconstructed from the narrative sections (E, F, G, H); flowchart-specific branches may differ.",
+      "source_page": 4
+    },
+    {
+      "topic": "Ethinylestradiol strength unit printed as '35 g'",
+      "observed": "'a. ethinylestadiol (35 g or less)' followed by a stray 'mu' character on the next line of the extraction; Table 1 headers use '(micrograms)' and list ethinylestradiol 20/30/35.",
+      "why_unclear": "The printed unit reads 'g' where micrograms are almost certainly intended (with a displaced mu symbol). Transcribed exactly as printed; not normalised.",
+      "source_page": 2
+    },
+    {
+      "topic": "Table 1 rows partially misaligned in text extraction",
+      "observed": "Rows such as 'drospirenone 3000 Bella, Brooke, Rosie, Yana, Yaz' and 'drospirenone 3000 Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena' have no estrogen column value; 'estetrol 14200 (14.2 mg) drospirenone 3000 Nextstellis' reads oddly; the Triphasic section prints Phase 1 (6 pills) and Phase 3 (10 pills) with no Phase 2 row; 'Seasonique [NB2]' appears as a stray line under the ethinylestradiol 30 + levonorgestrel 150 row.",
+      "why_unclear": "Table extraction is imperfect; estrogen-progestogen pairings for these rows cannot be confirmed from the text. Confidence marked unclear where relevant (TX-4).",
+      "source_page": 3
+    },
+    {
+      "topic": "NB1/NB2 annotations undefined",
+      "observed": "'ethinylestradiol 20 [NB1]', 'ethinylestradiol 30 [NB1]', 'Seasonique [NB2]' are printed but no corresponding NB1/NB2 footnote definitions appear in the extracted text.",
+      "why_unclear": "The meaning of the NB1/NB2 markers (likely formulation/strength caveats) is not printed in extractable text.",
+      "source_page": 2
+    },
+    {
+      "topic": "No general numeric age bounds printed",
+      "observed": "age_bounds left null/null. Method-specific ages appear instead: DMPA continuation 'aged 25 to 39 years old (inclusive) only'; footnote for patients aged 40-49 (one pack only); cervical screening from age 25; breast screening from age 40/invited from 50; 'Women over 35 who smoke', 'Women over 50'.",
+      "why_unclear": "The document states no minimum or maximum age for the continuation service as a whole, so no numeric age bound can be attributed to the eligibility section.",
+      "source_page": 6
+    },
+    {
+      "topic": "Legal basis not named",
+      "observed": "No regulation, poisons schedule provision or delegate instrument is cited; the document references 'the NSW Health Authority (25 February 2026)' and approval by the Chief Health Officer on 25 February 2026.",
+      "why_unclear": "The provision under which pharmacists may continue supply cannot be determined from the document text.",
+      "source_page": 19
+    },
+    {
+      "topic": "Eligibility combinatorics across service-wide and DMPA-specific groups",
+      "observed": "Service-wide requirements (INC-1..INC-6, INC-10) and DMPA-specific requirements (INC-7..INC-9) are printed as separate bullet groups; the document does not state explicit AND/OR combinatorics between them.",
+      "why_unclear": "Defaulted to all_of within each group; DMPA group members apply only when DMPA is the method being continued (per 'Continuation of DMPA under this service is permitted for...'). Cross-group combinatorics are not stated in the document.",
+      "source_page": 6
+    },
+    {
+      "topic": "Blood pressure referral threshold not quantified",
+      "observed": "'If BP remains elevated, the patient should be referred...' - no numeric threshold or definition of 'elevated' is printed; a second reading is required at the end of the consultation.",
+      "why_unclear": "RF-6 and PW-1-S5 gate captured as qualitative (structured: null) because no value/units are given.",
+      "source_page": 10
+    },
+    {
+      "topic": "Genitourinary symptoms suggesting STI - no stated action",
+      "observed": "'Presence of genitourinary symptoms that might suggest a STI: changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria.' No referral, testing or escalation action is stated alongside these symptoms.",
+      "why_unclear": "RF-17 action REVIEW_GP is the nearest document-supported action (STI testing recommended for at-risk individuals; risk → seek review from GP or sexual health service), but the document does not state an action for symptomatic patients; confidence marked unclear.",
+      "source_page": 8
+    },
+    {
+      "topic": "Referral categories not printed",
+      "observed": "The document lists referral destinations/criteria in scattered statements but never categorises them as routine, urgent or emergency; no emergency referral destination is printed.",
+      "why_unclear": "referral.routine/urgent assembled from quoted statements (first provenance page 6, statements span pages 6-13); referral.emergency left empty because the document specifies none.",
+      "source_page": 6
+    },
+    {
+      "topic": "Gates with on_fail 'unclear'",
+      "observed": "PW-1-S3 'Sufficient information obtained', PW-1-S3 continuous-use/pill-break gate, PW-1-S4 genitourinary-symptoms gate, PW-1-S5 BMI measurement gate and PW-1-S12 record-sharing gate have on_fail 'unclear' because the document states the requirement but not the failure consequence.",
+      "why_unclear": "Spec requires 'unclear' plus an open question where the document does not state the branch action.",
+      "source_page": 7
+    },
+    {
+      "topic": "No first-line therapy designated",
+      "observed": "The document never ranks formulations or brands as first-line; it is a continuation (resupply) service and 'pharmacists are not permitted to initiate or change therapy'.",
+      "why_unclear": "first_line set to false for all treatment rows because the document makes no first-line designation.",
+      "source_page": 6
+    },
+    {
+      "topic": "Interaction of 12-month continuation allowance with the aged 40-49 single-pack limit",
+      "observed": "'Pharmacists can provide continuation up to 12-months...' versus footnote 'For patients aged 40-49: pharmacists can only provide one original manufacturer's pack (only one resupply is allowed before the patient will need to be reviewed by their GP or other authorising prescribing healthcare practitioner).'",
+      "why_unclear": "How the single-pack rule for ages 40-49 reconciles with the general 12-month continuation supply is not explained (may be pack-size dependent).",
+      "source_page": 6
+    },
+    {
+      "topic": "Definition of 'continuation' for patients not on continuous therapy",
+      "observed": "'Pharmacists must ascertain whether use of hormonal contraception has been continuous and can provide continuation according to the Practice Standard.' and 'If a patient frequently takes pill breaks, pharmacists should use professional judgement and consider referring the patient...'",
+      "why_unclear": "The document does not define how many pill breaks or what gap makes a patient ineligible; left to professional judgement.",
+      "source_page": 7
+    },
+    {
+      "topic": "Adverse-event reporting classified as notifiable",
+      "observed": "TGA adverse-event reporting via https://aems.tga.gov.au/ and notification of the patient's usual GP are required 'Additionally'; no notifiable-condition or AIR notification is mentioned.",
+      "why_unclear": "notifiable.required set true on the basis of the adverse-event/GP/My Health Record notification statements; no notifiable disease condition is covered by the document.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Legal basis for pharmacist continuation supply in NSW (which regulation/poisons schedule provision the Practice Standard operates under) - document names only 'the NSW Health Authority (25 February 2026)' and approval by the Chief Health Officer.",
+      "source_page": 19,
+      "reason": "Spec requires legal_basis; the document does not cite a regulation or schedule provision, so the authoritative instrument must be confirmed before go-live."
+    },
+    {
+      "item": "Current Approved Medicines list (external NSW Health Authority 25 February 2026 document) - confirm the live list of approved formulations/brands matches TX-1..TX-10 before go-live.",
+      "source_page": 2,
+      "reason": "'Approved Medicines are listed in the NSW Health Authority (25 February 2026)' and 'Pharmacists must only provide continuation of formulations listed in the Authority' - the Authority list itself is external to this PDF."
+    },
+    {
+      "item": "Exact training requirements named in the NSW Health Authority (dated 25 February 2026) that pharmacists must have successfully completed.",
+      "source_page": 3,
+      "reason": "General requirements refer to externally detailed training; the specific course/assessment is not printed in this document."
+    },
+    {
+      "item": "PSA Administering Medicines by Injection Course completion status for each pharmacist administering DMPA, plus professional indemnity cover confirmation ('It is advisable pharmacists contact their professional indemnity insurer to confirm they are covered to administer medicines by injection under their policy').",
+      "source_page": 13,
+      "reason": "Hard gate for DMPA administration; individual staff qualification and insurer cover are local checks."
+    },
+    {
+      "item": "Supply limits: continuation up to 12-months; medical review within the last 2 years (OCP and vaginal ring) or the last year (DMPA); DMPA continuation capped at 12-months with GP reassessment thereafter.",
+      "source_page": 6,
+      "reason": "Time-window rules are central to eligibility and must be confirmed/implemented consistently locally."
+    },
+    {
+      "item": "Patients aged 40-49: only one original manufacturer's pack / one resupply before GP or other authorising prescribing healthcare practitioner review - how this interacts with the general 12-month continuation allowance.",
+      "source_page": 6,
+      "reason": "Footnote rule is ambiguous against the 12-month supply statement; local interpretation required."
+    },
+    {
+      "item": "UKMEC version and governance for category 3/4 determinations (references cite CoSRH 'UK Medical Eligibility Criteria for Contraceptive Use' 2025).",
+      "source_page": 7,
+      "reason": "Ineligibility hinges on UKMEC categorisation; the operative version and who assigns the category are not specified beyond 'Pharmacists must consult these resources and remain up to date with revisions'."
+    },
+    {
+      "item": "BP referral threshold: document says 'If BP remains elevated' with no numeric threshold - confirm local threshold/referral rule.",
+      "source_page": 10,
+      "reason": "Automated checking requires a value; the document gives none (RF-6 structured: null)."
+    },
+    {
+      "item": "Record-keeping systems: secure digital software for consultations/outcomes (stored minimum seven (7) years), electronic clinical record plus pharmacy dispensing system record, My Health Record upload unless the patient requests otherwise, and sharing the service record within a week where the patient consents.",
+      "source_page": 14,
+      "reason": "Left to local policy/systems configuration; must be confirmed before go-live."
+    },
+    {
+      "item": "Patient Assessment Flowchart (section D, pages 4-5) - obtain and manually verify its decision nodes, gates and referral branches; it could not be transcribed from the text extraction (image only).",
+      "source_page": 4,
+      "reason": "The flowchart is the document's stated assessment/eligibility instrument; PW-1 is a reconstruction from narrative sections and may miss flowchart-specific branches."
+    },
+    {
+      "item": "Source transcription artefacts to verify against the PDF: 'ethinylestadiol (35 g or less)' with stray 'mu' character; Table 1 rows missing the estrogen column; missing triphasic Phase 2 row; undefined [NB1]/[NB2] markers.",
+      "source_page": 2,
+      "reason": "Text extraction artefacts could propagate wrong strengths/pairings into the rules engine if not checked against the printed PDF."
+    },
+    {
+      "item": "Referral/emergency escalation: document prints no emergency referral destination - confirm local emergency pathway (e.g. for suspected VTE, severe adverse events) before go-live.",
+      "source_page": 6,
+      "reason": "referral.emergency is empty because the document specifies none; local policy must supply any emergency escalation rule."
+    }
+  ]
+}

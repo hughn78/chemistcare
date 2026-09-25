@@ -1,0 +1,623 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline",
+    "pdf_sha256": "d310c0bd34693dc7ec7c0a388c81b540c0b022affa02e71f8557ffc02acd78f3",
+    "page_count": 9,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Smoking Cessation - Clinical Practice Guideline",
+    "instrument_version": "Version 2.0 (Version dated 1 July 2025)",
+    "effective_date": "1 July 2025",
+    "legal_basis": "Not stated in this document; issued by Queensland Health as a Queensland Community Pharmacy clinical practice guideline for a prescribing service (page 1).",
+    "supervision_model": "Document's own terminology: pharmacists are advised to 'exercise professional discretion and judgement' and to decide 'in consultation with the patient and/or their parent/caregiver'; pharmacists must prescribe according to 'the specified sections of the current online version of the Therapeutic Guidelines'. No 'collaborative'/'autonomous' label is printed.",
+    "scope_summary": "Clinical practice guideline for pharmacist-led smoking cessation in Queensland community pharmacies. 'Service restricted to patients aged 18 years or over.' Covers tobacco smoking cessation only - the management of vaping cessation (and pharmacotherapy for vaping cessation) is not within scope. Covers 5As-based assessment, patient and smoking history, blood pressure and comorbidity screening, counselling/behavioural support, pharmacotherapy guided by the RACGP Pharmacotherapy treatment algorithm and Therapeutic Guidelines: Addiction, referral triggers and drug-specific follow-up. No drug strength, dose or frequency is printed."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 1, "section_heading": "Smoking Cessation - Clinical Practice Guideline" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is pregnant",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "inadequate response to optimal treatment",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "the management of vaping cessation is not within the scope of this guideline",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Reminder" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "the use of pharmacotherapy for vaping cessation is not within the scope of this guideline",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-4", "EXC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 1, "section_heading": "Smoking Cessation - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 1, "section_heading": "Smoking Cessation - Clinical Practice Guideline" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Smoking cessation - assessment, management and follow-up pathway",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient history and assessment: The 5As approach is recommended to identify an individual's support needs, barriers and other relevant cultural, population-specific, or medicine-associated factors, to develop a comprehensive smoking cessation plan (2, 4).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Assessment references (continues from page 2): Refer to the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (3) and Royal Australian College of General Practitioners (RACGP) Supporting smoking cessation: A guide for health professionals (2). Refer to Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence - Screening and assessment of tobacco smoking and nicotine dependence) to assist with determining nicotine dependence and whether pharmacotherapy may be appropriate (3).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 3, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Patient history: Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); underlying medical conditions and chronic diseases including current (or history of) psychiatric illness (including but not limited to psychosis, schizophrenia, bipolar disorder, clinically diagnosed depression and anxiety, eating disorder, substance use disorders and history of suicidal ideation, suicide related behaviour or self-harm); current or recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/adverse drug reactions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 3, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Smoking history: Consider: age when smoking first commenced; type of smoking e.g., cigarettes, pipes; time to first cigarette in the mornings; number of cigarettes smoked per day; cravings for a cigarette, urges to smoke or withdrawal symptoms upon stopping smoking; duration, recording past and current pack years; previous attempts to quit and periods of not smoking, including support required; previous responses to pharmacotherapy for smoking cessation.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 3, "section_heading": "Smoking history" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "Examination and screening: Take an initial blood pressure measurement to screen for hypertension.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 3, "section_heading": "Examination and screening" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "Comorbidity screening (continues from page 3): It is recommended that the patient be screened for common comorbidities associated with smoking, including CVD, asthma and COPD, either as part of a chronic disease program in the Service (if eligible), or with or an appropriate healthcare provider. [Sentence transcribed as printed; wording 'or with or an appropriate healthcare provider' appears garbled in the source - see open_questions.]",
+          "gates": [],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Examination and screening" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Develop smoking cessation management plan: Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. A comprehensive approach to smoking cessation should include counselling and behavioural support. The type of assistance should be based on the patient's willingness to quit, needs, preferences and level of nicotine dependence (2).",
+          "gates": [ { "criterion": "Prescribing aligns with the specified sections of the current online version of the Therapeutic Guidelines", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Non-pharmacological interventions and support (ready-to-quit branch): Develop a cessation plan, e.g., Your quit smoking plan available on the Quit website; including identifying barriers to stopping, strategies to address barriers, and identifying and engaging social support.",
+          "gates": [ { "criterion": "Patient is ready to quit", "on_fail": "SEE_PW-1-S9" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Non-pharmacological interventions and support (not-ready-to-quit branch): For patients that are not ready to quit, use motivational approaches, explore barriers, and encourage harm minimisation such as reducing the number of cigarettes smoked each day and working towards a quit day (2, 5).",
+          "gates": [ { "criterion": "Patient is not ready to quit", "on_fail": "SEE_PW-1-S8" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "REFER",
+          "description": "Counselling and behavioural support and referral to Quitline and/or other support programs NB1. NB1: Resources to support counselling and behavioural support are available on the Queensland Government QuitHQ website for health professionals (6). Referral to Quitline or a relevant health professional with expertise specific to smoking cessation is recommended (2, 3).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "TREAT",
+          "description": "Pharmacotherapy NB2: Guided by the Pharmacotherapy treatment algorithm in the RACGP Supporting smoking cessation: A guide for health professionals (2): A medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (3) [printed with footnote marker: 'A medicineNB3 mentioned in ...']. NB2: This guideline covers tobacco smoking cessation, the use of pharmacotherapy for vaping cessation is not within the scope of this guideline. NB3: Nortriptyline or nicotine vaping products are not permitted for use by pharmacists(3).",
+          "gates": [ { "criterion": "Nicotine dependence determined and pharmacotherapy may be appropriate (per Therapeutic Guidelines: Addiction - Screening and assessment of tobacco smoking and nicotine dependence)", "on_fail": "unclear" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: Consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources (including relevant product information) to confirm the smoking cessation plan is appropriate, including for: contraindications and precautions; drug interactions NB1; pregnancy and lactation.",
+          "gates": [ { "criterion": "Contraindications and precautions, drug interactions, and pregnancy and lactation confirmed appropriate against Therapeutic Guidelines, Australian Medicines Handbook, product information and other resources", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate - NB1 (continues from page 4): Both smoking itself and pharmacotherapy to assist with smoking cessation are associated with a number of drug interactions that require consideration when someone is deciding to reduce and/or cease smoking (7).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: Comprehensive advice and counselling (including supporting written information if required), should be provided to the patient regarding the smoking cessation plan. Relevant information may include: instructions for individual dosage form and medicine use e.g., medicine dosage and NRT product selection and use; how to manage adverse effects, including serious adverse effects requiring medical care e.g., mood disturbances; when to return for follow-up. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers if applicable) and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "General advice: The most successful approach to smoking cessation for nicotine dependent people is counselling and behavioural support, combined with first-line pharmacotherapy and follow-up (2). While pharmacotherapy for smoking cessation has good efficacy, relapse is not uncommon. People should be advised not to be discouraged by unsuccessful attempts and reassured that most people that have previously smoked have progressed through a number of quitting attempts and relapses before achieving long-term cessation (3). Patients should be advised to seek support from an appropriate healthcare provider and a smoking cessation service (e.g. Quitline) if they relapse, or at any time they require extra assistance or have any concerns.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines, the RACGP Supporting smoking cessation: A guide for health professionals and the Australian Medicines Handbook: Nicotine dependence (2, 3, 7).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "Clinical review" }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review (continues from page 5) - NRT: Patients prescribed NRT should return for a follow up consultation 2 weeks after starting treatment to review for tolerability and effectiveness, and additionally at regular intervals during the minimum 12-week course (3).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+        },
+        {
+          "id": "PW-1-S18",
+          "order": 18,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review - varenicline or bupropion: Patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention) (3). An additional follow up consultation should occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline) (3). An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+        },
+        {
+          "id": "PW-1-S19",
+          "order": 19,
+          "type": "REFER",
+          "description": "Varenicline course limit: People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider.",
+          "gates": [ { "criterion": "Patient has already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or requires additional treatment with varenicline after 2 courses", "on_fail": "SEE_PW-1-S18" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+        },
+        {
+          "id": "PW-1-S20",
+          "order": 20,
+          "type": "FOLLOW_UP",
+          "description": "It is recommended that the patient also receive follow up and ongoing support from a smoking cessation service such as Quitline. For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+        },
+        {
+          "id": "PW-1-S21",
+          "order": 21,
+          "type": "TREAT",
+          "description": "Supply quantity rule: Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Pharmacotherapy NB2: 'Guided by the Pharmacotherapy treatment algorithm in the RACGP Supporting smoking cessation: A guide for health professionals (2): A medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (3).' (Printed in the source with footnote marker: 'A medicineNB3 mentioned in ...'). NB2: 'This guideline covers tobacco smoking cessation, the use of pharmacotherapy for vaping cessation is not within the scope of this guideline.' No strength, dose, frequency, duration or quantity is printed in this guideline; agent selection and dosing are delegated to the specified sections of the current online Therapeutic Guidelines.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "NRT (nicotine replacement therapy)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "at regular intervals during the minimum 12-week course (as printed, interval not specified)",
+      "duration": "minimum 12-week course",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'instructions for individual dosage form and medicine use e.g., medicine dosage and NRT product selection and use' (page 5). Clinical review: 'Patients prescribed NRT should return for a follow up consultation 2 weeks after starting treatment to review for tolerability and effectiveness, and additionally at regular intervals during the minimum 12-week course (3).' No NRT product, strength or dose is printed anywhere in the guideline. No per-drug first-line status is printed ('first-line pharmacotherapy' is not named).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Varenicline",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "12 weeks (treatment course); an additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention) (3). An additional follow up consultation should occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline) (3).' 'People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider.' No strength, dose or frequency printed. No per-drug first-line status is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Bupropion",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "9 weeks (treatment course)",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'Patients prescribed varenicline or bupropion should return for a follow up consultation 2 weeks after commencing treatment to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention) (3). An additional follow up consultation should occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline) (3).' No strength, dose or frequency printed. No per-drug first-line status is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Nortriptyline",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB3 (verbatim): 'Nortriptyline or nicotine vaping products are not permitted for use by pharmacists(3).' Not permitted for pharmacist use within this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Nicotine vaping products",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB3 (verbatim): 'Nortriptyline or nicotine vaping products are not permitted for use by pharmacists(3).' NB2 (verbatim): 'This guideline covers tobacco smoking cessation, the use of pharmacotherapy for vaping cessation is not within the scope of this guideline.' Not permitted for pharmacist use within this protocol; vaping cessation is out of scope.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 4, "section_heading": "Develop smoking cessation management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Refer the patient to an appropriate healthcare provider and smoking cessation support service (e.g. Quitline) in the following situations: the patient is pregnant",
+      "structured": { "parameter": "pregnancy status", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "the patient is taking a medicine that interacts with smoking and may require review and dose adjustment due to changing smoking patterns",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "inadequate response to optimal treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Treat (if clinically appropriate) and concurrently refer: The patient has a chronic disease or medical condition that requires additional support or can complicate smoking cessation interventions (e.g. diabetes, cardiovascular disease, mental illness, substance use disorder, multiple comorbidities).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "how to manage adverse effects, including serious adverse effects requiring medical care e.g., mood disturbances",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "Communicate agreed management plan" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Patients should be advised to seek support from an appropriate healthcare provider and a smoking cessation service (e.g. Quitline) if they relapse, or at any time they require extra assistance or have any concerns.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "People who have already undergone 2 courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after 2 courses should be referred to an appropriate healthcare provider.",
+      "structured": { "parameter": "courses of varenicline within the previous 12 months", "operator": ">=", "value": 2, "unit": "courses" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    }
+  ],
+  "referral": {
+    "routine": [ "an appropriate healthcare provider and smoking cessation support service (e.g. Quitline)" ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "2 weeks after starting NRT treatment, and additionally at regular intervals during the minimum 12-week course",
+      "what": "Follow up consultation to review for tolerability and effectiveness (3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "2 weeks after commencing varenicline or bupropion",
+      "what": "Follow up consultation to monitor for progress and adverse effects of pharmacotherapy, to measure blood pressure, and to provide additional support (particularly for relapse prevention) (3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline)",
+      "what": "An additional follow up consultation should occur (3). An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "For patients continuing therapy",
+      "what": "Follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. It is recommended that the patient also receive follow up and ongoing support from a smoking cessation service such as Quitline.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 6, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "If the patient relapses, or at any time they require extra assistance or have any concerns",
+      "what": "Patient advised to seek support from an appropriate healthcare provider and a smoking cessation service (e.g. Quitline).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "when": "Clinical review in line with recommendations in the Therapeutic Guidelines, the RACGP Supporting smoking cessation: A guide for health professionals and the Australian Medicines Handbook: Nicotine dependence",
+      "what": "Clinical review with the pharmacist (or the patient's chosen healthcare provider).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 5, "section_heading": "Clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\smoking-cessation-guideline", "page": 1, "section_heading": "Guideline overview" }
+  },
+  "references": [
+    "Australian Institute of Health and Welfare. Alcohol, tobacco & other drugs in Australia. Canberra: AIHW, Australian Government; [cited 2025 April 2]. Available from: https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/contents/drug-types/tobacco. (page 9)",
+    "The Royal Australian College of General Practitioners. Supporting smoking cessation: A guide for health professionals. East Melbourne, Victoria: RACGP; [cited 2025 April 2]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/supporting-smoking-cessation. (page 9)",
+    "Therapeutic Guidelines: Addiction Medicine (Tobacco smoking and nicotine dependence). Melbourne: Therapeutic Guidelines Limited; [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Addiction%20Medicine&topicfile=c_AMG_Overview-of-tobacco-smoking-and-nicotine-dependence_topic_1&guidelinename=auto&sectionId=c_AMG_Overview-of-tobacco-smoking-and-nicotine-dependence_topic_1#c_AMG_Overview-of-tobacco-smoking-and-nicotine-dependence_topic_1 (page 9)",
+    "Pharmaceutical Society of Australia. Professional practice guidelines for pharmacists: Nicotine dependence support; 2024 [cited 2025 April 2]. Deakin West, ACT: PSA. Available from: https://my.psa.org.au/s/article/Professional-practice-guidelines-for-pharmacists-nicotine-dependence-support (page 9)",
+    "Quit Victoria. Cutting down to quit smoking; 2025 [cited 2025 April 2]. Available from: https://www.quit.org.au/articles/cutting-down-to-quit-smoking. (page 9)",
+    "Department of Health. QUIT HQ [Internet]. The State of Queensland (Department of Health); 2024 [cited 2025 April 2]. Available from: https://www.quithq.initiatives.qld.gov.au/for-health-professionals. (page 9)",
+    "Australian Medicines Handbook: Drugs for nicotine dependence; 2025. Adelaide: Australian Medicines Handbook Pty Ltd; Available from: https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-nicotine-dependence?menu=vertical. (page 9)",
+    "Patient resources: Quit.org.au: including quit plan, quitting tips and tactics, cost of smoking calculator; Queensland Government QuitHQ: including smoking cost calculator and support program (My Quit Journey 12 week program); Commonwealth Government My QuitBuddy app (page 5)",
+    "Pharmacist resources: Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence); Australian Medicines Handbook: Drugs for nicotine dependence; Royal Australian College of General Practitioners: Supporting smoking cessation: A guide for health professionals; Supporting smoking & vaping cessation: A guide for health professionals - Guidance on smoking and vaping cessation support related to changes to Australia's vaping regulation; Pharmaceutical Society of Australia: Professional practice guidelines for pharmacists: Nicotine dependence support; Australian Pharmaceutical Formulary and Handbook (APF): Treatment guideline for pharmacists (Nicotine dependence); Queensland Government Quit HQ: For Health professionals, Refer a patient to Quitline; Quit Centre: Clinical Tools & Guidelines (Ask, Advise, Help chart; Drug interactions with smoking) (page 6)",
+    "Quit: Resources; Your quit smoking plan; Shared care - helping our community quit smoking (page 7)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Exclusion framing of refer-when list",
+      "observed": "The document labels these situations 'Refer when', not 'exclusion criteria'. EXC-1 to EXC-3 are transcribed as exclusions because referral means the patient is not managed solely within the prescribing service (p.1: 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care'). 'Treat (if clinically appropriate) and concurrently refer' (chronic disease/medical condition) is kept as a red flag only, not an exclusion, because treatment proceeds.",
+      "why_unclear": "Framing of refer-when bullets as eligibility exclusions is an interpretation; recorded for review.",
+      "source_page": 2
+    },
+    {
+      "topic": "Eligibility combinatorics",
+      "observed": "Two separate groups were formed: refer-when bullets EXC-1..EXC-3 (read as independent any_of triggers) and scope exclusions EXC-4/EXC-5 (vaping, read as any_of). The document prints no AND/OR combinatorics for either list.",
+      "why_unclear": "No explicit combinatorics stated in the document; any_of chosen because each bullet reads as a standalone situation.",
+      "source_page": 2
+    },
+    {
+      "topic": "Only one inclusion criterion printed",
+      "observed": "The only printed eligibility-positive statement is 'Service restricted to patients aged 18 years or over.' (p.1). No inclusion criterion such as 'patient smokes tobacco' or 'patient wishes to quit' is printed; none was inferred. EXE-1 records the ineligibility/usual-care statement.",
+      "why_unclear": "Guideline contains no inclusion-criteria section beyond the age restriction.",
+      "source_page": 1
+    },
+    {
+      "topic": "Garbled sentence in comorbidity screening",
+      "observed": "'It is recommended that the patient be screened for common comorbidities associated with smoking, including CVD, asthma and COPD, either as part of a chronic disease program in the Service (if eligible), or with or an appropriate healthcare provider.' The phrase 'or with or an appropriate healthcare provider' appears garbled in the source text.",
+      "why_unclear": "Sentence is malformed in the extraction; transcribed verbatim and step marked confidence medium rather than silently repaired.",
+      "source_page": 4
+    },
+    {
+      "topic": "No blood pressure threshold printed",
+      "observed": "'Take an initial blood pressure measurement to screen for hypertension' (p.3) and follow-up instructions 'to measure blood pressure' (p.6) are given, but no numeric threshold, no action on an abnormal reading, and no hypertension management step are printed.",
+      "why_unclear": "No structured trigger can be derived without inventing a threshold.",
+      "source_page": 3
+    },
+    {
+      "topic": "Branch routing for readiness to quit",
+      "observed": "The document gives a ready/not-ready branch: 'Develop a cessation plan...' and 'For patients that are not ready to quit, use motivational approaches...'. Step routing (on_fail SEE_PW-1-S9 / SEE_PW-1-S8) was mapped to those two printed instructions; no step ids or on-fail actions are printed.",
+      "why_unclear": "Branch content is printed but the routing notation is not; mapping inferred.",
+      "source_page": 4
+    },
+    {
+      "topic": "First-line pharmacotherapy not named",
+      "observed": "'The most successful approach to smoking cessation for nicotine dependent people is counselling and behavioural support, combined with first-line pharmacotherapy and follow-up (2).' The document never names which agent(s) constitute first-line pharmacotherapy; per-drug first_line flags are therefore false except the algorithm-level pharmacotherapy row (TX-1).",
+      "why_unclear": "First-line status per drug is not printed.",
+      "source_page": 5
+    },
+    {
+      "topic": "No dosing data printed",
+      "observed": "No strength, dose, frequency or quantity is printed anywhere in the guideline. Pharmacotherapy is delegated to 'A medicine mentioned in the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence)' guided by the RACGP Pharmacotherapy treatment algorithm; NRT product selection and medicine dosage are referred to counselling content only. Drug-specific durations (minimum 12-week NRT course; 9-week bupropion course; 12-week varenicline course) are the only numeric treatment parameters printed.",
+      "why_unclear": "Dosing detail does not exist in the source; treatment dose fields intentionally left blank rather than filled from outside sources.",
+      "source_page": 4
+    },
+    {
+      "topic": "Referral tier lists",
+      "observed": "Document gives one referral destination - 'an appropriate healthcare provider and smoking cessation support service (e.g. Quitline)' - plus patient advice to seek support 'if they relapse, or at any time they require extra assistance or have any concerns'. No urgent or emergency referral wording appears anywhere; urgent[] and emergency[] are genuinely empty.",
+      "why_unclear": "No tiered referral destinations are printed.",
+      "source_page": 2
+    },
+    {
+      "topic": "Pregnancy and lactation handling",
+      "observed": "'the patient is pregnant' is a refer-when trigger (p.2) and 'pregnancy and lactation' must be checked under Confirm management is appropriate (p.4), but the document prints no pregnancy- or lactation-specific smoking cessation pharmacotherapy guidance; patient history asks for 'pregnancy and lactation status (if applicable)' (p.3).",
+      "why_unclear": "No verbatim pregnancy/lactation treatment caveat exists to transcribe; content delegated to Therapeutic Guidelines/AMH.",
+      "source_page": 2
+    },
+    {
+      "topic": "Notification obligations silent",
+      "observed": "Whole document reviewed (pp.1-9): no notifiable condition, GP notification, AIR entry or other notification requirement is mentioned. notifiable.required recorded as null.",
+      "why_unclear": "Document is silent; no page can be cited for a positive requirement.",
+      "source_page": 1
+    },
+    {
+      "topic": "Gate on-fail actions not stated",
+      "observed": "'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines' (p.4), 'Confirm management is appropriate ... contraindications and precautions; drug interactions NB1; pregnancy and lactation' (p.4), and the pharmacotherapy gate 'whether pharmacotherapy may be appropriate' (p.3) do not state on-fail actions; recorded as on_fail 'unclear'.",
+      "why_unclear": "Spec requires on_fail; the document does not say what happens on failure.",
+      "source_page": 4
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Legal basis for pharmacist prescribing under this guideline (regulation / poisons schedule provision) is not printed - confirm the QLD jurisdictional basis before go-live.",
+      "source_page": 1,
+      "reason": "Spec requires legal_basis; the document only identifies itself as a Queensland Community Pharmacy clinical practice guideline printed by Queensland Health."
+    },
+    {
+      "item": "Supervision model: document says pharmacists should 'exercise professional discretion and judgement' in consultation with the patient/parent/caregiver and must prescribe per the current online Therapeutic Guidelines - confirm whether the service is 'collaborative' or 'autonomous' in Queensland terms.",
+      "source_page": 1,
+      "reason": "No 'collaborative'/'autonomous' terminology is printed; description uses the document's own wording only."
+    },
+    {
+      "item": "Age restriction: 'Service restricted to patients aged 18 years or over.' - confirm this is enforced as a hard eligibility gate for the prescribing service (with the usual-care carve-out in EXE-1).",
+      "source_page": 1,
+      "reason": "Explicit service restriction printed on the cover; must be a seeded hard rule before go-live."
+    },
+    {
+      "item": "Pin the exact version/date of the 'current online version of the Therapeutic Guidelines' (Addiction: Tobacco smoking and nicotine dependence), the RACGP Pharmacotherapy treatment algorithm, and Australian Medicines Handbook: Nicotine dependence that the service links to.",
+      "source_page": 4,
+      "reason": "All medicine selection/dosing is delegated to unpinned external resources, so the operative content can change independently of this document."
+    },
+    {
+      "item": "Prohibition enforcement: 'Nortriptyline or nicotine vaping products are not permitted for use by pharmacists(3).' - confirm the module hard-blocks these agents under this protocol.",
+      "source_page": 4,
+      "reason": "Explicit non-permission statement inside the protocol must be enforced as a hard block, not a soft prompt."
+    },
+    {
+      "item": "Vaping cessation scope boundary: confirm the module redirects vaping-cessation requests (both management and pharmacotherapy) as out of scope for this guideline.",
+      "source_page": 2,
+      "reason": "Scope limit printed twice (p.2 Reminder, p.4 NB2); downstream behaviour on an out-of-scope request is left to local policy."
+    },
+    {
+      "item": "Pregnancy pathway: 'the patient is pregnant' triggers referral - confirm the local destination/management pathway for pregnant patients who smoke (the document prints no pregnancy-specific treatment guidance).",
+      "source_page": 2,
+      "reason": "Referral destination and any alternative management are left to local policy."
+    },
+    {
+      "item": "Cross-service interlock: comorbidity screening may occur 'as part of a chronic disease program in the Service (if eligible)', and referral to Quitline/QuitHQ or a relevant health professional is recommended - confirm the hand-off mechanics with the chronic disease program and Quitline.",
+      "source_page": 4,
+      "reason": "Cross-program dependency; this document does not reproduce those programs' protocols."
+    },
+    {
+      "item": "Supply quantity rule: 'Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review.' - confirm local interpretation against the printed course lengths (NRT minimum 12-week course; bupropion 9 weeks; varenicline 12 weeks).",
+      "source_page": 6,
+      "reason": "Quantity rule has no numeric ceiling in this document and touches local supply policy."
+    }
+  ]
+}

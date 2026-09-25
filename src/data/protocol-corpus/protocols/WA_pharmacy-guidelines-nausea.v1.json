@@ -1,0 +1,1135 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf",
+    "pdf_sha256": "1eb9ecb10dac5b5a4357ef5d49ec7f13ddea72df66170cdf2c2a89fcddddcdb5",
+    "page_count": 13,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Acute nausea and vomiting associated with gastroenteritis clinical practice guideline",
+    "instrument_version": "No version number or date printed (page 13 footer codes read \"62'GUA\" and \"180510-DEC\"); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+    "supervision_model": "Approved pharmacist prescribing (document's own terminology): pharmacists must be 'approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP)' and 'authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)'; 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1)",
+    "scope_summary": "EACPP clinical practice guideline for acute nausea and vomiting associated with gastroenteritis in patients aged 18 years or over ('Service restricted to patients aged 18 years or over', p.1). Flow (p.2): meet service and professional obligations -> patient history and assessment (patient history; examination - vital signs, hydration status, abdominal examination) -> develop management plan (identify, treat, or remove cause if possible; non-pharmacological measures; oral pharmacotherapy) -> confirm management is appropriate -> communicate agreed management plan -> clinical review, with side boxes 'Refer when' (21 triggers) and 'Treat and concurrently refer' (2 triggers: the patient is or could be pregnant; labyrinthitis is suspected). 'Refer when' (p.3) is introduced by 'Provide supportive management (hydration) and refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:'. Appendix 1 (pp.8-11) lists 25 possible causes with per-condition actions: 12 carry immediate-referral wording ('Immediate referral to an appropriate healthcare provider is required if suspected'), 12 carry routine referral or treat-and-refer wording, motion sickness carries only 'Usual pharmacy care.' (no referral trigger), and 'Gastroenteritis - viral or bacterial/food poisoning' is 'Self-limiting - May be managed under this guideline. For suspected food poisoning, consider notification to local public health unit.' Key constraints: no drug names, strengths, doses, frequencies, quantities or durations are printed anywhere in the 13 pages - management is 'in accordance with' specified sections of the current online Therapeutic Guidelines (p.5): oral rehydration therapy (non-pharmacological measure) and 'an oral medicine for the treatment of acute nausea and vomiting associated with gastroenteritis mentioned in the Therapeutic Guidelines: Gastrointestinal: Nausea and vomiting (Antiemetic drugs in adults)' (pharmacotherapy). Only oral antiemetics are in scope; 'parenteral administration of an antiemetic is indicated' is a refer-when trigger (p.3). Chronic symptoms (> 4 weeks), ketones 0.6 mmol/L or higher, and protracted vomiting (> 24 to 48 hours) are referral boundaries (p.3)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-2",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 5, "section_heading": "Develop management plan" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "prolonged vomiting (> 24 to 48 hours)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "patient looks very unwell or is very drowsy",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "significant recent weight loss",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "abdominal distension or tenderness",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "rectal bleeding",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "green, bile or blood (coffee grounds) vomit",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "fever, neck stiffness, confusion",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "severe headache, altered or loss of consciousness",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "isolated vomiting without nausea",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "history of head injury/trauma",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "increased blood ketone and glucose levels, including if ketones are 0.6 mmol/L or higher",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "diabetic or is immunocompromised",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "recent overseas travel",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "nausea and vomiting are post-operative, radiation-induced or suspected to be drug or medicine-induced",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "parenteral administration of an antiemetic is indicated",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "nausea and vomiting is chronic (symptoms for > 4 weeks)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-18",
+        "text": "the patient has recurring episodes of acute nausea and vomiting",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-19",
+        "text": "inadequate response to optimal treatment",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-20",
+        "text": "signs of severe dehydration e.g. reduced or no urine output, intense thirst, marked loss of skin turgor, sunken eyes, tachycardia, severe hypotension, increased respiration",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-21",
+        "text": "severe pain, or nausea and vomiting occur with chest or back pain.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 1, "section_heading": "Contents" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 1, "section_heading": "Contents" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Acute nausea and vomiting associated with gastroenteritis - guideline overview pathway (page 2 flow, elaborated pages 4-7, differential diagnosis Appendix 1 pages 8-11)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Meet service and professional obligations (p.2 flow): 'Initial patient eligibility and suitability for management within the scope of the service'; 'Patient informed consent (including consent for communication with other health practitioners if relevant)'. 'Service restricted to patients aged 18 years or over' and 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.' (p.1) The guideline 'may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)'. 'This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+          "gates": [
+            { "criterion": "Initial patient eligibility and suitability for management within the scope of the service (Refer when: the patient is aged below 18 years)", "on_fail": "REFER" },
+            { "criterion": "Patient informed consent (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 2, "section_heading": "Guideline overview" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history (p.4): 'Obtain sufficient information from the patient to identify the likely cause of the nausea/vomiting and assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); nature, severity, and frequency of symptoms; food and/or drink consumed in the last 24 hours; onset and duration of symptoms, including timing in relation to eating/drinking; signs and symptoms of dehydration; risk factors for dehydration or electrolyte abnormality (e.g. kidney transplantation, malnutrition, frailty); ability to adhere to treatment or monitoring for dehydration (e.g. intellectual disability); recent head trauma or injury; similar symptoms in close contacts; exposure to toxins, poisons, bites, or stings; recent travel; accompanying symptoms e.g. chest pain or heartburn, headache, dizziness, weight loss, fever, abdominal pain, last bowel motion, diarrhoea, constipation, dysuria, or frequency of urination; precipitating and relieving factors; underlying medical conditions e.g. immunocompromised, diabetes, or recent surgery; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements, and over-the-counter medicines); drug allergies/adverse drug reactions; medication tried to treat current symptoms; alcohol and illicit drug history.' Reminder (p.4): 'Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies, and current medical conditions.'",
+          "gates": [
+            { "criterion": "Refer when: prolonged vomiting (> 24 to 48 hours)", "on_fail": "REFER" },
+            { "criterion": "Refer when: significant recent weight loss", "on_fail": "REFER" },
+            { "criterion": "Refer when: isolated vomiting without nausea", "on_fail": "REFER" },
+            { "criterion": "Refer when: history of head injury/trauma", "on_fail": "REFER" },
+            { "criterion": "Refer when: increased blood ketone and glucose levels, including if ketones are 0.6 mmol/L or higher", "on_fail": "REFER" },
+            { "criterion": "Refer when: diabetic or is immunocompromised", "on_fail": "REFER" },
+            { "criterion": "Refer when: recent overseas travel", "on_fail": "REFER" },
+            { "criterion": "Refer when: nausea and vomiting are post-operative, radiation-induced or suspected to be drug or medicine-induced", "on_fail": "REFER" },
+            { "criterion": "Refer when: nausea and vomiting is chronic (symptoms for > 4 weeks)", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient has recurring episodes of acute nausea and vomiting", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: the patient is or could be pregnant", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination (p.4): 'Where appropriate, conduct assessment of vital signs.' 'Assess hydration status as per the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Assessment of acute gastroenteritis).' 'Examine for abdominal tenderness or distention, particularly areas where hernias commonly present (excluding the groin).' Flow (p.2): 'Examination: - vital signs - hydration status - abdominal examination'. 'The assessment approach focuses on identifying the cause (or excluding significant underlying diseases) with a view to expectant management or directing specific treatment.' (p.4)",
+          "gates": [
+            { "criterion": "Refer when: patient looks very unwell or is very drowsy", "on_fail": "REFER" },
+            { "criterion": "Refer when: abdominal distension or tenderness", "on_fail": "REFER" },
+            { "criterion": "Refer when: rectal bleeding", "on_fail": "REFER" },
+            { "criterion": "Refer when: green, bile or blood (coffee grounds) vomit", "on_fail": "REFER" },
+            { "criterion": "Refer when: fever, neck stiffness, confusion", "on_fail": "REFER" },
+            { "criterion": "Refer when: severe headache, altered or loss of consciousness", "on_fail": "REFER" },
+            { "criterion": "Refer when: signs of severe dehydration e.g. reduced or no urine output, intense thirst, marked loss of skin turgor, sunken eyes, tachycardia, severe hypotension, increased respiration", "on_fail": "REFER" },
+            { "criterion": "Refer when: severe pain, or nausea and vomiting occur with chest or back pain", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: labyrinthitis is suspected (vertigo, nystagmus with symptoms worsened by motion, tinnitus)", "on_fail": "REFER" },
+            { "criterion": "Vital signs assessed 'where appropriate' (no numeric thresholds printed anywhere in the document)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Consider possible causes of nausea and vomiting (p.4): 'A non-exhaustive list of possible causes of acute and chronic nausea, and vomiting are presented in Appendix 1. When in doubt of the cause of the nausea and vomiting, the pharmacist should refer the patient to an appropriate healthcare provider.' Appendix 1 (pp.8-11) is a Condition / Presentation and suggestive findings / Action table with 25 rows: 12 carry 'Immediate referral to an appropriate healthcare provider is required if suspected' (bowel obstruction; toxic ingestion including alcohol and chronic cannabis use; closed head injury or concussion; CNS haemorrhage; CNS infection e.g. meningitis; increased intracranial pressure; diabetic ketoacidosis; liver or renal failure; myocardial infarction; severe pain; Addisonian (acute adrenal) crisis; suspected overdose or serious reaction to a drug), routine referral rows are adynamic ileus, gastroparesis, hepatitis, peritonitis or other acute abdominal condition, cannabis use (cannabis hyperemesis syndrome), labyrinthitis, advanced cancer/chemotherapy/radiation exposure, urinary tract infection, and pregnancy (treat and concurrently refer), 'Usual pharmacy care and referral to an appropriate healthcare provider' applies to migraine and SARS-COV-2 infection, motion sickness carries only 'Usual pharmacy care.', and 'Gastroenteritis - viral or bacterial/food poisoning' is 'Self-limiting - May be managed under this guideline. For suspected food poisoning, consider notification to local public health unit.'",
+          "gates": [
+            { "criterion": "The cause is identified as gastroenteritis - viral or bacterial/food poisoning and may be managed under this guideline ('Self-limiting - May be managed under this guideline.')", "on_fail": "REFER" },
+            { "criterion": "Appendix 1: any condition whose action is 'Immediate referral to an appropriate healthcare provider is required if suspected' is suspected", "on_fail": "REFER" },
+            { "criterion": "Appendix 1: any condition whose action is 'Referral to an appropriate healthcare provider if suspected/is required' or 'Usual pharmacy care and referral' applies", "on_fail": "REFER" },
+            { "criterion": "The cause of the nausea and vomiting is not in doubt", "on_fail": "REFER" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 4, "section_heading": "Consider possible causes of nausea and vomiting" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Develop management plan (p.5): 'Before starting treatment, identify, treat, or remove the cause of the nausea and vomiting (if possible), and ensure adequate hydration.' 'Pharmacist management of acute nausea and vomiting associated with gastroenteritis includes: non-pharmacological measures: - oral rehydration therapy to prevent or correct dehydration, in accordance with the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Rehydration for acute gastroenteritis in adults); pharmacotherapy: - an oral medicine for the treatment of acute nausea and vomiting associated with gastroenteritis mentioned in the Therapeutic Guidelines: Gastrointestinal: Nausea and vomiting (Antiemetic drugs in adults).' Key points (p.3): 'An oral antiemetic may be considered for symptom relief if the nausea and vomiting is suspected to be caused by gastroenteritis, although spontaneous improvement of acute nausea and vomiting is likely.' 'Provide supportive management (hydration) and refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' (p.3).",
+          "gates": [
+            { "criterion": "Refer when: parenteral administration of an antiemetic is indicated", "on_fail": "REFER" },
+            { "criterion": "Refer when: prolonged vomiting (> 24 to 48 hours) (re-checked before starting treatment)", "on_fail": "REFER" },
+            { "criterion": "Refer when: increased blood ketone and glucose levels, including if ketones are 0.6 mmol/L or higher (re-checked before starting treatment)", "on_fail": "REFER" },
+            { "criterion": "The cause is identified, treated, or removed (if possible) and adequate hydration is ensured", "on_fail": "unclear" },
+            { "criterion": "Refer when: inadequate response to optimal treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 5, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate (p.5): 'Consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.'",
+          "gates": [
+            { "criterion": "Contraindications and precautions; drug interactions confirmed against the Therapeutic Guidelines, Australian Medicines Handbook and other relevant resources", "on_fail": "unclear" },
+            { "criterion": "Patient is not pregnant and could not be pregnant (Treat and concurrently refer: the patient is or could be pregnant)", "on_fail": "REFER" },
+            { "criterion": "Pregnancy and lactation status checked and management confirmed appropriate for lactation", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 5, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan (p.6): 'Comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medicine use; non-pharmacological measures, including the importance of rehydration; how to manage adverse effects; the impact of vomiting on the absorption and effectiveness of other regular medications; when to seek further care and/or treatment, including recognising patient deterioration and dehydration.' 'It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers if applicable), and to ensure compliance with all copyright conditions.' 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' General advice (p.6): 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: the condition does not improve or resolve within 24 to 48 hours of starting treatment; the patient's condition worsens, including developing systemic signs and symptoms; the patient develops new or worsening signs or symptoms, or signs of severe dehydration; the patient's symptoms recur after initial resolution; adverse effects of treatment cannot be managed in the pharmacy setting.'",
+          "gates": [
+            { "criterion": "General advice: the condition does not improve or resolve within 24 to 48 hours of starting treatment", "on_fail": "REFER" },
+            { "criterion": "General advice: the patient's condition worsens, including developing systemic signs and symptoms", "on_fail": "REFER" },
+            { "criterion": "General advice: the patient develops new or worsening signs or symptoms, or signs of severe dehydration", "on_fail": "REFER" },
+            { "criterion": "General advice: the patient's symptoms recur after initial resolution", "on_fail": "REFER" },
+            { "criterion": "General advice: adverse effects of treatment cannot be managed in the pharmacy setting", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review (p.7): 'Clinical review is generally not required. Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).' Flow (p.2): 'Clinical review - response to treatment; communication with other health practitioners.' Pharmacist resources (p.7): Therapeutic Guidelines: Gastrointestinal (Nausea and vomiting; Acute gastroenteritis); CARPA Standard Treatment Manual (Nausea and vomiting); Australian Medicines Handbook (Antiemetics); MSD Manual Professional version (Nausea and vomiting; Acute abdominal pain); SOMANZ Position statement on the Management of Nausea and Vomiting in Pregnancy and Hyperemesis Gravidarum; Australian Prescriber (Antiemetic drugs: what to prescribe and when); Queensland Health and Royal Flying Doctor Service (Queensland branch) Primary Clinical Care Manual 12th edition 2025; Food safety WA (Outbreaks and incident management; Food safety incidents).",
+          "gates": [
+            { "criterion": "The condition improves and resolves", "on_fail": "REFER" },
+            { "criterion": "General advice: the condition does not improve or resolve within 24 to 48 hours of starting treatment", "on_fail": "REFER" },
+            { "criterion": "Response to treatment reviewed and communication with other health practitioners as needed (flow p.2)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 7, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Oral rehydration therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "No quantity is printed anywhere in the document.",
+      "max_dose": "",
+      "quantity_to_supply": "No quantity to supply is printed; the amount must come from the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Rehydration for acute gastroenteritis in adults).",
+      "notes": "Non-pharmacological measure (p.5): 'non-pharmacological measures: - oral rehydration therapy to prevent or correct dehydration, in accordance with the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Rehydration for acute gastroenteritis in adults).' 'Before starting treatment, identify, treat, or remove the cause of the nausea and vomiting (if possible), and ensure adequate hydration.' (p.5) 'Provide supportive management (hydration) and refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations.' (p.3) Communication (p.2 flow): 'Supportive care, including the importance of rehydration'; counselling must cover 'non-pharmacological measures, including the importance of rehydration' (p.6). Hydration status is to be assessed 'as per the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Assessment of acute gastroenteritis)' (p.4). No product name, composition, volume, rate or schedule is printed anywhere in the 13 pages; every dosing field is blank because nothing can be transcribed without inventing it. The document does not rank oral rehydration therapy against antiemetic pharmacotherapy; row order reflects document order only (see open question).",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 5, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Oral antiemetic (unnamed in this document)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "No quantity is printed anywhere in the document.",
+      "max_dose": "",
+      "quantity_to_supply": "No quantity to supply is printed; the amount must come from the Therapeutic Guidelines: Gastrointestinal: Nausea and vomiting (Antiemetic drugs in adults).",
+      "notes": "Pharmacotherapy (p.5): 'an oral medicine for the treatment of acute nausea and vomiting associated with gastroenteritis mentioned in the Therapeutic Guidelines: Gastrointestinal: Nausea and vomiting (Antiemetic drugs in adults).' No drug name, strength, dose, dosing frequency or treatment duration is printed anywhere in the 13 pages; 'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.' (p.5) Key points (p.3): 'An oral antiemetic may be considered for symptom relief if the nausea and vomiting is suspected to be caused by gastroenteritis, although spontaneous improvement of acute nausea and vomiting is likely.' Scope boundary: 'parenteral administration of an antiemetic is indicated' is a refer-when trigger (p.3), so only oral antiemetics are in scope. 'Confirm management is appropriate' (p.5) requires checking contraindications and precautions, drug interactions, and pregnancy and lactation. Counselling (p.6) must cover 'the impact of vomiting on the absorption and effectiveness of other regular medications' and 'how to manage adverse effects'. Pregnancy caveat: 'Treat (if clinically appropriate) and concurrently refer to an appropriate healthcare provider' (p.4); SOMANZ position statement on Nausea and Vomiting in Pregnancy and Hyperemesis Gravidarum is listed as a resource (p.7) but no pregnancy-specific drug, dose or safety statement is printed. No drug is named, so first_line is false.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 5, "section_heading": "Develop management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+      "structured": { "parameter": "age", "operator": "<", "value": 18, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "prolonged vomiting (> 24 to 48 hours)",
+      "structured": { "parameter": "vomiting_duration", "operator": ">", "value": null, "unit": "hours" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "patient looks very unwell or is very drowsy",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "significant recent weight loss",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "abdominal distension or tenderness",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "rectal bleeding",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "green, bile or blood (coffee grounds) vomit",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "fever, neck stiffness, confusion",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "severe headache, altered or loss of consciousness",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "isolated vomiting without nausea",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "history of head injury/trauma",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "increased blood ketone and glucose levels, including if ketones are 0.6 mmol/L or higher",
+      "structured": { "parameter": "blood_ketones", "operator": ">=", "value": 0.6, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "diabetic or is immunocompromised",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "recent overseas travel",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "nausea and vomiting are post-operative, radiation-induced or suspected to be drug or medicine-induced",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "parenteral administration of an antiemetic is indicated",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "nausea and vomiting is chronic (symptoms for > 4 weeks)",
+      "structured": { "parameter": "symptom_duration", "operator": ">", "value": 4, "unit": "weeks" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "the patient has recurring episodes of acute nausea and vomiting",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "inadequate response to optimal treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "signs of severe dehydration e.g. reduced or no urine output, intense thirst, marked loss of skin turgor, sunken eyes, tachycardia, severe hypotension, increased respiration",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "severe pain, or nausea and vomiting occur with chest or back pain.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "the patient is or could be pregnant [Treat (if clinically appropriate) and concurrently refer: 'Provide initial treatment and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations:']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "labyrinthitis is suspected (vertigo, nystagmus with symptoms worsened by motion, tinnitus) [Treat (if clinically appropriate) and concurrently refer]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "the condition does not improve or resolve within 24 to 48 hours of starting treatment [General advice: 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "the patient's condition worsens, including developing systemic signs and symptoms [General advice: 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "the patient develops new or worsening signs or symptoms, or signs of severe dehydration [General advice: 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "the patient's symptoms recur after initial resolution [General advice: 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "adverse effects of treatment cannot be managed in the pharmacy setting. [General advice: 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:']",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Adynamic ileus - 'Referral to an appropriate healthcare provider if suspected.' (suggestive findings: abdominal distention; increased risk after surgery (up to 72 hours post-surgery); severe illness of electrolyte abnormality)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "Bowel obstruction - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (suggestive findings: abdominal distention, severe constipation, and tympany to percussion; vomiting is often bilious (visible); history of abdominal surgery (visible surgical scars) or hernia)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "Gastroparesis - 'Referral to an appropriate healthcare provider if suspected.' (suggestive findings: vomiting of partially digested food within a few hours of consumption; often occurs in people with diabetes or after abdominal surgery)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "Hepatitis - 'Referral to an appropriate healthcare provider if suspected.' (suggestive findings: mild to moderate nausea (sometimes vomiting) over many days; jaundice; malaise; slight liver tenderness is sometimes present)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "Peritonitis or other acute abdominal condition, e.g. acute mesenteric ischemia, pancreatitis, appendicitis - 'Referral to an appropriate healthcare provider if suspected.' (suggestive findings: severe abdominal pain that may be vague and nauseating (visceral), sharp and localised (somatic), or pain perceived distant to its source (referred); other warning signs may be present)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "Toxic ingestion (including alcohol and chronic cannabis use) - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (suggestive findings as extracted: 'Ongoing nausea, vomiting, and indigestion that occurs with an chronic cannabis use' - row text interleaved by two-column extraction and overlaps the cannabis hyperemesis row; see open question)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+    },
+    {
+      "id": "RF-35",
+      "trigger_text": "Cannabis use (cannabis hyperemesis syndrome) - 'Referral to an appropriate healthcare provider and other services if required.' (suggestive findings: ongoing nausea, vomiting, and indigestion that occurs with chronic cannabis use and may be relieved with a hot shower; 'Symptoms resolve after stopping cannabis use')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-36",
+      "trigger_text": "Closed head injury or concussion - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (generally apparent based on history)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-37",
+      "trigger_text": "CNS haemorrhage - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (suggestive findings: sudden onset of headache; change in mental status; meningeal signs including photophobia, neck stiffness, and seizures may be present)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-38",
+      "trigger_text": "CNS infection e.g. meningitis - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (suggestive findings: gradual onset of headache; change in mental status; meningeal signs including photophobia, neck stiffness, and seizures may be present; petechial rash may be present)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-39",
+      "trigger_text": "Increased intracranial pressure - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (suggestive findings: headache; change in mental status; focal neurological deficits sometimes present)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-40",
+      "trigger_text": "Labyrinthitis - 'Referral to an appropriate healthcare provider is required if suspected.' (suggestive findings: vertigo, nystagmus with symptoms worsened by motion; tinnitus sometimes present) [also listed under Treat and concurrently refer, p.4]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-41",
+      "trigger_text": "Migraine - 'Usual pharmacy care and referral to an appropriate healthcare provider.' (suggestive findings: headache, with or without aura or photophobia; 'Patient will usually have a history' - row text incomplete in the two-column extraction; see open question)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 9, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Central nervous system disorders" }
+    },
+    {
+      "id": "RF-42",
+      "trigger_text": "Advanced cancer, chemotherapy, or radiation exposure - 'Referral to an appropriate healthcare provider is required.' (apparent based on history)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-43",
+      "trigger_text": "Diabetic ketoacidosis (DKA) - 'Immediate referral to an appropriate healthcare provider is required if this is suspected, including if ketones are 0.6 mmol/L or higher.' (history of diabetes, although may occur without a known history of diabetes; polyuria, polydipsia, hyperventilation, abdominal pain, and/or impaired consciousness; significant dehydration often present; 'Patients with diabetes should be advised to check their blood glucose levels and test ketones in blood or urine')",
+      "structured": { "parameter": "blood_ketones", "operator": ">=", "value": 0.6, "unit": "mmol/L" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-44",
+      "trigger_text": "Drug adverse effect or toxicity - 'If nausea and vomiting is a known adverse effect, referral to the original prescriber is required.' (generally apparent based on history; assess severity and probable cause)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-45",
+      "trigger_text": "Drug adverse effect or toxicity - 'If suspected overdose or serious reaction, immediate referral to an appropriate healthcare provider is required.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-46",
+      "trigger_text": "Liver or renal failure - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (generally apparent based on history; asterixis; jaundice in advanced liver disease often present; uremic odour in renal failure often present)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-47",
+      "trigger_text": "Myocardial infarction - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (chest pain, which may radiate to the back, jaw, left arm, shoulders (or all these areas); shortness of breath, sweating, dizziness)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-48",
+      "trigger_text": "Severe pain - 'Immediate referral to an appropriate healthcare provider is required if suspected.' (multiple causes and presentations) [also a Refer when trigger on p.3]",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 10, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-49",
+      "trigger_text": "Addisonian (acute adrenal) crisis - 'Immediate referral to an appropriate healthcare provider is required.' (history of adrenal insufficiency, trauma, acute stress, illness or recent surgery, or abrupt cessation of glucocorticoid therapy; symptoms of acute circulatory failure (hypotension, confusion); other symptoms may include weakness, loss of consciousness, dizziness, fever, sudden onset of pain in lower back or legs, high heart rate)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 11, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Systemic conditions" }
+    },
+    {
+      "id": "RF-50",
+      "trigger_text": "Pregnancy - 'Treat (if clinically appropriate) and concurrently refer to an appropriate healthcare provider. Usual pharmacy care including non-pharmacological therapies may be recommended for mild to moderate N&V.' (can occur at any time of the day or night. May be triggered by food or odours; patient may not be aware they are pregnant) [duplicate print of the Treat and concurrently refer trigger on p.4]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 11, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Other causes" }
+    },
+    {
+      "id": "RF-51",
+      "trigger_text": "SARS-COV-2 infection - 'Usual pharmacy care and referral to an appropriate healthcare provider.' (fever, fatigue, dry cough, shortness of breath; nasal symptoms (congestion, rhinorrhoea))",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 11, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Other causes" }
+    },
+    {
+      "id": "RF-52",
+      "trigger_text": "Urinary tract infection - 'Referral to an appropriate healthcare provider or an appropriate pharmacy service is required.' (generally apparent based on history; presence of dysuria, urinary urgency, and frequency; suprapubic tenderness or discomfort)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 11, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Other causes" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer when (p.3): 'Provide supportive management (hydration) and refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:' [the 21 triggers EXC-1 to EXC-21 / RF-1 to RF-21]",
+      "Treat (if clinically appropriate) and concurrently refer (p.4): 'Provide initial treatment and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: the patient is or could be pregnant; labyrinthitis is suspected (vertigo, nystagmus with symptoms worsened by motion, tinnitus).'",
+      "Consider possible causes of nausea and vomiting (p.4): 'When in doubt of the cause of the nausea and vomiting, the pharmacist should refer the patient to an appropriate healthcare provider.'",
+      "Appendix 1 (pp.8-11) routine referral rows: adynamic ileus; gastroparesis; hepatitis; peritonitis or other acute abdominal condition; cannabis use (cannabis hyperemesis syndrome); labyrinthitis; advanced cancer, chemotherapy, or radiation exposure; urinary tract infection - 'Referral to an appropriate healthcare provider if suspected/is required.'",
+      "Appendix 1 (p.10) Drug adverse effect or toxicity: 'If nausea and vomiting is a known adverse effect, referral to the original prescriber is required.'",
+      "Appendix 1 (p.11) Pregnancy: 'Treat (if clinically appropriate) and concurrently refer to an appropriate healthcare provider.'",
+      "Appendix 1 (p.9, p.11) 'Usual pharmacy care and referral to an appropriate healthcare provider': migraine; SARS-COV-2 infection.",
+      "General advice (p.6): 'At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if:' [the 5 triggers RF-24 to RF-28]",
+      "Clinical review (p.7): 'Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).'",
+      "Communicate agreed management plan (p.6): 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.'"
+    ],
+    "urgent": [
+      "Appendix 1 (p.8) Bowel obstruction: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.8) Toxic ingestion (including alcohol and chronic cannabis use): 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.9) Closed head injury or concussion: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.9) CNS haemorrhage: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.9) CNS infection e.g. meningitis: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.9) Increased intracranial pressure: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.10) Diabetic ketoacidosis (DKA): 'Immediate referral to an appropriate healthcare provider is required if this is suspected, including if ketones are 0.6 mmol/L or higher.'",
+      "Appendix 1 (p.10) Drug adverse effect or toxicity: 'If suspected overdose or serious reaction, immediate referral to an appropriate healthcare provider is required.'",
+      "Appendix 1 (p.10) Liver or renal failure: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.10) Myocardial infarction: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.10) Severe pain: 'Immediate referral to an appropriate healthcare provider is required if suspected.'",
+      "Appendix 1 (p.11) Addisonian (acute adrenal) crisis: 'Immediate referral to an appropriate healthcare provider is required.'"
+    ],
+    "emergency": [
+      "Refer when (p.3): '... (including emergency services, if required) in the following situations:'",
+      "Treat (if clinically appropriate) and concurrently refer (p.4): '... (including emergency services, if required) in the following situations:'"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 3, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review (p.7)",
+      "what": "Clinical review is generally not required. Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At the time of initial consultation (advice on return triggers)",
+      "what": "Patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: the condition does not improve or resolve within 24 to 48 hours of starting treatment; the patient's condition worsens, including developing systemic signs and symptoms; the patient develops new or worsening signs or symptoms, or signs of severe dehydration; the patient's symptoms recur after initial resolution; adverse effects of treatment cannot be managed in the pharmacy setting.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "General advice" }
+    },
+    {
+      "when": "Clinical review (flow step, page 2)",
+      "what": "Clinical review - response to treatment; communication with other health practitioners.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 2, "section_heading": "Guideline overview" }
+    },
+    {
+      "when": "After the agreed management plan is made (sharing with the care team)",
+      "what": "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 6, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Food poisoning (p.8): 'Gastroenteritis - viral or bacterial/food poisoning ... Self-limiting - May be managed under this guideline. For suspected food poisoning, consider notification to local public health unit.' (conditional and discretionary wording: 'consider notification')"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Nausea.pdf", "page": 8, "section_heading": "Appendix 1 - Possible causes of nausea and vomiting - Gastrointestinal disorders" }
+  },
+  "references": [
+    "1. Lacy BE, Parkman HP, Camilleri M. Chronic nausea and vomiting: evaluation and treatment. Am J Gastroenterol. 2018;113(5):647-59. [p.12]",
+    "2. Therapeutic Guidelines: Gastrointestinal (Nausea and vomiting). Melbourne: Therapeutic Guidelines Limited; 2022 [cited 2025 April 02]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Gastrointestinal&topicfile=nausea-vomiting [p.12]",
+    "3. Queensland Health and Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. Cairns: Office of Rural and Remote Health, Queensland Government; 2025 [cited 2025 June 18]. Available from: https://www.health.qld.gov.au/orrh/clinical-manuals/primary-clinical-care-manual-pccm [p.12]",
+    "4. Gotfried J. MSD Manual Professional Version: Nausea and Vomiting: Merck & Co; 2024 [cited 2025 April 02]. Available from: www.msdmanuals.com/professional/gastrointestinal-disorders/symptoms-of-gastrointestinal-disorders/nausea-and-vomiting?query=nausea%20and%20vomiting. [p.12]",
+    "5. Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis). Melbourne: Therapeutic Guidelines Limited; 2022 [cited 2025 April 02]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Gastrointestinal&topicfile=c_GIG_Assessment-of-acute-gastroenteritistopic_1&guidelinename=auto&sectionId=c_GIG_Assessment-of-acute-gastroenteritistopic_1#c_GIG_Assessment-of-acute-gastroenteritistopic_1 [p.12]",
+    "6. Australian Medicines Handbook: Antiemetics. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 02]. Available from: https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/antiemetics?menu=vertical. [p.12]",
+    "7. Metz A, Hebbard G. Nausea and Vomiting in Adults: A diagnostic approach. Australian Family Physician. 2007;36(9). [p.12]",
+    "8. Ansari P. MSD Manual Professional Version: Acute Abdominal Pain: Merck & Co; 2024 [cited 2025 April 02]. Available from: https://www.msdmanuals.com/professional/gastrointestinal-disorders/acute-abdomen-and-surgical-gastroenterology/acute-abdominal-pain [p.12]",
+    "9. Clinical Excellence Queensland. Diabetic ketoacidosis. Brisbane: The State of Queensland (Queensland Health); 2022 [cited 2025 April 2]. Available from: https://www.health.qld.gov.au/clinical-practice/guidelines-procedures/clinical-resources/diabetes-resources-for-health-professionals/diabetes-in-adults#section__diabetic-ketoacidosis [p.12]",
+    "10. Sweis RN, Jivan A. MSD Manual Professional Version: Acute Myocardial infarction (MI). Merck & Co; 2024 [cited 2025 April 28]. Available from: https://www.msdmanuals.com/professional/cardiovascular-disorders/coronary-artery-disease/acute-myocardial-infarction-mi [p.12]",
+    "11. Jin B, Singh R, Ha SE et al. Pathophysiological mechanisms underlying gastrointestinal symptoms in patients with COVID-19. World J Gastroenterol 2021; 27(19): 2341-2352 [p.12]",
+    "12. Singh P, Yoon SS, Kuo B. Nausea: a review of pathophysiology and therapeutics. Therapeutic Advances in Gastroenterology. 2015;9(1):98-112. [p.12]"
+  ],
+  "open_questions": [
+    {
+      "topic": "No product-level antiemetic drug, strength, dose, frequency or duration is printed",
+      "observed": "Develop management plan (p.5) defines pharmacotherapy only as 'an oral medicine for the treatment of acute nausea and vomiting associated with gastroenteritis mentioned in the Therapeutic Guidelines: Gastrointestinal: Nausea and vomiting (Antiemetic drugs in adults)'. No drug name appears anywhere in the 13 pages; prescribing is 'according to the specified sections of the current online version of the Therapeutic Guidelines'.",
+      "why_unclear": "TX-2 has blank strength/dose/frequency/duration/quantity fields; nothing can be transcribed without inventing it. Selection and dosing must come from the specified sections of the current online Therapeutic Guidelines.",
+      "source_page": 5
+    },
+    {
+      "topic": "No oral rehydration product, volume, rate or schedule is printed",
+      "observed": "Non-pharmacological measure (p.5): 'oral rehydration therapy to prevent or correct dehydration, in accordance with the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Rehydration for acute gastroenteritis in adults)'; no product, composition or volume is printed anywhere.",
+      "why_unclear": "TX-1 has blank form/strength/dose/frequency/duration fields; supply details must come from the cited Therapeutic Guidelines section.",
+      "source_page": 5
+    },
+    {
+      "topic": "'prolonged vomiting (> 24 to 48 hours)' prints a two-number threshold",
+      "observed": "Refer when (p.3): 'prolonged vomiting (> 24 to 48 hours)'; General advice (p.6): 'the condition does not improve or resolve within 24 to 48 hours of starting treatment'. Both readings (24 hours and 48 hours) are recorded; neither is chosen.",
+      "why_unclear": "RF-2 carries structured {parameter: vomiting_duration, operator: >, value: null, unit: hours} with confidence 'unclear' because a machine-checkable cut-off cannot be selected without inventing one; EXC-2 keeps the printed wording verbatim.",
+      "source_page": 3
+    },
+    {
+      "topic": "Ketone threshold is printed; no glucose threshold is printed",
+      "observed": "Refer when (p.3): 'increased blood ketone and glucose levels, including if ketones are 0.6 mmol/L or higher'; Appendix 1 DKA (p.10): 'including if ketones are 0.6 mmol/L or higher'. No numeric glucose value appears anywhere in the document.",
+      "why_unclear": "RF-12 and RF-43 encode only the ketone threshold (>= 0.6 mmol/L); 'increased ... glucose levels' stays qualitative because no glucose number is printed.",
+      "source_page": 3
+    },
+    {
+      "topic": "Combinatorics are inferred from the document's own framing",
+      "observed": "'Service restricted to patients aged 18 years or over' and 'may only be used by pharmacists who...' imply AND for the inclusion criteria (INC-1 to INC-5); 'in the following situations:' introduces the 21 refer-when items as alternatives, implying OR (EXC-1 to EXC-21).",
+      "why_unclear": "The document never prints 'all of' or 'any of' explicitly; the all_of/any_of groups are inferred from that wording and recorded here per spec rule 4.",
+      "source_page": 3
+    },
+    {
+      "topic": "The Refer when list is printed twice (page 2 overview column and page 3 section) with minor wording differences",
+      "observed": "The 21 triggers appear in the right-hand column of the Guideline overview on p.2 and again as the full 'Refer when' section on p.3. Differences: p.2 'Green, bile or blood vomit' vs p.3 'green, bile or blood (coffee grounds) vomit'; capitalisation of the prolonged-vomiting item.",
+      "why_unclear": "The list was captured once with provenance to p.3 (the dedicated section with the fuller wording); the p.2 duplicates are noted here so the duplication and wording differences are not lost.",
+      "source_page": 3
+    },
+    {
+      "topic": "Treat-and-concurrently-refer items are printed twice",
+      "observed": "Page 4 'Treat (if clinically appropriate) and concurrently refer' lists pregnancy and suspected labyrinthitis; Appendix 1 repeats pregnancy (p.11) and labyrinthitis (p.9) with their own action wording.",
+      "why_unclear": "Both prints are recorded as separate red flags with their own provenance (RF-22/RF-23 on p.4; RF-40 and RF-50 on pp.9 and 11) rather than silently deduplicated, per the never-reconcile rule; whether they are one rule or two is left to the consumer.",
+      "source_page": 4
+    },
+    {
+      "topic": "Appendix 1 rows read imperfectly from the two-column text extraction",
+      "observed": "Appendix 1 is a Condition / Presentation and suggestive findings / Action table. The p.8 'Toxic ingestion (including alcohol and chronic cannabis use)' findings cell extracts as 'Ongoing nausea, vomiting, and indigestion that occurs with an chronic cannabis use', which duplicates the p.9 cannabis hyperemesis findings and appears mis-merged; the p.9 Migraine findings end with the incomplete fragment 'Patient will usually have a history'.",
+      "why_unclear": "RF-34 carries confidence 'unclear' and RF-41 'medium'; the action texts themselves are unambiguous, but the findings-to-row pairing could be misaligned and must be checked against the PDF layout before encoding.",
+      "source_page": 8
+    },
+    {
+      "topic": "Motion sickness has no referral trigger",
+      "observed": "Appendix 1 (p.9) Motion sickness action reads only 'Usual pharmacy care.' - the only row with no referral statement.",
+      "why_unclear": "Motion sickness is therefore not captured as a red flag; it is recorded here so the omission is explicit rather than an oversight.",
+      "source_page": 9
+    },
+    {
+      "topic": "Gastroenteritis/food poisoning row is the in-scope condition and carries the only notification statement",
+      "observed": "Appendix 1 (p.8): 'Gastroenteritis - viral or bacterial/food poisoning ... Self-limiting - May be managed under this guideline. For suspected food poisoning, consider notification to local public health unit.' The wording is 'consider', i.e. discretionary.",
+      "why_unclear": "Captured in notifiable (required: true, with the discretionary wording recorded) rather than as a red flag; whether 'consider' is mandatory under the pilot is left to Hugh to confirm.",
+      "source_page": 8
+    },
+    {
+      "topic": "Parents/caregivers wording appears although the service is restricted to adults",
+      "observed": "The service is 'restricted to patients aged 18 years or over' (p.1), yet General advice and Clinical review address 'patients (and/or parents/caregivers)' (pp.6-7) and the supervision model mentions 'their parent/caregiver' (p.1).",
+      "why_unclear": "It is not stated whether the guideline contemplates adults with impaired capacity, residual Queensland source-format text, or both; the wording is transcribed verbatim without interpretation.",
+      "source_page": 6
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "No version, date, document ID or approving officer appears; page 13 shows footer codes \"62'GUA\" and \"180510-DEC\", 'Produced by Clinical Excellence Division' and '© Department of Health 2026'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 13
+    },
+    {
+      "topic": "Referral block spans pages 3 to 11",
+      "observed": "Referral destinations/criteria are printed on p.3 (Refer when), p.4 (treat and concurrently refer; when in doubt of the cause), pp.8-11 (Appendix 1 actions), p.6 (General advice; share plan with care team) and p.7 (Clinical review).",
+      "why_unclear": "Spec rule for the referral block: the shared provenance uses the first page (p.3); the range 3-11 is recorded here.",
+      "source_page": 3
+    },
+    {
+      "topic": "'recurring episodes of acute nausea and vomiting' has no definition or frequency",
+      "observed": "Refer when (p.3): 'the patient has recurring episodes of acute nausea and vomiting'. No episode count, interval or time window is printed; the separate chronic criterion is '> 4 weeks'.",
+      "why_unclear": "EXC-18/RF-18 stay qualitative; the trigger cannot be evaluated automatically without a local definition.",
+      "source_page": 3
+    },
+    {
+      "topic": "No first-line ranking between oral rehydration therapy and an oral antiemetic",
+      "observed": "Page 5 lists 'non-pharmacological measures' (oral rehydration therapy) before 'pharmacotherapy' (an oral medicine), and p.3 says an oral antiemetic 'may be considered for symptom relief if the nausea and vomiting is suspected to be caused by gastroenteritis, although spontaneous improvement ... is likely'; no statement ranks the two or names a first-line medicine.",
+      "why_unclear": "first_line is false on both treatment rows because the document gives no ranking; row order reflects document order only. This reflects the source rather than a clinical judgement.",
+      "source_page": 5
+    },
+    {
+      "topic": "No scheduled clinical review timepoint",
+      "observed": "Page 7: 'Clinical review is generally not required.' The only time-based return trigger is the General advice item 'within 24 to 48 hours of starting treatment' (p.6); no follow-up appointment or review interval is printed.",
+      "why_unclear": "review_followup captures the printed statements only; there is no mandated review window to encode.",
+      "source_page": 7
+    },
+    {
+      "topic": "Pregnancy testing is not addressed",
+      "observed": "Appendix 1 (p.11) Pregnancy row notes 'Patient may not be aware they are pregnant' and directs 'Treat (if clinically appropriate) and concurrently refer'; page 4 lists 'pregnancy and lactation status (if applicable)' in the history, but no instruction to test - and no statement permitting treatment without testing - is printed.",
+      "why_unclear": "Whether a pregnancy test must precede treatment, and who supplies it, is not stated; recorded as an open question rather than resolved.",
+      "source_page": 11
+    },
+    {
+      "topic": "CARPA Standard Treatment Manual is listed as a pharmacist resource",
+      "observed": "Pharmacist resources (p.7) include 'CARPA Standard Treatment Manual - Nausea and vomiting'; reference 3 is the Queensland Health and Royal Flying Doctor Service Primary Clinical Care Manual 12th edition 2025.",
+      "why_unclear": "CARPA is the remote/air critical-care protocol set; its relevance to WA EACPP community pharmacy practice is not explained in the document (also flagged to Hugh).",
+      "source_page": 7
+    },
+    {
+      "topic": "Parenteral antiemetic trigger has no further guidance",
+      "observed": "Refer when (p.3): 'parenteral administration of an antiemetic is indicated'; the Develop management plan pharmacotherapy item is oral only (p.5).",
+      "why_unclear": "The document gives no criterion for when parenteral administration becomes indicated (no severity scale, no failed-oral-trial count), so the gate exists but cannot be evaluated from printed content.",
+      "source_page": 3
+    },
+    {
+      "topic": "Appendix 1 rows carry superscript citations but are not mapped row-by-row",
+      "observed": "The Appendix 1 title cites '2, 4, 7-12'; individual rows show citation 9 (DKA) in the extracted text, but row-level attribution is otherwise not printed.",
+      "why_unclear": "Evidence sources for individual differential-diagnosis rows cannot be reconstructed from this document alone.",
+      "source_page": 8
+    },
+    {
+      "topic": "Source and adaptation acknowledged: originally Queensland Health material",
+      "observed": "Page 13: 'This document is based on clinical guidelines/protocols originally developed by Queensland Health for the Queensland Community Pharmacy Pilots. Queensland Health is acknowledged as the source of the original material. Queensland Health does not accept responsibility for the content or accuracy of any adaptations, or for any decisions made based on the material presented in this document.'",
+      "why_unclear": "Recorded for provenance of the instrument; no version of the Queensland originals is cited, so the WA document's own version cannot be derived from it.",
+      "source_page": 13
+    },
+    {
+      "topic": "Urgency mapping conventions applied to Appendix 1 wording",
+      "observed": "'Immediate referral ... is required if suspected' rows are encoded action REFER_URGENT / severity high (12 rows); plain 'Referral ... if suspected/is required' rows are REFER / medium; 'Usual pharmacy care and referral' rows (migraine, SARS-COV-2) are REFER / low; the 21 Refer when rows are REFER / medium (the document's uniform 'including emergency services, if required' framing); General advice rows are REFER / low.",
+      "why_unclear": "The document never uses the words 'urgent' or 'emergency' outside that qualifier; the mapping follows the document's own urgency language (immediate vs routine vs usual care) and is recorded here for audit.",
+      "source_page": 8
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm each pharmacist's EACPP approval and authorisation to prescribe under the Medicines and Poisons Regulations 2016 (WA), since 'This document alone does not provide an authorisation for a pharmacist to prescribe'.",
+      "source_page": 1,
+      "reason": "Eligibility to use the guideline is conditional on departmental approval and authorisation that this document cannot evidence."
+    },
+    {
+      "item": "Confirm which sections of the current online version of the Therapeutic Guidelines are the 'specified sections' pharmacists must prescribe according to (page 5) - the guideline does not enumerate them.",
+      "source_page": 5,
+      "reason": "INC-5 makes this a mandatory prescribing condition, but without the section list it cannot be evaluated as a hard check before go-live."
+    },
+    {
+      "item": "Obtain product-level antiemetic drug names, strengths, doses, frequencies, quantities and durations from the Therapeutic Guidelines: Gastrointestinal (Nausea and vomiting - Antiemetic drugs in adults) before any dosing rule is encoded - no drug name is printed anywhere in this guideline.",
+      "source_page": 5,
+      "reason": "TX-2 has blank strength/dose/frequency fields; a prescribing support module cannot issue supply instructions from a therapeutic class reference alone."
+    },
+    {
+      "item": "Obtain the oral rehydration product(s), volumes, rates and schedule from the Therapeutic Guidelines: Gastrointestinal (Acute gastroenteritis - Rehydration for acute gastroenteritis in adults) - no product or volume is printed.",
+      "source_page": 5,
+      "reason": "TX-1 has blank dosing fields; supply instructions cannot be derived from this document alone."
+    },
+    {
+      "item": "Confirm the operational cut-off for 'prolonged vomiting (> 24 to 48 hours)' (page 3): 24 hours or 48 hours - both readings are printed and neither is chosen in the extraction.",
+      "source_page": 3,
+      "reason": "This is a hard referral boundary for a common presentation; the encoded threshold must be agreed locally rather than invented (RF-2 currently has value null)."
+    },
+    {
+      "item": "Confirm the food-poisoning notification pathway (page 8): which local public health unit receives notifications, and whether 'consider notification to local public health unit' is mandatory or discretionary under the EACPP.",
+      "source_page": 8,
+      "reason": "The document uses discretionary wording ('consider') for a jurisdictional WA public health process; notifiable.required is true with that wording recorded verbatim."
+    },
+    {
+      "item": "Confirm point-of-care ketone testing arrangements (pages 3 and 10): who performs the test, whether a ketone meter is available in the pharmacy, and what glucose threshold applies - the document prints 'ketones are 0.6 mmol/L or higher' but no glucose value.",
+      "source_page": 3,
+      "reason": "The ketone trigger can only be checked if testing capability and the missing glucose criterion exist locally; no glucose number is printed to encode."
+    },
+    {
+      "item": "Confirm whether the parents/caregivers clauses (pages 6-7, and 'their parent/caregiver' on page 1) are operative for a service 'restricted to patients aged 18 years or over', or are inherited from the Queensland source format.",
+      "source_page": 6,
+      "reason": "It changes who receives counselling and who is advised to seek further care; the document does not explain the inconsistency."
+    },
+    {
+      "item": "Confirm the controlled version/date of this clinical practice guideline with the Department of Health (no version or date is printed; only footer codes \"62'GUA\" and \"180510-DEC\" and © Department of Health 2026).",
+      "source_page": 13,
+      "reason": "A clinical practice guideline used for funded prescribing must be version-controlled and traceable to an approval date."
+    },
+    {
+      "item": "Confirm whether the CARPA Standard Treatment Manual and the Queensland Health/RFDS Primary Clinical Care Manual are expected references for WA EACPP community pharmacy practice (page 7).",
+      "source_page": 7,
+      "reason": "Both are remote/Queensland resources; the document lists them without explaining their role in WA community pharmacy practice."
+    },
+    {
+      "item": "Confirm the local operational definition of 'recurring episodes of acute nausea and vomiting' (page 3) - no episode count or interval is printed.",
+      "source_page": 3,
+      "reason": "Without a definition the trigger cannot be encoded as an automatic eligibility check; it stays qualitative (EXC-18/RF-18)."
+    },
+    {
+      "item": "Confirm the pregnancy pathway (pages 4 and 11): referral destination for concurrent referral, whether a pregnancy test is required before any treatment, and whether mild-to-moderate nausea and vomiting may be managed with non-pharmacological measures while awaiting review.",
+      "source_page": 4,
+      "reason": "The document directs treat-and-refer but prints no destination, no testing instruction and no interim management beyond 'usual pharmacy care including non-pharmacological therapies'."
+    },
+    {
+      "item": "Confirm what 'referral to the original prescriber' means operationally for a known drug adverse effect (page 10) - whether the prescriber is the GP, a specialist or the original EACPP prescriber - and the expected response time.",
+      "source_page": 10,
+      "reason": "REVIEW_GP was not encoded because the document says 'original prescriber', not GP; destination and urgency must be confirmed locally."
+    }
+  ]
+}

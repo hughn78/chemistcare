@@ -1,0 +1,792 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline",
+    "pdf_sha256": "6cef46e3014ff4f08ec8190e7a7014e9697f713f514ae5600797a759e149482d",
+    "page_count": 10,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Impetigo - Clinical Practice Guideline",
+    "instrument_version": "Version dated 1 July 2025 (version history: Version 2.0, 01.07.2025)",
+    "effective_date": "2025-07-01",
+    "legal_basis": "No prescribing legal instrument, regulation or poisons schedule provision is printed anywhere in this document.",
+    "supervision_model": "Not stated using 'collaborative'/'autonomous' terminology; document states pharmacists are advised to exercise professional discretion and judgement and must prescribe medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+    "scope_summary": "Queensland Community Pharmacy clinical practice guideline for pharmacist management of impetigo. Service restricted to patients aged 1 year or over. Covers 'Refer when' triggers (with ARF risk and endemic-community criteria referencing Table 1), key points (including case-by-case assessment and possible referral for IM benzathine benzylpenicillin for Aboriginal and Torres Strait Islander patients), patient history, examination and clinical features (non-bullous, bullous, ecthyma), investigations (skin swab), complications (APSGN, ARF, sepsis), development of a management plan (topical vs oral anti-infective rules, NB1 antimicrobial stewardship), confirmation of management, communication of the plan, general advice, clinical review and follow-up. Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 1 year or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Impetigo - Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Presentation is impetigo within the scope of this guideline: 'Impetigo can be classified as primary or secondary form: the primary form is a direct bacterial infection of otherwise healthy skin; the second form (most common) is bacterial infection of a break in the skin from trauma or pruritic conditions (impetiginisation) (6-8).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 3, "section_heading": "Clinical features and presenting symptoms" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'While impetigo is usually self-limiting and can spontaneously resolve without treatment, Australian guidelines advise that all patients with impetigo require anti-infective treatment (2, 3).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Key points" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "unclear diagnosis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "concurrent condition is suspected that cannot be treated in the community pharmacy setting (e.g. viral infection, eczema herpaticum, cellulitis)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "widespread, painful rash",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "raised purple rash that doesn’t blanch",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "generalised erythema that covers ≥90% of skin surface",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "blistering of skin and mucous membranes (including mouth and eyes)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "systemic signs or symptoms, including fever, lethargy, headache, rash, nausea and vomiting",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "chronic sores or ulcers",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "the impetigo is widespread, severe and/or has ecthyma (ulceration) present",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "immunocompromised",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "at high risk of acute rheumatic fever (ARF) (refer to Table 1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "patient resides, or has recently resided in an endemic community (refer to Table 1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "inadequate response to optimal treatment",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "infection reoccurs frequently.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 1,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Impetigo - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Impetigo - Clinical Practice Guideline" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist assessment and management of impetigo (history, examination, investigations, referral screening, ARF risk, treatment, confirmation, counselling and review)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient history: Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; weight (if a child); pregnancy and lactation status (if applicable); ethnicity (Aboriginal and Torres Strait Islander, Māori or Pacific Islander); most recent place of residence/community and/or recent travel to a place where impetigo or ARF may be endemic (a high rate of ARF within the population); onset, duration, nature, location and extent of lesions; recent skin, throat or other infections (e.g. respiratory tract infection) and treatment received; other signs and symptoms e.g., pain, lymphadenopathy, signs of sepsis or other complications (including APSGN and ARF) such as fever, confusion, tachycardia, hypotension or hypertension, clammy skin, vomiting and diarrhoea, facial or peripheral oedema, severe headache, joint pain and/or hot swollen joints, swelling beneath impetigo lesions; potential source of infection e.g., skin trauma, contact with people with similar symptoms; underlying medical conditions including, skin conditions or immunosuppression that may lead to complications (e.g., atopic dermatitis, scabies, herpes simplex); current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/adverse reactions; other risk factors including poor hygiene, day care settings, crowding and malnutrition. Reminder: pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" },
+            { "criterion": "No signs of sepsis or other complications (including APSGN and ARF) such as fever, confusion, tachycardia, hypotension or hypertension, clammy skin, vomiting and diarrhoea, facial or peripheral oedema, severe headache, joint pain and/or hot swollen joints, swelling beneath impetigo lesions (RF-26)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination - Clinical features and presenting symptoms: Impetigo can be classified as primary or secondary form: the primary form is a direct bacterial infection of otherwise healthy skin; the second form (most common) is bacterial infection of a break in the skin from trauma or pruritic conditions (impetiginisation) (6-8). Impetigo may have a similar presentation or co-occur with other common skin conditions including contact dermatitis, thermal burns, folliculitis, dermatophytosis, candidiasis, eczema, scabies, herpes zoster, atopic dermatitis, varicella or molluscum contagiosum (4, 9-10). Table 1. Types of impetigo (1, 2, 7, 11-13): Non-bullous - thin-walled pustules or vesicles that may be itchy, usually not painful, rupture quickly and progress to honey-coloured crusts, minimal or no surrounding erythema; may start with a single vesicle that coalesces with others, often self-inoculation leads to multiple lesions particularly on the face and extremities; patients are generally otherwise well although they may have regional lymphadenopathy; lesions may resolve spontaneously within 2-4 weeks without treatment and heal without scarring. Bullous - irritating, larger (diameter often > 1 cm) fluid-filled vesicles and blisters that rupture quickly to broad-based bullae, and progress to a thin, flat yellow/brown crust; tends to occur on moist intertriginous areas including the nappy area, axillae and neck, as well as the face, trunk and extremities; lesions typically have scaling on the border of the bullae (collarette); patients with bullous impetigo are more likely to experience systemic symptoms including fever, malaise and lymphadenopathy. Ecthyma (deep impetigo) - crusted sores with underlying ulcers; if the crust is removed, an indurated ulcer will appear red, swollen and oozing; most commonly affects the buttocks, thighs, legs, ankles and feet; people more likely to develop ecthyma include children, immunocompromised people, people with untreated impetigo and people living in crowded conditions with poor hygiene; lymphadenopathy may occur; lesions resolve slowly and sometimes spontaneously without treatment, although they may gradually enlarge and also scar.",
+          "gates": [
+            { "criterion": "Diagnosis is clear and conditions with similar presentation (contact dermatitis, thermal burns, folliculitis, dermatophytosis, candidiasis, eczema, scabies, herpes zoster, atopic dermatitis, varicella, molluscum contagiosum) excluded - see RF-1 'unclear diagnosis'", "on_fail": "REFER" },
+            { "criterion": "Impetigo is not classified as widespread, severe and/or ecthyma (ulceration) present (RF-9)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 3, "section_heading": "Clinical features and presenting symptoms" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "INVESTIGATION",
+          "description": "Investigations: Non-bullous impetigo infection can be caused by Staphylococcus aureus or Streptococcus pyogenes (Group A streptococcus), or both. Bullous impetigo is usually caused by Staphylococcus aureus (2, 7). Patients with impetigo do not require an initial skin swab prior to commencing empirical antibiotic therapy unless the diagnosis is uncertain or impetigo is recurrent (2, 7, 12).",
+          "gates": [
+            { "criterion": "Diagnosis is not uncertain AND impetigo is not recurrent (otherwise skin swab / referral applies - RF-21, RF-1, EXC-14)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 4, "section_heading": "Investigations" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Screen against the printed 'Refer when' list: Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations: unclear diagnosis; concurrent condition is suspected that cannot be treated in the community pharmacy setting (e.g. viral infection, eczema herpaticum, cellulitis); widespread, painful rash; raised purple rash that doesn’t blanch; generalised erythema that covers ≥90% of skin surface; blistering of skin and mucous membranes (including mouth and eyes); systemic signs or symptoms, including fever, lethargy, headache, rash, nausea and vomiting; chronic sores or ulcers; the impetigo is widespread, severe and/or has ecthyma (ulceration) present; immunocompromised; at high risk of acute rheumatic fever (ARF) (refer to Table 1); patient resides, or has recently resided in an endemic community (refer to Table 1); inadequate response to optimal treatment; infection reoccurs frequently. (See EXC-1 to EXC-14, RF-1 to RF-14.)",
+          "gates": [
+            { "criterion": "None of the 'Refer when' triggers present (RF-1 to RF-14)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "ARF risk assessment - Table 1. Individuals at high risk of developing ARF (2, 17, 19): Aboriginal and Torres Strait Islander people residing in a rural or remote area, or living in a household affected by household overcrowding (>2 people per bedroom) or experiencing socioeconomic disadvantage; Māori and/or Pacific Islander person living in a household affected by overcrowding (>2 people per bedroom) or experiencing socioeconomic disadvantage; a person with a personal history of ARF or RHD; a person with a family or household member with a recent history of ARF or RHD. Additional risk factors for individuals aged ≤40 years (particularly between 5-20 years): people living in a household affected by household overcrowding (>2 people per bedroom) or experiencing socioeconomic disadvantage; people with current or prior residence in (or frequent or recent travel to) an area with a high rate of ARF e.g., refugees and migrants from low-middle income countries, rural and remote communities. People considered at high risk of developing ARF are specified in Table 1. People of Aboriginal and Torres Strait Islander descent presenting for treatment of impetigo should be assessed on a case-by-case basis to determine the appropriate treatment pathway, and whether referral to an appropriate healthcare provider for treatment with intramuscular (IM) benzathine benzylpenicillin is required (page 2, Key points).",
+          "gates": [
+            { "criterion": "Patient is not at high risk of developing ARF per Table 1 (RF-11/EXC-11)", "on_fail": "REFER" },
+            { "criterion": "Patient does not reside, or has not recently resided in an endemic community, and has no current or prior residence in (or frequent or recent travel to) an area with a high rate of ARF (RF-12/EXC-12)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 5, "section_heading": "Table 1. Individuals at high risk of developing ARF" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Develop management plan: Treatment of impetigo supports skin healing and prevents the development of more serious complications (e.g. sepsis, bone and joint infections, poststreptococcal complications including ARF) (2). Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. Pharmacist management of impetigo involves: non-pharmacological measures - advice and education to reduce the spread of impetigo as per the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Impetigo) (2) and the Royal Children's Hospital Melbourne: Impetigo (school sores) fact sheet (20); examination and treatment of co-occurring skin conditions (e.g. dermatitis, scabies, head lice, tinea) or referral to an appropriate healthcare provider; pharmacotherapy (NB1) - a topical or oral medicine mentioned in the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Impetigo) (2). Topical anti-infectives are considered sufficient treatment for patients with nonrecurrent limited non-bullous impetigo (up to 2 sores) who are not at high risk of ARF. Topical antibiotics are not appropriate if the infection is widespread or multiple family/community members are infected, due to the risk of rapid resistance (1-3). Pharmacists may prescribe oral antibiotics if impetigo is in a localised area with more than 2 sores, unless referral criteria apply. See 'Refer when'. NB1: The correct use of antibiotics is essential. Prolonged or incorrect use may increase the risk of antimicrobial resistance, particularly for topical antibiotics (5, 13). Discussing the treatment regimen with patients (and/or parent/caregiver) reduces the risk that antibiotics will be incorrectly used (5). Where the patient (and/or parent/caregiver) ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to an appropriate healthcare provider for IM benzathine benzylpenicillin (2, 5). Refer to the Primary Clinical Care Manual for further information (10).",
+          "gates": [
+            { "criterion": "Patient is not at high risk of ARF and does not reside/recently reside in an endemic community (referral criteria do not apply - see PW-1-S4/PW-1-S5)", "on_fail": "REFER" },
+            { "criterion": "Infection is not widespread and multiple family/community members are not infected (otherwise topical antibiotics are not appropriate, due to the risk of rapid resistance)", "on_fail": "unclear" },
+            { "criterion": "If topical treatment is selected, the patient (and/or parent/caregiver) ability and motivation to correctly use topical treatment is not in doubt", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 6, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: Consult the Therapeutic Guidelines, Australian Medicines Handbook and other appropriate resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. Reminder: The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic. Pharmacists should carefully assess whether antibiotic therapy is clinically indicated, and if so, consider local antimicrobial resistance patterns and relevant clinical factors when selecting therapy.",
+          "gates": [
+            { "criterion": "Management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 6, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: Comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment, including recognising complications of impetigo, particularly ARF and APSGN. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources provided to patients (and/or parents/caregivers) and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. Patient resources: The Royal Children's Hospital Melbourne Fact sheet: Impetigo (school sores) (20).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "General measures for the patient, family and community to reduce the spread: 'The management of impetigo consists of pharmacotherapy in addition to general measures for the patient, family and community to reduce the spread (5).' 'Household contacts should be assessed and treated if affected.' Advice and education to reduce the spread of impetigo as per the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Impetigo) (2) and the Royal Children's Hospital Melbourne: Impetigo (school sores) fact sheet (20) (page 6, Develop management plan).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Key points" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "REFER",
+          "description": "General advice: At the time of initial consultation, patients (and/or parents/caregiver) should be advised to see an appropriate healthcare provider if: the condition does not improve within 5–10 days of starting treatment; the patient’s signs or symptoms worsen; the patient develops new signs or symptoms (e.g. systemic signs or symptoms); the condition reoccurs after treatment course is completed; the adverse effects of treatment cannot be managed in the pharmacy setting. (See RF-16 to RF-20.)",
+          "gates": [
+            { "criterion": "None of the 'see an appropriate healthcare provider if' triggers present (RF-16 to RF-20)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review is generally not required. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+          "gates": [
+            { "criterion": "Condition improves or resolves (otherwise see 'Refer when' and 'General advice')", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "topical anti-infectives",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'A topical or oral medicine mentioned in the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Impetigo) (2).' 'Topical anti-infectives are considered sufficient treatment for patients with nonrecurrent limited non-bullous impetigo (up to 2 sores) who are not at high risk of ARF.' 'Topical antibiotics are not appropriate if the infection is widespread or multiple family/community members are infected, due to the risk of rapid resistance (1-3).' NB1: 'The correct use of antibiotics is essential. Prolonged or incorrect use may increase the risk of antimicrobial resistance, particularly for topical antibiotics (5, 13). Discussing the treatment regimen with patients (and/or parent/caregiver) reduces the risk that antibiotics will be incorrectly used (5). Where the patient (and/or parent/caregiver) ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to an appropriate healthcare provider for IM benzathine benzylpenicillin (2, 5).' No specific product name, strength, dose or frequency is printed (see OQ-3).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 6, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "oral antibiotics",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'Pharmacists may prescribe oral antibiotics if impetigo is in a localised area with more than 2 sores, unless referral criteria apply. See 'Refer when'.' Also printed: 'Where the patient (and/or parent/caregiver) ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to an appropriate healthcare provider for IM benzathine benzylpenicillin (2, 5).' Antimicrobial stewardship: 'The correct use of antibiotics is essential. Prolonged or incorrect use may increase the risk of antimicrobial resistance, particularly for topical antibiotics (5, 13).' No specific agent, strength, dose, frequency or duration is printed (see OQ-3).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 6, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "benzathine benzylpenicillin",
+      "form": "injection",
+      "strength": "",
+      "dose": "",
+      "route": "intramuscular",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'People of Aboriginal and Torres Strait Islander descent presenting for treatment of impetigo should be assessed on a case-by-case basis to determine the appropriate treatment pathway, and whether referral to an appropriate healthcare provider for treatment with intramuscular (IM) benzathine benzylpenicillin is required.' Also: 'Where the patient (and/or parent/caregiver) ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to an appropriate healthcare provider for IM benzathine benzylpenicillin (2, 5).' Administered by an appropriate healthcare provider, not by the pharmacist under this Service. Dose, strength and schedule are not printed (see OQ-3/OQ-7).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Key points" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "unclear diagnosis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "concurrent condition is suspected that cannot be treated in the community pharmacy setting (e.g. viral infection, eczema herpaticum, cellulitis)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "widespread, painful rash",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "raised purple rash that doesn’t blanch",
+      "structured": { "parameter": "rash blanching", "operator": "==", "value": "does not blanch", "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "generalised erythema that covers ≥90% of skin surface",
+      "structured": { "parameter": "percentage of skin surface covered by generalised erythema", "operator": ">=", "value": 90, "unit": "%" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "blistering of skin and mucous membranes (including mouth and eyes)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "systemic signs or symptoms, including fever, lethargy, headache, rash, nausea and vomiting",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "chronic sores or ulcers",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "the impetigo is widespread, severe and/or has ecthyma (ulceration) present",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "immunocompromised",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "at high risk of acute rheumatic fever (ARF) (refer to Table 1)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "patient resides, or has recently resided in an endemic community (refer to Table 1)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "inadequate response to optimal treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "infection reoccurs frequently.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Service restricted to patients aged 1 year or over. (patient aged under 1 year)",
+      "structured": { "parameter": "age", "operator": "<", "value": 1, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Impetigo - Clinical Practice Guideline" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "the condition does not improve within 5–10 days of starting treatment",
+      "structured": { "parameter": "days from starting treatment with no improvement", "operator": "range", "value": "5-10", "unit": "days" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "the patient’s signs or symptoms worsen",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "the patient develops new signs or symptoms (e.g. systemic signs or symptoms)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "the condition reoccurs after treatment course is completed",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "the adverse effects of treatment cannot be managed in the pharmacy setting.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Patients with impetigo do not require an initial skin swab prior to commencing empirical antibiotic therapy unless the diagnosis is uncertain or impetigo is recurrent (2, 7, 12).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 4, "section_heading": "Investigations" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "People of Aboriginal and Torres Strait Islander descent presenting for treatment of impetigo should be assessed on a case-by-case basis to determine the appropriate treatment pathway, and whether referral to an appropriate healthcare provider for treatment with intramuscular (IM) benzathine benzylpenicillin is required.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Key points" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "household overcrowding (>2 people per bedroom) or experiencing socioeconomic disadvantage (high risk of developing ARF, Table 1)",
+      "structured": { "parameter": "people per bedroom", "operator": ">", "value": 2, "unit": "people per bedroom" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 5, "section_heading": "Table 1. Individuals at high risk of developing ARF" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Common symptoms and clinical features [of ARF] include sore and/or swollen joints, fever, increased resting heart rate facial or peripheral oedema, Sydenham chorea (10).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 5, "section_heading": "ARF" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "Common symptoms and clinical features [of APSGN] include obvious facial and orbital swelling, particularly upon waking, elevated blood pressure, proteinuria and macroscopic haematuria with dark brown urine, and lethargy, weakness and/or anorexia (16).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 5, "section_heading": "APSGN" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "other signs and symptoms e.g., pain, lymphadenopathy, signs of sepsis or other complications (including APSGN and ARF) such as fever, confusion, tachycardia, hypotension or hypertension, clammy skin, vomiting and diarrhoea, facial or peripheral oedema, severe headache, joint pain and/or hot swollen joints, swelling beneath impetigo lesions",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 3, "section_heading": "Patient history" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "an appropriate healthcare provider for treatment with intramuscular (IM) benzathine benzylpenicillin",
+      "an appropriate healthcare provider (examination and treatment of co-occurring skin conditions e.g. dermatitis, scabies, head lice, tinea, or referral)"
+    ],
+    "urgent": [],
+    "emergency": [
+      "emergency services, if required"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review (default)",
+      "what": "Clinical review is generally not required. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "If the condition does not improve or resolve",
+      "what": "Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider (see Refer when and General advice).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "If the condition does not improve within 5–10 days of starting treatment",
+      "what": "At the time of initial consultation, patients (and/or parents/caregiver) should be advised to see an appropriate healthcare provider.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "when": "If the condition reoccurs after the treatment course is completed, or signs/symptoms worsen or new signs/symptoms develop, or adverse effects cannot be managed in the pharmacy setting",
+      "what": "See an appropriate healthcare provider at the time of initial consultation advice (General advice list, RF-17 to RF-20).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 7, "section_heading": "General advice" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\impetigo-guideline", "page": 0, "section_heading": "" }
+  },
+  "references": [
+    "1. DynaMed: Impetigo: EBSCO Information Services; 2018 [cited 2025 April 2]. Available from: https://www.dynamed.com/condition/impetigo. (page 10)",
+    "2. Therapeutic Guidelines: Antibiotic (Impetigo). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=impetigo. (page 10)",
+    "3. The Australian Healthy Skin Consortium. National Healthy Skin Guideline for the Prevention, Treatment and Public Health Control of Impetigo, Scabies, Crusted Scabies and Tinea for Indigenous Populations and Communities in Australia. 2018. (page 10)",
+    "4. Panesar P, Green E. Case-based learning: impetigo. The Pharmaceutical Journal. 2020;305(7941). (page 10)",
+    "5. Marquardt T. Managing skin infections in Aboriginal and Torres Strait Islander children. Australian Family Physician. 2014;43(1):16-9. (page 10)",
+    "6. Hartmann-Adams H, Banvard C, Juckett G. Impetigo: Diagnosis and Treatment. American Family Physician. 2014;15(90):229-35. (page 10)",
+    "7. Oakley A, Quirke K. Impetigo: DermNet New Zealand Trust; 2022 [cited 2025 April 2]. Available from: https://dermnetnz.org/topics/impetigo/. (page 10)",
+    "8. Rhiannon R, Dana S, Ian M, John WF. Cutaneous infection and atopic dermatitis: The importance of early intervention in Indigenous children in Australia. Wound Practice & Research: Journal of the Australian Wound Management Association. 2022. (page 10)",
+    "9. DynaMed. Ipswich (MA) [Internet]. EBSCO Information Services. 1995- [cited 1 February 2022]. Available from: https://www.dynamed.com (login and registration required). (page 10)",
+    "10. Queensland Health and Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. Cairns: Office of Rural and Remote Health, Queensland Government; 2025 [cited 2025 June 18]. Available from: https://www.health.qld.gov.au/orrh/clinical-manuals/primary-clinical-care-manual-pccm. (page 10)",
+    "11. Ngan V, Gomez J. Echthyma: DermNet New Zealand Trust; 2016 [cited 2025 April 2]. Available from: https://dermnetnz.org/topics/ecthyma. (page 10)",
+    "12. Rehmus W. MSD Manual Professional Version: Impetigo and Ecthyma: Merck & Co; 2023 [cited 2025 April 2]. Available from: https://www.msdmanuals.com/en-au/professional/dermatologic-disorders/bacterial-skin-infections/impetigo-and-ecthyma?query=Impetigo. (page 10)",
+    "13. National Institute for Health and Care Excellence (NICE). Impetigo: antimicrobial prescribing. London: Public Health England; 2020. (page 10)",
+    "14. Gahlawat G, Tesfaye W, Bushell M, Abrha S, Peterson GM, Mathew C, et al. Emerging Treatment Strategies for Impetigo in Endemic and Nonendemic Settings: A Systematic Review. Clinical Therapeutics. 2021;43(6):986-1006. (page 10)",
+    "15. Northern Territory Government. Acute post-streptococcal glomerulonephritis [Webpage]. Darwin: Northern Territory Government; 2025 [cited 2025 April 2]. Available from: https://nt.gov.au/wellbeing/health-conditions-treatments/bacterial/acute-post-streptococcal-glomerulonephritis. (page 10)",
+    "16. Centers for Disease Control and Prevention. Post-Streptococcal Glomerulonephritis. CDC; 2022 [cited 2025 April 2]. Available from: https://www.cdc.gov/groupastrep/diseases-hcp/post-streptococcal.html. (page 10)",
+    "17. Therapeutic Guidelines: Antibiotic (Acute Rheumatic Fever). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=rheumatic-fever&guidelinename=Antibiotic&sectionId=toc_d1e47#toc_d1e47. (page 10)",
+    "18. Centers for Disease Control and Prevention. Acute Rheumatic Fever. CDC; 2022 [cited 2025 April 2]. Available from: https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/acute-rheumatic-fever.html (page 10)",
+    "19. Ralph AP, Noonan S, Wade V, Currie BJ. The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease. Medical Journal of Australia. 2021;214(5):220-7. (page 10)",
+    "20. The Royal Children's Hospital Melbourne. Impetigo (School Sores) Melbourne: RCHM21. ; 2020 [cited 2025 April 2]. Available from: https://www.rch.org.au/kidsinfo/fact_sheets/Impetigo_school_sores/. (page 10)"
+  ],
+  "open_questions": [
+    {
+      "topic": "No printed exclusion criteria section - 'Refer when' bullets captured as exclusions",
+      "observed": "The document has no heading titled 'Exclusion criteria'. The fourteen bullets under 'Refer when' (page 2) are captured as EXC-1 to EXC-14 because the document directs referral rather than pharmacist treatment for those situations.",
+      "why_unclear": "Derivation from a referral heading rather than a printed eligibility exclusion list.",
+      "source_page": 2
+    },
+    {
+      "topic": "Combinatorics of the 'Refer when' list interpreted as any_of",
+      "observed": "Introductory wording is 'in the following situations:' followed by bullets with no explicit AND/OR statement; encoded as criteria_group.any_of (any one bullet triggers referral).",
+      "why_unclear": "Document does not state combinatorics for the bullet list; default interpretation recorded.",
+      "source_page": 2
+    },
+    {
+      "topic": "Specific topical and oral anti-infective agents, strengths, doses, frequencies and durations not printed",
+      "observed": "Pharmacotherapy is defined only as 'A topical or oral medicine mentioned in the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Impetigo) (2)'. Route rules are printed (topical for nonrecurrent limited non-bullous impetigo up to 2 sores; oral for localised area with more than 2 sores), but no product names or dosing appear.",
+      "why_unclear": "Dose/strength/frequency are not in this document; no invented values were entered.",
+      "source_page": 6
+    },
+    {
+      "topic": "Gate outcome not stated - topical antibiotic route rule",
+      "observed": "'Topical antibiotics are not appropriate if the infection is widespread or multiple family/community members are infected, due to the risk of rapid resistance (1-3).' The document does not state the single downstream action (switch to oral, refer, stop); on_fail recorded as 'unclear'. Note 'Refer when' separately requires referral when impetigo is widespread (RF-9).",
+      "why_unclear": "Restriction printed without a stated downstream action.",
+      "source_page": 6
+    },
+    {
+      "topic": "Gate outcome not stated - doubt about ability/motivation for topical treatment",
+      "observed": "'Where the patient (and/or parent/caregiver) ability and/or motivation to correctly use topical treatment is in doubt e.g., when there are multiple sores, oral antibiotics should be considered, or referral to an appropriate healthcare provider for IM benzathine benzylpenicillin (2, 5).' Two alternative actions are printed ('should be considered, or referral'), so no single on_fail action could be chosen; recorded as 'unclear'.",
+      "why_unclear": "Branch with two permitted actions rather than one dictated action.",
+      "source_page": 6
+    },
+    {
+      "topic": "Gate outcome not stated - confirm management appropriate",
+      "observed": "PW-1-S7 gate 'management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation' has no stated failure action; on_fail recorded as 'unclear'.",
+      "why_unclear": "Document instructs confirmation but not the consequence of a failed check.",
+      "source_page": 6
+    },
+    {
+      "topic": "Two different tables both captioned 'Table 1'",
+      "observed": "Page 3 prints 'Table 1. Types of impetigo (1, 2, 7, 11-13)' and page 5 prints 'Table 1. Individuals at high risk of developing ARF (2, 17, 19)'. The 'Refer when' bullets say '(refer to Table 1)' for both ARF high risk and endemic community - it is ambiguous which table is meant (the ARF risk table on page 5 is the only one containing residence/travel criteria).",
+      "why_unclear": "Duplicate table numbering in the source document.",
+      "source_page": 5
+    },
+    {
+      "topic": "Combinatorics of Table 1 ARF risk lists not stated",
+      "observed": "Table 1 lists four high-risk groups and then 'Additional risk factors for individuals aged ≤40 years (particularly between 5-20 years)' with two further bullets. The document does not state whether the additional factors combine with the main list by AND/OR, or whether 'resides, or has recently resided in an endemic community' maps to a specific bullet; gate outcomes recorded with high confidence for the referral direction but the exact predicate mapping is interpretive.",
+      "why_unclear": "No combinators printed for the risk tables.",
+      "source_page": 5
+    },
+    {
+      "topic": "'Endemic community' not defined numerically",
+      "observed": "'patient resides, or has recently resided in an endemic community (refer to Table 1)' - the document does not define 'endemic community' or 'recently', and Table 1 refers to 'an area with a high rate of ARF e.g., refugees and migrants from low-middle income countries, rural and remote communities'.",
+      "why_unclear": "No numeric or place-list definition printed; structured form left null.",
+      "source_page": 2
+    },
+    {
+      "topic": "first_line ranking not stated explicitly",
+      "observed": "The document states 'Topical anti-infectives are considered sufficient treatment for patients with nonrecurrent limited non-bullous impetigo (up to 2 sores) who are not at high risk of ARF' and 'Pharmacists may prescribe oral antibiotics if impetigo is in a localised area with more than 2 sores'. TX-1 (topical anti-infectives) coded first_line=true on that 'considered sufficient' wording; TX-2 (oral antibiotics) coded first_line=false. The document does not use the words 'first line'.",
+      "why_unclear": "Line of therapy inferred from sufficiency wording, not an explicit ranking.",
+      "source_page": 6
+    },
+    {
+      "topic": "Referral urgency grading",
+      "observed": "'Refer the patient to an appropriate healthcare provider (including emergency services, if required)' is the only urgency wording printed; no trigger carries explicit 'urgent' language, so all referral triggers were coded severity 'medium' (not upgraded) and 'emergency services, if required' is recorded under referral.emergency.",
+      "why_unclear": "No urgency categories printed.",
+      "source_page": 2
+    },
+    {
+      "topic": "No upper age bound printed",
+      "observed": "'Service restricted to patients aged 1 year or over' sets a minimum of 1 year; no maximum age is stated (age_bounds.max_years = null). 'Impetigo commonly affects children between the ages of 2 and 5 but may also affect older children and adults (1)' is epidemiology, not an eligibility bound. Weight ('if a child') is collected in history but no weight-based dosing is printed.",
+      "why_unclear": "Document only states a lower bound.",
+      "source_page": 1
+    },
+    {
+      "topic": "Notifiable requirements silent",
+      "observed": "No mention anywhere in the document of notifiable conditions, GP notification, AIR notification or public health notification, despite ARF/APSGN/sepsis being discussed as complications.",
+      "why_unclear": "Document is silent, so notifiable.required set to null with no page-attributable statement.",
+      "source_page": 1
+    },
+    {
+      "topic": "Legal basis not printed",
+      "observed": "No regulation, poisons schedule provision or other legal instrument is cited anywhere in the document; protocol.legal_basis records that nothing is printed.",
+      "why_unclear": "Nothing in the document to attribute to a page.",
+      "source_page": 1
+    },
+    {
+      "topic": "Text-extraction artefacts on page 1",
+      "observed": "Page 1 extraction contains the strings '#0070C0' (a colour hex code) and 'B b' between the service restriction sentence and 'Guideline overview'; these appear to be conversion artefacts with no clinical meaning.",
+      "why_unclear": "Text extraction artefact; no clinical content attributed to them.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Specific topical and oral anti-infective agents, strengths, doses, routes, frequencies and durations for impetigo (per Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Impetigo)).",
+      "source_page": 6,
+      "reason": "Delegated to the current online version of Therapeutic Guidelines: Antibiotic; must be pinned and confirmed before go-live."
+    },
+    {
+      "item": "Quantity of medicine to supply - 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy' (no numeric cap printed).",
+      "source_page": 7,
+      "reason": "Supply quantity is left to pharmacist judgement with no printed maximum; local policy must set the cap."
+    },
+    {
+      "item": "ARF risk assessment logic: how the Table 1 high-risk groups and 'Additional risk factors for individuals aged ≤40 years (particularly between 5-20 years)' combine, and which list the '(refer to Table 1)' cross-references (duplicate table numbering).",
+      "source_page": 5,
+      "reason": "Jurisdictional risk tool (Rheumatic Heart Disease Australia: ARF RHD Guideline and risk calculator, page 8) must be pinned for the eligibility rules engine."
+    },
+    {
+      "item": "Definition of 'endemic community' and 'recently resided' for the endemic-community referral criterion.",
+      "source_page": 2,
+      "reason": "No definition printed; needed to automate the residence/travel exclusion."
+    },
+    {
+      "item": "Referral pathway and dosing for intramuscular (IM) benzathine benzylpenicillin (Primary Clinical Care Manual, 12th ed. 2025; Therapeutic Guidelines: Antibiotic (Acute Rheumatic Fever)).",
+      "source_page": 2,
+      "reason": "Cross-guideline dependency; dose and administering pathway are not printed here."
+    },
+    {
+      "item": "Case-by-case assessment pathway for people of Aboriginal and Torres Strait Islander descent presenting with impetigo (treatment pathway selection and IM benzathine benzylpenicillin referral decision).",
+      "source_page": 2,
+      "reason": "Document explicitly leaves this to case-by-case judgement; local policy must define the decision points."
+    },
+    {
+      "item": "Skin swab / pathology decision - when diagnosis is uncertain or impetigo is recurrent, and what test is requested.",
+      "source_page": 4,
+      "reason": "Document states when a swab is not required but not what to order or where to refer for testing."
+    },
+    {
+      "item": "Confirm management checks - contraindications and precautions, drug interactions, and pregnancy and lactation, plus consideration of local antimicrobial resistance patterns when selecting therapy.",
+      "source_page": 6,
+      "reason": "Checklists live in external resources (Therapeutic Guidelines, AMH); local resistance data is jurisdiction-specific."
+    },
+    {
+      "item": "Legal basis / poisons schedule provision under which the Queensland Community Pharmacy prescribing service operates for impetigo.",
+      "source_page": 1,
+      "reason": "Not printed anywhere in the document; jurisdictional basis must be confirmed."
+    },
+    {
+      "item": "Professional discretion clause - 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement...'",
+      "source_page": 1,
+      "reason": "Local policy must define how discretion interacts with automated eligibility/referral checks."
+    },
+    {
+      "item": "Service restriction 'aged 1 year or over' and management of infants under 1 year (weight is collected 'if a child' but no paediatric dosing is printed).",
+      "source_page": 1,
+      "reason": "Paediatric eligibility and dosing must be confirmed against current Queensland programme settings and the Therapeutic Guidelines."
+    },
+    {
+      "item": "Non-pharmacological measures and transmission-reduction advice content (Therapeutic Guidelines: Antibiotic (Impetigo) and RCH Melbourne 'Impetigo (school sores)' fact sheet), including household contact assessment and treatment.",
+      "source_page": 6,
+      "reason": "Advice content is delegated to external resources; must be pinned for patient-facing scripts."
+    }
+  ]
+}

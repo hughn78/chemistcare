@@ -1,0 +1,906 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf",
+    "pdf_sha256": "d069a91add6fcfb5bb9735bdc510c3c67ecd9b06c4833e131683121ca38feaac",
+    "page_count": 20,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Management of Acute Exacerbations of Mild to Moderate Atopic Dermatitis",
+    "instrument_version": "July 2026",
+    "effective_date": "July 2026",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 and the Drugs, Poisons and Controlled Substances Regulations 2017 (the Regulations); supply of the Schedule 4 poisons documented in this Protocol for the management of acute exacerbations of mild to moderate atopic dermatitis under a structured prescribing arrangement; requirement of the Secretary Approval: Community Pharmacist Program that pharmacists comply with this Protocol and have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons (page 4, '1. About').",
+    "supervision_model": "structured prescribing arrangement (document's own term) under the Secretary Approval: Community Pharmacist Program; pharmacists must operate at all times in accordance with the Drugs, Poisons and Controlled Substances Act 1981, the Regulations and all other applicable Victorian, Commonwealth and national laws, and act in a manner consistent with the Pharmacy Board of Australia's Code of Conduct (page 4, '1. About').",
+    "scope_summary": "Victorian Community Pharmacist Program protocol (July 2026) authorising supply of Schedule 4 poisons for managing acute exacerbations of mild to moderate atopic dermatitis (eczema), limited to supply of topical corticosteroids (TCS) with quantities adequate for 7 days of treatment. Contains a flowchart (pages 5-9), documentation requirements (page 10), supplementary assessment guidance (pages 12-14), management guidance (page 15), a Medicines list (page 16), counselling advice (page 17), follow-up rules (page 18) and resources (pages 19-20). Only patients previously diagnosed with atopic dermatitis by a medical or nurse practitioner can be managed by pharmacists under this Protocol (page 13)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Is the patient aged between 2 to 65 years inclusive?",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Has the patient been previously diagnosed with atopic dermatitis (also known as eczema) by a medical or nurse practitioner? (No branch: 'Provide usual pharmacist care AND/OR Refer to General Practitioner')",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Does the patient present with signs and symptoms of a suspected recent flare up (< 2 weeks) of mild to moderate atopic dermatitis (eczema) following stable/intermittent symptoms, with typical features including both itch and rash. Examples of likely atopic dermatitis: Itchy, dry, erythematous patches; Typically on the face*, flexures, wrists, ankles, neck, and groin. (*Patients with dermatitis involving the face are not eligible for management under this protocol and should be referred to a medical practitioner for assessment.)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Does the patient/parent/caregiver consent? *The patient must be physically present at the pharmacy.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Severity is within mild to moderate: 'Mild' SCORAD < 25 / EASI < 7; 'Moderate' SCORAD 25-50 / EASI 7.1-21 (i.e. not 'Severe' SCORAD > 50 / EASI > 21). Tools such as the SCORing Atopic Dermatitis (SCORAD) index or the Eczema Area and Severity Index (EASI) can be used to assess the extent and severity of atopic dermatitis.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 13, "section_heading": "B. Assessing severity of atopic dermatitis" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Unclear diagnosis or atypical presentation, different to historical flares (page 14 restates: 'Unclear diagnosis or atypical presentation of atopic dermatitis, different to historical flares')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Insufficient response to treatments in Medicines List, despite appropriate trial",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Severe atopic dermatitis (e.g. intense persistent itch with widespread rash or severe lesions, or SCORAD >50 or EASI >21)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Significant body surface area involvement (>30% body surface area)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Complex presentation, such as signs of secondary viral or bacterial infection (page 14 restates: 'Complex or complicated presentation, such as signs of secondary viral or bacterial infection of dermatitis')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Chronic broken skin, sores, ulcers, or crusts (more than 4 weeks) (page 14 restates: 'Non-healing broken skin, sores, ulcers, or crusts that are chronic (more than 4 weeks)')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Paediatric patient with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, or concerns about failure to thrive",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Pregnant or planning a pregnancy (page 15 restates: 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "Immunocompromised (page 14 elaborates: 'due to underlying medical condition (e.g. transplant recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age)' and 'due to medication taken by the patient (such as immunomodulatory therapy, extended prednisolone therapy)')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "Dermatitis involving the face (including periorbital or perioral regions). Flowchart footnote (page 6): '*Patients with dermatitis involving the face are not eligible for management under this protocol and should be referred to a medical practitioner for assessment.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": 65,
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'treat and refer' criterion (page 8): 'The condition is having a marked negative emotional and social effect on the patient (quality of life is significantly affected)'. Yes branch: 'Proceed to Pharmacotherapy AND/OR Refer to General Practitioner for immediate review and follow up'. Page 14: 'Patients must be referred to their General Practitioner, but may also be provided treatment if: The condition is having a marked negative emotional and social effect on the patient'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-1", "EXE-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "'treat and refer' criterion (page 8): 'The patient does not have an eczema care plan OR the patient/carer is uncertain about their long-term management approach (e.g. symptoms are recurrent, not well controlled, or changing in pattern)'. Yes branch: 'Proceed to Pharmacotherapy AND/OR Refer to General Practitioner for immediate review and follow up'. Page 14: 'Patients must be referred to their General Practitioner, but may also be provided treatment if: The patient does not have an eczema care plan OR the patient/carer is uncertain about their long-term management approach (e.g. Symptoms are recurrent, not well controlled, or changing in pattern)'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-1", "EXE-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Protocol for Management of Acute Exacerbations of Mild to Moderate Atopic Dermatitis - flowchart pathway (preliminary enquiries, immediate referral, pharmacist care, care provided) with supplementary management and follow-up steps",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Preliminary enquiry: 'Is the patient aged between 2 to 65 years inclusive?' No branch -> 'Refer to General Practitioner'. Yes -> continue.",
+          "gates": [{ "criterion": "Patient aged between 2 to 65 years inclusive", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Has the patient been previously diagnosed with atopic dermatitis (also known as eczema) by a medical or nurse practitioner?' No branch -> 'Provide usual pharmacist care AND/OR Refer to General Practitioner'. Restated on page 13: 'Only patients who have previously been diagnosed with atopic dermatitis by a medical or nurse practitioner can be managed by pharmacists under this Protocol.'",
+          "gates": [{ "criterion": "Previous diagnosis of atopic dermatitis (eczema) by a medical or nurse practitioner", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient present with signs and symptoms of a suspected recent flare up (< 2 weeks) of mild to moderate atopic dermatitis (eczema) following stable/intermittent symptoms, with typical features including both itch and rash. Examples of likely atopic dermatitis: Itchy, dry, erythematous patches; Typically on the face*, flexures, wrists, ankles, neck, and groin.' No branch -> 'Consider potential differential diagnoses (e.g. contact dermatitis, psoriasis, fungal infection, scabies) and provide usual pharmacist care AND/OR Refer to General Practitioner'. Footnote: '*Patients with dermatitis involving the face are not eligible for management under this protocol and should be referred to a medical practitioner for assessment.'",
+          "gates": [{ "criterion": "Suspected recent flare up (< 2 weeks) of mild to moderate atopic dermatitis with typical features including both itch and rash, and no face involvement", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient/parent/caregiver consent? *The patient must be physically present at the pharmacy.' No branch -> 'Refer to General Practitioner'. Yes -> Assess.",
+          "gates": [{ "criterion": "Patient/parent/caregiver consents and the patient is physically present at the pharmacy", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Assess - Patient history: 'Review MHR, where available; Onset, duration, nature, location, severity, and extent of atopic dermatitis (Tools such as SCORAD or EASI can be used to assess extent and severity); History of recent or previous flare ups; Impact on quality of life and psychosocial wellbeing (e.g. itch, reduced sleep, failure to thrive); Aggravating factors or triggers; Medical history, including personal and family history of atopy, pregnancy, and/or breastfeeding; Medication history, including response and application technique for any previous topical treatments; Medication allergies or adverse effects.' Further considerations on page 12 ('4.1. Patient history') include age; previous diagnosis and any current or past management plan; potential differential diagnosis or complications such as secondary infection; response to previous treatment or management strategies (bathing/showering duration and temperature; use of soap, soap-free cleansers, shampoos, and/or bath additives; moisturiser use; any previous TCS use, types, sites of application and quantity applied; adverse reaction to topical agents e.g. stinging, topical steroid-induced perioral dermatitis); underlying and associated medical conditions; exposure to potential aggravating factors or triggers; other factors including family history and environmental factors; current and recently commenced medicines; medication allergies and/or adverse effects.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EXAMINATION",
+          "description": "Conduct clinical review - Examination: 'Confirm presenting signs and symptoms indicative of an acute exacerbation of mild to moderate atopic dermatitis by performing a skin examination (Refer to supplementary notes including Assessing severity of atopic dermatitis)'. Page 12: 'Physical examination of the patient's skin is required to identify, assess, and classify the severity of atopic dermatitis. Both rash and itch must be present for a diagnosis of atopic dermatitis.' Page 13 severity table: Mild SCORAD < 25 / EASI < 7; Moderate SCORAD 25-50 / EASI 7.1-21; Severe SCORAD > 50 / EASI > 21. Page 12: prior to examination, pharmacists should consider implementing infection control steps in line with the Australian Guidelines for the Prevention and Control of Infection in Healthcare 2019 to their specific setting and circumstances.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 6, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient report or present with any of the following red flag criteria?' - Severe, widespread, or painful rash; Non-blanching purple rash; Widespread erythema involving most of the body or multiple body regions; Signs of sepsis, systemic illness or other complications, including fever, lethargy, nausea, vomiting, or headache; Blistering of the skin, mucous membranes, or eyes; Suspected eczema herpeticum, particularly with eye involvement. Yes branch -> 'Refer for immediate emergency medical care'. No, to all -> continue to exclusion criteria.",
+          "gates": [{ "criterion": "No red flag criteria present (none of the 6 printed emergency criteria)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient meet any of the following exclusion criteria?' (10 items, reproduced in eligibility.exclusion EXC-1 to EXC-10): unclear diagnosis or atypical presentation different to historical flares; insufficient response to treatments in Medicines List despite appropriate trial; severe atopic dermatitis (e.g. intense persistent itch with widespread rash or severe lesions, or SCORAD >50 or EASI >21); significant body surface area involvement (>30% body surface area); complex presentation such as signs of secondary viral or bacterial infection; chronic broken skin, sores, ulcers, or crusts (more than 4 weeks); paediatric patient with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, or concerns about failure to thrive; pregnant or planning a pregnancy; immunocompromised; dermatitis involving the face (including periorbital or perioral regions). Yes branch -> 'Refer to General Practitioner'. No to all -> continue to 'treat and refer' criteria.",
+          "gates": [{ "criterion": "Patient meets NO exclusion criteria (all of EXC-1 to EXC-10 absent)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 7, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient meet any of the following 'treat and refer' criteria?' - 'The condition is having a marked negative emotional and social effect on the patient (quality of life is significantly affected)' AND/OR 'The patient does not have an eczema care plan OR the patient/carer is uncertain about their long-term management approach (e.g. symptoms are recurrent, not well controlled, or changing in pattern)'. Yes branch -> 'Proceed to Pharmacotherapy AND/OR Refer to General Practitioner for immediate review and follow up'. No branch -> continue to the allergies/contraindications check. Page 14 confirms these patients 'must be referred to their General Practitioner, but may also be provided treatment if:'.",
+          "gates": [{ "criterion": "Patient meets NO 'treat and refer' criteria (if met: proceed to pharmacotherapy AND/OR refer to GP for immediate review and follow up - see EXE-1/EXE-2)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "PHARMACOTHERAPY: 'Does the patient have allergies, medicine interactions or any other contraindications to management options?' Yes -> 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner'. No -> 'Provide TCS treatment, where indicated. Determine body site(s) affected; Use the table below to select appropriate TCS option(s); Supply quantities adequate for 7 days of treatment (refer to Medicines List for guidance on recommended supply quantities under this Program).' Printed body-site selection table: 'Sensitive areas (neck, axillae, or groin)' -> Hydrocortisone 1% ointment; 'Trunk, limbs, flexures, palms, soles, or thickened lichenified areas' -> Methylprednisolone aceponate 0.1% ointment or fatty ointment, OR Mometasone furoate 0.1% ointment; 'Scalp (adults)' -> Methylprednisolone aceponate 0.1% lotion, OR Mometasone furoate 0.1% lotion or hydrogel, OR Betamethasone dipropionate 0.05% lotion; 'Scalp (children)' -> Methylprednisolone aceponate 0.1% lotion.",
+          "gates": [{ "criterion": "No allergies, medicine interactions or any other contraindications to management options", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "Provide non-pharmacological and self-care advice: '1. Ensure the patient has access to an Eczema Care Plan and other written resources as appropriate (e.g. Self-care fact card). Support the patient/carer to identify when a review or update of their care plan may be required with their medical practitioner. 2. Provide advice on general management of atopic dermatitis: Everyday skin care, including generous application of moisturiser to entire body; Avoid aggravating factors or triggers.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Confirm management plan is appropriate with regards to contraindications, precautions, interactions, pregnancy and lactation status'. Page 15 restates: 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook, and other relevant references to confirm the management is appropriate, including for: Contraindications and precautions; Medication interactions; Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'.",
+          "gates": [{ "criterion": "Management plan confirmed appropriate with regards to contraindications, precautions, interactions, pregnancy and lactation status", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "TREAT",
+          "description": "'Communicate agreed treatment plan to patient/carer and other healthcare professionals: Dispense medicines via pharmacy dispensing software and label according to legislative requirements outlined in the Drugs, Poisons and Controlled substances Regulation 2017'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "'Provide clear application instructions for TCS, including: Where and how much to apply; Expected response; Duration of use (short-term use for flare management) and the expectations around resolution of symptoms'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "REFER",
+          "description": "'Advise when to seek review with a medical practitioner for further care: No improvement, or worsening of symptoms within 7 days; Further supply of TCS is required, or; Symptoms are recurrent, worsening, or not well controlled'.",
+          "gates": [
+            { "criterion": "No improvement or worsening of symptoms within 7 days", "on_fail": "SEE_PW-1-S15" },
+            { "criterion": "Further supply of TCS is not required", "on_fail": "SEE_PW-1-S15" },
+            { "criterion": "Symptoms are not recurrent, worsening, or not well controlled", "on_fail": "SEE_PW-1-S15" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "EDUCATE",
+          "description": "'Document the consultation and share a record of the service with the patient, patient's usual treating GP or medical practice where the patient has one'. Clinical documentation requirements are set out on page 10, '3. Clinical Documentation Requirements'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "EDUCATE",
+          "description": "Supplementary general management (page 15, '5. Management and treatment plan'): 'Everyday skin care, including: Bathing/showering in lukewarm water for up to 5 minutes, using a non-soap cleanser and/or bath oil. Regular moisturiser use - pat skin dry after washing (or swimming) and, using clean hands, applying a generous or thick amount of moisturiser to entire body (i.e. top-to-toe, not just areas affected by atopic dermatitis). Apply moisturiser after TCS.' 'Avoiding aggravating factors for atopic dermatitis, such as: Topical products that contain soap, fragrances, food-related ingredients (e.g. nuts, coconut, dairy), essential oils, aqueous cream, methylchloroisothiazolinone, methylisothiazolinone, or benzalkonium chloride (in laundry sanitisers, nappy wipes and creams). Overheating... Prickly fabrics... Avoiding scratching (keep fingernails short).' Pharmacotherapy: 'Topical treatments in accordance with recognised guidelines* such as the Quality Use of Medicines Alliance Eczema Management Algorithm or Therapeutic Guidelines. Refer to Medicines List for treatments available under the Program.' Footnote: '*Note: Pimecrolimus, crisaborole, and liquor picis carbonis (LPC, or coal tar solution) +/- keratolytics (e.g., salicylic acid) are also treatment options for atopic dermatitis. These are not included for supply under the Program, which has focused on supply of TCS.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 15, "section_heading": "5. Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S18",
+          "order": 18,
+          "type": "EDUCATE",
+          "description": "General advice on TCS use (page 17, '7.1. General advice'): 'To explain which TCS formulations to use on which areas of the body. Apply TCS generously (not sparingly) to all areas of active atopic dermatitis (not just to the worst areas), including cracked or open skin. Some improvement would be expected within 7 days of starting TCS. Continue TCS use until the skin is clear. TCS may be restarted at the beginning of a new flare of atopic dermatitis.' Also: 'Patients who do not have an existing eczema care plan should be referred to a medical practitioner and provided with information on how to access one.' and 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7.1. General advice" }
+        },
+        {
+          "id": "PW-1-S19",
+          "order": 19,
+          "type": "FOLLOW_UP",
+          "description": "'Pharmacist follow up or clinical review should only occur where there has been clear improvement in symptoms, and where care can be appropriately managed within usual pharmacist care. If there is no improvement, worsening, or need for ongoing TCS treatment beyond 7 days, the patient should be referred to a medical practitioner for further investigation and management.'",
+          "gates": [{ "criterion": "Clear improvement in symptoms and care can be appropriately managed within usual pharmacist care", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 18, "section_heading": "8. Follow up / clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Betamethasone dipropionate",
+      "form": "lotion",
+      "strength": "0.05%",
+      "dose": "Apply once to twice daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once to twice daily",
+      "duration": "until skin is clear",
+      "max_quantity": "30mL",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Scalp (adults)' (page 16); page 8 selection table also lists it for 'Scalp (adults)' (adults only - not listed for children). Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'. Pack size examples are printed, not a supply cap; the printed rule is 'The quantity of TCS supplied should be sufficient for 7 days of treatment.' (page 16).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Hydrocortisone",
+      "form": "ointment",
+      "strength": "1%",
+      "dose": "Apply once to twice daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once to twice daily",
+      "duration": "until skin is clear",
+      "max_quantity": "30g, 50g",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Sensitive areas (neck, axillae, or groin)' (pages 8 and 16). Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'. Paediatric note: no age split is printed for sensitive-area application; the service covers ages 2 to 65 inclusive (page 5).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Methylprednisolone aceponate",
+      "form": "ointment or fatty ointment",
+      "strength": "0.1%",
+      "dose": "Apply once daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once daily",
+      "duration": "until skin is clear",
+      "max_quantity": "15g",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Trunk, limbs, flexures, palms, soles, or thickened lichenified areas' (pages 8 and 16). Listed first in the page 8 'Trunk, limbs...' row (option 1 of 2 with mometasone furoate ointment; no preference stated). Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Methylprednisolone aceponate",
+      "form": "lotion",
+      "strength": "0.1%",
+      "dose": "Apply once daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once daily",
+      "duration": "until skin is clear",
+      "max_quantity": "20g",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Scalp (children or adults)' (page 16); page 8 selection table gives 'Scalp (children)' -> Methylprednisolone aceponate 0.1% lotion (sole listed option for children) and includes it among options for 'Scalp (adults)'. Paediatric caveats (verbatim): page 7 exclusion - 'Paediatric patient with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, or concerns about failure to thrive'; page 13 - 'Ich may be difficult to assess in young children. Signs may include \"wriggling\" or rubbing on sheets, carpet, and clothing.' Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Mometasone furoate",
+      "form": "ointment",
+      "strength": "0.1%",
+      "dose": "Apply once daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once daily",
+      "duration": "until skin is clear",
+      "max_quantity": "15g, 45g, 50g",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Trunk, limbs, flexures, palms, soles, or thickened lichenified areas' (pages 8 and 16). Listed as option 2 in the page 8 'Trunk, limbs...' row ('OR Mometasone furoate 0.1% ointment'; no preference stated). Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Mometasone furoate",
+      "form": "lotion",
+      "strength": "0.1%",
+      "dose": "Apply once daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once daily",
+      "duration": "until skin is clear",
+      "max_quantity": "30mL",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Scalp (adults)' (pages 8 and 16). Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'. Not listed for 'Scalp (children)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Mometasone furoate",
+      "form": "hydrogel",
+      "strength": "0.1%",
+      "dose": "Apply once daily to affected areas until skin is clear",
+      "route": "topical",
+      "frequency": "once daily",
+      "duration": "until skin is clear",
+      "max_quantity": "15g, 45g",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient for 7 days of treatment; may require several packs depending on the affected body surface area [page 16]",
+      "notes": "Area(s) of body affected as printed: 'Scalp (adults)' (pages 8 and 16). Pregnancy/lactation caveat (verbatim, page 15): 'Pregnancy and lactation (note that patients who are pregnant or planning pregnancy are not eligible for treatment under this Program)'. Not listed for 'Scalp (children)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 16, "section_heading": "6. Medicines list" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Severe, widespread, or painful rash",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Non-blanching purple rash",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Widespread erythema involving most of the body or multiple body regions",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Signs of sepsis, systemic illness or other complications, including fever, lethargy, nausea, vomiting, or headache",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Blistering of the skin, mucous membranes, or eyes",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Patients with suspected eczema herpeticum (secondary infection of atopic dermatitis with herpes simplex virus), particularly with eye involvement, should be referred for immediate emergency medical care including ophthalmology assessment where relevant.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "Secondary infection in atopic dermatitis" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Unclear diagnosis or atypical presentation of atopic dermatitis, different to historical flares",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Insufficient response to treatments in Medicines List, despite appropriate trial",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Severe atopic dermatitis (e.g. intense persistent itch with widespread rash or severe lesions, or SCORAD >50 or EASI >21) - SCORAD limb of the threshold",
+      "structured": { "parameter": "SCORAD", "operator": ">", "value": 50, "unit": "score" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "SCORAD >50 or EASI >21 - EASI limb of the severity threshold (printed within 'Severe atopic dermatitis (e.g. intense persistent itch with widespread rash or severe lesions, or SCORAD >50 or EASI >21)')",
+      "structured": { "parameter": "EASI", "operator": ">", "value": 21, "unit": "score" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Significant body surface area involvement (>30% body surface area)",
+      "structured": { "parameter": "body surface area involvement", "operator": ">", "value": 30, "unit": "% body surface area" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Complex or complicated presentation, such as signs of secondary viral or bacterial infection of dermatitis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Non-healing broken skin, sores, ulcers, or crusts that are chronic (more than 4 weeks)",
+      "structured": { "parameter": "duration of non-healing broken skin, sores, ulcers, or crusts", "operator": ">", "value": 4, "unit": "weeks" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Paediatric patient with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, or concerns about failure to thrive",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Pregnant or planning a pregnancy",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Immunocompromised patients - due to underlying medical condition (e.g. transplant recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, extended prednisolone therapy)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Dermatitis involving the face (including periorbital or perioral regions)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Patients must be referred to their General Practitioner, but may also be provided treatment if: The condition is having a marked negative emotional and social effect on the patient",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Patients must be referred to their General Practitioner, but may also be provided treatment if: The patient does not have an eczema care plan OR the patient/carer is uncertain about their long-term management approach (e.g. Symptoms are recurrent, not well controlled, or changing in pattern)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "C. Red flag signs or patient ineligibility criteria i.e. patient to be referred to another authorised prescriber (medical or nurse practitioner)" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Patients with severe atopic dermatitis (e.g. intense persistent itch with widespread rash or severe lesions that have a major impact on sleep and daily life) must be referred to an appropriate healthcare provider for management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 13, "section_heading": "B. Assessing severity of atopic dermatitis" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Patients with signs or symptoms of secondary infection of atopic dermatitis (e.g. weeping, yellow crusts or pustules, grouped vesicles, punched-out erosions, persistent dermatitis despite appropriate topical therapy) must be referred to an appropriate healthcare provider for management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 14, "section_heading": "Secondary infection in atopic dermatitis" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Does the patient have allergies, medicine interactions or any other contraindications to management options? - 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 8, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "No improvement, or worsening of symptoms within 7 days (advise when to seek review with a medical practitioner for further care)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Further supply of TCS is required",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "Symptoms are recurrent, worsening, or not well controlled",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 9, "section_heading": "2.1. Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Symptoms do not improve or worsen within 7 days of commencing TCS treatment",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7.1. General advice" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "If more than 7 days supply of TCS is required, the patient should see their medical practitioner for review and further prescriptions. A medical practitioner may prescribe TCS at higher quantities with PBS subsidised authority prescriptions.",
+      "structured": { "parameter": "days of TCS supply required", "operator": ">", "value": 7, "unit": "days" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7.1. General advice" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "Signs and symptoms that suggest infection of atopic dermatitis",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7.1. General advice" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Patients who do not have an existing eczema care plan should be referred to a medical practitioner and provided with information on how to access one.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7. Communicate agreed management plan" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "If there is no improvement, worsening, or need for ongoing TCS treatment beyond 7 days, the patient should be referred to a medical practitioner for further investigation and management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 18, "section_heading": "8. Follow up / clinical review" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to General Practitioner (default No branch of the flowchart)",
+      "Provide usual pharmacist care AND/OR Refer to General Practitioner (No branch, pages 5 and 6)",
+      "Consider potential differential diagnoses (e.g. contact dermatitis, psoriasis, fungal infection, scabies) and provide usual pharmacist care AND/OR Refer to General Practitioner",
+      "Patients with dermatitis involving the face are not eligible for management under this protocol and should be referred to a medical practitioner for assessment (page 6 footnote)",
+      "referred to an appropriate healthcare provider for management (severe atopic dermatitis; secondary infection of atopic dermatitis)",
+      "referred to their General Practitioner for management (exclusion criteria and 'treat and refer' criteria)",
+      "If timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) or an urgent care clinic may be considered as an alternative pathway",
+      "Patients who do not have an existing eczema care plan should be referred to a medical practitioner and provided with information on how to access one"
+    ],
+    "urgent": [
+      "Refer for immediate emergency medical care (red flag criteria)",
+      "should be referred for immediate emergency medical care including ophthalmology assessment where relevant (suspected eczema herpeticum)",
+      "Refer to General Practitioner for immediate review and follow up ('treat and refer' criteria)",
+      "the patient should be referred to a medical practitioner for further investigation and management (no improvement, worsening, or need for ongoing TCS treatment beyond 7 days)"
+    ],
+    "emergency": [
+      "Patients must be immediately referred for emergency medical care if they meet any of the following criteria: Severe, widespread, or painful rash; Non-blanching purple rash; Widespread erythema involving most of the body or multiple body regions; Signs of sepsis, systemic illness or other complications, including fever, lethargy, nausea, vomiting, or headache; Blistering of the skin, mucous membranes, or eyes; Suspected eczema herpeticum, particularly with eye involvement"
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 5, "section_heading": "2.1. Key to colours used in this protocol" }
+  },
+  "review_followup": [
+    {
+      "when": "within 7 days of commencing TCS treatment",
+      "what": "Patients/parents/caregivers should be advised to see a medical practitioner if symptoms do not improve or worsen within 7 days of commencing TCS treatment; some improvement would be expected within 7 days of starting TCS.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7.1. General advice" }
+    },
+    {
+      "when": "if more than 7 days supply of TCS is required",
+      "what": "The patient should see their medical practitioner for review and further prescriptions. A medical practitioner may prescribe TCS at higher quantities with PBS subsidised authority prescriptions.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7.1. General advice" }
+    },
+    {
+      "when": "pharmacist follow up / clinical review (only where there has been clear improvement in symptoms)",
+      "what": "Follow up should only occur where care can be appropriately managed within usual pharmacist care. If there is no improvement, worsening, or need for ongoing TCS treatment beyond 7 days, the patient should be referred to a medical practitioner for further investigation and management.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 18, "section_heading": "8. Follow up / clinical review" }
+    },
+    {
+      "when": "where symptoms are recurrent, worsening, or not well controlled",
+      "what": "Pharmacists may assist patients in identifying when a review or update of their Eczema Care Plan by a medical practitioner is required.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 17, "section_heading": "7. Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must share a copy of the record of the service with the patient and, if the patient consents, with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software, and an IT system approved by the Victorian Department of Health, regarding the supply."
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbations-of-mild-to-moderate-atopic-dermatitis.pdf", "page": 10, "section_heading": "3. Clinical Documentation Requirements" }
+  },
+  "references": [
+    "Eczema Management Algorithm (Quality Use of Medicines Alliance): https://medcast.com.au/qhub/eczema/resources (p. 19)",
+    "Therapeutic Guidelines (Dermatology): https://tgldcdp.tg.org.au/... (p. 19)",
+    "Australian Medicines Handbook: Dermatological drugs - https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-eczema/corticosteroids-skin (p. 19)",
+    "Treatments for atopic dermatitis (Australian Prescriber): https://australianprescriber.tg.org.au/articles/treatments-for-atopic-dermatitis.html (p. 19)",
+    "Consensus statement: Management of atopic dermatitis in adults (The Australasian College of Dermatologists): https://www.dermcoll.edu.au/fellows/statements-guidelines-resources/ (p. 19)",
+    "Consensus statement: Topical corticosteroids in paediatric eczema (The Australasian College of Dermatologists): https://www.dermcoll.edu.au/fellows/statements-guidelines-resources/ (p. 19)",
+    "Eczema Clinical Practice Guideline (Royal Children's Hospital Melbourne): https://www.rch.org.au/clinicalguide/guideline_index/eczema/ (p. 19)",
+    "DermNet NZ: SCORing Atopic Dermatitis (SCORAD) index: https://dermnetnz.org/topics/scorad ; Eczema Area and Severity Index (EASI): https://dermnetnz.org/topics/easi-score (p. 19)",
+    "Victorian Adult Burns Service: Palmar method: https://www.vicburns.org.au/burn-assessment/burn-pathophysiology/ (p. 19)",
+    "Skin Deep: https://dftbskindeep.com/ (p. 19)",
+    "Australian Guidelines for the Prevention and Control of Infection in Healthcare 2019 (cited for infection control steps before examination) (p. 12)",
+    "Topical treatments in accordance with recognised guidelines such as the Quality Use of Medicines Alliance Eczema Management Algorithm or Therapeutic Guidelines (p. 15)"
+  ],
+  "open_questions": [
+    {
+      "topic": "EASI severity gap at exactly 7",
+      "observed": "Severity table (page 13) prints 'Mild ... EASI < 7', 'Moderate ... EASI 7.1-21', 'Severe ... EASI > 21'.",
+      "why_unclear": "An EASI score of exactly 7 falls between '< 7' and '7.1-21' and is not classified by the printed table. SCORAD bands (< 25, 25-50, > 50) have no equivalent gap. INC-5 confidence set to 'medium' because of this; no threshold has been invented.",
+      "source_page": 13
+    },
+    {
+      "topic": "Wording differences between the flowchart exclusion list (page 7) and the referral rule list (page 14)",
+      "observed": "Page 7 prints 'Unclear diagnosis or atypical presentation, different to historical flares', 'Complex presentation, such as signs of secondary viral or bacterial infection' and 'Chronic broken skin, sores, ulcers, or crusts (more than 4 weeks)'; page 14 prints 'Unclear diagnosis or atypical presentation of atopic dermatitis, different to historical flares', 'Complex or complicated presentation, such as signs of secondary viral or bacterial infection of dermatitis' and 'Non-healing broken skin, sores, ulcers, or crusts that are chronic (more than 4 weeks)'.",
+      "why_unclear": "Both readings recorded: eligibility.exclusion EXC-1/EXC-5/EXC-6 use the flowchart wording (page 7) and red_flags RF-7/RF-12/RF-13 use the rule-list wording (page 14); each item's text notes the other page's wording. No silent reconciliation performed.",
+      "source_page": 14
+    },
+    {
+      "topic": "No first-line topical corticosteroid designated; body-site options are OR-lists",
+      "observed": "The page 8 table lists options per body site with 'OR' (e.g. 'Trunk, limbs, flexures, palms, soles, or thickened lichenified areas: Methylprednisolone aceponate 0.1% ointment or fatty ointment, OR Mometasone furoate 0.1% ointment') and page 16 lists the same seven formulations with pack sizes; no agent is described as first-line or preferred.",
+      "why_unclear": "first_line set to false for all treatments rather than inferring a preferred agent from listing order.",
+      "source_page": 8
+    },
+    {
+      "topic": "Adult/child boundary for scalp treatment not defined",
+      "observed": "Service eligibility is 'aged between 2 to 65 years inclusive' (page 5); the medicines list distinguishes 'Scalp (adults)' (betamethasone dipropionate 0.05% lotion, mometasone furoate 0.1% lotion, mometasone furoate 0.1% hydrogel; and methylprednisolone aceponate 0.1% lotion) from 'Scalp (children)' (methylprednisolone aceponate 0.1% lotion only).",
+      "why_unclear": "No age cut-off is printed separating 'children' from 'adults' for scalp application selection.",
+      "source_page": 16
+    },
+    {
+      "topic": "'AND/OR' combinatorics in the flowchart",
+      "observed": "Page 5/6 No branches read 'Provide usual pharmacist care AND/OR Refer to General Practitioner' and 'Consider potential differential diagnoses ... and provide usual pharmacist care AND/OR Refer to General Practitioner'; the page 8 'treat and refer' box reads 'Proceed to Pharmacotherapy AND/OR Refer to General Practitioner for immediate review and follow up' with 'AND/OR' printed between its two bullets.",
+      "why_unclear": "The document prints AND/OR rather than a strict AND or OR. Inclusion criteria are grouped all_of (sequential gates), exclusion criteria and exclusion_exceptions grouped any_of (meeting any one fires the branch); this mapping is an interpretation of the printed AND/OR and is flagged here.",
+      "source_page": 8
+    },
+    {
+      "topic": "Pack size examples vs 7-day supply rule",
+      "observed": "Page 16 prints 'Pack size examples' (30mL, 30g, 50g, 15g, 20g, 45g) alongside 'The quantity of TCS supplied should be sufficient for 7 days of treatment. This may require several packs of the topical corticosteroid formulation, depending on the affected body surface area.'",
+      "why_unclear": "It is not stated whether the printed pack sizes cap a single supply or are merely examples; pack strings recorded in max_quantity as printed and the 7-day rule recorded in quantity_to_supply.",
+      "source_page": 16
+    },
+    {
+      "topic": "Meaning of 'usual pharmacist care' not defined",
+      "observed": "The flowchart No branches (pages 5 and 6) direct the pharmacist to 'Provide usual pharmacist care' (sometimes 'AND/OR Refer to General Practitioner'), but the protocol does not define what usual pharmacist care comprises for a patient outside this service.",
+      "why_unclear": "Left as printed in pathway step descriptions; no content invented for what that care includes.",
+      "source_page": 5
+    },
+    {
+      "topic": "Referral block spans multiple pages",
+      "observed": "referral.routine, referral.urgent and referral.emergency quote destinations printed across pages 5, 6, 7, 8, 14, 17 and 18; the shared provenance object references the first page (5).",
+      "why_unclear": "Single shared provenance per schema; page range recorded here as required by the spec.",
+      "source_page": 5
+    },
+    {
+      "topic": "EASI upgrade rule for heavily pigmented skin",
+      "observed": "Page 13: 'Conventional scoring systems may underestimate severity and erythema in people with darker skin tones. Consider skin tone when assessing erythema. Where there is uncertainty, use EASI and upgrade the score by 1 grade or more for heavily pigmented skin (e.g. from mild to moderate).'",
+      "why_unclear": "The rule is discretionary ('by 1 grade or more') and applies only where there is uncertainty; it is recorded here rather than as a numeric structured trigger.",
+      "source_page": 13
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Current training requirements: 'It is also a requirement of the Secretary Approval: Community Pharmacist Program that pharmacists have completed the current training requirements specified in the departmental guidance before supplying Schedule 4 poisons.'",
+      "source_page": 4,
+      "reason": "Departmental guidance is external to the protocol; confirm which training version is current before go-live."
+    },
+    {
+      "item": "'Where the protocol indicates to Refer to General Practitioner, the Pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate. If timely access to a GP is not available, referral to the Victorian Virtual Emergency Department (VVED) or an urgent care clinic may be considered as an alternative pathway.'",
+      "source_page": 5,
+      "reason": "Hedged ('may be considered', 'as clinically appropriate') and dependent on local service availability; confirm which VVED/urgent care pathways are approved."
+    },
+    {
+      "item": "'Prior to commencing patient examination, pharmacists should consider implementing infection control steps in line with the Australian Guidelines for the Prevention and Control of Infection in Healthcare 2019 to their specific setting and circumstances.'",
+      "source_page": 12,
+      "reason": "Explicitly left to the pharmacy's specific setting and circumstances; confirm local infection-control SOP."
+    },
+    {
+      "item": "Severity tools: 'Tools such as SCORAD or EASI can be used to assess extent and severity' and 'Tools such as the Palmar Method can be used to assess how much skin/Body Surface Area (BSA) is involved'.",
+      "source_page": 13,
+      "reason": "Tool choice is left to the pharmacist; confirm which scoring tools are approved and trained."
+    },
+    {
+      "item": "'Where there is uncertainty, use EASI and upgrade the score by 1 grade or more for heavily pigmented skin (e.g. from mild to moderate).'",
+      "source_page": 13,
+      "reason": "Discretionary scoring adjustment ('1 grade or more'); confirm the local rule for how many grades to upgrade."
+    },
+    {
+      "item": "'Discuss whether the patient may be eligible for a PBS authority prescription through a medical practitioner which may allow supply of larger quantities of TCS at reduced cost to the patient, particularly for concession card holders.'",
+      "source_page": 15,
+      "reason": "PBS claiming is out of scope for this extraction (OpenScript is private/non-PBS, D-001); confirm exactly how pharmacists should discuss PBS authority eligibility without doing claiming logic."
+    },
+    {
+      "item": "'Topical treatments in accordance with recognised guidelines such as the Quality Use of Medicines Alliance Eczema Management Algorithm or Therapeutic Guidelines.'",
+      "source_page": 15,
+      "reason": "Two alternative external guidelines are named without a preference; confirm which is authoritative and its current version."
+    },
+    {
+      "item": "Paediatric scalp selection: 'Scalp (children)' vs 'Scalp (adults)' with no printed age boundary (service range 2 to 65 years inclusive).",
+      "source_page": 16,
+      "reason": "Local policy must define the child/adult cut-off for scalp formulation selection."
+    },
+    {
+      "item": "'Note: There are no changes to the scope for pharmacists to supply Schedule 2 and 3 treatments for atopic dermatitis as appropriate.'",
+      "source_page": 16,
+      "reason": "Scope/reimbursement statement is administrative; confirm current status with the program (no PBS claiming logic captured here)."
+    },
+    {
+      "item": "'Pharmacists may assist patients in identifying when a review or update by a medical practitioner is required, particularly where symptoms are recurrent, worsening, or not well controlled.'",
+      "source_page": 17,
+      "reason": "Left to pharmacist judgement; confirm what triggers an Eczema Care Plan review locally."
+    },
+    {
+      "item": "'Pharmacists are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 4,
+      "reason": "Explicit local-judgement latitude; confirm what adaptation is permitted before go-live."
+    }
+  ]
+}

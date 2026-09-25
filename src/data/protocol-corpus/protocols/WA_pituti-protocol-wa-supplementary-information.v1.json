@@ -1,0 +1,437 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf",
+    "pdf_sha256": "5bbbee64fbb1f93246be0a372a2bb8532c68b382731db7ec8e9ec5623abbadc8",
+    "page_count": 2,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Pharmacist initiated treatment of urinary tract infections program - WA Supplementary Information for Pharmacists",
+    "instrument_version": "No version number printed; '© Department of Health 2023' (p.2)",
+    "effective_date": "Not printed (© Department of Health 2023, p.2)",
+    "legal_basis": "Defers to the program's Structured Administration and Supply Arrangement (SASA). Verbatim (p.1): 'Please note that cefalexin is excluded from this program due to local resistance patterns. The current Structured Administration and Supply Arrangement (SASA) does not permit the supply of cefalexin without a valid prescription.' Also (p.1): 'While the program does not mandate the use of urinalysis by dipstick in the SASA ...'. The governing SASA itself is not named, numbered or version-cited in this document.",
+    "supervision_model": "Not stated in this document. It is supplementary information for pharmacists participating in the Pharmacist initiated treatment of urinary tract infections (UTI) program under the WA SASA; no supervision, authorisation or registration wording appears in these 2 pages.",
+    "scope_summary": "SUPPLEMENTARY/ADMINISTRATIVE document (2 pages), not a standalone prescribing protocol. Contains WA-specific antibiotic susceptibility guidance for the UTI program (E. coli ~95% of uncomplicated community-acquired UTI; nitrofurantoin first line, trimethoprim second line, cefalexin excluded by local resistance and by the SASA; chosen empirical antibiotic susceptibility should be above 80%; trimethoprim below 70% in the Kimberley and Pilbara), urinalysis guidance (positive nitrites and leukocyte esterase indicative of UTI; glucose, protein, bilirubin and stronger blood positives require referral/follow-up), the symptom-probability statement (probability of cystitis greater than 90% when at least two primary symptoms of cystitis are present in the absence of vaginal discharge; refer if any doubt), and referral/GP follow-up advice. It contains no age bounds, no doses, no full eligibility checklist and no SASA citation - those defer to the main protocol/SASA and are recorded as open questions rather than invented."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "The susceptibility for the chosen empirical antibiotic should be above 80%.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+      },
+      {
+        "id": "INC-2",
+        "text": "The patient's presenting symptoms should be prioritised during the assessment as the probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present in the absence of vaginal discharge. [transcribed as the diagnostic basis for proceeding; the document phrases this as a probability statement, not as an explicit eligibility criterion - see open questions]",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Medicine-level exclusion: 'Please note that cefalexin is excluded from this program due to local resistance patterns. The current Structured Administration and Supply Arrangement (SASA) does not permit the supply of cefalexin without a valid prescription.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Where nitrofurantoin is contraindicated and trimethoprim is being considered: 'trimethoprim can be considered in most parts of WA, except for the Kimberley and Pilbara where the susceptibility to trimethoprim drops below 70%'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "'Where neither nitrofurantoin nor trimethoprim is appropriate, the patient should be referred to a medical practitioner for management.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "'However, where there is any doubt regarding the diagnosis, the patient should be referred to a medical practitioner for further assessment.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "WA Supplementary Information for Pharmacists" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Trace amounts of blood can be present on urinalysis from inflammation, but stronger positive results require further assessment.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "UTI supplementary information - diagnostic assessment and empirical antibiotic selection",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "INVESTIGATION",
+          "description": "Urinalysis: 'While the program does not mandate the use of urinalysis by dipstick in the SASA, urinalysis may assist with confirmation of a patient's diagnosis. The use of urinalysis is strongly advocated for by infectious diseases physicians, clinical microbiologists, and other doctors. It is routinely performed by many health practitioners as a bedside test. Where practical, a pharmacist should consider utilising urinalysis as part of the diagnostic assessment. If urinalysis is performed, results should be included in the service summary. Positive nitrites and leukocyte esterase on urinalysis is indicative of a UTI. Negative nitrites and/or leukocyte esterase with symptoms should be referred for further assessment. Any glucose found on urinalysis requires urgent referral to a medical practitioner. Trace amounts of blood can be present on urinalysis from inflammation, but stronger positive results require further assessment. The presence of protein and bilirubin on urinalysis also requires follow-up with a medical practitioner.'",
+          "gates": [
+            { "criterion": "Urinalysis (if performed) supports a UTI: positive nitrites and leukocyte esterase", "on_fail": "REFER" },
+            { "criterion": "No glucose found on urinalysis (Any glucose found on urinalysis requires urgent referral to a medical practitioner)", "on_fail": "REFER" },
+            { "criterion": "No protein or bilirubin on urinalysis (The presence of protein and bilirubin on urinalysis also requires follow-up with a medical practitioner)", "on_fail": "REFER" },
+            { "criterion": "No stronger-than-trace positive blood result on urinalysis (Trace amounts of blood can be present on urinalysis from inflammation, but stronger positive results require further assessment)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Symptom-based diagnostic assessment: \"The patient's presenting symptoms should be prioritised during the assessment as the probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present in the absence of vaginal discharge. However, where there is any doubt regarding the diagnosis, the patient should be referred to a medical practitioner for further assessment.\" [sentence begins at the foot of p.1 and completes on p.2]",
+          "gates": [
+            { "criterion": "At least two primary symptoms of cystitis are present in the absence of vaginal discharge (probability of cystitis greater than 90%)", "on_fail": "REFER" },
+            { "criterion": "There is no doubt regarding the diagnosis", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "WA Supplementary Information for Pharmacists" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "Empirical antibiotic selection within the UTI program: 'Escherichia coli (E. coli) is the causative organism in ~95% of all uncomplicated community-acquired urinary tract infections. In WA, E. coli urine culture susceptibility surveillance results show nitrofurantoin should remain effective >90% of the time. Trimethoprim is likely to be <80% effective. The susceptibility for the chosen empirical antibiotic should be above 80%. Nitrofurantoin should be considered as the first line antibiotic in this UTI program and, subject to the information below, trimethoprim the second line choice. Please note that cefalexin is excluded from this program due to local resistance patterns. The current Structured Administration and Supply Arrangement (SASA) does not permit the supply of cefalexin without a valid prescription. In situations where nitrofurantoin is contraindicated, trimethoprim can be considered in most parts of WA, except for the Kimberley and Pilbara where the susceptibility to trimethoprim drops below 70%. Where neither nitrofurantoin nor trimethoprim is appropriate, the patient should be referred to a medical practitioner for management.'",
+          "gates": [
+            { "criterion": "Susceptibility for the chosen empirical antibiotic is above 80%", "on_fail": "REFER" },
+            { "criterion": "Chosen antibiotic is not cefalexin (cefalexin is excluded from this program; the current SASA does not permit the supply of cefalexin without a valid prescription)", "on_fail": "STOP" },
+            { "criterion": "If nitrofurantoin is contraindicated and trimethoprim is considered: patient is not in the Kimberley and Pilbara (where the susceptibility to trimethoprim drops below 70%)", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "Referral to a medical practitioner: 'Where neither nitrofurantoin nor trimethoprim is appropriate, the patient should be referred to a medical practitioner for management.' 'Negative nitrites and/or leukocyte esterase with symptoms should be referred for further assessment.' 'Any glucose found on urinalysis requires urgent referral to a medical practitioner.' 'stronger positive results [of blood] require further assessment.' 'The presence of protein and bilirubin on urinalysis also requires follow-up with a medical practitioner.' 'where there is any doubt regarding the diagnosis, the patient should be referred to a medical practitioner for further assessment.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "WA Supplementary Information for Pharmacists" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "Referral to medical practitioners / follow-up care advice: 'Presentations to healthcare for acute issues, such as UTI, are important opportunities to engage patients in preventative healthcare, such as screening, and education. Pharmacists should highlight the importance of having a regular GP to all program participants as a part of follow-up care advice. Those patients without a regular GP should be encouraged and assisted to find a GP. Further advice on how and why to find a GP is available at HealthyWA - GPs. Where possible, the patient should be actively encouraged to provide the service summary to their GP and have the episode of care recorded within their personal medical record.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "Referral to medical practitioners" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Nitrofurantoin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "First-line antibiotic in this UTI program, verbatim (p.1): 'Nitrofurantoin should be considered as the first line antibiotic in this UTI program and, subject to the information below, trimethoprim the second line choice.' Susceptibility context verbatim (p.1): 'Escherichia coli (E. coli) is the causative organism in ~95% of all uncomplicated community-acquired urinary tract infections. In WA, E. coli urine culture susceptibility surveillance results show nitrofurantoin should remain effective >90% of the time.' Selection rule (p.1): 'The susceptibility for the chosen empirical antibiotic should be above 80%.' Contraindication pathway (p.1): 'In situations where nitrofurantoin is contraindicated, trimethoprim can be considered ...'. No strength, dose, route, frequency, duration or quantity is printed in this supplementary document - dosing must come from the main UTI protocol/SASA (see open questions). Surveillance date for the susceptibility figures is not printed.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Trimethoprim",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Second-line choice, verbatim (p.1): 'Nitrofurantoin should be considered as the first line antibiotic in this UTI program and, subject to the information below, trimethoprim the second line choice.' Susceptibility (p.1): 'Trimethoprim is likely to be <80% effective. The susceptibility for the chosen empirical antibiotic should be above 80%.' Geographic restriction (p.1): 'In situations where nitrofurantoin is contraindicated, trimethoprim can be considered in most parts of WA, except for the Kimberley and Pilbara where the susceptibility to trimethoprim drops below 70%.' Escalation (p.1): 'Where neither nitrofurantoin nor trimethoprim is appropriate, the patient should be referred to a medical practitioner for management.' No strength, dose, route, frequency, duration or quantity is printed in this supplementary document.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Cefalexin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "EXCLUDED from the program, verbatim (p.1): 'Please note that cefalexin is excluded from this program due to local resistance patterns. The current Structured Administration and Supply Arrangement (SASA) does not permit the supply of cefalexin without a valid prescription.' Recorded as a treatment row only so the exclusion is machine-checkable; it is not authorised for supply under this program. No strength, dose or quantity is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Any glucose found on urinalysis requires urgent referral to a medical practitioner.",
+      "structured": { "parameter": "glucose on urinalysis", "operator": "==", "value": "positive (any amount)", "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Negative nitrites and/or leukocyte esterase with symptoms should be referred for further assessment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "The presence of protein and bilirubin on urinalysis also requires follow-up with a medical practitioner.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Trace amounts of blood can be present on urinalysis from inflammation, but stronger positive results require further assessment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "However, where there is any doubt regarding the diagnosis, the patient should be referred to a medical practitioner for further assessment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Where neither nitrofurantoin nor trimethoprim is appropriate, the patient should be referred to a medical practitioner for management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "In situations where nitrofurantoin is contraindicated, trimethoprim can be considered in most parts of WA, except for the Kimberley and Pilbara where the susceptibility to trimethoprim drops below 70%.",
+      "structured": { "parameter": "trimethoprim susceptibility", "operator": "<", "value": 70, "unit": "%" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Please note that cefalexin is excluded from this program due to local resistance patterns. The current Structured Administration and Supply Arrangement (SASA) does not permit the supply of cefalexin without a valid prescription.",
+      "structured": { "parameter": "medicine", "operator": "==", "value": "cefalexin", "unit": "" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "The susceptibility for the chosen empirical antibiotic should be above 80%. [a chosen empirical antibiotic with susceptibility at or below 80% does not meet this requirement]",
+      "structured": { "parameter": "susceptibility of chosen empirical antibiotic", "operator": "<=", "value": 80, "unit": "%" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "WA Supplementary Information for Pharmacists" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Where neither nitrofurantoin nor trimethoprim is appropriate, the patient should be referred to a medical practitioner for management.",
+      "Negative nitrites and/or leukocyte esterase with symptoms should be referred for further assessment.",
+      "stronger positive results [of blood on urinalysis] require further assessment.",
+      "The presence of protein and bilirubin on urinalysis also requires follow-up with a medical practitioner.",
+      "However, where there is any doubt regarding the diagnosis, the patient should be referred to a medical practitioner for further assessment.",
+      "Those patients without a regular GP should be encouraged and assisted to find a GP. Further advice on how and why to find a GP is available at HealthyWA - GPs.",
+      "Where possible, the patient should be actively encouraged to provide the service summary to their GP and have the episode of care recorded within their personal medical record."
+    ],
+    "urgent": [
+      "Any glucose found on urinalysis requires urgent referral to a medical practitioner."
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+  },
+  "review_followup": [
+    {
+      "when": "If urinalysis is performed",
+      "what": "results should be included in the service summary.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 1, "section_heading": "Urinalysis" }
+    },
+    {
+      "when": "As part of follow-up care advice (all program participants)",
+      "what": "Pharmacists should highlight the importance of having a regular GP to all program participants as a part of follow-up care advice. Those patients without a regular GP should be encouraged and assisted to find a GP.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "Referral to medical practitioners" }
+    },
+    {
+      "when": "Where possible (after the episode of care)",
+      "what": "the patient should be actively encouraged to provide the service summary to their GP and have the episode of care recorded within their personal medical record.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "Referral to medical practitioners" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\PITUTI-protocol-WA-supplementary-information.pdf", "page": 2, "section_heading": "Referral to medical practitioners" }
+  },
+  "references": [],
+  "open_questions": [
+    {
+      "topic": "This is a supplementary/administrative document, not a prescribing protocol - it defers to the main UTI protocol and SASA",
+      "observed": "The 2-page document is titled 'WA Supplementary Information for Pharmacists'. It refers to 'this program', 'the SASA' and 'the service summary' without naming, numbering or versioning them: 'While the program does not mandate the use of urinalysis by dipstick in the SASA ...'; 'The current Structured Administration and Supply Arrangement (SASA) does not permit the supply of cefalexin without a valid prescription.'",
+      "why_unclear": "Eligibility checklist, age bounds, urinalysis mandate, dosing and notification rules live in the main protocol/SASA and are NOT reproduced here; they are recorded as open questions rather than invented. No SASA number/version is printed, so instrument_version/effective_date are taken only from the © line.",
+      "source_page": 1
+    },
+    {
+      "topic": "No dose, strength, route, frequency or duration printed for any antibiotic",
+      "observed": "Nitrofurantoin, trimethoprim and cefalexin are named only in the context of empirical choice, susceptibility and exclusion; no strength, dose, route, frequency, duration or quantity appears in the 2 pages.",
+      "why_unclear": "TX-1 to TX-3 have blank dosing fields; dosing must be transcribed from the main UTI protocol/SASA before any supply instruction can be issued.",
+      "source_page": 1
+    },
+    {
+      "topic": "No numeric age bound printed",
+      "observed": "No minimum or maximum age appears anywhere in the 2 pages.",
+      "why_unclear": "age_bounds is null/null with provenance on the eligibility-relevant page 1; the age band must come from the main UTI protocol/SASA (recorded in hugh_to_confirm).",
+      "source_page": 1
+    },
+    {
+      "topic": "No eligibility checklist section printed - inclusion/exclusion items are derived from antibiotic-selection and referral statements",
+      "observed": "There are no 'inclusion criteria' or 'exclusion criteria' headings. INC-1/INC-2 are drawn from the susceptibility and symptom-probability sentences; EXC-1 to EXC-4 are drawn from the cefalexin exclusion, the Kimberley/Pilbara restriction and the two 'should be referred to a medical practitioner' sentences.",
+      "why_unclear": "Combinatorics are inferred: all_of for the program conditions, any_of for the alternative referral exits. The document never states AND/OR explicitly, so confidence on INC-2 is 'medium' and the rest are recorded here per spec rule 4.",
+      "source_page": 1
+    },
+    {
+      "topic": "'At least two primary symptoms of cystitis' - the symptoms are not enumerated",
+      "observed": "'the probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present in the absence of vaginal discharge' (p.1, completed p.2). The document does not list what the primary symptoms of cystitis are, nor the accompanying negative symptoms.",
+      "why_unclear": "PW-1-S2 and INC-2 cannot be evaluated as automatic checks without the symptom list, which must come from the main UTI protocol/SASA.",
+      "source_page": 1
+    },
+    {
+      "topic": "Symptom-probability sentence is phrased as a probability statement, not as a criterion",
+      "observed": "'The patient's presenting symptoms should be prioritised during the assessment as the probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present in the absence of vaginal discharge.'",
+      "why_unclear": "Captured as INC-2 with confidence 'medium' and bracketed wording noting it is a probability statement; the document does not explicitly make it an eligibility requirement.",
+      "source_page": 1
+    },
+    {
+      "topic": "Urinalysis is not mandated by the SASA but is advocated; negative-result handling is only partly stated",
+      "observed": "'the program does not mandate the use of urinalysis by dipstick in the SASA, urinalysis may assist with confirmation of a patient's diagnosis ... Where practical, a pharmacist should consider utilising urinalysis as part of the diagnostic assessment. If urinalysis is performed, results should be included in the service summary. Positive nitrites and leukocyte esterase on urinalysis is indicative of a UTI. Negative nitrites and/or leukocyte esterase with symptoms should be referred for further assessment.'",
+      "why_unclear": "Whether urinalysis is optional at service level, and what happens with a negative result WITHOUT symptoms, are not stated; gates on PW-1-S1 transcribe only what is printed.",
+      "source_page": 1
+    },
+    {
+      "topic": "Referral block spans pages 1 and 2",
+      "observed": "Referral/follow-up statements appear under 'Urinalysis' and the antibiotic-selection text on page 1 and under 'Referral to medical practitioners' plus the diagnosis-doubt sentence on page 2.",
+      "why_unclear": "Spec rule for the referral block: the shared provenance uses the first page (page 1); the range 1-2 is recorded here.",
+      "source_page": 1
+    },
+    {
+      "topic": "No emergency referral tier printed",
+      "observed": "The most urgent wording in the document is 'Any glucose found on urinalysis requires urgent referral to a medical practitioner.' No ambulance, emergency department or 'emergency' wording appears.",
+      "why_unclear": "referral.emergency is empty; the urgent glucose statement is captured in referral.urgent and as RF-1 (REFER_URGENT, severity high, using the document's own 'urgent' language).",
+      "source_page": 1
+    },
+    {
+      "topic": "Susceptibility thresholds are surveillance-based with no date or source version",
+      "observed": "'nitrofurantoin should remain effective >90% of the time. Trimethoprim is likely to be <80% effective. The susceptibility for the chosen empirical antibiotic should be above 80%'; 'the susceptibility to trimethoprim drops below 70%' in the Kimberley and Pilbara. No surveillance period, dataset or review date is printed; the document carries only '© Department of Health 2023'.",
+      "why_unclear": "Thresholds may change over time; the currency of the underlying E. coli urine culture susceptibility surveillance cannot be established from this document.",
+      "source_page": 1
+    },
+    {
+      "topic": "No reference list and no notifiable-condition statement printed",
+      "observed": "The only external pointer is 'Further advice on how and why to find a GP is available at HealthyWA - GPs' (p.2). No numbered references, no notifiable condition, no AIR/notification requirement appears.",
+      "why_unclear": "references is empty and notifiable.required is null because the document genuinely contains none.",
+      "source_page": 2
+    },
+    {
+      "topic": "No version number printed",
+      "observed": "No version, date of issue, document ID or approving officer appears; only '© Department of Health 2023' (p.2) and 'health.wa.gov.au'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 2
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Identify and cite the governing UTI SASA (number, version, effective date) that this supplementary information relies on - it is named but never numbered in the document.",
+      "source_page": 1,
+      "reason": "Legal basis, eligibility, age band and supply rules all defer to that SASA; without it the instrument's legal_basis and version cannot be verified."
+    },
+    {
+      "item": "Obtain strength, dose, route, frequency, duration and quantity for nitrofurantoin and trimethoprim (and the contraindication definition for nitrofurantoin) from the main UTI protocol/SASA before any dosing rule is encoded.",
+      "source_page": 1,
+      "reason": "TX-1 and TX-2 have blank dosing fields; this document prints only the drug ranking and susceptibility figures."
+    },
+    {
+      "item": "Confirm the numeric age eligibility for the UTI program (not printed in this supplement) against the main protocol/SASA.",
+      "source_page": 1,
+      "reason": "age_bounds are null/null; a prescribing support module cannot check eligibility without an age band."
+    },
+    {
+      "item": "Confirm the enumerated 'primary symptoms of cystitis' required for the 'at least two primary symptoms ... in the absence of vaginal discharge' probability rule.",
+      "source_page": 1,
+      "reason": "PW-1-S2/INC-2 cannot be evaluated automatically until the symptom list is sourced from the main protocol."
+    },
+    {
+      "item": "Confirm currency of the local susceptibility data used for the thresholds (nitrofurantoin >90%, trimethoprim <80% overall, <70% in the Kimberley and Pilbara, chosen empirical antibiotic >80%) and the review cycle for these figures.",
+      "source_page": 1,
+      "reason": "The thresholds drive first/second-line choice and the Kimberley/Pilbara restriction, but no surveillance period or review date is printed (© 2023)."
+    },
+    {
+      "item": "Confirm local service rules for urinalysis: whether dipstick urinalysis is expected at this site despite not being mandated by the SASA, and how results are recorded in the service summary.",
+      "source_page": 1,
+      "reason": "The document says pharmacists 'should consider utilising urinalysis' but leaves the operational decision to local policy."
+    },
+    {
+      "item": "Confirm the geographic definition of 'the Kimberley and Pilbara' (areas/postcodes) for the trimethoprim susceptibility rule.",
+      "source_page": 1,
+      "reason": "The restriction is region-based but no boundary definition is printed; the engine needs a defined service-area list."
+    },
+    {
+      "item": "Confirm what a pharmacist should do when a patient fails eligibility (e.g. diagnosis in doubt, neither antibiotic appropriate) - the document says 'referred to a medical practitioner' but names no destination, timeframe or urgent-care pathway beyond the glucose statement.",
+      "source_page": 2,
+      "reason": "Referral destinations/timeframes are left unstated and must be set by local policy before go-live."
+    }
+  ]
+}

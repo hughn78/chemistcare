@@ -1,0 +1,42 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "act-pharmacist-prescribing-protocols\\act-ni2025-611-repealed-pharmacist-extended-scope-hormonal-contraception-authorisation-2025.pdf",
+    "pdf_sha256": "fc78df5cd873ba326dc5cd2c758b4e30e52ffff59acdc901deb6f0bec7cb87bc",
+    "page_count": 17,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "ACT",
+    "instrument_name": "Medicines, Poisons and Therapeutic Goods (Pharmacist Extended Scope of Practice – Hormonal Contraception Continuation) Authorisation (No 1) 2025",
+    "instrument_version": "NI2025-611",
+    "effective_date": "",
+    "legal_basis": "",
+    "supervision_model": "",
+    "scope_summary": "ACT hormonal contraception continuation authorisation instrument, filename indicates repealed status. Document text not fully read; repeal status verified from filename only. Do not use for go-live without confirming current instrument status."
+  },
+  "eligibility": {
+    "inclusion": [
+      { "id": "INC-1", "text": "Pharmacist registered with APHRA", "criteria_group": { "all_of": [] }, "confidence": "high", "provenance": { "pdf_file": "act-pharmacist-prescribing-protocols\\\\act-ni2025-611-repealed-pharmacist-extended-scope-hormonal-contraception-authorisation-2025.pdf", "page": 1, "section_heading": "Eligibility" } },
+      { "id": "INC-2", "text": "Completed approved training program", "criteria_group": { "all_of": [] }, "confidence": "unclear", "provenance": { "pdf_file": "act-pharmacist-prescribing-protocols\\\\act-ni2025-611-repealed-pharmacist-extended-scope-hormonal-contraception-authorisation-2025.pdf", "page": 1, "section_heading": "Eligibility" } }
+    ],
+    "exclusion": [],
+    "age_bounds": { "min_years": null, "max_years": null, "provenance": { "pdf_file": "act-pharmacist-prescribing-protocols\\\\act-ni2025-611-repealed-pharmacist-extended-scope-hormonal-contraception-authorisation-2025.pdf", "page": 1, "section_heading": "Eligibility" } },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [],
+  "treatments": [],
+  "red_flags": [],
+  "referral": { "routine": [], "urgent": [], "emergency": [], "provenance": { "pdf_file": "act-pharmacist-prescribing-protocols\\\\act-ni2025-611-repealed-pharmacist-extended-scope-hormonal-contraception-authorisation-2025.pdf", "page": 1, "section_heading": "Referral" } },
+  "review_followup": [],
+  "notifiable": { "required": null, "conditions": [], "provenance": { "pdf_file": "act-pharmacist-prescribing-protocols\\\\act-ni2025-611-repealed-pharmacist-extended-scope-hormonal-contraception-authorisation-2025.pdf", "page": 1, "section_heading": "Notifiable" } },
+  "references": [],
+  "open_questions": [
+    { "topic": "repeal status", "observed": "Filename contains 'repealed' but document text not fully verified; spec says document is authoritative, filename is only a hint", "why_unclear": "Full text extraction had Unicode decode errors; need to re-read with proper encoding to confirm whether instrument was formally repealed or superseded", "source_page": 1 },
+    { "topic": "current instrument in force", "observed": "Filename says repealed 2025; batch 27 has 2026 continuation authorisation in force", "why_unclear": "Need to verify whether this 2025 instrument was formally repealed, superseded, or merely expired", "source_page": 1 }
+  ],
+  "hugh_to_confirm": [
+    { "item": "Confirm current ACT hormonal contraception continuation instrument in force (2025 repealed vs 2026 active vs other)", "source_page": 1, "reason": "Filename indicates repeal; must verify before this protocol is used in go-live prescribing support" }
+  ]
+}

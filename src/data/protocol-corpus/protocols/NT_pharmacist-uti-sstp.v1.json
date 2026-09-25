@@ -1,0 +1,566 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf",
+    "pdf_sha256": "7320decfe3632142f7c2a33ca1f37d145c795e445a24772d849da12968516574",
+    "page_count": 4,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NT",
+    "instrument_name": "Pharmacist management of uncomplicated Urinary Tract Infections (Scheduled Substance Treatment Protocol)",
+    "instrument_version": "No version number printed; Schedule A Publication Date 22 October 2024",
+    "effective_date": "2024-10-22",
+    "legal_basis": "Medicines, Poisons and Therapeutic Goods Act 2012 (NT): Chief Health Officer Christine Maree Connors '(a) under section 254(1) of the Act, approve each Scheduled substance treatment protocol specified in Schedule A; (b) under section 254(3) of the Act, state that each Schedule substance treatment protocol specified in Schedule A remains in effect for a period of 2 years on and from the date of this instrument.' Dated 22 October 2024 (p.1, Approval). 'Period of effect SSTP is effect until 22/10/2026 unless revoked earlier' (p.4).",
+    "supervision_model": "SSTP-authorised pharmacist model, document terminology: 'Health Professionals authorised by this SSTP: Pharmacists' (p.3). No supervising practitioner is printed; escalation boundary is the Monitoring requirements rule (p.4): 'Patients must be advised to seek further medical review if symptoms worsen, do not resolve or persist after the course of treatment or reoccur within 6 months of treatment.' Accreditation requirements (p.4): Pharmacy Board registration with no conditions or undertakings limiting clinical services directly to patients, plus one of three printed training pathways (Australasian College of Pharmacy Uncomplicated Cystitis Treatment - Pharmacist Training; Pharmaceutical Society of Australia Managing uncomplicated cystitis; or a training module approved by the Chief Health Officer).",
+    "scope_summary": "Scheduled Substance Treatment Protocol for treatment of acute uncomplicated cystitis (Urinary Tract Infection) in women, NT wide, by pharmacists. Scheduled substances: Nitrofurantoin (first line) and Cefalexin (if nitrofurantoin not suitable), with printed doses (Nitrofurantoin 100mg, four times a day for 5 days (20 capsules); Cefalexin 500mg orally every 12 hours for 5 days (10 capsules)). Prints nine contraindications/exclusions, nitrofurantoin renal precautions, administration and interaction advice, single-course/6-month dose-frequency authorisation, monitoring and referral duties, accreditation, service cost requirements and documentation/My Health Record duties."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Indication: Treatment of acute uncomplicated cystitis (Urinary Tract Infection) in women",
+        "criteria_group": {"all_of": ["INC-1", "INC-4"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Indication"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Areas Applicable: NT Wide",
+        "criteria_group": {"all_of": ["INC-2", "INC-3"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Areas Applicable"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Health Professionals authorised by this SSTP: Pharmacists",
+        "criteria_group": {"all_of": ["INC-2", "INC-3"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Health Professionals authorised by this SSTP"}
+      },
+      {
+        "id": "INC-4",
+        "text": "Persons aged 18 to 65 years (derived from the printed exclusion 'Age <18 and >65 years'; strict inequalities imply 18 and 65 years are within the eligible band)",
+        "criteria_group": {"all_of": ["INC-1", "INC-4"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "INC-5",
+        "text": "Be registered with the Pharmacy Board of Australia with no conditions or undertakings which may limit delivery of clinical services directly to patients",
+        "criteria_group": {"all_of": ["INC-5"], "any_of": ["INC-6", "INC-7", "INC-8"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Health Professional Accreditation Requirements"}
+      },
+      {
+        "id": "INC-6",
+        "text": "Have completed: Australasian College of Pharmacy Uncomplicated Cystitis Treatment - Pharmacist Training",
+        "criteria_group": {"all_of": ["INC-5"], "any_of": ["INC-6", "INC-7", "INC-8"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Health Professional Accreditation Requirements"}
+      },
+      {
+        "id": "INC-7",
+        "text": "Have completed: Pharmaceutical Society of Australia Managing uncomplicated cystitis",
+        "criteria_group": {"all_of": ["INC-5"], "any_of": ["INC-6", "INC-7", "INC-8"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Health Professional Accreditation Requirements"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Have completed: Training module(s) that have been approved by the Chief Health Officer for the purposes of this protocol",
+        "criteria_group": {"all_of": ["INC-5"], "any_of": ["INC-6", "INC-7", "INC-8"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Health Professional Accreditation Requirements"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Patients with an anatomical male urinary tract",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Age <18 and >65 years",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "Pregnant",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "Use of antibiotics within the previous 14 days",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "Treatment of UTI with antibiotics in the previous 6 months",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "More than 2 UTI in the previous 12 months",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "Patients with Chronic Kidney Disease",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "Patients with kidney stones, urinary catheters/stents or recent urinary tract surgical procedure",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "Patients with paralysis affecting mobility, increasing risk of recurrent or complex UTI's",
+        "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 65,
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist management of acute uncomplicated cystitis (NT SSTP)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Assess the patient against the printed 'Contraindications and/or Exclusions' list: 'Patients with an anatomical male urinary tract'; 'Age <18 and >65 years'; 'Pregnant'; 'Use of antibiotics within the previous 14 days'; 'Treatment of UTI with antibiotics in the previous 6 months'; 'More than 2 UTI in the previous 12 months'; 'Patients with Chronic Kidney Disease'; 'Patients with kidney stones, urinary catheters/stents or recent urinary tract surgical procedure'; 'Patients with paralysis affecting mobility, increasing risk of recurrent or complex UTI's'. Confirms the Indication: 'Treatment of acute uncomplicated cystitis (Urinary Tract Infection) in women'.",
+          "gates": [{"criterion": "No contraindication or exclusion present from the printed Contraindications and/or Exclusions list", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "INVESTIGATION",
+          "description": "Renal function / CKD risk check before nitrofurantoin (Precautions): 'Nitrofurantoin should not be used in patients with a eGFR <45mL/minute. Where recent renal function rest is not available, Nitrofurantoin should not be used in patients with risk factors for CKD.' (printed verbatim, including the word 'rest').",
+          "gates": [{"criterion": "eGFR >= 45mL/minute on recent renal function, or no risk factors for CKD where recent renal function is not available", "on_fail": "SEE_PW-1-S4"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Precautions"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "First line treatment: 'Nitrofurantoin 100mg, four times a day for 5 days (20 capsules)'. Administration: 'Nitrofurantoin should be given with food to reduce nausea and improve absorption'.",
+          "gates": [{"criterion": "Nitrofurantoin suitable (no contraindication/exclusion; eGFR >= 45mL/minute and no CKD risk factors where renal function unavailable)", "on_fail": "SEE_PW-1-S4"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Dose and Route"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "Alternative when first line is unsuitable: 'If Nitrofurantoin is not suitable: Cefalexin 500mg orally every 12 hours for 5 days (10 capsules)'.",
+          "gates": [{"criterion": "Nitrofurantoin not suitable", "on_fail": "SEE_PW-1-S3"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Dose and Route"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Dose Frequency authorisation: 'Doses must be provided as a single course and this protocol only authorizes a course every 6 months for any patient.'",
+          "gates": [{"criterion": "Dose provided as a single course and no course already supplied to this patient within the last 6 months (protocol authorizes only one course every 6 months)", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Dose Frequency"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "Administration and interaction advice: 'Nitrofurantoin should be given with food to reduce nausea and improve absorption'; 'Pharmacists should be guided by published interaction information on the Australian Medicines Handbook or MIMMS online.'; 'Patients should be advised not to use antacid preparations at the same time as nitrofurantoin.'",
+          "gates": [{"criterion": "Administration and drug interaction advice given (nitrofurantoin with food; no antacid preparations at the same time as nitrofurantoin; interactions checked against Australian Medicines Handbook or MIMMS online)", "on_fail": "unclear"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Administration"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "Monitoring and escalation: 'Patients must be advised to seek further medical review if symptoms worsen, do not resolve or persist after the course of treatment or reoccur within 6 months of treatment.'",
+          "gates": [{"criterion": "Symptoms improve after treatment and do not reoccur within 6 months", "on_fail": "REFER"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Monitoring requirements"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Service cost requirements: 'Pharmacists may charge a cost for this service in addition to the cost of the medicines. Pharmacists must ensure the patient is aware of the cost involved when offering the service and inform them that free consultations are available through bulk-billing general practitioners'.",
+          "gates": [{"criterion": "Patient made aware of the cost involved when offering the service and informed that free consultations are available through bulk-billing general practitioners", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Service Requirements"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "FOLLOW_UP",
+          "description": "Documentation: 'The pharmacist must: Complete and retain a clinical record of treatment and provide a service summary for the patient. This record must include date of consultation, patient health history, relevant symptoms justifying therapy, any issues identified, actions taken (including the name of the medicine if supplied).' and 'Upload a record of the supply to the patients MyHealthRecord where present and patient consents.'",
+          "gates": [{"criterion": "Clinical record completed and retained, service summary provided to the patient, and record of supply uploaded to MyHealthRecord where present and patient consents", "on_fail": "STOP"}],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Documentation (including necessary information to the patient)"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Nitrofurantoin",
+      "form": "capsules",
+      "strength": "100mg",
+      "dose": "100mg",
+      "route": "",
+      "frequency": "four times a day",
+      "duration": "5 days",
+      "max_quantity": "20 capsules",
+      "max_dose": "",
+      "quantity_to_supply": "20 capsules",
+      "notes": "First line treatment, printed verbatim: 'First line treatment: Nitrofurantoin 100mg, four times a day for 5 days (20 capsules)' (p.3, Dose and Route). Route is not printed for nitrofurantoin (the Dose and Route section prints the route only for cefalexin: 'orally'); no route inferred. Administration (p.3): 'Nitrofurantoin should be given with food to reduce nausea and improve absorption'. Precautions (p.3): 'Nitrofurantoin should not be used in patients with a eGFR <45mL/minute. Where recent renal function rest is not available, Nitrofurantoin should not be used in patients with risk factors for CKD.' Drug Interactions (p.4): 'Pharmacists should be guided by published interaction information on the Australian Medicines Handbook or MIMMS online.' 'Patients should be advised not to use antacid preparations at the same time as nitrofurantoin.' Dose Frequency (p.3): 'Doses must be provided as a single course and this protocol only authorizes a course every 6 months for any patient.' Contraindication-within-protocol: excluded patients per the Contraindications and/or Exclusions list on p.3 (including pregnancy, CKD, age <18 or >65 years).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Dose and Route"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "Cefalexin",
+      "form": "capsules",
+      "strength": "500mg",
+      "dose": "500mg",
+      "route": "orally",
+      "frequency": "every 12 hours",
+      "duration": "5 days",
+      "max_quantity": "10 capsules",
+      "max_dose": "",
+      "quantity_to_supply": "10 capsules",
+      "notes": "Second line, printed verbatim: 'If Nitrofurantoin is not suitable: Cefalexin 500mg orally every 12 hours for 5 days (10 capsules)' (p.3, Dose and Route). Form 'capsules' derived from the printed course quantity '(10 capsules)'. Dose Frequency rule (p.3) applies: 'Doses must be provided as a single course and this protocol only authorizes a course every 6 months for any patient.' Contraindication-within-protocol: excluded patients per the Contraindications and/or Exclusions list on p.3.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Dose and Route"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Patients with an anatomical male urinary tract",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Age <18 and >65 years",
+      "structured": {"parameter": "age", "operator": "<", "value": 18, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Age <18 and >65 years (upper bound: age over 65 years)",
+      "structured": {"parameter": "age", "operator": ">", "value": 65, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Pregnant",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Use of antibiotics within the previous 14 days",
+      "structured": {"parameter": "days_since_antibiotic_use", "operator": "<=", "value": 14, "unit": "days"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Treatment of UTI with antibiotics in the previous 6 months",
+      "structured": {"parameter": "months_since_uti_antibiotic_treatment", "operator": "<=", "value": 6, "unit": "months"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "More than 2 UTI in the previous 12 months",
+      "structured": {"parameter": "uti_episodes_in_previous_12_months", "operator": ">", "value": 2, "unit": "episodes"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Patients with Chronic Kidney Disease",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Patients with kidney stones, urinary catheters/stents or recent urinary tract surgical procedure",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Patients with paralysis affecting mobility, increasing risk of recurrent or complex UTI's",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Contraindications and/or Exclusions"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Nitrofurantoin should not be used in patients with a eGFR <45mL/minute",
+      "structured": {"parameter": "eGFR", "operator": "<", "value": 45, "unit": "mL/minute"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Precautions"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Where recent renal function rest is not available, Nitrofurantoin should not be used in patients with risk factors for CKD. (Printed verbatim; 'rest' transcribed as printed.)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Precautions"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Patients must be advised to seek further medical review if symptoms worsen, do not resolve or persist after the course of treatment or reoccur within 6 months of treatment.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Monitoring requirements"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "reoccur within 6 months of treatment (time-based component of the monitoring requirement)",
+      "structured": {"parameter": "time_since_last_treatment", "operator": "<", "value": 6, "unit": "months"},
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Monitoring requirements"}
+    }
+  ],
+  "referral": {
+    "routine": [],
+    "urgent": [
+      "Patients must be advised to seek further medical review if symptoms worsen, do not resolve or persist after the course of treatment or reoccur within 6 months of treatment."
+    ],
+    "emergency": [],
+    "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Monitoring requirements"}
+  },
+  "review_followup": [
+    {
+      "when": "If symptoms worsen, do not resolve or persist after the course of treatment, or reoccur within 6 months of treatment",
+      "what": "Seek further medical review (patients must be advised of this)",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Monitoring requirements"}
+    },
+    {
+      "when": "Any subsequent course for the same patient within 6 months of a course",
+      "what": "Not authorised: 'Doses must be provided as a single course and this protocol only authorizes a course every 6 months for any patient.'",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 3, "section_heading": "Dose Frequency"}
+    },
+    {
+      "when": "At the time of the consultation / supply",
+      "what": "Complete and retain a clinical record of treatment and provide a service summary for the patient (record must include date of consultation, patient health history, relevant symptoms justifying therapy, any issues identified, actions taken including the name of the medicine if supplied); upload a record of the supply to the patients MyHealthRecord where present and patient consents",
+      "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Documentation (including necessary information to the patient)"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Upload a record of the supply to the patients MyHealthRecord where present and patient consents (p.4, Documentation)"
+    ],
+    "provenance": {"pdf_file": "nt-pharmacist-prescribing-protocols\\nt-pharmacist-uti-sstp.pdf", "page": 4, "section_heading": "Documentation (including necessary information to the patient)"}
+  },
+  "references": [
+    "Australian Medicines Handbook (cited as 'the Australian Medicines Handbook') (page 4, Drug Interactions)",
+    "MIMMS online (page 4, Drug Interactions)",
+    "* The drug information provided is to act as a guide to outline the limits of legal dealing with the named scheduled substances. Further information reference should be made to the full manufacturer's product info and other reliable sources of medicines information. (page 4, References)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Contradictory expiry dates",
+      "observed": "Footers on pp.3 and 4 print 'SSTP in force until 22/10/2024'; the Period of effect statement on p.4 prints 'SSTP is effect until 22/10/2026 unless revoked earlier'; the Approval on p.1 states the protocol remains in effect 'for a period of 2 years on and from the date of this instrument' (dated 22 October 2024).",
+      "why_unclear": "Two different expiry dates are printed; both readings recorded and not reconciled. The 2-year statement and period of effect agree on 22/10/2026; the footers print 22/10/2024.",
+      "source_page": 3
+    },
+    {
+      "topic": "Age boundary reading",
+      "observed": "Exclusion prints 'Age <18 and >65 years'.",
+      "why_unclear": "age_bounds set to min 18 / max 65 on the reading that strict inequalities exclude only under-18s and over-65s; whether exactly 18 and exactly 65 are eligible is implied rather than stated. INC-4 carries confidence medium.",
+      "source_page": 3
+    },
+    {
+      "topic": "Time-window boundary conventions encoded as inclusive",
+      "observed": "'Use of antibiotics within the previous 14 days' and 'Treatment of UTI with antibiotics in the previous 6 months' (p.3).",
+      "why_unclear": "Structured triggers use <= 14 days and <= 6 months (inclusive reading of 'within'); the document does not state whether the boundary day/month is inclusive. 'More than 2 UTI in the previous 12 months' is encoded strictly (> 2) as printed.",
+      "source_page": 3
+    },
+    {
+      "topic": "Red-flag severity assignment is a judgement call",
+      "observed": "The heading groups all nine criteria as 'Contraindications and/or Exclusions' without saying which are contraindications and which are exclusions, and prints no urgency ranking.",
+      "why_unclear": "Severity assigned by category: high for contraindication-type items (anatomical male urinary tract, pregnancy, Chronic Kidney Disease, nitrofurantoin renal precautions, monitoring escalation), medium for history/age/anatomy exclusions. Not upgraded beyond the document's own language.",
+      "source_page": 3
+    },
+    {
+      "topic": "Printed wording 'renal function rest'",
+      "observed": "Precautions (p.3) prints 'Where recent renal function rest is not available, Nitrofurantoin should not be used in patients with risk factors for CKD.'",
+      "why_unclear": "Transcribed verbatim including 'rest', which may be a typographical error for 'test'. Not corrected; both readings noted (RF-12 carries confidence medium).",
+      "source_page": 3
+    },
+    {
+      "topic": "No routine or emergency referral destinations printed",
+      "observed": "The only referral direction printed is the monitoring rule (p.4) to 'seek further medical review' when symptoms worsen, do not resolve/persist after treatment, or reoccur within 6 months. No routine follow-up destination and no emergency escalation (e.g. ambulance) instruction appears anywhere in the document.",
+      "why_unclear": "routine and emergency referral lists are empty because the document genuinely prints none; the monitoring rule is captured in urgent and in red flags.",
+      "source_page": 4
+    },
+    {
+      "topic": "Nitrofurantoin route not printed",
+      "observed": "The 'Dose and Route' section (p.3) prints 'Nitrofurantoin 100mg, four times a day for 5 days (20 capsules)' without a route, while the cefalexin line explicitly prints 'orally'. Administration only states 'should be given with food'.",
+      "why_unclear": "Route left empty for TX-1; no route inferred from the dosage form or administration text.",
+      "source_page": 3
+    },
+    {
+      "topic": "Exclusion combinators inferred",
+      "observed": "The nine criteria are printed as a bulleted list under 'Contraindications and/or Exclusions'; no explicit boolean combinators are printed.",
+      "why_unclear": "any_of used (any single criterion excludes the patient), read from the fact that each bullet is independently labelled a contraindication or exclusion. Relationship between the inclusion groups (indication+age, area+authorised pharmacist, accreditation) and the exclusion list is also not stated.",
+      "source_page": 3
+    },
+    {
+      "topic": "Pathway gates with on_fail unclear",
+      "observed": "The exclusion check (PW-1-S1) and the administration/interaction advice step (PW-1-S6) state duties but print no branch if unmet.",
+      "why_unclear": "The document does not say what happens when an exclusion is found or when advice is not given, so those gates use on_fail 'unclear'. All other gates follow printed wording (alternative therapy 'If Nitrofurantoin is not suitable', 6-month authorisation limit, monitoring escalation, cost and documentation 'must' duties).",
+      "source_page": 3
+    },
+    {
+      "topic": "Printed pagination vs PDF page markers",
+      "observed": "Footers print 'Page 1 of 2' and 'Page 2 of 2' on PDF pages 3 and 4; PDF pages 1-2 (CHO approval and Schedule A) are unnumbered.",
+      "why_unclear": "All provenance page numbers use the === PAGE n === markers (PDF pages 1-4); printed footer numbers are offset by 2.",
+      "source_page": 3
+    },
+    {
+      "topic": "notifiable interpretation",
+      "observed": "The document prints no notifiable-condition reporting; it requires 'Upload a record of the supply to the patients MyHealthRecord where present and patient consents' (p.4).",
+      "why_unclear": "required set to true only for that conditional My Health Record upload; upload is contingent on the record existing and patient consent, and no other notification duty (AIR, adverse event, notifiable condition) is printed.",
+      "source_page": 4
+    },
+    {
+      "topic": "No version number printed for this SSTP",
+      "observed": "Schedule A (p.2) prints Publication Date 22 October 2024 and the author; no version string appears in the document.",
+      "why_unclear": "instrument_version recorded as the printed publication date.",
+      "source_page": 2
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm the SSTP expiry date: footers on pp.3-4 say 'SSTP in force until 22/10/2024' while the Period of effect statement says 'until 22/10/2026' and the Approval grants 2 years from 22 October 2024.",
+      "source_page": 3,
+      "reason": "Direct contradiction between printed expiry dates; must be resolved with NT Health before go-live."
+    },
+    {
+      "item": "Confirm the intended wording of the nitrofurantoin renal precaution 'Where recent renal function rest is not available' (p.3) - is 'rest' a typographical error for 'test'?",
+      "source_page": 3,
+      "reason": "Transcribed verbatim without correction; the clinical meaning of the sentence depends on the intended word."
+    },
+    {
+      "item": "Confirm whether the age exclusion 'Age <18 and >65 years' makes 18-year-olds and 65-year-olds eligible (strict inequality reading) before go-live.",
+      "source_page": 3,
+      "reason": "Boundary inclusion is implied by the printed inequalities but never stated; age_bounds and INC-4 depend on it."
+    },
+    {
+      "item": "Confirm boundary conventions for the time-window exclusions ('within the previous 14 days', 'in the previous 6 months') - encoded here as inclusive (<=).",
+      "source_page": 3,
+      "reason": "The document does not state whether the boundary day/month counts as excluded."
+    },
+    {
+      "item": "Confirm the local referral/escalation pathway for patients who meet a contraindication or exclusion (the document prints no branch for PW-1-S1 on_fail).",
+      "source_page": 3,
+      "reason": "Nine exclusions are printed but no destination, timeframe or action is specified when a patient is excluded; local policy required before go-live."
+    },
+    {
+      "item": "Confirm how the 'one course every 6 months' authorisation limit is recorded and checked across pharmacies (Dose Frequency, p.3).",
+      "source_page": 3,
+      "reason": "'This protocol only authorizes a course every 6 months for any patient' but no register/system for counting courses is printed; local process required."
+    },
+    {
+      "item": "Confirm acceptance of the three printed training pathways (Australasian College of Pharmacy Uncomplicated Cystitis Treatment - Pharmacist Training; PSA Managing uncomplicated cystitis; CHO-approved training module(s)) and identify the currently CHO-approved modules.",
+      "source_page": 4,
+      "reason": "Accreditation requirement is printed but no list of CHO-approved modules or expiry/renewal rules is provided."
+    },
+    {
+      "item": "Pin the versions of the Australian Medicines Handbook and MIMMS online used for interaction guidance (p.4).",
+      "source_page": 4,
+      "reason": "Interaction guidance defers to external live resources with no version pinned."
+    },
+    {
+      "item": "Confirm local fee disclosure process (cost of service plus the requirement to inform patients that free consultations are available through bulk-billing general practitioners, p.4).",
+      "source_page": 4,
+      "reason": "Fee amounts are left to the pharmacist/pharmacy; disclosure wording and record are local policy."
+    },
+    {
+      "item": "Confirm My Health Record upload process and consent capture for the record of supply (p.4).",
+      "source_page": 4,
+      "reason": "Upload is conditional ('where present and patient consents'); local system workflow is not printed."
+    }
+  ]
+}

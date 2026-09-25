@@ -1,0 +1,603 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline",
+    "pdf_sha256": "bf7e77ff24277e1aa08d8f51f3c4340608a4f8d19f46133e8af88b31cdaa3765",
+    "page_count": 7,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Mild to Moderate Acne - Clinical Practice Guideline",
+    "instrument_version": "Version dated 1 July 2025 (version history: Version 2.0, 01.07.2025)",
+    "effective_date": "2025-07-01",
+    "legal_basis": "",
+    "supervision_model": "Not stated using 'collaborative'/'autonomous' terminology; document states pharmacists are advised to exercise professional discretion and judgement and must prescribe medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+    "scope_summary": "Queensland Community Pharmacy clinical practice guideline for pharmacist management of mild to moderate acne. Service restricted to patients aged 12 years or over. Covers patient history and assessment, examination and severity classification, non-pharmacological and pharmacological management plan (per Therapeutic Guidelines: Dermatology (Acne)), additional antibiotic/pregnancy considerations, confirmation of management, communication of the agreed plan, referral ('Refer when') triggers, general advice on when to see a healthcare provider, and clinical review/follow-up. Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 12 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Mild to Moderate Acne - Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Presentation is mild to moderate acne (guideline title: 'Mild to Moderate Acne - Clinical Practice Guideline'; 'Pharmacist management of mild to moderate acne involves:').",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Mild to Moderate Acne - Clinical Practice Guideline" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "unclear diagnosis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "the patient is planning a pregnancy or is pregnant",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "the patient is taking a medicine that can cause or aggravate acne",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "a female patient has polycystic ovarian syndrome (PCOS) or presents with signs of androgenisation including hirsutism, obesity and/or menstrual irregularity",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "quality of life is significantly affected",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "acne is classified as severe, cystic or scarring, or the patient has a family history of scarring acne",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "inadequate response to optimal treatment",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "the patient requires >6 months of oral antibiotic therapy.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "NB1: Isotretinoin is not able to be prescribed by pharmacists.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 12,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Mild to Moderate Acne - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Mild to Moderate Acne - Clinical Practice Guideline" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist management of mild to moderate acne (assessment, treatment, referral screening and review)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable), including plans to become pregnant; onset, duration, nature, location and severity of lesions; underlying medical conditions, including PCOS; hormonal changes and signs of androgenisation in women, including hirsutism, obesity and menstrual irregularity; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/ adverse reactions and/or sensitivities to treatments; current management strategies for acne, including hygiene, skin care regimes and products (cosmetic, complementary, over-the-counter and scheduled medicines/products); response to prior therapy or management strategies; aggravating factors (e.g., occupation and exposure to comedogenic factors); emotional and social impacts of acne. Reminder: pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination - Clinical features: Acne is characterised by a mixed eruption of lesions on the face, neck and/or trunk, where severity can be classified according to the Therapeutic Guidelines: Acne (Diagnosis and classification of acne). Other conditions with similar signs and symptoms that may require consideration and referral for investigation and/or treatment are included in the Therapeutic Guidelines: Dermatology (Acne - Diagnosis and classification of acne).",
+          "gates": [
+            { "criterion": "Diagnosis is clear and other conditions with similar signs and symptoms requiring consideration and referral have been excluded (see RF-1 'unclear diagnosis')", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Clinical features" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Classify acne severity (Therapeutic Guidelines: Acne, Diagnosis and classification of acne) and confirm the presentation is within the mild to moderate scope of this guideline. Refer when acne is classified as severe, cystic or scarring, or the patient has a family history of scarring acne (verbatim 'Refer when' list, page 2; see RF-6/EXC-6).",
+          "gates": [
+            { "criterion": "Acne is not classified as severe, cystic or scarring and there is no family history of scarring acne (RF-6)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Clinical features" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "Develop management plan. Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. Pharmacist management of mild to moderate acne involves: non-pharmacological measures - advice regarding skin care and minimising exposure to aggravating factors, in accordance with the Therapeutic Guidelines: Dermatology (Acne - General measures for acne); pharmacotherapy - in accordance with the Therapeutic Guidelines: Dermatology (Acne), specifically NB1: over-the-counter topical products; topical retinoids (and combination products with benzoyl peroxide); topical antibiotics (and combination products with benzoyl peroxide or retinoids); oral antibiotics. NB1: Isotretinoin is not able to be prescribed by pharmacists.",
+          "gates": [
+            { "criterion": "Management does not require isotretinoin (NB1: Isotretinoin is not able to be prescribed by pharmacists)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Additional information for consideration: Antibiotic therapy should not be used long-term (topical or oral) (2). The Australian Medicines Handbook recommends limiting treatment with oral antibiotics to 3–6 months when possible (7). The use of topical clindamycin should be limited to 3 months (8). Oral and topical antibiotics should be discontinued when inflammatory lesions have adequately resolved but may be resumed if inflammation reoccurs (2,7). Antibiotics should not be switched in a patient who is responding to therapy (7). Women of childbearing age being treated with teratogenic topical or oral medicines for acne should be advised to take appropriate measures to prevent pregnancy. Refer to the Queensland Community Pharmacy Hormonal Contraception Service Guideline.",
+          "gates": [
+            { "criterion": "Patient does not require >6 months of oral antibiotic therapy (RF-8/EXC-8)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 4, "section_heading": "Additional information for consideration" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. Reminder: The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic. Pharmacists should carefully assess whether antibiotic therapy is clinically indicated, and if so, consider local antimicrobial resistance patterns and relevant clinical factors when selecting therapy.",
+          "gates": [
+            { "criterion": "Management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 4, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medicine use; non-pharmacological measures and strategies to assist adherence to therapies; how to manage adverse effects; when to seek further care and/or treatment; when to return for follow-up. Patients may have been exposed to confusing, conflicting and/or misleading information related to acne management and products. Pharmacists should be judicious in their recommendation of supplements, cosmetics and hygiene products (4). It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregiver) and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent (page 5).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 4, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: inadequate response to treatment, including if >6 months of oral antibiotic treatment is required; the acne worsens or repeatedly relapses; new signs or symptoms develop (e.g., scarring); quality of life is significantly affected; adverse effects cannot be managed in the pharmacy setting; they become pregnant. Inconsistent use of medication and insufficient duration of treatment is a common reason for treatment failure.",
+          "gates": [
+            { "criterion": "None of the 'see an appropriate healthcare provider if' triggers present (RF-10 to RF-15)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines. Patients should return for a follow up consultation 6 weeks after commencing a new therapy. For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. The patient should be advised that most treatments take between 6-12 weeks of consistent and correct use to start to be visibly effective (4).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "over-the-counter topical products",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Listed as pharmacotherapy 'in accordance with the Therapeutic Guidelines: Dermatology (Acne), specifically NB1'. No product name, strength, dose or frequency is printed in this guideline (see OQ-4).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "topical retinoids",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'topical retinoids (and combination products with benzoyl peroxide)'. In accordance with the Therapeutic Guidelines: Dermatology (Acne) (2). No strength, dose, frequency or duration printed in this guideline (see OQ-4).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "topical antibiotics",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'topical antibiotics (and combination products with benzoyl peroxide or retinoids)'. In accordance with the Therapeutic Guidelines: Dermatology (Acne) (2). (Page 4, Additional information for consideration) Antibiotic therapy should not be used long-term (topical or oral) (2); oral and topical antibiotics should be discontinued when inflammatory lesions have adequately resolved but may be resumed if inflammation reoccurs (2,7). No strength, dose or frequency printed (see OQ-4).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "oral antibiotics",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "3–6 months",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "(Page 4, Additional information for consideration) Antibiotic therapy should not be used long-term (topical or oral) (2). The Australian Medicines Handbook recommends limiting treatment with oral antibiotics to 3–6 months when possible (7). Oral and topical antibiotics should be discontinued when inflammatory lesions have adequately resolved but may be resumed if inflammation reoccurs (2,7). Antibiotics should not be switched in a patient who is responding to therapy (7). (Page 2, Refer when) the patient requires >6 months of oral antibiotic therapy -> refer. (Page 4) Women of childbearing age being treated with teratogenic topical or oral medicines for acne should be advised to take appropriate measures to prevent pregnancy. Refer to the Queensland Community Pharmacy Hormonal Contraception Service Guideline. No specific drug, strength, dose or frequency printed (see OQ-4).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "topical clindamycin",
+      "form": "topical",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "3 months",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "The use of topical clindamycin should be limited to 3 months (8). Only named antibiotic in the guideline; no strength, dose or frequency printed (see OQ-4).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 4, "section_heading": "Additional information for consideration" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "isotretinoin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB1: Isotretinoin is not able to be prescribed by pharmacists.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 3, "section_heading": "Develop management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "unclear diagnosis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "the patient is planning a pregnancy or is pregnant",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "the patient is taking a medicine that can cause or aggravate acne",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "a female patient has polycystic ovarian syndrome (PCOS) or presents with signs of androgenisation including hirsutism, obesity and/or menstrual irregularity",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "quality of life is significantly affected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "acne is classified as severe, cystic or scarring, or the patient has a family history of scarring acne",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "inadequate response to optimal treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "the patient requires >6 months of oral antibiotic therapy.",
+      "structured": { "parameter": "duration of oral antibiotic therapy", "operator": ">", "value": 6, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Service restricted to patients aged 12 years or over. (patient aged under 12 years)",
+      "structured": { "parameter": "age", "operator": "<", "value": 12, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Mild to Moderate Acne - Clinical Practice Guideline" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "inadequate response to treatment, including if >6 months of oral antibiotic treatment is required",
+      "structured": { "parameter": "duration of oral antibiotic treatment", "operator": ">", "value": 6, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "the acne worsens or repeatedly relapses",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "new signs or symptoms develop (e.g., scarring)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "quality of life is significantly affected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "adverse effects cannot be managed in the pharmacy setting",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "they become pregnant",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "General advice" }
+    }
+  ],
+  "referral": {
+    "routine": ["an appropriate healthcare provider"],
+    "urgent": [],
+    "emergency": ["emergency services, if required"],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "6 weeks after commencing a new therapy",
+      "what": "Patients should return for a follow up consultation 6 weeks after commencing a new therapy. Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "For patients continuing therapy",
+      "what": "Follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At each prescribing decision (quantity to supply)",
+      "what": "Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 5, "section_heading": "Clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\acne-guideline", "page": 0, "section_heading": "" }
+  },
+  "references": [
+    "See J. Acne Vulgaris. Sydney: The Australasian College of Dermatologists; 2023 [cited 2025 April 4]. Available from: https://www.dermcoll.edu.au/atoz/acne-vulgaris/. (page 7)",
+    "Therapeutic Guidelines: Dermatology (Acne). Melbourne: Therapeutic Guidelines Limited; 2022 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Dermatology&topicfile=c_DMG_Acne_topic_1&guidelinename=Dermatology&sectionId=c_DMG_Acne_topic_1#c_DMG_Acne_topic_1. (page 7)",
+    "Oakley A. Acne: DermNet New Zealand Trust; 2024 [cited 2025 April 4]. Available from: https://dermnetnz.org/topics/acne (page 7)",
+    "Gebauer K. Acne in adolescents. Australian Family Physician. 2017;46(12):892-5. (page 7)",
+    "Chanyachailert P, Chularojanamontri L, Chantrapanichkul P, Tuchinda P, Wongwananuruk T, Sardod P, et al. Adult female acne: Clinical characteristics and factors significantly associated with polycystic ovary syndrome. Australasian Journal of Dermatology. 2021;62(4):e532-e8. (page 7)",
+    "Huang T, Krassas G, Cook D. Acne Best practice management. Australian Family Physician. 2010;39(9). (page 7)",
+    "Australian Medicines Handbook: Drugs for acne. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 4]. Available from: https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-acne/acne. (page 7)",
+    "Australian Medicines Handbook: Antibacterials. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 4]. Available from: https://amhonline.amh.net.au/chapters/anti-infectives/antibacterials?menu=vertical. (page 7)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Gate outcome not stated - patient history sufficiency",
+      "observed": "PW-1-S1 gate criterion 'Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines' has no stated consequence in the document; on_fail recorded as 'unclear'.",
+      "why_unclear": "Document does not say what to do when history is insufficient.",
+      "source_page": 2
+    },
+    {
+      "topic": "Gate outcome not stated - isotretinoin requirement",
+      "observed": "NB1 states 'Isotretinoin is not able to be prescribed by pharmacists' but the document does not state the action (refer, not eligible, or other) if isotretinoin would otherwise be indicated; on_fail recorded as 'unclear'.",
+      "why_unclear": "Prohibition printed without a stated downstream action.",
+      "source_page": 3
+    },
+    {
+      "topic": "Gate outcome not stated - confirm management appropriate",
+      "observed": "PW-1-S6 gate 'management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation' has no stated failure action; on_fail recorded as 'unclear'.",
+      "why_unclear": "Document instructs confirmation but not the consequence of a failed check.",
+      "source_page": 4
+    },
+    {
+      "topic": "Specific drugs, strengths, doses and frequencies not printed",
+      "observed": "Guideline lists pharmacotherapy classes only (over-the-counter topical products, topical retinoids, topical antibiotics, oral antibiotics) and delegates prescribing detail to Therapeutic Guidelines: Dermatology (Acne). Topical clindamycin (limited to 3 months) and oral antibiotics (3–6 months when possible) are the only durations printed.",
+      "why_unclear": "Dose/strength/frequency simply are not in this document; no invented values were entered.",
+      "source_page": 3
+    },
+    {
+      "topic": "Mild vs moderate severity thresholds not printed",
+      "observed": "'severity can be classified according to the Therapeutic Guidelines: Acne (Diagnosis and classification of acne)' - no numeric or descriptive thresholds are printed in this guideline.",
+      "why_unclear": "Eligibility scope (mild to moderate) depends on thresholds held in an external guideline.",
+      "source_page": 3
+    },
+    {
+      "topic": "Referral urgency grading and cross-page referral lists",
+      "observed": "Referral destinations appear on page 2 ('Refer when': 'an appropriate healthcare provider (including emergency services, if required)') and page 5 ('General advice': 'see an appropriate healthcare provider if ...'). The document does not grade urgency beyond '(including emergency services, if required)', so all referral triggers were coded severity 'medium' (not upgraded).",
+      "why_unclear": "No urgency categories printed; referral block provenance is page 2 with related wording also on page 5.",
+      "source_page": 2
+    },
+    {
+      "topic": "Notifiable requirements silent",
+      "observed": "No mention anywhere in the document of notifiable conditions, GP notification or Australian Immunisation Register/AIR notification.",
+      "why_unclear": "Document is silent, so notifiable.required set to null with no page-attributable statement.",
+      "source_page": 1
+    },
+    {
+      "topic": "Legal basis not printed",
+      "observed": "No regulation, poisons schedule provision or other legal instrument is cited; protocol.legal_basis left empty.",
+      "why_unclear": "Nothing in the document to attribute to a page.",
+      "source_page": 1
+    },
+    {
+      "topic": "first_line ordering not stated",
+      "observed": "Pharmacotherapy options are listed without stating line of therapy ('In accordance with the Therapeutic Guidelines: Dermatology (Acne), specifically NB1:'); all treatments coded first_line=false.",
+      "why_unclear": "Document does not rank options, so no first-line claim could be made.",
+      "source_page": 3
+    },
+    {
+      "topic": "Isotretinoin captured as an exclusion criterion",
+      "observed": "'NB1: Isotretinoin is not able to be prescribed by pharmacists' (page 3) is a prescribing prohibition rather than a printed eligibility exclusion; captured as EXC-9 because a patient requiring isotretinoin cannot be treated under this pharmacist prescribing guideline.",
+      "why_unclear": "Derivation from a note rather than an explicit exclusion list entry.",
+      "source_page": 3
+    },
+    {
+      "topic": "No upper age bound printed",
+      "observed": "'Service restricted to patients aged 12 years or over' sets a minimum of 12 years; no maximum age is stated (age_bounds.max_years = null).",
+      "why_unclear": "Document only states a lower bound.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Specific drug selection, strength, dose, route, frequency and duration for acne pharmacotherapy (beyond the printed limits: oral antibiotics 3–6 months when possible, topical clindamycin 3 months, total supply not exceeding 12 months' supply including repeats).",
+      "source_page": 3,
+      "reason": "Delegated to the current online version of Therapeutic Guidelines: Dermatology (Acne); must be pinned and confirmed before go-live."
+    },
+    {
+      "item": "Quantity of medicine (including repeats) to supply - align with expected duration of therapy, ensure sufficient supply until the patient's next review, total quantity must not exceed 12 months' supply (including repeats).",
+      "source_page": 5,
+      "reason": "Supply quantity is left to pharmacist judgement with only a cap; local policy confirmation required before automating."
+    },
+    {
+      "item": "Pregnancy-prevention advice for women of childbearing age being treated with teratogenic topical or oral medicines for acne, per the Queensland Community Pharmacy Hormonal Contraception Service Guideline.",
+      "source_page": 4,
+      "reason": "Cross-guideline dependency not reproduced in this document."
+    },
+    {
+      "item": "Legal basis / poisons schedule provision under which the Queensland Community Pharmacy prescribing service operates for acne.",
+      "source_page": 1,
+      "reason": "Not printed anywhere in the document; jurisdictional basis must be confirmed."
+    },
+    {
+      "item": "Severity classification thresholds defining mild vs moderate vs severe acne (eligibility is scoped to mild to moderate).",
+      "source_page": 3,
+      "reason": "Thresholds live in Therapeutic Guidelines: Acne, not this PDF; must be confirmed for the eligibility rules engine."
+    },
+    {
+      "item": "Professional discretion clause - 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their parent/caregiver.'",
+      "source_page": 1,
+      "reason": "Local policy must define how discretion interacts with automated eligibility/referral checks."
+    },
+    {
+      "item": "Antibiotic selection must consider local antimicrobial resistance patterns and relevant clinical factors (assess whether antibiotic therapy is clinically indicated, per Therapeutic Guidelines: Antibiotic).",
+      "source_page": 4,
+      "reason": "Local resistance data and clinical-factor judgement are jurisdiction/local-policy dependent."
+    }
+  ]
+}

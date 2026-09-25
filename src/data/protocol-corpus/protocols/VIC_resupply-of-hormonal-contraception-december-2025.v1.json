@@ -1,0 +1,1154 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf",
+    "pdf_sha256": "cb9acb86ecf545da0fab5b5f8bc695c449826acc386fc52f33004f0802e9ab88",
+    "page_count": 24,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Resupply of Hormonal Contraception",
+    "instrument_version": "December 2025",
+    "effective_date": "December 2025",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 (Vic) and Drugs, Poisons and Controlled Substances Regulations 2017 (Vic); requirement of the Secretary Approval: Community Pharmacist Program to comply with this Protocol when supplying Schedule 4 poisons for patients seeking the resupply of hormonal contraception under a structured prescribing arrangement (p.5). 'It should be noted that the supply of hormonal contraception under this Protocol is separate to and operates independently of Regulation 57 which allows for the supply of Schedule 4 poisons to a person without a prescription by pharmacists to allow continuity of treatment.'",
+    "supervision_model": "Structured prescribing arrangement: pharmacists authorised under the Drugs, Poisons and Controlled Substances Regulations 2017 supply the Schedule 4 poisons documented in the Protocol; must have completed the designated pharmacist training course before supplying Schedule 4 poisons; must operate in accordance with the Act, the Regulations and the Pharmacy Board of Australia Code of Conduct (p.5).",
+    "scope_summary": "Victorian Community Pharmacist Program protocol for resupply of hormonal contraception: the combined oral contraceptive pill (COCP), progestogen only pill (POP or mini pill), combined hormonal contraceptive vaginal ring, and depot medroxyprogesterone injection, specifically those listed in the protocol Medicines List tables. Covers preliminary enquiry triage (age 16-50, Medicines List product, initiation by GP/authorised prescribing health practitioner, GP review within 2 years, stabilisation, continuity of use, consent), patient needs assessment, clinical review, exclusion and treat-and-refer criteria, supply of one original pack (up to 4 months' supply depending on product), communication and follow-up."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Is the patient aged 16-50 years?' - Yes required (No -> 'Refer to General Practitioner'; p.17 clarifies 'The patient is younger than 16 or over 50 years of age' is a referral situation)",
+        "criteria_group": { "all_of": ["INC-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Is the patient using a hormonal contraceptive included in the protocol Medicines List?' - Yes required (No -> 'Refer to General Practitioner')",
+        "criteria_group": { "all_of": ["INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'Was this hormonal contraceptive initiated by a GP (or other authorised prescribing health practitioner)?' - Yes required (No -> 'Refer to General Practitioner')",
+        "criteria_group": { "all_of": ["INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-4",
+        "text": "'Has the patient seen their GP (or other authorised prescribing health practitioner) within the last 2 years to review and confirm the appropriateness of continuing their current hormonal contraceptive?' - Yes required ('Yes: continue on page 7'; No -> 'Refer to General Practitioner')",
+        "criteria_group": { "all_of": ["INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+      },
+      {
+        "id": "INC-5",
+        "text": "'Has the patient been stabilised on their current hormonal contraceptive?' - 'Patients aged 16-17 years must be using the same hormonal contraceptive for at least 12 months'; 'Patients aged >= 18 years must be using same hormonal contraceptive for at least 6 months' (No -> 'Refer to General Practitioner')",
+        "criteria_group": { "all_of": ["INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "INC-6",
+        "text": "'Has the patient been continuously using the hormonal contraceptive: - Without a break, OR - Had a break of less than 2 weeks during the preceding 30 days?' - Yes required (see EXE-1 for the 2-4 week break exception and EXC/exclusion handling for breaks of more than 4 weeks)",
+        "criteria_group": { "all_of": ["INC-6"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "INC-7",
+        "text": "'Does the patient consent?*' - Yes required ('Yes: continue on page 8'); '*The patient must be physically present in the pharmacy'",
+        "criteria_group": { "all_of": ["INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+      },
+      {
+        "id": "INC-8",
+        "text": "'Assess patient needs to determine whether resupply is safe and appropriate' and 'Resupply is assessed as safe and appropriate' (review MHR where possible/available; check adherence - previously prescribed a hormonal contraceptive on the protocol Medicines List by their GP or an authorised prescribing health practitioner and stabilised on this treatment (e.g. recent pharmacy dispensing history); check satisfaction with current hormonal contraceptive; provide sexual and reproductive health counselling, as needed)",
+        "criteria_group": { "all_of": ["INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 8, "section_heading": "Continued from page 7" }
+      },
+      {
+        "id": "INC-9",
+        "text": "'Do any of the following exclusion criteria apply?' - answer 'No' required to continue (Yes -> 'Immediate referral to General Practitioner')",
+        "criteria_group": { "all_of": ["INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "'Requested hormonal contraceptive is now contraindicated (UKMEC 4), requires specialist consideration (UKMEC3) or not appropriate. Considerations may include hypertension, BMI > 35, current breast cancer, increased VTE risk that requires medical review, etc.' -> 'Immediate referral to General Practitioner'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "'Unexplained and un-investigated symptoms including vaginal bleeding, severe or painful menstrual bleeding, irregular periods, amenorrhoea, or pain/discomfort with sexual intercourse' -> 'Immediate referral to General Practitioner'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "'Signs and symptoms of PCOS that have not been assessed by an appropriate healthcare provider' -> 'Immediate referral to General Practitioner'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "'Potentially pregnant' -> 'Immediate referral to General Practitioner'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Medicines excluded from the Program: 'COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) - not routinely recommended for contraception due to unacceptable risk of VTE'",
+        "criteria_group": { "all_of": ["EXC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Medicines excluded from the Program: 'Etonogestrel subdermal contraceptive implant'",
+        "criteria_group": { "all_of": ["EXC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Medicines excluded from the Program: 'Levonorgestrel-releasing intrauterine contraceptive devices'",
+        "criteria_group": { "all_of": ["EXC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": 50,
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'If using the OCP or vaginal ring and the patient has had a break of 2-4 weeks in the preceding 30 days, the patient may be supplied ONE month of treatment AND must be referred to their GP for review' (exception to the continuous-use requirement); 'Consider the need for emergency contraception and/or testing to exclude pregnancy (note: pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier).'",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-1"] },
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "'STI screening is indicated (Guidance and information on who should be tested can be found at: https://www.health.gov.au/sti/testing)' -> 'Treat and concurrently refer to GP' - 'Hormonal contraceptive may still be resupplied by the pharmacist, but concurrent referral to a GP is required'",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2"] },
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-3",
+        "text": "'CST is indicated (Guidance and information on who should be tested can be found at: https://www.health.gov.au/our-work/national-cervical-screening-program/...)' -> 'Treat and concurrently refer to GP' - hormonal contraceptive may still be resupplied with concurrent referral",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-3"] },
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-4",
+        "text": "'Possibility of reproductive coercion, sexual abuse or sexual violence' -> 'Treat and concurrently refer to GP' - hormonal contraceptive may still be resupplied with concurrent referral",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-4"] },
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-5",
+        "text": "'All patients seeking contraception who require an STI screen or have not had a CST in the previous 5 years should be advised to see a medical practitioner for follow-up, and a referral provided if the patient consents. They are still eligible for the hormonal contraceptive resupply service in the Program.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-5"] },
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 15, "section_heading": "4.2 Patient history" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Preliminary enquiries, assessment and eligibility triage (flowchart pages 6-9, plus confirming appropriateness page 18)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient aged 16-50 years?' No -> 'Refer to General Practitioner'. Yes -> continue.",
+          "gates": [ { "criterion": "Patient is aged 16-50 years", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient using a hormonal contraceptive included in the protocol Medicines List?' No -> 'Refer to General Practitioner'. Yes -> continue.",
+          "gates": [ { "criterion": "Patient is using a hormonal contraceptive included in the protocol Medicines List", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "'Was this hormonal contraceptive initiated by a GP (or other authorised prescribing health practitioner)?' No -> 'Refer to General Practitioner'. Yes -> continue.",
+          "gates": [ { "criterion": "Current hormonal contraceptive was initiated by a GP (or other authorised prescribing health practitioner)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "'Has the patient seen their GP (or other authorised prescribing health practitioner) within the last 2 years to review and confirm the appropriateness of continuing their current hormonal contraceptive?' No -> 'Refer to General Practitioner'. Yes -> 'Yes: continue on page 7'.",
+          "gates": [ { "criterion": "Patient has seen their GP (or other authorised prescribing health practitioner) within the last 2 years to review and confirm the appropriateness of continuing their current hormonal contraceptive", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "'Has the patient been stabilised on their current hormonal contraceptive? - Patients aged 16-17 years must be using the same hormonal contraceptive for at least 12 months - Patients aged >= 18 years must be using same hormonal contraceptive for at least 6 months' No -> 'Refer to General Practitioner'. Yes -> continue.",
+          "gates": [ { "criterion": "Patient is stabilised on current hormonal contraceptive (16-17 years: same hormonal contraceptive for at least 12 months; >= 18 years: same hormonal contraceptive for at least 6 months)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Has the patient been continuously using the hormonal contraceptive: - Without a break, OR - Had a break of less than 2 weeks during the preceding 30 days?' Yes -> continue to PW-1-S9 (consent). No (had a break) -> PW-1-S7 for break handling.",
+          "gates": [ { "criterion": "Patient has been continuously using the hormonal contraceptive without a break, or had a break of less than 2 weeks during the preceding 30 days", "on_fail": "SEE_PW-1-S7" } ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "Break handling (2-4 weeks): 'If using the OCP or vaginal ring and the patient has had a break of 2-4 weeks in the preceding 30 days, the patient may be supplied ONE month of treatment AND must be referred to their GP for review.' 'Consider the need for emergency contraception and/or testing to exclude pregnancy (note: pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier).' If the break is more than 4 weeks, or the depot injection is late -> PW-1-S8.",
+          "gates": [ { "criterion": "Break in the preceding 30 days is 2-4 weeks for OCP or vaginal ring (and not more)", "on_fail": "SEE_PW-1-S8" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "'If using the OCP or vaginal ring and the patient has had a break of more than 4 weeks in the preceding 30 days OR If the patient is using the depot medroxyprogesterone acetate injection and is late (i.e. 14 weeks since their last injection). The patient is not eligible for resupply of their hormonal contraceptive under this protocol and must be referred to their GP for review.'",
+          "gates": [ { "criterion": "No break of more than 4 weeks in the preceding 30 days (OCP/vaginal ring) and depot injection not late (not 14 weeks since last injection)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "HISTORY",
+          "description": "'Does the patient consent?*' No -> 'Refer to General Practitioner'. Yes -> 'Yes: continue on page 8'. '*The patient must be physically present in the pharmacy.'",
+          "gates": [ { "criterion": "Patient consents and is physically present in the pharmacy", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "HISTORY",
+          "description": "'Assess patient needs to determine whether resupply is safe and appropriate: Review MHR, where possible/available; Check adherence - has the patient previously been prescribed a hormonal contraceptive on the protocol Medicines List by their GP or an authorised prescribing health practitioner, and are they stabilised on this treatment (e.g. recent pharmacy dispensing history). This protocol allows for one variation in adherence (i.e. the break of up to 4 weeks in the last 30 days for the OCP and vaginal ring) provided there is concurrent referral to the GP for review; Check satisfaction with current hormonal contraceptive; offer contraceptive counselling to explore other options as appropriate, e.g. LARCs; Provide sexual and reproductive health counselling, as needed.' 'Resupply is not considered safe or appropriate' -> 'Refer to General Practitioner'; 'Resupply is assessed as safe and appropriate' -> continue.",
+          "gates": [ { "criterion": "Resupply is assessed as safe and appropriate after reviewing MHR (where possible/available), adherence, satisfaction and counselling needs", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 8, "section_heading": "Continued from page 7" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EXAMINATION",
+          "description": "'Conduct clinical review': Current medications; Medication allergies and/or adverse effects, including with hormonal contraceptive; Changes in bleeding patterns; Changes in health that would be a contraindication to ongoing use, e.g. angina, heart attack, stroke/TIA, breast cancer, liver disease, DVT/PE, migraine with aura, new headaches, increased VTE risk (e.g. recent major surgery); Smoking/vaping status; Where clinically relevant, measure or review changes in BP. BP should be measured at least annually. Measurements taken within the last 12 months are acceptable where the patient's health status has not changed; Where clinically relevant, review BMI (measure height and weight as necessary). BMI should be measured at least annually. Weight measurements taken within the last 12 months are acceptable where the patient's health status has not changed; Confirm hormonal contraceptive is still appropriate and meeting patient's needs, considering: Contraindications, Medication interactions, Pregnancy and lactation, Potential pregnancy.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 8, "section_heading": "Continued from page 7" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'5. Confirm hormonal contraception resupply and plan are appropriate - Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the hormonal contraceptive is appropriate for the patient, including for: Contraindications and precautions; Medication interactions; Possible pregnancy or lactation.' '5.1 Excluding pregnancy - If the patient has been using the hormonal contraception consistently and reliably, they can be reasonably assumed not to be pregnant. However, if the patient has not been using the method reliably and consistently and has had unprotected sex, then there is a risk of pregnancy. Pharmacists should take all reasonable steps and assessment to exclude pregnancy before resupply of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception. Note that pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier.'",
+          "gates": [ { "criterion": "Pregnancy reasonably excluded: hormonal contraception used consistently and reliably, or all reasonable steps and assessment to exclude pregnancy taken", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 18, "section_heading": "5.1 Excluding pregnancy" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Do any of the following exclusion criteria apply?' (EXC-1 to EXC-4). Yes -> 'Immediate referral to General Practitioner'. No -> continue to PW-1-S14.",
+          "gates": [ { "criterion": "None of the exclusion criteria EXC-1 to EXC-4 apply", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "REFER",
+          "description": "'Do any of the following 'treat and refer' criteria apply?' - STI screening is indicated; CST is indicated; Possibility of reproductive coercion, sexual abuse or sexual violence. Yes -> 'Treat and concurrently refer to GP' ('Hormonal contraceptive may still be resupplied by the pharmacist, but concurrent referral to a GP is required'). No -> 'No: continue on page 10' -> PW-2-S1.",
+          "gates": [ { "criterion": "No 'treat and refer' criterion applies (no STI screening indication, no CST indication, no possibility of reproductive coercion/sexual abuse/sexual violence)", "on_fail": "SEE_PW-2-S1" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Resupply, dispense, communicate and follow-up (pages 10-11, 19-22)",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "TREAT",
+          "description": "'If appropriate, resupply per structured protocol and dispense hormonal contraceptive: - Provide one original pack (up to 4 months' supply depending on product). Note: supply under the Program protocol does NOT include supply provided under Regulation 57.' 'Where applicable: A pharmacist with suitable premises and competency in administration of deep IM injection may administer depot medroxyprogesterone. Otherwise refer the patient to their GP or relevant health care professional for deep IM administration.' The Program authorises the resupply of four types of hormonal contraception: the combined oral contraceptive pill (COCP), progestogen only pill (POP or mini pill), combined hormonal contraceptive vaginal ring, and depot medroxyprogesterone injection, specifically those that are listed in the protocol Medicines List tables (pages 19-20).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 10, "section_heading": "Continued from page 9" }
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "EDUCATE",
+          "description": "'Communicate agreed plan to resupply hormonal contraception: - Offer general advice about hormonal contraceptive as needed - patient resources/information, reminder of adverse effects - Provide copy of record of service to patient and their GP (with patient consent) - Communicate with other health practitioners (if required) - Reminder that review by GP or authorised prescribing health practitioner is required to occur at least every 2 years'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 10, "section_heading": "Continued from page 9" }
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "FOLLOW_UP",
+          "description": "'Complete any other clinical documentation required for consultation.' See '3. Clinical Documentation Requirements' (page 11).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 10, "section_heading": "Continued from page 9" }
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "EDUCATE",
+          "description": "'7. Communicate agreed plan for hormonal contraception resupply' - Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook, UKMEC, and other relevant references, should be provided to the patient regarding: Individual product and medicine use; Managing deviations from the intended schedule of their contraceptive method e.g., missed pills/administration and emergency contraception options available if required; How to manage adverse effects; When to seek further care and/or treatment - The signs of VTE and what to do if it is suspected; The importance of reporting new or worsening mood-related symptoms to the pharmacist and usual medical practitioner.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 21, "section_heading": "7. Communicate agreed plan for hormonal contraception resupply" }
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "FOLLOW_UP",
+          "description": "'8. Follow up - Pharmacists should advise the patient that they can seek a resupply of their hormonal contraceptive at the pharmacy when they next need a replacement pack or injection. It is recommended that the patient's BP should be monitored at 12 monthly intervals (where clinically relevant). Patients are required to review their hormonal contraception with their GP or authorised prescribing health practitioner at least every 2 years.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 22, "section_heading": "8. Follow up" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Ethinylestradiol + levonorgestrel (COCP, low-dose)",
+      "form": "Monophasic oral formulation",
+      "strength": "ethinylestradiol 20 [NB1] micrograms + levonorgestrel 100 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Femme-Tab ED 20/100, Loette, Microgynon 20 ED, Micronelle 20 ED. NB1: 'First-line choice of COCP is a monophasic formulation containing ethinylestradiol (20 or 30 micrograms) and levonorgestrel (Therapeutic Guidelines).'",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Ethinylestradiol + drospirenone (COCP, low-dose block)",
+      "form": "Monophasic oral formulation",
+      "strength": "drospirenone 3000 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Bella, Brooke, Rosie, Yana, Yaz. Row sits under 'Monophasic oral formulations: low-dose estrogen'; the estrogen dose cell did not extract, so the estrogen component is not transcribed with certainty.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Estradiol + nomegestrol (COCP)",
+      "form": "Monophasic oral formulation",
+      "strength": "estradiol 1500 micrograms + nomegestrol 2500 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Zoely. Listed under 'Monophasic oral formulations: low-dose estrogen'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Ethinylestradiol + levonorgestrel (COCP, standard-dose)",
+      "form": "Monophasic oral formulation",
+      "strength": "ethinylestradiol 30 [NB1] micrograms + levonorgestrel 150 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Eleanor 150/30 ED, Evelyn 150/30 ED, Femme-Tab ED 30/150, Lenest 30 ED, Leveth 150/30 ED, Levlen ED, Microgynon 30 ED, Micronelle 30 ED, Monofeme, Seasonique [NB2]. NB1: 'First-line choice of COCP is a monophasic formulation containing ethinylestradiol (20 or 30 micrograms) and levonorgestrel (Therapeutic Guidelines).' NB2: 'Seasonique is packaged with 84 pills containing ethinylestradiol+levonorgestrel 30+150 micrograms, and 7 pills containing ethinylestradiol 10 micrograms.'",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Ethinylestradiol + desogestrel (COCP, standard-dose block)",
+      "form": "Monophasic oral formulation",
+      "strength": "desogestrel 150 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Madeline, Marvelon. Row sits under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Ethinylestradiol + dienogest (COCP, standard-dose block)",
+      "form": "Monophasic oral formulation",
+      "strength": "dienogest 2000 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Valette. Row sits under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Ethinylestradiol + drospirenone (COCP, standard-dose block)",
+      "form": "Monophasic oral formulation",
+      "strength": "drospirenone 3000 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena. Row sits under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "Ethinylestradiol + gestodene (COCP, standard-dose block)",
+      "form": "Monophasic oral formulation",
+      "strength": "gestodene 75 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Minulet. Row sits under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-9",
+      "drug": "Ethinylestradiol + cyproterone (COCP)",
+      "form": "Monophasic oral formulation",
+      "strength": "ethinylestradiol 35 micrograms + cyproterone 2000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Diane-35 ED, Estelle-35 ED, Juliet-35 ED, Brenda-35 ED. Listed under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-10",
+      "drug": "Ethinylestradiol + norethisterone (COCP, 500)",
+      "form": "Monophasic oral formulation",
+      "strength": "norethisterone 500 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Brevinor, Norimin. Row sits under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-11",
+      "drug": "Ethinylestradiol + norethisterone (COCP, 1000)",
+      "form": "Monophasic oral formulation",
+      "strength": "norethisterone 1000 micrograms (estrogen dose cell not visible in text extraction - see open_questions)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name examples: Brevinor-1, Norimin-1, Pirmella. Row sits under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-12",
+      "drug": "Estetrol + drospirenone (COCP)",
+      "form": "Monophasic oral formulation",
+      "strength": "estetrol 14200 (14.2 mg) + drospirenone 3000 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Nextstellis. Listed under 'Monophasic oral formulations: standard-dose estrogen'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-13",
+      "drug": "Ethinylestradiol + levonorgestrel (COCP, triphasic)",
+      "form": "Triphasic oral formulation",
+      "strength": "Phase 1 (6 pills): ethinylestradiol 30 + levonorgestrel 50; Phase 2 (5 pills): ethinylestradiol 40 + levonorgestrel 75; Phase 3 (10 pills): ethinylestradiol 30 + levonorgestrel 125",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Section heading: 'Triphasic: low or standard dose estrogen'. Brand name examples: Logynon ED, Trifeme, Triphasil, Triquilar ED. Doses are micrograms per the table column headings 'Estrogen dose (micrograms)' and 'Progestogen dose (micrograms)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-14",
+      "drug": "Estradiol valerate + dienogest (COCP, quadriphasic)",
+      "form": "Quadriphasic oral formulation",
+      "strength": "Phase 1 (2 pills): estradiol valerate 3000 alone; Phase 2 (5 pills): estradiol valerate 2000 + dienogest 2000; Phase 3 (17 pills): estradiol valerate 2000 + dienogest 3000; Phase 4 (2 pills): estradiol valerate 1000 alone",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Section heading: 'Quadriphasic: low or standard dose estrogen'. Brand name example: Qlaira (printed with spaced letters as 'Q l a i r a' in the extraction). Doses are micrograms per the table column headings.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 19, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-15",
+      "drug": "Levonorgestrel (POP)",
+      "form": "Oral contraception (progestogen only pill)",
+      "strength": "Levonorgestrel 30 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Microlut. Table heading: 'Progestogen only pills (POP) oral contraception'; column heading 'Progestogen dose'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-16",
+      "drug": "Norethisterone (POP)",
+      "form": "Oral contraception (progestogen only pill)",
+      "strength": "Norethisterone 350 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Noriday. Table heading: 'Progestogen only pills (POP) oral contraception'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-17",
+      "drug": "Drospirenone (POP)",
+      "form": "Oral contraception (progestogen only pill)",
+      "strength": "Drospirenone 4 mg",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: Slinda (printed with spaced letters 'S l i n d a' in the extraction). Table heading: 'Progestogen only pills (POP) oral contraception'. Strength printed as '4 mg' (not micrograms) - transcribed as printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-18",
+      "drug": "Etonogestrel + ethinylestradiol (vaginal ring)",
+      "form": "Combined hormonal contraceptive vaginal ring",
+      "strength": "Etonogestrel 11.7 mg (120 microg/24 hours) + Ethinylestradiol 2.7 mg (15 microg/24 hours)",
+      "dose": "",
+      "route": "vaginal",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product)",
+      "notes": "Brand name example: NuvaRing. Table heading: 'Combined hormonal contraceptive vaginal ring'. Route recorded as vaginal from the product class name; no route or dosing interval is printed in the table.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "TX-19",
+      "drug": "Medroxyprogesterone (depot injection)",
+      "form": "Depot medroxyprogesterone injection",
+      "strength": "Medroxyprogesterone 150 mg/mL",
+      "dose": "",
+      "route": "deep IM injection",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Provide one original pack (up to 4 months' supply depending on product), where applicable",
+      "notes": "Brand name examples: Depo-Provera, Depo-Ralovera. 'A pharmacist with suitable premises and competency in administration of deep IM injection may administer depot medroxyprogesterone. Otherwise refer the patient to their GP or relevant health care professional for deep IM administration.' Late-injection rule: 'If the patient is using the depot medroxyprogesterone acetate injection and is late (i.e. 14 weeks since their last injection). The patient is not eligible for resupply of their hormonal contraceptive under this protocol and must be referred to their GP for review.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Is the patient aged 16-50 years?' - No -> 'Refer to General Practitioner'; p.17: 'The patient is younger than 16 or over 50 years of age'",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "16-50", "unit": "years" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Is the patient using a hormonal contraceptive included in the protocol Medicines List?' - No -> 'Refer to General Practitioner'; p.17: 'The requested hormonal contraceptive is not on the protocol Medicines List'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Was this hormonal contraceptive initiated by a GP (or other authorised prescribing health practitioner)?' - No -> 'Refer to General Practitioner'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Has the patient seen their GP (or other authorised prescribing health practitioner) within the last 2 years to review and confirm the appropriateness of continuing their current hormonal contraceptive?' - No -> 'Refer to General Practitioner'",
+      "structured": { "parameter": "time since last GP (or other authorised prescribing health practitioner) review confirming appropriateness of continuing current hormonal contraceptive", "operator": ">", "value": 2, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Patients aged 16-17 years must be using the same hormonal contraceptive for at least 12 months' - not yet stabilised -> 'Refer to General Practitioner'",
+      "structured": { "parameter": "duration using the same hormonal contraceptive (patient aged 16-17 years)", "operator": "<", "value": 12, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Patients aged >= 18 years must be using same hormonal contraceptive for at least 6 months' - not yet stabilised -> 'Refer to General Practitioner'",
+      "structured": { "parameter": "duration using the same hormonal contraceptive (patient aged >= 18 years)", "operator": "<", "value": 6, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'If using the OCP or vaginal ring and the patient has had a break of 2-4 weeks in the preceding 30 days, the patient may be supplied ONE month of treatment AND must be referred to their GP for review.' 'Consider the need for emergency contraception and/or testing to exclude pregnancy (note: pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier).'",
+      "structured": { "parameter": "break in OCP or vaginal ring use in the preceding 30 days", "operator": "range", "value": "2-4 weeks", "unit": "weeks" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'If using the OCP or vaginal ring and the patient has had a break of more than 4 weeks in the preceding 30 days ... The patient is not eligible for resupply of their hormonal contraceptive under this protocol and must be referred to their GP for review.'",
+      "structured": { "parameter": "break in OCP or vaginal ring use in the preceding 30 days", "operator": ">", "value": 4, "unit": "weeks" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'If the patient is using the depot medroxyprogesterone acetate injection and is late (i.e. 14 weeks since their last injection). The patient is not eligible for resupply of their hormonal contraceptive under this protocol and must be referred to their GP for review.'",
+      "structured": { "parameter": "time since last depot medroxyprogesterone injection", "operator": ">=", "value": 14, "unit": "weeks" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'Does the patient consent?*' - No -> 'Refer to General Practitioner' (*The patient must be physically present in the pharmacy)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Resupply is not considered safe or appropriate' (after assessing patient needs) -> 'Refer to General Practitioner'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Requested hormonal contraceptive is now contraindicated (UKMEC 4), requires specialist consideration (UKMEC3) or not appropriate. Considerations may include hypertension, BMI > 35, current breast cancer, increased VTE risk that requires medical review, etc.' -> 'Immediate referral to General Practitioner'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Consideration within the contraindication criterion: 'BMI > 35' (also 'Requested hormonal contraceptive is now contraindicated or not appropriate. Considerations may include hypertension, BMI > 35, increased VTE risk that requires review, etc.' p.17)",
+      "structured": { "parameter": "BMI", "operator": ">", "value": 35, "unit": "kg/m2" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Unexplained and un-investigated symptoms including vaginal bleeding, severe or painful menstrual bleeding, irregular periods, amenorrhoea, or pain/discomfort with sexual intercourse' -> 'Immediate referral to General Practitioner'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'Signs and symptoms of PCOS that have not been assessed by an appropriate healthcare provider' -> 'Immediate referral to General Practitioner'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'Potentially pregnant' -> 'Immediate referral to General Practitioner'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'STI screening is indicated' -> 'Treat and concurrently refer to GP' - 'Hormonal contraceptive may still be resupplied by the pharmacist, but concurrent referral to a GP is required'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'CST is indicated' -> 'Treat and concurrently refer to GP' - hormonal contraceptive may still be resupplied with concurrent referral required",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'Possibility of reproductive coercion, sexual abuse or sexual violence' -> 'Treat and concurrently refer to GP'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 9, "section_heading": "Continued from page 8" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'Patients under 16 years of age are to be confidentially referred to a general practitioner or sexual health clinic'",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 13, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Protection accordingly.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 13, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'Ask patients aged 40 years or older if they have reviewed their choice of contraception with a medical practitioner (or other authorised prescribing health practitioner) with regard to age-related considerations. A referral may be appropriate to facilitate consideration of other contraceptive options.'",
+      "structured": { "parameter": "age", "operator": ">=", "value": 40, "unit": "years" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 13, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'The choice of contraceptive should be reviewed at age 50 and at menopause.'",
+      "structured": { "parameter": "age", "operator": ">=", "value": 50, "unit": "years" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 13, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'With consent, all Aboriginal and Torres Strait Islander patients should be offered referral to an Aboriginal Community Controlled Health Organisation (ACCHO).'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 14, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'If the pharmacist becomes aware of this during the consultation, they should provide appropriate and non-judgemental support and assistance, including referral to support options depending on the patient circumstances. ... Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services. Where appropriate, encourage counselling or GP services for follow up.' (sexual violence or abuse / assault or sexual and reproductive coercion)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 14, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'If required, emergency contraception may be supplied as per standard pharmacy care, or the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 14, "section_heading": "4.1 Sexual and reproductive health counselling" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'All patients seeking contraception who require an STI screen or have not had a CST in the previous 5 years should be advised to see a medical practitioner for follow-up, and a referral provided if the patient consents. They are still eligible for the hormonal contraceptive resupply service in the Program.'",
+      "structured": { "parameter": "time since last cervical screening test (CST)", "operator": ">", "value": 5, "unit": "years" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 15, "section_heading": "4.2 Patient history" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'A single elevated BP reading is not enough to classify a person as hypertensive (e.g. also take into consideration activity immediately prior to consultation) and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 17, "section_heading": "4.3 Examination" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'Refer the person to GP when: ... The patient wants to start a new method of hormonal contraception'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 17, "section_heading": "Refer the person to GP when:" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'If the patient has not been using the method reliably and consistently and has had unprotected sex, then there is a risk of pregnancy. Pharmacists should take all reasonable steps and assessment to exclude pregnancy before resupply of hormonal contraception. Otherwise, the patient should be referred to a medical practitioner (or other authorised prescribing health practitioner) for assessment, pregnancy testing, and advice regarding ongoing contraception. Note that pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 18, "section_heading": "5.1 Excluding pregnancy" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "'The following hormonal contraceptives have been excluded from the Program: - COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) - not routinely recommended for contraception due to unacceptable risk of VTE - Etonogestrel subdermal contraceptive implant - Levonorgestrel-releasing intrauterine contraceptive devices'",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 20, "section_heading": "6. Medicines list" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "'When to seek further care and/or treatment - The signs of VTE and what to do if it is suspected'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 21, "section_heading": "7. Communicate agreed plan for hormonal contraception resupply" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "'The importance of reporting new or worsening mood-related symptoms to the pharmacist and usual medical practitioner'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 21, "section_heading": "7. Communicate agreed plan for hormonal contraception resupply" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to General Practitioner",
+      "medical practitioner or other authorised prescribing health practitioner as clinically appropriate",
+      "confidentially referred to a general practitioner or sexual health clinic (patients under 16 years of age)",
+      "Aboriginal Community Controlled Health Organisation (ACCHO), with consent",
+      "local hospital, sexual health clinic and/or community-based sexual violence support services"
+    ],
+    "urgent": [
+      "Immediate referral to General Practitioner (exclusion criteria)",
+      "referred to a medical practitioner for assessment, pregnancy testing, and advice regarding ongoing contraception"
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 6, "section_heading": "2.1 Key to colours used in this protocol" }
+  },
+  "review_followup": [
+    {
+      "when": "At least every 2 years",
+      "what": "Patients are required to review their hormonal contraception with their GP or authorised prescribing health practitioner at least every 2 years (also given as a reminder when communicating the resupply plan).",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 22, "section_heading": "8. Follow up" }
+    },
+    {
+      "when": "At 12 monthly intervals (where clinically relevant)",
+      "what": "It is recommended that the patient's BP should be monitored at 12 monthly intervals (where clinically relevant).",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 22, "section_heading": "8. Follow up" }
+    },
+    {
+      "when": "At least annually",
+      "what": "BP should be measured at least annually (measurements taken within the last 12 months are acceptable where the patient's health status has not changed); BMI should be measured at least annually (weight measurements taken within the last 12 months are acceptable where the patient's health status has not changed).",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 8, "section_heading": "Continued from page 7" }
+    },
+    {
+      "when": "When the patient next needs a replacement pack or injection",
+      "what": "Pharmacists should advise the patient that they can seek a resupply of their hormonal contraceptive at the pharmacy when they next need a replacement pack or injection.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 22, "section_heading": "8. Follow up" }
+    },
+    {
+      "when": "Before supply when pregnancy cannot be reasonably excluded",
+      "what": "Consider the need for emergency contraception and/or testing to exclude pregnancy (note: pregnancy tests can give a false negative result if unprotected sex was less than 21 days earlier).",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 7, "section_heading": "Continued from page 6" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must share a copy of the record of the service with the patient and, if the patient consents, with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply. This record must be made available to the Department on request.",
+      "'Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Protection accordingly.' (conditional)"
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-resupply-of-hormonal-contraception-december-2025.pdf", "page": 11, "section_heading": "3. Clinical Documentation Requirements" }
+  },
+  "references": [
+    "Therapeutic Guidelines: Sexual and Reproductive Health [digital] (page 23)",
+    "Australian Medicines Handbook: Drugs for contraception (page 23)",
+    "The Faculty of Sexual & Reproductive Healthcare of the Royal College of Obstetricians and Gynaecologists. The UK Medical Eligibility Criteria for Contraceptive Use (UKMEC) 2016 (Amended September 2019). London: FSRH; 2019 [cited 26 Mar 2025]. (page 23)",
+    "The Faculty of Sexual & Reproductive Healthcare of the Royal College of Obstetricians and Gynaecologists. Combined Hormonal Contraception (January 2019, amended October 2023). London: FSRH; 2023 [cited 26 Mar 2025]. (page 23)",
+    "The Faculty of Sexual & Reproductive Healthcare of the Royal College of Obstetricians and Gynaecologists. Progestogen-only Pills (August 2022, amended July 2023). London: FSRH; 2023 [cited 26 Mar 2025]. (page 23)",
+    "The Faculty of Sexual & Reproductive Healthcare of the Royal College of Obstetricians and Gynaecologists. Progestogen-only Injectables (December 2024, amended July 2023). London: FSRH; 2023 [cited 26 Nov 2025]. (page 23)",
+    "Pharmaceutical Society of Australia Women's Sexual and Reproductive Health: Women's sexual and reproductive health (psa.org.au) (page 23)",
+    "Mason E, Black K. Update on long- and short-acting contraceptive methods. Aust Prescr 2025;48:72-81. https://doi.org/10.18773/austprescr.2025.023 (page 23)",
+    "Professional Practice Standards 2023 https://www.psa.org.au/practice-support-industry/pps/ (page 23)",
+    "Better Health Channel 'Oral contraceptive pills' (page 23)",
+    "Better Health Channel 'Contraceptive - injections' (page 23)",
+    "Better Health Channel 'Contraception - vaginal ring' (page 23)",
+    "Better Health Channel 'Safe sex' (page 24)",
+    "Sexual Health Victoria: Reproductive & Sexual Health Clinics, Education and Advocacy (shvic.org.au) (page 24)",
+    "Melbourne Sexual Health Centre: expert sexual health information, advice, testing, treatment and support https://www.mshc.org.au/ (page 24)",
+    "1800 My Options: information about contraception, pregnancy options and sexual health in Victoria https://www.1800myoptions.org.au/ (page 24)",
+    "Jean Hailes contraception fact sheet: https://www.jeanhailes.org.au/resources/fact-sheets/contraception (page 24)",
+    "Victorian Aboriginal Sexual and Reproductive Health Plan 2022-30 and the RACGP National Guide to Preventative Health Care for Aboriginal and Torres Strait Islander People (page 14)"
+  ],
+  "open_questions": [
+    {
+      "topic": "COCP table columns did not fully extract (estrogen dose cells)",
+      "observed": "In the 'Combined oral contraceptive pills (COCP)' table (page 19) several rows extracted with only a progestogen dose and brand names, with no estrogen dose cell: rows for drospirenone 3000 (Bella, Brooke, Rosie, Yana, Yaz), desogestrel 150 (Madeline, Marvelon), dienogest 2000 (Valette), drospirenone 3000 (Brooklynn, Isabelle, Petibelle, Rosalee, Yasmin, Yelena), gestodene 75 (Minulet), norethisterone 500 (Brevinor, Norimin) and norethisterone 1000 (Brevinor-1, Norimin-1, Pirmella). Rows that did extract both columns: ethinylestradiol 20 + levonorgestrel 100, estradiol 1500 + nomegestrol 2500, ethinylestradiol 30 + levonorgestrel 150, ethinylestradiol 35 + cyproterone 2000, estetrol 14200 (14.2 mg) + drospirenone 3000, triphasic ethinylestradiol/levonorgestrel phases and quadriphasic estradiol valerate/dienogest phases.",
+      "why_unclear": "Table cell (likely merged) did not survive text extraction; the estrogen component of the affected rows (ethinylestradiol in the low-dose and standard-dose blocks) is not transcribed because it is not visible in the text. Rows marked confidence 'unclear' rather than inferring the merged value.",
+      "source_page": 19
+    },
+    {
+      "topic": "Break-in-use boundary wording differs between flowchart and referral list",
+      "observed": "Page 7 flowchart: continuous use = 'Without a break, OR Had a break of less than 2 weeks during the preceding 30 days', with a break of '2-4 weeks' handled as one month supply plus GP referral and 'more than 4 weeks' as not eligible. Page 17 referral list: 'Has had a break of more than 2 weeks in the preceding 30 days ... if the OCP or vaginal ring is their current form' with sub-bullets for 'between 2 and 4 weeks' and 'more than 4 weeks'.",
+      "why_unclear": "Both readings recorded; boundary at exactly 2 weeks is covered differently in the two passages ('less than 2 weeks' vs 'more than 2 weeks').",
+      "source_page": 7
+    },
+    {
+      "topic": "Age bounds inclusive reading",
+      "observed": "'Is the patient aged 16-50 years?' (page 6) and 'The patient is younger than 16 or over 50 years of age' (page 17) together imply 16 and 50 are inclusive, but no explicit inclusive/exclusive statement is printed at page 6.",
+      "why_unclear": "Boundary inclusivity inferred only indirectly; recorded as min 16 / max 50 as printed.",
+      "source_page": 6
+    },
+    {
+      "topic": "referral block page range",
+      "observed": "Referral destinations/criteria appear from page 6 (flowchart) through page 17 ('Refer the person to GP when:') and page 21 (seek further care); the shared provenance object for the referral block uses the first page (6).",
+      "why_unclear": "Spec allows one shared provenance for the block; range recorded here.",
+      "source_page": 6
+    },
+    {
+      "topic": "Route and dosing fields absent from the Medicines list tables",
+      "observed": "The Medicines List tables (pages 19-20) print hormone doses and brand examples only; no dose, frequency or duration is printed for resupply rows. Route recorded from product class wording ('oral formulations', 'POP oral contraception', 'vaginal ring', 'deep IM injection'); the ring row itself lists only etonogestrel + ethinylestradiol with brand NuvaRing and no dose or dosing interval.",
+      "why_unclear": "No dosing instructions exist in the source; fields left empty rather than inferred.",
+      "source_page": 19
+    },
+    {
+      "topic": "Qlaira and Slinda brand names extract with letter spacing",
+      "observed": "Brand names printed in the extraction as 'Q l a i r a' and 'S l i n d a'; treated as Qlaira and Slinda for readability, with the printed spacing noted.",
+      "why_unclear": "PDF letter spacing in brand names; no clinical ambiguity, but the transcription deviates from raw extraction.",
+      "source_page": 19
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "'Where the protocol indicates to \"Refer to General Practitioner\", the Pharmacist may refer to a medical practitioner or other authorised prescribing health practitioner as clinically appropriate.'",
+      "source_page": 6,
+      "reason": "Referral destination flexibility is left to clinical judgement; local policy must define acceptable recipients before go-live."
+    },
+    {
+      "item": "Requirement that pharmacists have completed the designated pharmacist training course before supplying Schedule 4 poisons.",
+      "source_page": 5,
+      "reason": "Eligibility to use the protocol depends on a training-completion record that must be verified per pharmacist."
+    },
+    {
+      "item": "'the supply of hormonal contraception under this Protocol is separate to and operates independently of Regulation 57' - distinguishing Program supply from Regulation 57 supply.",
+      "source_page": 5,
+      "reason": "Local dispensing and recording process must keep the two supply pathways separate; confirm configuration."
+    },
+    {
+      "item": "'Pharmacists are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 5,
+      "reason": "Open-ended professional judgement clause needs a local policy boundary for an automated rules engine."
+    },
+    {
+      "item": "'A pharmacist with suitable premises and competency in administration of deep IM injection may administer depot medroxyprogesterone. Otherwise refer the patient to their GP or relevant health care professional for deep IM administration.'",
+      "source_page": 10,
+      "reason": "'Suitable premises and competency' is not defined in the protocol; local policy must confirm who may administer depot injections."
+    },
+    {
+      "item": "'Provide one original pack (up to 4 months' supply depending on product)' and 'Note: supply under the Program protocol does NOT include supply provided under Regulation 57'.",
+      "source_page": 10,
+      "reason": "Which products permit 4 months' supply is left to the product; confirm per-product quantity rules and dispensing software limits."
+    },
+    {
+      "item": "'Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Protection accordingly.'",
+      "source_page": 13,
+      "reason": "Reporting trigger is undefined and the required red-flag action set has no child-protection action; confirm local reporting process and how the rule is surfaced."
+    },
+    {
+      "item": "'Pharmacists providing this service are strongly encouraged to undertake face-to-face cultural safety training' and 'With consent, all Aboriginal and Torres Strait Islander patients should be offered referral to an ACCHO'.",
+      "source_page": 14,
+      "reason": "Training is 'strongly encouraged' (not mandated) and referral is consent-based; local policy must confirm requirements."
+    },
+    {
+      "item": "UKMEC/FSRH/RCOG reference set used to judge contraindications ('UKMEC 4', 'UKMEC3'); references list prints UKMEC 2016 (Amended September 2019).",
+      "source_page": 9,
+      "reason": "Contraindication grading depends on which guideline edition is current at go-live; confirm the edition the service will apply."
+    },
+    {
+      "item": "BP/BMI recency rules: 'Measurements taken within the last 12 months are acceptable where the patient's health status has not changed' and 'A single elevated BP reading is not enough to classify a person as hypertensive ... a second BP reading should be taken at the end of the consultation'.",
+      "source_page": 17,
+      "reason": "Measurement and accept-recency process is left to local practice; confirm equipment, recording and escalation thresholds."
+    },
+    {
+      "item": "'Review MHR, where possible/available' and consent covering access to My Health Record for checking inclusion/exclusion criteria.",
+      "source_page": 8,
+      "reason": "Depends on local system access and patient consent arrangements."
+    }
+  ]
+}

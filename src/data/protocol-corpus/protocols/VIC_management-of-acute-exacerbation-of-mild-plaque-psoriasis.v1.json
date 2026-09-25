@@ -1,0 +1,848 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf",
+    "pdf_sha256": "ba8e43187602b3cc6589040db622ceaebe15cca74bdf200093188c3c378900d1",
+    "page_count": 20,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "VIC",
+    "instrument_name": "Protocol for Management of Acute Exacerbation of Mild Plaque Psoriasis",
+    "instrument_version": "February 2024",
+    "effective_date": "February 2024",
+    "legal_basis": "Drugs, Poisons and Controlled Substances Act 1981 and the Drugs, Poisons and Controlled Substances Regulations 2017 (the Regulations); supply of the Schedule 4 poisons documented in this Protocol for the purpose of managing acute exacerbations of mild plaque psoriasis under a structured prescribing arrangement; requirement of the Secretary Approval: Community Pharmacist Statewide Pilot that pharmacists comply with this Protocol and have completed the designated pharmacist training requirements specified in the departmental guidance before supplying the Schedule 4 poisons (page 4, '1. About').",
+    "supervision_model": "structured prescribing arrangement (document's own term) under the Secretary Approval: Community Pharmacist Statewide Pilot; pharmacists must operate at all times in accordance with the Drugs, Poisons and Controlled Substances Act 1981, the Regulations and all other applicable Victorian, Commonwealth and national laws, and act in a manner consistent with the Pharmacy Board of Australia's Code of Conduct (page 4, '1. About').",
+    "scope_summary": "Victorian Community Pharmacist Statewide Pilot protocol (February 2024) authorising supply of Schedule 4 poisons for managing acute exacerbations of mild plaque psoriasis, by resupply of prescription-only topical corticosteroids (TCS) that the patient has used previously for their psoriasis and that are available under the pilot. Contains a flowchart (pages 5-9), documentation requirements (page 10), supplementary assessment guidance (pages 12-13), management guidance (pages 14-15), a Medicines table (page 16) and resources (pages 17-18). Adapted from the draft Clinical Practice Guideline Acute Exacerbations of Mild Plaque Psoriasis from Queensland Health (page 18)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Is the patient aged >= 18 years?",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Has the patient previously been diagnosed by a medical practitioner with mild plaque psoriasis of the trunk or limbs?",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Has the patient's psoriasis, including the initial diagnosis and at least one acute exacerbation been successfully managed with topical corticosteroids (TCS) by a medical practitioner?",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Does the patient consent? *The patient must be physically present in the pharmacy.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Severity is mild: 'Mild plaque psoriasis = a PASI <= 5 and/or DLQI <= 5.' (flowchart branch 'Mild' after PASI and/or DLQI assessment continues to pharmacotherapy; 'Moderate to Severe' branch refers to General Practitioner)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Assessment of severity" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "The patient has psoriatic comorbidities or risk factors that require management by a medical practitioner e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours (pharmacotherapy by pharmacist may still be considered if clinically appropriate - see EXE-1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "The patient has not seen a medical practitioner for review of their psoriasis in the previous 12 months (pharmacotherapy by pharmacist may still be considered if clinically appropriate - see EXE-1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "The diagnosis is unclear",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Patient is very visibly unwell",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "The patient is immunocompromised due to underlying medical condition(s) and/or medications",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "The patient has other medical conditions such as diabetes or psoriatic arthritis where referral to a rheumatologist may be required",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "The patient is pregnant or planning a pregnancy",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "The patient presents with a type of psoriasis other than mild plaque psoriasis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "The psoriasis is moderate (PASI 6-10 and/or DLQI 6-10) or severe (PASI >10 and/or DLQI >10), including if it is having a marked negative emotional and social effect on the person",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "The face, scalp, genitals, palms and/or soles are affected",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "Psoriasis covers a significant body surface area (affects more than 6% of the body)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "Psoriatic lesions are infected or show pustulation (less defined red plaques with scale and pus)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "The patient is taking a medicine that can exacerbate, especially lithium, beta-blockers and nonsteroidal anti-inflammatory drugs",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "Inadequate response to topical treatment",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "Does the patient have allergies, drug-drug interactions or any other contraindications to treatments under this protocol? (Yes branch: 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-15"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "Product scope exclusion: 'while liquor picis carbonis (LPC, or coal tar solution) +/- keratolytics (e.g., salicylic acid) and calcipotriol are also treatment options for psoriasis, these have not been included for supply and reimbursement in the pilot, which has focused on the resupply of prescription only topical corticosteroids.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-16"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "Product/reimbursement scope exclusion: 'There are no changes to the scope for pharmacists to supply Schedule 2 and 3 topical corticosteroids and so these are excluded for reimbursement for the purposes of this pilot.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-17"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Where EXC-1 or EXC-2 is met (flowchart 'Yes' branch of 'Does the patient report / present with any of the following?'): 'Refer to a medical practitioner' AND 'Pharmacotherapy by pharmacist may still be considered if clinically appropriate - go to: PHARMACOTHERAPY section on page 6 below.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-1"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Protocol for Management of Acute Exacerbation of Mild Plaque Psoriasis - flowchart pathway (preliminary enquiries, immediate referral, clinical review, pharmacist care and care provided)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Preliminary enquiry: 'Is the patient aged >= 18 years?' No branch -> 'Refer to General Practitioner'. Yes -> continue.",
+          "gates": [{ "criterion": "Patient aged >= 18 years", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Has the patient previously been diagnosed by a medical practitioner with mild plaque psoriasis of the trunk or limbs?' No branch -> 'Refer to General Practitioner'.",
+          "gates": [{ "criterion": "Previous diagnosis by a medical practitioner of mild plaque psoriasis of the trunk or limbs", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Has the patient's psoriasis, including the initial diagnosis and at least one acute exacerbation been successfully managed with topical corticosteroids (TCS) by a medical practitioner?' No branch -> 'Refer to General Practitioner'.",
+          "gates": [{ "criterion": "Initial diagnosis and at least one acute exacerbation successfully managed with topical corticosteroids by a medical practitioner", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient consent? *The patient must be physically present in the pharmacy.' No branch -> 'Refer to General Practitioner'. Yes -> continue to page 4 (printed page number; PDF page 6).",
+          "gates": [{ "criterion": "Patient consents and is physically present in the pharmacy", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "CONDUCT CLINICAL REVIEW - Examination: '1. Confirm signs and symptoms including defined raised red, scaly patches, silvery-white scales of skin which shed or flake, dry, cracked skin that may bleed, itching and pain. Patches are typically symmetrical. 2. Complete assessment of severity using PASI and/or DLQI calculator.' Severity branches as printed: 'Moderate to Severe' -> 'Refer to General Practitioner and consider seeking specialist referral where appropriate'; 'Mild' -> continue to patient history. Severity thresholds (page 13): 'Mild plaque psoriasis = a PASI <= 5 and/or DLQI <= 5'; 'Moderate plaque psoriasis = a PASI 6-10 and/or DLQI 6-10'; 'Severe plaque psoriasis = PASI >10 and/or DLQI >10'.",
+          "gates": [{ "criterion": "Severity assessed as Mild (PASI <= 5 and/or DLQI <= 5) - not 'Moderate to Severe'", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "Patient history: '1. medication history including TCS used previously for psoriasis, and any new medications - review MHR as necessary, where possible/available; 2. medical history including complications, pregnancy and/or breastfeeding; 3. aggravating factors; 4. psychological impact'. Supplementary patient-history considerations (page 12, '4.1. PATIENT HISTORY') include age; pregnancy and lactation status, including patients planning pregnancy (if applicable); onset, duration, nature, location, severity and extent of plaques; previous diagnosis and history of exacerbation(s); co-existing and underlying medical conditions including psoriatic comorbidities such as arthritis or depression; response to any previous treatments; impacts on quality of life and psychosocial wellbeing; exposure to factors that can aggravate psoriasis (Table 1); current, recently commenced or recently ceased medications; family history of psoriasis; drug allergies/adverse drug effects.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient report / present with any of the following?' - 'The patient has psoriatic comorbidities or risk factors that require management by a medical practitioner e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours'; 'The patient has not seen a medical practitioner for review of their psoriasis in the previous 12 months'. Yes branch -> 'Refer to a medical practitioner', with the printed caveat 'Pharmacotherapy by pharmacist may still be considered if clinically appropriate - go to: PHARMACOTHERAPY section on page 6 below.' No branch -> continue to the next page's exclusion list.",
+          "gates": [{ "criterion": "Patient reports/presents with NONE of the printed items (no psoriatic comorbidities or risk factors requiring medical management; has seen a medical practitioner for review of their psoriasis in the previous 12 months)", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Do any of the following apply?' (12 items, reproduced in eligibility.exclusion EXC-3 to EXC-14): the diagnosis is unclear; patient is very visibly unwell; immunocompromised; other medical conditions such as diabetes or psoriatic arthritis where referral to a rheumatologist may be required; pregnant or planning a pregnancy; type of psoriasis other than mild plaque psoriasis; psoriasis is moderate (PASI 6-10 and/or DLQI 6-10) or severe (PASI >10 and/or DLQI >10) including marked negative emotional and social effect; face, scalp, genitals, palms and/or soles affected; psoriasis covers a significant body surface area (affects more than 6% of the body); psoriatic lesions infected or show pustulation; taking a medicine that can exacerbate, especially lithium, beta-blockers and nonsteroidal anti-inflammatory drugs; inadequate response to topical treatment. Yes branch -> 'Refer to General Practitioner and consider seeking specialist referral where appropriate'. No branch -> continue to page 6 (printed; PDF page 8) PHARMACOTHERAPY.",
+          "gates": [{ "criterion": "None of the 12 printed exclusion/referral conditions apply", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "TREAT",
+          "description": "PHARMACOTHERAPY: 'Does the patient have allergies, drug-drug interactions or any other contraindications to treatments under this protocol?' Yes -> 'Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner'. No -> 'Provide treatment, where indicated* - Resupply of TCS preparation that patient has used previously for their psoriasis and is available under the pilot (see Section 6 for list of medicines that can be supplied under this pilot)'. Section 6 Medicines list (page 16) contains these topical corticosteroids: betamethasone valerate 0.02% and 0.05%, triamcinolone acetonide 0.02%, betamethasone dipropionate 0.05%, betamethasone valerate 0.1%, methylprednisolone aceponate 0.1%, mometasone furoate 0.1% (Moderate and Potent Corticosteroids classes as printed). Printed notes: '* Note that while liquor picis carbonis (LPC, or coal tar solution) +/- keratolytics (e.g., salicylic acid) and calcipotriol are also treatment options for psoriasis, these have not been included for supply and reimbursement in the pilot, which has focused on the resupply of prescription only topical corticosteroids.' (page 8). Page 14: 'NB1: Topical preparations containing LPC and/or salicylic acid (in dermal preparations containing <40% salicylic acid) are also a treatment option for psoriasis and may be sold without a prescription. These have not been included in the pilot however, which has focused on the resupply of prescription only TCS.' 'NB2: TCS are the mainstay of treatment for psoriasis flare. If topical treatment with class I-III TCS does not produce an adequate response to the acute exacerbation, the patient should be referred to a medical practitioner for management.'",
+          "gates": [{ "criterion": "No allergies, drug-drug interactions or any other contraindications to treatments under this protocol", "on_fail": "REFER" }],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "EDUCATE",
+          "description": "Provide non-pharmacological and self-care advice: '1. Provide patient with Consumer Medicines Information and/or a Self-Care Fact card to help patients control their plaque psoriasis; 2. Provide advice on preventing flare-ups i.e., flare-ups can be triggered by stress, cold weather, dry skin, certain foods or drinks; 3. Keep skin moisturised using a soap-free cleanser or wash and apply fragrance-free moisturiser.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "Communicate agreed treatment plan: 'How to use - Counselling including fingertip units for topical corticosteroids and adverse effects; Patient resources and information'; 'Duration of treatment and expectations around duration of symptoms'; 'General measures - Lifestyle modification; Adjunctive agents'; 'General advice - Expected duration for response to treatment and instructions for withdrawal of TCS; Adverse effects'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "REFER",
+          "description": "'Communicate with other health practitioners (if required), including referral to medical practitioner if: Patient is not responding to treatment; and/or Symptoms worsen after commencing treatment; and/or Patient is experiencing adverse effects that cannot be managed in the pharmacy setting'.",
+          "gates": [
+            { "criterion": "Patient is responding to treatment", "on_fail": "REFER" },
+            { "criterion": "Symptoms have not worsened after commencing treatment", "on_fail": "REFER" },
+            { "criterion": "Adverse effects can be managed in the pharmacy setting", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "FOLLOW_UP",
+          "description": "'Reminder that review by a medical practitioner recommended to occur at least every 12 months' (restated on page 15: 'Patients should be advised that review by a medical practitioner is recommended to occur at least every 12 months.').",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "EDUCATE",
+          "description": "'Document the consultation and share a record of the service with the patient, patient's usual treating GP or medical practice where the patient has one'. Clinical documentation requirements are set out on page 10, '3. Clinical Documentation Requirements'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "Supplementary general advice (page 15): 'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved.' 'If a good response has been achieved, advise the patient to reduce the frequency of TCS application until stopped. The patient can resume their usual management plan. If they experience a further acute exacerbation (flare up) of their psoriasis they can seek another psoriasis consult (for the duration of the Victorian Pilot).' 'The patient should be advised to immediately see their medical practitioner if symptoms worsen after commencing treatment.' 'Common adverse effects of TCS, such as transient burning, stinging or pain on application, can generally be reversed by stopping the medicine. - Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting.' 'All patients should be advised to contact a medical practitioner if: They are not responding to treatment; and/or Their condition worsens; and/or They are experiencing complications (as soon as the complications become evident).'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Betamethasone valerate",
+      "form": "cream (preparations cell prints 'cream,' - column appears truncated in text extraction)",
+      "strength": "0.02%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "1 or 2 times a day",
+      "duration": "",
+      "max_quantity": "2x100g",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Moderate Corticosteroids'. Brand name examples as printed: 'Antroquoril, Betnovate 1/5, Celestone-M, Cortival 1/5' (brand strings include '1/5' tokens that are not resolvable from the text extraction - see open_questions). Table footnotes as printed: 'NB1: Potency classification for each drug is based on the results of vasoconstrictor studies. Potency classifications based on vasoconstrictor effect typically correlate with therapeutic potency; however, many other factors determine therapeutic potency in a patient (eg area of application, frequency and duration of treatment).' 'NB2: Formulation of a drug can affect potency; a topical drug prepared as a cream is less potent than the same drug prepared as an ointment.' The 'Dose' column prints only the frequency; no dose amount per application is printed. Table source as printed: 'Adapted with permission from: Considerations in the use of topical corticosteroids [published 2022 August]. In: Therapeutic Guidelines. Melbourne: Therapeutic Guidelines Limited; accessed 12 December 2023. https://www.tg.org.au'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Betamethasone valerate",
+      "form": "cream (preparations cell prints 'cream,')",
+      "strength": "0.05%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "1 or 2 times a day",
+      "duration": "",
+      "max_quantity": "1x15g or 1x30g",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Moderate Corticosteroids'. Brand name examples as printed: 'Betnovate 1/2, Cortival 1/2' (brand strings include '1/2' tokens that are not resolvable from the text extraction - see open_questions). Footnote NB2 applies: 'a topical drug prepared as a cream is less potent than the same drug prepared as an ointment.' No dose amount per application is printed.",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Triamcinolone acetonide",
+      "form": "cream, ointment",
+      "strength": "0.02%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "1 or 2 times a day",
+      "duration": "",
+      "max_quantity": "2x100g",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Moderate Corticosteroids'. Brand name examples as printed: 'Aristocort, Tricortone'. Footnote NB2 applies: 'Formulation of a drug can affect potency; a topical drug prepared as a cream is less potent than the same drug prepared as an ointment.' No dose amount per application is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Betamethasone dipropionate",
+      "form": "cream, ointment, lotion",
+      "strength": "0.05%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "1 or 2 times a day",
+      "duration": "",
+      "max_quantity": "1x15g (cream), 1x15g (ointment), 1x30mL (lotion)",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Potent Corticosteroids'. Brand name examples as printed: 'Diprosone, Eleuphrat'. Pack sizes as printed per preparation: cream 1x15g, ointment 1x15g, lotion 1x30mL. Footnotes NB1 and NB2 (page 16) apply to this potency classification. No dose amount per application is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Betamethasone valerate",
+      "form": "cream, ointment",
+      "strength": "0.1%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "1 or 2 times a day",
+      "duration": "",
+      "max_quantity": "1x30g",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Potent Corticosteroids'. Brand name example as printed: 'Betnovate'. Footnote NB2 applies: 'a topical drug prepared as a cream is less potent than the same drug prepared as an ointment.' No dose amount per application is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Methylprednisolone aceponate",
+      "form": "cream, ointment, fatty ointment, lotion",
+      "strength": "0.1%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "Once a day",
+      "duration": "",
+      "max_quantity": "1x15g, 1x20g",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Potent Corticosteroids'. Brand name example as printed: 'Advantan'. Pack sizes as printed: 1x15g, 1x20g. Footnote NB2 applies. No dose amount per application is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Mometasone furoate",
+      "form": "cream, ointment, lotion",
+      "strength": "0.1%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "Once a day",
+      "duration": "",
+      "max_quantity": "1x50g, 1x30mL",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Potency class as printed: 'Potent Corticosteroids'. Brand name examples as printed: 'Elocon, Momasone, Novasone, Zatamil'. Pack sizes as printed: 1x50g, 1x30mL. Footnote NB2 applies. No dose amount per application is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 16, "section_heading": "6. Medicines" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "The patient has psoriatic comorbidities or risk factors that require management by a medical practitioner e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours (branch action: 'Refer to a medical practitioner'; caveat: 'Pharmacotherapy by pharmacist may still be considered if clinically appropriate')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "The patient has not seen a medical practitioner for review of their psoriasis in the previous 12 months (branch action: 'Refer to a medical practitioner'; caveat: 'Pharmacotherapy by pharmacist may still be considered if clinically appropriate')",
+      "structured": { "parameter": "time since last medical review of psoriasis", "operator": ">", "value": 12, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Severity assessment result 'Moderate to Severe' -> 'Refer to General Practitioner and consider seeking specialist referral where appropriate'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Note: As this is not in scope for the Pilot, referral to a medical practitioner is required if nail involvement is identified.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 12, "section_heading": "4.2. EXAMINATION" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "The diagnosis is unclear",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Patient is very visibly unwell",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "The patient is immunocompromised due to underlying medical condition(s) and/or medications",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "The patient has other medical conditions such as diabetes or psoriatic arthritis where referral to a rheumatologist may be required",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "The patient is pregnant or planning a pregnancy",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "The patient presents with a type of psoriasis other than mild plaque psoriasis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "The psoriasis is moderate (PASI 6-10 and/or DLQI 6-10) or severe (PASI >10 and/or DLQI >10), including if it is having a marked negative emotional and social effect on the person (structured form captures the moderate PASI band; the DLQI bands and the severe PASI band are in the trigger wording and in RF-12)",
+      "structured": { "parameter": "PASI", "operator": "range", "value": [6, 10], "unit": "score" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "The psoriasis is always considered severe when the DLQI score is >10, regardless of the PASI score.",
+      "structured": { "parameter": "DLQI", "operator": ">", "value": 10, "unit": "score" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "It may also be considered severe if it has significant impacts on the person's quality of life, due to involvement of visible areas, major parts of the scalp, genitals, palms and/or soles, onycholysis of at least 2 fingernails or pruritus leading to excoriation.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "The face, scalp, genitals, palms and/or soles are affected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Psoriasis covers a significant body surface area (affects more than 6% of the body)",
+      "structured": { "parameter": "body surface area affected", "operator": ">", "value": 6, "unit": "%" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Psoriatic lesions are infected or show pustulation (less defined red plaques with scale and pus)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "The patient is taking a medicine that can exacerbate, especially lithium, beta-blockers and nonsteroidal anti-inflammatory drugs",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Inadequate response to topical treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 13, "section_heading": "Refer to a medical practitioner when:" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Where therapy is considered the appropriate treatment option but all recommended treatments under this protocol are contraindicated, refer patient to a medical practitioner (trigger: 'Does the patient have allergies, drug-drug interactions or any other contraindications to treatments under this protocol?')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Patient is not responding to treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Symptoms worsen after commencing treatment",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Patient is experiencing adverse effects that cannot be managed in the pharmacy setting (page 15 restates: 'Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting.')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "NB2: TCS are the mainstay of treatment for psoriasis flare. If topical treatment with class I-III TCS does not produce an adequate response to the acute exacerbation, the patient should be referred to a medical practitioner for management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 14, "section_heading": "5. Management and treatment plan" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "All patients should be advised to contact a medical practitioner if: They are not responding to treatment; and/or Their condition worsens; and/or They are experiencing complications (as soon as the complications become evident)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "The patient should be advised to immediately see their medical practitioner if symptoms worsen after commencing treatment.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer to General Practitioner (default No branch of the flowchart)",
+      "Refer to General Practitioner and consider seeking specialist referral where appropriate",
+      "Refer to a medical practitioner (page 6 comorbidity/risk-factor branch)",
+      "referral to a rheumatologist may be required (for diabetes or psoriatic arthritis)",
+      "referral to a medical practitioner is required if nail involvement is identified (page 12)",
+      "review by a medical practitioner recommended to occur at least every 12 months"
+    ],
+    "urgent": [
+      "The patient should be advised to immediately see their medical practitioner if symptoms worsen after commencing treatment",
+      "Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting"
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "2.1. KEY TO COLOURS USED IN THIS PROTOCOL" }
+  },
+  "review_followup": [
+    {
+      "when": "at least every 12 months",
+      "what": "Patients should be advised that review by a medical practitioner is recommended to occur at least every 12 months.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+    },
+    {
+      "when": "when each new treatment is started (trial period)",
+      "what": "Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved.",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+    },
+    {
+      "when": "if a good response has been achieved",
+      "what": "Advise the patient to reduce the frequency of TCS application until stopped. The patient can resume their usual management plan. If they experience a further acute exacerbation (flare up) of their psoriasis they can seek another psoriasis consult (for the duration of the Victorian Pilot).",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+    },
+    {
+      "when": "if symptoms worsen after commencing treatment, if not responding to treatment, or if complications become evident",
+      "what": "Contact/see their medical practitioner (immediately if symptoms worsen after commencing treatment).",
+      "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 15, "section_heading": "5.2.1 General advice" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must share a copy of the record of the service with the patient and, if the patient consents, with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+      "The pharmacist must make a record in the pharmacy software and an IT system approved by the Victorian Department of Health, regarding the supply."
+    ],
+    "provenance": { "pdf_file": "vic-pharmacist-prescribing-protocols\\protocol-for-management-of-acute-exacerbation-of-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "3. Clinical Documentation Requirements" }
+  },
+  "references": [
+    "Dermatology [2022 August]. In: Therapeutic Guidelines. Melbourne: Therapeutic Guidelines Limited; accessed November 2023. https://www.tg.org.au Relevant topics are Psoriasis and Considerations in the use of topical corticosteroids. (p. 17)",
+    "Adapted with permission from: Considerations in the use of topical corticosteroids [published 2022 August]. In: Therapeutic Guidelines. Melbourne: Therapeutic Guidelines Limited; accessed 12 December 2023. https://www.tg.org.au (p. 16)",
+    "Australian Medicines Handbook: Drugs for psoriasis; General principles: topical treatment of skin conditions; Corticosteroids; Topical steroids - how much do I use? (p. 17)",
+    "MSD Manual (Professional version) - Psoriasis (p. 17)",
+    "DermNet NZ: PASI score; Psoriasis (p. 17)",
+    "Cardiff University: Dermatology of Life Quality Index (p. 17)",
+    "The Australasian College of Dermatologists: Consensus statement: Treatment goals for psoriasis (p. 17)",
+    "The Australasian College of Dermatologists: Consensus statement: Topical corticosteroids in paediatric eczema (see table 1 page 4 for TCS preparation potency ranking) (p. 17)",
+    "Professional Practice Standards https://www.psa.org.au/practice-support-industry/pps/ (p. 17)",
+    "This protocol has been adapted from the draft Clinical Practice Guideline Acute Exacerbations of Mild Plaque Psoriasis from Queensland Health. (p. 18)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Medicines table brand/pack column alignment",
+      "observed": "Page 16 table text extraction yields brand strings containing '1/5' and '1/2' tokens (e.g. 'Antroquoril, Betnovate 1/5, Celestone-M, Cortival 1/5' and 'Betnovate 1/2, Cortival 1/2') and, for the first two rows, a preparations cell reading only 'cream,' immediately followed by the pack cell.",
+      "why_unclear": "Column boundaries cannot be resolved from the text extraction; it is unclear whether '1/5' / '1/2' are part of brand names, a separate column, or an artefact. TX-1 and TX-2 recorded with confidence 'unclear'; pack strings transcribed verbatim rather than interpreted.",
+      "source_page": 16
+    },
+    {
+      "topic": "No dose amount per application printed",
+      "observed": "The page 16 table 'Dose' column prints only frequency ('1 or 2 times a day' / 'Once a day'); no amount per application, no treatment duration and no quantity-to-supply rule per medicine is printed.",
+      "why_unclear": "dose, duration, max_dose and quantity_to_supply left empty rather than inferred; frequency transcribed from the printed 'Dose' column. Counselling covers 'fingertip units for topical corticosteroids' (page 9) without a numeric value.",
+      "source_page": 16
+    },
+    {
+      "topic": "No first-line topical corticosteroid designated",
+      "observed": "The protocol lists medicines under 'Moderate Corticosteroids' and 'Potent Corticosteroids' classes and states 'TCS are the mainstay of treatment for psoriasis flare' (page 14, NB2), but does not name a first-line agent.",
+      "why_unclear": "first_line set to false for all treatments rather than inferring a preferred agent from table order.",
+      "source_page": 16
+    },
+    {
+      "topic": "Printed page numbers differ from PDF page markers",
+      "observed": "PDF page markers run 1-20 while footers print 'Protocol for Management of Acute Exacerbation of Mild Plaque Psoriasis 1' starting at PDF page 3; flowchart boxes cross-reference printed pages ('Yes: continue to page 4', 'continue to page 5/6'), i.e. printed page = PDF page minus 2.",
+      "why_unclear": "All provenance pages use the === PAGE n === markers as required; consumers replaying the flowchart's own 'continue to page N' instructions must map printed page N to PDF page N+2.",
+      "source_page": 5
+    },
+    {
+      "topic": "Page 6 branch outcome leaves treatment discretion",
+      "observed": "For psoriatic comorbidities/risk factors or no medical review in the previous 12 months the Yes branch prints 'Refer to a medical practitioner' and, beneath it, 'Pharmacotherapy by pharmacist may still be considered if clinically appropriate - go to: PHARMACOTHERAPY section on page 6 below.'",
+      "why_unclear": "Whether supply proceeds at the same consultation when this branch fires is left to clinical judgement; recorded as exclusion EXC-1/EXC-2 with exception EXE-1.",
+      "source_page": 6
+    },
+    {
+      "topic": "No emergency referral pathway in this document",
+      "observed": "Referral destinations printed are General Practitioner, specialist/rheumatologist and 'a medical practitioner'; no emergency department, ambulance or 000 escalation appears in the 20 pages.",
+      "why_unclear": "referral.emergency is empty because the document genuinely contains none (not a transcription gap).",
+      "source_page": 5
+    },
+    {
+      "topic": "Referral block spans multiple pages",
+      "observed": "referral.routine and referral.urgent quote destinations printed across pages 5, 6, 7, 9, 12, 13 and 15; the shared provenance object references the first page (5).",
+      "why_unclear": "Single shared provenance per schema; page range recorded here as required by the spec.",
+      "source_page": 5
+    },
+    {
+      "topic": "PASI/DLQI combined thresholds are OR-composites",
+      "observed": "Severity rules are written as 'a PASI 6-10 and/or DLQI 6-10', 'PASI >10 and/or DLQI >10' and 'Mild plaque psoriasis = a PASI <= 5 and/or DLQI <= 5'.",
+      "why_unclear": "The structured form allows only one parameter per red flag, so RF-11 carries the moderate PASI band and RF-12 the DLQI >10 rule; the full OR wording is retained verbatim in trigger_text and in eligibility text. The document does not state how to combine a mild PASI with a moderate DLQI (highest-score rule is not printed for psoriasis, unlike the UKMEC 'highest category' rule in the OCP protocol).",
+      "source_page": 13
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Current designated pharmacist training requirements under the Secretary Approval: Community Pharmacist Statewide Pilot.",
+      "source_page": 4,
+      "reason": "Departmental guidance is external to the protocol; confirm which training version is current before go-live."
+    },
+    {
+      "item": "'Pharmacotherapy by pharmacist may still be considered if clinically appropriate' (page 6 comorbidity / no-review-in-12-months branch).",
+      "source_page": 6,
+      "reason": "Explicit clinical-judgement latitude; local policy must define when supply may proceed alongside referral."
+    },
+    {
+      "item": "'Refer to General Practitioner and consider seeking specialist referral where appropriate' (moderate to severe branch).",
+      "source_page": 6,
+      "reason": "Hedged ('consider', 'where appropriate'); local pathway for specialist referral must be confirmed."
+    },
+    {
+      "item": "'review MHR as necessary, where possible/available'.",
+      "source_page": 6,
+      "reason": "Conditional on My Health Record access and consent; confirm local workflow."
+    },
+    {
+      "item": "'Resupply of TCS preparation that patient has used previously for their psoriasis and is available under the pilot (see Section 6 for list of medicines that can be supplied under this pilot)'.",
+      "source_page": 8,
+      "reason": "Supply is limited to the pilot medicines list and to preparations the patient has used previously; confirm the list is current and how 'used previously' is verified."
+    },
+    {
+      "item": "Brand/pack column reading of the page 16 Medicines table (rows with '1/5' and '1/2' tokens).",
+      "source_page": 16,
+      "reason": "Text extraction is ambiguous; brand and pack values must be checked against the printed PDF before go-live."
+    },
+    {
+      "item": "'Note: There are no changes to the scope for pharmacists to supply Schedule 2 and 3 topical corticosteroids and so these are excluded for reimbursement for the purposes of this pilot.'",
+      "source_page": 16,
+      "reason": "Reimbursement scope is a program/administrative rule; confirm current status with the program (no PBS claiming logic captured here)."
+    },
+    {
+      "item": "'If they experience a further acute exacerbation (flare up) of their psoriasis they can seek another psoriasis consult (for the duration of the Victorian Pilot).'",
+      "source_page": 15,
+      "reason": "Time-limited pilot entitlement; confirm the pilot's current end date and repeat-consult rules."
+    },
+    {
+      "item": "'PASI calculator and other resources to assist clinicians are included in the Pharmacist resources section of this protocol.' / PASI and DLQI scoring tools.",
+      "source_page": 13,
+      "reason": "Reliance on external calculators/indices; confirm approved versions and training."
+    },
+    {
+      "item": "'Pharmacists are also expected to exercise professional judgment in adapting treatment guidelines to presenting circumstances.'",
+      "source_page": 4,
+      "reason": "Explicit local-judgement latitude; confirm what adaptation is permitted before go-live."
+    }
+  ]
+}

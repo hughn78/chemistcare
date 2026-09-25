@@ -1,0 +1,1035 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf",
+    "pdf_sha256": "5c4421aab5896a6c43f8a90318de4f79723f007eb9c53bcf9d87c603749bf0aa",
+    "page_count": 22,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Chronic Conditions Management Pilot – Cardiovascular Disease (CVD) Risk Reduction Program – Blood Glucose Management – Pilot Clinical Protocol",
+    "instrument_version": "Pilot Clinical Protocol – V2 (document version history: Version 2.0, 07.04.2026; prior versions 1.0 01.02.2024, 1.1 11.11.2024, 1.2 01.07.2025)",
+    "effective_date": "07.04.2026",
+    "legal_basis": "Not printed in this document: no Act, regulation or poisons schedule provision is named. The document describes itself as a 'Pilot Clinical Protocol' that 'forms part of the CVD Risk Reduction Program' (Queensland Community Pharmacy Chronic Conditions Management Pilot) and covers 'protocol-based/structured prescribing of medicines for the management of hyperglycaemia' (p.4). Operating conditions printed: 'When applying the information contained within this clinical protocol, pharmacists should exercise professional discretion and judgement. The protocol supports, but does not replace, the pharmacist's responsibility to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their caregiver.' (p.3).",
+    "supervision_model": "collaborative — document terminology: 'K: Collaborative care' (p.15); patients enrolled at Entry point 1 are managed 'concurrent to referral to an appropriate healthcare provider for further review and collaborative care' (p.4); 'An update must be provided to the patient's usual healthcare provider following each occasion of care' (Entry point 2, p.4); 'When modifying pharmacotherapy regimens ... prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate)' (p.12); 'the protocol supports, but does not replace, the pharmacist's responsibility to make decisions appropriate to the circumstances of the individual' (p.3).",
+    "scope_summary": "Queensland Community Pharmacy Chronic Conditions Management Pilot clinical protocol (V2) for the CVD Risk Reduction Program: Blood Glucose Management. It sets eligibility/ineligibility (aged 18–79, pregnancy, complex CVD, abnormal pathology etc.), the A–L assessment and management pathway (eligibility, consent/enrolment, CVD risk assessment, history, measurements, test review, non-pharmacological measures, pharmacotherapy with up to two agents — metformin, SGLT2 inhibitors, GLP-1 receptor agonists, DPP-4 inhibitors, monitoring and HbA1c targets, self-management, confirmation of plan, communication, collaborative care, ongoing review), referral triggers, the annual cycle of care, an Appendix CVD Risk Management Plan and a reference list. It is used in conjunction with the Clinical Protocol: Hypertension and Clinical Protocol: Lipid Modification."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Person aged ≥18 years and ≤79 years' (Figure 1 eligibility box); equivalently patients 'are aged <18 years or >79 years' are ineligible. Eligibility must be assessed at each consultation, as eligibility may change due to changes in health status or demographic factors.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Confirm the patient does not meet any ineligibility criteria (refer to page 1)' — i.e. none of the 'Patients who are ineligible for the Program' criteria (EXC-1 to EXC-30) are met; 'Confirm eligibility to participate in the Program (see Eligibility)' and 'Consider program eligibility at every consultation, as eligibility can change at any time.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Entry point 1: 'Patients without a previous diagnosis of type 2 diabetes, who do not meet any ineligibility criteria, may be enrolled in the Program and commence management (with non-pharmacological measures and pharmacotherapy, if indicated) concurrent to referral to an appropriate healthcare provider for further review and collaborative care.'",
+        "criteria_group": { "all_of": [], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Blood glucose management" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Entry point 2: 'Patients with an existing diagnosis of type 2 diabetes, who do not meet any ineligibility criteria, may be enrolled in the Program and commence ongoing monitoring and management (with non-pharmacological measures and pharmacotherapy, if indicated). An update must be provided to the patient's usual healthcare provider following each occasion of care.'",
+        "criteria_group": { "all_of": [], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Blood glucose management" }
+      },
+      {
+        "id": "INC-5",
+        "text": "'Provide Program overview, gain consent and enrol in Program' and 'Document informed consent from the patient for participation, as per the Pilot Handbook.' (program overview includes aims, expected outcomes, timeframes, costs, how medicines may be managed and how medicine costs may differ when prescribed by a pharmacist, other interventions, and that the patient may leave the Program at any time).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Overview of the CVD Risk Reduction Program: Blood glucose management (continued from page 4)" }
+      },
+      {
+        "id": "INC-6",
+        "text": "'All patients entering the CVD Risk Reduction Program for Blood Glucose Management must have their CVD risk assessed (see Clinical Protocol: Hypertension for detail on CVD risk assessment).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-5", "INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Continuing participation: 'their condition remains eligible to be managed in the Program'.",
+        "criteria_group": { "all_of": ["INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Continuing participation: 'they wish to remain in the Program and continue to consent'.",
+        "criteria_group": { "all_of": ["INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Continuing participation: 'they attend scheduled reviews'.",
+        "criteria_group": { "all_of": ["INC-7", "INC-8", "INC-9"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "'are aged <18 years or >79 years'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-2", "text": "'are planning a pregnancy or are pregnant'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-3", "text": "'have an existing diagnosis of: stage 3-5 chronic kidney disease (CKD)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-4", "text": "'have an existing diagnosis of: familial hypercholesterolaemia'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-5", "text": "'have an existing diagnosis of: type 1 diabetes'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-6", "text": "'have an existing diagnosis of: type 2 diabetes managed with insulin'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-7", "text": "'have an existing diagnosis of: retinopathy, neuropathy or nephropathy (persistent albuminuria: urinary albumin-creatinine ratio (uACR) ≥3 mg/mmol or eGFR <60 mL/min/1.73m2)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" } },
+      { "id": "EXC-8", "text": "'complex cardiovascular disease (CVD): severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-9", "text": "'complex cardiovascular disease (CVD): congenital heart disease'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-10", "text": "'complex cardiovascular disease (CVD): rheumatic heart disease'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-11", "text": "'complex cardiovascular disease (CVD): heart failure'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-12", "text": "'complex cardiovascular disease (CVD): arrythmias'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-13", "text": "'complex cardiovascular disease (CVD): atrial fibrillation'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-14", "text": "'complex cardiovascular disease (CVD): other conditions including peripheral arterial disease, heart block, pericarditis, valvular disease, pulmonary hypertension, angina, cardiomyopathy and cardiomegaly, aortic aneurysm'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-15", "text": "'have poorly controlled asthma, moderate or severe chronic obstructive pulmonary disease (COPD), severe obstructive sleep apnoea (OSA) or another serious respiratory illness.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-16", "text": "'have a history of: cardiothoracic surgery'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-17", "text": "'have a history of: acute coronary syndrome (e.g., myocardial infarction)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-18", "text": "'have a history of: stroke or other cerebrovascular disease'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-19", "text": "'have a history of: hypertensive urgency or emergency.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-20", "text": "'have a current deep vein thrombosis (diagnosed by a medical practitioner)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-21", "text": "'have a current pulmonary embolism (diagnosed by a medical practitioner) or a history of pulmonary embolism'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-22", "text": "'are currently prescribed anticoagulant therapy'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-23", "text": "'are currently receiving, or have received within the past 12 months, specialist treatment from a cardiologist, endocrinologist or nephrologist, unless they have a written referral from their treating specialist or general practitioner to participate in the Program'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-24", "text": "'are suspected to have hyperglycaemia with a secondary cause (e.g., pancreatic disorder, drug-induced, endocrine disorder)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-25", "text": "'have type 2 diabetes and are experiencing acute illness'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-26", "text": "'have: unexplained fluctuations in blood pressure (BP)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-27", "text": "'have: total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-28", "text": "'have: severe hyperglycaemia (glycated haemoglobin (HbA1c) ≥10% or blood glucose level (BGL) ≥20.0 mmol/L), or hypoglycaemia (BGL <4.0 mmol/L)'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-29", "text": "'have: another high risk or abnormal pathology result.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } },
+      { "id": "EXC-30", "text": "'do not reach their clinical targets within appropriate timeframe for treatment with 2 anti-hyperglycaemic medicines that can be prescribed under this protocol at optimal dose.' Restated at p.16: 'Patients are not eligible for participation in the Program if they have not reached their clinical targets within appropriate timeframes of the treatment of 2 anti-hyperglycaemic medicines that can be prescribed under this protocol at optimal doses.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24", "EXC-25", "EXC-26", "EXC-27", "EXC-28", "EXC-29", "EXC-30"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 79,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Exception to EXC-23: 'unless they have a written referral from their treating specialist or general practitioner to participate in the Program' — patients who have received specialist treatment from a cardiologist, endocrinologist or nephrologist (currently or within the past 12 months) may participate when a written referral to participate is held.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "Carve-out from the ineligibility list — 'Treat (if clinically indicated) and concurrently refer': 'Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.' (A history of DVT alone is not listed as an ineligibility criterion; only 'current deep vein thrombosis' is — EXC-20.)",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+      },
+      {
+        "id": "EXE-3",
+        "text": "'Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "CVD Risk Reduction Program: Blood Glucose Management — sections A to L (assessment and management pathway)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "A: Program eligibility — 'Confirm eligibility to participate in the Program (see Eligibility).'; 'Consider program eligibility at every consultation, as eligibility can change at any time.'; 'Refer the patient to their usual healthcare provider with comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program.' Figure 1 eligibility box: 'Person aged ≥18 years and ≤79 years' and 'Confirm the patient does not meet any ineligibility criteria (refer to page 1)'. Entry points (p.4): Entry point 1 — no previous diagnosis of type 2 diabetes, no ineligibility criteria, enrol with management concurrent to referral; Entry point 2 — existing diagnosis of type 2 diabetes, no ineligibility criteria, enrol with ongoing monitoring and management and update the usual healthcare provider after each occasion of care.",
+          "gates": [ { "criterion": "Patient is aged ≥18 years and ≤79 years and does not meet any ineligibility criteria (EXC-1 to EXC-30)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 7, "section_heading": "A: Program eligibility" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EDUCATE",
+          "description": "Provide an overview of the Program including aims, expected outcomes and what the Program may involve: 'timeframes for management of the condition, such as the number of appointments and testing required, and the costs involved'; 'how the patient's medicines may be managed and how medicine costs may differ when prescribed by a pharmacist'; 'other interventions that may be recommended as part of the Program e.g., smoking cessation and weight management'; 'that the patient may leave the Program, including by opting out or becoming ineligible, at any time, and be referred to an appropriate healthcare provider.' Then 'Provide Program overview, gain consent and enrol in Program' and 'Document informed consent from the patient for participation, as per the Pilot Handbook.'",
+          "gates": [ { "criterion": "Informed consent documented from the patient for participation, as per the Pilot Handbook", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Blood glucose management" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "INVESTIGATION",
+          "description": "Assess CVD risk: 'All patients entering the CVD Risk Reduction Program for Blood Glucose Management must have their CVD risk assessed (see Clinical Protocol: Hypertension for detail on CVD risk assessment).' 'Reassess CVD risk every 5 years for patients at low CVD risk, or every 2 years for patients at intermediate CVD risk (or sooner where there is a significant change to risk factors) (1).' 'For patients already receiving pharmacological therapy to reduce their cardiovascular risk, or who have previously been assessed as high-risk, review individual risk factors. Formal reassessment of overall CVD risk is not recommended for these patients (1).'",
+          "gates": [ { "criterion": "CVD risk assessed before/when entering the Program (detail in the Clinical Protocol: Hypertension)", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "B: Patient history — 'Obtain sufficient information to assess the patient's condition, and the safety and appropriateness of any recommendations and medicines for the patient.' Consider: age; ethnic or cultural background, including Aboriginal and/or Torres Strait Islander status; lactation status; previous and current medical conditions; clinical signs and symptoms of insulin resistance or polycystic ovarian syndrome (PCOS) (e.g., acanthosis nigricans, skin tags, central obesity, hirsutism); alarm signs and symptoms that require further investigation e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting; symptoms that may indicate poorly controlled diabetes or a complication that requires specialised management (e.g., lethargy, polyuria, polydipsia, frequent fungal or bacterial infections, blurred vision, poor wound healing); family history of diabetes or CVD; current type 2 diabetes management (HbA1c and self-monitoring, sick day management plan, diabetes educator consultations); last eye health and foot care check; history of gestational diabetes; all current and recently ceased treatments; immunisation history (review the Australian Immunisation Register); drug allergies/adverse drug reactions; recent pathology results, including eGFR, lipids, urinalysis, HbA1c, FBG; diet/nutrition status and weight; levels of physical activity; recreational or illicit drug use, and alcohol use; smoking status and history (tobacco, cannabis, vaping, passive smoking or other exposure); specialist involvement in care. Reminder: 'Pharmacists can access a range of clinical information in a patient's My Health Record...'",
+          "gates": [ { "criterion": "No alarm signs and symptoms that require further investigation are identified (e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting)", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 7, "section_heading": "B: Patient history" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EXAMINATION",
+          "description": "C: Take measurements — 1) BP: 'Conduct BP measurements in accordance with the National Heart Foundation of Australia Guidelines for the diagnosis and management of hypertension in adults 2016 (10).' 'Take three measurements and average the last two. Where there is variation >10 mmHg systolic or >6 mmHg diastolic, have the patient rest quietly for 5 minutes then remeasure.' 2) Weight and height: measure to calculate BMI (Heart Foundation BMI calculator (11)); refer to Department of Health and Aging - BMI and waist measurement (12) for BMI ranges and exceptions. 3) Waist measurement: measure waist (Heart Foundation resource (13)) and interpret per Department of Health and Aging - BMI and waist measurement (12).",
+          "gates": [ { "criterion": "BP readings are within ≤10 mmHg systolic and ≤6 mmHg diastolic variation (on fail: have the patient rest quietly for 5 minutes then remeasure)", "on_fail": "SEE_PW-1-S5" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 8, "section_heading": "C: Take measurements" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "D: Review test results — 'Where recent test results are unavailable, undertake appropriate testing (point of care testing (PoCT) and/or laboratory testing). Refer to the Pilot Handbook for further information regarding options for requesting laboratory testing.' Glycated haemoglobin (HbA1c) or fasting blood glucose (FBG): 'Patients with a current diagnosis of type 2 diabetes should have FBG results no older than 1 month and HbA1c results no older than 3 months.' 'Patients without a current diagnosis of type 2 diabetes with HbA1c ≥6.5% (48 mmol/mol) or FBG ≥7 mmol/L or random blood glucose ≥11.1 mmol/L identified during type 2 diabetes screening should have a repeat (laboratory confirmed) HbA1c or FBG to confirm the result and inform management (6).' Other testing: 'Consider if any other PoCT or laboratory testing (e.g., biochemistry profile, renal function) is needed to inform patient management.'",
+          "gates": [ { "criterion": "Any screening result at or above HbA1c ≥6.5% (48 mmol/mol), FBG ≥7 mmol/L or random blood glucose ≥11.1 mmol/L in a patient without a current diagnosis of type 2 diabetes is confirmed by a repeat (laboratory confirmed) HbA1c or FBG before management is informed", "on_fail": "SEE_PW-1-S6" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 8, "section_heading": "D: Review test results" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "E: Non-pharmacological measures — 'Provide all patients with information about non-pharmacological measures regardless of whether pharmacotherapy is prescribed.' 'The 5As Framework for behavioural risk modification may be used as the basis for identifying modifiable lifestyle risk factors and implementing lifestyle interventions in accordance with the ... SNAP guide (16).' Smoking and vaping cessation (Smoking Cessation - Clinical Practice Guideline (17); E-cigarette and Vaping Cessation Guide (18)). Weight management: 'When initiating any interventions for weight management in patients with type 2 diabetes, consider the impact of the weight management intervention on the patient's antihyperglycaemic pharmacotherapy, including risk of euglycemic ketoacidosis (for patient's taking SGLT-2 inhibitors) and/or hypoglycaemia (6).' Diet and nutrition: balanced diet from the five food groups; limit foods high in saturated and trans fats, sugar and sodium; Australian Dietary Guidelines (21); 'Encourage all patients with type 2 diabetes to see a dietitian for individualised nutritional advice... (6).' Physical activity: 'at least 150 minutes of moderate- to vigorous-intensity activity per week, including two resistance training sessions for a total of at least 60 minutes (6)'; consider ability to safely exercise; 'Referral to an exercise physiologist and/or physiotherapist to develop an exercise plan may be required.' Alcohol consumption: consider impact of the patient's alcohol consumption on blood glucose management, including pharmacotherapy (6).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 9, "section_heading": "E: Non-pharmacological measures" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "F: Pharmacotherapy — 'Pharmacists may prescribe up to two agents (dual-therapy) from the following list in line with the current online version of Therapeutic Guidelines: Diabetes (Type 2 diabetes in adults – Algorithm for anti-hyperglycaemic treatment of adults with type 2 diabetes) (8): metformin (first line therapy unless contraindicated or not tolerated); sodium-glucose co-transporter 2 (SGLT2) inhibitors; glucagon-like peptide-1 (GLP-1) receptor agonists; dipeptidyl peptidase-4 (DPP-4) inhibitors.' 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.' Before initiating/modifying consider the patient's age, renal function, CVD risk, glycaemic profile (including symptoms and episodes of hyperglycaemia and hypoglycaemia), HbA1c treatment targets (Table 1), related comorbidities, self-management capability, contraindications/adverse reactions/drug interactions, response to previous interventions and patient preference (including cost). 'Where pharmacotherapy is prescribed, the patient's prescription(s) (including repeats) should provide enough medicine for the period until the patient's next scheduled review.' Pharmacists may modify or adjust existing type 2 diabetes pharmacotherapy if 'patient's response is inadequate within appropriate clinical timeframes (a general target for HbA1c is ≤7% (53 mmol/mol)). However, an individualised target may be considered based on the patient's risks, benefits and preferences (see Table 1)' or if 'patient is experiencing intolerable or unmanageable adverse effects.' When modifying regimens prescribed by another healthcare provider, 'attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).'",
+          "gates": [ { "criterion": "No more than two agents (dual-therapy) are prescribed from the permitted list (metformin, SGLT2 inhibitors, GLP-1 receptor agonists, DPP-4 inhibitors), and any combination product only includes medicines able to be prescribed under the Program", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 11, "section_heading": "F: Pharmacotherapy (continued from page 10)" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "FOLLOW_UP",
+          "description": "G: Monitoring and clinical targets — 'Monitor response to new or changed pharmacotherapy by measuring HbA1c after 3 months (8) (refer to Table 1).' 'If the response to new or changed pharmacotherapy is inadequate or the medicine is not tolerated (8): modify the treatment regimen — increase dose of metformin (to the maximum tolerated dose appropriate for the patient); consider adding a second medicine (and/or incrementally increase the dose of the second medicine up to the maximum tolerated dose appropriate for the patient, if applicable); consider stopping the second anti-hyperglycaemic medicine (i.e., not metformin) if a reduction of HbA1c of ³0.5% has not been achieved after 3 months and trial another medicine (after balancing glycaemic and non-glycaemic benefits); if the patient has not reached their clinical targets within appropriate timeframes of the treatment with two medicines that may be prescribed under this protocol (at optimal doses), refer the patient to an appropriate healthcare provider.' 'If the HbA1c is stable at target, continue to monitor response to therapy. If response to treatment changes, consider ongoing eligibility for the Program.' Table 1 HbA1c targets and Table 2 drug-class testing requirements apply.",
+          "gates": [
+            { "criterion": "HbA1c measured 3 months after new or changed pharmacotherapy shows an adequate response and the medicine is tolerated (a general target for HbA1c is ≤7% (53 mmol/mol), individualised per Table 1)", "on_fail": "SEE_PW-1-S8" },
+            { "criterion": "Clinical targets reached within appropriate timeframes of treatment with two medicines prescribable under this protocol at optimal doses", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 12, "section_heading": "G: Monitoring and clinical targets" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "EDUCATE",
+          "description": "H: Patient self-management — 'Advise patients about ways to self-manage and self-monitor between periodic review.' Self-monitoring: 'Encourage patients undergoing changes to their treatment regimen or intensive lifestyle modification to self-monitor blood glucose concentrations (8, 30).' Hypoglycaemia: 'Educate patients on how to recognise and manage hypoglycaemia (BGL <4 mmol/L), particularly patients previously prescribed drugs that can cause hypoglycaemia (e.g., insulin or sulfonylureas)'; provide NDSS Managing hypoglycaemia fact sheet (31). Sick day management: 'Educate patients about the impact of acute illness on blood glucose concentrations, and provide them with the National Diabetes Services Scheme - Sick day management factsheet (8, 32).' 'Patients should have a sick day plan developed by an appropriate healthcare provider. Promptly advise the patient's usual healthcare provider of changes to pharmacotherapy in the Program to enable update of the sick day management plan.' 'Advise patients taking SGLT-2 inhibitors to withhold their medication during acute serious illness, prolonged fasting, bowel preparation, low carbohydrate intake, excessive alcohol intake or other risk factors for ketoacidosis as these may increase the risk of ketoacidosis (28).' 'Advise patients taking metformin or GLP-1 receptor agonists to withhold their medication if they have vomiting, diarrhoea or are not eating much (8, 33).'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "H: Patient self-management" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "I: Confirm management plan is appropriate — 'Consult the Therapeutic Guidelines (8), the Australian Medicines Handbook (28) and other relevant resources to confirm that management is appropriate, including: contraindications and precautions; drug and disease interactions; lactation status.'",
+          "gates": [ { "criterion": "Contraindications and precautions, drug and disease interactions, and lactation status confirmed appropriate against Therapeutic Guidelines, the Australian Medicines Handbook and other relevant resources", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 15, "section_heading": "I: Confirm management plan is appropriate" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "EDUCATE",
+          "description": "J: Communicate agreed management plan — 'Provide comprehensive advice (including supporting written information) to the patient regarding: individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for clinical review.' 'Document the agreed management plan and individualised clinical targets within the patient's CVD Risk Management Plan.' 'It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources provided to patients (and/or caregiver if applicable) and that they comply with all copyright conditions.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 15, "section_heading": "J: Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "REFER",
+          "description": "K: Collaborative care — 'Provide a copy of the patient's CVD Risk Management Plan to the patient's usual healthcare provider (and any other relevant health professionals involved in the patients care). The communication should also include (if relevant): relevant medical history and pathology/PoCT results; changes to existing pharmacotherapy or new pharmacotherapy prescribed; a summary of advice provided to the patient including recommendations for multidisciplinary care and referrals; the next scheduled review appointment.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 15, "section_heading": "K: Collaborative care" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "FOLLOW_UP",
+          "description": "L: Clinical review and ongoing collaboration — 'All patients should undergo regular clinical review to participate in the Program.' Review every 3 months or sooner (newly diagnosed, undergoing therapeutic changes, HbA1c not within individualised target range or experiencing complications of diabetes) or 6 months or sooner (stable blood glucose levels at individualised target). 'Prior to each periodic review, arrange any relevant laboratory tests (that are not performed by PoCT) required for monitoring.' At each appointment review: ongoing eligibility; patient history; BP measurements; pathology or PoCT; changes to CVD risk factors; response to current management and adherence to lifestyle modification; progress with annual cycle of care; prescribed pharmacotherapy; CVD Risk Management Plan and clinical targets. 'Provide an update to the patient's usual healthcare provider following each occasion of care including when any changes are made to the patient's management plan.' 'Patients are not eligible for participation in the Program if they have not reached their clinical targets within appropriate timeframes of the treatment of 2 anti-hyperglycaemic medicines that can be prescribed under this protocol at optimal doses.' 'Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.'",
+          "gates": [ { "criterion": "Patient's condition remains eligible to be managed in the Program, they wish to remain in the Program and continue to consent, and they attend scheduled reviews", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Metformin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No dose, strength, route, frequency or quantity is printed in this protocol; prescribing must follow 'the current online version of Therapeutic Guidelines: Diabetes (Type 2 diabetes in adults – Algorithm for anti-hyperglycaemic treatment of adults with type 2 diabetes) (8)'. 'metformin (first line therapy unless contraindicated or not tolerated)'. Dose instruction printed: 'increase dose of metformin (to the maximum tolerated dose appropriate for the patient)' when response is inadequate or the medicine is not tolerated. Monitoring (Table 2, p.13): 'Check renal function (eGFR) before starting treatment and then every 4–6 months.' 'Normal eGFR is considered to be ≥60 mL/min/1.73m2.' 'Check serum B12 level at least every 12 months.' Sick day caveat (verbatim, p.15): 'Advise patients taking metformin or GLP-1 receptor agonists to withhold their medication if they have vomiting, diarrhoea or are not eating much (8, 33).' Pregnancy/lactation/paediatric caveats (verbatim): patients who 'are planning a pregnancy or are pregnant' and those 'aged <18 years or >79 years' are ineligible for the Program (p.1); 'lactation status' must be considered in patient history (p.7) and confirmed under 'I: Confirm management plan is appropriate — ... lactation status' (p.15). Prescriptions (including repeats) 'should provide enough medicine for the period until the patient's next scheduled review' (p.10).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 11, "section_heading": "F: Pharmacotherapy (continued from page 10)" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "SGLT2 inhibitors (sodium-glucose co-transporter 2 inhibitors)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No dose, strength, route, frequency or quantity is printed; follow the current online Therapeutic Guidelines: Diabetes algorithm. One of the four agents pharmacists may prescribe (up to two agents/dual-therapy). Monitoring (Table 2, p.13): 'Check renal function (eGFR and serum creatinine) before commencing, then periodically as clinically indicated (at least annually).' 'Normal eGFR is considered to be ≥60 mL/min/1.73m2.' 'Initially, serum creatinine may increase and eGFR decrease (by 3–5 mL/minute/1.73 m2), but this is usually followed by stabilisation of kidney function (23).' Sick day caveat (verbatim, p.15): 'Advise patients taking SGLT-2 inhibitors to withhold their medication during acute serious illness, prolonged fasting, bowel preparation, low carbohydrate intake, excessive alcohol intake or other risk factors for ketoacidosis as these may increase the risk of ketoacidosis (28).' Weight management caveat (verbatim, p.9): 'consider the impact of the weight management intervention on the patient's antihyperglycaemic pharmacotherapy, including risk of euglycemic ketoacidosis (for patient's taking SGLT-2 inhibitors) and/or hypoglycaemia (6).' Note also (p.12): 'consider if the medicine is also used for the treatment of another condition (e.g., SGLT-2 inhibitors used for the treatment heart failure or CKD).' Pregnancy/lactation/paediatric caveats (verbatim): 'are planning a pregnancy or are pregnant' and 'aged <18 years or >79 years' are ineligible (p.1); 'lactation status' considered in history (p.7) and confirmed at plan check (p.15).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 11, "section_heading": "F: Pharmacotherapy (continued from page 10)" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "GLP-1 receptor agonists (glucagon-like peptide-1 receptor agonists)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No dose, strength, route, frequency or quantity is printed; follow the current online Therapeutic Guidelines: Diabetes algorithm. One of the four agents pharmacists may prescribe (up to two agents/dual-therapy). Monitoring (Table 2, p.13): 'Check renal function (eGFR and serum creatinine) before commencing, then periodically as clinically indicated.' 'Normal eGFR is considered to be ≥60 mL/min/1.73m2.' Sick day caveat (verbatim, p.15): 'Advise patients taking metformin or GLP-1 receptor agonists to withhold their medication if they have vomiting, diarrhoea or are not eating much (8, 33).' Pregnancy/lactation/paediatric caveats (verbatim): 'are planning a pregnancy or are pregnant' and 'aged <18 years or >79 years' are ineligible (p.1); 'lactation status' considered in history (p.7) and confirmed at plan check (p.15).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 11, "section_heading": "F: Pharmacotherapy (continued from page 10)" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "DPP-4 inhibitors (dipeptidyl peptidase-4 inhibitors)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "No dose, strength, route, frequency or quantity is printed; follow the current online Therapeutic Guidelines: Diabetes algorithm. One of the four agents pharmacists may prescribe (up to two agents/dual-therapy). Monitoring (Table 2, p.13): 'Alogliptin, saxagliptin, sitagliptin, vildagliptin: Check renal function (eGFR and serum creatinine) before commencing, then periodically as clinically indicated.' 'Normal eGFR is considered to be ≥60 mL/min/1.73m2.' Pregnancy/lactation/paediatric caveats (verbatim): 'are planning a pregnancy or are pregnant' and 'aged <18 years or >79 years' are ineligible (p.1); 'lactation status' considered in history (p.7) and confirmed at plan check (p.15).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 11, "section_heading": "F: Pharmacotherapy (continued from page 10)" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic)' (systolic component; also listed as ineligibility 'severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic)').",
+      "structured": { "parameter": "systolic blood pressure", "operator": ">=", "value": 180, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic)' (diastolic component; also listed as ineligibility 'severe (Grade 3) hypertension').",
+      "structured": { "parameter": "diastolic blood pressure", "operator": ">=", "value": 110, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • HbA1c ≥10% or BGL ≥20.0 mmol/L' (HbA1c component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "HbA1c", "operator": ">=", "value": 10, "unit": "%" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • HbA1c ≥10% or BGL ≥20.0 mmol/L' (BGL component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "blood glucose level (BGL)", "operator": ">=", "value": 20.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • Total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L' (total cholesterol component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "total cholesterol", "operator": ">=", "value": 7.5, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • Total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L' (LDL-C component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "LDL-C", "operator": ">=", "value": 5.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • Total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L' (triglycerides component; also an ineligibility criterion at p.2).",
+      "structured": { "parameter": "triglycerides", "operator": ">=", "value": 6, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2' (uACR component; also part of the ineligibility criterion for nephropathy at p.1).",
+      "structured": { "parameter": "urinary albumin-creatinine ratio (uACR)", "operator": ">=", "value": 3, "unit": "mg/mmol" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Figure 1: 'Refer to an appropriate healthcare provider where: • uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2' (eGFR component; also part of the ineligibility criterion for nephropathy at p.1).",
+      "structured": { "parameter": "eGFR", "operator": "<", "value": 60, "unit": "mL/min/1.73m2" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Ineligibility criterion: 'severe hyperglycaemia (glycated haemoglobin (HbA1c) ≥10% or blood glucose level (BGL) ≥20.0 mmol/L), or hypoglycaemia (BGL <4.0 mmol/L)' — hypoglycaemia component (HbA1c ≥10% and BGL ≥20.0 mmol/L are captured as RF-3/RF-4 via Figure 1). Also relevant to education: 'Educate patients on how to recognise and manage hypoglycaemia (BGL <4 mmol/L)' (p.14).",
+      "structured": { "parameter": "blood glucose level (BGL)", "operator": "<", "value": 4.0, "unit": "mmol/L" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program. Ineligibility for treatment as part of a Pilot service does not preclude a patient from accessing services provided as part of usual pharmacy care.' (Applies whenever any EXC-1 to EXC-30 criterion is met.)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'are aged <18 years or >79 years' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "18-79", "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'are planning a pregnancy or are pregnant' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'have an existing diagnosis of: – stage 3-5 chronic kidney disease (CKD) – familial hypercholesterolaemia – type 1 diabetes – type 2 diabetes managed with insulin – retinopathy, neuropathy or nephropathy (persistent albuminuria: urinary albumin-creatinine ratio (uACR) ≥3 mg/mmol or eGFR <60 mL/min/1.73m2)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11; uACR/eGFR thresholds also trigger referral via RF-8/RF-9)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'– complex cardiovascular disease (CVD): • severe (Grade 3) hypertension (≥180 mmHg systolic and/or ≥110 mmHg diastolic) • congenital heart disease • rheumatic heart disease • heart failure • arrythmias • atrial fibrillation • other conditions including peripheral arterial disease, heart block, pericarditis, valvular disease, pulmonary hypertension, angina, cardiomyopathy and cardiomegaly, aortic aneurysm' (patients who are ineligible for the Program; hypertension thresholds also trigger referral via RF-1/RF-2)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'– have poorly controlled asthma, moderate or severe chronic obstructive pulmonary disease (COPD), severe obstructive sleep apnoea (OSA) or another serious respiratory illness.' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'• have a history of: – cardiothoracic surgery – acute coronary syndrome (e.g., myocardial infarction) – stroke or other cerebrovascular disease – hypertensive urgency or emergency.' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'• have a current deep vein thrombosis (diagnosed by a medical practitioner)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'• have a current pulmonary embolism (diagnosed by a medical practitioner) or a history of pulmonary embolism' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'• are currently prescribed anticoagulant therapy' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'• are currently receiving, or have received within the past 12 months, specialist treatment from a cardiologist, endocrinologist or nephrologist, unless they have a written referral from their treating specialist or general practitioner to participate in the Program' (patients who are ineligible for the Program unless the written-referral exception EXE-1 applies; referred with comprehensive clinical handover per RF-11)",
+      "structured": { "parameter": "time since specialist treatment from a cardiologist, endocrinologist or nephrologist", "operator": "<=", "value": 12, "unit": "months" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'• are suspected to have hyperglycaemia with a secondary cause (e.g., pancreatic disorder, drug-induced, endocrine disorder)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'• have type 2 diabetes and are experiencing acute illness' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'• have: – unexplained fluctuations in blood pressure (BP)' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11). Qualitative trigger — no numeric definition is printed.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'• have: – another high risk or abnormal pathology result.' (patients who are ineligible for the Program; referred with comprehensive clinical handover per RF-11). Qualitative trigger — no threshold is printed for 'high risk or abnormal pathology result'.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'• do not reach their clinical targets within appropriate timeframe for treatment with 2 anti-hyperglycaemic medicines that can be prescribed under this protocol at optimal dose.' / Figure 1 (p.6): 'Refer patient to their usual healthcare provider with a comprehensive clinical handover if their clinical targets have not been reached within appropriate timeframes for treatment with 2 medicines at optimal doses.' / p.12: 'if the patient has not reached their clinical targets within appropriate timeframes of the treatment with two medicines that may be prescribed under this protocol (at optimal doses), refer the patient to an appropriate healthcare provider.' / p.16: 'Patients are not eligible for participation in the Program if they have not reached their clinical targets ...'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'Treat (if clinically indicated) and concurrently refer — Provide treatment (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 2, "section_heading": "Eligibility for the Program (continued from page 1)" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'alarm signs and symptoms that require further investigation e.g., unexplained weight loss or gain, frequent headache and dizziness, chronic nausea and vomiting' (B: Patient history). Destination of the 'further investigation' is not stated in the document.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 7, "section_heading": "B: Patient history" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'symptoms that may indicate poorly controlled diabetes or a complication that requires specialised management (e.g., lethargy, polyuria, polydipsia, frequent fungal or bacterial infections, blurred vision, poor wound healing)' (B: Patient history). Destination ('specialised management') is not further specified in the document.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 7, "section_heading": "B: Patient history" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'Refer the patient to their usual healthcare provider with a comprehensive clinical handover should the patient become ineligible for management under the Program or choose to exit the Program.' / 'Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "Figure 1 (p.6): 'Refer the patient to their usual healthcare provider with a comprehensive clinical handover if they are not eligible for enrolment in the Program' (patient eligibility box A).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 5, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "Figure 1 (p.6): 'Consider the patient's ongoing eligibility — The patient's eligibility for the Program may change at any point. Refer the patient to their usual healthcare provider with a comprehensive clinical handover should the patient become ineligible for management under the Program or choose to exit the Program.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 6, "section_heading": "Figure 1: Overview of the CVD Risk Reduction Program: Blood glucose management (continued from page 5)" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "'If response to treatment changes, consider ongoing eligibility for the Program.' (G: Monitoring and clinical targets) — changed response to treatment prompts reassessment of eligibility, with referral if eligibility is lost.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 12, "section_heading": "G: Monitoring and clinical targets" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to their usual healthcare provider with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program (p.1)",
+      "Entry point 1: enrolment 'concurrent to referral to an appropriate healthcare provider for further review and collaborative care' (p.4)",
+      "Figure 1: 'Refer to an appropriate healthcare provider where: • BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic) • HbA1c ≥10% or BGL ≥20.0 mmol/L • Total cholesterol ≥7.5 mmol/L, LDL-C ≥5.0 mmol/L or triglycerides ≥6 mmol/L • uACR ≥3 mg/mmol or eGFR <60 mL/min/1.73m2' (p.5)",
+      "'Treat (if clinically indicated) and concurrently refer the patient to an appropriate healthcare provider for further review if they: • have a history of deep vein thrombosis but are not currently on any antithrombotic therapy.' (p.2)",
+      "'if the patient has not reached their clinical targets within appropriate timeframes of the treatment with two medicines that may be prescribed under this protocol (at optimal doses), refer the patient to an appropriate healthcare provider.' (p.12)",
+      "'Refer all patients (with their consent) who are no longer eligible for management within the Program, or who do not wish to continue in the Program, to an appropriate healthcare provider.' (p.16)",
+      "'Encourage all patients with type 2 diabetes to see a dietitian for individualised nutritional advice ...' (p.10)",
+      "'Referral to an exercise physiologist and/or physiotherapist to develop an exercise plan may be required.' (p.10)",
+      "Appendix lifestyle prescription: 'If required: Refer to a GP, exercise physiologist, physiotherapist or other supports for safe exercise'; 'If required: Refer to Management for Overweight and Obesity - Clinical Practice Guideline and/or other supports e.g.,dietitian'; 'If required: Smoking (or vaping) cessation ... Quitline or GP'; 'If required: Refer to a GP, psychologist or other clinician for mental health support' (p.18)"
+    ],
+    "urgent": [],
+    "emergency": [
+      "'or emergency services, if required' — referral option stated for patients who are, or become, ineligible for management under the Program: 'Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover' (p.1)",
+      "Appendix CVD Risk Management Plan records 'Closest 24-hour emergency services: Name, address and phone number' in the Healthcare team table (p.19)"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 1, "section_heading": "Eligibility for the Program" }
+  },
+  "review_followup": [
+    {
+      "when": "After 3 months of new or changed pharmacotherapy",
+      "what": "'Monitor response to new or changed pharmacotherapy by measuring HbA1c after 3 months (8) (refer to Table 1).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 12, "section_heading": "G: Monitoring and clinical targets" }
+    },
+    {
+      "when": "Every 3 months or sooner",
+      "what": "'Review patients every (6, 8, 14): • 3 months or sooner, if they are newly diagnosed, undergoing therapeutic changes, their HbA1c is not within their individualised target range or they are experiencing complications of diabetes'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "Every 6 months or sooner",
+      "what": "'• 6 months or sooner in people with stable blood glucose levels whose HbA1c has reached their individualised target range.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "Prior to each periodic review",
+      "what": "'Prior to each periodic review, arrange any relevant laboratory tests (that are not performed by PoCT) required for monitoring.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "At each appointment (scheduled or unscheduled)",
+      "what": "Review: 'the patient's ongoing eligibility for the Program; patient history to reflect changes in the preceding period; BP measurements; pathology or undertake any required PoCT (as applicable); changes to CVD risk factors; patient's response to current management and adherence to lifestyle modification; patient's progress with their annual cycle of care; prescribed pharmacotherapy and modify the treatment regimen in line with the Therapeutic Guidelines (8) or consider other medicine-related issues (e.g., adherence); CVD Risk Management Plan, document and update clinical targets, if required.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 16, "section_heading": "L: Clinical review and ongoing collaboration" }
+    },
+    {
+      "when": "Every 5 years (low CVD risk) or every 2 years (intermediate CVD risk), or sooner where there is a significant change to risk factors",
+      "what": "'Reassess CVD risk every 5 years for patients at low CVD risk, or every 2 years for patients at intermediate CVD risk (or sooner where there is a significant change to risk factors) (1).' Patients already on pharmacological therapy to reduce cardiovascular risk, or previously assessed as high-risk: 'review individual risk factors. Formal reassessment of overall CVD risk is not recommended for these patients (1).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Blood glucose management" }
+    },
+    {
+      "when": "Table 3 annual cycle of care — HbA1c",
+      "what": "'Every 3 months in people who are newly diagnosed, undergoing therapeutic changes or whose HbA1c is not within their individualised target range. Every 6 months in people with stable blood glucose levels whose HbA1c has reached their individualised target range.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (6, 8, 14)" }
+    },
+    {
+      "when": "At every periodic review",
+      "what": "Blood pressure — 'At every periodic review' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (6, 8, 14)" }
+    },
+    {
+      "when": "Foot assessment: at least 12 months (very low and low-risk feet); at least every 3–6 months (moderate-risk feet); at least every 1–3 months (high-risk feet)",
+      "what": "Foot assessment per Table 3 risk category timeframes.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (6, 8, 14)" }
+    },
+    {
+      "when": "At least every 2 years",
+      "what": "Eye examination — 'At least every 2 years' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Dental examination — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Urine albumin — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Kidney function — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Lipid profile — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 6 months",
+      "what": "Weight — 'At least every 6 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 6 months",
+      "what": "Waist circumference — 'At least every 6 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Nutrition and diet — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Physical activity — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Medication review — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Smoking status — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "At least every 12 months",
+      "what": "Patient self-management of diabetes — 'At least every 12 months' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "As needed",
+      "what": "Emotional and psychological health — 'As needed' (Table 3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 14, "section_heading": "Table 3. Annual cycle of care monitoring requirements for patients with type 2 diabetes (continued)" }
+    },
+    {
+      "when": "Before starting metformin, then every 4–6 months; serum B12 at least every 12 months",
+      "what": "Table 2 (Metformin): 'Check renal function (eGFR) before starting treatment and then every 4–6 months. Normal eGFR is considered to be ≥60 mL/min/1.73m2. Check serum B12 level at least every 12 months.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 2. Testing and monitoring required for patients with type 2 diabetes (8, 28, 29)" }
+    },
+    {
+      "when": "Before commencing SGLT-2 inhibitors, then periodically as clinically indicated (at least annually)",
+      "what": "Table 2 (SGLT-2 inhibitors): 'Check renal function (eGFR and serum creatinine) before commencing, then periodically as clinically indicated (at least annually). Normal eGFR is considered to be ≥60 mL/min/1.73m2. Initially, serum creatinine may increase and eGFR decrease (by 3–5 mL/minute/1.73 m2), but this is usually followed by stabilisation of kidney function (23).'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 2. Testing and monitoring required for patients with type 2 diabetes (8, 28, 29)" }
+    },
+    {
+      "when": "Before commencing GLP-1 receptor agonists, then periodically as clinically indicated",
+      "what": "Table 2 (GLP-1 receptor agonists): 'Check renal function (eGFR and serum creatinine) before commencing, then periodically as clinically indicated. Normal eGFR is considered to be ≥60 mL/min/1.73m2.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 2. Testing and monitoring required for patients with type 2 diabetes (8, 28, 29)" }
+    },
+    {
+      "when": "Before commencing DPP-4 inhibitors (alogliptin, saxagliptin, sitagliptin, vildagliptin), then periodically as clinically indicated",
+      "what": "Table 2 (DPP-4 inhibitors): 'Alogliptin, saxagliptin, sitagliptin, vildagliptin: Check renal function (eGFR and serum creatinine) before commencing, then periodically as clinically indicated. Normal eGFR is considered to be ≥60 mL/min/1.73m2.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 13, "section_heading": "Table 2. Testing and monitoring required for patients with type 2 diabetes (8, 28, 29)" }
+    },
+    {
+      "when": "Recorded in the CVD Risk Management Plan (Appendix 1) at enrolment and updated at review",
+      "what": "Targets printed in the plan template: Blood pressure target (14) 'SBP: 130–140 mmHg (or less)' and 'DBP: 80–90 mmHg (or less)'; Blood glucose 'Target (5) 4.0–7.0 mmol/L (fasting)' and postprandial (2 hours after food) 'Target (5) 5.0–10 mmol/L'; 'HbA1c target % (X mmol/mol)' (individualised, to be completed); Blood lipids (cholesterol) – review at least every 12 months: 'Total cholesterol: Less than 5.5/ 4.0 mmol/L', 'LDL-C: Less than 2.0 mmol/L', 'HDL-C: Higher than 1.0 mmol/L', 'Triglycerides: Less than 2.0 mmol/L'.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 17, "section_heading": "Appendix 1 – CVD Risk Management Plan" }
+    },
+    {
+      "when": "Recorded in the CVD Risk Management Plan (Appendix 1) and applied per Table 1",
+      "what": "Table 1. Clinical targets for HbA1c for patients with type 2 diabetes (6, 8): 'Recently diagnosed type 2 diabetes — Using lifestyle modification and metformin ≤6% (42 mmol/mol)*; Using metformin plus another non-insulin anti-hyperglycaemic medicine for diabetes without CVD ≤6.5% (48 mmol/mol)*; Using insulin ≤7% (53 mmol/mol)'. Other patients: '• Type 2 diabetes of longer duration or with CVD ≤7% (53 mmol/mol); • Younger patients with a longer life expectancy ≤6.5% (48 mmol/mol)*; • Patients with no (or few) comorbidities or vascular complications; • Newly diagnosed patients; • Highly motivated patients with good capability for self-care; • Patients at risk of hypoglycaemia i.e. older people or renal impairment and/or taking multiple glucose-lowering medicines or insulin — A less stringent target closer towards 8%'. Footnote: '*if there are no adverse effects of treatment, and the target can be safely achieved without causing hypoglycaemia.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 12, "section_heading": "Table 1. Clinical targets for HbA1c for patients with type 2 diabetes (6, 8)" }
+    },
+    {
+      "when": "As advised in the consultation (J: Communicate agreed management plan)",
+      "what": "Provide comprehensive advice (including supporting written information) regarding 'individual product and medicine use; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for clinical review.'",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 15, "section_heading": "J: Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Entry point 2: 'An update must be provided to the patient's usual healthcare provider following each occasion of care.' (p.4)",
+      "'Promptly advise the patient's usual healthcare provider of changes to pharmacotherapy in the Program to enable update of the sick day management plan.' (p.15)",
+      "'K: Collaborative care — Provide a copy of the patient's CVD Risk Management Plan to the patient's usual healthcare provider (and any other relevant health professionals involved in the patients care).' Communication should include relevant medical history and pathology/PoCT results, pharmacotherapy changes, summary of advice including referrals, and the next scheduled review appointment. (p.15)",
+      "'When modifying pharmacotherapy regimens for blood glucose management that have been prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).' (p.12)",
+      "'Provide an update to the patient's usual healthcare provider following each occasion of care including when any changes are made to the patient's management plan.' (p.16)",
+      "'Refer the patient to their usual healthcare provider (or emergency services, if required) with a comprehensive clinical handover if the patient is, or becomes, ineligible for management under the Program.' (p.1)"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\chronic-conditions\\cvd-bloodglucose-protocol.pdf", "page": 4, "section_heading": "Overview of the CVD Risk Reduction Program: Blood glucose management" }
+  },
+  "references": [
+    "1. Commonwealth of Australia: Department of Health. Australian Guideline for assessing and managing cardiovascular disease risk. Department of Health and Aged Care; 2023. [cited 2025 Nov 3]. Available from: https://www.cvdcheck.org.au/overview. (page 21)",
+    "2. Therapeutic Guidelines: Cardiovascular. Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Cardiovascular&etgAccess=true. (page 21)",
+    "3. National Heart Foundation of Australia. Key Statistics: Cardiovascular Disease: National Heart Foundation of Australia; 2025 [cited 2026 Mar 2]. Available from: https://www.heartfoundation.org.au/your-heart/evidence-and-statistics/key-stats-cardiovascular-disease. (page 21)",
+    "4. Commonwealth of Australia: Australian Bureau of Statistics. Diabetes. Canberra: Commonwealth of Australia: Australian Bureau of Statistics; 2023 [cited 2025 Nov 3]. Available from: https://www.abs.gov.au/statistics/health/health-conditions-and-risks/diabetes/2022. (page 21)",
+    "5. National Heart Foundation of Australia. Diabetes and heart disease. National Heart Foundation of Australia; 2024 [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/your-heart/diabetes-and-heart-disease. (page 21)",
+    "6. The Royal Australian College of General Practitioners (RACGP). Management of type 2 diabetes: a handbook for general practice. East Melbourne: RACGP; 2024 [cited 2025 Nov 3]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/management-of-type-2-diabetes/defining-and-diagnosing-type-2-diabetes. (page 21)",
+    "7. Diabetes Australia. Managing type 2 diabetes. Diabetes Australia; 2025 [cited 2025 Nov 3]. Available from: https://www.diabetesaustralia.com.au/managing-diabetes/type-2/. (page 21)",
+    "8. Therapeutic Guidelines: Diabetes. Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 Nov 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Diabetes&etgAccess=true. (page 21)",
+    "9. Living Evidence for Diabetes Consortium. Australian Evidence-Based Clinical Guidelines for Diabetes 2020 [cited 2025 Nov 3]. Available from: https://diabetessociety.com.au/living-guidelines.asp. (page 21)",
+    "10. National Heart Foundation of Australia. Guideline for the diagnosis and management of hypertension in adults. Melbourne: National Heart Foundation of Australia; 2016. (page 21)",
+    "11. National Heart Foundation of Australia. What's your body mass index (BMI)?; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/bmi-calculator. (page 21)",
+    "12. Commonwealth of Australia: Department of Health. Body mass index (BMI) and waist measurement Canberra: Commonwealth of Australia: Department of Health; 2021 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/health-topics/overweight-and-obesity/bmi-and-waist. (page 21)",
+    "13. National Heart Foundation of Australia. What waist measurements mean for your heart. Melbourne: National Heart Foundation of Australia; 2024. [cited 2025 Nov 3]. Available from: https://www.heartfoundation.org.au/heart-health-check-toolkit/waist-measurement. (page 21)",
+    "14. National Diabetes Services Scheme. Your diabetes annual cycle of care fact sheet. National Diabetes Services Scheme; 2025 [cited 2025 Nov 3]. Available from: https://www.ndss.com.au/about-diabetes/resources/find-a-resource/your-diabetes-annual-cycle-of-care-fact-sheet/. (page 21)",
+    "15. Diabetes Australia. Annual cycle of care. Diabetes Australia; 2025 [cited 2025 Nov 3]. Available from: https://www.diabetesaustralia.com.au/managing-diabetes/annual-cycle-of-care/. (page 21)",
+    "16. The Royal Australian College of General Practitioners (RACGP). Smoking, nutrition, alcohol, physical activity (SNAP): A population health guide to behavioural risk factors in general practice. East Melbourne: RACGP; 2015. [cited 2025 Nov 3]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/snap. (page 21)",
+    "17. Queensland Health. Guidelines for acute common conditions and health and wellbeing services. Queensland Health; 2025. Available from: https://www.health.qld.gov.au/clinical-practice/guidelines-procedures/community-pharmacy-pilots/resources/acute-common-conditions. (page 21)",
+    "18. Clinical Excellence Queensland. E-cigarette and vaping cessation guide: Queensland respiratory and sleep clinical network. Queensland Health; 2024 [cited 2026 February 24]. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0030/1427763/vaping-cessation-guide.pdf. (page 21)",
+    "19. The Royal Australian College of General Practitioners (RACGP). Guidelines for preventive activities in general practice (10th edition). East Melbourne: RACGP; 2024. (page 21)",
+    "20. Casas R, Castro-Barquero S, Estruch R, Sacanella E. Nutrition and Cardiovascular Health. Int J Mol Sci. 2018;19(12). (page 21)",
+    "21. National Health and Medical Research Council. Australian Dietary Guidelines. Canberra: National Health and Medical Research Council; 2013. (page 21)",
+    "22. Australian Government Department of Health and Aged Care. Physical activity and exercise guidelines for all Australians. Canberra: Australian Government Department of Health and Aged Care; 2022 [cited 2025 Nov 3]. Available from: https://www.health.gov.au/health-topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians (page 21-22)",
+    "23. National Health and Medical Research Council: Australian Research Council and Universities Australia. Australian Guidelines to Reduce Health Risks from Drinking Alcohol. Canberra: Commonwealth of Australia; 2020. (page 22)",
+    "24. The Royal Australian College of General Practitioners (RACGP). Handbook of Non-Drug Interventions (HANDI). East Melbourne: RACGP; 2023 (page 22)",
+    "25. Diabetes Australia. Health professional resources. Diabetes Australia; 2026. Available from: https://www.diabetesaustralia.com.au/health-professional-resources/. (page 22)",
+    "26. National Diabetes Services Scheme. Resources to support health professionals; 2026. Available from: https://www.ndss.com.au/health-professionals/resources/. (page 22)",
+    "27. Australian Diabetes Society. Australian Type 2 diabetes glycaemic management algorithm. Australian Diabetes Society; 2025 [cited 2025 Nov 3]. Available from: https://treatment.diabetessociety.com.au/plan/. (page 22)",
+    "28. Australian Medicines Handbook: Drugs for diabetes. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 Nov 3]. Available from: https://amhonline.amh.net.au/chapters/endocrine-drugs/drugs-diabetes?menu=vertical. (page 22)",
+    "29. Medicines information. eMIMs cloud; 2025. At: www.emims.com.au/Australia/drug/search. (page 22)",
+    "30. Diabetes Australia. Glucose self-monitoring in adults with type 1 diabetes or type 2 diabetes [website]. Diabetes Australia; 2017 [cited 2025 Nov 3]. Available from: https://www.diabetesaustralia.com.au/wp-content/uploads/Glucose-position-statement-2017.pdf. (page 22)",
+    "31. National Diabetes Services Scheme. Managing hypoglycaemia fact sheet. National Diabetes Services Scheme; 2022 [cited 2025 Nov 3]. Available from: https://www.ndss.com.au/about-diabetes/resources/find-a-resource/managing-hypoglycaemia-fact-sheet/. (page 22)",
+    "32. National Diabetes Services Scheme. Living well with type 2 diabetes – what to do when you are sick fact sheet. National Diabetes Services Scheme; 2022 [cited 2025 Nov 3]. Available from: https://www.ndss.com.au/wp-content/uploads/fact-sheets/fact-sheet-managing-sick-days-for-type2.pdf. (page 22)",
+    "33. National Diabetes Services Scheme. My sick day action plan. Type 2 diabetes not using insulin fact sheet. National Diabetes Services Scheme; 2025 [cited 2025 Nov 3]. Available from: https://www.ndss.com.au/wp-content/uploads/ADEA-Sick-Day-Action-Plan-Type-2-not-using-insulin-fillable.pdf. (page 22)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Legal basis not printed",
+      "observed": "The document names no Act, regulation or poisons schedule provision; it only describes itself as a 'Pilot Clinical Protocol' of the Queensland Community Pharmacy Chronic Conditions Management Pilot covering 'protocol-based/structured prescribing of medicines' (p.4) with pharmacists to 'exercise professional discretion and judgement' (p.3).",
+      "why_unclear": "Spec requires legal_basis naming the regulation/schedule provision; nothing printed to transcribe, so it is recorded as not printed rather than inferred.",
+      "source_page": 4
+    },
+    {
+      "topic": "No doses, strengths, quantities or schedules printed for anti-hyperglycaemic agents",
+      "observed": "F: Pharmacotherapy lists drug classes only (metformin, SGLT2 inhibitors, GLP-1 receptor agonists, DPP-4 inhibitors) and defers to 'the current online version of Therapeutic Guidelines: Diabetes (Type 2 diabetes in adults – Algorithm for anti-hyperglycaemic treatment of adults with type 2 diabetes) (8)'. Table 2 gives testing requirements only.",
+      "why_unclear": "Dosing fields (form, strength, dose, route, frequency, duration, max_quantity, quantity_to_supply) are left blank because no numeric dosing is printed; must not be invented.",
+      "source_page": 11
+    },
+    {
+      "topic": "'appropriate timeframe' never defined",
+      "observed": "'do not reach their clinical targets within appropriate timeframe for treatment with 2 anti-hyperglycaemic medicines' (p.2); 'patient's response is inadequate within appropriate clinical timeframes' (p.12); 'within appropriate timeframes' (p.6, p.16).",
+      "why_unclear": "No numeric timeframe is printed anywhere in the document; recorded as printed and flagged for local policy.",
+      "source_page": 12
+    },
+    {
+      "topic": "Garbled comparison character '³0.5%' in HbA1c non-response rule",
+      "observed": "p.12: 'consider stopping the second anti-hyperglycaemic medicine (i.e., not metformin) if a reduction of HbA1c of ³0.5% has not been achieved after 3 months and trial another medicine'. The character before 0.5% extracts as '³' (most likely a symbol-font ≥ or ≤).",
+      "why_unclear": "Direction of the threshold cannot be determined from the extraction: reading A = reduction of ≥0.5% not achieved; reading B = reduction of ≤0.5% not achieved. Both readings recorded; confidence unclear; the rule must be confirmed against the source PDF before implementation.",
+      "source_page": 12
+    },
+    {
+      "topic": "Table 1 HbA1c target table row/column alignment",
+      "observed": "The extracted table interleaves the 'Patient/disease characteristics' and 'HbA1c treatment target' columns, e.g. 'Recently diagnosed / Using lifestyle modification and metformin ≤6% (42 mmol/mol)*' and 'Patients at risk of hypoglycaemia i.e. older people or renal impairment and/or taking multiple glucose-lowering medicines or insulin / A less stringent target closer towards 8%'.",
+      "why_unclear": "Row boundaries cannot be read with certainty from the extraction; targets transcribed best-effort in review_followup and marked for verification against the PDF.",
+      "source_page": 12
+    },
+    {
+      "topic": "Table 2 SGLT-2 citation number appears mismatched",
+      "observed": "The SGLT-2 inhibitors row states 'Initially, serum creatinine may increase and eGFR decrease (by 3–5 mL/minute/1.73 m2) ... (23)', but reference list entry 23 is the NHMRC/ARC 'Australian Guidelines to Reduce Health Risks from Drinking Alcohol'.",
+      "why_unclear": "Citation numbering in the table does not match the reference list as printed; both observations recorded without correcting either.",
+      "source_page": 13
+    },
+    {
+      "topic": "Heading 'existing medicine regimen for hypertension' in a blood glucose protocol",
+      "observed": "Page 11 heading reads 'Patients entering the program with an existing medicine regimen for hypertension' although the protocol is Blood Glucose Management; the bullet content that follows concerns type 2 diabetes pharmacotherapy ('Pharmacists may modify or adjust existing type 2 diabetes pharmacotherapy...').",
+      "why_unclear": "Heading and content disagree; likely carried over from the Hypertension protocol. Both readings recorded; heading transcribed as printed.",
+      "source_page": 11
+    },
+    {
+      "topic": "Figure 1 referral bullet parenthesis",
+      "observed": "'• BP ≥180 mmHg systolic and/or ≥110 mmHg diastolic)' — closing parenthesis with no opening parenthesis in the extracted figure text.",
+      "why_unclear": "Typographical/extraction artefact in the source figure; thresholds themselves are unambiguous.",
+      "source_page": 5
+    },
+    {
+      "topic": "Combination products not enumerated",
+      "observed": "'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.'",
+      "why_unclear": "No specific combination products, strengths or quantities are listed; cannot be transcribed without invention.",
+      "source_page": 11
+    },
+    {
+      "topic": "Referral block page range",
+      "observed": "Referral destinations and criteria appear from page 1 (eligibility) through page 16 (ongoing eligibility), plus appendix referral prompts on page 18.",
+      "why_unclear": "Spec allows one shared provenance object for the referral block; first page (1) used and the range recorded here.",
+      "source_page": 1
+    },
+    {
+      "topic": "Pathway gates where the document states no consequence",
+      "observed": "Three gates are recorded with on_fail 'unclear': (a) 'All patients entering ... must have their CVD risk assessed' (p.5); (b) 'alarm signs and symptoms that require further investigation' (p.7); (c) confirming management is appropriate incl. lactation status (p.15).",
+      "why_unclear": "The document does not say what happens when these requirements are not met (refer? stop? recheck?), so no on_fail was inferred.",
+      "source_page": 7
+    },
+    {
+      "topic": "effective_date derived from version history",
+      "observed": "Document footer/title states 'Pilot Clinical Protocol – V2'; the version table on page 20 shows 'Version 2.0 | 07.04.2026 | Updates across sections to reflect contemporary guidance and improve usability.' No separate 'effective date' line is printed.",
+      "why_unclear": "effective_date taken from the version-history date for Version 2.0; confirm it is the operative date rather than a publication date.",
+      "source_page": 20
+    },
+    {
+      "topic": "No statutory notifiable-condition or AIR requirement stated",
+      "observed": "The document requires updates/copies to the patient's usual healthcare provider but says nothing about notifiable conditions, statutory notifications or Australian Immunisation Register uploads (the AIR is mentioned only for reviewing immunisation history, p.7).",
+      "why_unclear": "notifiable.required is set true only for the printed healthcare-provider notification duties; silence on statutory notification recorded here.",
+      "source_page": 7
+    },
+    {
+      "topic": "Referral urgency tiers",
+      "observed": "No non-emergency 'urgent' referral wording is printed; the only escalation above routine is '(or emergency services, if required)' (p.1) and the Appendix entry 'Closest 24-hour emergency services' (p.19).",
+      "why_unclear": "referral.urgent is empty because the document genuinely prints no urgent-tier destination; recorded rather than inferred.",
+      "source_page": 1
+    },
+    {
+      "topic": "Appendix lipid target 'Less than 5.5/ 4.0 mmol/L'",
+      "observed": "CVD Risk Management Plan prints 'Total cholesterol: Less than 5.5/ 4.0 mmol/L' — two values separated by a slash with no explanation (p.17).",
+      "why_unclear": "Ambiguous as printed (possibly two alternative targets or a stray character); transcribed verbatim without interpretation.",
+      "source_page": 17
+    },
+    {
+      "topic": "'another high risk or abnormal pathology result' has no definition",
+      "observed": "Ineligibility criterion at p.2 gives no threshold or example list for 'another high risk or abnormal pathology result'.",
+      "why_unclear": "Qualitative trigger captured with structured null; engine must surface it as a judgement prompt.",
+      "source_page": 2
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Legal basis of the protocol (which Queensland regulation/poisons schedule provision the pilot operates under).",
+      "source_page": 4,
+      "reason": "The document prints no Act or regulation; must be confirmed with Queensland Health before go-live (spec rule 7)."
+    },
+    {
+      "item": "Doses, strengths, forms, routes, frequencies, durations and supply quantities for metformin, SGLT2 inhibitors, GLP-1 receptor agonists and DPP-4 inhibitors.",
+      "source_page": 11,
+      "reason": "No dosing is printed; the protocol defers to 'the current online version of Therapeutic Guidelines: Diabetes'. Local formulary/dosing data must be sourced and verified before the rules engine can prescribe."
+    },
+    {
+      "item": "'Pharmacists may prescribe up to two agents (dual-therapy)' and 'Combination products can be prescribed if appropriate, however they must only include medicines able to be prescribed under the Program.'",
+      "source_page": 11,
+      "reason": "The two-agent cap and the set of permitted combination products must be encoded as a local hard rule; the permitted product list is not printed."
+    },
+    {
+      "item": "'appropriate timeframe' / 'appropriate clinical timeframes' for reaching clinical targets with 2 anti-hyperglycaemic medicines at optimal dose.",
+      "source_page": 2,
+      "reason": "Undefined in the document; local policy must set the numeric timeframe that triggers ineligibility and referral."
+    },
+    {
+      "item": "'When applying the information contained within this clinical protocol, pharmacists should exercise professional discretion and judgement. The protocol supports, but does not replace, the pharmacist's responsibility to make decisions appropriate to the circumstances of the individual...'",
+      "source_page": 3,
+      "reason": "Open-ended professional judgement clause needs a defined boundary before an automated rules engine can rely on it."
+    },
+    {
+      "item": "Sick day rules: withhold SGLT-2 inhibitors during 'acute serious illness, prolonged fasting, bowel preparation, low carbohydrate intake, excessive alcohol intake or other risk factors for ketoacidosis'; withhold metformin or GLP-1 receptor agonists 'if they have vomiting, diarrhoea or are not eating much'; 'Patients should have a sick day plan developed by an appropriate healthcare provider.'",
+      "source_page": 15,
+      "reason": "Requires a local sick-day pathway and a documented process for promptly advising the usual healthcare provider of pharmacotherapy changes."
+    },
+    {
+      "item": "Referral destinations expressed as 'their usual healthcare provider', 'an appropriate healthcare provider' and 'emergency services, if required'.",
+      "source_page": 1,
+      "reason": "Destinations are undefined; local policy must map each trigger to an approved destination/urgency."
+    },
+    {
+      "item": "'Document informed consent from the patient for participation, as per the Pilot Handbook.'",
+      "source_page": 5,
+      "reason": "Consent process lives in an external document (Pilot Handbook); confirm the local consent wording/record before go-live."
+    },
+    {
+      "item": "'Where recent test results are unavailable, undertake appropriate testing (point of care testing (PoCT) and/or laboratory testing). Refer to the Pilot Handbook for further information regarding options for requesting laboratory testing.'",
+      "source_page": 8,
+      "reason": "PoCT/laboratory request arrangements are delegated to the Pilot Handbook; local ordering pathways and Pathology request forms must be confirmed."
+    },
+    {
+      "item": "Written referral exception to specialist-treatment ineligibility: 'unless they have a written referral from their treating specialist or general practitioner to participate in the Program'.",
+      "source_page": 2,
+      "reason": "Local process for verifying/holding the written referral (e.g. copy on file, My Health Record) must be confirmed."
+    },
+    {
+      "item": "Table 2 monitoring schedule (metformin eGFR every 4–6 months and serum B12 at least every 12 months; SGLT-2/GLP-1/DPP-4 renal function before commencing and periodically; annual cycle of care intervals in Table 3).",
+      "source_page": 13,
+      "reason": "Monitoring intervals must be configured as schedulable checks in the local system and aligned with local pathology ordering."
+    },
+    {
+      "item": "Individualised HbA1c targets (Table 1) and target-setting through shared decision-making: 'Patients should be involved in shared decision-making and the development of their CVD Risk Management Plan, including setting of appropriate targets.'",
+      "source_page": 12,
+      "reason": "Targets are patient-specific and set clinically; local defaults and the allowed target range must be confirmed before automated target checks."
+    },
+    {
+      "item": "'When modifying pharmacotherapy regimens ... prescribed by another healthcare provider, attempt to notify and make changes in collaboration with the original prescriber or the patient's usual healthcare provider (whichever is most appropriate).'",
+      "source_page": 12,
+      "reason": "'Attempt to notify' and 'whichever is most appropriate' leave the collaboration workflow to local policy; define the notification method and fallback."
+    },
+    {
+      "item": "Garbled threshold 'a reduction of HbA1c of ³0.5% has not been achieved after 3 months' (stop the second anti-hyperglycaemic medicine).",
+      "source_page": 12,
+      "reason": "Symbol direction (≥ or ≤) cannot be read from the extraction; must be checked against the source PDF and confirmed before the rule is encoded."
+    }
+  ]
+}

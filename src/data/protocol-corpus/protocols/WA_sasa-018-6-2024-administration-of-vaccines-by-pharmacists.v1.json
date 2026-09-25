@@ -1,0 +1,476 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf",
+    "pdf_sha256": "0c999c04cfc334de83b2a4579bbfcc4dec30f1dbc9de0b69f17ca6cc7ad82ccd",
+    "page_count": 6,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Structured Administration and Supply Arrangement (SASA) - TITLE: Administration of Vaccines by Pharmacists",
+    "instrument_version": "SASA 018/8-2026 (printed on every page footer and in the enquiries box as Number: 018/8-2026, Date: 18/05/2026) - note the source filename reads 'SASA 018_6_2024', which conflicts with the printed number; see open questions",
+    "effective_date": "18 May 2026 ('Effective from: 18 May 2026'; 'Issued by: ... Date: 18 May 2026')",
+    "legal_basis": "Issued by the Chief Executive Officer of Health under Part 6 of the Medicines and Poisons Regulations 2016. (verbatim, '1. Authority', p.1). Supporting provisions cited in the conditions: vaccines procured by a pharmacy registered in WA 'in accordance with Section 9 of the Medicines and Poisons Act 2014'; supply and possession 'by a pharmacy business under the overall authority of the responsible pharmacist in accordance with Section 9 of the Medicines and Poisons Act 2014'; procurement, storage and administration 'in accordance with Part 9 of the Medicines and Poisons Regulations 2016'; record keeping 'in accordance with Part 12 of the Medicines and Poisons Regulations 2016'.",
+    "supervision_model": "Document's own terminology: 'Practitioner: Registered pharmacists1 who have completed approved training in accordance with Appendix 1' where footnote 1 states 'Includes pharmacists with the registration type of 'provisional' on the Australian Health Practitioner Regulation Agency Register of Practitioners, who are undertaking their approved supervised practice at a pharmacy meeting the 'practice setting' requirements of this Structured Administration and Supply Arrangement.' Condition c: 'the pharmacist with the registration type of 'provisional' must be supervised by a pharmacist, who is also eligible to administer vaccines in accordance with this SASA'. The words 'collaborative' and 'autonomous' are not used.",
+    "scope_summary": "SASA authorising immunisation activity: 'This authorises pharmacists trained in immunisation to administer vaccines at a suitably equipped and staffed place or premises in Western Australia.' Approved activity: Administration. Approved medicines: Vaccines listed in Appendix 3 (15 vaccines: Diphtheria, Hepatitis B, Herpes zoster, Human Papilloma Virus, Influenza, Measles, Meningococcal, Mumps, Pertussis, Pneumococcal, Polio, Respiratory Syncytial Virus, Rubella, Tetanus, Varicella), given 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions: 'Immunisation of persons aged 2 years and over with influenza vaccines and 5 years and over with all other vaccines listed in Appendix 3'. 13 conditions (a-m) plus Appendix 1 (approved training), Appendix 2 (approved setting incl. 15 minutes post-vaccination observation and anaphylaxis readiness) apply. No dose cells are printed."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Medical conditions: Immunisation of persons aged 2 years and over with influenza vaccines. [age condition for influenza vaccines only - see INC-2 for all other vaccines; group is any_of because the two age rules are vaccine-dependent alternatives]",
+        "criteria_group": { "all_of": [], "any_of": ["INC-1", "INC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Medical conditions: Immunisation of persons aged 5 years and over with all other vaccines listed in Appendix 3. [age condition for every vaccine other than influenza]",
+        "criteria_group": { "all_of": [], "any_of": ["INC-1", "INC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Practitioner: Registered pharmacists1 who have completed approved training in accordance with Appendix 1 [footnote 1: includes pharmacists with the registration type of 'provisional' ... undertaking their approved supervised practice at a pharmacy meeting the 'practice setting' requirements of this Structured Administration and Supply Arrangement]",
+        "criteria_group": { "all_of": ["INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Practice setting: At a place or premises in Western Australia that complies with Appendix 2",
+        "criteria_group": { "all_of": ["INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Approved medicines: Vaccines listed in Appendix 3 ('Registered Pharmacists may only administer vaccines in accordance with this SASA as listed in the table below')",
+        "criteria_group": { "all_of": ["INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Condition e: patient selection, vaccine administration and follow up care should be in accordance with Vaccination Procedures contained in the latest version of the Australian Immunisation Handbook",
+        "criteria_group": { "all_of": ["INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Condition f: written or documented verbal consent must be obtained from the person, parent or guardian, before each instance of vaccination",
+        "criteria_group": { "all_of": ["INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Condition c: the pharmacist with the registration type of 'provisional' must be supervised by a pharmacist, who is also eligible to administer vaccines in accordance with this SASA",
+        "criteria_group": { "all_of": ["INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Condition a: vaccine administration includes catch up of vaccines available to individuals aged 5 and above only. It does not include catch up of vaccines the individual was eligible for prior to turning 5 years of age.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "4. Conditions" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Any vaccine not listed in Appendix 3: 'Registered Pharmacists may only administer vaccines in accordance with this SASA as listed in the table below'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Administration of vaccines by pharmacists - SASA criteria and conditions sequence",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm criteria before administration (3. Criteria): Practitioner: Registered pharmacists who have completed approved training in accordance with Appendix 1 (including pharmacists with the registration type of 'provisional', undertaking approved supervised practice, who must be supervised by a pharmacist who is also eligible to administer vaccines in accordance with this SASA - condition c); Practice setting: at a place or premises in Western Australia that complies with Appendix 2; Approved activity: Administration; Approved medicines: Vaccines listed in Appendix 3 - Diphtheria, Hepatitis B, Herpes zoster, Human Papilloma Virus, Influenza, Measles, Meningococcal, Mumps, Pertussis, Pneumococcal, Polio, Respiratory Syncytial Virus, Rubella, Tetanus, Varicella; Medical conditions: Immunisation of persons aged 2 years and over with influenza vaccines and 5 years and over with all other vaccines listed in Appendix 3. Condition a: vaccine administration includes catch up of vaccines available to individuals aged 5 and above only; it does not include catch up of vaccines the individual was eligible for prior to turning 5 years of age. Condition e: patient selection, vaccine administration and follow up care should be in accordance with Vaccination Procedures contained in the latest version of the Australian Immunisation Handbook.",
+          "gates": [
+            { "criterion": "Person is aged 2 years or over when receiving an influenza vaccine", "on_fail": "STOP" },
+            { "criterion": "Person is aged 5 years or over when receiving any other vaccine listed in Appendix 3", "on_fail": "STOP" },
+            { "criterion": "Vaccine is one of the vaccines listed in Appendix 3", "on_fail": "STOP" },
+            { "criterion": "Catch-up administration is for vaccines available to individuals aged 5 and above only (not vaccines the individual was eligible for prior to turning 5 years of age)", "on_fail": "STOP" },
+            { "criterion": "Registered pharmacist with approved training per Appendix 1 (provisional registrants supervised by an eligible pharmacist)", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Administration of the approved vaccine: Approved activity - Administration. Condition b: the pharmacist must have successfully completed an approved course of training meeting the requirements of Appendix 1. Condition f: written or documented verbal consent must be obtained from the person, parent or guardian, before each instance of vaccination. Condition i: vaccines are procured by a pharmacy registered in WA, as part of pharmacy business carried on at that pharmacy, in accordance with Section 9 of the Medicines and Poisons Act 2014. Condition j: supply and possession of vaccines is conducted by a pharmacy business under the overall authority of the responsible pharmacist in accordance with Section 9 of the Medicines and Poisons Act 2014. Condition k: procurement, storage and administration is in accordance with Part 9 of the Medicines and Poisons Regulations 2016. Condition m: storage and transport of the vaccines is in accordance with the National Vaccine Storage Guidelines: Strive for 5. Approved Condition for all Appendix 3 rows: According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook; for state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.",
+          "gates": [
+            { "criterion": "Written or documented verbal consent obtained from the person, parent or guardian before each instance of vaccination", "on_fail": "STOP" },
+            { "criterion": "Pharmacist has successfully completed an approved course of training meeting the requirements of Appendix 1", "on_fail": "STOP" },
+            { "criterion": "Storage and transport in accordance with the National Vaccine Storage Guidelines: Strive for 5, and procurement/storage/administration in accordance with Part 9 of the Medicines and Poisons Regulations 2016", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "FOLLOW_UP",
+          "description": "Post-vaccination monitoring and site readiness (APPENDIX 2 Approved Setting): an area suitable for direct visual observation of seated patients, for 15 minutes post vaccination; sites must be appropriately equipped to treat patients in the event of an anaphylactic reaction (condition d); a space that ensures patient privacy and confidentiality, permits the patient to lie flat in the event of a severe adverse event or anaphylactic reaction, and offers unhindered access for emergency staff to attend and perform resuscitation procedures; immediate access to the minimum equipment to safely perform immunisation procedures in accordance with the latest version of the Australian Immunisation Handbook, including hand washing facilities, equipment for disposal of sharps and clinical waste, an in-date, complete anaphylaxis response kit, access to current editions of the Western Australian Immunisation Schedule, Australian Immunisation Handbook and National Vaccine Storage Guidelines: Strive for 5, and up-to-date, written procedures covering provision of immunisation services; sufficient staffing during periods of vaccine administration to ensure patient safety in post-vaccination monitoring and adverse event management - where a pharmacist is not dedicated to conducting immunisation activities only, there must be additional staff present, who hold current competency in first aid and CPR, and who can immediately assist with management of any emergency situation.",
+          "gates": [
+            { "criterion": "Site has an in-date, complete anaphylaxis response kit and is appropriately equipped to treat patients in the event of an anaphylactic reaction", "on_fail": "STOP" },
+            { "criterion": "Area available for direct visual observation of seated patients for 15 minutes post vaccination, with sufficient staffing holding current competency in first aid and CPR", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "FOLLOW_UP",
+          "description": "Recording and adverse event notification (4. Conditions): condition g - all vaccines administered must be recorded on the Australian Immunisation Register (AIR); condition h - all adverse events occurring following immunisation must be notified to the Western Australian Vaccine Safety Surveillance (WAVSS) system; condition l - record keeping is in accordance with Part 12 of the Medicines and Poisons Regulations 2016. Appendix 1: competency must be maintained through yearly updates; the competency acquired must relate to the vaccines being administered, as detailed in Appendix 3; the Department of Health will determine and advise pharmacists if additional formal training is required for individual vaccines.",
+          "gates": [
+            { "criterion": "All vaccines administered are recorded on the Australian Immunisation Register (AIR)", "on_fail": "STOP" },
+            { "criterion": "All adverse events occurring following immunisation are notified to the Western Australian Vaccine Safety Surveillance (WAVSS) system", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1", "drug": "Diphtheria", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (appears to be one merged column applying to all rows): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over with all other vaccines listed in Appendix 3 (this is not an influenza vaccine). No dose, strength, route, frequency, quantity or schedule interval is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-2", "drug": "Hepatitis B", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-3", "drug": "Herpes zoster", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-4", "drug": "Human Papilloma Virus", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-5", "drug": "Influenza", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1) - this is the only vaccine with a different age floor: 'Immunisation of persons aged 2 years and over with influenza vaccines'. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-6", "drug": "Measles", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-7", "drug": "Meningococcal", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-8", "drug": "Mumps", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-9", "drug": "Pertussis", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-10", "drug": "Pneumococcal", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-11", "drug": "Polio", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-12", "drug": "Respiratory Syncytial Virus", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-13", "drug": "Rubella", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-14", "drug": "Tetanus", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "TX-15", "drug": "Varicella", "form": "vaccine", "strength": "", "dose": "", "route": "", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "",
+      "notes": "Appendix 3 Approved Medicines row (p.6). Approved Condition (merged column): 'According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.' Medical conditions (p.1): persons aged 5 years and over. No dose, strength, route, frequency or quantity is printed.",
+      "first_line": false, "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Medical conditions: Immunisation of persons aged 2 years and over with influenza vaccines. [person aged below 2 years receiving an influenza vaccine does not meet the SASA criteria]",
+      "structured": { "parameter": "age", "operator": "<", "value": 2, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Medical conditions: Immunisation of persons ... 5 years and over with all other vaccines listed in Appendix 3. [person aged below 5 years receiving any vaccine other than influenza does not meet the SASA criteria]",
+      "structured": { "parameter": "age", "operator": "<", "value": 5, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "3. Criteria" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "vaccine administration includes catch up of vaccines available to individuals aged 5 and above only. It does not include catch up of vaccines the individual was eligible for prior to turning 5 years of age.",
+      "structured": { "parameter": "age for which the individual was eligible for the catch-up vaccine", "operator": "<", "value": 5, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 1, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Registered Pharmacists may only administer vaccines in accordance with this SASA as listed in the table below. [a vaccine not listed in Appendix 3 is not authorised]",
+      "structured": { "parameter": "vaccine", "operator": "not_in", "value": "Appendix 3 approved medicines list", "unit": "" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 6, "section_heading": "APPENDIX 3" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "written or documented verbal consent must be obtained from the person, parent or guardian, before each instance of vaccination. [consent not obtained - vaccination must not proceed]",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "the pharmacist with the registration type of 'provisional' must be supervised by a pharmacist, who is also eligible to administer vaccines in accordance with this SASA. [unsupervised provisional registrant - vaccination must not proceed]",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "sites where immunisation is being conducted must be appropriately equipped to treat patients in the event of an anaphylactic reaction; a space that ... permits the patient to lie flat in the event of a severe adverse event or anaphylactic reaction; offers unhindered access for emergency staff to attend and perform resuscitation procedures. [severe adverse event or anaphylactic reaction during or after vaccination]",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "all adverse events occurring following immunisation must be notified to the Western Australian Vaccine Safety Surveillance (WAVSS) system;",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+    }
+  ],
+  "referral": {
+    "routine": [],
+    "urgent": [],
+    "emergency": [
+      "permits the patient to lie flat in the event of a severe adverse event or anaphylactic reaction; offers unhindered access for emergency staff to attend and perform resuscitation procedures (Appendix 2, Approved Setting)"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+  },
+  "review_followup": [
+    {
+      "when": "15 minutes post vaccination",
+      "what": "An area suitable for direct visual observation of seated patients, for 15 minutes post vaccination.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 5, "section_heading": "APPENDIX 2" }
+    },
+    {
+      "when": "Following immunisation (all vaccines administered)",
+      "what": "All vaccines administered must be recorded on the Australian Immunisation Register (AIR).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "when": "All adverse events occurring following immunisation",
+      "what": "All adverse events occurring following immunisation must be notified to the Western Australian Vaccine Safety Surveillance (WAVSS) system.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+    },
+    {
+      "when": "Yearly",
+      "what": "Competency must be maintained through yearly updates. The competency acquired must relate to the vaccines being administered, as detailed in Appendix 3. Additional competencies may be gained through self-directed learning, including referencing the Australian Immunisation Handbook. The Department of Health will determine and advise pharmacists if additional formal training is required for individual vaccines.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 4, "section_heading": "APPENDIX 1" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "all vaccines administered must be recorded on the Australian Immunisation Register (AIR)",
+      "all adverse events occurring following immunisation must be notified to the Western Australian Vaccine Safety Surveillance (WAVSS) system"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf", "page": 2, "section_heading": "4. Conditions" }
+  },
+  "references": [
+    "a. Australian immunisation handbook. Available at: https://immunisationhandbook.health.gov.au/ [p.2]",
+    "b. Western Australian Immunisation Schedule. Available at: https://www.health.wa.gov.au/Articles/F_I/Immunisation-schedule-and-catch-up-vaccines [p.2]",
+    "c. National Vaccine Storage Guidelines: Strive For 5. Available at: https://beta.health.gov.au/resources/publications/national-vaccine-storage-guidelines-strive-for-5 [p.2]",
+    "d. Western Australian Vaccine Safety Surveillance. Western Australian Department of Health. Available at: http://ww2.health.wa.gov.au/Articles/U_Z/Western-Australian-Vaccine-Safety-Surveillance-WAVSS [p.2]",
+    "e. Australian Immunisation Register. Available at: https://www.servicesaustralia.gov.au/individuals/services/medicare/australian-immunisation-register [p.3]"
+  ],
+  "open_questions": [
+    {
+      "topic": "Instrument version conflict between the filename and the printed SASA number",
+      "observed": "The source filename reads 'SASA 018_6_2024 Administration of Vaccines by Pharmacists.pdf', but every page footer and the enquiries box print 'SASA 018/8-2026 Effective from: 18 May 2026' and 'Number: 018/8-2026 Date: 18/05/2026'; issued by Dr Clare Huppatz, Chief Health Officer, Date: 18 May 2026.",
+      "why_unclear": "instrument_version and effective_date transcribe the printed values (SASA 018/8-2026, 18 May 2026) per spec rule 7 (version/date printed on the document). The filename suggests an earlier version (018/6-2024); both readings recorded here rather than silently reconciled.",
+      "source_page": 1
+    },
+    {
+      "topic": "Appendix 3 'Approved Condition' column appears to be a single merged cell spanning all 15 vaccine rows",
+      "observed": "The text extraction interleaves the condition text ('According to the most current published version of the Western Australian Immunisation Schedule or the most current published version of the Australian Immunisation Handbook. For state funded vaccinations, in the event of variation, the Western Australian Immunisation Schedule prevails.') between the vaccine names in the two-column table (Vaccine | Approved Condition).",
+      "why_unclear": "Table reading is imperfect: the condition is transcribed as applying to every row, with confidence 'medium' on all 15 treatment rows. If a per-row condition exists in the PDF it has not been captured.",
+      "source_page": 6
+    },
+    {
+      "topic": "No dose, strength, route, frequency or quantity cells are printed for any vaccine",
+      "observed": "Appendix 3 has only two columns (Vaccine, Approved Condition). No dose, volume, route, schedule interval, quantity or brand appears anywhere in the 6 pages.",
+      "why_unclear": "Dosing comes from the WA Immunisation Schedule / Australian Immunisation Handbook (named in the Approved Condition); nothing can be transcribed into strength/dose/route/frequency without inventing it.",
+      "source_page": 6
+    },
+    {
+      "topic": "Dual age floor (2 years for influenza, 5 years for all other vaccines) collapses to a single age_bounds",
+      "observed": "'Immunisation of persons aged 2 years and over with influenza vaccines and 5 years and over with all other vaccines listed in Appendix 3' (3. Criteria, p.1).",
+      "why_unclear": "age_bounds.min_years is set to 2 (the lowest permitted) because the schema allows one pair of bounds; the vaccine-dependent threshold is carried as the any_of pair INC-1/INC-2 and as RF-1/RF-2 so the stricter 5-year rule is not lost.",
+      "source_page": 1
+    },
+    {
+      "topic": "Combinatorics partly inferred",
+      "observed": "The criteria table and the lettered conditions a-m do not print 'all of' or 'any of'. The two age conditions are vaccine-dependent alternatives (influenza vs all other vaccines); all other criteria/conditions must hold for an authorised administration ('subject to the conditions that').",
+      "why_unclear": "Captured as any_of [INC-1, INC-2] for age and all_of [INC-3..INC-8] for the rest; the combination ACROSS the two groups is inferred as AND and recorded here per spec rule 4.",
+      "source_page": 1
+    },
+    {
+      "topic": "The SASA prints criteria and conditions, not a clinical assessment pathway",
+      "observed": "Sections are 1. Authority, 2. Scope, 3. Criteria, 4. Conditions (a-m), 5. References, 6. Issued by, plus Appendices 1-3. There is no diagnosis, examination or symptom pathway.",
+      "why_unclear": "PW-1 steps are derived from the printed sequence of conditions (criteria check -> consent/administration -> 15-minute post-vaccination observation and site readiness -> AIR recording and WAVSS notification), not from a printed workflow; the ordering comes from the conditions' own wording ('before each instance', 'post vaccination', 'following immunisation').",
+      "source_page": 2
+    },
+    {
+      "topic": "No referral tiers printed",
+      "observed": "The document contains no 'refer', 'urgent' or 'emergency' referral wording; the closest is the Appendix 2 site requirement to permit the patient to lie flat and offer unhindered access for emergency staff to attend and perform resuscitation procedures.",
+      "why_unclear": "referral.routine and referral.urgent are empty; the emergency entry transcribes the Appendix 2 emergency-response requirement rather than a stated referral destination.",
+      "source_page": 5
+    },
+    {
+      "topic": "Whether the 15-minute observation is a mandatory hold or a site-design requirement is ambiguous",
+      "observed": "Appendix 2 item 1(b): 'An area suitable for direct visual observation of seated patients, for 15 minutes post vaccination' - listed as a setting requirement for the premises.",
+      "why_unclear": "Captured as PW-1-S3 (FOLLOW_UP) and FU-1 because it is the only post-vaccination monitoring statement; whether every patient must be observed for the full 15 minutes is a setting condition as printed, not an explicit patient instruction.",
+      "source_page": 5
+    },
+    {
+      "topic": "No exclusion_exceptions and no patient-level contraindications printed",
+      "observed": "The SASA does not list contraindications, precautions or allergy exclusions for vaccination; condition e instead defers: 'patient selection, vaccine administration and follow up care should be in accordance with Vaccination Procedures contained in the latest version of the Australian Immunisation Handbook'.",
+      "why_unclear": "exclusion_exceptions is empty because the document genuinely has none; contraindications live in the Australian Immunisation Handbook and are not reproduced here.",
+      "source_page": 2
+    },
+    {
+      "topic": "No expiry/review date printed beyond 'Effective from'",
+      "observed": "Footers print 'Effective from: 18 May 2026' only; no sunset, review date or superseding instrument is stated.",
+      "why_unclear": "instrument_version/effective_date populated from the footer; currency beyond 18 May 2026 cannot be established from the document.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Resolve the SASA version conflict: the filename says 'SASA 018_6_2024' but the document prints 'SASA 018/8-2026, Effective from: 18 May 2026' - confirm which instrument is current before go-live.",
+      "source_page": 1,
+      "reason": "All rules are indexed to the instrument version; an outdated or mismatched version would invalidate every derived check."
+    },
+    {
+      "item": "Confirm each pharmacist's approved training under Appendix 1 (HESA, RTO, university, CEO-approved or equivalent interstate course) and that yearly competency updates are current and relate to the specific vaccines being administered.",
+      "source_page": 4,
+      "reason": "Conditions b and Appendix 1 make approved, maintained training a precondition for every administration."
+    },
+    {
+      "item": "Confirm site compliance with Appendix 2 before go-live: privacy space, 15-minute observation area, hand washing, sharps/clinical waste disposal, in-date complete anaphylaxis response kit, current reference editions, written procedures, and additional first-aid/CPR-competent staff when the pharmacist is not dedicated to immunisation.",
+      "source_page": 5,
+      "reason": "Practice setting compliance (INC-4) is a hard gate that cannot be verified from the document alone."
+    },
+    {
+      "item": "Obtain dose, volume, route, schedule interval and brand for each Appendix 3 vaccine from the current Western Australian Immunisation Schedule / Australian Immunisation Handbook before any administration instruction is encoded - no dose cells are printed.",
+      "source_page": 6,
+      "reason": "All 15 treatment rows have blank strength/dose/route/frequency; the module cannot issue administration instructions from vaccine names alone."
+    },
+    {
+      "item": "Confirm local supervision arrangements for pharmacists with registration type 'provisional' (condition c): named eligible supervisor and documentation of the supervision.",
+      "source_page": 2,
+      "reason": "Supervision is mandatory for provisional registrants but the SASA does not specify how it is recorded locally."
+    },
+    {
+      "item": "Confirm the operational interpretation of the catch-up rule: 'catch up of vaccines available to individuals aged 5 and above only ... does not include catch up of vaccines the individual was eligible for prior to turning 5 years of age' - how this is determined for an individual patient.",
+      "source_page": 1,
+      "reason": "RF-3/EXC-1 is a hard eligibility rule that needs a defined method (AIR history / immunisation history check) to evaluate."
+    },
+    {
+      "item": "Confirm how the vaccine-dependent age floors are enforced (2 years for influenza vs 5 years for all other Appendix 3 vaccines) including combination vaccines and catch-up schedules.",
+      "source_page": 1,
+      "reason": "age_bounds can hold only one minimum (recorded as 2); the stricter 5-year rule for non-influenza vaccines must be enforced separately via INC-2/RF-2."
+    },
+    {
+      "item": "Confirm the local adverse-event pathway: WAVSS notification timing/format, AIR recording timing, and when adverse events also require prescriber/GP or TGA reporting.",
+      "source_page": 2,
+      "reason": "Conditions g and h set the obligations but not the timing, format or escalation tiers beyond WAVSS."
+    }
+  ]
+}

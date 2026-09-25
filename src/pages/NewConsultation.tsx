@@ -37,6 +37,13 @@ import { SketchPad } from '@/components/consult/SketchPad';
 import { ConsultStatus, transitionConsult } from '@/lib/consultStateMachine';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
+import {
+  getJurisdictionsForSlug,
+  getPayload,
+  type CorpusDocumentMeta,
+  type CorpusDocumentPayload,
+} from '@/data/protocol-corpus';
+import { ProtocolPanel } from '@/components/protocols/ProtocolPanel';
 import { evaluateSafety } from '@/lib/safetyEngine';
 import { logValidationBlocker } from '@/lib/qaTelemetry';
 import { supabase } from '@/integrations/supabase/client';
@@ -585,12 +592,25 @@ const NewConsultation = () => {
 
     setConsultStatus('submitting');
 
+    // Corpus-derived protocol identity: the exact instrument (file, version,
+    // sha256) this consultation was guided by, so the note remains
+    // reproducible after the protocol changes.
+    const corpusDocs = registryEntry?.slug
+      ? getJurisdictionsForSlug(registryEntry.slug).flatMap(j => j.docs).filter(d => d.docType !== 'repealed')
+      : [];
+    const primaryDoc = corpusDocs[0];
     const protocolStamp = buildProtocolStamp({
       conditionSlug: registryEntry?.slug ?? selectedCondition ?? null,
       conditionTemplateVersion: registryEntry ? String(registryEntry.templateVersion ?? 1) : 'unknown',
       templateVersionNumber: registryEntry?.templateVersion ?? null,
       protocolStatus: registryEntry ? 'needs_review' : 'needs_review',
+      protocolSourceLabel: primaryDoc?.title ?? undefined,
     });
+    if (primaryDoc) {
+      protocolStamp.protocolName = primaryDoc.title;
+      protocolStamp.protocolJurisdiction = primaryDoc.state;
+      protocolStamp.jurisdictionProtocolVersion = primaryDoc.instrumentVersion;
+    }
 
     try {
       const consultData = {
@@ -645,7 +665,18 @@ const NewConsultation = () => {
         finalised_note: formData.clinicalNotes
           ? `${formData.clinicalNotes}\n\n— ${formatProtocolFooter(protocolStamp)}`
           : null,
-        finalised_note_protocol_snapshot: { ...protocolStamp, capturedAt: new Date().toISOString() },
+        finalised_note_protocol_snapshot: {
+          ...protocolStamp,
+          capturedAt: new Date().toISOString(),
+          ...(primaryDoc
+            ? {
+                corpus_file: primaryDoc.file,
+                corpus_sha256: primaryDoc.sha256,
+                corpus_effective_date: primaryDoc.effectiveDate,
+                corpus_legal_basis: primaryDoc.legalBasis,
+              }
+            : {}),
+        },
       };
 
       const { data, error } = await (supabase.from('consultations') as any)
@@ -1391,6 +1422,30 @@ const NewConsultation = () => {
 
         {/* Right panel: Live Note Preview + Safety + Readiness */}
         <div className="hidden lg:block w-80 border-l bg-muted/30 p-4 overflow-auto">
+          {/* Protocol panel — jurisdiction protocol decision support from the
+              OCR corpus: instrument header, eligibility, live red flags,
+              suggested treatments (copy-only, never auto-prescribed). */}
+          <ProtocolPanel
+            conditionSlug={registryEntry?.slug}
+            formData={formData as unknown as Record<string, unknown>}
+            onUseTreatment={(drug, dose, frequency, duration) => {
+              const line = [drug, dose, frequency, duration].filter(Boolean).join(' — ');
+              updateField('selectedTherapyNotes', line);
+              updateField(
+                'clinicalNotes',
+                formData.clinicalNotes
+                  ? `${formData.clinicalNotes}\nProtocol-suggested: ${line} (recorded as decision support — pharmacist-selected)`
+                  : `Protocol-suggested: ${line} (recorded as decision support — pharmacist-selected)`
+              );
+              sonnerToast.info(`Protocol treatment staged: ${drug}`, {
+                description: 'Recorded as protocol-suggested. The pharmacist makes and records every decision — nothing is prescribed automatically.',
+              });
+            }}
+            compact
+          />
+
+          <Separator className="my-4" />
+
           <LiveNotePreview
             formData={formData}
             condition={condition}

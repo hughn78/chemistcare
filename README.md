@@ -2,6 +2,31 @@
 
 Clinical prescribing and pharmacy workflow app.
 
+## Protocol corpus (Sep 2026 snapshot)
+
+`src/data/protocol-corpus/` bundles the OCR extraction of **all 113 Australian
+pharmacist prescribing / expanded-scope protocols** (8 jurisdictions, current as
+at 25 Sep 2026) as immutable JSON with per-item provenance (pdf sha256, page,
+section heading) and extraction confidence.
+
+- `manifest.json` — generated index: classification (condition × state × doc
+  type), counts, hashes. Regenerate with `python3 scripts/build_manifest.py`
+  (script lives beside the source corpus at
+  `~/Documents/pharmacy/ocr-2026-09/build_manifest.py`).
+- `src/data/protocol-corpus/index.ts` — loader: condition→jurisdiction lookups,
+  full-text search, structured red-flag evaluation (`evaluateStructuredRule`).
+- `src/components/protocols/ProtocolPanel.tsx` — consultation right-rail
+  decision support (eligibility, live red flags, suggested treatments —
+  copy-only, never auto-prescribed) used by `NewConsultation` and
+  `UtiConsultation`.
+- `/protocol-corpus` route — in-app reference browser for all documents.
+- Protocol stamps: finalised consultations record the exact corpus document
+  (file, instrument version, sha256) in `finalised_note_protocol_snapshot`.
+
+To refresh the corpus: replace the JSON files in `protocol-corpus/protocols/`,
+re-run the manifest script, bump `CORPUS_AS_AT`, and record the instrument
+version changes in the commit message.
+
 ## Local-first PC mode (offline capable)
 
 You can run this app entirely on a local Windows PC without relying on public internet services at runtime.

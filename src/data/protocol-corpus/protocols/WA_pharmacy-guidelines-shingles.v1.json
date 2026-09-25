@@ -1,0 +1,822 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf",
+    "pdf_sha256": "5f035edc07778150f167090144e24aaddbf018f9c26850970c7023d53951d6dc",
+    "page_count": 11,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Herpes zoster (shingles) clinical practice guideline",
+    "instrument_version": "No version number printed (page 11 footer codes read \"62’GUA\" and \"180510-DEC\"); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+    "supervision_model": "Approved pharmacist prescribing (document's own terminology): pharmacists must be 'approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP)' and 'authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)'; 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1)",
+    "scope_summary": "EACPP clinical practice guideline for herpes zoster (shingles, HZ) in patients aged 18 years or over (service restricted to patients aged 18 years or over). Flow: meet service and professional obligations -> patient history and assessment (patient history; examination: clinical features and presenting symptoms) -> develop management plan (non-pharmacological measures: care of lesions, transmission precautions; pharmacotherapy: oral antiviral therapy, oral analgesia, zoster vaccination) -> confirm management is appropriate (contraindications, precautions, and interactions; pregnancy and lactation) -> communicate agreed management plan -> clinical review (response to treatment; progression of signs and symptoms). 'Refer when' (page 3) lists 3 ineligibility triggers; 'Treat (if clinically appropriate) and concurrently refer' (page 3) lists 9 conditions treated while referring. Antiviral treatment reduces acute pain, rash duration, viral shedding, and the risk of ocular complications if started within 72 hours of rash onset in immunocompetent patients and at any stage of rash duration in immunocompromised patients. VZV infection (including chickenpox and shingles) is a notifiable infectious disease under the WA Public Health Regulations 2017, but under section 94 of the Public Health Act 2016 the legal obligation to notify applies to medical practitioners, nurse practitioners, and pathologists - 'This requirement does not extend to pharmacists'; with the patient's consent the pharmacist should communicate the diagnosis to the nominated GP. Clinical review is generally not required unless the condition does not resolve or improve. No product names, strengths, doses, frequencies or quantities are printed - prescribing is delegated to the specified sections of the current online Therapeutic Guidelines."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-2",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Typical presentations of HZ can be diagnosed based on the patient history and examination for the characteristic appearance and distribution of the rash. The clinical presentation will vary depending on the patient's age, general health, and affected dermatome.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Patient history and assessment" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Laboratory confirmation is generally not required for typical presentations and uncomplicated cases of HZ. Confirmatory pathology testing is required for cases where diagnosis is uncertain, or in cases of HZ in people who have been previously vaccinated against HZ.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 6, "section_heading": "Examination" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Develop management plan" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "unclear diagnosis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "the patient is or could be pregnant, and does not have a history of varicella-zoster virus (VZV) (or uncertain history).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 1, "section_heading": "Contents" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 1, "section_heading": "Contents" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Herpes zoster (shingles) - guideline overview pathway (page 2 flow, elaborated pages 4-9)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service; patient informed consent (including consent for communication with other health practitioners if relevant). Service restricted to patients aged 18 years or over. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+          "gates": [
+            { "criterion": "Initial patient eligibility and suitability for management within the scope of the service (Refer when: the patient is aged below 18 years)", "on_fail": "REFER" },
+            { "criterion": "Patient informed consent (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 2, "section_heading": "Guideline overview" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); nature, severity, and frequency of symptoms; nature of rash (distribution, appearance, number of lesions); onset and duration of symptoms; precipitating and relieving factors; history of VZV infection; underlying medical conditions e.g. immunocompromise (auto-immune diseases including diabetes, rheumatoid arthritis, HIV, cancer, conditions treated with immune suppressants, or renal impairment); current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); treatment and other strategies used to treat current symptoms and associated response; drug allergies/adverse reactions; immunisation status as per the Australian Immunisation Handbook (HZ and varicella vaccinations). Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies, and current medical conditions.",
+          "gates": [
+            { "criterion": "Refer when: unclear diagnosis", "on_fail": "REFER" },
+            { "criterion": "Refer when: the patient is or could be pregnant, and does not have a history of varicella-zoster virus (VZV) (or uncertain history)", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: immunocompromised (history of immunocompromise, e.g. auto-immune diseases including diabetes, rheumatoid arthritis, HIV, cancer, conditions treated with immune suppressants, or renal impairment)", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: previous vaccination against HZ (immunisation status as per the Australian Immunisation Handbook)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 6, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination: clinical features and presenting symptoms. Prodromal symptoms may be observed between 48 to 72 hours before the localised, characteristic vesicular rash becomes evident: localised nerve pain (usually described as stabbing, prickling, or burning); lethargy, fever, headache; abnormal skin sensations such as burning, itching, hyperaesthesia and/or paraesthesia; photophobia. The HZ rash is typically unilateral with a dermatomal distribution and distinct anterior and posterior midline cut-offs, however, some satellite lesions may also appear. New lesions will continue to erupt for 3 to 5 days within the locality of the affected nerve, becoming pustular, before scabbing and crusting over between 7 to 10 days. The most affected areas are the chest, neck, forehead (ophthalmic), and lumbar/sacral sensory nerve supply regions. When the ophthalmic division of the trigeminal nerve is affected (herpes zoster ophthalmicus), the patient will present with a blistering rash around the eye/eyelid with associated pain, swelling, and redness - urgent referral to an appropriate healthcare provider is required. Vesicles on the nose have been found to be predictive of eye involvement. If the facial nerve and subsequently, the vestibulocochlear nerve is affected (herpes zoster oticus/Ramsay Hunt syndrome), symptoms include earache, blistering in and around the ear canal, with or without facial paralysis - urgent referral to an appropriate healthcare provider is required. Complications occur in approximately 13 per cent to 26 per cent of patients with HZ (most prevalent in older people and those who are immunocompromised) and will require referral to an appropriate healthcare provider at presentation or at any stage if a complication develops. Postherpetic neuralgia (PHN): neuropathic pain that persists for at least 3 months beyond the duration of the rash or reoccurs (occurs in 10 per cent to >70 per cent of patients, with the incidence increasing with age); postherpetic pain may be sharp/shooting and intermittent, or described as constant burning, often with extreme sensitivity to touch (allodynia).",
+          "gates": [
+            { "criterion": "Herpes zoster ophthalmicus: blistering rash around the eye/eyelid with associated pain, swelling, and redness (urgent referral required)", "on_fail": "REFER" },
+            { "criterion": "herpes zoster oticus/Ramsay Hunt syndrome: earache, blistering in and around the ear canal, with or without facial paralysis (urgent referral required)", "on_fail": "REFER" },
+            { "criterion": "Complications of HZ at presentation or at any stage if a complication develops (including PHN or specific zoster syndromes)", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: superinfection of HZ skin lesions", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Presenting signs and symptoms" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "INVESTIGATION",
+          "description": "Examination and laboratory confirmation: 'Examination of the rash and documentation of its characteristics and location, as well as any signs of complications is important for the diagnosis of HZ and the exclusion of other conditions with similar presentations.' NB1: Laboratory confirmation is generally not required for typical presentations and uncomplicated cases of HZ. Confirmatory pathology testing is required for cases where diagnosis is uncertain, or in cases of HZ in people who have been previously vaccinated against HZ. NB1: Clinical presentations of herpes simplex virus infection can be similar to HZ, especially in the thigh and genital areas. Referral is recommended when the diagnosis is uncertain. (p.7: 'If the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.')",
+          "gates": [
+            { "criterion": "diagnosis uncertain / unclear diagnosis (referral is recommended; a medical practitioner may initiate pathology testing)", "on_fail": "REFER" },
+            { "criterion": "the patient has previously been vaccinated against HZ (confirmatory pathology testing is required)", "on_fail": "REFER" },
+            { "criterion": "clinical presentation similar to herpes simplex virus infection, especially in the thigh and genital areas", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 6, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Develop management plan: 'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.' Antiviral treatment can reduce acute pain, rash duration, viral shedding, and the risk of ocular complications if started within 72 hours of rash onset in immunocompetent patients, and at any stage of rash duration in immunocompromised patients. Pharmacist management of HZ involves: non-pharmacological measures - education and advice regarding care for lesions (use of dressings, cleaning, and appropriate clothing); education and advice regarding transmission precautions in accordance with the WA Department of Health Guideline; pharmacotherapy - oral antiviral therapy in accordance with the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections – Shingles (Herpes zoster)); oral analgesia for mild nociceptive pain in accordance with the Therapeutic Guidelines: Pain and analgesia (Pain associated with shingles (herpes zoster) – Acute pain associated with shingles (herpes zoster)) and Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain – Mild, acute nociceptive pain); zoster vaccination (prevention only). Zoster vaccination: vaccination against HZ is the best way to prevent HZ and reduce the risk of complications, however it is not indicated during an acute HZ episode or to treat PHN. People who have had a previous episode of HZ can be vaccinated against a recurrence. The interval between the episode and vaccination is dependent on the patient's immune status. Refer to the Australian Immunisation Handbook for HZ vaccination information and recommendations. Reminder: The prescribing and use of antimicrobials should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic.",
+          "gates": [
+            { "criterion": "Treat and concurrently refer: immunocompromised", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: superinfection of HZ skin lesions", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: multidermatomal rash or disseminated zoster", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: complications of HZ, including PHN or specific zoster syndromes", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: HZ affecting the face or genitals", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: pain management for neuropathic pain or moderate to severe nociceptive pain is needed", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: pregnant with a definite history of previous VZV infection", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: previous vaccination against HZ", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: inadequate response to optimal treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: 'Consult the Therapeutic Guidelines, Australian Medicines Handbook, Australian Immunisation Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.' If the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.",
+          "gates": [
+            { "criterion": "contraindications and precautions", "on_fail": "STOP" },
+            { "criterion": "drug interactions", "on_fail": "STOP" },
+            { "criterion": "pregnancy and lactation (Refer when: the patient is or could be pregnant and does not have a history of VZV; Treat and concurrently refer: pregnant with a definite history of previous VZV infection)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) regarding individual product and medication use; non-pharmacological measures; how to manage adverse effects; recommendations for vaccination against HZ (see Australian Immunisation Handbook); when to seek further care and/or treatment, including recognising superinfection and HZ complications; when to return for follow-up. General advice - at the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: signs or symptoms worsen; new signs or symptoms develop (e.g. superinfection of HZ lesions); the blisters spread to the face or genitals, or a new area; they do not respond adequately to the recommended treatment or pain management is inadequate (skin lesions usually heal within 2 to 4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease; pain and systemic symptoms subside as the rash resolves with recovery complete in 2 to 4 weeks in most cases; pain can persist after shingles has resolved); they are having unmanageable adverse effects; they are experiencing complications (see Refer when and Complications of HZ). Preventing transmission: the incubation period of VZV ranges between 10 to 21 days (14 to 16 days on average); people with HZ are infectious from the onset of the rash, until all vesicles have dried and scabbed; rashes should be covered with appropriate dressings until the patient is no longer infectious and contact with high-risk contacts must be avoided; high-risk contacts (pregnant people, neonates in first month of life, immunocompromised individuals, non immune healthcare workers, non immune persons in enclosed environments such as prisons, childcare, aged care, and disability settings) who have had significant exposure should seek medical care as soon as possible; significant exposure includes household contacts, direct face-to-face contact for >= 5 minutes, direct unprotected contact with fluid from lesions, and being in the same room for >= 1 hour; healthcare workers with HZ must cover all lesions with appropriate dressing or clothing; healthcare workers with HZ lesions on their hands or face, or with disseminated shingles should be referred to a medical practitioner, and be excluded from work until all lesions have dried and crusted. (p.7 Public health notification: 'Under the WA Public Health Regulations 2017, VZV infection (including chickenpox and shingles) is a notifiable infectious disease.' 'Under section 94 of the Public Health Act 2016, the legal obligation to notify the Department of Health of a notifiable infectious disease applies to medical practitioners, nurse practitioners, and pathologists. This requirement does not extend to pharmacists.' 'With the patient's consent, you should communicate your diagnosis of HZ to their nominated GP to support continuity of care and enable testing where appropriate, and any relevant clinical or public health follow-up.') The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers) and to ensure compliance with all copyright conditions.",
+          "gates": [
+            { "criterion": "General advice: signs or symptoms worsen", "on_fail": "REFER" },
+            { "criterion": "General advice: new signs or symptoms develop (e.g. superinfection of HZ lesions)", "on_fail": "REFER" },
+            { "criterion": "General advice: the blisters spread to the face or genitals, or a new area", "on_fail": "REFER" },
+            { "criterion": "General advice: they do not respond adequately to the recommended treatment or pain management is inadequate", "on_fail": "REFER" },
+            { "criterion": "General advice: they are having unmanageable adverse effects", "on_fail": "REFER" },
+            { "criterion": "General advice: they are experiencing complications (see Refer when and Complications of HZ)", "on_fail": "REFER" },
+            { "criterion": "healthcare workers with HZ lesions on their hands or face, or with disseminated shingles should be referred to a medical practitioner, and be excluded from work until all lesions have dried and crusted", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: 'Clinical review is generally not required unless the condition does not resolve or improve. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).' Expected course (p.8 General advice): skin lesions usually heal within 2 to 4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease; pain and systemic symptoms subside as the rash resolves with recovery complete in 2 to 4 weeks in most cases; pain can persist after shingles has resolved. Communication with other health practitioners occurs through the consent-based GP notification and multidisciplinary plan sharing (p.7-8).",
+          "gates": [
+            { "criterion": "the condition does not improve or resolve", "on_fail": "REFER" },
+            { "criterion": "inadequate response to optimal treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 9, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Oral antiviral therapy",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+      "notes": "Pharmacotherapy per the page 2 flow and p.7: 'pharmacotherapy: - oral antiviral therapy in accordance with the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections – Shingles (Herpes zoster))'. Treatment window (p.7): 'Antiviral treatment can reduce acute pain, rash duration, viral shedding, and the risk of ocular complications if started within 72 hours of rash onset in immunocompetent patients, and at any stage of rash duration in immunocompromised patients.' Key point (p.3): 'Early identification and management with antivirals and analgesia (including all immunocompetent patients who present within 72 hours of rash onset as well as all patients who are immunocompromised regardless of rash duration) reduces the acute pain, rash duration, viral shedding, and potential for ocular complications of HZ.' No product name (e.g. no specific antiviral is printed), strength, dose, frequency or duration appears anywhere in the guideline - product-level detail must be taken from the specified sections of the current online version of the Therapeutic Guidelines (p.7). Reminder (p.7): 'The prescribing and use of antimicrobials should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic.' Confirm management is appropriate includes 'contraindications and precautions; drug interactions; pregnancy and lactation' (p.7). Treat and concurrently refer includes 'immunocompromised' (antivirals at any stage of rash duration) and 'previous vaccination against HZ' (confirmatory pathology testing, p.6). first_line true because early antiviral management is the guideline's core pharmacotherapy - no product-level ranking is printed.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Oral analgesia",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+      "notes": "Pharmacotherapy per the page 2 flow and p.7: 'pharmacotherapy: - oral analgesia for mild nociceptive pain in accordance with the: Therapeutic Guidelines: Pain and analgesia (Pain associated with shingles (herpes zoster) – Acute pain associated with shingles (herpes zoster)); Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain – Mild, acute nociceptive pain).' Key point (p.3): early management with antivirals and analgesia reduces acute pain. Pain severity gate (p.3): 'Treat (if clinically appropriate) and concurrently refer: pain management for neuropathic pain or moderate to severe nociceptive pain is needed' - i.e. analgesia in scope covers mild nociceptive pain only; neuropathic or moderate to severe nociceptive pain requires concurrent referral. Postherpetic neuralgia (p.4): 'Neuropathic pain that persists for at least 3 months beyond the duration of the rash or reoccurs'; 'Postherpetic pain may be sharp/shooting and intermittent, or described as constant burning, often with extreme sensitivity to touch (allodynia).' No product name, strength, dose, frequency or duration is printed - product-level detail must come from the specified sections of the current online Therapeutic Guidelines. first_line true because analgesia is listed as core pharmacotherapy alongside antivirals.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Zoster vaccination",
+      "form": "vaccine",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Listed under pharmacotherapy in the page 2 flow ('pharmacotherapy: - oral antiviral therapy - oral analgesia - zoster vaccination'). Key point (p.3): 'Vaccination is the most effective prevention for HZ and its complications. The National Immunisation Program (NIP) recommends HZ vaccination for patients at risk.' p.7 'Zoster vaccination': 'Vaccination against HZ is the best way to prevent HZ and reduce the risk of complications, however it is not indicated during an acute HZ episode or to treat PHN. People who have had a previous episode of HZ can be vaccinated against a recurrence. The interval between the episode and vaccination is dependent on the patient's immune status. Refer to the Australian Immunisation Handbook for HZ vaccination information and recommendations.' Treat and concurrently refer includes 'previous vaccination against HZ' (p.3). No vaccine product, schedule, dose, route or interval is printed - the interval is explicitly left to the patient's immune status and the Australian Immunisation Handbook. Recorded as a treatment row because the page 2 flow lists it under pharmacotherapy, but first_line is false: it is prevention, not treatment of an acute episode.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Zoster vaccination" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+      "structured": { "parameter": "age", "operator": "<", "value": 18, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "unclear diagnosis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "the patient is or could be pregnant, and does not have a history of varicella-zoster virus (VZV) (or uncertain history).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Treat and concurrently refer: immunocompromised",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Treat and concurrently refer: superinfection of HZ skin lesions",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Treat and concurrently refer: multidermatomal rash or disseminated zoster",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Treat and concurrently refer: complications of HZ, including PHN or specific zoster syndromes",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Treat and concurrently refer: HZ affecting the face or genitals",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Treat and concurrently refer: pain management for neuropathic pain or moderate to severe nociceptive pain is needed",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Treat and concurrently refer: pregnant with a definite history of previous VZV infection",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Treat and concurrently refer: previous vaccination against HZ",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Treat and concurrently refer: inadequate response to optimal treatment. [page 2 flow also places this bullet in the 'Treat and concurrently refer' column - both readings agree; see open question on two-column resolution]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "When the ophthalmic division of the trigeminal nerve is affected (herpes zoster ophthalmicus), the patient will present with a blistering rash around the eye/eyelid with associated pain, swelling, and redness. Urgent referral to an appropriate healthcare provider is required.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Herpes zoster ophthalmicus" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Vesicles on the nose have been found to be predictive of eye involvement. [within the Herpes zoster ophthalmicus section, which states urgent referral is required; the sentence itself carries no explicit referral verb - confidence medium, see open question]",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Herpes zoster ophthalmicus" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "If the facial nerve and subsequently, the vestibulocochlear nerve is affected (herpes zoster oticus/Ramsay Hunt syndrome), symptoms include earache, blistering in and around the ear canal, with or without facial paralysis. Urgent referral to an appropriate healthcare provider is required.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Herpes zoster oticus (Ramsay Hunt syndrome)" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Complications occur in approximately 13 per cent to 26 per cent of patients with HZ (most prevalent in older people and those who are immunocompromised) and will require referral to an appropriate healthcare provider at presentation or at any stage if a complication develops.",
+      "structured": { "parameter": "complication of HZ", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Complications" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Neuropathic pain that persists for at least 3 months beyond the duration of the rash or reoccurs (occurs in 10 per cent to >70 per cent of patients, with the incidence increasing with age).",
+      "structured": { "parameter": "duration of neuropathic pain beyond the rash", "operator": ">=", "value": 3, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Postherpetic neuralgia" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Pregnant patients who are exposed to VZV (chickenpox or HZ) for the first time (no or uncertain history of previous chickenpox infection) may develop chickenpox which can have serious consequences. These include maternal mortality and morbidity, fetal varicella syndrome and the associated abnormalities. Urgent referral to an appropriate healthcare provider is required as zoster immunoglobulin should be given to all seronegative women within 96 hours.",
+      "structured": { "parameter": "time from first VZV exposure in pregnancy to zoster immunoglobulin", "operator": "<=", "value": 96, "unit": "hours" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 5, "section_heading": "HZ in pregnancy" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "An unclear diagnosis of HZ in a pregnant patient must be referred immediately.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 5, "section_heading": "HZ in pregnancy" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "disseminated zoster is defined as 20 lesions outside of the dermatome and may be clinically indistinguishable from varicella infection",
+      "structured": { "parameter": "lesions outside the primary dermatome", "operator": ">=", "value": 20, "unit": "lesions" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 5, "section_heading": "Disseminated zoster (VZV dissemination)" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Viral dissemination to the central nervous system and viscera (lungs, gut, liver, and brain) may occur.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 5, "section_heading": "Disseminated zoster (VZV dissemination)" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Secondary bacterial skin infections (referral to an appropriate healthcare provider for swab and culture is required).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 5, "section_heading": "Other complications" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "Neurological complications such as meningoencephalitis and myelitis (which is more likely in the elderly).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 5, "section_heading": "Other complications" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Clinical presentations of herpes simplex virus infection can be similar to HZ, especially in the thigh and genital areas. Referral is recommended when the diagnosis is uncertain.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 6, "section_heading": "Examination" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "If the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Confirm management is appropriate" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "signs or symptoms worsen [General advice: at the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "new signs or symptoms develop (e.g. superinfection of HZ lesions) [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "the blisters spread to the face or genitals, or a new area [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "they do not respond adequately to the recommended treatment or pain management is inadequate: skin lesions usually heal within 2 to 4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease; pain and systemic symptoms subside as the rash resolves with recovery complete in 2 to 4 weeks in most cases; pain can persist after shingles has resolved [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "they are having unmanageable adverse effects. [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "they are experiencing complications, see Refer when and Complications of HZ [General advice: ...]",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "healthcare workers with HZ lesions on their hands or face, or with disseminated shingles should be referred to a medical practitioner, and be excluded from work until all lesions have dried and crusted",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "Considerations for healthcare workers" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "The patient (and/or parents/caregivers) should be advised to inform any high-risk contacts who have had significant exposure to a person with active VZV to seek medical care as soon as possible. High risk contacts include: pregnant people; neonates in first month of life; immunocompromised individuals; non immune healthcare workers; non immune persons who are in enclosed environments such as prisons, childcare, aged care, and disability settings.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "Preventing transmission" }
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "Clinical review is generally not required unless the condition does not resolve or improve. Advise patients (and/or parents/caregivers if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 9, "section_heading": "Clinical review" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services if required) in the following situations: [the three Refer when triggers - see red_flags RF-1 to RF-3]",
+      "Provide initial treatment (antiviral therapy and pain relief) and concurrently refer to an appropriate healthcare provider (including emergency services if required) in the following situations: [the nine treat-and-concurrently-refer triggers - see red_flags RF-4 to RF-12]",
+      "Complications occur in approximately 13 per cent to 26 per cent of patients with HZ (most prevalent in older people and those who are immunocompromised) and will require referral to an appropriate healthcare provider at presentation or at any stage if a complication develops.",
+      "Secondary bacterial skin infections (referral to an appropriate healthcare provider for swab and culture is required).",
+      "Clinical presentations of herpes simplex virus infection can be similar to HZ, especially in the thigh and genital areas. Referral is recommended when the diagnosis is uncertain.",
+      "If the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.",
+      "With the patient's consent, you should communicate your diagnosis of HZ to their nominated GP to support continuity of care and enable testing where appropriate, and any relevant clinical or public health follow-up.",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+      "healthcare workers with HZ lesions on their hands or face, or with disseminated shingles should be referred to a medical practitioner, and be excluded from work until all lesions have dried and crusted",
+      "The patient (and/or parents/caregivers) should be advised to inform any high-risk contacts who have had significant exposure to a person with active VZV to seek medical care as soon as possible.",
+      "Advise patients (and/or parents/caregivers if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice)."
+    ],
+    "urgent": [
+      "Urgent referral to an appropriate healthcare provider is required. [Herpes zoster ophthalmicus: HZ affecting the ophthalmic division of the trigeminal nerve; blistering rash around the eye/eyelid with associated pain, swelling, and redness]",
+      "Urgent referral to an appropriate healthcare provider is required. [herpes zoster oticus/Ramsay Hunt syndrome: earache, blistering in and around the ear canal, with or without facial paralysis]",
+      "Urgent referral to an appropriate healthcare provider is required as zoster immunoglobulin should be given to all seronegative women within 96 hours.",
+      "An unclear diagnosis of HZ in a pregnant patient must be referred immediately."
+    ],
+    "emergency": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services if required) in the following situations:",
+      "Provide initial treatment (antiviral therapy and pain relief) and concurrently refer to an appropriate healthcare provider (including emergency services if required) in the following situations:"
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 3, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "If the condition does not resolve or improve (clinical review is generally not required otherwise)",
+      "what": "Clinical review is generally not required unless the condition does not resolve or improve. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 9, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At presentation or at any stage if a complication develops",
+      "what": "Complications occur in approximately 13 per cent to 26 per cent of patients with HZ (most prevalent in older people and those who are immunocompromised) and will require referral to an appropriate healthcare provider at presentation or at any stage if a complication develops.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 4, "section_heading": "Complications" }
+    },
+    {
+      "when": "From the onset of the rash until all vesicles have dried and scabbed (infectious period)",
+      "what": "People with HZ are infectious from the onset of the rash, until all vesicles have dried and scabbed. Rashes should be covered with appropriate dressings until the patient is no longer infectious and contact with high-risk contacts must be avoided.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "Preventing transmission" }
+    },
+    {
+      "when": "Skin lesions usually heal within 2 to 4 weeks (longer if immunocompromised or severe disease)",
+      "what": "skin lesions usually heal within 2 to 4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease; pain and systemic symptoms subside as the rash resolves with recovery complete in 2 to 4 weeks in most cases; pain can persist after shingles has resolved.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "General advice" }
+    },
+    {
+      "when": "Until all lesions have dried and crusted (healthcare workers with HZ lesions on hands or face, or disseminated shingles)",
+      "what": "healthcare workers with HZ lesions on their hands or face, or with disseminated shingles should be referred to a medical practitioner, and be excluded from work until all lesions have dried and crusted.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 8, "section_heading": "Considerations for healthcare workers" }
+    },
+    {
+      "when": "After a previous HZ episode, before zoster vaccination (interval depends on the patient's immune status)",
+      "what": "People who have had a previous episode of HZ can be vaccinated against a recurrence. The interval between the episode and vaccination is dependent on the patient's immune status. Refer to the Australian Immunisation Handbook for HZ vaccination information and recommendations.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Zoster vaccination" }
+    }
+  ],
+  "notifiable": {
+    "required": false,
+    "conditions": [
+      "Under the WA Public Health Regulations 2017, VZV infection (including chickenpox and shingles) is a notifiable infectious disease.",
+      "Under section 94 of the Public Health Act 2016, the legal obligation to notify the Department of Health of a notifiable infectious disease applies to medical practitioners, nurse practitioners, and pathologists. This requirement does not extend to pharmacists.",
+      "With the patient's consent, you should communicate your diagnosis of HZ to their nominated GP to support continuity of care and enable testing where appropriate, and any relevant clinical or public health follow-up."
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Shingles.pdf", "page": 7, "section_heading": "Public health notification" }
+  },
+  "references": [
+    "1. Cunningham AL, Breuer J, Dwyer DE, Gronow DW, Helme RD, Litt JC, et al. The prevention and management of herpes zoster. The Medical Journal of Australia. 2008;188(3):171-6. [p.10]",
+    "2. DynaMed: Herpes Zoster: EBSCO Information Services; 2025 [cited 2025 April 02]. Available from: https://www.dynamed.com/condition/herpes-zoster. [p.10]",
+    "3. Wehrhahn MC, Dwyer DE. Herpes zoster: epidemiology, clinical features, treatment and prevention. Australian Prescriber. 2012;35:143-7. [p.10]",
+    "4. Therapeutic Guidelines: Antibiotic (Shingles). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 02]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=c_ABG_Shingles-herpes-zoster_topic_1&guidelinename=auto&sectionId=c_ABG_Shingles-herpes-zoster_topic_1#c_ABG_Shingles-herpes-zoster_topic_1 [p.10]",
+    "5. Australian Technical Advisory Group on Immunisation (ATAGI). Australian Immunisation Handbook. Canberra: Australian Government Department of Health and Aged Care; 2022 [cited 2025 April 02]. Available from: https://immunisationhandbook.health.gov.au/ [p.10]",
+    "6. Corden E. How to identify and treat herpes zoster (shingles). Journal of Community Nursing. 2014;28(6):59-64. [p.10]",
+    "7. Oakley A. Herpes Zoster: DermNet New Zealand Trust; 2015 [cited 2022 May 23]. Available from: https://dermnetnz.org/topics/herpes-zoster. [p.10]",
+    "8. Kaye K. MSD Manual Professional Version: Herpes Zoster: Merck & Co; 2023 [cited 2025 April 02]. Available from: https://www.msdmanuals.com/en-au/professional/infectious-diseases/herpesviruses/herpes-zoster. [p.10]",
+    "9. Therapeutic Guidelines: Pain and analgesia (Pain associated with shingles (herpes zoster)). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 03]. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=pain-shingles [p.10]",
+    "10. Therapeutic Guidelines: Antibiotic (Herpes zoster ophthalmicus). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 03]. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=bartonella-infections&guidelinename=auto&sectionId=c_ABG_Infectious-keratitis_topic_5#c_ABG_Infectious-keratitis_topic_5 [p.10]",
+    "11. Pupco A, Bozzo P, Koren G. Herpes zoster during pregnancy. Canadian Family Physician. 2011;57(10):1133. [p.10]",
+    "12. SA Maternal & Neonatal Clinical Network. Clinical Guideline: Varicella Zoster (chickenpox) in Pregnancy. Adelaide: South Australia Health; 2015. [p.10]",
+    "13. Werner RN, Nikkels AF, Marinović B, Schäfer M, Czarnecka-Operacz M, Agius AM, et al. European consensus-based (S2k) Guideline on the Management of Herpes Zoster – guided by the European Dermatology Forum (EDF) in cooperation with the European Academy of Dermatology and Venereology (EADV), Part 1: Diagnosis. J Eur Acad Dermatol Venereol. 2017;31(1):9-19. [p.10]",
+    "14. Government of Western Australia. Varicella-zoster virus infection (chickenpox and shingles). East Perth: Department of Health; 2025 [cited 2026 February 04]. Available from: https://www.health.wa.gov.au/Articles/U_Z/Varicella-zoster-chickenpox-and-shingles [p.10]",
+    "15. Therapeutic Guidelines: Pain and analgesia (Mild, acute nociceptive pain). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 April 03]. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain [p.10]"
+  ],
+  "open_questions": [
+    {
+      "topic": "Two-column Refer when / Treat and concurrently refer lists resolved against both page 2 and page 3",
+      "observed": "Page 3 (Refer when / Treat (if clinically appropriate) and concurrently refer) extracts as interleaved columns: three bullets stay in the left column ('the patient is aged below 18 years...', 'unclear diagnosis', 'the patient is or could be pregnant, and does not have a history of VZV (or uncertain history)') and the remaining nine ('immunocompromised' through 'inadequate response to optimal treatment.') sit in the right column. The page 2 flow separates the same two columns spatially and agrees: three Refer when bullets, nine treat-and-concurrently-refer bullets (including 'Inadequate response to optimal treatment' and 'Previously vaccinated against HZ').",
+      "why_unclear": "The column resolution determines eligibility (exclusions) versus treat-and-refer (red flags), so it was checked against both pages rather than inferred from the page 3 text order alone; both readings agree, and the resolution is recorded here so it is auditable rather than silent.",
+      "source_page": 3
+    },
+    {
+      "topic": "Combinatorics of the eligibility checklist are inferred, not printed",
+      "observed": "'Service restricted to patients aged 18 years or over' and 'may only be used by pharmacists who...' imply AND for INC-1 to INC-7; 'Refer the patient to an appropriate healthcare provider (including emergency services if required) in the following situations:' introduces the three refer-when items as alternatives, implying OR (EXC-1 to EXC-3).",
+      "why_unclear": "The document never prints 'all of' or 'any of'; the all_of/any_of groups are inferred from that wording per spec rule 4.",
+      "source_page": 3
+    },
+    {
+      "topic": "No product-level drug names, strengths, doses, frequencies or durations are printed",
+      "observed": "Pharmacotherapy is stated only as classes: 'oral antiviral therapy in accordance with the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections – Shingles (Herpes zoster))' and 'oral analgesia for mild nociceptive pain in accordance with the: Therapeutic Guidelines: Pain and analgesia (...)' (p.7). No specific antiviral or analgesic product, strength, dose, frequency, duration or quantity appears anywhere in the 11 pages.",
+      "why_unclear": "TX-1 and TX-2 have blank strength/dose/frequency fields; nothing can be transcribed without inventing it. Dosing must come from the specified sections of the current online Therapeutic Guidelines.",
+      "source_page": 7
+    },
+    {
+      "topic": "No guidance printed for the immunocompetent patient presenting more than 72 hours after rash onset",
+      "observed": "The document states antivirals reduce complications 'if started within 72 hours of rash onset in immunocompetent patients, and at any stage of rash duration in immunocompromised patients' (p.7; repeated in Key points p.3).",
+      "why_unclear": "Whether an immunocompetent patient outside the 72-hour window should be treated, referred, or advised only is not stated anywhere; no rule can be transcribed for that presentation.",
+      "source_page": 7
+    },
+    {
+      "topic": "Notifiable status: VZV is notifiable but the notification duty does not extend to pharmacists",
+      "observed": "'Under the WA Public Health Regulations 2017, VZV infection (including chickenpox and shingles) is a notifiable infectious disease.' 'Under section 94 of the Public Health Act 2016, the legal obligation to notify the Department of Health of a notifiable infectious disease applies to medical practitioners, nurse practitioners, and pathologists. This requirement does not extend to pharmacists.' (p.3 and p.7). The consent-based GP communication that is expected of pharmacists is stated separately: 'With the patient's consent, you should communicate your diagnosis of HZ to their nominated GP...'.",
+      "why_unclear": "notifiable.required is false because the statutory duty is expressly excluded for pharmacists; the two quoted conditions and the consent-based GP communication are recorded so the statutory context and the pharmacist's actual obligation are both preserved.",
+      "source_page": 7
+    },
+    {
+      "topic": "Referral content spans pages 3 to 9",
+      "observed": "Referral triggers/destinations are printed on p.3 (Refer when; Treat and concurrently refer), p.4 (complications; HZ ophthalmicus and Ramsay Hunt urgent referrals), p.5 (pregnancy urgent referrals; disseminated zoster; secondary bacterial infection), p.6-7 (pathology/medical practitioner referral), p.8 (General advice; healthcare workers; high-risk contacts) and p.9 (Clinical review).",
+      "why_unclear": "Spec rule for the referral block: shared provenance uses the first page (page 3); the range 3-9 is recorded here.",
+      "source_page": 3
+    },
+    {
+      "topic": "The two referral lists are printed twice",
+      "observed": "The Refer when and Treat and concurrently refer triggers appear in the right-hand column of the Guideline overview on page 2 and again as the dedicated sections on page 3 ('Refer the patient to an appropriate healthcare provider (including emergency services if required) in the following situations:').",
+      "why_unclear": "The lists were captured once with provenance to page 3 (the dedicated section); the page 2 duplicates and their wording variants (e.g. 'Complications of HZ, postherpetic neuralgia (PHN), or specific zoster syndromes') are noted so the duplication is not lost.",
+      "source_page": 3
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "No version, date, document ID or approving officer appears; page 11 shows footer codes \"62’GUA\" and \"180510-DEC\", 'Produced by Clinical Excellence Division' and '© Department of Health 2026'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 11
+    },
+    {
+      "topic": "Zoster vaccination appears under pharmacotherapy in the flow but is not treatment for an acute episode",
+      "observed": "Page 2 flow lists '- zoster vaccination' under pharmacotherapy, while p.7 states vaccination 'is not indicated during an acute HZ episode or to treat PHN' and is prevention for future recurrences, with the interval 'dependent on the patient's immune status'.",
+      "why_unclear": "Recorded as TX-3 with first_line false (prevention row, not acute treatment); the vaccine product, schedule and interval are delegated to the Australian Immunisation Handbook and are not printed.",
+      "source_page": 7
+    },
+    {
+      "topic": "Clinical review cadence is not specified",
+      "observed": "'Clinical review is generally not required unless the condition does not resolve or improve.' (p.9) - no fixed follow-up interval, consultation count or review window is printed anywhere.",
+      "why_unclear": "review_followup entries are event-based ('if the condition does not resolve or improve', healing timeframes) because no scheduled interval can be transcribed.",
+      "source_page": 9
+    },
+    {
+      "topic": "'Vesicles on the nose' carries no explicit referral verb",
+      "observed": "'Vesicles on the nose have been found to be predictive of eye involvement [3].' (p.4) sits inside the Herpes zoster ophthalmicus section, whose own instruction is 'Urgent referral to an appropriate healthcare provider is required.'",
+      "why_unclear": "Captured as RF-14 with action REFER_URGENT and severity high because of the enclosing section, but confidence is 'medium' because the sentence itself does not say to refer; if read in isolation it would be a risk sign only.",
+      "source_page": 4
+    },
+    {
+      "topic": "Source and adaptation acknowledged: originally Queensland Health material",
+      "observed": "Page 11: 'This document is based on clinical guidelines/protocols originally developed by Queensland Health for the Queensland Community Pharmacy Pilots. Queensland Health is acknowledged as the source of the original material.'",
+      "why_unclear": "Recorded for provenance of the instrument; no version of the Queensland originals is cited, so the WA document's own version cannot be derived from it.",
+      "source_page": 11
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm each pharmacist's EACPP approval and authorisation to prescribe under the Medicines and Poisons Regulations 2016 (WA), since 'This document alone does not provide an authorisation for a pharmacist to prescribe'.",
+      "source_page": 1,
+      "reason": "Eligibility to use the guideline is conditional on departmental approval and authorisation that this document cannot evidence."
+    },
+    {
+      "item": "Confirm the controlled version/date of this clinical practice guideline with the Department of Health (no version or date is printed; only footer codes \"62’GUA\" and \"180510-DEC\" and © Department of Health 2026).",
+      "source_page": 11,
+      "reason": "A clinical practice guideline used for funded prescribing must be version-controlled and traceable to an approval date."
+    },
+    {
+      "item": "Confirm which sections of the current online version of the Therapeutic Guidelines are the 'specified sections' that pharmacists must prescribe medicines according to (page 7) - the guideline does not enumerate them.",
+      "source_page": 7,
+      "reason": "INC-7 makes this a mandatory prescribing condition, but without the section list it cannot be evaluated as a hard check before go-live."
+    },
+    {
+      "item": "Obtain product-level antiviral and analgesic regimens (drug names, strengths, doses, frequencies, durations, quantities) from the Therapeutic Guidelines: Antibiotic (Shingles) and Therapeutic Guidelines: Pain and analgesia before any dosing rule is encoded - none are printed in this guideline.",
+      "source_page": 7,
+      "reason": "TX-1 and TX-2 have blank strength/dose/frequency fields; a prescribing support module cannot issue supply instructions from a class name alone."
+    },
+    {
+      "item": "Confirm the notification position: VZV infection is notifiable under the WA Public Health Regulations 2017, but under section 94 of the Public Health Act 2016 the duty 'does not extend to pharmacists' - confirm this reading with the Department, and document the consent-based GP communication pathway ('With the patient's consent, you should communicate your diagnosis of HZ to their nominated GP...').",
+      "source_page": 7,
+      "reason": "notifiable.required is encoded as false for pharmacists; a local process is still required for GP communication and any public health follow-up."
+    },
+    {
+      "item": "Confirm the interpretation that only the three 'Refer when' items make a patient ineligible for the service, while the nine 'Treat (if clinically appropriate) and concurrently refer' items (including immunocompromised, HZ affecting the face or genitals, and previous vaccination against HZ) remain treatable with concurrent referral.",
+      "source_page": 3,
+      "reason": "The document does not say whether the treat-and-refer list affects eligibility; this interpretation changes who can be treated in the pharmacy and must be settled before the rule is enforced."
+    },
+    {
+      "item": "Confirm zoster vaccination arrangements: the interval between a previous HZ episode and vaccination (document says it 'is dependent on the patient's immune status'), who administers or funds the vaccine in this service, and NIP risk eligibility ('The National Immunisation Program (NIP) recommends HZ vaccination for patients at risk').",
+      "source_page": 7,
+      "reason": "No interval, product or eligibility threshold is printed; vaccination is outside the acute prescribing decision and depends on local/NIP policy."
+    },
+    {
+      "item": "Confirm the healthcare worker work-exclusion rule as local occupational policy: 'healthcare workers with HZ lesions on their hands or face, or with disseminated shingles should be referred to a medical practitioner, and be excluded from work until all lesions have dried and crusted'.",
+      "source_page": 8,
+      "reason": "Work exclusion is an employment/occupational health decision the guideline asserts but does not operationalise (who excludes, who clears return to work)."
+    },
+    {
+      "item": "Confirm management of high-risk contacts: post-exposure advice for pregnant people, neonates in first month of life, immunocompromised individuals and non-immune persons, and whether vaccination, serology or exclusion is offered to non-immune healthcare worker contacts of disseminated shingles or after direct unprotected contact with lesion fluid.",
+      "source_page": 8,
+      "reason": "The guideline says contacts 'may also be advised to have vaccination, serology, or exclusion if they are non-immune' - discretionary wording that must become local policy."
+    },
+    {
+      "item": "Confirm the pain-management boundary: mild nociceptive pain is treated in-service, while 'pain management for neuropathic pain or moderate to severe nociceptive pain is needed' triggers treat-and-concurrently-refer (including postherpetic neuralgia care).",
+      "source_page": 3,
+      "reason": "The split between in-scope analgesia and referral is a severity judgement with no printed thresholds (no pain score is specified)."
+    },
+    {
+      "item": "Confirm the pregnancy pathway: urgent referral so 'zoster immunoglobulin should be given to all seronegative women within 96 hours' of first VZV exposure, and immediate referral for 'an unclear diagnosis of HZ in a pregnant patient' - who arranges the referral and how the 96-hour window is tracked.",
+      "source_page": 5,
+      "reason": "Time-critical external pathway; the guideline states the requirement but not the local arrangement or tracking responsibility."
+    },
+    {
+      "item": "Confirm the supply/quantity rule against expected duration of therapy: 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy' - no numeric quantity, pack size or repeat limit is printed.",
+      "source_page": 9,
+      "reason": "Quantity limits must be settled as local supply policy before go-live."
+    },
+    {
+      "item": "Confirm consent content and documentation for the service, including consent for communication with other health practitioners and consent for the GP notification of the HZ diagnosis.",
+      "source_page": 2,
+      "reason": "Consent content and recording method are not specified in the document and are left to the service."
+    },
+    {
+      "item": "Confirm My Health Record access arrangements for patient history verification ('Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies, and current medical conditions').",
+      "source_page": 6,
+      "reason": "Access depends on local registration, training and system configuration that the guideline assumes but does not specify."
+    }
+  ]
+}

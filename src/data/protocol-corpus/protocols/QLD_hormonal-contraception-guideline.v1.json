@@ -1,0 +1,890 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline",
+    "pdf_sha256": "3fc41facc1ae18dc49b82a5b699179b3203071da1f9211c47385989a3cfa3c08",
+    "page_count": 16,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Hormonal Contraception - Clinical Practice Guideline",
+    "instrument_version": "Version dated 1 July 2025 (version history: Version 2.0, 01.07.2025)",
+    "effective_date": "2025-07-01",
+    "legal_basis": "No prescribing legal instrument or poisons schedule provision is printed. The only programme reference is the 'Queensland Community Pharmacy Hormonal Contraception Pilot' noted in the version history (page 14, 'Document version number').",
+    "supervision_model": "Not stated using 'collaborative'/'autonomous' terminology; document states pharmacists are advised to exercise professional discretion and judgement and must prescribe medicines according to the specified sections of the current online version of the Therapeutic Guidelines in accordance with Therapeutic Guidelines: Sexual and Reproductive Health (Contraception) (21).",
+    "scope_summary": "Queensland Community Pharmacy clinical practice guideline for the Hormonal Contraception Service. Service restricted to female patients aged 16 years or over. The Service allows prescription of four types of hormonal contraception: the combined oral contraceptive pill (COC), the progestogen-only Pill (POP), depot medroxyprogesterone acetate (DMPA) injection (including administration of the injection), and the combined hormonal contraceptive vaginal ring. Covers 'Refer when' and 'Treat and concurrently refer' triggers, patient history and assessment (including sexual/social history, cultural considerations, young people, reproductive coercion, transgender and non-binary people, women over 50), BP examination, exclusion of pregnancy, contraceptive and sexual health plan, confirmation of the plan against UKMEC, communicating the plan, other considerations (VTE, cancer, STIs, cervical screening), clinical review and follow-up. Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to female patients aged 16 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Hormonal Contraception - Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "The method requested is one of the four types of hormonal contraception allowed by the Service: 'the combined oral contraceptive pill (COC); the progestogen-only Pill (POP); depot medroxyprogesterone acetate (DMPA) injection (including administration of the injection), and; the combined hormonal contraceptive vaginal ring.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'Patients are required to have a pharmacist consultation, including blood pressure (BP) measurement, before a hormonal contraceptive method may be prescribed, regardless of whether the patient is currently using the type of contraception requested.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-4",
+        "text": "'Pregnancy should be reasonably excluded before commencing any hormonal contraception (18-20).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 7, "section_heading": "Exclude pregnancy" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient requests or requires a method of contraception that is not available in the Hormonal Contraception Service e.g., long-acting reversible contraception (LARCs)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "the patient has unexplained vaginal bleeding, severe or painful menstrual bleeding, irregular periods, amenorrhea, or pain/discomfort with sexual intercourse",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "the patient may be pregnant (refer to Exclude pregnancy)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "the patient has signs and symptoms of polycystic ovarian syndrome (PCOS) that have not been assessed by an appropriate healthcare provider",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "the patient has undiagnosed hypertension, is hypertensive, or has poorly managed hypertension",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "the preferred contraceptive type is contraindicated or not appropriate (UKMEC 3 or 4).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "COCs containing 50 micrograms or more ethinylestradiol, or preparations containing mestranol, are NOT permitted for use in the Hormonal Contraception Service.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 8, "section_heading": "Combined oral contraceptive pill" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "A hormonal contraception that is classified as UKMEC category of 3 or 4 for a patient cannot be prescribed as part of the Hormonal Contraception Service.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "Confirm contraceptive plan is appropriate" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "People younger than 16 should be confidentially referred to an appropriate health care provider or sexual health clinic.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Working with young people" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "If there is any doubt regarding whether the patient may be pregnant, even if a negative urine test is returned, hormonal contraception should NOT be prescribed and the patient referred to an appropriate healthcare provider.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 7, "section_heading": "Exclude pregnancy" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Hormonal Contraception - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Hormonal Contraception - Clinical Practice Guideline" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "If emergency contraception (EC) is required, oral EC may be supplied as per usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Reproductive coercion, sexual and domestic violence and abuse" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist assessment and prescribing pathway for the Hormonal Contraception Service (history, BP, pregnancy exclusion, referral screening, treatment selection, confirmation, counselling and review)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient history and assessment - Initial consultation: Undertaking a comprehensive assessment of the patient's needs is essential to determine the most appropriate contraception method. An individualised assessment of contraceptive and sexual health needs and suitability for hormonal contraception and management within the Service should consider: patient history including sexual history; discussion of all available contraceptive options (including options not available in the Service that may be suitable); assessment of medical eligibility and contraindications; BP measurement and BMI; risk assessment for STIs. Selection of an appropriate hormonal method and formulation should consider: factors that could affect contraceptive effectiveness (including product efficacy); how long the patient thinks they will be using contraception (e.g. <1 year, <3 years, >3 years); non-contraceptive benefits; common side effects and risk of adverse effects; health risks and individualised advice. Comprehensive counselling and advice may include: the use of tailored regimens; avoiding contraceptive failure, including instructions on missed pills or DMPA injections. For detailed information on each contraceptive option, including contraindications and precautions, pharmacists should consult the Therapeutic Guidelines: Sexual and Reproductive Health, current guidance from RANZCOG and RCOG FSRH including: UK Medical Eligibility Criteria for Contraceptive Use (UKMEC) (1); FSHR Clinical guideline – Progestogen-only Pills (2); FSHR Clinical guideline – Combined Hormonal Contraception (3); FSHR Clinical guideline – Progestogen-only injectable contraception (4); RANZCOG Contraception clinical guideline (5).",
+          "gates": [
+            { "criterion": "Assessment of medical eligibility and contraindications completed", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 3, "section_heading": "Initial consultation" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; gender assigned at birth and fertility status (for transgender and non-binary patients); plans to become pregnant, current pregnancy status (and how this has been determined); recent pregnancies, and lactation status; underlying medical conditions including mental health conditions, which may be a contraindication to hormonal contraception e.g., migraine with aura, liver disease, or impact on contraceptive effectiveness and choice; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements, and over-the-counter medicines); drug allergies/adverse reactions; prior use of contraceptives, tolerability and adverse effects including mood-related symptoms; smoking status; BMI; other factors such as age of menarche, usual menstrual cycle, heavy periods, period pain or changes in menstrual cycle, irregular or post-coital bleeding, symptoms that may suggest endometriosis (e.g., pelvic pain, severe pain with menstruation and/or sexual intercourse), symptoms that may suggest PCOS (e.g., oligomenorrhea, hirsutism, acne, weight gain); last STI screen and Cervical Screening Test (CST); presence of genitourinary symptoms that may suggest an STI (changes in vaginal or urethral discharge; vulval, genital skin problems or symptoms; lower abdominal pain; dysuria); Human Papillomavirus (HPV) vaccination status. Reminder: pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 5, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "Sexual (and social) history: In addition to a standard patient history, pharmacists should also take a social and sexual history from the patient to inform shared decision making. When taking a sexual history: start by asking open questions about the patient's social background (to enable the patient to relax and provide the appropriate context for decision-making) (15); more specific questions can then be asked about risk behaviours, followed by questions around sexual practices if required (15). The following issues should be considered to determine if the patient is at risk of an STI, or if STI testing is indicated, but may not be relevant to all people (15): previous use and experiences with contraception; current relationship status; number of recent partners and their gender; risky behaviours including illicit and/or intravenous drug use, alcohol use; potential for reproductive coercion, sexual and domestic abuse (refer to Reproductive coercion, sexual and domestic violence and abuse); previous STIs and risk factors for STIs (including STI history of current and/or recent partner if applicable).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 6, "section_heading": "Sexual (and social) history" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EXAMINATION",
+          "description": "Examination: The pharmacist should measure BP to determine the patient's suitability for their preferred contraceptive type, and to monitor potential impacts of contraception, including hypertension. BP should be measured in accordance with the National Heart Foundation of Australia Guideline for the diagnosis and management of hypertension in adults (16). A single elevated BP reading is not enough to classify a patient as hypertensive, and a second BP reading should be taken at the end of the consultation (16, 17). Patients are required to have a pharmacist consultation, including blood pressure (BP) measurement, before a hormonal contraceptive method may be prescribed (page 2, Key points).",
+          "gates": [
+            { "criterion": "The patient does not have undiagnosed hypertension, is not hypertensive, and does not have poorly managed hypertension (RF-6/EXC-5)", "on_fail": "REFER" },
+            { "criterion": "If the first BP reading is elevated, a second BP reading is taken at the end of the consultation (a single elevated BP reading is not enough to classify a patient as hypertensive)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 6, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Exclude pregnancy: Pregnancy should be reasonably excluded before commencing any hormonal contraception (18-20). A patient can be reasonably assumed not to be pregnant if: there are no symptoms or signs of pregnancy AND any of the following criteria are met: they have not had intercourse since the start of the last normal (natural) menstrual period, or since childbirth, abortion or miscarriage; they have been correctly and consistently using a reliable method of contraception (barrier methods can be assumed to be reliable if used correctly in this context); they are within the first 5 days of the onset of a normal (natural) menstrual period, within the first 5 days after abortion or miscarriage; they are less than 21 days postpartum (non-lactating women); they have not had intercourse for >21 days and have a negative urine pregnancy test (4, 12).",
+          "gates": [
+            { "criterion": "No symptoms or signs of pregnancy AND at least one of the five printed criteria met (no intercourse since last normal menstrual period/childbirth/abortion/miscarriage; correct and consistent use of a reliable method; within first 5 days of onset of a normal menstrual period or first 5 days after abortion or miscarriage; less than 21 days postpartum (non-lactating); no intercourse for >21 days with a negative urine pregnancy test)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 7, "section_heading": "Exclude pregnancy" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "Exclude pregnancy (testing): Use of an appropriate pregnancy test is recommended – this may include referral for a blood test for serum human Chorionic Gonadotropin (hCG) levels. If there is any doubt regarding whether the patient may be pregnant, even if a negative urine test is returned, hormonal contraception should NOT be prescribed and the patient referred to an appropriate healthcare provider.",
+          "gates": [
+            { "criterion": "No doubt regarding whether the patient may be pregnant (a negative urine test alone does not clear doubt - see RF-14/EXC-10)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 7, "section_heading": "Exclude pregnancy" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Screen against the printed 'Refer when' list: Refer the patient to an appropriate healthcare provider (including sexual health service or emergency services, if required) in the following situations: the patient requests or requires a method of contraception that is not available in the Hormonal Contraception Service e.g., long-acting reversible contraception (LARCs); the patient has unexplained vaginal bleeding, severe or painful menstrual bleeding, irregular periods, amenorrhea, or pain/discomfort with sexual intercourse; the patient may be pregnant (refer to Exclude pregnancy); the patient has signs and symptoms of polycystic ovarian syndrome (PCOS) that have not been assessed by an appropriate healthcare provider; the patient has undiagnosed hypertension, is hypertensive, or has poorly managed hypertension; the preferred contraceptive type is contraindicated or not appropriate (UKMEC 3 or 4). (See EXC-1 to EXC-6, RF-2 to RF-7.)",
+          "gates": [
+            { "criterion": "None of the 'Refer when' triggers present (RF-2 to RF-7)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "Treat and concurrently refer: Provide treatment and concurrently refer to an appropriate healthcare provider (including sexual health service or emergency services, if required) in the following situations: patient has been, or suspected to have been, subject to reproductive coercion, sexual abuse or sexual violence (refer to Reproductive coercion, sexual and domestic violence and abuse); patient has a body mass index (BMI) >35 kg/m2; patient has symptoms of or risk factors for sexually transmitted infection (STI), or requests STI screening. (See RF-8 to RF-10.)",
+          "gates": [
+            { "criterion": "None of the 'Treat and concurrently refer' triggers present (RF-8 to RF-10)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Treat and concurrently refer" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "REFER",
+          "description": "Special populations and out-of-service referrals. Working with young people: People younger than 16 should be confidentially referred to an appropriate health care provider or sexual health clinic. People aged 16 and 17 years are generally assumed to have the capacity to consent to medical treatment (known as Gillick Competency), including for contraception, and consent from a parent/caregiver is not required (however, it is considered good practice for the parent/caregiver to be involved in decision making around health care) (8, 9). If the minor has the capacity to consent and does not wish to involve an adult, this should be respected (9). Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Safety accordingly. To assess the minor's capacity to consent to treatment, healthcare providers must consider the minor's capacity to understand the risks and benefits of the contraception (and the seriousness of the risks of using hormonal contraception and not using contraception) to make an informed decision (8,9). Assessments of capacity to consent for minors (or adults where competency may be in doubt, for example people with an intellectual disability) must be documented in the patient record. If the pharmacist cannot determine the minor's capacity, they should refer the patient to an appropriate healthcare provider for further assessment. Reproductive coercion, sexual and domestic violence and abuse: If the pharmacist becomes aware of this during the consultation, they should provide appropriate support and assistance, including referral to support options depending on the patient circumstances. Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services. If emergency contraception (EC) is required, oral EC may be supplied as per usual pharmacy care. Ulipristal is the most effective oral EC, however the most appropriate oral EC for a patient depends on several factors. Insertion of a copper intrauterine device (IUD) is the most effective form of EC (5). The patient may require referral to an appropriate medical practitioner or health service for IUD insertion. Contraceptive options for transgender and non-binary people: Transgender (trans) and non-binary people may benefit from referral to specialist sexual health services for comprehensive and culturally safe sexual healthcare that is tailored to their individual needs. Patients that require assistance with insertion of a vaginal ring should be referred to an appropriate healthcare provider (page 9, Combined hormonal vaginal ring).",
+          "gates": [
+            { "criterion": "Patient is aged 16 years or over (younger than 16 -> confidential referral)", "on_fail": "REFER" },
+            { "criterion": "The minor's capacity to consent to treatment can be determined and is documented in the patient record", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Working with young people" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "Contraceptive and sexual health plan - Selecting the most appropriate hormonal contraceptive option: Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines in accordance with Therapeutic Guidelines: Sexual and Reproductive Health (Contraception) (21). The choice of hormonal contraception will depend on: the patient's history; the patient's preference (cost short and long term, ease of use, management of other conditions, potential side effects); contraceptive efficacy (when used correctly, the hormonal methods available in the Service have similar failure rates; LARC methods (IUDs and implants) are the most reliable and cost-effective reversible methods of contraception (21)). The four service methods: combined oral contraceptive pill (COC) - 'The COC with the lowest effective dose of estrogen and progestogen that is well tolerated and able to provide acceptable menstrual cycle control for the patient should be chosen as first-line (10, 27)'; other guiding principles for COC pill selection are: safety profile, affordability and additional non-contraceptive benefits if desired (27); the quadriphasic pill is indicated for heavy menstrual bleeding as well as contraception but it has complex instructions for managing a missed pill (18); triphasic pills are no longer commonly used because of a lack of benefits over other types (18); COCs are listed in the Therapeutic Guidelines: Formulations of combined hormonal contraception table (18); 'COCs containing 50 micrograms or more ethinylestradiol, or preparations containing mestranol, are NOT permitted for use in the Hormonal Contraception Service'; COCs with a high estrogen dose (50 micrograms of ethinylestradiol, or containing mestranol) are not routinely recommended for contraception because of the unacceptable risk of venous thromboembolism (VTE) (18). progestogen-only Pill (POP) - for patients who have a contraindication to estrogen in COC pills or prefer estrogen-free contraception, POPs can be considered (2); drospirenone provides more consistent suppression of ovulation than levonorgestrel or norethisterone and may provide better bleeding control (5, 20). depot medroxyprogesterone acetate (DMPA) injection - DMPA may be the contraceptive of choice for individuals with contraindications to estrogen, those taking drugs that induce the CYP3A4 liver enzyme (refer to the Australian Medicines Handbook) or if a discrete method of contraception is preferred with less user input required; DMPA is not a first-line option for adolescents or in perimenopausal women because of the theoretical propensity to cause bone mineral density (BMD) loss and/or limit peak BMD (12); during each annual consultation, pharmacists should assess the user's risk factors for low BMD and cardiovascular disease (19); women who wish to continue using DMPA should be reviewed by an appropriate healthcare provider every 2 years (4). combined hormonal contraceptive vaginal ring - patients that require assistance with insertion of a vaginal ring should be referred to an appropriate healthcare provider.",
+          "gates": [
+            { "criterion": "Preferred contraceptive type is available in the Hormonal Contraception Service (COC, POP, DMPA injection, combined hormonal contraceptive vaginal ring)", "on_fail": "REFER" },
+            { "criterion": "The hormonal contraception is not classified as UKMEC category 3 or 4 for the patient", "on_fail": "REFER" },
+            { "criterion": "If a COC is selected, it does not contain 50 micrograms or more ethinylestradiol and does not contain mestranol (NOT permitted for use in the Hormonal Contraception Service)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 7, "section_heading": "Contraceptive and sexual health plan" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm contraceptive plan is appropriate: Consult the current editions of the Therapeutic Guidelines, the Australian Medicines Handbook, and the UKMEC to confirm contraceptive management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. A hormonal contraception that is classified as UKMEC category of 3 or 4 for a patient cannot be prescribed as part of the Hormonal Contraception Service.",
+          "gates": [
+            { "criterion": "Management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation", "on_fail": "unclear" },
+            { "criterion": "The hormonal contraception is not classified as UKMEC category 3 or 4 for the patient (cannot be prescribed as part of the Service)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "Confirm contraceptive plan is appropriate" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "EDUCATE",
+          "description": "Communicate agreed contraceptive plan: Comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medicine use - instructions for commencing; deviation from schedule (e.g. a pill is missed, a DMPA injection is not administered at 12 weeks, or a new vaginal ring is inserted too late or removed before the 3-week interval); how long a secondary method of contraception must be used to avoid unplanned pregnancy; instructions on tailored regimens; advice on when fertility can be expected to return after ceasing the contraceptive; emergency contraceptive options that are available in instances of contraceptive failure; how to manage adverse effects; when to seek further care and/or treatment - signs of VTE and what to do if it is suspected, the importance of reporting new or worsening mood-related symptoms, before ceasing the contraceptive; review with an appropriate healthcare provider at least every 2 years; when to return for follow-up. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. Where appropriate, individuals may be provided with additional resources to support sexual health. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources provided to patients (and parent/caregiver if applicable), and to ensure compliance with all copyright conditions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 10, "section_heading": "Communicate agreed contraceptive plan" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "EDUCATE",
+          "description": "Other considerations. Venous Thromboembolism: DMPA and other progestogen-only contraceptives are not associated with a clinically significant risk of VTE (12); there is approximately a three times increase in the risk of VTE in women using COC, however, this increased risk is still smaller than the risk of VTE during pregnancy and immediately post-partum (27); the risk is highest in the first year of use, and still remains higher than for non-users after the first year, however, the absolute risk is still very low (12); COCs containing levonorgestrel or norethisterone have a slightly lower risk of VTE (12); women should be reassured of the overall safety of the contraceptive pill. Contraception and cancer risks: users of COC have a slightly increased relative risk of breast cancer (risk returns to normal 10 years after cessation of the OCP) and cervical cancer (non-causal), however, the risk of endometrial and ovarian cancers is slightly decreased (12, 18). Sexually Transmitted Infections (STIs): individuals who may be at risk of STIs should be informed of the risk factors, the availability of screening and treatment, and strategies on how to prevent STIs; pharmacists should recommend STI testing for individuals who may be at risk, even if the individual does not report any symptoms; individuals should be advised of the link between HPV and cervical cancer and advised of strategies that reduce the risk, including HPV vaccination and primary HPV screening, as per the current national guidelines (19, 32-34); Aboriginal and Torres Strait Islander People are disproportionally affected by STIs - consider the Australian STI Management Guidelines for use in primary care for priority populations testing and frequency (35); 13 HEALTH Webtest service is a free and confidential urine test for chlamydia and gonorrhoea available to Queenslanders aged 16 years and over, without a Medicare card (31); access the 13 HEALTH (13 43 25 84) service to find a GP or sexual health clinic, an Aboriginal Medical Service or a community-based testing site. National Cervical Screening Program: a cervical screening test (CST) for HPV is recommended every 5 years for women and people with a cervix aged 25-74 years of age who have had sexual contact (32, 34, 36).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 10, "section_heading": "Other considerations" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines. Patients should return for a follow up consultation 3-4 months after initiation of a new contraceptive method (i.e. the patient has no recent experience of taking that type of contraception) to screen for adverse effects including hypertension. Clinical review, including measurement of the patient's BP, is recommended at 12 monthly intervals for all patients on regular contraceptive (5). For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+          "gates": [
+            { "criterion": "Patient returns for follow up consultation 3-4 months after initiation of a new contraceptive method (screen for adverse effects including hypertension)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 12, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "combined oral contraceptive pill (COC)",
+      "form": "oral contraceptive pill",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "One of the four types of hormonal contraception allowed by the Service. 'The COC with the lowest effective dose of estrogen and progestogen that is well tolerated and able to provide acceptable menstrual cycle control for the patient should be chosen as first-line (10, 27).' Other guiding principles for COC pill selection: safety profile, affordability and additional non-contraceptive benefits if desired (27). 'COCs containing 50 micrograms or more ethinylestradiol, or preparations containing mestranol, are NOT permitted for use in the Hormonal Contraception Service.' Comparative information about COCs is available in the Australian Medicines Handbook: Combined oral contraceptives (22); COCs available in Australia and for use in the Service are listed in the Therapeutic Guidelines: Formulations of combined hormonal contraception table (18). Quadriphasic pill is indicated for heavy menstrual bleeding as well as contraception but has complex instructions for managing a missed pill (18); triphasic pills are no longer commonly used (18). No specific product name, strength, dose or frequency is printed in this guideline (see OQ-2).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 8, "section_heading": "Combined oral contraceptive pill" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "progestogen-only Pill (POP)",
+      "form": "oral contraceptive pill",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "One of the four types of hormonal contraception allowed by the Service. 'For patients who have a contraindication to estrogen in COC pills or prefer estrogen-free contraception, POPs can be considered (2). Drospirenone provides more consistent suppression of ovulation than levonorgestrel or norethisterone and may provide better bleeding control (5, 20).' Refer to RANZCOG & FSRH Contraception Clinical Guideline and FSRH Clinical guideline: Progestogen-only Pills (2, 5). No specific product name, strength, dose or frequency is printed (see OQ-2).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "Progestogen-only contraceptive pill" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "depot medroxyprogesterone acetate (DMPA) injection",
+      "form": "injection (including administration of the injection)",
+      "strength": "",
+      "dose": "",
+      "route": "injection",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "One of the four types of hormonal contraception allowed by the Service (including administration of the injection). 'DMPA may be the contraceptive of choice for individuals with contraindications to estrogen, those taking drugs that induce the CYP3A4 liver enzyme (refer to the Australian Medicines Handbook) or if a discrete method of contraception is preferred with less user input required.' 'DMPA is not a first-line option for adolescents or in perimenopausal women because of the theoretical propensity to cause bone mineral density (BMD) loss and/or limit peak BMD (12).' 'During each annual consultation, pharmacists should assess the user's risk factors for low BMD and cardiovascular disease (19).' 'Women who wish to continue using DMPA should be reviewed by an appropriate healthcare provider every 2 years to assess any changes in benefits and potential risks of use (4).' Deviation-from-schedule counselling example as printed: 'a DMPA injection is not administered at 12 weeks'. DMPA and other progestogen-only contraceptives are not associated with a clinically significant risk of VTE (12). No strength or dose is printed (see OQ-2/OQ-7).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "DMPA injection" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "combined hormonal contraceptive vaginal ring",
+      "form": "vaginal ring",
+      "strength": "",
+      "dose": "",
+      "route": "vaginal",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "One of the four types of hormonal contraception allowed by the Service. 'Patients that require assistance with insertion of a vaginal ring should be referred to an appropriate healthcare provider.' Refer to RANZCOG & FSRH Contraception Clinical Guideline and FSRH Clinical guideline: Combined Hormonal Contraception (3, 5). Printed interval reference (counselling): 'a new vaginal ring is inserted too late or removed before the 3-week interval'. No product name, strength or dose is printed (see OQ-2).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "Combined hormonal vaginal ring" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "ethinylestradiol (COCs containing 50 micrograms or more) or mestranol",
+      "form": "oral contraceptive pill",
+      "strength": "50 micrograms or more ethinylestradiol; or mestranol-containing preparations",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'COCs containing 50 micrograms or more ethinylestradiol, or preparations containing mestranol, are NOT permitted for use in the Hormonal Contraception Service.' 'COCs with a high estrogen dose (50 micrograms of ethinylestradiol, or containing mestranol) are not routinely recommended for contraception because of the unacceptable risk of venous thromboembolism (VTE) (18). These formulations are not permitted for use in the Hormonal Contraception Service.' Recorded as a prohibited product, not an available treatment.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 8, "section_heading": "Combined oral contraceptive pill" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "emergency contraception (oral)",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'If emergency contraception (EC) is required, oral EC may be supplied as per usual pharmacy care.' 'Ulipristal is the most effective oral EC, however the most appropriate oral EC for a patient depends on several factors.' 'Insertion of a copper intrauterine device (IUD) is the most effective form of EC (5). The patient may require referral to an appropriate medical practitioner or health service for IUD insertion.' Supplied as usual pharmacy care (not part of the Hormonal Contraception Service - see EXE-2). No dose or schedule printed (see OQ-13).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Reproductive coercion, sexual and domestic violence and abuse" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Service restricted to female patients aged 16 years or over. (female patient aged under 16 years)",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Hormonal Contraception - Clinical Practice Guideline" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "the patient requests or requires a method of contraception that is not available in the Hormonal Contraception Service e.g., long-acting reversible contraception (LARCs)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "the patient has unexplained vaginal bleeding, severe or painful menstrual bleeding, irregular periods, amenorrhea, or pain/discomfort with sexual intercourse",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "the patient may be pregnant (refer to Exclude pregnancy)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "the patient has signs and symptoms of polycystic ovarian syndrome (PCOS) that have not been assessed by an appropriate healthcare provider",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "the patient has undiagnosed hypertension, is hypertensive, or has poorly managed hypertension",
+      "structured": { "parameter": "hypertension status", "operator": "in", "value": "undiagnosed hypertension; hypertensive; poorly managed hypertension", "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "the preferred contraceptive type is contraindicated or not appropriate (UKMEC 3 or 4).",
+      "structured": { "parameter": "UKMEC category for the preferred contraceptive type", "operator": "in", "value": [3, 4], "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "patient has been, or suspected to have been, subject to reproductive coercion, sexual abuse or sexual violence (refer to Reproductive coercion, sexual and domestic violence and abuse)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "patient has a body mass index (BMI) >35 kg/m2",
+      "structured": { "parameter": "body mass index", "operator": ">", "value": 35, "unit": "kg/m2" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "patient has symptoms of or risk factors for sexually transmitted infection (STI), or requests STI screening.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "People younger than 16 should be confidentially referred to an appropriate health care provider or sexual health clinic.",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Working with young people" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "If the pharmacist cannot determine the minor's capacity, they should refer the patient to an appropriate healthcare provider for further assessment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Working with young people" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Safety accordingly.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Working with young people" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "If there is any doubt regarding whether the patient may be pregnant, even if a negative urine test is returned, hormonal contraception should NOT be prescribed and the patient referred to an appropriate healthcare provider.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 7, "section_heading": "Exclude pregnancy" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "COCs containing 50 micrograms or more ethinylestradiol, or preparations containing mestranol, are NOT permitted for use in the Hormonal Contraception Service.",
+      "structured": { "parameter": "ethinylestradiol dose in COC", "operator": ">=", "value": 50, "unit": "micrograms" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 8, "section_heading": "Combined oral contraceptive pill" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "A hormonal contraception that is classified as UKMEC category of 3 or 4 for a patient cannot be prescribed as part of the Hormonal Contraception Service.",
+      "structured": { "parameter": "UKMEC category for the hormonal contraception", "operator": "in", "value": [3, 4], "unit": "" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "Confirm contraceptive plan is appropriate" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Patients that require assistance with insertion of a vaginal ring should be referred to an appropriate healthcare provider.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "Combined hormonal vaginal ring" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "The patient may require referral to an appropriate medical practitioner or health service for IUD insertion.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 5, "section_heading": "Reproductive coercion, sexual and domestic violence and abuse" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Transgender (trans) and non-binary people may benefit from referral to specialist sexual health services for comprehensive and culturally safe sexual healthcare that is tailored to their individual needs.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 5, "section_heading": "Contraceptive options for transgender and non-binary people" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Women who wish to continue using DMPA should be reviewed by an appropriate healthcare provider every 2 years to assess any changes in benefits and potential risks of use (4).",
+      "structured": { "parameter": "duration of continuous DMPA use", "operator": ">=", "value": 2, "unit": "years" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "DMPA injection" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "review with an appropriate healthcare provider at least every 2 years",
+      "structured": { "parameter": "time since last review with an appropriate healthcare provider", "operator": ">=", "value": 2, "unit": "years" },
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 10, "section_heading": "Communicate agreed contraceptive plan" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "when to seek further care and/or treatment - signs of VTE and what to do if it is suspected",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 10, "section_heading": "Communicate agreed contraceptive plan" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "the importance of reporting new or worsening mood-related symptoms",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 10, "section_heading": "Communicate agreed contraceptive plan" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "sexual health service",
+      "an appropriate health care provider or sexual health clinic (confidential referral for people younger than 16)",
+      "an appropriate healthcare provider for further assessment of a minor's capacity to consent",
+      "the local hospital, sexual health clinic and/or community-based sexual violence support services",
+      "specialist sexual health services (transgender and non-binary people)",
+      "an appropriate medical practitioner or health service for IUD insertion (emergency contraception)",
+      "an appropriate healthcare provider for assistance with insertion of a vaginal ring",
+      "referral for a blood test for serum human Chorionic Gonadotropin (hCG) levels",
+      "an appropriate healthcare provider (appropriate support and assistance for reproductive coercion, sexual violence or abuse)"
+    ],
+    "urgent": [
+      "emergency services, if required"
+    ],
+    "emergency": [
+      "emergency services, if required"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "3-4 months after initiation of a new contraceptive method (i.e. the patient has no recent experience of taking that type of contraception)",
+      "what": "Patients should return for a follow up consultation 3-4 months after initiation of a new contraceptive method to screen for adverse effects including hypertension.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 12, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "12 monthly intervals for all patients on regular contraceptive",
+      "what": "Clinical review, including measurement of the patient's BP, is recommended at 12 monthly intervals for all patients on regular contraceptive (5).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 12, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "For patients continuing therapy",
+      "what": "Follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 12, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At least every 2 years (and every 2 years for women continuing DMPA)",
+      "what": "Review with an appropriate healthcare provider at least every 2 years; women who wish to continue using DMPA should be reviewed by an appropriate healthcare provider every 2 years to assess any changes in benefits and potential risks of use (4). During each annual consultation, pharmacists should assess the user's risk factors for low BMD and cardiovascular disease (19).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 9, "section_heading": "DMPA injection" }
+    },
+    {
+      "when": "At each prescribing decision (quantity to supply)",
+      "what": "Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 12, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At age 50 and at menopause",
+      "what": "The choice of contraceptive should be reconsidered at age 50 and at menopause (12). Contraception is required for 12 months after the final menstrual period if it occurs after the age of 50. If the final menstrual period occurs before the age of 50, 24 months of contraception is required before cessation (14).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 5, "section_heading": "Women over 50 years of age" }
+    },
+    {
+      "when": "Every 5 years for women and people with a cervix aged 25-74 years of age who have had sexual contact",
+      "what": "A cervical screening test (CST) for HPV is recommended every 5 years (32, 34, 36).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 11, "section_heading": "National Cervical Screening Program" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Safety accordingly. More information is available on the Queensland Government Child Abuse website."
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\hormonal-contraception-guideline", "page": 4, "section_heading": "Working with young people" }
+  },
+  "references": [
+    "1. The Faculty of Sexual & Reproductive Healthcare. The UK Medical Eligibility Criteria for Contraceptive Use (UKMEC): FSRH; 2019 [cited 2025 April 3]. Available from: www.fsrh.org/Public/Documents/ukmec-2016.aspx (page 15)",
+    "2. The Faculty of Sexual & Reproductive Healthcare. Progestogen-only Pills: FSRH; 2023 [cited 2025 April 3]. Available from: www.fsrh.org/Public/Public/Documents/ceu-guideline-progestogen-only-pills.aspx. (page 15)",
+    "3. The Faculty of Sexual & Reproductive Healthcare. Combined Hormonal Contraception: FSRH; 2023 [cited 2025 April 3]. Available from: www.fsrh.org/Public/Documents/fsrh-guideline-combined-hormonal-contraception.aspx. (page 15)",
+    "4. The Faculty of Sexual & Reproductive Healthcare. Progestogen-only Injectables: FSRH; 2023 [cited 2025 April 3]. Available from: www.fsrh.org/Public/Documents/fsrh-ceu-guidance-progestogen-only-injectables.aspx. (page 15)",
+    "5. The Royal Australian and New Zealand College of Obstetricians and Gynaecologists. Contraception clinical guideline. Melbourne: The Royal Australian and New Zealand College of Obstetricians and Gynaecologists; 2024. Available from: https://ranzcog.edu.au/resources/statements-and-guidelines-directory/ (page 15)",
+    "6. Cultural Capability Statewide Team. Aboriginal and Torres Strait Islander adolescent sexual health guideline Brisbane: State of Queensland (Queensland Health); 2013. (page 15)",
+    "7. Pharmaceutical Society of Australia. Guidelines for pharmacists supporting Aboriginal and Torres Strait Islander peoples with Medicines Management. 2022 [cited 2025 April 3]. Available from: https://my.psa.org.au/s/article/Providing-Pharmacy-Services-to-Aboriginal-and-Torres-Strait-Islander-People (page 15)",
+    "8. Legal Aid Queensland. Medical consent [Webpage]. Brisbane: Legal Aid Queensland; 2022 [cited 2025 April 3]. Available from: www.legalaid.qld.gov.au/Find-legal-information/Personal-rights-and-safety/Health-and-medical/Medical-consent. (page 15)",
+    "9. Clinical Excellence Queensland. Guide to Informed Decision-making in Health Care. Brisbane: State of Queensland; 2024 [cited 2025 April 3]. Available from: www.health.qld.gov.au/consent/clinician-resources/guide-to-informed-decision-making-in-healthcare (page 15)",
+    "10. Pharmaceutical Society of Australia. Women's sexual and reproductive health Essential CPE. 2018. Available from: https://my.psa.org.au/s/article/Women-s-sexual-and-reproductive-health (page 15)",
+    "11. The Faculty of Sexual & Reproductive Healthcare. FSRH CEU Statement: Contraceptive Choices and Sexual Health for Transgender and Non-binary People: FSRH; 2017 [cited 2025 April 3]. Available from: https://www.fsrh.org/Public/Public/Documents/fsrh-ceu-statement-contraceptive-choices-and-sexual-health-for-non-binary-people.aspx. (page 15)",
+    "12. Therapeutic Guidelines: Sexual and Reproductive Health. Choice of contraceptive method. Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 3]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Sexual%20and%20Reproductive%20Health&topicfile=contraceptive-choice (page 15)",
+    "13. Cancer Council. Cervical screening. Information for LGBTIQ people. At: www.cancer.org.au/cervicalscreening/i-am-over-25/do-i-need-the-test/information-for-lgbtiq-people (page 15)",
+    "14. Menopause Society of Australia. Contraception. [cited 2025 April 4]. Available from: www.menopause.org.au/hp/information-sheets/contraception#:~:text=Contraception%20is%20required%20for%2012,50%20due%20to%20cardiovascular%20risks (page 15)",
+    "15. Australasian Society for HIV, Viral Hepatitis and Sexual Health Medicine. How to take a sexual history [webpage]; Sydney: ASHM; 2024 [cited 2025 April 4]. Available from: https://sti.guidelines.org.au/sexual-history/ (page 15)",
+    "16. National Heart Foundation of Australia. Guideline for the diagnosis and management of hypertension in adults. Melbourne: National Heart Foundation of Australia; 2016. Available from: https://www.heartfoundation.org.au/for-professionals/hypertension (page 15)",
+    "17. Therapeutic Guidelines: Hypertension and blood pressure reduction. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 April 3]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Cardiovascular&topicfile=c_CVG_Hypertension-and-blood-pressure-reductiontopic_1&guidelinename=auto&sectionId=c_CVG_Hypertension-and-blood-pressure-reductiontopic_1#c_CVG_Hypertension-and-blood-pressure-reductiontopic_1 (page 15)",
+    "18. Therapeutic Guidelines: Sexual and Reproductive Health. Combined hormonal contraception. Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 3]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Sexual%20and%20Reproductive%20Health&topicfile=combined-hormonal-contraception (page 16)",
+    "19. Therapeutic Guidelines: Sexual and Reproductive Health. Depot medroxyprogesterone contraception. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 April 3]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=depot-medroxyprogesterone. (page 16)",
+    "20. Therapeutic Guidelines: Sexual and Reproductive Health. Progestogen-only oral contraception. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 April 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?etgAccess=true&guidelinePage=Sexual%20and%20Reproductive%20Health&topicfile=POP (page 16)",
+    "21. Therapeutic Guidelines: Sexual and Reproductive Health. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 April 3]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Sexual%20and%20Reproductive%20Health&amp;etgAccess=true. (page 16)",
+    "22. Australian Medicines Handbook: Drugs for contraception. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 3]. Available from: https://amhonline.amh.net.au/chapters/obstetric-gynaecological-drugs/drugs-contraception?menu=vertical. (page 16)",
+    "23. True relationships and Reproductive Health. Contraception [Webpage]. Brisbane: True relationships and Reproductive Health; 2023 [cited 2025 April 3]. Available from: https://www.true.org.au/factsheets/choose-a-topic/contraception. (page 16)",
+    "24. Jean Hailes. Contraception fact sheet [webpage]. Melbourne: Jean Hailes; 2024 [cited 2025 April 3]. Available from: Contraception fact sheet | Jean Hailes. (page 16)",
+    "25. Sexual Health & Family Planning Australia. Contraception choices Sydney: Family Planning NSW; (n.d.) [cited 2025 April 3]. Available from: https://www.fpnsw.org.au/health-information/individuals/contraception/contraception-choices. (page 16)",
+    "26. SPHERE. Which contraceptive method is right for you? [webpage]. Victoria: SPHERE Centre of Research Excellence; 2025 [cited 2025 April 3]. Available from: www.spherecre.org/2022-012-16-09-20-6/contraceptive-options (page 16)",
+    "27. Stewart M, Black K. Choosing a combined oral contraceptive pill. Australian Prescriber. 2015;38:6-11. (page 16)",
+    "28. Dehlendorf C, Krajewski C, Borrero S. Contraceptive counseling: best practices to ensure quality communication and enable effective contraceptive use. Clin Obstet Gynecol. 2014;57(4):659-73. (page 16)",
+    "29. Department of Health. Stop the rise of STIs [webpage]. Brisbane: State of Queensland (Queensland Health); 2025 [cited 2025 April 3]. Available from: https://www.stoptherise.initiatives.qld.gov.au/ (page 16)",
+    "30. South Australian Health and Medical Research Institute. Young Deadly Free Adelaide: SAHMRI; 2025 [cited 2025 April 3]. Available from: https://youngdeadlyfree.org.au/ (page 16)",
+    "31. Queensland Government. Free chlamydia and gonorrhoea test; 2025 [cited 2025 April 3]. Available from: www.qld.gov.au/health/staying-healthy/sexual-health/chlamydia-test (page 16)",
+    "32. Australian Government: Department of Health and Aged Care. National Cervical Screening Program Canberra: Commonwealth of Australia; 2025 [cited 2025 April 3]. Available from: https://www.health.gov.au/initiatives-and-programs/national-cervical-screening-program. (page 16)",
+    "33. The Royal Australian and New Zealand College of Obstetricians and Gynaecologists. C-Gyn 19 Cervical Cancer Screening in Australia and Aotearoa New Zealand. Melbourne; 2024 [cited 2025 April 4] Available from: https://ranzcog.edu.au/resources/statements-and-guidelines-directory/ (page 16)",
+    "34. Queensland Health. Queensland Sexual Health Strategy 2016-2021. Brisbane: State of Queensland; 2016. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0024/601935/qh-sexual-health-strategy.pdf (page 16)",
+    "35. Australasian Society for HIV, Viral Hepatitis and Sexual Health Medicine (ASHM). Australian sexually transmitted infection (STI) management guidelines for use in primary care: 2024 update [cited 2025 April 4]. Available from: https://sti.guidelines.org.au/ (page 16)",
+    "36. Australian Government: Department of Health and Aged Care. Cervical Screening Options [Webpage]. Canberra: Commonwealth of Australia; 2022 [cited 2025 April 3]. Available from: www.health.gov.au/our-work/NCSP-healthcare-provider-toolkit/cervical-screening-options (page 16)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Combinatorics of referral/exclusion lists interpreted as any_of",
+      "observed": "The 'Refer when' and 'Treat and concurrently refer' lists are introduced with 'in the following situations:' followed by bullets, with no explicit AND/OR wording; they are encoded as criteria_group.any_of (any one bullet triggers the action). The pregnancy exclusion on page 7 does state combinatorics explicitly ('there are no symptoms or signs of pregnancy AND any of the following criteria are met') and is encoded with AND plus any-of semantics in the PW-1-S5 gate.",
+      "why_unclear": "Document does not state combinatorics for the bullet lists; default interpretation recorded.",
+      "source_page": 2
+    },
+    {
+      "topic": "Specific contraceptive products, strengths, doses and frequencies not printed",
+      "observed": "The guideline lists only the four service method classes and delegates product-level detail to Therapeutic Guidelines: Sexual and Reproductive Health (Contraception), the 'Therapeutic Guidelines: Formulations of combined hormonal contraception table (18)', Australian Medicines Handbook: Drugs for contraception (22) and FSRH/RANZCOG guidelines. The version history records that 'The table outlining available combined hormonal contraception options has been removed and replaced with direct reference to Therapeutic Guidelines' (page 14, Version 1.2).",
+      "why_unclear": "No product name, strength, dose or frequency in this document; no invented values entered.",
+      "source_page": 8
+    },
+    {
+      "topic": "UKMEC categories referenced but not tabulated",
+      "observed": "UKMEC 3 or 4 drives both referral (page 2) and an absolute prescribing prohibition (page 9), but the category definitions/criteria are not reproduced in this document (UKMEC source: reference 1, page 15).",
+      "why_unclear": "Threshold definitions live in an external document.",
+      "source_page": 9
+    },
+    {
+      "topic": "BP / hypertension thresholds not printed",
+      "observed": "'BP should be measured in accordance with the National Heart Foundation of Australia Guideline for the diagnosis and management of hypertension in adults (16)'; 'A single elevated BP reading is not enough to classify a patient as hypertensive, and a second BP reading should be taken at the end of the consultation (16, 17).' No numeric BP thresholds are printed, so no structured value was entered for hypertension (RF-6 uses a qualitative structured form).",
+      "why_unclear": "Numeric thresholds held in an external guideline.",
+      "source_page": 7
+    },
+    {
+      "topic": "Gate outcome not stated - COC estrogen dose/mestranol prohibition",
+      "observed": "'COCs containing 50 micrograms or more ethinylestradiol, or preparations containing mestranol, are NOT permitted for use in the Hormonal Contraception Service.' The document does not state the downstream action (select an alternative product, refer, mark not eligible); on_fail recorded as 'unclear'. The prohibition is also recorded as EXC-7 and RF-15 (NOT_ELIGIBLE).",
+      "why_unclear": "Prohibition printed without a stated downstream action.",
+      "source_page": 8
+    },
+    {
+      "topic": "Gate outcome not stated - history sufficiency, BP repeat, confirm plan, follow-up return",
+      "observed": "PW-1-S1 ('Assessment of medical eligibility and contraindications completed'), PW-1-S4 second-gate (second BP reading taken), PW-1-S11 first gate (management confirmed appropriate) and PW-1-S14 (return for follow up at 3-4 months) have no stated failure consequence; on_fail recorded as 'unclear'.",
+      "why_unclear": "Document instructs the check but not the consequence of failure.",
+      "source_page": 7
+    },
+    {
+      "topic": "Age bands for DMPA 'adolescents' and 'perimenopausal women' not defined",
+      "observed": "'DMPA is not a first-line option for adolescents or in perimenopausal women because of the theoretical propensity to cause bone mineral density (BMD) loss and/or limit peak BMD (12).' No numeric age bands are printed, and 'not a first-line option' is not an absolute prohibition, so it was recorded in TX-3 notes rather than as an exclusion.",
+      "why_unclear": "No numeric thresholds printed; wording is a ranking, not a ban.",
+      "source_page": 9
+    },
+    {
+      "topic": "Red-flag action enum gap - report to Child Safety",
+      "observed": "'Pharmacists should consider whether there may be child protection concerns relating to a request for contraception and report to Child Safety accordingly.' The action enum {REFER_URGENT, REFER, ESCALATE_000, REVIEW_GP, NOT_ELIGIBLE} has no 'REPORT/notify' value; captured as RF-13 action REFER with confidence 'medium' and also recorded in notifiable.conditions.",
+      "why_unclear": "Child-protection reporting is not a clinical referral; enum constrained by schema.",
+      "source_page": 4
+    },
+    {
+      "topic": "first_line ranking among the four service methods not stated",
+      "observed": "The document does not rank COC vs POP vs DMPA vs vaginal ring. TX-1 (COC) is coded first_line=true solely because of the printed sentence 'The COC with the lowest effective dose of estrogen and progestogen ... should be chosen as first-line (10, 27)', which is a first-line statement about COC selection, not about method class. DMPA is expressly 'not a first-line option for adolescents or in perimenopausal women'.",
+      "why_unclear": "No service-wide treatment ladder printed.",
+      "source_page": 8
+    },
+    {
+      "topic": "Emergency contraception scope",
+      "observed": "'If emergency contraception (EC) is required, oral EC may be supplied as per usual pharmacy care.' EC is outside the Hormonal Contraception Service (captured as EXE-2); 'Ulipristal is the most effective oral EC, however the most appropriate oral EC for a patient depends on several factors.' No EC product, dose or schedule is printed.",
+      "why_unclear": "EC detail is explicitly left to usual pharmacy care.",
+      "source_page": 4
+    },
+    {
+      "topic": "No upper age bound printed",
+      "observed": "'Service restricted to female patients aged 16 years or over' sets a minimum of 16 years; no maximum age is stated (age_bounds.max_years = null). Guidance for women over 50 (reconsider at age 50; contraception 12 or 24 months after the final menstrual period) is counselling, not an eligibility bound, and is captured in review_followup.",
+      "why_unclear": "Document only states a lower bound.",
+      "source_page": 1
+    },
+    {
+      "topic": "Referral urgency grading and cross-page referral wording",
+      "observed": "Both lists say 'including sexual health service or emergency services, if required' (page 2). No urgency categories are printed, so all referral triggers were coded severity 'medium' (not upgraded), except 'emergency services, if required' listed under referral.urgent. Additional referral wording appears on pages 4, 5, 7, 9 and 10; referral block provenance is page 2 with the range noted here.",
+      "why_unclear": "No urgency categories printed.",
+      "source_page": 2
+    },
+    {
+      "topic": "Notifiable limited to Child Safety reporting",
+      "observed": "The document contains no notifiable-condition, Australian Immunisation Register or GP-notification requirement. The only notification duty printed is 'report to Child Safety accordingly' for possible child protection concerns (page 4). notifiable.required set to true with that single condition.",
+      "why_unclear": "Document is otherwise silent on notification.",
+      "source_page": 4
+    },
+    {
+      "topic": "Counselling detail delegated to external guidance",
+      "observed": "'how long a secondary method of contraception must be used to avoid unplanned pregnancy', 'instructions on tailored regimens', 'advice on when fertility can be expected to return after ceasing the contraceptive' and missed-pill/deviation instructions are listed as counselling topics with no numeric content printed.",
+      "why_unclear": "No numbers in the source; no values invented.",
+      "source_page": 10
+    },
+    {
+      "topic": "Provenance for content spanning page breaks",
+      "observed": "Patient history bullets continue from page 5 onto page 6 (provenance recorded at the heading page 5); Examination bullets continue onto page 7 (heading page 6); the IUD-insertion referral sentence sits at the top of page 5 within the section headed 'Reproductive coercion, sexual and domestic violence and abuse' on page 4; 'Other considerations' content on STIs and cervical screening continues onto page 11 (heading page 10).",
+      "why_unclear": "Single provenance page required per statement; heading page used.",
+      "source_page": 5
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Specific contraceptive product selection, strength, dose, route, frequency and duration for COC, POP, DMPA injection and vaginal ring (including the COC 'lowest effective dose of estrogen and progestogen' first-line rule).",
+      "source_page": 7,
+      "reason": "Delegated to the current online version of Therapeutic Guidelines: Sexual and Reproductive Health (Contraception), the Formulations of combined hormonal contraception table, AMH Drugs for contraception and FSRH/RANZCOG guidelines; must be pinned before go-live."
+    },
+    {
+      "item": "UKMEC category definitions and the full UKMEC criteria set used to decide 'contraindicated or not appropriate (UKMEC 3 or 4)'.",
+      "source_page": 9,
+      "reason": "UKMEC is an external instrument (reference 1); the eligibility engine needs the pinned criteria."
+    },
+    {
+      "item": "BP measurement technique, numeric hypertension thresholds and what constitutes 'undiagnosed' or 'poorly managed' hypertension (National Heart Foundation of Australia Guideline).",
+      "source_page": 6,
+      "reason": "No numeric thresholds printed; needed to automate the hypertension exclusion."
+    },
+    {
+      "item": "Which pregnancy test is 'appropriate', and the pathway for referral for a blood test for serum hCG levels.",
+      "source_page": 7,
+      "reason": "Test selection and referral pathway left to pharmacist judgement; local policy must define."
+    },
+    {
+      "item": "DMPA administration detail (dose, injection site, administration interval) and the 12-week deviation point referenced in counselling.",
+      "source_page": 9,
+      "reason": "Only the 'not administered at 12 weeks' deviation example is printed; dosing detail is external."
+    },
+    {
+      "item": "Quantity of medicine (including repeats) to supply - align with expected duration of therapy, sufficient supply until next review, total not exceeding 12 months' supply (including repeats).",
+      "source_page": 12,
+      "reason": "Cap is printed but per-prescription quantity is left to pharmacist judgement; confirm local supply rules."
+    },
+    {
+      "item": "Legal basis / poisons schedule provision under which the Queensland Community Pharmacy Hormonal Contraception Service operates (only a 'Hormonal Contraception Pilot' reference appears in the version history).",
+      "source_page": 14,
+      "reason": "Not printed in the document; jurisdictional basis must be confirmed."
+    },
+    {
+      "item": "Professional discretion clause - 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement...'",
+      "source_page": 1,
+      "reason": "Local policy must define how discretion interacts with automated eligibility/referral checks."
+    },
+    {
+      "item": "Service restriction 'female patients aged 16 years or over', and the Gillick Competency / consent process for patients aged 16 and 17 years (consent from a parent/caregiver not required; capacity assessment must be documented in the patient record).",
+      "source_page": 4,
+      "reason": "Jurisdictional consent and eligibility rules to be confirmed against current Queensland programme settings."
+    },
+    {
+      "item": "Child Safety reporting process for possible child protection concerns relating to a request for contraception (Queensland Government Child Abuse website).",
+      "source_page": 4,
+      "reason": "Mandatory-reporting workflow is jurisdictional and outside the schema's referral actions; local SOP required."
+    },
+    {
+      "item": "STI risk assessment, testing and screening pathways (Australian STI Management Guidelines priority-population testing and frequency; 13 HEALTH Webtest eligibility 'Queenslanders aged 16 years and over, without a Medicare card'; 'test if at risk' advice).",
+      "source_page": 11,
+      "reason": "External guideline and programme dependency; thresholds and pathways not printed here."
+    },
+    {
+      "item": "LARC discussion requirement before prescribing ('pharmacists should discuss the use of LARCs with women seeking contraception, as per the RANZCOG recommendations') and referral for LARC methods not available in the Service.",
+      "source_page": 2,
+      "reason": "Cross-guideline dependency (RANZCOG); counselling script and referral destination need local confirmation."
+    },
+    {
+      "item": "Missed pill / deviation from schedule instructions, duration of secondary method of contraception, tailored regimens and fertility-return advice.",
+      "source_page": 10,
+      "reason": "Listed as counselling topics with no printed detail; must be pinned from Therapeutic Guidelines before go-live."
+    },
+    {
+      "item": "Confirm management checks - contraindications and precautions, drug interactions, and pregnancy and lactation (Therapeutic Guidelines, Australian Medicines Handbook, UKMEC).",
+      "source_page": 9,
+      "reason": "Checklists live in external resources; contents and failure actions must be pinned locally."
+    },
+    {
+      "item": "Cervical screening interval and eligibility ('a cervical screening test (CST) for HPV is recommended every 5 years for women and people with a cervix aged 25-74 years of age who have had sexual contact').",
+      "source_page": 11,
+      "reason": "National program detail cross-referenced but not reproduced; confirm current national guidance."
+    }
+  ]
+}

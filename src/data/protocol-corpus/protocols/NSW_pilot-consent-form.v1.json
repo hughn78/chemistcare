@@ -1,0 +1,115 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\pilot-consent-form.pdf",
+    "pdf_sha256": "c294abfeddbc554bb9be63a1c656473412eeae33d2f6278439fab5a7400e98e0",
+    "page_count": 3,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Health Community Pharmacy Pilot: Supply of the oral contraceptive pill — Screening Questionnaire and Patient Consent Form",
+    "instrument_version": "No version number or date printed on the document",
+    "effective_date": "Not printed on the document",
+    "legal_basis": "Not stated in this supporting document; no regulation or schedule provision is cited (the form refers only to participation in the NSW Health community pharmacy oral contraception initiation pilot)",
+    "supervision_model": "Not stated in this supporting document; the form states that 'trained community pharmacists' assess and, where appropriate, initiate, change or continue supply of the oral contraceptive pill, and that 'the pharmacist will exercise clinical judgement in accordance with NSW Health protocols'",
+    "scope_summary": "SUPPORTING DOCUMENT, NOT A PRESCRIBING PROTOCOL: a patient information sheet, consent checklist, screening questionnaire and patient/pharmacist declaration forms for the NSW Health community pharmacy pilot — Supply of the oral contraceptive pill. It contains no clinical eligibility criteria, no medicines, no doses and no diagnostic or treatment pathway; eligibility decisions are referred to NSW Health protocols and pharmacist clinical judgement. Clinical arrays are therefore intentionally empty."
+  },
+  "eligibility": {
+    "inclusion": [],
+    "exclusion": [],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 39,
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\pilot-consent-form.pdf", "page": 2, "section_heading": "Screening Questionnaire" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [],
+  "treatments": [],
+  "red_flags": [],
+  "referral": {
+    "routine": [
+      "If the pharmacist determines that supply is not right for you, or that you need additional assessment, you may be referred to: a general practitioner (GP), a sexual health service, or another healthcare provider.",
+      "The pharmacist will exercise clinical judgement in accordance with NSW Health protocols. Not all women will be suitable candidates for the oral contraceptive pill – your pharmacist will refer you to appropriate clinical care if this is the case.",
+      "If you are not eligible, your pharmacist can assist you in accessing other care pathways."
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\pilot-consent-form.pdf", "page": 1, "section_heading": "Important Information for patients participating in the NSW Health community pharmacy pilot" }
+  },
+  "review_followup": [],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\pilot-consent-form.pdf", "page": 1, "section_heading": "Consent" }
+  },
+  "references": [],
+  "open_questions": [
+    {
+      "topic": "This is a supporting document, not a prescribing protocol",
+      "observed": "The document is a 'Screening Questionnaire and Patient Consent Form' for the NSW Health community pharmacy pilot: Supply of the oral contraceptive pill. It contains patient information bullets (pages 1-2), consent checkboxes (pages 1-2), a screening questionnaire (page 2), a patient declaration and patient details block (page 3) and a pharmacist declaration (page 3). It has no inclusion/exclusion criteria, no medicines, no doses, no assessment pathway and no red-flag rules.",
+      "why_unclear": "Per the extraction spec's NON-PROTOCOL DOCUMENTS rule, clinical arrays are left empty rather than populated with fabricated criteria; this note records what the document actually is.",
+      "source_page": 1
+    },
+    {
+      "topic": "Screening questionnaire items are printed but no scoring or decision rule is given",
+      "observed": "Page 2 lists these questions (each with Yes/No/Unsure responses): Sex assigned at birth (female*); Age (18–39); Could you currently be pregnant?; Are you currently being treated for high blood pressure?; Have you been told you have high blood pressure?; Have you had a recent change in your periods (e.g. duration, heaviness)?; Have you had unexplained vaginal bleeding (e.g. between periods or after sex)?; Have you ever been diagnosed with breast cancer?; Do you experience migraine with aura?; Have you had a heart attack or stroke?; Have you ever had a blood clot (DVT or pulmonary embolism)?; Have you ever had a blood clot while on hormonal contraception?; Have you ever been told you are at very high risk for blood clots (thrombophilia)?; Do you have diabetes?; Do you have high cholesterol?; Do you smoke, vape, or have recently quit (in the last 12 months)? (follow-up: If yes, number of cigarettes per day — <15 / >15 / Unsure); Are you seeking the pill for reasons other than contraception (e.g. acne, period pain)?. The document states the questionnaire 'is a preliminary assessment tool. It does not replace a comprehensive clinical consultation conducted by the pharmacist.'",
+      "why_unclear": "No scoring, cut-off, pass/fail rule or action mapping is printed, so the questions cannot be converted into eligibility criteria or red flags without inventing decision logic.",
+      "source_page": 2
+    },
+    {
+      "topic": "Age band printed only as a screening question",
+      "observed": "The questionnaire asks 'Age (18–39)' with Yes/No/Unsure responses. No eligibility age bound is stated anywhere in the document (age_bounds records the printed 18–39 screening band with this note). The companion OCP initiation protocol prints no numeric age bound either.",
+      "why_unclear": "A screening question band is not the same as a stated eligibility criterion; the document gives no rule for what a 'No' or 'Unsure' answer means.",
+      "source_page": 2
+    },
+    {
+      "topic": "No urgent or emergency referral destinations printed",
+      "observed": "Referral wording on page 1 lists only 'a general practitioner (GP), a sexual health service, or another healthcare provider' and 'appropriate clinical care'; there is no urgent or emergency referral list and no urgency language.",
+      "why_unclear": "Document is silent; empty urgent/emergency arrays reflect the source rather than an extraction gap.",
+      "source_page": 1
+    },
+    {
+      "topic": "No version, date or approval reference printed",
+      "observed": "The form carries only the title 'NSW HEALTH COMMUNITY PHARMACY PILOT: Supply of the oral contraceptive pill — Screening Questionnaire and Patient Consent Form'; no version number, date, document ID or approving officer appears on any of the 3 pages.",
+      "why_unclear": "instrument_version and effective_date cannot be populated from the document.",
+      "source_page": 1
+    },
+    {
+      "topic": "No medicines, doses or tests specified",
+      "observed": "The form notes that 'any medication supplied will be at private (non-Pharmaceutical Benefits Scheme) cost. Pharmaceutical Benefits Scheme (PBS) subsidies and the Safety Net will not apply' and 'If you need any tests (for example, a pregnancy test for some women) a fee may apply', but names no medicine, strength, dose, frequency or duration, and specifies no test.",
+      "why_unclear": "No clinical treatment content exists to transcribe; treatments array is intentionally empty.",
+      "source_page": 1
+    },
+    {
+      "topic": "Cost, consent and privacy items are administrative, not clinical criteria",
+      "observed": "Consent checkboxes cover: completing the screening questionnaire; participation in the pilot and NSW Health use/disclosure of personal and health information for monitoring and evaluation; understanding medication is at private (non-PBS) cost; understanding tests and diagnostic services are at private cost; consent to sharing information with my GP; consent to information being uploaded to My Health Record; patient declaration of having read and understood the information, had the opportunity to ask questions, and consent to being part of the pilot.",
+      "why_unclear": "These are consent/administrative items; the document does not make them clinical eligibility criteria, so they are recorded here rather than in eligibility.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm how each screening questionnaire response (Yes/No/Unsure, including cigarettes per day <15 / >15) maps to eligibility or referral before go-live — no scoring or decision rule is printed on the form.",
+      "source_page": 2,
+      "reason": "The form is a preliminary assessment tool only; the decision logic must come from NSW Health protocols/local policy and cannot be inferred from this document."
+    },
+    {
+      "item": "Confirm whether the 'Age (18–39)' screening band is an eligibility bound for the pilot (the OCP initiation protocol prints no numeric age bound).",
+      "source_page": 2,
+      "reason": "age_bounds records the printed band for traceability; treating it as a hard rule without confirmation risks wrongly excluding eligible patients aged 40+ or wrongly including those under 18."
+    },
+    {
+      "item": "Confirm the controlled version/date of this consent form with NSW Health (no version number or date is printed) and that the pilot consent wording matches the current approved form.",
+      "source_page": 1,
+      "reason": "A consent instrument used for a funded pilot must be version-controlled; the document itself provides no version to record."
+    },
+    {
+      "item": "Confirm local handling of the two information-sharing consents (sharing information with my GP; uploading information to My Health Record) and the NSW Health monitoring/evaluation data-use consent.",
+      "source_page": 2,
+      "reason": "Consent capture and downstream disclosure are left to pharmacy systems and privacy policy; must be confirmed before go-live."
+    }
+  ]
+}

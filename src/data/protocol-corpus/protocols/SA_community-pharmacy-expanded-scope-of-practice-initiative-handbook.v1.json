@@ -1,0 +1,635 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf",
+    "pdf_sha256": "dcbf3ee86d071b504c04c438b97a7ab2467c79ba3592c615bf893d620a8dc2ba",
+    "page_count": 29,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Community Pharmacy Expanded Scope of Practice Initiative Handbook",
+    "instrument_version": "Version 1.0",
+    "effective_date": "25 March 2026 (cover date March 2026; change history records version 1.0, 25 March 2026, New document published)",
+    "legal_basis": "In South Australia, the prescribing of medicines is governed by the Controlled Substances Act 1984 and the subordinate Controlled Substances (Poisons) Regulations 2011. Regulation 17A of the Controlled Substances (Poisons) Regulations 2011 authorises suitably qualified pharmacists to prescribe certain Schedule 4 (Prescription Only) medicines under specific circumstances. The pharmacist must be included on the register of authorised pharmacists, and the medicine must be prescribed in accordance with the Community Pharmacist Prescribing Code.",
+    "supervision_model": "SA Health Register of Authorised Pharmacists: a pharmacist must be included on the SA Health Register of Authorised Pharmacists before they can provide ESoP services, including prescribing Schedule 4 medicines. Pharmacists seek authorisation from the Minister for Health and Wellbeing with evidence of unconditional general registration with the Pharmacy Board of Australia and successful completion of an SA Health approved post-graduate training course; once authorised they are provided with an SA Health issued prescriber number, and their name and AHPRA registration number are published on the publicly searchable Register. The Minister for Health and Wellbeing may revoke a pharmacist's prescribing authorisation under certain circumstances.",
+    "scope_summary": "FRAMEWORK/HANDBOOK DOCUMENT, not a single-condition prescribing protocol. This Handbook is the reference guide for implementing and providing Community Pharmacy Expanded Scope of Practice (ESoP) services in South Australia: legal framework (Controlled Substances Act 1984, Controlled Substances (Poisons) Regulations 2011, CPP Code, SA Health Register of Authorised Pharmacists), training, the list of conditions and health and wellbeing services currently approved for ESoP service provision, clinical governance, patient eligibility and consent, consultation fees, service delivery (clinical consultation, prescribing, dispensing), clinical record keeping, professional communication and referral pathways, pathology and point-of-care testing, key documents and resources, plus paper clinical record and documentation-principle appendices. It prints no condition-specific clinical criteria, no drug doses and no diagnostic criteria: those are set out in the SA Health Clinical Practice Guidelines for each condition (which use a traffic light colour system to identify red flags and determine referral pathway and urgency)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "be physically present at the same pharmacy as the authorised pharmacist for the consultation (telehealth consultations are not permitted under the legislation)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "6. Patient Eligibility" }
+      },
+      {
+        "id": "INC-2",
+        "text": "have provided relevant consent(s)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "6. Patient Eligibility" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Prior to receiving a service, patients (and/or their substitute decision maker) must provide two types of consent: clinical consent and financial consent. Both types of consent must be recorded in the clinical record.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "7. Patient Consent" }
+      },
+      {
+        "id": "INC-4",
+        "text": "A pharmacist must be included on the SA Health Register of Authorised Pharmacists (the Register) before they can provide ESoP services, including prescribing Schedule 4 medicines.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 6, "section_heading": "2.3. SA Health Register of Authorised Pharmacists" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Pharmacists seeking authorisation to provide ESoP services, including prescribing certain Schedule 4 medicines, must apply to the Minister for Health and Wellbeing with evidence of: unconditional general registration with the Pharmacy Board of Australia",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 6, "section_heading": "2.3. SA Health Register of Authorised Pharmacists" }
+      },
+      {
+        "id": "INC-6",
+        "text": "successful completion of an SA Health approved post-graduate training course (For authorisation to provide ESoP services, pharmacists must demonstrate successful completion of an SA Health approved post-graduate training course that covers the knowledge and skills required to deliver services. SA Health assesses training programs against approved education requirements including: ensuring they are a course equivalent to Graduate Certificate Australian Qualifications Framework Level 8, accredited by the Australian Pharmacy Council (APC), and delivered through an education institution registered with the Tertiary Education Quality and Standards Agency or the Australian Skills Quality Authority, comprising of both a prescribing training component and a clinical training component)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 7, "section_heading": "3. Training" }
+      },
+      {
+        "id": "INC-7",
+        "text": "When prescribing a Schedule 4 medicine to manage a patient's condition, the medicine must be mentioned within the relevant section of the current online version of the Therapeutic Guidelines (as set out in appendix 2 of the CPP Code) and must be prescribed in accordance with any restrictions stated within the CPP Code. Pharmacists should refer to the Community Pharmacist Prescribing Clinical Practice Guidelines for the particular indication to which the Schedule 4 drug relates.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 6, "section_heading": "2.2. Community Pharmacist Prescribing Code (CPP Code)" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Pharmacists must conduct the consultation in accordance with the SA Health Clinical Practice Guidelines in a private consultation room which meets the requirements of the Pharmacy Regulation Authority SA (PRASA) Guidelines for Community Pharmacy Consultation Rooms.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.2. Clinical Consultation" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Common condition currently approved for ESoP service provision: acute exacerbations of mild plaque psoriasis",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-10",
+        "text": "Common condition currently approved for ESoP service provision: acute minor wound management",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-11",
+        "text": "Common condition currently approved for ESoP service provision: acute nausea and vomiting associated with gastroenteritis",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-12",
+        "text": "Common condition currently approved for ESoP service provision: acute otitis externa",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-13",
+        "text": "Common condition currently approved for ESoP service provision: acute otitis media",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-14",
+        "text": "Common condition currently approved for ESoP service provision: allergic and nonallergic rhinitis",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-15",
+        "text": "Common condition currently approved for ESoP service provision: gastro-oesophageal reflux and gastro-oesophageal reflux disease",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-16",
+        "text": "Common condition currently approved for ESoP service provision: herpes zoster (shingles)",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-17",
+        "text": "Common condition currently approved for ESoP service provision: impetigo",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-18",
+        "text": "Common condition currently approved for ESoP service provision: mild acute musculoskeletal pain",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-19",
+        "text": "Common condition currently approved for ESoP service provision: mild to moderate acne",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-20",
+        "text": "Common condition currently approved for ESoP service provision: mild to moderate atopic dermatitis",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 8, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-21",
+        "text": "Health and wellbeing service currently approved for ESoP service provision: hormonal contraception (initiation)",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-22",
+        "text": "Health and wellbeing service currently approved for ESoP service provision: management for overweight and obesity",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-23",
+        "text": "Health and wellbeing service currently approved for ESoP service provision: oral health risk assessment and fluoride application",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-24",
+        "text": "Health and wellbeing service currently approved for ESoP service provision: smoking cessation",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "INC-25",
+        "text": "Health and wellbeing service currently approved for ESoP service provision: travel health",
+        "criteria_group": { "all_of": [], "any_of": ["INC-9", "INC-10", "INC-11", "INC-12", "INC-13", "INC-14", "INC-15", "INC-16", "INC-17", "INC-18", "INC-19", "INC-20", "INC-21", "INC-22", "INC-23", "INC-24", "INC-25"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "In South Australia, authorised pharmacists are not permitted to provide community pharmacy ESoP services for chronic disease management programs. Further consideration will be given to enabling these services in the future.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Pharmacists are not permitted to prescribe on behalf of another prescriber, to a family member or to prescribe for animals.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "6. Patient Eligibility" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "6. Patient Eligibility" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "A pharmacist's duty of care prevails for all pharmacy customers and usual pharmacy services, and care should continue to be provided if a patient is offered ESoP services but chooses not to participate.",
+        "criteria_group": { "all_of": ["EXE-1", "EXE-2"], "any_of": [] },
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.1. Transition from Usual Care to ESoP Care" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "Patients may also refuse consent for the sharing of their information with other practitioners and still receive the service. The patient's decision to withdraw or refuse consent should be documented in their clinical record.",
+        "criteria_group": { "all_of": ["EXE-1", "EXE-2"], "any_of": [] },
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 13, "section_heading": "7.1. Clinical Consent" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Community pharmacy ESoP service delivery pathway (Handbook sections 9-12)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Conduct the consultation in accordance with the SA Health Clinical Practice Guidelines in a private consultation room which meets the requirements of the Pharmacy Regulation Authority SA (PRASA) Guidelines for Community Pharmacy Consultation Rooms. Steps involved in conducting the consultation will include: ensuring patient eligibility and suitability for management within the scope of the service, including patient consent. To receive a community pharmacy ESoP service, patients (and/or their substitute decision makers) must: be physically present at the same pharmacy as the authorised pharmacist for the consultation (telehealth consultations are not permitted under the legislation); have provided relevant consent(s). Prior to receiving a service, patients must provide two types of consent: clinical consent and financial consent; both types of consent must be recorded in the clinical record. Clinical consent information includes: the scope of the service that may be delivered (including potential tests or treatments) and what is involved in the service; consent for the authorised pharmacist to confidentially record and store patient information in the clinical record; seeking consent to securely share the consultation summary with the patient's usual General Practitioner (GP) or other healthcare provider where they have one; advice that prescriptions issued under the initiative may not be able to be dispensed outside of South Australia.",
+          "gates": [
+            { "criterion": "Patient is physically present at the same pharmacy as the authorised pharmacist for the consultation (telehealth not permitted) and has provided clinical and financial consent recorded in the clinical record", "on_fail": "STOP" },
+            { "criterion": "Consultation conducted in a private consultation room meeting the PRASA Guidelines for Community Pharmacy Consultation Rooms", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.2. Clinical Consultation" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Gathering information and assessing the patient's needs. Pharmacists are required to determine if the patient is eligible to receive a service that is within the scope of the initiative. This includes understanding patient details that may prevent participation, such as age, pregnancy status, and existing comorbidities. These details are outlined as 'red flags' and 'refer when' criteria in the SA Health Clinical Practice Guidelines for each condition.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.2. Clinical Consultation" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Assessment and examination of the patient. The guidelines (SA Health Clinical Practice Guidelines) cover patient history, assessment and examination, management plan development and confirmation of appropriateness, referral, communication and clinical review requirements, and utilise a traffic light colour system to assist pharmacists in identifying red flags and determining appropriate referral pathway and urgency of referral.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.2. Clinical Consultation" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "INVESTIGATION",
+          "description": "Seeking pathology testing, if required. Pathology results may be required to support the pharmacist management of care for certain ESoP services. Pathology results may be sought from existing clinical records during history taking or can be ordered by the authorised pharmacist. Authorised pharmacists should only order pathology tests that are within their personal scope to interpret and manage, and it is the pharmacist's responsibility to ensure all results of any pathology test that they order (including any abnormal or incidental findings) are followed up and actioned in a timely manner. Pharmacists should be aware of red flags and ensure appropriate escalation pathways are in place and followed accordingly. Pharmacies must have appropriate recall systems in place for patients who require repeat testing or follow up. Contact/attempted contact should be documented in the patient record. Pathology testing requested by an authorised pharmacist is not subsidised by the MBS. Patients must be informed of the costs associated with pathology tests requested by an authorised pharmacist and should be provided with other options for accessing pathology testing (e.g., through a GP or other healthcare provider). Some private pathology providers who may accept requests from pharmacists include: iMedical; i-Screen. Pathology test results and any planned follow-up action must be appropriately captured and documented in the patient's clinical record within the CIS.",
+          "gates": [
+            { "criterion": "Pathology test to be ordered is within the pharmacist's personal scope to interpret and manage", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 20, "section_heading": "12. Pathology Testing" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "INVESTIGATION",
+          "description": "Table 2: Pathology Testing - tests associated with provision of currently approved ESoP services. Management of Overweight and Obesity: Glycated haemoglobin/fasting blood glucose - screening for type 2 diabetes - HbA1c (%), FBG. Management of Overweight and Obesity: Lipid profile (cholesterol and triglycerides) - assessment of cardiovascular risk - Total cholesterol; HDL cholesterol; LDL cholesterol (calculated); VLDL cholesterol (calculated); Triglycerides. Travel Health: Microbial antibody testing: vaccination status - assessment of vaccine preventable diseases - Serology and immune status for the chosen vaccine (Hepatitis A IgG, Hepatitis B sAB, Hepatitis B core, Hepatitis B sAg, Measles IgG, Mumps IgG, Rubella IgG, Varicella IgG). All PoCT instruments used by pharmacists providing ESoP services must be listed on the Australian Register of Therapeutic Goods, including but not limited to consumables, reagents, controls, and software. Pharmacies must have documented processes for ensuring that PoCT is completed to an acceptable standard and that results are actioned appropriately in a timely manner.",
+          "gates": [],
+          "confidence": "unclear",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 21, "section_heading": "Table 2: Pathology Testing" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "INVESTIGATION",
+          "description": "Where a PoCT is performed for a patient, the result must be documented within the patient's clinical record in the CIS, including the date and time the test was performed, (where relevant) the validity of the result, and the identification of the instrument used. Any concerns related to the validity of the result should be documented within the patient's clinical record along with a plan to retest (either through PoCT or laboratory testing). Confirmatory pathology testing (through a laboratory) is required for confirmation of a result that is diagnostic (e.g. fasting blood glucose results >7 mmol/L). Pharmacists performing PoCT must be aware of the reference ranges for each test conducted and the implication of a result outside of the reference range. It is the pharmacist's responsibility to ensure any abnormal or incidental findings are followed up and actioned in a timely manner. Pharmacists should be aware of red flags and ensure appropriate escalation pathways are in place and followed accordingly.",
+          "gates": [
+            { "criterion": "Confirmatory pathology testing (through a laboratory) obtained for confirmation of a result that is diagnostic (e.g. fasting blood glucose results >7 mmol/L)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 22, "section_heading": "12.1. Point of Care Testing (PoCT)" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "TREAT",
+          "description": "Development of a management and treatment plan. Pathology results may be required to support the pharmacist management of care for certain ESoP services. Usual care is defined as the standard scope of practice pharmacists deliver as usual business, outside of the initiative's scope; the transition to ESoP services should only proceed when the patient has been made aware of the ESoP service(s) and has provided both clinical and financial consent.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.2. Clinical Consultation" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirming management is appropriate in line with relevant guidelines, noting appropriate management will not always include prescribing certain Schedule 4 medicines. Authorised pharmacists must refer to the SA Health Clinical Practice Guidelines when undertaking clinical assessment of a patient. The guidelines set out the initial patient eligibility and suitability for management criteria and were informed by and developed in alignment with the Therapeutic Guidelines, the Australian Medicines Handbook (AMH), and other relevant resources. When applying the guidelines pharmacists must exercise professional discretion and judgment, and the clinical practice guidelines do not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual.",
+          "gates": [
+            { "criterion": "Management confirmed appropriate in line with relevant guidelines (SA Health Clinical Practice Guidelines, Therapeutic Guidelines, Australian Medicines Handbook)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 15, "section_heading": "9.2. Clinical Consultation" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "TREAT",
+          "description": "Prescribing: An authorised pharmacist may prescribe certain Schedule 4 medicines to a patient in accordance with the CPP Code where required for management of the patient's condition. Schedule 4 medications which can be prescribed are included in Appendix 2 of the CPP code. A prescription (electronic or paper) must be generated at each instance of prescribing and provided to the patient. All prescribing must be completed as part of a consultation and must have a corresponding clinical record within the clinical information system. Where a medicine is prescribed, the clinical record must include: relevant patient history; an assessment of the condition that requires the prescribed medicine; the management plan for treating that patient's condition. When selecting a medicine to manage the patient's condition, the medicine must be mentioned within the relevant section of the current online version of the Therapeutic Guidelines (as set out in the CPP Code) and must be prescribed in accordance with any restrictions stated within the CPP Code and the relevant ESoP clinical practice guidelines. The pharmacist must include their prescriber number issued by the Department for Health and Wellbeing on all prescriptions they issue. In addition to the CPP code requirements, prescriptions must be compliant with requirements outlined within the Controlled Substances (Poisons) Regulations 2011 and Controlled Substances Act 1984. The requirements for what must be included on a written prescription are included in Regulation 34. Refer to the How a prescription can be given factsheet for more information. Dispensing: they must be advised the prescription can be presented at any South Australian pharmacy to be dispensed (including the pharmacy where the ESoP service was delivered). If the patient chooses to have their prescription dispensed at the same pharmacy, it is recommended practice that another pharmacist dispense the prescription, provided this doesn't impact the patient's access to care. For both paper and electronic prescriptions, verification of the authorised pharmacist prescriber can be completed through the SA Health Register of Authorised Pharmacists. Dispensing records should be uploaded to My Health Record, unless the patient expresses specifically for it not to be uploaded. Patients who are prescribed medicines who may be travelling interstate should be advised that their prescription may not be able to be dispensed outside of South Australia.",
+          "gates": [
+            { "criterion": "Medicine is mentioned within the relevant section of the current online version of the Therapeutic Guidelines (as set out in the CPP Code) and is prescribed in accordance with any restrictions stated within the CPP Code and the relevant ESoP clinical practice guidelines", "on_fail": "STOP" },
+            { "criterion": "Pharmacist's prescriber number issued by the Department for Health and Wellbeing is included on the prescription, and the prescription complies with Regulation 34 of the Controlled Substances (Poisons) Regulations 2011", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 16, "section_heading": "9.3. Prescribing" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical record keeping: Authorised pharmacists are required to complete a clinical record where a consultation is provided for an ESoP service, regardless of whether a medication is prescribed or supplied. A Clinical Information System (CIS) is used for collecting, storing, and sharing patient records. Every patient provided an ESoP service must have a clinical record that supports effective patient care during and following the consultation and enables collaborative communication and/or referral between healthcare providers. Authorised pharmacists should finalise all clinical records prior to end of the day of the consultation to ensure accuracy, clarity and completeness of the clinical documentation. It is important to avoid saving clinical records as drafts. It is a requirement of the CPP Code for a pharmacist to make and keep a comprehensive clinical record of the consultation; the requirements of what must be recorded in a comprehensive clinical record are included in the CPP Code item 10. Patient health records must be stored securely to protect them from misuse, loss, unauthorised access, modification, disclosure, damage, loss or theft. The pharmacy should develop a business continuity plan for circumstances where the CIS is unavailable due to unexpected system downtime; a paper clinical record template is provided in Appendix A.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 17, "section_heading": "10. Clinical Record Keeping" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "EDUCATE",
+          "description": "Consultation summary: offering a record of the consultation to the patient and confirming consent to share this with the patient's other healthcare providers. Following a consultation, a consultation summary must be offered to the patient and, with patient consent, can be securely shared with the patient's usual GP or healthcare provider(s), where the patient has one. Where it is not possible to electronically transfer consultation summaries, an alternative secure method of transfer of patient information may be used. Ideally, this communication should occur within 48 hours of the consultation. The consultation summary can be generated within the CIS and must include relevant details including personal and clinical patient information, relevant history, presenting symptoms, diagnosis, information on the treatment plan and advice on ongoing care and management of the patient.",
+          "gates": [
+            { "criterion": "Patient consent obtained before the consultation summary is shared with the patient's usual GP or healthcare provider(s)", "on_fail": "STOP" }
+          ],
+          "confidence": "medium",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 18, "section_heading": "11.1. Consultation Summary" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "REFER",
+          "description": "Referrals: Patients accessing community pharmacy ESoP services may require referral to other healthcare providers for further investigation, treatment or management, including collaborative management. The SA Health Clinical Practice Guidelines provide guidance and criteria to aid clinical decision-making in determining when a patient may require a referral. However, pharmacists must exercise professional discretion and judgment, and the clinical practice guidelines do not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual. A referral may occur concurrently with commencement and/or ongoing management of the patient by the authorised pharmacist, or may result in the transfer of care for the patient to another healthcare provider. Where possible, referrals should be sent to the nominated provider via secure messaging within the CIS; where this is not possible, an alternative secure method of transfer of patient information may be used. Where a referral is made, the authorised pharmacist must ensure that a written referral is generated and provided to the patient and/or their designated primary care provider. Where a usual care provider is not nominated, the patient should be provided with a digital or hardcopy of the referral to be given to the health practitioner of their choice. In most situations, the usual referral pathways are through a GP, or emergency services if required. Alternative referral pathways can include Healthdirect (1800 022 222), Medicare Urgent Care Clinics, Priority Care Centres, Royal Flying Doctor Service (RFDS), SHINE SA, Adelaide Sexual Health Centre, and Aboriginal Community Controlled Health Organisations (ACCHOs).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 19, "section_heading": "11.2. Referrals" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "FOLLOW_UP",
+          "description": "Follow-up and recall: Pharmacies must have appropriate recall systems in place for patients who require repeat testing or follow up. Contact/attempted contact should be documented in the patient record. It is the pharmacist's responsibility to ensure all results of any pathology test that they order (including any abnormal or incidental findings) are followed up and actioned in a timely manner. Pharmacies are required to utilise existing business-as-usual feedback and incident management policies and processes when conducting ESoP services, including documenting adverse events and reporting to a pharmacist's indemnity insurer if an incident occurs.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 20, "section_heading": "12. Pathology Testing" }
+        }
+      ]
+    }
+  ],
+  "treatments": [],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "In South Australia, authorised pharmacists are not permitted to provide community pharmacy ESoP services for chronic disease management programs. Further consideration will be given to enabling these services in the future.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 9, "section_heading": "4. Conditions Included in the South Australian Community Pharmacy ESoP Initiative" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Pharmacists are not permitted to prescribe on behalf of another prescriber, to a family member or to prescribe for animals.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "6. Patient Eligibility" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "telehealth consultations are not permitted under the legislation",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 12, "section_heading": "6. Patient Eligibility" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Confirmatory pathology testing (through a laboratory) is required for confirmation of a result that is diagnostic (e.g. fasting blood glucose results >7 mmol/L).",
+      "structured": { "parameter": "fasting blood glucose", "operator": ">", "value": 7, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 22, "section_heading": "12.1. Point of Care Testing (PoCT)" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "the usual referral pathways are through a GP",
+      "Where possible, referrals should be sent to the nominated provider via secure messaging within the CIS. Where this is not possible, an alternative secure method of transfer of patient information may be used.",
+      "Where a referral is made, the authorised pharmacist must ensure that a written referral is generated and provided to the patient and/or their designated primary care provider.",
+      "Where a usual care provider is not nominated, the patient should be provided with a digital or hardcopy of the referral to be given to the health practitioner of their choice.",
+      "Healthdirect (1800 022 222) - available 24 hours a day across South Australia to provide advice and support or connect people to the right care, including connecting people with a GP or virtual care service via phone or video call",
+      "Medicare Urgent Care Clinics - when patients cannot get an appointment with their GP, they can access a Medicare Urgent Care Clinic in metropolitan Adelaide. The Medicare Urgent Care Clinics are a walk-in service for illness or injury that can be managed without a trip to the emergency department but cannot wait for a regular appointment with a GP",
+      "Royal Flying Doctor Service (RFDS) - can provide telehealth consultations to individuals or health workers in rural and remote areas who require medical assistance or advice from an RFDS doctor",
+      "SHINE SA - sexual and reproductive health services",
+      "Adelaide Sexual Health Centre - sexually transmitted infections",
+      "Aboriginal Community Controlled Health Organisations (ACCHOs) - primary healthcare services that provide comprehensive, culturally informed care for Aboriginal and Torres Strait Islander people."
+    ],
+    "urgent": [
+      "Priority Care Centres - eligible patients with urgent but non-life-threatening conditions who would otherwise be seeking treatment at an emergency department could be referred to a Priority Care Centre in metropolitan Adelaide or Mount Barker. A referral from a healthcare professional is required to access the Priority Care Centres"
+    ],
+    "emergency": [
+      "emergency services if required"
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 19, "section_heading": "11.2. Referrals" }
+  },
+  "review_followup": [
+    {
+      "when": "Following a consultation",
+      "what": "A consultation summary must be offered to the patient and, with patient consent, can be securely shared with the patient's usual GP or healthcare provider(s), where the patient has one.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 18, "section_heading": "11.1. Consultation Summary" }
+    },
+    {
+      "when": "Ideally within 48 hours of the consultation",
+      "what": "This communication (sharing of the consultation summary) should occur within 48 hours of the consultation; where it is not possible to electronically transfer consultation summaries, an alternative secure method of transfer of patient information may be used.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 18, "section_heading": "11.1. Consultation Summary" }
+    },
+    {
+      "when": "Prior to end of the day of the consultation",
+      "what": "Authorised pharmacists should finalise all clinical records prior to end of the day of the consultation to ensure accuracy, clarity and completeness of the clinical documentation; it is important to avoid saving clinical records as drafts.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 17, "section_heading": "10. Clinical Record Keeping" }
+    },
+    {
+      "when": "For patients who require repeat testing or follow up",
+      "what": "Pharmacies must have appropriate recall systems in place. Contact/attempted contact should be documented in the patient record.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 20, "section_heading": "12. Pathology Testing" }
+    },
+    {
+      "when": "Any pathology test ordered (including any abnormal or incidental findings)",
+      "what": "It is the pharmacist's responsibility to ensure all results are followed up and actioned in a timely manner; pharmacists should be aware of red flags and ensure appropriate escalation pathways are in place and followed accordingly.",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 20, "section_heading": "12. Pathology Testing" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Pharmacists must notify SA Health, via email to health.communitypharmacyinitiatives@sa.gov.au, within 5 business days if there is a change to their AHPRA registration status that impacts their eligibility to prescribe medicines, or if they wish to be removed from the Register.",
+      "Following a consultation, a consultation summary must be offered to the patient and, with patient consent, can be securely shared with the patient's usual GP or healthcare provider(s), where the patient has one.",
+      "Dispensing records should be uploaded to My Health Record, unless the patient expresses specifically for it not to be uploaded.",
+      "Where appropriate, complaints and incidents should be reported to the pharmacy where the service was provided. Depending on the nature of the matter, the following reporting pathways may also be appropriate: concerns about an individual pharmacist's practice or professional conduct should be reported to the Australian Health Practitioner Regulation Agency; complaints about the service received at a community pharmacy or in relation to a pharmacy business should be reported to the Pharmacy Regulation Authority SA; issues relating to a side effect, reaction, or other problem with a medicine or medical device should be reported to the Therapeutic Goods Administration; criminal matters should be reported to the South Australian Police."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-community-pharmacy-expanded-scope-of-practice-initiative-handbook.pdf", "page": 7, "section_heading": "2.3. SA Health Register of Authorised Pharmacists" }
+  },
+  "references": [
+    "[page 10] National Safety and Quality Primary and Community Healthcare Standards Guide for Healthcare Services",
+    "[page 10] PRASA - Guidelines for Community Pharmacy Consultation Rooms",
+    "[page 10] PSA Clinical Governance Principles",
+    "[page 10] PDL Risk Management Guide for Pharmacists",
+    "[page 12] SA Health Consent Guideline",
+    "[page 21] Australasian Association of Clinical Biochemists - Point of Care Testing Implementation Guide",
+    "[page 21] Royal Australian College of General Practitioners - Standards for point-of-care testing",
+    "[page 21] Department of Health and Aged Care | Requirements for Point of Care Testing (Second Edition 2021)",
+    "[page 22] Controlled Substances (Poisons) Regulations 2011",
+    "[page 22] Community Pharmacist Prescribing Code",
+    "[page 22] Pharmacy Regulatory Authority of South Australia - Guidelines for Community Pharmacy Consultation Rooms",
+    "[page 22] Clinical Practice Guidelines - guidelines for the management of each condition and service within the ESoP Initiative. This includes detailing the parameters of the intervention/service",
+    "[page 22] Therapeutic Guidelines - online database that provides practical treatment advice to assist practitioners with decision making at the point-of-care",
+    "[page 23] Australian Medicines Handbook (AMH) and the AMH Children's Dosing Companion - independent, evidence-based, national drug reference, for health practitioners concerned with the quality use of medicines",
+    "[page 23] Australian Pharmaceutical Formulary and Handbook (APF) - information related to medicines, medicines safety, good dispensing practice, complementary medicines, drug interactions, managing missed doses of contraceptives, wound management and laboratory tests used in clinical practice",
+    "[page 23] Monthly Index of Medical Specialties (MIMS) Australia - online database that provides comprehensive and trusted medicines information to Australian healthcare professionals",
+    "[page 23] The Australian Immunisation Handbook (AIH) - online resource that provides clinical guidelines for healthcare professionals and others about the safest and most effective use of vaccines",
+    "[page 23] CARPA Standard Treatment Manual - clinic manual that has been developed for primary healthcare practitioners in remote and Aboriginal health services in central and northern Australia",
+    "[page 23] The Primary Clinical Care Manual (PCCM) - the principal clinical reference for health professionals working in rural, remote, and isolated healthcare settings.",
+    "[page 23] MSD Manual for the Professional (the Merck Manual) - medical reference resources that cover medical topics, including disorders, tests, diagnoses and drugs. The Merck Manual has been used in developing the advice provided in the clinical practice guidelines",
+    "[page 17] Appendix B - Principles of high-quality clinical documentation (adapted from the Australian Commission on Safety and Quality in Healthcare - Communicating for Safety resource portal)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Framework document, not a condition-specific protocol",
+      "observed": "The Handbook is the implementation reference guide for the ESoP initiative. It prints no condition-specific clinical criteria, no red flag lists, no 'refer when' criteria, no drug names, strengths, doses or durations. Patient details that may prevent participation (age, pregnancy status, existing comorbidities) are explicitly referred to the SA Health Clinical Practice Guidelines for each condition, which use a traffic light colour system to identify red flags and determine referral pathway and urgency (pages 9 and 12).",
+      "why_unclear": "Recorded per the NON-PROTOCOL DOCUMENTS guidance: requirements/scope extracted as criteria with provenance, treatments left empty, and no clinical criteria fabricated.",
+      "source_page": 12
+    },
+    {
+      "topic": "Change history table extraction",
+      "observed": "Change history row extracts as '1.0 | 25 March 2026 | New document published | next scheduled review: Version 1.0 September 2026' with the columns interleaved; cover date is March 2026; approvals record shows Chief Pharmacist, Department for Health and Wellbeing, March 2026.",
+      "why_unclear": "The 'Version 1.0 September 2026' token cannot be reliably assigned to a column (it reads like a next scheduled review but repeats the version number). effective_date taken as 25 March 2026 (publication) and instrument_version as Version 1.0; both need confirmation.",
+      "source_page": 2
+    },
+    {
+      "topic": "No numeric age bound printed",
+      "observed": "Patient Eligibility (page 12) lists only physical presence and consent; age, pregnancy status and comorbidities are referred to the per-condition SA Health Clinical Practice Guidelines.",
+      "why_unclear": "age_bounds min_years and max_years left null because no numeric age limit is printed anywhere in the Handbook.",
+      "source_page": 12
+    },
+    {
+      "topic": "Approved services list vs CPP Code Appendix 2",
+      "observed": "The Handbook lists 'management for overweight and obesity' and 'oral health risk assessment and fluoride application' as currently approved ESoP services (page 9), and uses the terms 'smoking cessation' and 'travel health'; the CPP Code Appendix 2 drug/indication table has no rows for overweight/obesity or oral health, and lists 'Treatment of nicotine dependence' and three separate travel health indications.",
+      "why_unclear": "The Handbook scope list and the CPP Code prescribable-drug list are not aligned one-to-one (some approved services may be non-prescribing services). Recorded rather than reconciled; verify against the current SA Health website list of ESoP services.",
+      "source_page": 9
+    },
+    {
+      "topic": "Gate on_fail values derived from stated requirements",
+      "observed": "The Handbook states requirements and prohibitions ('must', 'must not', 'not permitted') but does not print branch instructions for a failed gate. 'unclear' is used only where no consequence is printed at all (confirmatory pathology testing for a diagnostic PoCT result; confirming management is appropriate in line with relevant guidelines).",
+      "why_unclear": "on_fail 'STOP' is recorded as the direct consequence of prohibitions (the service/prescription is not permitted unless the requirement is met); this derivation is flagged rather than being printed branch language.",
+      "source_page": 15
+    },
+    {
+      "topic": "Red flag action mapping for confirmatory pathology testing",
+      "observed": "The only numeric clinical trigger printed in the Handbook is 'Confirmatory pathology testing (through a laboratory) is required for confirmation of a result that is diagnostic (e.g. fasting blood glucose results >7 mmol/L)' (page 22). The required action is retesting/escalation along an appropriate pathway, not a patient referral.",
+      "why_unclear": "The red flag action enum has no RETEST/INVESTIGATE value; 'REFER' (referral for confirmatory testing) is the closest mapping and is flagged as confidence 'medium' for confirmation. Severity kept at 'medium' because the document states no urgency.",
+      "source_page": 22
+    },
+    {
+      "topic": "Duplication between exclusion and red_flags",
+      "observed": "EXC-1/RF-1 (chronic disease management programs not permitted) and EXC-2/RF-2 (no prescribing on behalf of another prescriber, to a family member, or for animals) quote the same source statements.",
+      "why_unclear": "They are retained in both arrays deliberately: eligibility decision list (exclusion) and hard-stop alert (red_flags, action NOT_ELIGIBLE). RF-3 (telehealth not permitted) appears only as a red flag because the same prohibition is already quoted verbatim inside INC-1.",
+      "source_page": 12
+    },
+    {
+      "topic": "Referral block spans pages",
+      "observed": "Referral content runs from section 11.2 Referrals (page 19) through 11.3 Referral Pathways (pages 19-20).",
+      "why_unclear": "The referral object allows one shared provenance, so page 19 (first page of the referral section) is used and the range is recorded here. 'emergency services if required' is an exact fragment of the sentence 'In most situations, the usual referral pathways are through a GP, or emergency services if required.'",
+      "source_page": 19
+    },
+    {
+      "topic": "Notifiable conditions drawn from multiple pages",
+      "observed": "Notification/reporting duties are printed on page 7 (notify SA Health of AHPRA registration change within 5 business days), page 11 (complaints and incident reporting pathways), page 16 (dispensing records to My Health Record unless the patient opts out) and page 18 (consultation summary sharing with consent).",
+      "why_unclear": "The notifiable object carries one shared provenance, so page 7 (first duty printed) is used; each condition's own page is noted in this record. Sharing duties are conditional on patient consent.",
+      "source_page": 7
+    },
+    {
+      "topic": "Table 2 pathology testing extraction",
+      "observed": "Table 2 (page 21) is a four-column table (Relevant ESoP service / Test description / Indication(s) / Measurement) and the text extraction interleaves the columns across rows.",
+      "why_unclear": "Row-to-column assignment for the Overweight and Obesity and Travel Health rows was reconstructed from the interleaved stream; confidence recorded as 'unclear' on step PW-1-S5 pending a visual check of the PDF table.",
+      "source_page": 21
+    },
+    {
+      "topic": "Consultation summary sentence spans pages 18-19",
+      "observed": "The sentence describing the required contents of the consultation summary breaks across pages 18 and 19 ('...relevant history, presenting' on page 18; 'symptoms, diagnosis, information on the treatment plan and advice on ongoing care and management of the patient.' on page 19).",
+      "why_unclear": "The sentence is transcribed complete in PW-1-S11 with provenance page 18; the continuation text is printed on page 19.",
+      "source_page": 18
+    },
+    {
+      "topic": "Clinical records, appendices and fee table not extracted as clinical criteria",
+      "observed": "Appendix A is a paper clinical record template (pages 25-27), Appendix B lists documentation principles (page 28), the Glossary (page 29) lists acronyms, and Table 1 (page 14) is a consultation fee guide (brief <10 minutes, standard between 10 and 20 minutes, long >20 minutes).",
+      "why_unclear": "These are operational/administrative content, not clinical eligibility or treatment criteria; consultation fees are determined by the individual pharmacist/pharmacy and are recorded in hugh_to_confirm instead.",
+      "source_page": 14
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Instrument version and review date: cover 'March 2026', change history '1.0 | 25 March 2026 | New document published' with a next-scheduled-review cell that extracts as 'Version 1.0 September 2026'.",
+      "source_page": 2,
+      "reason": "Version/date must be confirmed with the Office of the Chief Pharmacist before the Handbook version is cited; printed copies are uncontrolled and website documents may be updated (page 24)."
+    },
+    {
+      "item": "Consultation fees: 'Consultation fees for community pharmacy ESoP services will be determined by the individual pharmacist/pharmacy. Fees may be based on the complexity and duration of the service being provided.' Table 1 Consultation Guide: brief consultation <10 minutes; standard consultation between 10 and 20 minutes; long consultation >20 minutes.",
+      "source_page": 14,
+      "reason": "Local pricing policy; the module must not assume any fee. Time taken for documentation, CIS uploads and talking to carers when the patient is not present is excluded from consultation time."
+    },
+    {
+      "item": "Financial consent scripting: patients must be explicitly made aware that the consultation, any medicines prescribed and pathology tests requested are not subsidised by the MBS or PBS, do not count towards the PBS Safety Net, and are out-of-pocket expenses; pathology testing requested by an authorised pharmacist is not subsidised by the MBS.",
+      "source_page": 13,
+      "reason": "Mandatory financial consent disclosure (also pages 14 and 20) must be built into the consultation workflow and consent record."
+    },
+    {
+      "item": "Prescriber number: 'The pharmacist must include their prescriber number issued by the Department for Health and Wellbeing on all prescriptions they issue.'",
+      "source_page": 16,
+      "reason": "Prescriber numbers must be provisioned per pharmacist and validated by the system before any prescription is generated."
+    },
+    {
+      "item": "Prescription form and content: A prescription (electronic or paper) must be generated at each instance of prescribing and provided to the patient; written prescription requirements are in Regulation 34 of the Controlled Substances (Poisons) Regulations 2011; see the 'How a prescription can be given' factsheet.",
+      "source_page": 16,
+      "reason": "Approved electronic prescription forms and mandatory script content for the Service must be confirmed (OpenScript is private/non-PBS, D-001)."
+    },
+    {
+      "item": "Interstate dispensing: patients must be advised the prescription can be presented at any South Australian pharmacy to be dispensed, and that a prescription issued under the initiative may not be able to be dispensed outside of South Australia.",
+      "source_page": 16,
+      "reason": "Counselling script and travelling-patient handling must be defined locally (also stated in the clinical consent list on page 13)."
+    },
+    {
+      "item": "Dispensing workflow: if the patient chooses to have the prescription dispensed at the same pharmacy, 'it is recommended practice that another pharmacist dispense the prescription, provided this doesn't impact the patient's access to care'; verification of the authorised pharmacist prescriber is via the SA Health Register of Authorised Pharmacists.",
+      "source_page": 16,
+      "reason": "Recommendation (not a mandate) needs a local policy decision on who dispenses pharmacist-prescribed items."
+    },
+    {
+      "item": "My Health Record: 'Dispensing records should be uploaded to My Health Record, unless the patient expresses specifically for it not to be uploaded.'",
+      "source_page": 16,
+      "reason": "Opt-out handling and system configuration must be confirmed with the clinical information system vendor."
+    },
+    {
+      "item": "Consultation summary turnaround: 'Ideally, this communication should occur within 48 hours of the consultation', using secure messaging within the CIS or an alternative secure method of transfer.",
+      "source_page": 18,
+      "reason": "Local service level for summary/referral transmission and the secure messaging channel must be confirmed."
+    },
+    {
+      "item": "Point-of-care testing: confirmatory laboratory testing required for diagnostic results (e.g. fasting blood glucose results >7 mmol/L); PoCT instruments must be listed on the Australian Register of Therapeutic Goods; results must be documented with date, time, validity and instrument identification.",
+      "source_page": 22,
+      "reason": "Threshold and escalation action must be encoded exactly; the red-flag action mapping for confirmatory testing needs sign-off (see open question)."
+    },
+    {
+      "item": "Professional indemnity insurance: 'Prior to offering ESoP services, it is recommended that pharmacists and pharmacy owners contact their Professional Indemnity Insurer to confirm they have sufficient insurance coverage for the services provided under the initiative.'",
+      "source_page": 10,
+      "reason": "Per-pharmacy pre-recommendation that should be verified as a go-live prerequisite for each site."
+    },
+    {
+      "item": "Register status and revocation: 'The Minister for Health and Wellbeing may revoke a pharmacist's prescribing authorisation under certain circumstances' and pharmacists must notify SA Health within 5 business days of an AHPRA registration status change affecting eligibility.",
+      "source_page": 7,
+      "reason": "Eligibility must be re-checked against the publicly searchable SA Health Register of Authorised Pharmacists at go-live and periodically; revocation handling must be defined."
+    },
+    {
+      "item": "Business continuity: the pharmacy should develop a business continuity plan for CIS downtime; the Appendix A paper clinical record must be entered into the CIS when available and appropriately destroyed.",
+      "source_page": 18,
+      "reason": "Local BCP and paper-record destruction process must be documented per site (Appendix A, pages 25-27)."
+    }
+  ]
+}

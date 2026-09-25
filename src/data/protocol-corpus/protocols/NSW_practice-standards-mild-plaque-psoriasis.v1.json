@@ -1,0 +1,1098 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf",
+    "pdf_sha256": "75f9b34c7a885e0be36b729fb549bf1d60a4ff4e8f030b80e045f96342db9c2a",
+    "page_count": 14,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Pharmacist Practice Standards for Management of Acute Exacerbations of Mild Plaque Psoriasis",
+    "instrument_version": "NSW Health Authority (dated 28 August 2026) - note Section B prints 'dated 26 August 2026' (contradiction recorded in open_questions)",
+    "effective_date": "2026-08-28",
+    "legal_basis": "Not explicitly stated as a regulation or poisons schedule provision. The document states Approved Medicines 'are listed in the NSW Health Authority (dated 28 August 2026)' and is 'Approved Dr Kerry Chant AO PSM, Chief Health Officer and Deputy Secretary, Population and Public Health, 28 August 2026'; services are delivered 'as part of the NSW Health Authority (dated 28 August)' under the Community Pharmacy Dermatology Service.",
+    "supervision_model": "appropriately trained approved pharmacists: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 26 August 2026)' (Section B - see date contradiction). Framework applies to 'appropriately trained approved pharmacists' / a 'participating approved pharmacist'; 'Pharmacists must exercise professional discretion and judgement when applying the information within these Practice Standards.'",
+    "scope_summary": "Practice standard for management of acute exacerbations of mild plaque psoriasis by approved pharmacists in NSW under the Community Pharmacy Dermatology Service: patient must be >=18 years, previously diagnosed with plaque psoriasis by a medical practitioner, currently experiencing an acute exacerbation of mild disease, no red flags/non-urgent exclusions per the Section G table; supply up to 4 weeks of therapy (or higher quantity as specified in the Authority) of listed topical Approved Medicines, with counselling, documentation, 2-4 week clinical review and referral rules. Anatomical areas face, nails, scalp, genitals, groin, palms and soles are outside the scope of practice."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Patients must be aged 18 years or older to be eligible for the service.' (flowchart gate: 'Is the patient >=18 years old?' - No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.')",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "INC-2",
+        "text": "'Has the patient been diagnosed with plaque psoriasis by a medical practitioner' (flowchart gate; No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.'). 'Only patients presenting with an acute exacerbation of mild plaque psoriasis that has previously been diagnosed by a medical practitioner may receive management under these Practice Standards.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+      },
+      {
+        "id": "INC-3",
+        "text": "'Patients must be physically present in the pharmacy to be eligible for management.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-4",
+        "text": "'Patients are required to have a consultation with an approved pharmacist before a medication can be supplied under the Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-5",
+        "text": "'Pharmacists must only supply formulations listed in the Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-6",
+        "text": "'Pharmacists can supply up to 4 weeks of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority.' ('Pharmacists can only supply a maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority.')",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-7",
+        "text": "No red flag signs and no non-urgent exclusion met: 'Pharmacists must not provide management to individuals specified in the table below, where there is a 'No' in the 'Treat' column for the patient group, and must take appropriate action in accordance with established referral pathways.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Informed consent: 'Obtain patient informed consent: Participation; Financial consent; Pharmacist communication with other health practitioners.' 'Informed clinical and financial consent must be obtained from the patient prior to providing care under these Practice Standards.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+      },
+      {
+        "id": "INC-9",
+        "text": "Mild disease presentation only: 'Pharmacists are only able to provide care to patients with presentations of mild disease that has previously been diagnosed by a medical practitioner under these Practice Standards.' ('Most cases of mild plaque psoriasis can be treated with topical therapies.')",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+      },
+      {
+        "id": "INC-11",
+        "text": "'Patients at risk of comorbid disease (e.g. hypertension, obesity, heart disease, diabetes, depression, arthritis)' - Treat column = Yes, Referral = GP (may be managed but must be referred to GP).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "INC-12",
+        "text": "Current review status: the patient must have seen a medical practitioner for a review of their condition in the previous 12 months (inverse of the exclusion row 'The patient has not seen a medical practitioner for a review of their condition in the previous 12 months' - Treat = No, Referral = GP).",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-11", "INC-12"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "INC-10",
+        "text": "Pharmacist requirement: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 26 August 2026)'.",
+        "criteria_group": {"all_of": ["INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "B. GENERAL REQUIREMENTS"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'Guttate psoriasis'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'Pustular psoriasis'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'Erythrodermic psoriasis'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'Psoriasis affecting the face, scalp, genitals, palms, soles, nails' - 'Any presentations involving these anatomical regions are outside the scope of these Practice Standards and must be referred to a medical practitioner for management.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'Severe plaque psoriasis (>25% body surface area)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Signs of sepsis, systemic illness or other complications such as: fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'Complex presentation, such as those requiring antibiotic therapy for secondary infection. Pharmacists must not supply antibiotic therapy.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Immunocompromised patients - due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, prednisone therapy)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "unclear",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Non-healing broken skin, sores, ulcers or crusts that are chronic (more than 4 weeks)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-10",
+        "text": "Table row (Treat = No; Referral = Urgent: GP): 'The condition is having a marked emotional and/or social impact on the patient'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-11",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient is below 18 years of age'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-12",
+        "text": "Table row (Treat = No; Referral = GP): 'The diagnosis is unclear'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-13",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient has not been diagnosed with psoriasis by a medical practitioner'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-14",
+        "text": "Table row (Treat = No; Referral = GP): 'Moderate plaque psoriasis (>10% body surface area)' ('moderate-to-severe disease being defined as more than 10% body surface area affected')",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-15",
+        "text": "Table row (Treat = No; Referral = GP): 'Psoriasis affecting the face, scalp, genitals, groin, palms, soles, nails' - 'These anatomical areas are outside the scope of practice for pharmacists in these Practice Standards and must be referred to a medical practitioner for management.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-16",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient has not seen a medical practitioner for a review of their condition in the previous 12 months'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-17",
+        "text": "Table row (Treat = No; Referral = GP): 'Pregnant or planning pregnancy'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-18",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient is taking a medication that can exacerbate psoriasis' (medications listed in Background: 'lithium, beta-blockers, anti-malarial medication, and rapid withdrawal of systemic corticosteroids'; aggravating factors table: 'Medicines such as lithium, beta-blockers, antimalarials, nonsteroidal anti-inflammatories, antibiotics, ace inhibitors, TNFa inhibitors; Stopping oral steroids or potent topical corticosteroids')",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-19",
+        "text": "Table row (Treat = No; Referral = GP): 'There is no response to optimal treatment (within 2-4 weeks) or the condition worsens or reoccurs'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-20",
+        "text": "Scope exclusion: 'Anatomical areas of the face, nails, scalp, genitals, groin, palms and soles are outside the scope of practice for pharmacists in these Practice Standards and must be referred to a medical practitioner for management.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+      },
+      {
+        "id": "EXC-21",
+        "text": "Scope exclusion: 'Pharmacists must not supply antibiotic therapy.' (complex presentations requiring antibiotic therapy for secondary infection have Treat = No)",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-22",
+        "text": "Potency restriction for axillae: 'For management of axillae, pharmacists must use hydrocortisone 1% or hydrozole only. All stronger potency corticosteroid therapies cannot be supplied by the pharmacist under the Practice Standards and can only be prescribed by a medical practitioner.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+      },
+      {
+        "id": "EXC-23",
+        "text": "Scope exclusion: 'Use of these scoring systems are beyond the scope of these Practice Standards.' (PASI and DLQI scoring) AND 'Pharmacists are only able to provide care to patients with presentations of mild disease that has previously been diagnosed by a medical practitioner under these Practice Standards.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'Patients at risk of comorbid disease (e.g. hypertension, obesity, heart disease, diabetes, depression, arthritis)' - Treat column = Yes with Referral = GP (risk of comorbid disease does not by itself exclude management, but a GP referral is required).",
+        "criteria_group": {"all_of": ["EXE-1"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Patient Assessment Flowchart - management of acute exacerbations of mild plaque psoriasis (Section D) with Section G eligibility and referral criteria",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Entry: 'Patient presents to a participating approved pharmacist for management of acute exacerbations of mild plaque psoriasis'. Flowchart gate: 'Has the patient been diagnosed with plaque psoriasis by a medical practitioner' - No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.' Background: 'Only patients presenting with an acute exacerbation of mild plaque psoriasis that has previously been diagnosed by a medical practitioner may receive management under these Practice Standards. All other psoriasis presentations necessitate a referral to a medical practitioner.'",
+          "gates": [
+            {"criterion": "Plaque psoriasis diagnosed by a medical practitioner (and presentation is an acute exacerbation of mild plaque psoriasis)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Flowchart gate: 'Is the patient >=18 years old?' - No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.' ('Patients must be aged 18 years or older to be eligible for the service.')",
+          "gates": [
+            {"criterion": "Patient is >=18 years old", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Flowchart: 'Does the patient have any red flags or non-urgent exclusions?' If yes: 'Check Section G (Patient eligibility and referral criteria) to determine if patient may be treated and/or must be referred for GP or ED management.' Section G red flag signs: Guttate psoriasis; Pustular psoriasis; Erythrodermic psoriasis; Psoriasis affecting the face, scalp, genitals, palms, soles, nails; Severe plaque psoriasis (>25% body surface area); Signs of sepsis, systemic illness or other complications; Complex presentation requiring antibiotic therapy for secondary infection; Immunocompromised patients; Non-healing broken skin, sores, ulcers or crusts that are chronic (more than 4 weeks); The condition is having a marked emotional and/or social impact on the patient. Details of presenting complaint: below 18 years of age; diagnosis unclear; not diagnosed with psoriasis by a medical practitioner; Moderate plaque psoriasis (>10% body surface area); psoriasis affecting face, scalp, genitals, groin, palms, soles, nails; not seen a medical practitioner for review in the previous 12 months; pregnant or planning pregnancy; taking a medication that can exacerbate psoriasis; no response to optimal treatment (within 2-4 weeks) or condition worsens or reoccurs. Note: 'Note that these are not exhaustive lists.'",
+          "gates": [
+            {"criterion": "No red flags and no non-urgent exclusions (no row with Treat = No is met)", "on_fail": "SEE_PW-1-S4"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "Section G referral determination: 'Patients who meet any of the urgent referral criteria below must be referred to their regular medical practitioner, maternity provider, health service, or Emergency Department (ED) as indicated in the table. Note that these are not exhaustive lists.' 'Pharmacists must not provide management to individuals specified in the table below, where there is a 'No' in the 'Treat' column for the patient group, and must take appropriate action in accordance with established referral pathways.' 'Patients who require non-urgent referral to a GP or a healthcare provider are to be referred in accordance with the usual referral processes.' 'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care for any reason.' Where Treat = No: not eligible (STOP). Where Treat = Yes with a Referral entry (e.g. 'Patients at risk of comorbid disease ... Yes / GP'): arrange the GP referral and continue.",
+          "gates": [
+            {"criterion": "'Treat' column = Yes for the patient group (or referral completed where the table requires it)", "on_fail": "STOP"},
+            {"criterion": "Urgent referral criteria met are referred as indicated in the table (Urgent: GP / Urgent: ED)", "on_fail": "STOP"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Flowchart: 'Obtain patient informed consent: Participation; Financial consent; Pharmacist communication with other health practitioners' - No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.' 'Informed clinical and financial consent must be obtained from the patient prior to providing care under these Practice Standards.' The pharmacist must seek the patient's consent to share a record of the consultation with the patient's usual treating medical practitioner or medical practice, where the patient has one.",
+          "gates": [
+            {"criterion": "Informed consent obtained for participation, financial consent, and pharmacist communication with other health practitioners", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "Flowchart: 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status.' 'Sufficient information must be obtained from the patient to assess the safety and appropriateness of management. The My Health Record should be reviewed where appropriate and available.' History should include: Age; Pregnancy and lactation status (if applicable); Onset, duration, nature, location, severity and extent of the rash and other symptoms; Previous diagnosis of plaque psoriasis and any current or past management plan, including for underlying and associated medical conditions; Underlying and associated medical conditions, including psoriatic comorbidities such as arthritis, cardiovascular disease, hypertension, obesity, metabolic syndrome, hypercholesterolaemia, diabetes, hepatosteatosis and depression; Details of and response to previous treatments; Impacts on quality of life and psychosocial wellbeing; Exposure to factors that can aggravate psoriasis; Current, recently commenced or recently ceased medications; Family history of psoriasis; Allergies/adverse drug events. 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.'",
+          "gates": [
+            {"criterion": "Sufficient information obtained to assess the safety and appropriateness of management", "on_fail": "unclear"},
+            {"criterion": "Contraindications, precautions, drug interactions, pregnancy and lactation status reviewed with no contraindication to the planned management", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "PATIENT HISTORY"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EXAMINATION",
+          "description": "EXAMINATION: 'Physical examination of the patient's skin is required to identify, assess and classify the severity of an acute exacerbation of mild plaque psoriasis.' Severity classification (Background): 'Severity is classified according to percentage of body surface involved combined with plaque thickness and scaling (Psoriasis Area and Severity Index (PASI) score), with moderate-to-severe disease being defined as more than 10% body surface area affected.' 'Psoriasis is considered severe with a DLQI score of over 10, regardless of the PASI score. These patients need to be referred to a medical practitioner.' 'Use of these scoring systems are beyond the scope of these Practice Standards.' 'Pharmacists are only able to provide care to patients with presentations of mild disease ...'",
+          "gates": [
+            {"criterion": "Exacerbation classified as mild disease (moderate-to-severe defined as more than 10% body surface area affected; severe at >25% body surface area or DLQI over 10)", "on_fail": "REFER"},
+            {"criterion": "Physical examination of the skin completed and diagnosis confirmed as plaque psoriasis (not unclear)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "EXAMINATION"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "Establish management plan and supply: 'There is no cure for psoriasis; the aim of treatment is to clear lesions and manage symptoms with the least burdensome therapy. Most cases of mild plaque psoriasis can be treated with topical therapies. Pharmacists need to refer to the Therapeutic Guidelines and the Australian Medicines Handbook for details on management.' General measures: education and advice re lifestyle modification (smoking cessation; avoiding excess alcohol intake; maintaining optimal weight) and daily use of emollients and moisturisers to maintain skin hydration and barrier function. Pharmacotherapy: 'Topical treatments as per Therapeutic Guidelines: Psoriasis'; 'For management of axillae, pharmacists must use hydrocortisone 1% or hydrozole only. All stronger potency corticosteroid therapies cannot be supplied by the pharmacist under the Practice Standards and can only be prescribed by a medical practitioner.' Approved Medicines (NSW Health Authority dated 28 August 2026): Methylprednisolone aceponate 0.1% cream, ointment or fatty ointment; Mometasone furoate 0.1% cream, hydrogel or ointment; Betamethasone dipropionate 0.05% cream or ointment; Calcipotriol + betamethasone dipropionate 50 + 500 mcg/g ointment or foam; LPC (coal tar solution) 4-8% + salicylic acid 3-6% in cream/ointment. 'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks.' 'If symptoms worsen or do not improve after commencing treatment, patients should be advised to stop therapy and immediately seek review by a medical practitioner.' 'Pharmacists should review reducing and withdrawing topical corticosteroid therapy when possible, especially for more potent topical corticosteroids, because of the long-term effects.' Anatomical areas of the face, nails, scalp, genitals, groin, palms and soles are outside the scope of practice and must be referred. 'Pharmacists must not supply antibiotic therapy.'",
+          "gates": [
+            {"criterion": "Presentation is mild and within scope (no anatomical area involvement of face, nails, scalp, genitals, groin, palms, soles)", "on_fail": "REFER"},
+            {"criterion": "Formulation is listed in the Authority (Approved Medicines)", "on_fail": "REFER"},
+            {"criterion": "For axillae: only hydrocortisone 1% or hydrozole supplied (stronger potency corticosteroids cannot be supplied)", "on_fail": "STOP"},
+            {"criterion": "Supply within a maximum of 4 weeks of therapy (or a higher quantity specified in the Authority), sufficient for the period until the patient's review", "on_fail": "REFER"},
+            {"criterion": "No antibiotic therapy supplied (Pharmacists must not supply antibiotic therapy)", "on_fail": "STOP"},
+            {"criterion": "Patient is not pregnant or planning pregnancy", "on_fail": "REFER"},
+            {"criterion": "Patient is not taking a medication that can exacerbate psoriasis (lithium, beta-blockers, antimalarials, nonsteroidal anti-inflammatories, antibiotics, ace inhibitors, TNFa inhibitors; stopping oral steroids or potent topical corticosteroids)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 8, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Counselling: 'Comprehensive advice and counselling (including supportive written information when required) should be provided to the patient regarding: The typical cycle of psoriasis and how to optimise lifestyle factors; Expectations of treatment; Product and medication use: dosing and application instructions for topical corticosteroids, emollients, and other topical products; How to manage adverse reactions; When to seek further care and/or treatment from a medical practitioner; How to recognise infection; When to return for a clinical review.' 'Common adverse effects of topical corticosteroids such as transient burning, stinging or pain on application can generally be reversed by stopping the medication. Referral to a medical practitioner is required if the adverse effect does not resolve quickly.' 'All patients should be advised to contact a medical practitioner if: They are not responding to treatment (within 2-4 weeks); Their signs and symptoms worsen; They are experiencing complications (as soon as they become evident); They are having unmanageable adverse effects.'",
+          "gates": [
+            {"criterion": "Counselling completed on dosing/application, adverse reactions, recognising infection, when to seek further care and when to return for review", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "Counselling"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "FOLLOW-UP CARE AND REVIEW: 'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines.' 'Clinical review is recommended 2-4 weeks after the initiation of treatment for an acute exacerbation to assess: Response to treatment (and compliance); If changes are required to the treatment plan; Adverse effects of therapy.' 'If good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only.' 'If there has been inadequate response to therapy as a result of compliance issues such as inappropriate use, or a patient not applying enough medication, the pharmacist may provide further advice.' 'If a patient experiences worsening of symptoms, minimal improvement in symptoms after commencing pharmacist care, onset of psoriasis-related comorbidities, or a secondary infection, they must be referred for an urgent review by a medical practitioner.' 'Pharmacotherapy for management of psoriasis may be required longer-term; pharmacists should refer patients to a medical practitioner for a review and ongoing management after the acute flare has been managed. An annual review by a medical practitioner is recommended to assess for adverse effects from topical corticosteroid therapy.'",
+          "gates": [
+            {"criterion": "Response to treatment achieved at the 2-4 week clinical review (medication can be reduced or stopped)", "on_fail": "REFER"},
+            {"criterion": "No worsening of symptoms, no minimal improvement, no onset of psoriasis-related comorbidities, no secondary infection", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "FOLLOW-UP CARE AND REVIEW"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Documentation, communication and record sharing: 'The agreed management plan must be documented in the patient electronic clinical record and shared with members of the patient's multidisciplinary team, in accordance with the Authority.' 'The pharmacist must make an electronic clinical record, and a record in a pharmacy dispensing system regarding the supply of any medications under these services, in accordance with the Authority.' 'Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.' Flowchart final box: 'Communicate agreed management plan with patient and patient's medical practitioner. Document all aspects of management plan.' Consent sharing: 'If the patient consents to the disclosure, the record must be shared within a week following the consultation.' Records: 'Records must be stored securely for a minimum of seven (7) years.'",
+          "gates": [
+            {"criterion": "Electronic clinical record and pharmacy dispensing system record made; agreed management plan documented and communicated to patient and patient's medical practitioner", "on_fail": "STOP"},
+            {"criterion": "Record shared with patient and (if consented) usual treating medical practitioner within a week following the consultation", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "K. CLINICAL DOCUMENTATION AND COMMUNICATION"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Methylprednisolone aceponate",
+      "form": "cream, ointment or fatty ointment",
+      "strength": "0.1%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "up to 4 weeks of therapy (each new treatment should be trialled for 2 to 4 weeks)",
+      "max_quantity": "maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority",
+      "max_dose": "",
+      "quantity_to_supply": "a sufficient quantity of medicine (including repeats) for the period until the patient's review; maximum 4 weeks of therapy (or a higher quantity specified in the Authority)",
+      "notes": "As printed: 'a. Methylprednisolone aceponate 0.1% cream, ointment or fatty ointment'. Dose/frequency not printed - 'Topical treatments as per Therapeutic Guidelines: Psoriasis'; 'Pharmacists need to refer to the Therapeutic Guidelines and the Australian Medicines Handbook for details on management.' Pregnancy caveat (verbatim): table row 'Pregnant or planning pregnancy' has Treat = No, Referral = GP (excluded from pharmacist management); history must include 'Pregnancy and lactation status (if applicable)'; flowchart requires 'review of contraindications, precautions, drug interactions, pregnancy and lactation status'. Lactation caveat (verbatim): 'Pregnancy and lactation' is one of the items 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for' - no method-specific lactation restriction printed. Paediatric caveat (verbatim): 'Patients must be aged 18 years or older to be eligible for the service.'; 'The patient is below 18 years of age' - Treat = No, Referral = GP. Site restriction (verbatim): 'Anatomical areas of the face, nails, scalp, genitals, groin, palms and soles are outside the scope of practice for pharmacists in these Practice Standards and must be referred to a medical practitioner for management.'; 'For management of axillae, pharmacists must use hydrocortisone 1% or hydrozole only. All stronger potency corticosteroid therapies cannot be supplied by the pharmacist under the Practice Standards and can only be prescribed by a medical practitioner.' Other caveats (verbatim): 'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks.'; 'If symptoms worsen or do not improve after commencing treatment, patients should be advised to stop therapy and immediately seek review by a medical practitioner.'; 'Pharmacists should review reducing and withdrawing topical corticosteroid therapy when possible, especially for more potent topical corticosteroids, because of the long-term effects.'; 'Common adverse effects of topical corticosteroids such as transient burning, stinging or pain on application can generally be reversed by stopping the medication. Referral to a medical practitioner is required if the adverse effect does not resolve quickly.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "Mometasone furoate",
+      "form": "cream, hydrogel or ointment",
+      "strength": "0.1%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "up to 4 weeks of therapy (each new treatment should be trialled for 2 to 4 weeks)",
+      "max_quantity": "maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority",
+      "max_dose": "",
+      "quantity_to_supply": "a sufficient quantity of medicine (including repeats) for the period until the patient's review; maximum 4 weeks of therapy (or a higher quantity specified in the Authority)",
+      "notes": "As printed: 'b. Mometasone furoate 0.1% cream, hydrogel or ointment'. Dose/frequency not printed - 'Topical treatments as per Therapeutic Guidelines: Psoriasis'. Pregnancy caveat (verbatim): table row 'Pregnant or planning pregnancy' - Treat = No, Referral = GP; history must include 'Pregnancy and lactation status (if applicable)'; flowchart requires review of 'pregnancy and lactation status'. Lactation caveat (verbatim): 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation' - no method-specific lactation restriction printed. Paediatric caveat (verbatim): 'Patients must be aged 18 years or older to be eligible for the service.' Site restriction (verbatim): face, nails, scalp, genitals, groin, palms and soles outside scope; axillae - 'hydrocortisone 1% or hydrozole only'. Trial/corticosteroid caveats (verbatim): 'each new treatment ... should be trialled for 2 to 4 weeks'; 'stop therapy and immediately seek review by a medical practitioner' if symptoms worsen or do not improve; 'review reducing and withdrawing topical corticosteroid therapy when possible, especially for more potent topical corticosteroids'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "Betamethasone dipropionate",
+      "form": "cream or ointment",
+      "strength": "0.05%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "up to 4 weeks of therapy (each new treatment should be trialled for 2 to 4 weeks)",
+      "max_quantity": "maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority",
+      "max_dose": "",
+      "quantity_to_supply": "a sufficient quantity of medicine (including repeats) for the period until the patient's review; maximum 4 weeks of therapy (or a higher quantity specified in the Authority)",
+      "notes": "As printed: 'c. Betamethasone dipropionate 0.05% cream or ointment'. Dose/frequency not printed - 'Topical treatments as per Therapeutic Guidelines: Psoriasis'. Pregnancy caveat (verbatim): table row 'Pregnant or planning pregnancy' - Treat = No, Referral = GP; history must include 'Pregnancy and lactation status (if applicable)'; flowchart requires review of 'pregnancy and lactation status'. Lactation caveat (verbatim): 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'. Paediatric caveat (verbatim): 'Patients must be aged 18 years or older to be eligible for the service.' Site restriction (verbatim): face, nails, scalp, genitals, groin, palms and soles outside scope; axillae - 'hydrocortisone 1% or hydrozole only. All stronger potency corticosteroid therapies cannot be supplied by the pharmacist'. Corticosteroid caveats (verbatim): 'each new treatment ... should be trialled for 2 to 4 weeks'; 'stop therapy and immediately seek review by a medical practitioner' if symptoms worsen or do not improve; 'review reducing and withdrawing topical corticosteroid therapy when possible, especially for more potent topical corticosteroids, because of the long-term effects'; annual review by a medical practitioner recommended for adverse effects from topical corticosteroid therapy.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "Calcipotriol + betamethasone dipropionate",
+      "form": "ointment or foam",
+      "strength": "50 + 500 mcg/g",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "up to 4 weeks of therapy (each new treatment should be trialled for 2 to 4 weeks)",
+      "max_quantity": "maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority",
+      "max_dose": "",
+      "quantity_to_supply": "a sufficient quantity of medicine (including repeats) for the period until the patient's review; maximum 4 weeks of therapy (or a higher quantity specified in the Authority)",
+      "notes": "As printed: 'd. Calcipotriol + betamethasone dipropionate 50 + 500 mcg/g ointment or foam'. Dose/frequency not printed - 'Topical treatments as per Therapeutic Guidelines: Psoriasis'; 'Pharmacists need to refer to the Therapeutic Guidelines and the Australian Medicines Handbook for details on management.' Pregnancy caveat (verbatim): table row 'Pregnant or planning pregnancy' - Treat = No, Referral = GP; history must include 'Pregnancy and lactation status (if applicable)'. Lactation caveat (verbatim): 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'. Paediatric caveat (verbatim): 'Patients must be aged 18 years or older to be eligible for the service.' Site restriction (verbatim): face, nails, scalp, genitals, groin, palms and soles outside scope; axillae - 'hydrocortisone 1% or hydrozole only'. Caveats (verbatim): 'each new treatment ... should be trialled for 2 to 4 weeks'; 'If symptoms worsen or do not improve after commencing treatment, patients should be advised to stop therapy and immediately seek review by a medical practitioner.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "LPC (coal tar solution) + salicylic acid",
+      "form": "in cream/ointment",
+      "strength": "LPC (coal tar solution) 4-8% + salicylic acid 3-6%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "up to 4 weeks of therapy (each new treatment should be trialled for 2 to 4 weeks)",
+      "max_quantity": "maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority",
+      "max_dose": "",
+      "quantity_to_supply": "a sufficient quantity of medicine (including repeats) for the period until the patient's review; maximum 4 weeks of therapy (or a higher quantity specified in the Authority)",
+      "notes": "As printed: 'e. LPC (coal tar solution) 4-8% + salicylic acid 3-6% in cream/ointment'. The abbreviation LPC is expanded in the document only as '(coal tar solution)'. Dose/frequency not printed - 'Topical treatments as per Therapeutic Guidelines: Psoriasis'. Pregnancy caveat (verbatim): table row 'Pregnant or planning pregnancy' - Treat = No, Referral = GP; history must include 'Pregnancy and lactation status (if applicable)'. Lactation caveat (verbatim): 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'. Paediatric caveat (verbatim): 'Patients must be aged 18 years or older to be eligible for the service.' Site restriction (verbatim): face, nails, scalp, genitals, groin, palms and soles outside scope. Caveat (verbatim): 'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Guttate psoriasis' (table: Treat = No; Referral = Urgent: GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Pustular psoriasis' (table: Treat = No; Referral = Urgent: GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Erythrodermic psoriasis' (table: Treat = No; Referral = Urgent: GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Psoriasis affecting the face, scalp, genitals, palms, soles, nails' (table: Treat = No; Referral = Urgent: GP). 'Any presentations involving these anatomical regions are outside the scope of these Practice Standards and must be referred to a medical practitioner for management.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Severe plaque psoriasis (>25% body surface area)' (table: Treat = No; Referral = Urgent: GP)",
+      "structured": {"parameter": "body_surface_area_percentage", "operator": ">", "value": 25, "unit": "%"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Signs of sepsis, systemic illness or other complications such as: fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'Complex presentation, such as those requiring antibiotic therapy for secondary infection. Pharmacists must not supply antibiotic therapy.' (table: Treat = No; Referral = Urgent: GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'Immunocompromised patients - due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, prednisone therapy)' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'Non-healing broken skin, sores, ulcers or crusts that are chronic (more than 4 weeks)' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": {"parameter": "duration_of_non_healing_broken_skin_sores_ulcers_or_crusts", "operator": ">", "value": 4, "unit": "weeks"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'The condition is having a marked emotional and/or social impact on the patient' (table: Treat = No; Referral = Urgent: GP). Related: 'Psoriasis is considered severe with a DLQI score of over 10, regardless of the PASI score. These patients need to be referred to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'The patient is below 18 years of age' (table: Treat = No; Referral = GP); flowchart: 'Is the patient >=18 years old?' - No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.'",
+      "structured": {"parameter": "age", "operator": "<", "value": 18, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'The diagnosis is unclear' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'The patient has not been diagnosed with psoriasis by a medical practitioner' (table: Treat = No; Referral = GP); 'Has the patient been diagnosed with plaque psoriasis by a medical practitioner' - No: 'Not eligible for management ... Refer to GP.'",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Moderate plaque psoriasis (>10% body surface area)' (table: Treat = No; Referral = GP); 'moderate-to-severe disease being defined as more than 10% body surface area affected'",
+      "structured": {"parameter": "body_surface_area_percentage", "operator": ">", "value": 10, "unit": "%"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'Psoriasis affecting the face, scalp, genitals, groin, palms, soles, nails' (table: Treat = No; Referral = GP). 'These anatomical areas are outside the scope of practice for pharmacists in these Practice Standards and must be referred to a medical practitioner for management.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'The patient has not seen a medical practitioner for a review of their condition in the previous 12 months' (table: Treat = No; Referral = GP)",
+      "structured": {"parameter": "months_since_last_medical_practitioner_review", "operator": ">", "value": 12, "unit": "months"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'Pregnant or planning pregnancy' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'The patient is taking a medication that can exacerbate psoriasis' (table: Treat = No; Referral = GP). 'Some medications may trigger psoriasis or cause psoriasis to become more severe. These medications include lithium, beta-blockers, anti-malarial medication, and rapid withdrawal of systemic corticosteroids.' Aggravating medicines table: 'lithium, beta-blockers, antimalarials, nonsteroidal anti-inflammatories, antibiotics, ace inhibitors, TNFa inhibitors; Stopping oral steroids or potent topical corticosteroids'.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'There is no response to optimal treatment (within 2-4 weeks) or the condition worsens or reoccurs' (table: Treat = No; Referral = GP)",
+      "structured": {"parameter": "weeks_of_treatment_without_response", "operator": "range", "value": [2, 4], "unit": "weeks"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'Psoriasis is associated with an increased risk of comorbidities including cardiovascular disease, hypertension, obesity, metabolic syndrome, hypercholesterolaemia, diabetes, hepatosteatosis, inflammatory bowel disease, lymphoma and depression. Patients who have not had these issues addressed with their medical practitioner should be referred for investigations and management.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'Up to 35% of patients with chronic plaque psoriasis have an associated spondyloarthropathy; this condition is called psoriatic arthritis and requires referral to a medical practitioner for management.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'Only patients presenting with an acute exacerbation of mild plaque psoriasis that has previously been diagnosed by a medical practitioner may receive management under these Practice Standards. All other psoriasis presentations necessitate a referral to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'Nail changes, including pitting, lifting of the nail (onycholysis) and subungual hyperkeratosis may also be observed, although it may be difficult to distinguish nail changes due to psoriasis from fungal nail infections. Any presentations involving these anatomical regions are outside the scope of these Practice Standards and must be referred to a medical practitioner for management.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'Secondary infection with dermatophyte is common in psoriasis, often when a patient already has an established diagnosis. Referral to a medical practitioner is required if there is an unusual flare of the condition particularly in the groin, lower legs or feet.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'The Dermatology Life Quality Index (DLQI) is used to measure the health-related quality of life in adult patients with psoriasis. Psoriasis is considered severe with a DLQI score of over 10, regardless of the PASI score. These patients need to be referred to a medical practitioner.'",
+      "structured": {"parameter": "DLQI_score", "operator": ">", "value": 10, "unit": "score"},
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'Psoriasis may also be considered severe if there is a significant impact on the patient's quality of life due to involvement of visible areas: major parts of the scalp, genitals, palms/soles, onycholysis of at least 2 fingernails or pruritus leading to excoriation. These patients need to be referred to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'If symptoms worsen or do not improve after commencing treatment, patients should be advised to stop therapy and immediately seek review by a medical practitioner.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'Common adverse effects of topical corticosteroids such as transient burning, stinging or pain on application can generally be reversed by stopping the medication. Referral to a medical practitioner is required if the adverse effect does not resolve quickly.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "Counselling"}
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'All patients should be advised to contact a medical practitioner if: They are not responding to treatment (within 2-4 weeks); Their signs and symptoms worsen; They are experiencing complications (as soon as they become evident); They are having unmanageable adverse effects'",
+      "structured": {"parameter": "weeks_of_treatment_without_response", "operator": "range", "value": [2, 4], "unit": "weeks"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "Counselling"}
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'If a patient experiences worsening of symptoms, minimal improvement in symptoms after commencing pharmacist care, onset of psoriasis-related comorbidities, or a secondary infection, they must be referred for an urgent review by a medical practitioner.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "FOLLOW-UP CARE AND REVIEW"}
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "'Pharmacotherapy for management of psoriasis may be required longer-term; pharmacists should refer patients to a medical practitioner for a review and ongoing management after the acute flare has been managed. An annual review by a medical practitioner is recommended to assess for adverse effects from topical corticosteroid therapy.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "FOLLOW-UP CARE AND REVIEW"}
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration ... by reporting online at https://aems.tga.gov.au/. Additionally, you must notify the patient's usual general practitioner (if they have one).'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "'Patients who have requested the service but are not eligible for management should be referred to their regular medical practitioner or health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "Key points"}
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care for any reason.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    },
+    {
+      "id": "RF-35",
+      "trigger_text": "'Patients who meet any of the urgent referral criteria below must be referred to their regular medical practitioner, maternity provider, health service, or Emergency Department (ED) as indicated in the table. Note that these are not exhaustive lists.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    },
+    {
+      "id": "RF-36",
+      "trigger_text": "'Patients at risk of comorbid disease (e.g. hypertension, obesity, heart disease, diabetes, depression, arthritis)' (table: Treat = Yes; Referral = GP)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'refer to their regular medical practitioner or health service' (patients who requested the service but are not eligible for management)",
+      "'Patients who require non-urgent referral to a GP or a healthcare provider are to be referred in accordance with the usual referral processes.'",
+      "'GP' (table rows: Patients at risk of comorbid disease; The patient is below 18 years of age; The diagnosis is unclear; The patient has not been diagnosed with psoriasis by a medical practitioner; Moderate plaque psoriasis (>10% body surface area); Psoriasis affecting the face, scalp, genitals, groin, palms, soles, nails; The patient has not seen a medical practitioner for a review of their condition in the previous 12 months; Pregnant or planning pregnancy; The patient is taking a medication that can exacerbate psoriasis; There is no response to optimal treatment (within 2-4 weeks) or the condition worsens or reoccurs)",
+      "'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care for any reason.'",
+      "'refers patients to a medical practitioner for a review and ongoing management after the acute flare has been managed' (with annual review for topical corticosteroid adverse effects)",
+      "'Referral to a medical practitioner is required if the adverse effect does not resolve quickly.' (topical corticosteroid adverse effects)",
+      "'should be referred for investigations and management' (psoriasis comorbidities not yet addressed with the medical practitioner)"
+    ],
+    "urgent": [
+      "'Urgent: GP' (table rows: Guttate psoriasis; Pustular psoriasis; Erythrodermic psoriasis; Psoriasis affecting the face, scalp, genitals, palms, soles, nails; Severe plaque psoriasis (>25% body surface area); Complex presentation such as those requiring antibiotic therapy for secondary infection; The condition is having a marked emotional and/or social impact on the patient)",
+      "'Urgent: ED' (table rows: Signs of sepsis, systemic illness or other complications; Immunocompromised patients; Non-healing broken skin, sores, ulcers or crusts that are chronic (more than 4 weeks))",
+      "'they must be referred for an urgent review by a medical practitioner' (worsening of symptoms, minimal improvement after commencing pharmacist care, onset of psoriasis-related comorbidities, or a secondary infection)",
+      "'patients should be advised to stop therapy and immediately seek review by a medical practitioner' (symptoms worsen or do not improve after commencing treatment)"
+    ],
+    "emergency": [],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+  },
+  "review_followup": [
+    {
+      "when": "2-4 weeks after the initiation of treatment for an acute exacerbation",
+      "what": "'Clinical review is recommended 2-4 weeks after the initiation of treatment for an acute exacerbation to assess: Response to treatment (and compliance); If changes are required to the treatment plan; Adverse effects of therapy.' 'If good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "FOLLOW-UP CARE AND REVIEW"}
+    },
+    {
+      "when": "In line with recommendations in the Therapeutic Guidelines (routine clinical review)",
+      "what": "'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines.' 'Patients should be advised and educated on how and when to seek a review with medical practitioner.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "FOLLOW-UP CARE AND REVIEW"}
+    },
+    {
+      "when": "After the acute flare has been managed (and annually thereafter)",
+      "what": "'pharmacists should refer patients to a medical practitioner for a review and ongoing management after the acute flare has been managed. An annual review by a medical practitioner is recommended to assess for adverse effects from topical corticosteroid therapy.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 10, "section_heading": "FOLLOW-UP CARE AND REVIEW"}
+    },
+    {
+      "when": "At least every 12 months (eligibility precondition)",
+      "what": "'The patient has not seen a medical practitioner for a review of their condition in the previous 12 months' - Treat = No, Referral = GP (i.e. a review within the previous 12 months is required for pharmacist management).",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "when": "For 2 to 4 weeks after commencing each new treatment",
+      "what": "'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks. If symptoms worsen or do not improve after commencing treatment, patients should be advised to stop therapy and immediately seek review by a medical practitioner.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "when": "If not responding to treatment (within 2-4 weeks), signs and symptoms worsen, complications occur, or unmanageable adverse effects occur",
+      "what": "'All patients should be advised to contact a medical practitioner if: ...'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 9, "section_heading": "Counselling"}
+    },
+    {
+      "when": "Within a week following the consultation (if the patient consents to disclosure)",
+      "what": "'If the patient consents to the disclosure, the record must be shared within a week following the consultation.' (record of the consultation and any subsequent consultations, including adverse events, with the patient's usual treating medical practitioner or medical practice, where the patient has one)",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT"}
+    },
+    {
+      "when": "Minimum seven (7) years after the consultation",
+      "what": "'Records must be stored securely for a minimum of seven (7) years.' ('Pharmacists must make a full clinical record of the consultation and the details of all consultations and outcomes must be recorded using secure digital software.')",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 4, "section_heading": "Key points"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/.'",
+      "'Additionally, you must notify the patient's usual general practitioner (if they have one).'",
+      "'Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.'",
+      "'The pharmacist must make an electronic clinical record, and a record in a pharmacy dispensing system regarding the supply of any medications under these services, in accordance with the Authority.'"
+    ],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-mild-plaque-psoriasis.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}
+  },
+  "references": [
+    "1. Australian Medicines Handbook: Corticosteroids (skin). Adelaide: Australian Medicines Handbook Pty Ltd; 2025. Available from: https://amhonline.amh.net.au.acs.hcn.com.au/chapters/dermatological-drugs/drugs-eczema/corticosteroids-skin?menu=vertical (page 11)",
+    "2. Australian Medicines Handbook: Drugs for psoriasis. Adelaide: Australian Medicines Handbook Pty Ltd; 2025. Available from: https://amhonline.amh.net.au.acs.hcn.com.au/chapters/dermatological-drugs/drugs-psoriasis/psoriasis (page 11)",
+    "3. Australian Medicines Handbook: General principles: topical treatment of skin conditions. Adelaide: Australian Medicines Handbook Pty Ltd; 2025. Available from: https://amhonline.amh.net.au.acs.hcn.com.au/chapters/dermatological-drugs/general-principles-topical-treatment (page 11)",
+    "4. Baker C, Mack A, Cooper A, Fischer G, Shumack S, Sidhu S, et al. Treatment goals for moderate to severe psoriasis: an Australian consensus. Australasian Journal of Dermatology. 2013;54(2):148-54. (page 12)",
+    "5. Brown P, Shumack S. Psoriasis. In: The A-Z of Skin. Melbourne: The Australasian College of Dermatologists; 2023. Available from: https://www.dermcoll.edu.au/atoz/psoriasis/ (page 12)",
+    "6. Chiricozzi A. BMJ Best Practice: Psoriasis: BMJ Publishing Group; 2022. Available from: https://bestpractice.bmj.com/topics/en-gb/74 (page 12)",
+    "7. Clarke P. Psoriasis. Australian Family Physician. 2012; 40:468-73. (page 12)",
+    "8. Das S. Psoriasis. MSD Manual Professional Version. Merck & Co; 2023. Available from: https://www.msdmanuals.com/professional/dermatologic-disorders/psoriasis-and-scaling-diseases/psoriasis (page 12)",
+    "9. Gisondi P, Bellinato F, Girolomoni G. Topographic Differential Diagnosis of Chronic Plaque Psoriasis: Challenges and Tricks. J Clin Med. 2020; 9(11):3594. doi: 10.3390/jcm9113594. PMID: 33171581; PMCID: PMC7695211. (page 12)",
+    "10. Healthdirect Australia Limited: Medicines for Psoriasis. Healthdirect; 2023. Available from: https://www.healthdirect.gov.au/medicines-for-psoriasis (page 12)",
+    "11. Healthdirect Australia Limited: Psoriasis. Healthdirect; 2023. Available from: https://www.healthdirect.gov.au/psoriasis (page 12)",
+    "12. Jones C et al. Psoriasis. DermNet; 2023. Available from: https://dermnetnz.org/topics/psoriasis (page 12)",
+    "13. Mayo Clinic. Diseases and Conditions: Psoriasis. Mayo Clinic; 2025. Available from: https://www.mayoclinic.org/diseases-conditions/psoriasis/symptoms-causes/syc-20355840 (page 12)",
+    "14. Nair PA, Badri T. Stat Pearls: Psoriasis. Treasure Island, Florida: StatPearls Publishing; 2022. Available from: https://www.ncbi.nlm.nih.gov/books/NBK448194/ (page 12)",
+    "15. NPS MedicineWise factsheets. Plaque psoriasis: my options when topical treatments aren't enough. NPS MedicineWise; 2021. Available from: https://www.nps.org.au/assets/NPS/pdf/NPSMW2381_bDMARDs_Derm_Treatment_Decision_Aid.pdf (page 12)",
+    "16. NPS MedicineWise factsheets. Topical treatments for your plaque psoriasis. NPS MedicineWise; 2021. Available from: https://www.nps.org.au/assets/NPS/pdf/NPSMW2382_bDMARDs_Derm_Treatment_Fact_Sheet.pdf (page 12)",
+    "17. NPS MedicineWise. Plaque psoriasis. NPS MedicineWise; 2022. Available from: https://www.nps.org.au/bdmards/dermatology#hp (page 12)",
+    "18. Oakley A. Fingertip Unit. DermNet; 2023. Available from: https://dermnetnz.org/topics/fingertip-unit (page 12)",
+    "19. Queensland Health. Queensland Community Pharmacy: Acute Exacerbations of Mild Plaque Psoriasis - Clinical Practice Guideline. Queensland Health; 2025. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0027/1304397/plaque-psoriasis-guideline.pdf (page 12)",
+    "20. Skin Deep: A DFTB Project. Welcome to Skin Deep; 2025. Available from: https://dftbskindeep.com/ (page 12)",
+    "21. Skin Health Institute. Patient information sheet: Psoriasis. Skin Health Institute; 2025. Available from: https://skinhealthinstitute.org.au/skin-conditions/psoriasis/ (page 13)",
+    "22. The Australasian College of Dermatologists. Consensus Statement: Treatment goals for psoriasis, the Australian Psoriasis Treatment Goals Project. Rhodes, NSW: The Australasian College of Dermatologists; 2017. Available from: https://atep.edu.au/wp-content/uploads/2022/07/ACD-Consensus-Statement-Treatment-goals-for-psoriasis-March-2017.pdf (page 13)",
+    "23. Therapeutic Guidelines: Dermatology (Considerations in the use of topical corticosteroids). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Dermatology&topicfile=c_DMG_Considerations-in-the-use-of-topical-corticosteroids_topic_1&guidelinename=auto&sectionId=c_DMG_Considerations-in-the-use-of-topical-corticosteroids_topic_2#c_DMG_Considerations-in-the-use-of-topical-corticosteroids_topic_2 (page 13)",
+    "24. Therapeutic Guidelines: Dermatology (Psoriasis). Melbourne: Therapeutic Guidelines Limited; 2024. Available from: https://tgldcdp.tg.org.au.acs.hcn.com.au/viewTopic?etgAccess=true&guidelinePage=Dermatology&topicfile=c_DMG_Considerations-in-the-use-of-topical-corticosteroids_topic_1&guidelinename=auto&sectionId=c_DMG_Psoriasis_topic_2#c_DMG_Psoriasis_topic_2 (page 13)",
+    "25. UpToDate. Patient education: Itchy skin (The Basics). UpToDate; 2025. Available from: https://www.uptodate.com.acs.hcn.com.au/contents/itchy-skin-the-basics?search=psoriasis%20atient%20educaton&topicRef=15495&source=see_link (page 13)",
+    "26. UpToDate. Patient education: Psoriasis (Beyond the Basics). UpToDate; 2025. Available from: https://www.uptodate.com/contents/psoriasis-beyond-the-basics (page 13)",
+    "27. UpToDate. Patient education: Psoriasis (The Basics). UpToDate; 2025. Available from: https://www.uptodate.com/contents/psoriasis-the-basics (page 13)",
+    "28. UpToDate. Patient education: Topical corticosteroid medicines (The Basics). UpToDate; 2025. Available from: https://www.uptodate.com/contents/topical-corticosteroid-medicines-the-basics (page 13)",
+    "29. Vekic, Cains and Woods. Psoriasis don't miss the comorbidities. MedicineToday 2015; 16(6): 43-48. (page 13)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Instrument date contradiction: 28 August 2026 vs 26 August 2026",
+      "observed": "Section A (Approved Medicines) prints 'NSW Health Authority (dated 28 August 2026)'; Section B (General Requirements) prints 'NSW Health Authority (dated 26 August 2026)'; Key points prints 'NSW Health Authority (dated 28 August)' (no year); approval page prints '28 August 2026'.",
+      "why_unclear": "Two different dates are printed for the same Authority document. Both readings recorded; not reconciled. instrument_version carries the 28 August 2026 reading with the 26 August 2026 contradiction noted.",
+      "source_page": 2
+    },
+    {
+      "topic": "Flowchart Yes/No branch labels interleaved in text extraction",
+      "observed": "Page 3 extraction interleaves boxes and branch labels ('Has the patient been diagnosed with plaque psoriasis by a medical practitioner' with 'Not eligible for management ... Refer to GP.'; 'Is the patient >=18 years old? No / Yes'; 'Does the patient have any red flags or non-urgent exclusions? Yes / No' with the Section G annotation; consent box with its 'No' branch).",
+      "why_unclear": "Which connector each Yes/No label belongs to cannot be confirmed from text alone. Readings captured: diagnosis No -> refer GP; age No -> refer GP; red flag Yes -> Section G check; consent No -> refer GP. Verify against printed flowchart.",
+      "source_page": 3
+    },
+    {
+      "topic": "Rotated table headers extracted reversed",
+      "observed": "Headers appear as 'sngis gninraw 'gafl deR' and 'gnitneserp fo sliateD tnialpmoc'.",
+      "why_unclear": "Reversed/rotated text interpreted as \"'Red flag' signs\" and \"Details of presenting complaint\" respectively; used as section_heading.",
+      "source_page": 5
+    },
+    {
+      "topic": "Immunocompromised bullet wording possibly mis-OCR'd",
+      "observed": "'due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, ...'",
+      "why_unclear": "'transplant or GP recipients' is clinically odd (possibly 'transplant or graft recipients'); transcribed verbatim, not reconciled. EXC-8/RF-8 confidence unclear for this reason.",
+      "source_page": 5
+    },
+    {
+      "topic": "Overlapping anatomical-site rows",
+      "observed": "'Psoriasis affecting the face, scalp, genitals, palms, soles, nails' appears in the red flag signs table (Treat = No; Urgent: GP) and 'Psoriasis affecting the face, scalp, genitals, groin, palms, soles, nails' appears in Details of presenting complaint (Treat = No; GP) - the second adds 'groin'.",
+      "why_unclear": "Two rows for largely the same site list with different referral urgency; both captured verbatim (EXC-4/RF-4 and EXC-15/RF-15) rather than merged.",
+      "source_page": 5
+    },
+    {
+      "topic": "Legal basis not named",
+      "observed": "No regulation or poisons schedule provision cited; document references 'the NSW Health Authority (dated 28 August 2026)'/'(dated 26 August 2026)' and Chief Health Officer approval 28 August 2026, delivered under the Community Pharmacy Dermatology Service.",
+      "why_unclear": "The provision under which pharmacists may supply cannot be determined from the document text.",
+      "source_page": 14
+    },
+    {
+      "topic": "No emergency referral category printed",
+      "observed": "Referral destinations in the table are only 'Urgent: GP', 'Urgent: ED' and 'GP'; no separate emergency category, ambulance/000 instruction or ESCALATE_000-type directive is printed.",
+      "why_unclear": "referral.emergency left empty because the document specifies none; ED destinations recorded under 'urgent' to match the document's own wording.",
+      "source_page": 5
+    },
+    {
+      "topic": "No dose, frequency or application instructions printed for Approved Medicines",
+      "observed": "Section A lists formulations/strengths only; 'Topical treatments as per Therapeutic Guidelines: Psoriasis' and 'Pharmacists need to refer to the Therapeutic Guidelines and the Australian Medicines Handbook for details on management.' Counselling should cover 'dosing and application instructions for topical corticosteroids, emollients, and other topical products'.",
+      "why_unclear": "Exact dose/frequency/application amount per product are not printed, so dose/frequency fields are left empty rather than inferred.",
+      "source_page": 2
+    },
+    {
+      "topic": "'higher quantity as specified in the Authority' not printed",
+      "observed": "'Pharmacists can supply up to 4 weeks of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority.' / 'Pharmacists can only supply a maximum of 4 weeks of therapy under these Practice Standards, or a higher quantity specified in the Authority.'",
+      "why_unclear": "The higher quantity is specified in an external document (the Authority) not included here.",
+      "source_page": 4
+    },
+    {
+      "topic": "How severity (% body surface area, PASI, DLQI) is assessed is out of scope",
+      "observed": "Eligibility hinges on mild vs moderate (>10% BSA) vs severe (>25% BSA, DLQI >10), yet 'Use of these scoring systems are beyond the scope of these Practice Standards.' and 'Physical examination of the patient's skin is required to identify, assess and classify the severity'.",
+      "why_unclear": "No method or tool for estimating body surface area percentage by the pharmacist is described; classification method for mild vs moderate is undefined.",
+      "source_page": 7
+    },
+    {
+      "topic": "2-4 week timing wording",
+      "observed": "'There is no response to optimal treatment (within 2-4 weeks) or the condition worsens or reoccurs' and 'They are not responding to treatment (within 2-4 weeks)'.",
+      "why_unclear": "'within 2-4 weeks' could mean review at 2 weeks or up to 4 weeks; structured as a range [2,4] weeks. Verify intended timing before encoding as an automated check.",
+      "source_page": 6
+    },
+    {
+      "topic": "LPC abbreviation and formulation detail",
+      "observed": "'LPC (coal tar solution) 4-8% + salicylic acid 3-6% in cream/ointment' - 'LPC' is expanded only as '(coal tar solution)'; no brand or base details printed.",
+      "why_unclear": "Product identity beyond the printed strengths is not specified in this document.",
+      "source_page": 2
+    },
+    {
+      "topic": "Gates with on_fail 'unclear'",
+      "observed": "PW-1-S6 (sufficient information; contraindication/interaction review), PW-1-S9 (counselling completed) and PW-1-S11 (record shared within a week) have on_fail 'unclear'.",
+      "why_unclear": "Requirements are stated but failure consequences are not printed; spec requires 'unclear' plus an open question.",
+      "source_page": 7
+    },
+    {
+      "topic": "Pregnancy exclusion versus general applicability",
+      "observed": "'Pregnant or planning pregnancy' has Treat = No (excluded from pharmacist management and referred to GP), while history items ask for 'Pregnancy and lactation status (if applicable)'. No lactation-specific exclusion row exists.",
+      "why_unclear": "Pregnancy is an explicit exclusion; lactation is collected in history but no lactation eligibility rule is printed - no lactation exclusion was invented.",
+      "source_page": 6
+    },
+    {
+      "topic": "Exclusion list explicitly not exhaustive",
+      "observed": "'Note that these are not exhaustive lists.' (Section G urgent referral criteria) and 'The prompts provided below are not exhaustive, pharmacists should maintain an open mind and be aware of cognitive bias.'",
+      "why_unclear": "Structured lists cannot be treated as complete; clinical judgement overrides are mandated by the document.",
+      "source_page": 5
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Legal basis for pharmacist supply under the Community Pharmacy Dermatology Service (which regulation/poisons schedule provision the Practice Standard operates under).",
+      "source_page": 14,
+      "reason": "Document names only the NSW Health Authority dates and Chief Health Officer approval; no instrument cited."
+    },
+    {
+      "item": "Resolve the Authority date contradiction: Section A '28 August 2026' vs Section B '26 August 2026' (and Key points '28 August' without year) before go-live.",
+      "source_page": 2,
+      "reason": "Two different dates printed for the same Authority document; affects instrument_version/effective_date and which training requirements apply."
+    },
+    {
+      "item": "Current Approved Medicines list in the external NSW Health Authority document - confirm the five formulations (Methylprednisolone aceponate 0.1%, Mometasone furoate 0.1%, Betamethasone dipropionate 0.05%, Calcipotriol + betamethasone dipropionate 50 + 500 mcg/g, LPC 4-8% + salicylic acid 3-6%).",
+      "source_page": 2,
+      "reason": "'Approved Medicines are listed in the NSW Health Authority' and 'Pharmacists must only supply formulations listed in the Authority' - list is external to this PDF."
+    },
+    {
+      "item": "Exact training requirements in the NSW Health Authority document that pharmacists must have completed.",
+      "source_page": 2,
+      "reason": "General requirements refer to externally detailed training; specific course not printed."
+    },
+    {
+      "item": "Dose, frequency, application quantity and duration per Approved Medicine (per Therapeutic Guidelines: Dermatology - Psoriasis and Australian Medicines Handbook) before encoding into the rules engine.",
+      "source_page": 9,
+      "reason": "This document defers pharmacotherapy detail to external guidelines; no dose/frequency printed here."
+    },
+    {
+      "item": "'A higher quantity as specified in the Authority' beyond the 4-week therapy maximum - obtain the quantity schedule.",
+      "source_page": 4,
+      "reason": "Supply quantity rule is partly external; needed to enforce quantity_to_supply."
+    },
+    {
+      "item": "Severity classification method (how the pharmacist assesses % body surface area for mild vs moderate >10% vs severe >25%, given PASI/DLQI use is 'beyond the scope of these Practice Standards').",
+      "source_page": 7,
+      "reason": "Eligibility depends on severity classification but no assessment method or tool is provided."
+    },
+    {
+      "item": "Verify the printed Patient Assessment Flowchart (page 3) branch labels and the Section G referral table alignment (immunocompromised row, overlapping anatomical-site rows) against the PDF.",
+      "source_page": 3,
+      "reason": "Text extraction interleaves flowchart boxes/branches and table rows; several items marked unclear."
+    },
+    {
+      "item": "Identity of 'hydrozole' and the axillae rule (only hydrocortisone 1% or hydrozole for axillae; stronger potency corticosteroids cannot be supplied by pharmacists).",
+      "source_page": 9,
+      "reason": "'Hydrozole' is a brand name not defined in the document; potency classification for 'stronger potency' products not enumerated."
+    },
+    {
+      "item": "12-month medical review precondition ('The patient has not seen a medical practitioner for a review of their condition in the previous 12 months' -> Treat = No) - how the review date is evidenced/verified.",
+      "source_page": 6,
+      "reason": "Evidence source (My Health Record? patient report?) for the previous review is not specified."
+    },
+    {
+      "item": "Record retention (minimum seven (7) years), electronic clinical record + pharmacy dispensing record, My Health Record upload, and sharing the record within a week where consent is given.",
+      "source_page": 4,
+      "reason": "Systems/records configuration is left to local policy."
+    },
+    {
+      "item": "Local referral destinations and pathways for each table row (Urgent: GP / Urgent: ED / GP), and a local emergency escalation pathway (none printed in this document).",
+      "source_page": 5,
+      "reason": "The document says referrals follow 'established referral pathways' and 'usual referral processes' without naming local destinations; no emergency category exists."
+    },
+    {
+      "item": "Whether topical corticosteroid supply requires a quantity limit tied to the review date ('Pharmacists should generally only supply a sufficient quantity of medicine (including repeats) for the period until the patient's review').",
+      "source_page": 10,
+      "reason": "Quantity rule references a review date that is only defined as '2-4 weeks'; local interpretation needed."
+    }
+  ]
+}

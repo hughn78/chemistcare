@@ -25,6 +25,7 @@ import EightCpaNewService from "./pages/EightCpaNewService";
 import EightCpaServiceHistory from "./pages/EightCpaServiceHistory";
 import PatientTriage from "./pages/PatientTriage";
 import ProtocolConsultation from "./pages/ProtocolConsultation";
+import ProtocolCorpusPage from "./pages/ProtocolCorpusPage";
 import TravelConsultation from "./pages/TravelConsultation";
 import CalendarPage from "./pages/CalendarPage";
 import BookingPage from "./pages/BookingPage";
@@ -70,6 +71,7 @@ const router = createBrowserRouter([
   { path: "/settings", element: <SettingsPage /> },
   { path: "/triage", element: <PatientTriage /> },
   { path: "/protocol-consultation", element: <ProtocolConsultation /> },
+  { path: "/protocol-corpus", element: <ProtocolCorpusPage /> },
   { path: "/travel-consultation", element: <TravelConsultation /> },
   { path: "/calendar", element: <CalendarPage /> },
   { path: "/book/:pharmacySlug", element: <BookingPage /> },

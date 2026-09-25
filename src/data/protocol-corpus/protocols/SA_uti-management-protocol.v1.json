@@ -1,0 +1,587 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf",
+    "pdf_sha256": "4118b68fe0607e3d3dff473413194bcf62cfe56fa60ef1c6e8c320360c9c295d",
+    "page_count": 11,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "SA Community Pharmacy Urinary Tract Infection (UTI) Services – UTI Management Protocol",
+    "instrument_version": "February 2024",
+    "effective_date": "2 February 2024",
+    "legal_basis": "Authorisation page (p2): 'In accordance with the Community Pharmacy Urinary Tract Infection Services Scheme as determined by the Minister for Health and Wellbeing by notice in the Gazette on 2nd February 2024, registered pharmacists who have successfully completed training may supply specified antibiotic medicines without a prescription to eligible patients for the treatment of acute uncomplicated urinary tract infection (UTI).' Appendix 2 (p9): 'Sale or supply must comply with the Community Pharmacy Urinary Tract Infection Services Scheme as determined by the Minister for Health and Wellbeing by notice in the Gazette on 02/02/2024 and SA Community Pharmacy UTI Services – UTI Management Protocol.' Supply basis (p4): 'Supply, packaging and labelling of the approved medicines is in accordance with the Controlled Substances Act (1984) and the Controlled Substances (Poisons) Regulations 2011.'",
+    "supervision_model": "Supply-without-prescription model under a Ministerial scheme (not prescribing under regulation 17A). Document's own terminology (p3 'Conditions'): the pharmacist 'has an unconditional general registration with the Australian Health Practitioner Regulation Agency (Ahpra)'; 'must comply with all relevant legislation, Australian Health Practitioner Regulation Agency (Ahpra) and the Pharmacy Board of Australia's Code of Conduct'; 'Prior to providing services, the pharmacist must have successfully completed approved training as referred to in Appendix 1, and must maintain eligibility to provide services, including any ongoing training'; 'Community pharmacies registered by the Pharmacy Regulation Authority of South Australia (PRASA) may participate in the scheme'; the pharmacy must have 'a screened or private consulting area' with visual and auditory privacy. Assessment and eligibility decisions are made by the pharmacist ('after assessment by a pharmacist', 'as assessed by a pharmacist', p4).",
+    "scope_summary": "SA Health UTI Management Protocol under the Community Pharmacy Urinary Tract Infection Services Scheme, providing 'a framework for pharmacists authorised to supply approved medicines for the management of suspected uncomplicated urinary tract infection (UTI) in eligible patients'. Service: 'timely access to advice, assessment and treatment for women with symptoms of uncomplicated UTI', complementary to other treatment services including GPs. Patient eligibility: women aged 18 to 65 years with an anatomical female urinary tract who are deemed likely to be experiencing an acute uncomplicated UTI after pharmacist assessment, at low risk of complications, and who meet inclusion criteria in relevant standards/guidelines/this protocol; ineligible: females aged under 18 and over 65 years, males, and individuals who have undergone gender reassignment surgery. Covers conditions (pharmacist, pharmacy, approved medicines), clinical documentation and communication, consultation fees, cultural safety, supplementary information (conservative management, antibiotic selection, urinalysis, patient information and referral, review), Appendix 1 training requirements, Appendix 2 approved medicines (trimethoprim first line, nitrofurantoin second line, cefalexin third line) and Appendix 3 references. Page 6 of the PDF contains no extractable text (the Clinical Flow Chart referenced by the companion fact sheet is presumed to be a page image)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Eligible patients include women aged 18 to 65 years with an anatomical female urinary tract presenting to a community pharmacy:'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'o Who are deemed to be likely experiencing an acute uncomplicated urinary tract infection, after assessment by a pharmacist; and'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'o Who are at low risk of complications, as assessed by a pharmacist; and'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+      },
+      {
+        "id": "INC-4",
+        "text": "'o Who meet inclusion criteria in accordance with relevant professional practice standards, guidelines and this UTI Management Protocol.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Service conditions that must hold before the eligibility assessment can be made: 'The pharmacist providing services has an unconditional general registration with the Australian Health Practitioner Regulation Agency (Ahpra).'; 'Prior to providing services, the pharmacist must have successfully completed approved training as referred to in Appendix 1, and must maintain eligibility to provide services, including any ongoing training.'; 'Community pharmacies registered by the Pharmacy Regulation Authority of South Australia (PRASA) may participate in the scheme.'; 'The pharmacy must have an area suitable to maintain confidentiality of the consultation, i.e. have a screened or private consulting area that: Ensures patients' privacy and confidentiality, including visual and auditory privacy; Has sufficient space to allow the presence of the patient, a carer if required, the pharmacist, and relevant documentation.'",
+        "criteria_group": { "all_of": ["INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 3, "section_heading": "Conditions" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "'Ineligible patients include females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery. UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' — sub-criterion: females aged under 18 years.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-2", "text": "'Ineligible patients include females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery. UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' — sub-criterion: females aged over 65 years.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-3", "text": "'Ineligible patients include females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery. UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' — sub-criterion: males.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-4", "text": "'Ineligible patients include females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery. UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' — sub-criterion: individuals who have undergone gender reassignment surgery.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" } },
+      { "id": "EXC-5", "text": "'Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment.'", "criteria_group": { "all_of": [], "any_of": ["EXC-5"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Urinalysis" } },
+      { "id": "EXC-6", "text": "'In cases where there are symptoms not associated with uncomplicated UTI, patients should be referred to a general practitioner or other health service.'", "criteria_group": { "all_of": [], "any_of": ["EXC-6"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Patient Information and Referral to General Practitioners and other Health Services" } },
+      { "id": "EXC-7", "text": "Appendix 1 training objective: 'The importance of referring a patient to a GP or other appropriate health service if risk factors for complicated UTI are present or a pharmacist is not confident that an uncomplicated UTI is a likely diagnosis.'", "criteria_group": { "all_of": [], "any_of": ["EXC-7"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 8, "section_heading": "Appendix 1 - Training requirements" } },
+      { "id": "EXC-8", "text": "Supply constraint (not a patient characteristic, but blocks supply): 'The pharmacist must not sell or supply the medicines in a quantity that exceeds the smallest available size of the manufacturer's pack of the medicine.' and 'The pharmacist must only supply approved medicines as per requirements listed in Appendix 2.'", "criteria_group": { "all_of": [], "any_of": ["EXC-8"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Approved medicines" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 65,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "'The services will increase options available for consumers to seek treatment and are complementary to other treatment services for UTI, including via general practitioners.' — a patient outside this service is not without treatment options; GP and other services remain available.", "criteria_group": { "all_of": [], "any_of": ["EXE-1"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 3, "section_heading": "Services" } },
+      { "id": "EXE-2", "text": "'Evidence based conservative management for uncomplicated UTI may include pain management and other non-prescription medicines. Non-pharmacological and self-care advice should also be provided.' — supply of an approved antibiotic is not the only permitted outcome of an eligible consultation.", "criteria_group": { "all_of": [], "any_of": ["EXE-2"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Conservative Management" } },
+      { "id": "EXE-3", "text": "'Pharmacists will ensure continuity of care and use their professional discretion to refer the patient to health professionals or services where appropriate, and where eligibility criteria are not met.' — failing eligibility leads to referral rather than to no care.", "criteria_group": { "all_of": [], "any_of": ["EXE-3"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 5, "section_heading": "Clinical documentation and communication" } },
+      { "id": "EXE-4", "text": "Age boundaries are inclusive as printed: 'women aged 18 to 65 years' (inclusion, p4) with ineligibility only for 'females aged under 18 years and over 65 years' (p4) — exactly 18 and exactly 65 remain eligible.", "criteria_group": { "all_of": [], "any_of": ["EXE-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" } }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Assessment and antibiotic supply pathway for suspected uncomplicated UTI",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Conditions and clinical record: 'The pharmacist providing services has an unconditional general registration with the Australian Health Practitioner Regulation Agency (Ahpra).' 'The pharmacist must comply with all relevant legislation, Australian Health Practitioner Regulation Agency (Ahpra) and the Pharmacy Board of Australia's Code of Conduct, and the expected standards of ethical behaviour of pharmacists towards individuals, the community and society.' 'Prior to providing services, the pharmacist must have successfully completed approved training as referred to in Appendix 1, and must maintain eligibility to provide services, including any ongoing training.' 'Community pharmacies registered by the Pharmacy Regulation Authority of South Australia (PRASA) may participate in the scheme.' 'The pharmacy must have an area suitable to maintain confidentiality of the consultation, i.e. have a screened or private consulting area that: Ensures patients' privacy and confidentiality, including visual and auditory privacy; Has sufficient space to allow the presence of the patient, a carer if required, the pharmacist, and relevant documentation.' Clinical documentation: 'The pharmacist must make a clinical record and a record in a pharmacy dispensing system regarding the supply of any antibiotics under these services.' The record must include: 'sufficient information to identify the patient; the name of the pharmacist who undertook the consultation and their healthcare identifier number (HPI-I); the date of the consultation; information relevant to the patient's diagnosis and treatment (for example, patient's medical history, adverse drug reactions); any clinical opinion reached, and actions taken by the pharmacist; details of any medication supplied for the patient (generic name, form, strength and quantity); any information or advice given by the pharmacist to the patient in relation to any proposed treatment; any consent given by a patient to the consultation, treatment proposed, sharing information with their medical practitioner.'",
+          "gates": [
+            { "criterion": "pharmacist holds unconditional general registration with Ahpra", "on_fail": "STOP" },
+            { "criterion": "pharmacist has successfully completed approved training (Appendix 1) and maintains eligibility including any ongoing training", "on_fail": "STOP" },
+            { "criterion": "pharmacy is registered by PRASA", "on_fail": "STOP" },
+            { "criterion": "screened or private consulting area available with visual and auditory privacy and sufficient space", "on_fail": "STOP" },
+            { "criterion": "clinical record and pharmacy dispensing system record started, including HPI-I, date, history, clinical opinion and consent", "on_fail": "unclear" },
+            { "criterion": "patient consent obtained for the consultation, treatment proposed and sharing of information with their medical practitioner", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 3, "section_heading": "Conditions" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Assessment and eligibility decision: 'Eligible patients include women aged 18 to 65 years with an anatomical female urinary tract presenting to a community pharmacy: o Who are deemed to be likely experiencing an acute uncomplicated urinary tract infection, after assessment by a pharmacist; and o Who are at low risk of complications, as assessed by a pharmacist; and o Who meet inclusion criteria in accordance with relevant professional practice standards, guidelines and this UTI Management Protocol.' 'Ineligible patients include females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery. UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' Urinalysis/diagnostic probability (p7): 'The use of urinalysis by dipstick is not being mandated as part of the Community Pharmacy Urinary Tract Infection Services and is not a part of empiric treatment. The probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present, in the absence of vaginal discharge. Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment.' Antibiotic selection factors (p7): 'When selecting antibiotic treatment consider drug allergies, drug interactions and other contraindications.'",
+          "gates": [
+            { "criterion": "eligible patient profile: woman aged 18 to 65 years with an anatomical female urinary tract presenting to a community pharmacy (INC-1 / EXC-1 to EXC-4 / RF-1 to RF-4)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "deemed likely experiencing an acute uncomplicated urinary tract infection, after assessment by a pharmacist (INC-2)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "at low risk of complications, as assessed by a pharmacist (INC-3)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "meets inclusion criteria in accordance with relevant professional practice standards, guidelines and this UTI Management Protocol (INC-4)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "at least two primary symptoms of cystitis are present, in the absence of vaginal discharge — 'The probability of cystitis is greater than 90%' under those conditions", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "no 'question over diagnosis of uncomplicated UTI' — 'Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment' (EXC-5 / RF-5)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "no symptoms not associated with uncomplicated UTI present (EXC-6 / RF-6)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "no risk factors for complicated UTI present and the pharmacist is confident that an uncomplicated UTI is a likely diagnosis (EXC-7 / RF-7)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "dipstick urinalysis position understood — 'not being mandated ... and is not a part of empiric treatment'", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "TREAT",
+          "description": "Supply of approved medicines (Appendix 2, p9): 'Sale or supply must comply with the Community Pharmacy Urinary Tract Infection Services Scheme as determined by the Minister for Health and Wellbeing by notice in the Gazette on 02/02/2024 and SA Community Pharmacy UTI Services – UTI Management Protocol.' Approved oral antibiotics table — Trimethoprim (First line): '300mg orally, daily at night for 3 nights', maximum quantity '3 tablets or capsules', Conditions column blank; Nitrofurantoin (Second line): '100mg orally, every 6 hours for 5 days', maximum quantity '20 tablets or capsules', Conditions: 'Sale and supply limited to circumstances where trimethoprim is not appropriate for the patient or not available'; Cefalexin (Third line): '500mg orally, every 12 hours for 5 days', maximum quantity '10 tablets or capsules', Conditions: 'Sale and supply limited to circumstances where trimethoprim and nitrofurantoin are not appropriate for the patient or not available'. Supply rules (p3-p4): 'The pharmacist must only supply approved medicines as per requirements listed in Appendix 2.' 'The medicines are only sold or supplied to eligible patients in accordance with relevant professional practice standards and guidelines, and this UTI Management Protocol.' 'Supply, packaging and labelling of the approved medicines is in accordance with the Controlled Substances Act (1984) and the Controlled Substances (Poisons) Regulations 2011.' 'The pharmacist must not sell or supply the medicines in a quantity that exceeds the smallest available size of the manufacturer's pack of the medicine.' Antibiotic selection (p7): 'Recommendations for empiric antibiotic treatment are based on factors including efficacy, convenience, cost, availability, harms associated with antibiotic use (e.g. adverse effects in the patient, development of antibiotic resistance), resistance rates of common pathogens and a consideration of the risk of adverse outcomes from clinical failure.' 'When selecting antibiotic treatment consider drug allergies, drug interactions and other contraindications.' Conservative management (p7): 'Evidence based conservative management for uncomplicated UTI may include pain management and other non-prescription medicines. Non-pharmacological and self-care advice should also be provided.'",
+          "gates": [
+            { "criterion": "eligibility and diagnosis gates passed (PW-1-S2)", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "second-line nitrofurantoin supplied only where 'trimethoprim is not appropriate for the patient or not available'", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "third-line cefalexin supplied only where 'trimethoprim and nitrofurantoin are not appropriate for the patient or not available'", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "quantity supplied does not exceed 'the smallest available size of the manufacturer's pack of the medicine' (EXC-8)", "on_fail": "STOP" },
+            { "criterion": "drug allergies, drug interactions and other contraindications considered before selection", "on_fail": "SEE_PW-1-S6" },
+            { "criterion": "only approved medicines from Appendix 2 are supplied", "on_fail": "STOP" },
+            { "criterion": "supply, packaging and labelling comply with the Controlled Substances Act (1984) and the Controlled Substances (Poisons) Regulations 2011", "on_fail": "STOP" },
+            { "criterion": "conservative management and self-care advice considered/provided (pain management and other non-prescription medicines)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 9, "section_heading": "Appendix 2 – Approved Medicines" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EDUCATE",
+          "description": "Patient information, documentation and communication: 'Where a patient is prescribed medication, they should be given Consumer Medicines Information (CMI) about possible side effects (as per usual practice) and told to see their GP if symptoms worsen or are not resolved within 2 days.' 'Patients should be provided information about prevention of UTIs.' 'The pharmacist must offer a record of the treatment and consultation to the patient. This may include a copy of the checklist completed by the pharmacist during the consultation. The patient may choose to share this with their GP or other health professionals. Where possible, the patient should be actively encouraged to provide the consultation summary (patient checklist/outcome) to their GP, in order to have the episode of care recorded within their personal medical record at the general practice.' 'Following consent by the patient, the pharmacist may share a record of the supply and consultation with the patient's usual treating medical practitioner or medical practice, where the patient has one.' 'Where a patient has a My Health Record, the pharmacist must ensure the details of the medicine supply are uploaded to My Health Record, unless requested otherwise by the patient.' 'Pharmacists may charge a consultation fee for the service, in addition to the cost of any medicine that is supplied. Pharmacists should ensure that the patient understands the costs involved when offering the service.' 'Pharmacists must complete cultural safety and gender diversity training relevant to their place of practice, reflect on their competency and provide the service in ways that are inclusive, culturally safe, sensitive, and responsive.'",
+          "gates": [
+            { "criterion": "Consumer Medicines Information (CMI) about possible side effects given where medication is supplied", "on_fail": "unclear" },
+            { "criterion": "patient told to see their GP if symptoms worsen or are not resolved within 2 days (RF-8)", "on_fail": "unclear" },
+            { "criterion": "information about prevention of UTIs provided", "on_fail": "unclear" },
+            { "criterion": "record of the treatment and consultation offered to the patient (may include the checklist)", "on_fail": "unclear" },
+            { "criterion": "patient actively encouraged to provide the consultation summary to their GP for their personal medical record", "on_fail": "unclear" },
+            { "criterion": "details of the medicine supply uploaded to My Health Record unless the patient requests otherwise", "on_fail": "unclear" },
+            { "criterion": "costs of the service explained to the patient before/when offering the service", "on_fail": "unclear" },
+            { "criterion": "clinical record completed with generic name, form, strength and quantity of medication supplied, advice given and consent obtained (p4)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Patient Information and Referral to General Practitioners and other Health Services" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "FOLLOW_UP",
+          "description": "Review and continuity of care: 'Where a patient is prescribed medication, they should be given Consumer Medicines Information (CMI) about possible side effects (as per usual practice) and told to see their GP if symptoms worsen or are not resolved within 2 days.' 'Pharmacists will ensure continuity of care and use their professional discretion to refer the patient to health professionals or services where appropriate, and where eligibility criteria are not met.' 'Following consent by the patient, the pharmacist may share a record of the supply and consultation with the patient's usual treating medical practitioner or medical practice, where the patient has one.' 'This UTI Management Protocol will be reviewed on a regular basis as required.' (p7 'Review'). 'Pharmacists must, at the request of the Minister for Health and Wellbeing, provide data on the scheme periodically (for monitoring and evaluation purposes).'",
+          "gates": [
+            { "criterion": "patient advised to see their GP if symptoms worsen or are not resolved within 2 days (RF-8)", "on_fail": "REFER" },
+            { "criterion": "continuity of care arranged and referral made where eligibility criteria are not met", "on_fail": "REFER" },
+            { "criterion": "consultation record shared with the patient's usual treating medical practitioner with consent, where the patient has one", "on_fail": "unclear" },
+            { "criterion": "scheme data available for periodic provision to the Minister on request", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 5, "section_heading": "Clinical documentation and communication" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "REFER",
+          "description": "Referral branch: 'UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' (ineligible groups: females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery, p4). 'Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment.' (p7). 'In cases where there are symptoms not associated with uncomplicated UTI, patients should be referred to a general practitioner or other health service.' (p7). 'The importance of referring a patient to a GP or other appropriate health service if risk factors for complicated UTI are present or a pharmacist is not confident that an uncomplicated UTI is a likely diagnosis.' (p8). 'Pharmacists will ensure continuity of care and use their professional discretion to refer the patient to health professionals or services where appropriate, and where eligibility criteria are not met.' (p5). 'Presentations to healthcare for acute issues, such as UTI, are also important opportunities to engage patients in preventative healthcare, such as screening and education, and referral to a general or other medical practitioner where appropriate.' (p7). Note: page 6 of the PDF contains no extractable text; the Clinical Flow Chart referenced by the companion fact sheet may contain further assessment and referral steps (see open_questions).",
+          "gates": [
+            { "criterion": "eligibility criteria met (INC-1 to INC-4) — otherwise refer per p4 and p5", "on_fail": "REFER" },
+            { "criterion": "diagnosis of uncomplicated UTI is not in question (EXC-5)", "on_fail": "REFER" },
+            { "criterion": "no symptoms not associated with uncomplicated UTI (EXC-6)", "on_fail": "REFER" },
+            { "criterion": "no risk factors for complicated UTI and the pharmacist is confident an uncomplicated UTI is a likely diagnosis (EXC-7)", "on_fail": "REFER" },
+            { "criterion": "referral destination, timeframe and after-hours arrangement recorded by the local service (no urgency tiers or destinations are printed)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Trimethoprim",
+      "form": "tablets or capsules",
+      "strength": "300mg",
+      "dose": "300mg orally, daily at night for 3 nights",
+      "route": "oral",
+      "frequency": "daily at night",
+      "duration": "3 nights",
+      "max_quantity": "3 tablets or capsules",
+      "max_dose": "300mg",
+      "quantity_to_supply": "3 tablets or capsules",
+      "notes": "Appendix 2 (p9) row as printed: 'Trimethoprim (First line) | 300mg | 300mg orally, daily at night for 3 nights | 3 tablets or capsules' — Conditions column is blank for trimethoprim. '(First line)' label printed under the medicine name. Supply rules (p3-p4): 'The pharmacist must only supply approved medicines as per requirements listed in Appendix 2.' 'The medicines are only sold or supplied to eligible patients in accordance with relevant professional practice standards and guidelines, and this UTI Management Protocol.' 'The pharmacist must not sell or supply the medicines in a quantity that exceeds the smallest available size of the manufacturer's pack of the medicine.' 'Sale or supply must comply with the Community Pharmacy Urinary Tract Infection Services Scheme as determined by the Minister for Health and Wellbeing by notice in the Gazette on 02/02/2024 and SA Community Pharmacy UTI Services – UTI Management Protocol.' Selection caveat (p7): 'When selecting antibiotic treatment consider drug allergies, drug interactions and other contraindications.' Doses transcribed exactly as printed; no unit conversion applied.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 9, "section_heading": "Appendix 2 – Approved Medicines" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Nitrofurantoin",
+      "form": "tablets or capsules",
+      "strength": "100mg",
+      "dose": "100mg orally, every 6 hours for 5 days",
+      "route": "oral",
+      "frequency": "every 6 hours",
+      "duration": "5 days",
+      "max_quantity": "20 tablets or capsules",
+      "max_dose": "100mg",
+      "quantity_to_supply": "20 tablets or capsules",
+      "notes": "Appendix 2 (p9) row as printed: 'Nitrofurantoin (Second line) | 100mg | 100mg orally, every 6 hours for 5 days | 20 tablets or capsules | Sale and supply limited to circumstances where trimethoprim is not appropriate for the patient or not available'. '(Second line)' label printed under the medicine name. Conditions column restriction is part of the printed supply rule and is enforced as a gate (PW-1-S3). Same pack-size ceiling as TX-1: quantity must not exceed 'the smallest available size of the manufacturer's pack of the medicine'. Doses transcribed exactly as printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 9, "section_heading": "Appendix 2 – Approved Medicines" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Cefalexin",
+      "form": "tablets or capsules",
+      "strength": "500mg",
+      "dose": "500mg orally, every 12 hours for 5 days",
+      "route": "oral",
+      "frequency": "every 12 hours",
+      "duration": "5 days",
+      "max_quantity": "10 tablets or capsules",
+      "max_dose": "500mg",
+      "quantity_to_supply": "10 tablets or capsules",
+      "notes": "Appendix 2 (p9) row as printed: 'Cefalexin (Third line) | 500mg | 500mg orally, every 12 hours for 5 days | 10 tablets or capsules | Sale and supply limited to circumstances where trimethoprim and nitrofurantoin are not appropriate for the patient or not available'. '(Third line)' label printed under the medicine name. Conditions column restriction enforced as a gate (PW-1-S3). Same pack-size ceiling as TX-1: quantity must not exceed 'the smallest available size of the manufacturer's pack of the medicine'. Doses transcribed exactly as printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 9, "section_heading": "Appendix 2 – Approved Medicines" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Conservative management for uncomplicated UTI (pain management and other non-prescription medicines; non-pharmacological and self-care advice)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p7): 'Evidence based conservative management for uncomplicated UTI may include pain management and other non-prescription medicines. Non-pharmacological and self-care advice should also be provided.' No specific agent, strength, dose, frequency or duration is printed for conservative management in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Conservative Management" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Ineligible patients include females aged under 18 years ... UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.'",
+      "structured": { "parameter": "age_years", "operator": "<", "value": 18, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Ineligible patients include females aged under 18 years and over 65 years ... UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.'",
+      "structured": { "parameter": "age_years", "operator": ">", "value": 65, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Ineligible patients include ... males ... UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.'",
+      "structured": { "parameter": "sex", "operator": "==", "value": "male", "unit": "" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Ineligible patients include ... individuals who have undergone gender reassignment surgery. UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.'",
+      "structured": { "parameter": "history_of_gender_reassignment_surgery", "operator": "==", "value": true, "unit": "" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Urinalysis" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'In cases where there are symptoms not associated with uncomplicated UTI, patients should be referred to a general practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Patient Information and Referral to General Practitioners and other Health Services" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'The importance of referring a patient to a GP or other appropriate health service if risk factors for complicated UTI are present or a pharmacist is not confident that an uncomplicated UTI is a likely diagnosis.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 8, "section_heading": "Appendix 1 - Training requirements" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'[Patients should] be ... told to see their GP if symptoms worsen or are not resolved within 2 days.'",
+      "structured": { "parameter": "days_without_symptom_resolution", "operator": ">", "value": 2, "unit": "days" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Patient Information and Referral to General Practitioners and other Health Services" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'The probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present, in the absence of vaginal discharge.' — conversely, fewer than two primary symptoms or the presence of vaginal discharge removes that diagnostic confidence, and combined with 'Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment' requires referral.",
+      "structured": { "parameter": "primary_symptoms_of_cystitis", "operator": "<", "value": 2, "unit": "symptoms" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Urinalysis" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Supply ceiling: 'The pharmacist must not sell or supply the medicines in a quantity that exceeds the smallest available size of the manufacturer's pack of the medicine.' (a supply above the smallest pack blocks the supply)",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Approved medicines" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Second/third-line conditions: 'Sale and supply limited to circumstances where trimethoprim is not appropriate for the patient or not available' (nitrofurantoin) and 'Sale and supply limited to circumstances where trimethoprim and nitrofurantoin are not appropriate for the patient or not available' (cefalexin).",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 9, "section_heading": "Appendix 2 – Approved Medicines" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'UTIs in these groups are more likely be complicated and require referral to a general practitioner or other health service for further review.' (p4 — for ineligible groups: females aged under 18 years and over 65 years, males, and individuals who have undergone gender reassignment surgery)",
+      "'Pharmacists will ensure continuity of care and use their professional discretion to refer the patient to health professionals or services where appropriate, and where eligibility criteria are not met.' (p5)",
+      "'Situations where there is a question over diagnosis of uncomplicated UTI should be referred to a medical practitioner for further assessment.' (p7)",
+      "'In cases where there are symptoms not associated with uncomplicated UTI, patients should be referred to a general practitioner or other health service.' (p7)",
+      "'Presentations to healthcare for acute issues, such as UTI, are also important opportunities to engage patients in preventative healthcare, such as screening and education, and referral to a general or other medical practitioner where appropriate.' (p7)",
+      "'The importance of referring a patient to a GP or other appropriate health service if risk factors for complicated UTI are present or a pharmacist is not confident that an uncomplicated UTI is a likely diagnosis.' (p8)",
+      "'[Patients should] be told to see their GP if symptoms worsen or are not resolved within 2 days.' (p7)",
+      "'Where possible, the patient should be actively encouraged to provide the consultation summary (patient checklist/outcome) to their GP, in order to have the episode of care recorded within their personal medical record at the general practice.' (p5)"
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Patient eligibility" }
+  },
+  "review_followup": [
+    {
+      "when": "If symptoms worsen or are not resolved within 2 days",
+      "what": "'Where a patient is prescribed medication, they should be given Consumer Medicines Information (CMI) about possible side effects (as per usual practice) and told to see their GP if symptoms worsen or are not resolved within 2 days.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Patient Information and Referral to General Practitioners and other Health Services" }
+    },
+    {
+      "when": "At the end of the consultation (record offered to the patient)",
+      "what": "'The pharmacist must offer a record of the treatment and consultation to the patient. This may include a copy of the checklist completed by the pharmacist during the consultation. ... Where possible, the patient should be actively encouraged to provide the consultation summary (patient checklist/outcome) to their GP, in order to have the episode of care recorded within their personal medical record at the general practice.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 5, "section_heading": "Clinical documentation and communication" }
+    },
+    {
+      "when": "Following patient consent",
+      "what": "'Following consent by the patient, the pharmacist may share a record of the supply and consultation with the patient's usual treating medical practitioner or medical practice, where the patient has one.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 5, "section_heading": "Clinical documentation and communication" }
+    },
+    {
+      "when": "At the request of the Minister for Health and Wellbeing (periodically)",
+      "what": "'Pharmacists must, at the request of the Minister for Health and Wellbeing, provide data on the scheme periodically (for monitoring and evaluation purposes).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 5, "section_heading": "Clinical documentation and communication" }
+    },
+    {
+      "when": "Document review — 'on a regular basis as required'",
+      "what": "'This UTI Management Protocol will be reviewed on a regular basis as required.' (no interval printed)",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 7, "section_heading": "Review" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'The pharmacist must make a clinical record and a record in a pharmacy dispensing system regarding the supply of any antibiotics under these services.' (p4)",
+      "'Where a patient has a My Health Record, the pharmacist must ensure the details of the medicine supply are uploaded to My Health Record, unless requested otherwise by the patient.' (p4)",
+      "'Pharmacists must, at the request of the Minister for Health and Wellbeing, provide data on the scheme periodically (for monitoring and evaluation purposes).' (p5)"
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-uti-management-protocol.pdf", "page": 4, "section_heading": "Clinical documentation and communication" }
+  },
+  "references": [
+    "[p10] Professional Practice Standards: Pharmaceutical Society of Australia Professional Practice Standards 2023, version 6 — https://www.psa.org.au/practice-support-industry/pps/",
+    "[p10] Clinical Guidelines — UTI Treatment Guidelines: SA Health Urinary Tract Infections (adult): Empirical Treatment Clinical Guideline — https://inside.sahealth.sa.gov.au/wps/wcm/connect/non-public+content/sa+health+intranet/policies/a-z+policies+and+guidelines/clinical+policies+and+guidelines/urinary+tract+infections+adult+empirical+treatment+clinical+guideline",
+    "[p10] Pharmaceutical Society of Australia. Treatment guideline for pharmacists: Cystitis — https://my.psa.org.au/s/article/Treatment-guideline-for-pharmacists-cystitis",
+    "[p10] Australasian College of Pharmacy. Pharmacist Treatment Guidance: Uncomplicated Cystitis — https://www.acp.edu.au/uti-guidance/",
+    "[p10] Antibiotic [published 2019 May]. In: Therapeutic Guidelines. Melbourne: Therapeutic Guidelines Limited — https://www.tg.org.au",
+    "[p10] STI Guidelines: Australian STI management guidelines for use in primary care — https://sti.guidelines.org.au/sexual-history/",
+    "[p10] Approved Pharmacist Urinary Tract Infection Training: Australasian College of Pharmacy Uncomplicated Cystitis Treatment – Pharmacist Training — https://www.acp.edu.au/uti-training/sa/",
+    "[p10] Pharmaceutical Society of Australia Managing uncomplicated cystitis online training module — UTI resources - Pharmaceutical Society of Australia (psa.org.au)",
+    "[p10] Other Relevant Training — Cultural safety: Pharmaceutical Society of Australia Deadly pharmacists foundations training course — Training Plan: Deadly pharmacists foundation training course (psa.org.au)",
+    "[p10] STI: Is it UTI or STI? Identifying the difference - Webinar (ACP Feb 2021)",
+    "[p11] Feedback and Complaints: Australian Health Practitioner Regulation Agency - Checklist for practitioners handling feedback and complaints (ahpra.gov.au)",
+    "[p11] Consumer Information: Better Health Channel: https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/urinary-tract-infections-uti",
+    "[p11] Consumer Information: UTI fact sheet from Kidney Health Australia — https://kidney.org.au/uploads/resources/KHA-Factsheet-urinary-tract-infections-2018.pdf",
+    "[p11] Consumer Information: SA Health Urinary tract infection (UTI) – including symptoms treatment and prevention | SA Health",
+    "[p11] Consumer Information: Pharmaceutical Society of Australia UTI Self-care fact card — UTI resources - Pharmaceutical Society of Australia (psa.org.au)",
+    "[p8] Current approved training: Pharmaceutical Society of Australia Managing uncomplicated cystitis online training module — https://my.psa.org.au/s/training-plan/a110o00000JPST0AAP/managing-uncomplicated-cystitis-urinarytract-infection",
+    "[p8] Current approved training: Australasian College of Pharmacy Uncomplicated Cystitis Treatment – Pharmacist Training — https://www.acp.edu.au/uti-guidance/"
+  ],
+  "open_questions": [
+    {
+      "topic": "Page 6 of the PDF contains no extractable text — the Clinical Flow Chart is presumably a page image",
+      "observed": "Page 6 extracts as 'OFFICIAL' and page number '6' only. The companion fact sheet states the protocol 'includes a Clinical Flow Chart that provides information to guide assessment and clinical decision-making on management of uncomplicated UTI and appropriate referral'.",
+      "why_unclear": "Assessment criteria, symptom lists, red flags and referral branches held in the flow chart could not be transcribed and must not be invented; diagnosis_pathways was built only from the extractable prose (p3-p9).",
+      "source_page": 6
+    },
+    {
+      "topic": "Appendix 2 table columns — an extra strength value precedes each dosage with no separate column header in the extraction",
+      "observed": "Extracted rows read 'Trimethoprim 300mg 300mg orally, daily at night for 3 nights 3 tablets or capsules'; the header row reads 'Approved oral antibiotics Dosage Maximum quantity Conditions'.",
+      "why_unclear": "The leading value (300mg/100mg/500mg) has no visible header in the extraction; it is transcribed as 'strength' while the full dosage string is kept verbatim in 'dose'. Column assignment should be verified against the PDF page image.",
+      "source_page": 9
+    },
+    {
+      "topic": "No urgency tiers or referral destinations/timframes printed",
+      "observed": "Referral statements name only 'a general practitioner or other health service' / 'a medical practitioner' with no timeframes and no urgent or emergency tiers.",
+      "why_unclear": "referral.urgent and referral.emergency are empty because the document genuinely prints none; destinations/timeframes must be supplied locally (see hugh_to_confirm).",
+      "source_page": 4
+    },
+    {
+      "topic": "Combinatorics of inclusion criteria are printed; exclusion grouping is derived",
+      "observed": "Inclusion sub-bullets are joined by 'and' (p4), supporting {all_of: [INC-1..INC-4]}; 'Ineligible patients include ...' introduces a list without an explicit any/all label.",
+      "why_unclear": "Exclusion groups default to any_of (any single listed ineligibility excludes), recorded here per spec rule 4.",
+      "source_page": 4
+    },
+    {
+      "topic": "'Anatomical female urinary tract' and 'individuals who have undergone gender reassignment surgery' are not defined",
+      "observed": "Both phrases are printed in the eligibility section (p4) with no definitions, while p5 requires pharmacists to 'complete cultural safety and gender diversity training relevant to their place of practice, reflect on their competency and provide the service in ways that are inclusive, culturally safe, sensitive, and responsive.'",
+      "why_unclear": "The operational meaning of these eligibility terms (and how they interact with the cultural safety requirement) is not stated; transcribed verbatim with confidence 'high' for the text but the interpretation is flagged for local confirmation.",
+      "source_page": 4
+    },
+    {
+      "topic": "'Risk factors for complicated UTI' are never enumerated in this protocol",
+      "observed": "p4 refers to patients 'at low risk of complications, as assessed by a pharmacist'; p8 requires 'referring a patient to a GP ... if risk factors for complicated UTI are present'. The actual list is not printed.",
+      "why_unclear": "It is delegated to the approved training programs and clinical guidelines; no criteria could be transcribed without inventing them.",
+      "source_page": 8
+    },
+    {
+      "topic": "'Primary symptoms of cystitis' are not enumerated",
+      "observed": "'The probability of cystitis is greater than 90% when at least two primary symptoms of cystitis are present, in the absence of vaginal discharge.' (p7)",
+      "why_unclear": "The individual symptoms are not listed anywhere in the extractable text (they may be in the page-6 flow chart); RF-9 is therefore derived from the printed probability statement with confidence 'medium'.",
+      "source_page": 7
+    },
+    {
+      "topic": "Role of dipstick urinalysis left open",
+      "observed": "'The use of urinalysis by dipstick is not being mandated as part of the Community Pharmacy Urinary Tract Infection Services and is not a part of empiric treatment.' (p7)",
+      "why_unclear": "The document says it is not mandated and not part of empiric treatment but does not say whether it may be used; no rule derived.",
+      "source_page": 7
+    },
+    {
+      "topic": "'Smallest available size of the manufacturer's pack' — pack sizes not printed",
+      "observed": "'The pharmacist must not sell or supply the medicines in a quantity that exceeds the smallest available size of the manufacturer's pack of the medicine.' (p4) alongside Appendix 2 maximum quantities (3, 20 and 10 tablets or capsules).",
+      "why_unclear": "Actual pack sizes per product/brand are not printed, so the operative supply quantity for each product cannot be determined from this document alone.",
+      "source_page": 4
+    },
+    {
+      "topic": "Appendix 2 maximum quantity vs pack ceiling interaction",
+      "observed": "Appendix 2 prints maximum quantities (trimethoprim 3 tablets or capsules; nitrofurantoin 20; cefalexin 10) while p4 prints the smallest-manufacturer-pack ceiling.",
+      "why_unclear": "The document does not state which ceiling governs if they differ; both recorded in the treatment rows.",
+      "source_page": 9
+    },
+    {
+      "topic": "Trimethoprim row has a blank Conditions cell",
+      "observed": "In the extracted Appendix 2 table the Conditions text appears only for nitrofurantoin and cefalexin.",
+      "why_unclear": "Assumed to mean no additional supply condition applies to first-line trimethoprim; confirm visually against the PDF in case text was lost in extraction.",
+      "source_page": 9
+    },
+    {
+      "topic": "Relationship to the SA Health Urinary Tract Infections (adult): Empirical Treatment Clinical Guideline",
+      "observed": "'The SA Health Urinary Tract Infections (adult): Empirical Treatment Clinical Guideline is also in place in South Australia. This protocol is based upon these evidence-based guidelines.' (p3) — but no local-modification rule is printed.",
+      "why_unclear": "Whether that guideline can alter first-line selection for this scheme is not stated; Appendix 2 is the operative list.",
+      "source_page": 3
+    },
+    {
+      "topic": "Consultation fee amount and disclosure mechanics",
+      "observed": "'Pharmacists may charge a consultation fee for the service, in addition to the cost of any medicine that is supplied. Pharmacists should ensure that the patient understands the costs involved when offering the service.' (p5)",
+      "why_unclear": "No amount, cap or disclosure format is printed.",
+      "source_page": 5
+    },
+    {
+      "topic": "Mapping of printed wording to red-flag actions/severity",
+      "observed": "'Ineligible patients include ...' → NOT_ELIGIBLE/medium; 'should be referred ... for further assessment' → REVIEW_GP/medium; 'should be referred to a general practitioner or other health service' → REFER/medium; pack and line-of-therapy supply rules → NOT_ELIGIBLE/medium.",
+      "why_unclear": "The document prints no urgency language at all; severity set to 'medium' uniformly rather than upgraded, per spec rule 3.",
+      "source_page": 4
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document for most steps",
+      "observed": "Branch outcomes are implied by 'require referral' / 'should be referred' wording but are not printed as flow logic (and the flow chart that would show them is on the non-extractable page 6).",
+      "why_unclear": "Used SEE_PW-1-S6 to route failed eligibility/diagnosis gates into the referral step, STOP for service-condition and supply-rule failures, and 'unclear' where the document states no consequence (spec rule 5).",
+      "source_page": 4
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Full content of the Clinical Flow Chart on page 6 (image) — assessment criteria, symptom checklist, red flags and referral branches.",
+      "source_page": 6,
+      "reason": "The fact sheet says the protocol includes a Clinical Flow Chart guiding assessment, decision-making and referral; none of it is in extractable text. The engine's diagnosis pathway is incomplete without it."
+    },
+    {
+      "item": "The enumerated list of 'risk factors for complicated UTI' and the list of 'primary symptoms of cystitis'.",
+      "source_page": 7,
+      "reason": "Both are referenced but never printed; gates INC-2/INC-3 and RF-9 cannot be evaluated as hard checks until the lists are supplied from the training/guideline sources."
+    },
+    {
+      "item": "Product-level pack sizes for trimethoprim 300mg, nitrofurantoin 100mg and cefalexin 500mg — what is 'the smallest available size of the manufacturer's pack'.",
+      "source_page": 4,
+      "reason": "The supply ceiling is defined by pack size, which is not printed; interacts with the Appendix 2 maximum quantities (3/20/10)."
+    },
+    {
+      "item": "Local interpretation of 'anatomical female urinary tract' and 'individuals who have undergone gender reassignment surgery' against the cultural safety and gender diversity training requirement.",
+      "source_page": 4,
+      "reason": "Printed eligibility terms are undefined and potentially in tension with the p5 cultural safety obligation; local policy must define how eligibility is assessed and explained."
+    },
+    {
+      "item": "Referral destinations, contact pathways and timeframes for each referral rule (GP, other health service, medical practitioner), including after-hours and escalation arrangements.",
+      "source_page": 7,
+      "reason": "No destinations, timeframes or urgency tiers are printed anywhere in the protocol."
+    },
+    {
+      "item": "Whether dipstick urinalysis may be used in the consultation ('not being mandated ... is not a part of empiric treatment').",
+      "source_page": 7,
+      "reason": "Permission is neither granted nor denied; affects what the pharmacist may record and rely on."
+    },
+    {
+      "item": "Verification process for pharmacist eligibility: approved training completion (Appendix 1), ongoing training currency, Ahpra unconditional general registration and HPI-I recording.",
+      "source_page": 3,
+      "reason": "Conditions are stated but the evidence/recording process for each supply event is not printed."
+    },
+    {
+      "item": "My Health Record upload mechanics — consent wording, what is uploaded, handling of 'unless requested otherwise by the patient', and the dispensing-system record fields.",
+      "source_page": 4,
+      "reason": "The obligation is printed but the operational detail (fields, timing, opt-out record) is left to local process."
+    },
+    {
+      "item": "Consultation fee setting, amount and the required cost-disclosure format.",
+      "source_page": 5,
+      "reason": "'Pharmacists may charge a consultation fee' with no amount or disclosure standard printed."
+    },
+    {
+      "item": "Reconciliation of Appendix 2 first-line trimethoprim with the SA Health Urinary Tract Infections (adult): Empirical Treatment Clinical Guideline.",
+      "source_page": 3,
+      "reason": "The protocol says it is 'based upon' that guideline but prints no rule for when the guideline and Appendix 2 differ."
+    },
+    {
+      "item": "Format, content and periodicity of the data provided 'at the request of the Minister for Health and Wellbeing'.",
+      "source_page": 5,
+      "reason": "Mandatory but unspecified; a data-specification decision for the service."
+    },
+    {
+      "item": "PRASA pharmacy registration verification and the standard for 'a screened or private consulting area' (visual and auditory privacy, sufficient space).",
+      "source_page": 3,
+      "reason": "Service condition printed without an assessment standard or evidence requirement."
+    },
+    {
+      "item": "Operational meaning of the nitrofurantoin/cefalexin Conditions — what counts as 'not appropriate for the patient' (allergy, interaction, availability, local resistance).",
+      "source_page": 9,
+      "reason": "Second/third-line supply is conditional on this judgement but the criteria are not printed; supply outside the conditions is a compliance breach."
+    }
+  ]
+}

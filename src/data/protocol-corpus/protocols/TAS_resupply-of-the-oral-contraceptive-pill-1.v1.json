@@ -1,0 +1,1626 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf",
+    "pdf_sha256": "d8421534df8233d859f3c20e74c9bdc38b7df1baf065092b1d8a895ad5562561",
+    "page_count": 17,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "TAS",
+    "instrument_name": "Protocol for Resupply of the Oral Contraceptive Pill - Tasmanian Pharmacist Initiative",
+    "instrument_version": "Version 2.0 (cover: 'Version 2.0 May 2025'; version history: 'V 2.0 May 2025 ... Legislative change'; 'V1.0 March 2024 ... Original Protocol')",
+    "effective_date": "May 2025 (cover and version history); authority table records authorisation by Dale Webster, Secretary, Department of Health on 4 June 2025",
+    "legal_basis": "Tasmanian Poisons Regulations 2018 Regulation 7 (Relevant Legislation, page 5): '(4) A pharmacist, in the lawful practice of the pharmacist's profession, may possess, sell, supply or prescribe any scheduled substance in accordance with a protocol authorised by the Secretary, that specifically authorises the possession, sale, supply or prescription of that substance by a pharmacist. This protocol has been endorsed by the Secretary.' Authorisation Statement (page 2): 'In accordance with Tasmanian Poisons Regulations 2018 Regulation 7(4) - I authorise this protocol.' (Dale Webster, Secretary). Purpose (page 4): 'It is a regulatory requirement under the Tasmanian Poison Regulations 2018 that pharmacists follow this protocol under a structured prescribing arrangement.' Background (page 4): 'The Tasmanian Poisons Legislation allows pharmacists to supply medications included in this protocol.' Prescribing Considerations (page 9): 'Any prescription needs to comply with Regulation 45 of the Poisons Regulations 2018 which outlines the elements needed to produce a valid prescription in Tasmania.'",
+    "supervision_model": "Structured prescribing arrangement (Glossary, page 5: 'prescribing specific medications for a specified purpose in accordance with a protocol published by the Tasmanian Department of Health'). Participating pharmacists 'must only offer this structured prescribing service in a pharmacy premises that has been approved by the Department of Health' (Pharmacy premises approved for the UTI pilot have their approval grandfathered for OCP resupply), must be 'currently AHPRA registered and have evidence of completion of a training course approved by the Department of Health' (Purpose, page 4), and must satisfy the five Mandatory Requirements (page 4).",
+    "scope_summary": "Tasmanian Department of Health protocol allowing pharmacists to resupply the oral contraceptive pill for up to 12 months under a structured prescribing arrangement. Sequential flowchart (pages 6-8): age 16-50; OCP on the protocol medicines list; initiated by GP/other authorised prescribing health care professional and stabilised on that pill for 2 years continuously; GP review of the OCP in the last two years; continuous OCP use (pill-break rules, page 10); consent to a private consult with the pharmacist present; patient-needs assessment (pregnancy/breastfeeding, counselling incl. LARCs, reproductive health enquiry, STI screening referral); clinical review (My Health Record, BP, BMI, smoking, new medicines, pregnancy planning); contraindication screen (all-OCP box plus COC-only box) with 'Prompt referral to General Practitioner or other health service'. Positive branch issues a prescription and repeats (max 12-month supply; 40-50 year olds on COC limited to one original pack and one repeat), with separate dispensing, preventative health advice and plan communication. Appendices 1 (pages 15-16) list UKMEC category 3/4 contraindications and 'other conditions that require immediate referral' for COCP and POP. Only two pill types are authorised: combined oral contraceptive pill (COCP) and progestogen-only pill (POP or mini pill)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Is the patient aged from 16 to 50 years?' - Yes required to continue; No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+        "criteria_group": { "all_of": ["INC-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Is the patient taking an oral contraceptive pill included on the protocol medicines list?' - Yes required to continue (medicines list is the page 13 table of combined oral contraceptive pills (COCP) and progestogen only pills (POP)); No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+        "criteria_group": { "all_of": ["INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+      },
+      {
+        "id": "INC-3",
+        "text": "'Was the patient initiated on the oral contraceptive pill by their GP (or other authorised prescribing health care professional) and have they been stabilised on that pill for 2 years continuously?' - Yes required to continue; No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+        "criteria_group": { "all_of": ["INC-3"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+      },
+      {
+        "id": "INC-4",
+        "text": "'Has the patient seen their GP (or other authorised prescribing health care professional) for a review of their oral contraceptive pill in the last two years?' - Yes required to continue; No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+        "criteria_group": { "all_of": ["INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+      },
+      {
+        "id": "INC-5",
+        "text": "'Has the patient been continuously taking the oral contraceptive pill?' - Yes required to continue; No -> 'Refer to General Practitioner or other health service.' and 'See Page 9 - pill breaks.' (pill-break rules are printed on page 10).",
+        "criteria_group": { "all_of": ["INC-5"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "INC-6",
+        "text": "'Does the patient consent to private consult with pharmacist?*' - Yes required to continue; No -> 'Refer to General Practitioner or other health service.' Footnote: '* The patient must be physically present in the pharmacy.'",
+        "criteria_group": { "all_of": ["INC-6"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "INC-7",
+        "text": "'Assess patient needs to determine whether resupply is safe and appropriate:' checklist - 'determine possibility of pregnancy or recent commencement of breastfeeding; Offer contraceptive counselling to explore other options as appropriate, e.g. LARCs; undertake reproductive health enquiry and advice, as needed (see page 9); Is STI screening referral indicated? (OCP may still be resupplied by the pharmacist)'. Outcome 'Resupply is assessed as safe and appropriate.' required to continue; 'Resupply is not considered safe or appropriate.' -> 'Refer to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": ["INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "INC-8",
+        "text": "'Does the patient have any contraindications for supply (all OCPs)*' (Appendix 1 full set) plus 'Additional contraindications (for continuation of combined oral contraceptive only):' - No to ALL items required to continue; No branch -> 'No - ongoing supply is deemed appropriate.' Yes branch -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": ["INC-8"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Contraindications for supply (all OCPs): 'Ischemic heart disease, stroke/TIA'. Yes -> 'Prompt referral to General Practitioner or other health service.' (*'Please refer to Appendix 1 for full set of contraindications to resupply')",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Contraindications for supply (all OCPs): 'Current or previous breast cancer or uninvestigated breast changes'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Contraindications for supply (all OCPs): 'Current liver disease'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Contraindications for supply (all OCPs): 'Unexplained/ un-investigated vaginal bleeding'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Hypertensive: systolic 140mmHg or higher/ diastolic 90 mmHg or higher'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Any active cardiac disease (e.g. atrial fibrilation)'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'BMI 35kg/m2 or more'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Migraine'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Smoking/ vaping in past 12 months and 35 yrs or older'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Current, previous or family history of DVT/PE, prolonged immobility (e.g. after major surgery)'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Blood clotting disorder'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "Additional contraindications (for continuation of combined oral contraceptive only): 'Diabetes with microvascular complications'. Yes -> 'Prompt referral to General Practitioner or other health service.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "Pill breaks (page 10): 'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-13"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "Medicines-level restriction (page 13): 'COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) are not routinely recommended for contraception because of the unacceptable risk of VTE and have been excluded from this initiative.'",
+        "criteria_group": { "all_of": ["EXC-14"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "15. List of Medicines" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 16,
+      "max_years": 50,
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Age 40-50 exception to the standard supply limit, printed three times: page 6 'Patients aged 40 to 50 years (incl) taking combined oral contraceptives are eligible for maximum of one original pack and one repeat.'; page 8 'Patients aged 40 to 50 years (inclusive) taking combined oral contraceptives† are eligible for one original pack & one repeat.'; page 10 'Pharmacists are able to provide an extended supply of the COC to these patients (provided they do not have any risk factors) of one original pack and one repeat only.'",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "Pill-break partial exception (page 10): 'More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.' - partial resupply is allowed despite non-continuous use.",
+        "criteria_group": { "all_of": ["EXE-2"], "any_of": [] },
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-3",
+        "text": "Cervical Screening Test exception (page 12): 'All patients seeking contraception who have not had a CST in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents. They are still eligible to receive a resupply of the Pill.'",
+        "criteria_group": { "all_of": ["EXE-3"], "any_of": [] },
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 12, "section_heading": "Patient History" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-4",
+        "text": "STI screening exception (page 7): 'Is STI screening referral indicated? (OCP may still be resupplied by the pharmacist)' - an indicated STI screening referral does not stop OCP resupply.",
+        "criteria_group": { "all_of": ["EXE-4"], "any_of": [] },
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-5",
+        "text": "Short-term bridging supply exception (page 5): 'In circumstances where a pharmacist determines that ongoing resupply is not suitable but a significant risk of unplanned pregnancy without ongoing supply is present, a short-term supply may be considered until an appointment is able to be secured with a GP or other health service.'",
+        "criteria_group": { "all_of": ["EXE-5"], "any_of": [] },
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 5, "section_heading": "8. Assessment and Management Protocol" },
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-6",
+        "text": "Short pill break is not a barrier (page 10): 'Less than 2 weeks: Resupply of the OCP may occur.'",
+        "criteria_group": { "all_of": ["EXE-6"], "any_of": [] },
+        "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Resupply eligibility, appropriateness and issue of prescription (flowchart pages 6-8)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient aged from 16 to 50 years?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.' Yes -> continue to PW-1-S2.",
+          "gates": [ { "criterion": "Patient is aged from 16 to 50 years", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Is the patient taking an oral contraceptive pill included on the protocol medicines list?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.' Yes -> continue. Medicines list (page 13): 'Under the initiative, Tasmanian pharmacies are only authorised to resupply two types of oral hormonal contraceptive pills: the combined oral contraceptive pill (COCP) and the progestogen only pill (POP or mini pill), specifically those that are listed in the table below.'",
+          "gates": [ { "criterion": "Patient's oral contraceptive pill appears on the protocol medicines list (page 13): combined oral contraceptive pill (COCP) or progestogen only pill (POP or mini pill)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "'Was the patient initiated on the oral contraceptive pill by their GP (or other authorised prescribing health care professional) and have they been stabilised on that pill for 2 years continuously?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.' Yes -> continue to PW-1-S4.",
+          "gates": [ { "criterion": "OCP initiated by GP (or other authorised prescribing health care professional) AND stabilised on that pill for 2 years continuously", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "'Has the patient seen their GP (or other authorised prescribing health care professional) for a review of their oral contraceptive pill in the last two years?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.' Yes -> continue to PW-1-S5.",
+          "gates": [ { "criterion": "GP (or other authorised prescribing health care professional) review of the OCP within the last two years", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Has the patient been continuously taking the oral contraceptive pill?' No -> 'Refer to General Practitioner or other health service.' and 'See Page 9 - pill breaks.' (pill-break bands are printed on page 10; see PW-2). Yes -> continue to PW-1-S6.",
+          "gates": [ { "criterion": "Patient has been continuously taking the oral contraceptive pill", "on_fail": "SEE_PW-2-S1" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "'Does the patient consent to private consult with pharmacist?*' No -> 'Refer to General Practitioner or other health service.' Yes -> continue to PW-1-S7. '* The patient must be physically present in the pharmacy.'",
+          "gates": [ { "criterion": "Patient consents to a private consult with the pharmacist and is physically present in the pharmacy", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "HISTORY",
+          "description": "'Assess patient needs to determine whether resupply is safe and appropriate: determine possibility of pregnancy or recent commencement of breastfeeding; Offer contraceptive counselling to explore other options as appropriate, e.g. LARCs; undertake reproductive health enquiry and advice, as needed (see page 9); Is STI screening referral indicated? (OCP may still be resupplied by the pharmacist)' -> outcome 'Resupply is not considered safe or appropriate.' -> 'Refer to General Practitioner or other health service.'; outcome 'Resupply is assessed as safe and appropriate.' -> continue to PW-1-S8.",
+          "gates": [ { "criterion": "Resupply is assessed as safe and appropriate", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EXAMINATION",
+          "description": "'Conduct clinical review: (Review My Health Record, where available) Measure BP and determine BMI; Smoking status: Smoker/ recent ex-smoker (last 12 months) including vaping; Have new medications commenced; Are they planning a pregnancy in the next 12 months'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Does the patient have any contraindications for supply (all OCPs)*' - 'Ischemic heart disease, stroke/TIA; Current or previous breast cancer or uninvestigated breast changes; Current liver disease; Unexplained/ un-investigated vaginal bleeding'. 'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Hypertensive: systolic 140mmHg or higher/ diastolic 90 mmHg or higher; Any active cardiac disease (e.g. atrial fibrilation); BMI 35kg/m2 or more; Migraine; Smoking/ vaping in past 12 months and 35 yrs or older; Current, previous or family history of DVT/PE, prolonged immobility (e.g. after major surgery); Blood clotting disorder; Diabetes with microvascular complications'. Yes -> 'Prompt referral to General Practitioner or other health service.' No -> 'No - ongoing supply is deemed appropriate.' and continue to PW-1-S10. '*Please refer to Appendix 1 for full set of contraindications to resupply'.",
+          "gates": [ { "criterion": "No contraindication for supply (all OCPs) and no additional contraindication for continuation of combined oral contraceptive", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "TREAT",
+          "description": "'Issue a prescription* and repeats (max 12-month supply).' '*script must be compliant with reg 45 (Tas Poisons Regs 2018)'. 'Patients MUST be provided with the option of having their prescription filled at the pharmacy of their choice.' Age band note: 'Patients aged 40 to 50 years (inclusive) taking combined oral contraceptives† are eligible for one original pack & one repeat.' '†12 months can be supplied for progestogen-only pills.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "TREAT",
+          "description": "'Dispensing (when same pharmacy as prescribing): Dispensing process is to be performed separately from prescribing (for example: physically move from consult room into the dispensary) Best practice advice: wherever available, another pharmacy staff member should be involved in the dispensing process. A pharmacist (first-preference) or a dispense tech.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "EDUCATE",
+          "description": "'Preventative Health advice: Cervical screening - routine testing is advised every 5 years from 25 years of age. Breast checks - encourage routine self-checks, mammography available over 40 years, those with personal or family history should seek advice from GP regarding frequency and type of screening. Regular sexual health/ reproductive health checks are recommended including STI screening where appropriate.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "EDUCATE",
+          "description": "'Communicate agreed plan to resupply OCP: offer general advice about OCP as needed. provide copy of record of service to patient and patient's GP or other health practitioners. reminder that reviews by GP or other health provider recommended to occur at least every 2 years.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+        }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Pill breaks (page 10; flowchart cross-reference says 'See Page 9 - pill breaks')",
+      "steps": [
+        {
+          "id": "PW-2-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'The pharmacist must ascertain whether use of the OCP has been continuous. If a pill break has occurred for: Less than 2 weeks: Resupply of the OCP may occur. More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner. One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.'",
+          "gates": [ { "criterion": "Pill break has occurred for less than 2 weeks", "on_fail": "SEE_PW-2-S2" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+        },
+        {
+          "id": "PW-2-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "'More than 2 weeks, but less than 4 weeks: Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.'",
+          "gates": [ { "criterion": "Pill break is more than 2 weeks but less than 4 weeks", "on_fail": "SEE_PW-2-S3" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+        },
+        {
+          "id": "PW-2-S3",
+          "order": 3,
+          "type": "REFER",
+          "description": "'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+        },
+        {
+          "id": "PW-2-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "'If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+        },
+        {
+          "id": "PW-2-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "'*Note: The risk of venous thromboembolism (VTE) with the combined oral contraceptive pill (COCP) is highest in the first year of use, and particularly in the first 3-4 months after commencement. The level of risk returns, if the patient misses taking the COCP for 1 month or more.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+        }
+      ]
+    },
+    {
+      "id": "PW-3",
+      "name": "Assessment components: sexual and reproductive health counselling, history and examination (pages 9-12)",
+      "steps": [
+        {
+          "id": "PW-3-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "'Assess Patient Needs - An assessment of the patient's needs must be undertaken to determine whether resupply of the OCP is safe and appropriate. To determine whether resupply is safe and appropriate, pharmacists must understand the contraindications and precautions of the different OCPs. Pharmacists can find further information in the Therapeutic Guidelines and the current versions of the Royal College of Obstetricians and Gynaecologists Faculty of Sexual and Reproductive Healthcare (FSRH) documentation, including: UK Medical Eligibility Criteria for Contraceptive Use 2016 (UKMEC); FSRH Clinical Guideline: Progestogen-only Pills (August 2022, Amended July 2023); FSRH Clinical Guideline: Combined Hormonal Contraception (January 2019, Amended July 2023).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 9, "section_heading": "13. Further Information / Assess Patient Needs" }
+        },
+        {
+          "id": "PW-3-S2",
+          "order": 2,
+          "type": "REFER",
+          "description": "'Young people - Patients under 16 years of age are to be confidentially referred to a general practitioner, family planning or sexual health clinic.'",
+          "gates": [ { "criterion": "Patient is 16 years of age or older", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+        },
+        {
+          "id": "PW-3-S3",
+          "order": 3,
+          "type": "HISTORY",
+          "description": "'Consenting to medical treatment under 18 years of age: Consent to medical treatment of a patient younger than 18 years of age may be provided by either the: parent or legal guardian; patient (must be assessed as having capacity to fully understand the treatment, risks, and wider consequences). Capacity: A child or young person's capacity can be observed and assessed by a pharmacist on a case-by-case basis. They may be considered to have capacity if they have a sufficient understanding and intelligence enabling them to understand fully what is being proposed.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+        },
+        {
+          "id": "PW-3-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "'Pharmacists are to consider whether there may be child protection concerns relating to a request for contraception and report to Child Protection accordingly by contacting the Strong Families, Safe Kids advice and referral line on 1800 000 123 or by visiting their website at https://strongfamiliessafekids.tas.gov.au/.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+        },
+        {
+          "id": "PW-3-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "'Family planning - Determine if patient is planning pregnancy within the next 12 months, consider referral to GP or family planning for pre-natal planning and health checks.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+        },
+        {
+          "id": "PW-3-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "'40 to 50 years of age inclusive - Following clinical consultation with local medical specialist colleagues and with reference to the UK Medical Eligibility Criteria, patients aged 40 to 50 years are at an increased risk of complications from the combined oral contraceptive pill (COC). Pharmacists are able to provide an extended supply of the COC to these patients (provided they do not have any risk factors) of one original pack and one repeat only. Pharmacists should encourage that these patients are regularly engaging with their GP to determine the most appropriate contraceptive ongoing.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+        },
+        {
+          "id": "PW-3-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "'Over 50 years of age - The choice of contraceptive should be reconsidered at age 50, patients should be referred to their GP or other health service.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Over 50 years of age" }
+        },
+        {
+          "id": "PW-3-S8",
+          "order": 8,
+          "type": "REFER",
+          "description": "'Sexual and domestic abuse - Pharmacists must be aware of the possibility that a patient seeking contraception may be and/ or has been subjected to sexual violence or abuse, either within a relationship or outside of a relationship. If the pharmacist becomes aware of this during the consultation, they should provide referral to support options depending on the patient circumstances: Contact should be made with the Family Violence Counselling and Support Service (Statewide) by calling 1800 608 122. Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services. Further information is available at the Safe at Home website at https://www.safeathome.tas.gov.au/services/counselling'.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Sexual and domestic abuse" }
+        },
+        {
+          "id": "PW-3-S9",
+          "order": 9,
+          "type": "REFER",
+          "description": "'If required, emergency contraception may be supplied as per standard pharmacy care, or the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Sexual and domestic abuse" }
+        },
+        {
+          "id": "PW-3-S10",
+          "order": 10,
+          "type": "HISTORY",
+          "description": "'Contraceptive and Sexual history - A brief sexual history should be considered to inform shared decision making/appropriateness of OCP resupply. The following issues may be considered but may not be relevant to all people: previous use and experiences with contraception, and risk factors for STIs (including STI history of current and/or recent partner if applicable). Guidance and information on how to take a sexual history is available at: https://sti.guidelines.org.au/sexual-history/.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Contraceptive and Sexual history" }
+        },
+        {
+          "id": "PW-3-S11",
+          "order": 11,
+          "type": "EXAMINATION",
+          "description": "'Examination - The pharmacist should measure BP and calculate BMI to determine the person's suitability for continuing their OCP. A single elevated BP reading is not enough to classify a patient as hypertensive (e.g. also take into consideration activity immediately prior to consultation) and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method.'",
+          "gates": [ { "criterion": "BP is not elevated on the second reading taken at the end of the consultation", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-3-S12",
+          "order": 12,
+          "type": "HISTORY",
+          "description": "'Patient History - Sufficient information must be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines, including resupply of the OCP, for the patient. Review MHR where available and appropriate. Consider: Age; Pregnancy and breastfeeding status; Underlying medical conditions, including new or recently diagnosed medical conditions, which may: be a contraindication to hormonal contraception e.g. migraine with aura, impact on contraceptive effectiveness and choice; Current medications, including check adherence and satisfaction with OCP; Drug allergies/adverse effects, including any adverse effects of OCP; Smoking status (there is an increased VTE risk in smokers over 35 years); BMI; Last STI screen and Cervical Screening Test (CST)*; Presence of genitourinary symptoms that may suggest STI: Changes in vaginal or urethral discharge, Vulval, genital skin problems or symptoms, Lower abdominal pain, Dysuria, HPV vaccination status. '* All patients seeking contraception who have not had a CST in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents. They are still eligible to receive a resupply of the Pill.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Patient History" }
+        },
+        {
+          "id": "PW-3-S13",
+          "order": 13,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'14. Confirm OCP Resupply/Contraception Plan is Appropriate - Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the OCP is appropriate for the patient, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 12, "section_heading": "14. Confirm OCP Resupply/Contraception Plan is Appropriate" }
+        },
+        {
+          "id": "PW-3-S14",
+          "order": 14,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "'Excluding Pregnancy - If the patient is still taking the OCP and there are no symptoms or signs of pregnancy, they can be reasonably assumed not to be pregnant. However, if there is any doubt regarding whether the patient may be pregnant, the patient should be advised to take a pregnancy test and provided this is negative, they may then return to the pharmacy for the resupply of their OCP.'",
+          "gates": [ { "criterion": "No doubt about pregnancy (still taking the OCP with no symptoms or signs of pregnancy), or a negative pregnancy test where doubt exists", "on_fail": "STOP" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 12, "section_heading": "Excluding Pregnancy" }
+        },
+        {
+          "id": "PW-3-S15",
+          "order": 15,
+          "type": "EDUCATE",
+          "description": "'16. Communicate Agreed Plan for OCP Resupply - Offering comprehensive counselling that covers adverse effects, instructions for use and patient expectations where this is required assists to promote effective and ongoing contraceptive use. Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, Australian Medicines Handbook, UKMEC 2016, and other relevant references, should be provided to the patient regarding: Individual product and medicine use; Managing missed pills and emergency contraception options available if required; How to manage adverse effects; When to seek further care and/or treatment: The signs of VTE and what to do if it is suspected; The importance of reporting new or worsening mood-related symptoms to the pharmacist and usual medical practitioner.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 14, "section_heading": "16. Communicate Agreed Plan for OCP Resupply" }
+        },
+        {
+          "id": "PW-3-S16",
+          "order": 16,
+          "type": "FOLLOW_UP",
+          "description": "'17. Follow Up - Pharmacists should advise the patient that they can seek a resupply of their OCP at the pharmacy of their choice when they next need a replacement pack (approximately four months later depending on OCP pack size). It is recommended that: The patient's BP should be monitored at 12 monthly intervals, and Patients should be reviewed by their GP at least every 2 years.'",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 14, "section_heading": "17. Follow Up" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Combined oral contraceptive pill (COCP) - ethinylestradiol + levonorgestrel",
+      "form": "",
+      "strength": "ethinylestradiol 20* levonorgestrel 100 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Combined oral contraceptive pills (COCP)' > 'Monophasic oral formulations: low-dose estrogen'. Brand name examples as printed: 'Femme-Tab ED 20/100, Lenest 20 ED, Loette, Microgynon 20 ED, Micronelle 20 ED'. First-line footnote (page 13): '* NB: first-line choice of COCP is a monophasic formulation containing ethinylestradiol (20 or 30 micrograms) and levonorgestrel (Therapeutic Guidelines)'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'; '†12 months can be supplied for progestogen-only pills.'; 40-50 year olds on COC: one original pack and one repeat. No dose, frequency or duration is printed (resupply of an existing pill).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Combined oral contraceptive pill (COCP) - drospirenone",
+      "form": "",
+      "strength": "drospirenone 3000 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: low-dose estrogen'. Brand name example as printed: 'Yaz'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction (row reads only 'drospirenone 3000 Yaz'); not inferred. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Combined oral contraceptive pill (COCP) - estradiol + nomegestrol",
+      "form": "",
+      "strength": "estradiol 1500 nomegestrol 2500 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: low-dose estrogen'. Brand name example as printed: 'Zoely'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Combined oral contraceptive pill (COCP) - ethinylestradiol + levonorgestrel",
+      "form": "",
+      "strength": "ethinylestradiol 30* levonorgestrel 150 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples as printed: 'Eleanor 150/30 ED, Evelyn 150/30 ED, Femme-Tab ED 30/150, Lenest 30 ED, Levlen ED, Microgynon 30 ED, Micronelle 30 ED, Monofeme, Nordette, Seasonique'. First-line footnote (page 13): '* NB: first-line choice of COCP is a monophasic formulation containing ethinylestradiol (20 or 30 micrograms) and levonorgestrel (Therapeutic Guidelines)'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Combined oral contraceptive pill (COCP) - desogestrel",
+      "form": "",
+      "strength": "desogestrel 150 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples as printed: 'Madeline, Marvelon'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction (row reads only 'desogestrel 150 Madeline, Marvelon'); not inferred (the row above prints 'ethinylestradiol 30* levonorgestrel 150'). Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Combined oral contraceptive pill (COCP) - dienogest",
+      "form": "",
+      "strength": "dienogest 2000 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name example as printed: 'Valette'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction; not inferred. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Combined oral contraceptive pill (COCP) - drospirenone",
+      "form": "",
+      "strength": "drospirenone 3000 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples as printed: 'Petibelle, Yasmin'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction; not inferred. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "Combined oral contraceptive pill (COCP) - gestodene",
+      "form": "",
+      "strength": "gestodene 75 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name example as printed: 'Minulet'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction; not inferred. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-9",
+      "drug": "Combined oral contraceptive pill (COCP) - ethinylestradiol + cyproterone",
+      "form": "",
+      "strength": "ethinylestradiol 35 cyproterone 2000 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples as printed: 'Diane-35 ED, Estelle-35 ED, Juliet-35 ED, Brenda-35 ED'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-10",
+      "drug": "Combined oral contraceptive pill (COCP) - norethisterone",
+      "form": "",
+      "strength": "norethisterone 500 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples as printed: 'Brevinor, Norimin'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction; not inferred. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-11",
+      "drug": "Combined oral contraceptive pill (COCP) - norethisterone",
+      "form": "",
+      "strength": "norethisterone 1000 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Monophasic oral formulations: standard-dose estrogen'. Brand name examples as printed: 'Brevinor-1, Norimin-1, Pirmella'. AMBIGUOUS ROW: the estrogen-dose cell is not recoverable from this row in the text extraction; not inferred. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-12",
+      "drug": "Combined oral contraceptive pill (COCP) - triphasic ethinylestradiol + levonorgestrel",
+      "form": "",
+      "strength": "Triphasic: low or standard dose estrogen - Phase 1 (6 pills): ethinylestradiol 30 + levonorgestrel 50; Phase 2 (5 pills): ethinylestradiol 40 + levonorgestrel 75; Phase 3 (10 pills): ethinylestradiol 30 + levonorgestrel 125 (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Triphasic: low or standard dose estrogen'. Brand name examples as printed: 'Logynon ED, Trifeme, Triphasil, Triquilar ED'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-13",
+      "drug": "Combined oral contraceptive pill (COCP) - quadriphasic estradiol valerate + dienogest",
+      "form": "",
+      "strength": "Quadriphasic: low or standard dose estrogen - Phase 1 (2 pills): estradiol valerate 3000 alone; Phase 2 (5 pills): estradiol valerate 2000 + dienogest 2000; Phase 3 (17 pills): estradiol valerate 2000 + dienogest 3000; Phase 4 (2 pills): estradiol valerate 1000 alone (micrograms)",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Quadriphasic: low or standard dose estrogen'. Brand name example as printed: 'Qlaira'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Combined oral contraceptive pills (COCP)" }
+    },
+    {
+      "id": "TX-14",
+      "drug": "Progestogen only pill (POP) - levonorgestrel",
+      "form": "",
+      "strength": "Levonorgestrel 30 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Progestogen only pills (POP) oral contraception' (column 'Progestogen dose (micrograms)'). Brand name example as printed: 'Microlut'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'; footnote '†12 months can be supplied for progestogen-only pills.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Progestogen only pills (POP) oral contraception" }
+    },
+    {
+      "id": "TX-15",
+      "drug": "Progestogen only pill (POP) - norethisterone",
+      "form": "",
+      "strength": "Norethisterone 350 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Progestogen only pills (POP) oral contraception'. Brand name example as printed: 'Noriday'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'; footnote '†12 months can be supplied for progestogen-only pills.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Progestogen only pills (POP) oral contraception" }
+    },
+    {
+      "id": "TX-16",
+      "drug": "Progestogen only pill (POP) - drospirenone",
+      "form": "",
+      "strength": "Drospirenone 4 micrograms",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Table section 'Progestogen only pills (POP) oral contraception'. Brand name example as printed: 'Slinda'. Supply limit (protocol-wide, page 8): 'Issue a prescription* and repeats (max 12-month supply).'; footnote '†12 months can be supplied for progestogen-only pills.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 13, "section_heading": "Progestogen only pills (POP) oral contraception" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Is the patient aged from 16 to 50 years?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "16-50", "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Is the patient taking an oral contraceptive pill included on the protocol medicines list?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Was the patient initiated on the oral contraceptive pill by their GP (or other authorised prescribing health care professional) and have they been stabilised on that pill for 2 years continuously?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Has the patient seen their GP (or other authorised prescribing health care professional) for a review of their oral contraceptive pill in the last two years?' No -> 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Has the patient been continuously taking the oral contraceptive pill?' No -> 'Refer to General Practitioner or other health service.' / 'See Page 9 - pill breaks.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Does the patient consent to private consult with pharmacist?*' No -> 'Refer to General Practitioner or other health service.' (*'The patient must be physically present in the pharmacy.')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'Resupply is not considered safe or appropriate.' -> 'Refer to General Practitioner or other health service.' (outcome of the 'Assess patient needs to determine whether resupply is safe and appropriate' checklist)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'Does the patient have any contraindications for supply (all OCPs)*' - 'Ischemic heart disease, stroke/TIA' Yes -> 'Prompt referral to General Practitioner or other health service.' (*'Please refer to Appendix 1 for full set of contraindications to resupply')",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'Does the patient have any contraindications for supply (all OCPs)*' - 'Current or previous breast cancer or uninvestigated breast changes' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'Does the patient have any contraindications for supply (all OCPs)*' - 'Current liver disease' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Does the patient have any contraindications for supply (all OCPs)*' - 'Unexplained/ un-investigated vaginal bleeding' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Hypertensive: systolic 140mmHg or higher/ diastolic 90 mmHg or higher' (systolic arm) Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": { "parameter": "systolic blood pressure", "operator": ">=", "value": 140, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Hypertensive: systolic 140mmHg or higher/ diastolic 90 mmHg or higher' (diastolic arm) Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": { "parameter": "diastolic blood pressure", "operator": ">=", "value": 90, "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Any active cardiac disease (e.g. atrial fibrilation)' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'BMI 35kg/m2 or more' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": { "parameter": "BMI", "operator": ">=", "value": 35, "unit": "kg/m2" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Migraine' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Smoking/ vaping in past 12 months and 35 yrs or older' (age arm of the compound criterion) Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": { "parameter": "age (when smoking or vaping in the past 12 months)", "operator": ">=", "value": 35, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Current, previous or family history of DVT/PE, prolonged immobility (e.g. after major surgery)' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Blood clotting disorder' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'Additional contraindications (for continuation of combined oral contraceptive only):' - 'Diabetes with microvascular complications' Yes -> 'Prompt referral to General Practitioner or other health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 8, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Pill breaks: 'One month or more*: Do not resupply OCP. The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.'",
+      "structured": { "parameter": "duration of pill break", "operator": ">=", "value": 1, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Pill breaks" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'Young people - Patients under 16 years of age are to be confidentially referred to a general practitioner, family planning or sexual health clinic.'",
+      "structured": { "parameter": "age", "operator": "<", "value": 16, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'Pharmacists are to consider whether there may be child protection concerns relating to a request for contraception and report to Child Protection accordingly by contacting the Strong Families, Safe Kids advice and referral line on 1800 000 123 or by visiting their website at https://strongfamiliessafekids.tas.gov.au/.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'Family planning - Determine if patient is planning pregnancy within the next 12 months, consider referral to GP or family planning for pre-natal planning and health checks.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'Over 50 years of age - The choice of contraceptive should be reconsidered at age 50, patients should be referred to their GP or other health service.'",
+      "structured": { "parameter": "age", "operator": ">", "value": 50, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Over 50 years of age" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'Sexual and domestic abuse - ... If the pharmacist becomes aware of this during the consultation, they should provide referral to support options depending on the patient circumstances: Contact should be made with the Family Violence Counselling and Support Service (Statewide) by calling 1800 608 122. Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Sexual and domestic abuse" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'If required, emergency contraception may be supplied as per standard pharmacy care, or the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Sexual and domestic abuse" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'If BP remains elevated, the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method.' (no numeric threshold is printed for 'elevated'; a second reading is to be taken at the end of the consultation)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 11, "section_heading": "Examination" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'All patients seeking contraception who have not had a CST in the previous 5 years should be advised to see a medical practitioner for a CST, and a referral provided if the patient consents. They are still eligible to receive a resupply of the Pill.'",
+      "structured": { "parameter": "time since last Cervical Screening Test", "operator": ">", "value": 5, "unit": "years" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 12, "section_heading": "Patient History" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "'Is STI screening referral indicated? (OCP may still be resupplied by the pharmacist)'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 7, "section_heading": "…continued from previous page" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral): 'Current or previous history of breast cancer (including carriers of known gene mutations associated with breast cancer)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Migraine with/without aura'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Current or past history of ischaemic heart disease, stroke or transient ischaemic attack'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-35",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Aged 35 years or older and current smoker or recently quit smoking (including vaping*) in the last 12 months' (*As per Australian consensus guidelines)",
+      "structured": { "parameter": "age (when current smoker or recently quit smoking including vaping in the last 12 months)", "operator": ">=", "value": 35, "unit": "years" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-36",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Hypertension (systolic blood pressure 140 mmHg or higher, or diastolic blood pressure 90 mmHg or higher), including adequately controlled hypertension' (systolic arm structured; diastolic arm in trigger_text)",
+      "structured": { "parameter": "systolic blood pressure", "operator": ">=", "value": 140, "unit": "mmHg" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-37",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Hypertension, with vascular disease'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-38",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Complicated valvular or congenital heart disease'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-39",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Cardiomyopathy with impaired cardiac function'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-40",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Atrial fibrillation'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-41",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Current or past history of VTE or a first-degree relative with a VTE (provoked or unprovoked) under the age of 45 years' (structured: age of the first-degree relative)",
+      "structured": { "parameter": "age of first-degree relative with a VTE (provoked or unprovoked)", "operator": "<", "value": 45, "unit": "years" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-42",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Positive antiphospholipid antibodies'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-43",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Known thrombogenic mutations, e.g. factor V Leiden, prothrombin mutation, Protein S, Protein C, antithrombin deficiencies'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-44",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Prolonged immobilisation'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-45",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Severe (decompensated) cirrhosis'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-46",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Hepatocellular adenoma or malignant liver tumour'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-47",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Body mass index (BMI) 35 kg/m2 or more'",
+      "structured": { "parameter": "BMI", "operator": ">=", "value": 35, "unit": "kg/m2" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-48",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Diabetes with nephropathy, retinopathy, neuropathy or other vascular disease'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-49",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Gall bladder disease (medically treated or current)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-50",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Undiagnosed mass/breast symptoms (only if the condition is pre-existing and the COCP is initiated)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-51",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Multiple risk factors for cardiovascular disease (such as smoking, diabetes, hypertension, obesity, and dyslipidaemias)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-52",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Past COC related cholestasis'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-53",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Organ transplant - Complicated: graft failure (acute or chronic), rejection, cardiac allograft vasculopathy'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-54",
+      "trigger_text": "Table 1: Contraindications to resupply of the COCP (... conditions that require immediate referral): 'Acute viral hepatitis, or flare (only if the condition is pre-existing and the COC is initiated)'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 15, "section_heading": "Table 1: Contraindications to resupply of the COCP" }
+    },
+    {
+      "id": "RF-55",
+      "trigger_text": "Table 2: Contraindications to resupply of the POP (UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral): 'Current or previous history of breast cancer'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 16, "section_heading": "Table 2: Contraindications to resupply of the POP" }
+    },
+    {
+      "id": "RF-56",
+      "trigger_text": "Table 2: Contraindications to resupply of the POP (... conditions that require immediate referral): 'Unexplained vaginal bleeding (suspicious for a serious condition) before investigation for the cause'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 16, "section_heading": "Table 2: Contraindications to resupply of the POP" }
+    },
+    {
+      "id": "RF-57",
+      "trigger_text": "Table 2: Contraindications to resupply of the POP (... conditions that require immediate referral): 'Severe (decompensated) cirrhosis'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 16, "section_heading": "Table 2: Contraindications to resupply of the POP" }
+    },
+    {
+      "id": "RF-58",
+      "trigger_text": "Table 2: Contraindications to resupply of the POP (... conditions that require immediate referral): 'Hepatocellular adenoma or malignant liver tumour'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 16, "section_heading": "Table 2: Contraindications to resupply of the POP" }
+    },
+    {
+      "id": "RF-59",
+      "trigger_text": "Table 2: Contraindications to resupply of the POP (... conditions that require immediate referral): 'Ischaemic heart disease, stroke or transient ischaemic attack (TIA) that develops during use'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 16, "section_heading": "Table 2: Contraindications to resupply of the POP" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.' (page 6 - age, medicines list, initiation/stabilisation and GP-review failures)",
+      "'Refer to General Practitioner or other health service.' (page 7 - non-continuous use, no consent, resupply not safe or appropriate)",
+      "'The patient should be referred to their usual medical practitioner or other authorised prescribing healthcare practitioner.' (pill break of one month or more, page 10)",
+      "'Resupply of 1 month of the OCP may occur with referral to their usual medical practitioner or other authorised prescribing healthcare practitioner.' (pill break more than 2 but less than 4 weeks, page 10)",
+      "'consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs)' for frequent pill breaks (page 10)",
+      "'Patients under 16 years of age are to be confidentially referred to a general practitioner, family planning or sexual health clinic.' (page 10)",
+      "'consider referral to GP or family planning for pre-natal planning and health checks' when planning pregnancy within the next 12 months (page 10)",
+      "'The choice of contraceptive should be reconsidered at age 50, patients should be referred to their GP or other health service.' (page 11)",
+      "'the patient should be referred to a medical practitioner for further assessment and selection of an appropriate contraceptive method' if BP remains elevated (page 11)",
+      "Referral options for sexual violence: 'Family Violence Counselling and Support Service (Statewide) by calling 1800 608 122. Referral options include to the local hospital, sexual health clinic and/or community-based sexual violence support services.' (page 11)",
+      "'the person may be referred to an appropriate medical practitioner or health service for another method of emergency contraception e.g. insertion of a copper intrauterine device.' (page 11)",
+      "'Is STI screening referral indicated? (OCP may still be resupplied by the pharmacist)' (page 7)",
+      "'a referral provided if the patient consents' for a Cervical Screening Test not had in the previous 5 years (page 12)"
+    ],
+    "urgent": [
+      "'Prompt referral to General Practitioner or other health service.' - flowchart contraindication boxes (all OCPs and COC-only) (page 8)",
+      "'UKMEC Category 3 and 4 contraindications, and other conditions that require immediate referral.' - Appendix 1, Table 1 (COCP, page 15) and Table 2 (POP, page 16)"
+    ],
+    "emergency": [],
+    "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 6, "section_heading": "9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)" }
+  },
+  "review_followup": [
+    {
+      "when": "When the patient next needs a replacement pack (approximately four months later depending on OCP pack size)",
+      "what": "'Pharmacists should advise the patient that they can seek a resupply of their OCP at the pharmacy of their choice when they next need a replacement pack (approximately four months later depending on OCP pack size).'",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 14, "section_heading": "17. Follow Up" }
+    },
+    {
+      "when": "At 12 monthly intervals",
+      "what": "'The patient's BP should be monitored at 12 monthly intervals'",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 14, "section_heading": "17. Follow Up" }
+    },
+    {
+      "when": "At least every 2 years",
+      "what": "'Patients should be reviewed by their GP at least every 2 years.' (flowchart reminder, page 8: 'reminder that reviews by GP or other health provider recommended to occur at least every 2 years.')",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 14, "section_heading": "17. Follow Up" }
+    },
+    {
+      "when": "Regularly (no interval printed) - patients aged 40 to 50 years taking COC",
+      "what": "'Pharmacists should encourage that these patients are regularly engaging with their GP to determine the most appropriate contraceptive ongoing.'",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 10, "section_heading": "Sexual and Reproductive Health Counselling" }
+    },
+    {
+      "when": "After the consultation (record sharing)",
+      "what": "'The pharmacist must provide a copy of the consultation summary to the patient. The consultation summary is also to be shared with patient's usual treating medical practitioner or medical practice (the only exception to this is if the patient does not have a regular GP or does not consent to their information being shared).'",
+      "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 9, "section_heading": "10. Documentation Requirements" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'The pharmacist must provide a copy of the consultation summary to the patient. The consultation summary is also to be shared with patient's usual treating medical practitioner or medical practice (the only exception to this is if the patient does not have a regular GP or does not consent to their information being shared).' (page 9)",
+      "'Documentation of consent given by the patient regarding: Any costs; Pharmacist communication with other healthcare practitioners (e.g. patient's usual treating GP) and; Access to the patient's My Health Record for checking relevant medical history.' (page 9)",
+      "'provide copy of record of service to patient and patient's GP or other health practitioners' (page 8)",
+      "'The original prescription is to accompany the repeats and the pharmacy is to establish a process to retain a copy of the original prescription on file.' (page 9)"
+    ],
+    "provenance": { "pdf_file": "tas-pharmacist-prescribing-protocols\\Protocoal for Resupply of the Oral Contraceptive Pill_1.pdf", "page": 9, "section_heading": "10. Documentation Requirements" }
+  },
+  "references": [
+    "Tasmanian Department of Health - Contraception (fertility control) https://www.health.tas.gov.au/health-topics/sexual-and-reproductive-health/reproductive-health/contraception-fertility-control (page 9)",
+    "Family Planning Tasmania Website https://fpt.org.au/clinics/services/ (page 9)",
+    "Health Direct https://www.healthdirect.gov.au/contraception-options (page 9)",
+    "UK Medical Eligibility Criteria for Contraceptive Use 2016 (UKMEC) (page 10)",
+    "FSRH Clinical Guideline: Progestogen-only Pills (August 2022, Amended July 2023) (page 10)",
+    "FSRH Clinical Guideline: Combined Hormonal Contraception (January 2019, Amended July 2023) (page 10)",
+    "Therapeutic Guidelines and Australian Medicines Handbook (to confirm the OCP is appropriate) (page 12)",
+    "How to take a sexual history: https://sti.guidelines.org.au/sexual-history/ (page 11)",
+    "Safe at Home website https://www.safeathome.tas.gov.au/services/counselling (page 11)",
+    "Strong Families Safe Kids https://strongfamiliessafekids.tas.gov.au/ (page 10)",
+    "The Therapeutic Guidelines - Contraception (basis of Appendix 1 contraindications) (page 15)",
+    "UKMEC April 2016 (Amended September 2019) - Faculty of Sexual and Reproductive Healthcare (page 15)",
+    "UKMEC April 2016 Summary Sheet (Amended September 2019) - Faculty of Sexual and Reproductive Healthcare (page 15)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Medicines table (page 13): rows with an unrecoverable estrogen-dose cell",
+      "observed": "Under 'Monophasic oral formulations: low-dose estrogen' the row for Yaz reads only 'drospirenone 3000 Yaz'; under 'Monophasic oral formulations: standard-dose estrogen' the rows for Madeline/Marvelon ('desogestrel 150'), Valette ('dienogest 2000'), Petibelle/Yasmin ('drospirenone 3000'), Minulet ('gestodene 75'), Brevinor/Norimin ('norethisterone 500') and Brevinor-1/Norimin-1/Pirmella ('norethisterone 1000') print only one dose value plus brands, while the row above prints 'ethinylestradiol 30* levonorgestrel 150' and Zoely prints 'estradiol 1500 nomegestrol 2500'.",
+      "why_unclear": "The estrogen-dose column value for those rows is not present in the text extraction (possible merged cell). Rows recorded with the printed value only, confidence 'unclear'; no estrogen value was inferred. Section headings ('low-dose estrogen' / 'standard-dose estrogen') are recorded verbatim in notes.",
+      "source_page": 13
+    },
+    {
+      "topic": "Footnote attachment ambiguity for the 40-50 rule",
+      "observed": "Page 8 prints 'Patients aged 40 to 50 years (inclusive) taking combined oral contraceptives† are eligible for one original pack & one repeat.' followed by '†12 months can be supplied for progestogen-only pills.' (the dagger note appears adjacent to the 'Patients MUST be provided with the option of having their prescription filled at the pharmacy of their choice.' line in the extraction).",
+      "why_unclear": "It is unclear whether the dagger note limits or clarifies the 40-50 rule (i.e. POPs may still get 12 months at 40-50) or is a general supply note; both readings preserved verbatim in EXE-1 and in the treatment notes.",
+      "source_page": 8
+    },
+    {
+      "topic": "Internal page and section-number cross-references do not match the document",
+      "observed": "Flowchart says 'See Page 9 - pill breaks' and 'undertake reproductive health enquiry and advice, as needed (see page 9)', but the contents and the printed heading place 'Pill breaks' on page 10. Contents numbers sections 7/8/9/10 while the body prints 9./10./11./12. for the same headings (e.g. contents '8. Documentation Requirements' vs body '10. Documentation Requirements').",
+      "why_unclear": "Cross-references and section numbers are stale/inconsistent in the source; the extraction uses the actual page markers. Both readings recorded.",
+      "source_page": 3
+    },
+    {
+      "topic": "Training section header names the wrong service",
+      "observed": "Section '7. Training' (page 5) reads: 'The pharmacist training programs listed below are approved for provision of assessment and management of urinary tract infections in Tasmanian community pharmacies:' then lists contraception courses: '1. Pharmaceutical Society of Australia - Contraception Essentials 2. Australasian College of Pharmacy (Tasmania) - Contraceptives: a comprehensive training course for pharmacists'.",
+      "why_unclear": "Header appears copy-pasted from the UTI protocol; the listed courses are contraception courses. Recorded as printed without reconciliation; see also Purpose (page 4) which names the same courses as 'Oral contraceptives: a comprehensive training course for pharmacists' and 'Contraception Essentials Explained'.",
+      "source_page": 5
+    },
+    {
+      "topic": "Cover date vs authorisation date",
+      "observed": "Cover prints 'Version 2.0 May 2025'; version history prints 'V 2.0 May 2025 ... Legislative change'; the authority table prints 'Authorised by Dale Webster Secretary, Department of Health ... 4 June 2025'.",
+      "why_unclear": "effective_date records both readings (May 2025 version, 4 June 2025 authorisation); no separate 'effective' date is printed.",
+      "source_page": 2
+    },
+    {
+      "topic": "No numeric threshold printed for 'elevated' BP on the second reading",
+      "observed": "Page 11: 'A single elevated BP reading is not enough to classify a patient as hypertensive ... and a second BP reading should be taken at the end of the consultation. If BP remains elevated, the patient should be referred to a medical practitioner...'. The only numeric BP values in the document are the contraindication box thresholds (140/90 mmHg, page 8) and Appendix 1 (140/90 mmHg, page 15).",
+      "why_unclear": "The rule does not say which value defines 'remains elevated'; RF-29 recorded with structured null and no threshold invented.",
+      "source_page": 11
+    },
+    {
+      "topic": "Flowchart column interleaving (pages 6-7)",
+      "observed": "Question text, Yes/No labels and outcome text extract interleaved (e.g. 'Determine appropriateness for short-term ongoing supply and refer to GP or other health service.' appears beside each question; 'No - ongoing supply is deemed appropriate.' shares lines with the age-band note).",
+      "why_unclear": "Branch mapping read best-effort from the linearised flowchart; recorded where the layout is unambiguous, confidence 'high' throughout but flagged here.",
+      "source_page": 6
+    },
+    {
+      "topic": "Eligibility combinatorics inferred from flowchart sequence",
+      "observed": "The document does not state combinatorics in words; the flowchart is sequential (each question Yes -> continue). The contraindication boxes ask 'Does the patient have any contraindications ...' (any_of within each box).",
+      "why_unclear": "Inclusion criteria encoded as sequential all_of gates; contraindication items encoded as two explicit any_of groups (all-OCPs box, COC-only box).",
+      "source_page": 8
+    },
+    {
+      "topic": "Appendix 1 is explicitly non-exhaustive and its table numbers do not match its text",
+      "observed": "Appendix 1: 'The Therapeutic Guidelines - Contraception indicates a range of contraindications and precautions ... These are based on the UK Medical Eligibility Criteria (UKMEC) and include conditions in Table 3 and 4 (not an exhaustive list).' The tables printed are 'Table 1: Contraindications to resupply of the COCP' (page 15) and 'Table 2: Contraindications to resupply of the POP' (page 16).",
+      "why_unclear": "'Table 3 and 4' appears to be a stale reference; both readings recorded. The list is expressly non-exhaustive, so the engine cannot treat it as complete.",
+      "source_page": 15
+    },
+    {
+      "topic": "Overlap between the flowchart contraindication boxes (page 8) and Appendix 1 (pages 15-16)",
+      "observed": "Breast cancer, ischaemic heart disease/stroke/TIA, migraine, hypertension 140/90, BMI 35 kg/m2, smoking/vaping within 12 months at 35+, diabetes with vascular disease, clotting disorders and liver disease appear in both places with slightly different wording; the flowchart box footnote says '*Please refer to Appendix 1 for full set of contraindications to resupply'.",
+      "why_unclear": "Both sets were extracted separately with their own provenance rather than deduplicated, because wording and scope differ (e.g. flowchart 'Migraine' vs appendix 'Migraine with/without aura'; appendix adds conditions not in the box).",
+      "source_page": 8
+    },
+    {
+      "topic": "Supply quantity for age 40-50 stated three times with different wording",
+      "observed": "Page 6: 'eligible for maximum of one original pack and one repeat'; page 8: 'eligible for one original pack & one repeat'; page 10: 'provided they do not have any risk factors) of one original pack and one repeat only'.",
+      "why_unclear": "All three wordings recorded in EXE-1; 'risk factors' on page 10 is not defined on that page (cross-reference to contraindication boxes assumed but not stated).",
+      "source_page": 6
+    },
+    {
+      "topic": "No dose, route frequency or duration printed for any medicine",
+      "observed": "Section 15 lists formulations and brands only; the protocol resupplies an existing pill. Dose, frequency and duration fields are empty by design (route recorded as 'oral' from the printed table headings 'Combined oral contraceptive pills (COCP)' and 'Progestogen only pills (POP) oral contraception').",
+      "why_unclear": "Nothing to transcribe; no values invented.",
+      "source_page": 13
+    },
+    {
+      "topic": "No emergency referral destination printed",
+      "observed": "The document contains no Emergency Department, ambulance or 000 instruction; the most urgent wording is 'require immediate referral' (Appendix 1, destination not stated) and 'Prompt referral to General Practitioner or other health service' (page 8).",
+      "why_unclear": "referral.emergency is genuinely empty; Appendix 'immediate referral' items are recorded in referral.urgent with their exact wording and destination left unstated as printed.",
+      "source_page": 15
+    },
+    {
+      "topic": "Section headings on continuation pages",
+      "observed": "Pages 7 and 8 have no heading of their own; both begin with the printed line '…continued from previous page', which is used as section_heading for content on those pages.",
+      "why_unclear": "The spec requires the nearest printed heading above the content; on these pages that is the continuation line (page 6 carries the section heading '9. Tasmanian Protocol for the Resupply of the Oral Contraceptive Pill (OCP)').",
+      "source_page": 7
+    },
+    {
+      "topic": "'stabilised on that pill for 2 years continuously' wording",
+      "observed": "Flowchart gate (page 6): 'Was the patient initiated on the oral contraceptive pill by their GP (or other authorised prescribing health care professional) and have they been stabilised on that pill for 2 years continuously?'",
+      "why_unclear": "The document does not define 'stabilised' (e.g. same pill, no switches, no breaks) and does not say whether the 2 years is cumulative; transcribed verbatim without interpretation.",
+      "source_page": 6
+    },
+    {
+      "topic": "Pregnancy/lactation and paediatric caveats printed for this protocol",
+      "observed": "Pregnancy: 'determine possibility of pregnancy or recent commencement of breastfeeding' (page 7 checklist); 'If the patient is still taking the OCP and there are no symptoms or signs of pregnancy, they can be reasonably assumed not to be pregnant. However, if there is any doubt ... advised to take a pregnancy test and provided this is negative, they may then return to the pharmacy for the resupply of their OCP.' (page 12); Appendix 1: 'Breastfeeding and postpartum risks have been excluded from Table 1 due to the requirement for a 2-year history of continuous OCP use to be eligible for this service.' (page 15). Young people: under 16 confidential referral; consent/capacity rules under 18 (page 10).",
+      "why_unclear": "No further pregnancy/lactation-specific dosing caveat is printed for any individual medicine.",
+      "source_page": 12
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "'The protocol will not cover all possible clinical circumstances and pharmacists are required to exercise their professional judgement in adapting the treatment guideline to individual circumstances.'",
+      "source_page": 5,
+      "reason": "Open-ended professional-judgement clause; needs a local policy boundary before enforcement by a rules engine."
+    },
+    {
+      "item": "Short-term bridging supply: 'In circumstances where a pharmacist determines that ongoing resupply is not suitable but a significant risk of unplanned pregnancy without ongoing supply is present, a short-term supply may be considered until an appointment is able to be secured with a GP or other health service.'",
+      "source_page": 5,
+      "reason": "'May be considered' with no quantity, duration or approval criteria printed; local policy must define limits (e.g. one pack, max weeks)."
+    },
+    {
+      "item": "Prescription formalities: 'Any prescription needs to comply with Regulation 45 of the Poisons Regulations 2018 ... Electronic prescribing templates may be used provided they meet the requirements of Reg 45 and are signed in ink by the pharmacist. Pharmacists are to indicate the words \"authorised health professional\" after signature and name on the prescription. The original prescription is to accompany the repeats and the pharmacy is to establish a process to retain a copy of the original prescription on file.'",
+      "source_page": 9,
+      "reason": "Local prescribing workflow and template configuration must be validated against Reg 45 before go-live."
+    },
+    {
+      "item": "Premises approval: 'Participating pharmacists must only offer this structured prescribing service in a pharmacy premises that has been approved by the Department of Health. Pharmacy premises that have already been approved for the UTI pilot project are able to have their approval grandfathered for the OCP resupply initiative.'",
+      "source_page": 4,
+      "reason": "Approval status must be confirmed per site (and grandfathering evidenced)."
+    },
+    {
+      "item": "Approved training courses: 'Pharmaceutical Society of Australia - Contraception Essentials' and 'Australasian College of Pharmacy (Tasmania) - Contraceptives: a comprehensive training course for pharmacists' (page 5) / 'Oral contraceptives: a comprehensive training course for pharmacists' and 'Contraception Essentials Explained' (page 4); section header incorrectly says the courses are for 'urinary tract infections'.",
+      "source_page": 5,
+      "reason": "Course names differ between pages and the header is inconsistent; verify each pharmacist's certificate against the current approved list."
+    },
+    {
+      "item": "Dispensing separation: 'Dispensing process is to be performed separately from prescribing (for example: physically move from consult room into the dispensary)' plus 'Best practice advice: wherever available, another pharmacy staff member should be involved in the dispensing process. A pharmacist (first-preference) or a dispense tech.'",
+      "source_page": 8,
+      "reason": "Physical workflow requirement plus 'best practice advice' (not mandatory); local policy must define compliance evidence."
+    },
+    {
+      "item": "Pill-break judgement: 'If a patient frequently takes pill breaks, pharmacists should exercise their professional judgement and consider referring the patient to explore alternative contraception options, e.g., long-acting reversible contraception (LARCs).'",
+      "source_page": 10,
+      "reason": "'Frequently' is undefined and the referral is optional; local rule required."
+    },
+    {
+      "item": "Child protection reporting: 'Pharmacists are to consider whether there may be child protection concerns relating to a request for contraception and report to Child Protection accordingly by contacting the Strong Families, Safe Kids advice and referral line on 1800 000 123...'",
+      "source_page": 10,
+      "reason": "Mandatory-reporting judgement with no printed threshold; encoded as a REFER red flag because the schema has no report action - local policy must define the decision path."
+    },
+    {
+      "item": "Capacity/consent for patients under 18: 'Consent ... may be provided by either the: parent or legal guardian; patient (must be assessed as having capacity ...)' and 'A child or young person's capacity can be observed and assessed by a pharmacist on a case-by-case basis.'",
+      "source_page": 10,
+      "reason": "Capacity assessment is a case-by-case judgement; local documentation standard required."
+    },
+    {
+      "item": "External reference currency: 'the current versions of the Royal College of Obstetricians and Gynaecologists Faculty of Sexual and Reproductive Healthcare (FSRH) documentation, including: UK Medical Eligibility Criteria for Contraceptive Use 2016 (UKMEC); FSRH Clinical Guideline: Progestogen-only Pills (August 2022, Amended July 2023); FSRH Clinical Guideline: Combined Hormonal Contraception (January 2019, Amended July 2023)' and 'Therapeutic Guidelines, Australian Medicines Handbook and other relevant references'.",
+      "source_page": 10,
+      "reason": "Rules depend on external, versioned references; confirm which versions the module pins at go-live."
+    },
+    {
+      "item": "Age 40-50 COC supply limit: 'eligible for maximum of one original pack and one repeat' / 'one original pack and one repeat only' plus '†12 months can be supplied for progestogen-only pills.'",
+      "source_page": 6,
+      "reason": "Quantity limits must be configured in the prescribing/dispensing system, and the dagger footnote's scope must be resolved (see open_questions)."
+    },
+    {
+      "item": "Contraindication screen completeness: flowchart box is abbreviated ('*Please refer to Appendix 1 for full set of contraindications to resupply') and Appendix 1 states its list is 'not an exhaustive list' and is based on UKMEC/Therapeutic Guidelines.",
+      "source_page": 8,
+      "reason": "The engine cannot rely on the printed lists alone; confirm the intended live source of truth (UKMEC calculator / Therapeutic Guidelines) and how it is version-pinned."
+    },
+    {
+      "item": "First-line COCP footnote: '* NB: first-line choice of COCP is a monophasic formulation containing ethinylestradiol (20 or 30 micrograms) and levonorgestrel (Therapeutic Guidelines)'.",
+      "source_page": 13,
+      "reason": "First-line designation is delegated to an external guideline; confirm the exact product list used for 'first-line' prompts."
+    },
+    {
+      "item": "BP second-reading rule: 'If BP remains elevated, the patient should be referred to a medical practitioner...' - no threshold printed for 'elevated'.",
+      "source_page": 11,
+      "reason": "A numeric rule cannot be implemented without a threshold; confirm whether 140/90 mmHg (contraindication box) is the intended trigger or another value."
+    },
+    {
+      "item": "My Health Record review: 'Review My Health Record, where available' and consent for 'Access to the patient's My Health Record for checking relevant medical history'.",
+      "source_page": 7,
+      "reason": "Depends on local system access and patient consent arrangements."
+    },
+    {
+      "item": "Service scope: 'Under the initiative, Tasmanian pharmacies are only authorised to resupply two types of oral hormonal contraceptive pills: the combined oral contraceptive pill (COCP) and the progestogen only pill (POP or mini pill)' and 'COCPs with a high estrogen dose (50 micrograms of ethinylestradiol or equivalent) ... have been excluded from this initiative.'",
+      "source_page": 13,
+      "reason": "Product-level allow/deny list must be maintained against the printed table (including the unresolved estrogen-dose cells) before go-live."
+    },
+    {
+      "item": "Documentation minimum set (page 9) and 'The pharmacist must make a clinical record of the consultation that contains at a minimum: ...' plus consultation-summary sharing rules.",
+      "source_page": 9,
+      "reason": "Local clinical software must be configured to capture every listed element, including consent items."
+    },
+    {
+      "item": "Protocol review cycle: 'This protocol will be updated every two years or more frequently as required.'",
+      "source_page": 4,
+      "reason": "Version pinning: confirm the module runs against v2.0 (May 2025) and has a re-verification trigger on republication."
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf",
+    "pdf_sha256": "bd85930e7f347b6e82e983181613b9a7b08d258c091ec2ffa7c5b173745d23bc",
+    "page_count": 5,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "Authority – Supply of specified restricted substances by pharmacists – management of uncomplicated Urinary Tract Infection (UTI)",
+    "instrument_version": "Dated: 15th June 2026 (signed by Dr Kerry Chant, Chief Health Officer, Delegation Number PH380, PH381, PH427; revokes the Authority – Supply of restricted substances by pharmacists signed 17 June 2025)",
+    "effective_date": "Commences on publication (no calendar date printed); cancelled on 18 June 2027 unless earlier cancelled",
+    "legal_basis": "Poisons and Therapeutic Goods Act 1966, section 10(4)(d); Poisons and Therapeutic Goods Regulation 2008, clauses 170 and 171 for the purpose of clause 53",
+    "supervision_model": "approved pharmacist (document's own term) — a pharmacist holding general registration under the Health Practitioner Regulation National Law (NSW), employed or engaged in an 'approved pharmacy', who has successfully completed Training Pathway 1 (Australasian College Pharmaceutical Society of Australia 'Managing Cystitis Treatment – Pharmacist Training' OR 'Uncomplicated cystitis: Pharmacist Training', plus any CHO-approved additional training modules) or Training Pathway 2 (QUT Safe prescribing and quality use of medicines course OR JCU Extended community practice pharmacists course subject PC6300; AND JCU course subjects PC6100 and PC6200; AND Pharmaceutical Society of Australia Managing uncomplicated cystitis module, or ACPSA 'Managing Uncomplicated Cystitis Treatment – Pharmacist Training' plus CHO-approved modules; Pathway 2 pharmacists must also register their details with NSW Health)",
+    "scope_summary": "NSW Health Authority authorising an approved pharmacist to supply the oral restricted substances trimethoprim, fosfomycin, nitrofurantoin and cefalexin to an applicable patient (female patient 18 to 65 years inclusive) for the treatment/management of urinary tract infections otherwise than on prescription, subject to a strict supply cascade (nitrofurantoin first, then fosfomycin, then trimethoprim, then cefalexin only when earlier options are unavailable or inappropriate), a maximum supply period of 5 days, in-person consultation, 7-year record-keeping and consent-to-share conditions; age/other-factor limits and referral circumstances are set by the external NSW Pharmacist Practice Standards for Urinary Tract Infections."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "The patient is an 'applicable patient', meaning a female patient 18 years of age or over and up to and including aged 65 years (footnote: 'the term ‘female’ is used to include all people presumed female at birth').",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+      },
+      {
+        "id": "INC-2",
+        "text": "The pharmacist must only supply a medicine indicated in clause 2 for the management of urinary tract infection (authorisation clause: supply 'for the treatment of urinary tract infections otherwise than on prescription').",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-3",
+        "text": "The medicine is one of the oral forms listed in clause 2: a. trimethoprim, b. fosfomycin, c. nitrofurantoin, d. cefalexin (letters a-c printed on page 1, d on page 2).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 1, "section_heading": "2) Restricted substance to which this instrument applies" }
+      },
+      {
+        "id": "INC-4",
+        "text": "The pharmacist must not supply a medicine specified in clause 2 in a quantity that exceeds the duration of management specified in the Practice Standard, except where the smallest available size of the manufacturer's pack exceeds the quantity specified in the Practice Standard (clause 3(c)).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Despite clause 3(c), the pharmacist must not supply a medicine indicated in clause 2 in a quantity which would result in supply for a period that is longer than 5 days.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Cascade position 1 (conditional - applies when supplying nitrofurantoin): nitrofurantoin is the first-listed agent; fosfomycin may only be supplied if nitrofurantoin is unavailable or inappropriate for treatment of the particular patient (clause 3(f)).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Cascade position 2 (conditional - applies when supplying fosfomycin): the pharmacist must only supply fosfomycin if nitrofurantoin is unavailable or inappropriate for treatment of the particular patient (clause 3(f)).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-8",
+        "text": "Cascade position 3 (conditional - applies when supplying trimethoprim): the pharmacist must only supply trimethoprim if both nitrofurantoin and fosfomycin are unavailable or inappropriate for treatment of the particular patient (clause 3(g)).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Cascade position 4 (conditional - applies when supplying cefalexin): the pharmacist must only supply cefalexin if nitrofurantoin, fosfomycin, and trimethoprim are unavailable or inappropriate for treatment of the particular patient (clause 3(h)).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-10",
+        "text": "The patient and pharmacist must both be physically present at the approved pharmacy premises, for consultation with the patient to occur prior to supply.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-11",
+        "text": "The pharmacist acts in accordance with the NSW Pharmacist Practice Standards for Urinary Tract Infections approved by the Chief Health Officer and published on the NSW Health website, including in relation to any limitations on the supply of medicines indicated in clause 2, to a patient based on their age or other factor, and circumstances where a patient must be referred to a medical practitioner or other healthcare professional.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "INC-12",
+        "text": "The supplier is an 'approved pharmacist' as defined: holds general registration under the Health Practitioner Regulation National Law (NSW); is employed or engaged in an 'approved pharmacy'; has successfully completed Training Pathway 1 or Training Pathway 2; and (Pathway 2) has provided NSW Health with their full name, contact details, pharmacist registration number, intended services and location of services via the prescribed form.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10", "INC-11", "INC-12"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "The patient is not a 'female' patient as defined for this instrument (the term 'female' is used to include all people presumed female at birth); the applicable patient class is female patients only.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "The patient is under 18 years of age or over 65 years of age (applicable patient means a female patient 18 years of age or over and up to and including aged 65 years).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "The medicine would be supplied for anything other than the management of urinary tract infection.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Cascade breach - fosfomycin: fosfomycin is supplied while nitrofurantoin is available and appropriate for treatment of the particular patient (clause 3(f)).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Cascade breach - trimethoprim: trimethoprim is supplied while nitrofurantoin or fosfomycin (or both) are available and appropriate for treatment of the particular patient (clause 3(g)).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Cascade breach - cefalexin: cefalexin is supplied while nitrofurantoin, fosfomycin, or trimethoprim are available and appropriate for treatment of the particular patient (clause 3(h)).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "The quantity supplied would result in supply for a period that is longer than 5 days (absolute cap under clause 3(d)).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "The quantity exceeds the duration of management specified in the Practice Standard and the smallest available size of the manufacturer's pack does not exceed that quantity (clauses 3(b) and 3(c)). The duration of management figure itself is not printed in this instrument.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "The consultation does not take place with the patient and the pharmacist both physically present at the approved pharmacy premises prior to supply.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "A limitation on supply based on the patient's age or other factor applies under the NSW Pharmacist Practice Standards for Urinary Tract Infections, or the referral circumstances in that Practice Standard apply (clause 3(e)). The specific limits/circumstances are not printed in this instrument.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "The pharmacist is not an 'approved pharmacist' (including training pathway completion), the pharmacy is not an 'approved pharmacy' (including consulting room requirements), or the pharmacist has not provided their details to NSW Health via the prescribed form where required.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 65,
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "If the smallest available size of the manufacturer's pack of the medicine exceeds the quantity specified in the Practice Standard, the pharmacist may supply the medicine in the smallest available size (exception to the quantity limit in clause 3(b); does not override the 5-day cap in clause 3(d)).",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "nitrofurantoin",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Listed in clause 2 ('c. nitrofurantoin', page 1). Cascade position 1: fosfomycin may only be supplied if nitrofurantoin is unavailable or inappropriate (clause 3(f)), so nitrofurantoin is the preferred/first-listed agent under this instrument. Supply must not be for a period longer than 5 days (clause 3(d)). Dose, strength, frequency and the Practice Standard's duration of management are not printed in this instrument.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 1, "section_heading": "2) Restricted substance to which this instrument applies" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "fosfomycin",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Listed in clause 2 ('b. fosfomycin', page 1). Cascade position 2: 'The pharmacist must only supply fosfomycin if nitrofurantoin is unavailable or inappropriate for treatment of the particular patient' (clause 3(f)). Supply must not be for a period longer than 5 days (clause 3(d)). Dose, strength, frequency and the Practice Standard's duration of management are not printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 1, "section_heading": "2) Restricted substance to which this instrument applies" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "trimethoprim",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Listed in clause 2 ('a. trimethoprim', page 1). Cascade position 3: 'The pharmacist must only supply trimethoprim if both nitrofurantoin and fosfomycin are unavailable or inappropriate for treatment of the particular patient' (clause 3(g)). Supply must not be for a period longer than 5 days (clause 3(d)). Dose, strength, frequency and the Practice Standard's duration of management are not printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 1, "section_heading": "2) Restricted substance to which this instrument applies" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "cefalexin",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Listed in clause 2 ('d. cefalexin.', printed on page 2). Cascade position 4: 'The pharmacist must only supply cefalexin if nitrofurantoin, fosfomycin, and trimethoprim are unavailable or inappropriate for treatment of the particular patient' (clause 3(h)). Supply must not be for a period longer than 5 days (clause 3(d)). Dose, strength, frequency and the Practice Standard's duration of management are not printed in this instrument.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "2) Restricted substance to which this instrument applies" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "The pharmacist must act in accordance with the NSW Pharmacist Practice Standards for Urinary Tract Infections ... including in relation to any limitations on the supply of medicines indicated in clause 2, to a patient based on their age or other factor, and circumstances where a patient must be referred to a medical practitioner or other healthcare professional.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Despite clause 3(c), the pharmacist must not supply a medicine indicated in clause 2 of this instrument in a quantity which would result in supply for a period that is longer than 5 days.",
+      "structured": { "parameter": "supply period", "operator": ">", "value": 5, "unit": "days" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "An 'applicable patient' means a female2 patient 18 years of age or over and up to and including aged 65 years. (Footnote 2: the term 'female' is used to include all people presumed female at birth.)",
+      "structured": { "parameter": "age", "operator": "not_in", "value": "18 to 65 years", "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "5) Definitions" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "The pharmacist must only supply cefalexin if nitrofurantoin, fosfomycin, and trimethoprim are unavailable or inappropriate for treatment of the particular patient.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "The pharmacist must only supply trimethoprim if both nitrofurantoin and fosfomycin are unavailable or inappropriate for treatment of the particular patient; the pharmacist must only supply fosfomycin if nitrofurantoin is unavailable or inappropriate for treatment of the particular patient.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "The patient and pharmacist must both be physically present at the approved pharmacy premises, for consultation with the patient to occur prior to supply.",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Circumstances where a patient must be referred to a medical practitioner or other healthcare professional as set out in the NSW Pharmacist Practice Standards for Urinary Tract Infections approved by the Chief Health Officer and published on the NSW Health website (clause 3(e))."
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 2, "section_heading": "3) Conditions — Limitation on supply" }
+  },
+  "review_followup": [
+    {
+      "when": "Within a week following the consultation, if the patient consents to the disclosure",
+      "what": "Share a record of the consultation and any subsequent consultations (including adverse events) with the patient's usual treating medical practitioner or medical practice, where the patient has one; communication should ensure patient confidentiality is maintained and use of a secure digital messaging platform is considered best practice.",
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "3) Conditions — Limitation on supply" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "The pharmacist must seek the patient's consent to share a record of the consultation and any subsequent consultations (including adverse events) with the patient's usual treating medical practitioner or medical practice, where the patient has one, following consent by the patient; if the patient consents, the record must be shared within a week following the consultation (clause 3(l))."
+    ],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\authority-uti.pdf", "page": 3, "section_heading": "3) Conditions — Limitation on supply" }
+  },
+  "references": [
+    "NSW Pharmacist Practice Standards for Urinary Tract Infections approved by the Chief Health Officer and published on the NSW Health website (clause 3(e), page 2).",
+    "NSW Health expanded services application form: https://www.health.nsw.gov.au/pharmaceutical/Pages/expanded-services-application.aspx (definition of 'approved pharmacist', page 4)."
+  ],
+  "open_questions": [
+    {
+      "topic": "Assessment criteria, diagnosis and referral triggers are external to this instrument",
+      "observed": "Clause 3(b) refers to 'the duration of management specified in the Practice Standard' and clause 3(e) refers to 'any limitations on the supply of medicines indicated in clause 2, to a patient based on their age or other factor, and circumstances where a patient must be referred to a medical practitioner or other healthcare professional'. The NSW Pharmacist Practice Standards for Urinary Tract Infections is not reproduced; no diagnostic criteria (symptoms, dipstick, pregnancy, recurrent/catheter/complication exclusions) and no specific referral triggers are printed in this 5-page Authority.",
+      "why_unclear": "The operative clinical criteria live in a separate published Practice Standard that was not supplied with this Authority; nothing may be invented to fill them.",
+      "source_page": 2
+    },
+    {
+      "topic": "No dose, strength, frequency or duration printed for trimethoprim, fosfomycin, nitrofurantoin or cefalexin",
+      "observed": "Clause 2 lists oral forms only (a. trimethoprim, b. fosfomycin, c. nitrofurantoin, d. cefalexin). The only printed supply limit is 'longer than 5 days' (clause 3(d)); no dose, strength, frequency, max_dose or quantity values appear anywhere in the document.",
+      "why_unclear": "Dosing detail is deferred to the external Practice Standard; treatment fields are left empty rather than inferred.",
+      "source_page": 1
+    },
+    {
+      "topic": "Cascade conditions are drug-specific, expressed as one all_of checklist",
+      "observed": "Clauses 3(f), 3(g) and 3(h) impose conditional ordering: nitrofurantoin preferred, then fosfomycin, then trimethoprim, then cefalexin, each only if all earlier agents are 'unavailable or inappropriate for treatment of the particular patient'. The instrument does not define 'unavailable or inappropriate'.",
+      "why_unclear": "The document gives no combinatorics beyond these conditional statements; each cascade condition is recorded as a criterion whose text states when it applies, and the undefined terms need the Practice Standard.",
+      "source_page": 2
+    },
+    {
+      "topic": "No urgent or emergency referral destinations printed",
+      "observed": "The instrument contains no urgent or emergency referral list; the only referral wording is the clause 3(e) cross-reference to the Practice Standard. Red-flag features of UTI (e.g. systemic illness, fever, pregnancy, retention) are not printed here.",
+      "why_unclear": "Document is silent; empty urgent/emergency arrays reflect the source rather than an extraction gap.",
+      "source_page": 2
+    },
+    {
+      "topic": "Training pathway table reads imperfectly",
+      "observed": "On page 4 the training options extract as interleaved fragments: 'Australasian College of Pharmaceutical Society of Pharmacy Uncomplicated OR Australia Managing Cystitis Treatment – uncomplicated cystitis; Pharmacist Training;' and 'The Queensland University of Technology's Safe prescribing and quality use of medicines course; OR James Cook University's Extended community practice pharmacists course (subject PC6300); AND ... Pharmaceutical Society of Australia Managing uncomplicated cystitis module.'",
+      "why_unclear": "Two-column table layout is misaligned in text extraction; exact wording and structure of Training Pathway 1 and 2 cannot be transcribed with confidence.",
+      "source_page": 4
+    },
+    {
+      "topic": "Commencement date not printed as a calendar date",
+      "observed": "Clause 6: 'This authority commences on publication.' Clause 7: 'This authority is cancelled on 18 June 2027, unless earlier cancelled.' The instrument is dated 15th June 2026.",
+      "why_unclear": "Effective date depends on the publication date, which is not stated in the document.",
+      "source_page": 5
+    },
+    {
+      "topic": "Notifiable conditions",
+      "observed": "No notifiable-condition or Australian Immunisation Register reporting requirement is printed. 'notifiable.required = true' reflects only the consent-based sharing of the consultation record with the patient's usual treating medical practitioner (clause 3(l), page 3).",
+      "why_unclear": "Document is silent on notifiable conditions; recorded so the flag is not misread.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Load the NSW Pharmacist Practice Standards for Urinary Tract Infections (approved by the Chief Health Officer) and transcribe its diagnostic/eligibility criteria, duration of management quantity, age/other-factor supply limitations and referral circumstances before go-live.",
+      "source_page": 2,
+      "reason": "Clause 3(b) and 3(e) make supply conditional on content that is not printed in this instrument; INC-4/EXC-8/EXC-10/RF-1 cannot be evaluated without it."
+    },
+    {
+      "item": "Confirm the definition of 'unavailable or inappropriate' used in the supply cascade (clauses 3(f)-(h)) so the engine can evaluate nitrofurantoin -> fosfomycin -> trimethoprim -> cefalexin ordering.",
+      "source_page": 2,
+      "reason": "The cascade is the core prescribing rule of this Authority but the decision terms are undefined in the document."
+    },
+    {
+      "item": "Confirm the 5-day absolute supply cap (clause 3(d)) is implemented as a hard check alongside the Practice Standard quantity limits, including the smallest-manufacturer-pack exception in clause 3(c).",
+      "source_page": 2,
+      "reason": "Seeded supply-limit rule that a pharmacist must confirm before go-live; the exception interacts with the cap."
+    },
+    {
+      "item": "Confirm handling of the sex/gender eligibility wording: 'An ‘applicable patient’ means a female patient 18 years of age or over and up to and including aged 65 years' with footnote 'the term ‘female’ is used to include all people presumed female at birth'.",
+      "source_page": 3,
+      "reason": "Eligibility screening must follow the document's own wording exactly; jurisdictional sensitivity requires local sign-off before go-live."
+    },
+    {
+      "item": "Verify the approved-pharmacist Training Pathway 1 / Training Pathway 2 wording and course codes (ACPSA 'Managing Cystitis Treatment – Pharmacist Training' / 'Uncomplicated cystitis: Pharmacist Training'; QUT Safe prescribing and quality use of medicines course; JCU PC6300, PC6100, PC6200; PSA 'Managing uncomplicated cystitis' module) directly against the PDF.",
+      "source_page": 4,
+      "reason": "Two-column training table extracts as garbled interleaved text; training completion is a precondition of the authority."
+    },
+    {
+      "item": "Confirm local policy for the seven (7) year clinical record retention, in-person consultation and display of the pharmacist's AHPRA-registered name at or near the consultation room (clauses 3(i), 3(j), 3(k)).",
+      "source_page": 2,
+      "reason": "Operational requirements left to the pharmacy's implementation; must be confirmed before go-live."
+    },
+    {
+      "item": "Confirm handling of the publication/commencement date and the 18 June 2027 cancellation date in the prescribing module.",
+      "source_page": 5,
+      "reason": "Commencement is 'on publication' with no calendar date printed; expiry must gate the protocol's availability."
+    }
+  ]
+}

@@ -18,6 +18,7 @@
  * score and completion-readiness behaviour required by the demo.
  */
 import { CONDITIONS, getConditionById } from '@/data/conditions';
+import { corpusJurisdictionsForSlug } from '@/data/protocol-corpus';
 import type { Condition } from '@/types/clinical';
 
 export type ConditionCategory =
@@ -122,9 +123,14 @@ function categoryForCondition(c: Condition): ConditionCategory {
 
 function buildEntry(c: Condition): ConditionRegistryEntry {
   const override = REGISTRY_OVERRIDES[c.id] ?? {};
+  const slug = override.slug ?? slugify(c.name);
+  // Corpus-derived jurisdiction availability (Sep 2026 snapshot) takes
+  // precedence: static DEFAULT_JURISDICTIONS only applies when the corpus
+  // has no document group mapped to this condition's slug.
+  const corpusStates = corpusJurisdictionsForSlug(slug);
   return {
     id: c.id,
-    slug: override.slug ?? slugify(c.name),
+    slug,
     name: c.name,
     category: override.category ?? categoryForCondition(c),
     description: c.description,
@@ -135,7 +141,9 @@ function buildEntry(c: Condition): ConditionRegistryEntry {
     pinned: override.pinned ?? false,
     sortOrder: override.sortOrder ?? 1000,
     templateVersion: TEMPLATE_VERSION,
-    jurisdictionAvailability: override.jurisdictionAvailability ?? DEFAULT_JURISDICTIONS,
+    jurisdictionAvailability:
+      override.jurisdictionAvailability ??
+      (corpusStates.length > 0 ? corpusStates : DEFAULT_JURISDICTIONS),
     lastReviewed: override.lastReviewed,
   };
 }

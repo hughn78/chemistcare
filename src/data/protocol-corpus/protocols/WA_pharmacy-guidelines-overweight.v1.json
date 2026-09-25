@@ -1,0 +1,835 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf",
+    "pdf_sha256": "96593cf4a9f0c57e9ca762a2928e6e6ad732314f77bc9abf189ee6c5f3b6de7d",
+    "page_count": 18,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Management for overweight and obesity clinical practice guideline",
+    "instrument_version": "No version number printed (page 18 footer codes read \"62'GUA\" and \"180510-DEC\"); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division)",
+    "legal_basis": "Medicines and Poisons Regulations 2016 (WA): 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.' (p.1)",
+    "supervision_model": "Approved pharmacist prescribing (document's own terminology): pharmacists must be 'approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP)' and 'authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA)'; 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority. This guideline does not override the responsibility of the pharmacist to undertake clinical assessments and to make decisions appropriate to the circumstances of the individual and the relevant standards of care, in consultation with the patient and/or their parent/caregiver.' (p.1). Multiple conditions are referred for collaborative management with an appropriate healthcare provider.",
+    "scope_summary": "EACPP clinical practice guideline for management of overweight and obesity in patients aged 18 years or over (service restricted to patients aged 18 years or over). Flow: meet service and professional obligations -> patient history and assessment (history, examination and screening for common comorbidities, investigations/test results) -> develop management plan (Management Plan A: lifestyle modification, reduced/low energy diets; Management Plan B: very low energy diets, pharmacotherapy - orlistat) -> treat and concurrently refer -> confirm management is appropriate (contraindications and precautions, drug interactions, pregnancy and lactation) -> communicate agreed management plan (weight management plan including goals) -> clinical review (monthly). Table 1 (pages 6-7) sets recommended investigations (HbA1c or FBG, serum lipids, BP, TSH) with testing and referral thresholds including two immediate/emergency referral triggers. Appendix 1 (pages 12-13) sets co-morbidity screening (STOP-BANG, BMI/waist, K10, SCOFF/InsideOut Screener, AUSDRISK, dyslipidaemia) with referral requirements. 'Refer when' (page 4) defines referral triggers; 'Treat and concurrently refer' (page 4) defines conditions treated while referring. This is a management guideline; it prints no product-level doses or strengths for orlistat."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-2",
+        "text": "This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 2, "section_heading": "Guideline overview" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Excess weight (overweight and obesity), generally defined in adults as a body mass index (BMI) ≥ 25 kg/m², is a risk factor for metabolic and chronic conditions, including type 2 diabetes, cardiovascular disease (CVD) and some cancers.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 3, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Lifestyle interventions are indicated for all patients with overweight or obesity.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 8, "section_heading": "Develop management plan" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Each patient's needs regarding weight management and suitability for pharmacist management should be assessed on a case-by-case basis.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 5, "section_heading": "Patient history and assessment" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "the patient is or could be pregnant or lactating",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "BMI > 40 kg/m²",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "comorbidity not being managed by an appropriate healthcare provider* or that requires specialist management for weight loss",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "previous bariatric surgery",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "taking a medicine associated with weight gain",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "inadequate response to Management Plan B (< 5 per cent loss after 12 weeks).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 1, "section_heading": "Contents" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 1, "section_heading": "Contents" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "*Patients with mild to moderate asthma may be suitable for management as part of the WA Enhanced Access Community Pharmacy Pilot – refer to the respective clinical protocol for information and eligibility criteria if in a participating pharmacy.",
+        "criteria_group": { "all_of": ["EXE-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Overweight and obesity - guideline overview pathway (page 2 flow, elaborated pages 5-10)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service; patient informed consent (including consent for communication with other health practitioners if relevant). Service restricted to patients aged 18 years or over.",
+          "gates": [
+            { "criterion": "Initial patient eligibility and suitability for management within the scope of the service (Refer when: the patient is aged below 18 years)", "on_fail": "REFER" },
+            { "criterion": "Patient informed consent (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 2, "section_heading": "Guideline overview" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); weight history including highest and lowest weights (and when); previous weight loss and strategies used, including the degree of success and levels of medical/health practitioner support (e.g. previous drug therapy, very-low energy diets (VLED), exercise); recent relevant biochemical markers (see Investigations); medical conditions and comorbidities, including weight and non-weight related; known, suspected or previous eating disorder (see Appendix 1); surgical history, including any bariatric surgery; current and recently ceased treatments (including prescribed medicines, over-the-counter medicines, vitamins, herbs, powders (like protein powders), other supplements); drug allergies/adverse drug reactions; alcohol and drug history; smoking status; diet history (usual intake over the last 6 month period) and fluid intake; current level of physical activity (structured and incidental activity); other factors impacting upon successful weight management - cooking/shopping skills, health and nutritional literacy, cooking/shopping responsibilities including the number of people in the household, stage of readiness to change, patient support networks. Reminder: Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies, and current medical conditions.",
+          "gates": [
+            { "criterion": "Refer when: the patient is or could be pregnant or lactating", "on_fail": "REFER" },
+            { "criterion": "Refer when: taking a medicine associated with weight gain", "on_fail": "REFER" },
+            { "criterion": "Refer when: previous bariatric surgery", "on_fail": "REFER" },
+            { "criterion": "known, suspected or previous eating disorder (see Appendix 1)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 5, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination and screening for common comorbidities: 'All patients should undergo basic screening and examination for common weight-related comorbidities and eating disorders.' Information to guide screening has been provided in Appendix 1 (Obstructive Sleep Apnoea - STOP-BANG; BMI and waist circumference; Mental health/psychological distress - K10; Eating disorders - SCOFF Questionnaire or InsideOut Screener; Diabetes - AUSDRISK and clinical signs of insulin resistance; Dyslipidaemia). However, it is also recommended that the patient be comprehensively screened, either as part of the pilot services (if eligible) or by referral to their usual healthcare provider. Measurement of BMI and waist circumference at commencement and regular reviews (recommended monthly) is required to inform the management plan and assist with patient education regarding risk factors for obesity comorbidities. A larger waist circumference indicates visceral fat deposits and central obesity: males with a waist circumference ≥ 94 cm are at increased risk of CVD and other comorbidities (≥ 102 cm = a greatly increased risk, especially if BMI > 25 kg/m²); females with a waist circumference ≥ 80 cm are at increased risk (≥ 88 cm = a greatly increased risk, especially if BMI > 25 kg/m²).",
+          "gates": [
+            { "criterion": "Appendix 1 Obstructive Sleep Apnoea: a score of ≥ 3 on the STOP-Bang questionnaire, or patients with at least one risk factor or comorbidity + multiple symptoms of sleep apnoea", "on_fail": "REFER" },
+            { "criterion": "Appendix 1 Mental health: patients who score ≥20 on the K10 (suspected mental health disorder or psychological distress)", "on_fail": "REFER" },
+            { "criterion": "Appendix 1 Eating disorders: patients with or suspected of having an eating disorder", "on_fail": "REFER" },
+            { "criterion": "Appendix 1 Dyslipidaemia: patients with a history of familial hypercholesterolemia", "on_fail": "REFER" },
+            { "criterion": "findings indicate further investigation of a possible comorbidity is required*", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 5, "section_heading": "Examination and screening" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "INVESTIGATION",
+          "description": "Investigations: recommended investigations are outlined in Table 1 (Recommended investigations/tests) - Glycated haemoglobin (HbA1c) or fasting blood glucose (FBG); Serum lipids (fasting) (including LDL-C, HDL-C and triglycerides); BP measurement; Thyroid stimulating hormone (TSH). If available, recent test results may be used (e.g. provided by a medical practitioner with referral or available on My Health Record) if there have been no changes to the patient's medication or health status and the test was conducted within the past 12 months. Consider investigation for secondary cause of weight change if clinically suspected based on patients presenting signs and symptoms, e.g. thyroid dysfunction. NB1: Pharmacists should consider the limitations of HbA1c tests and factors that may cause hyperglycaemia and misleading test results, as per the Therapeutic Guidelines: Tests to diagnose diabetes and the RACGP: Management of type 2 diabetes.",
+          "gates": [
+            { "criterion": "HbA1c or FBG testing requirements: people without a previous diagnosis of diabetes AND no HbA1c or FBG test results from the previous 3 years AND at least one of the listed risk criteria met", "on_fail": "unclear" },
+            { "criterion": "Concurrent referral for further investigation of diabetes: HbA1c of ≥ 6.5 per cent (48 mmol/mol) AND fasting blood glucose ≥ 7.0 mmol/L (AND/OR connector unclear in two-column table - see open question)", "on_fail": "REFER" },
+            { "criterion": "Concurrent referral for further investigation of dyslipidaemia: total cholesterol ≥ 5.5 mmol/L (or > 4.0 mmol/L for people on lipid modifying drug therapy), LDL-C ≥ 2.0 mmol/L, HDL-C ≤ 1.0 mmol/L, or triglycerides ≥ 2.0 mmol/L", "on_fail": "REFER" },
+            { "criterion": "Concurrent referral for further investigation of hypertension and CVD: BP ≥ 140/90 mmHg", "on_fail": "REFER" },
+            { "criterion": "Immediate/emergency referral: HbA1c > 10 per cent (86 mmol/mol) or any blood glucose level ≥ 20.0 mmol/L in patients who are unwell", "on_fail": "REFER" },
+            { "criterion": "Immediate/emergency referral: Systolic BP ≥ 180 and/or diastolic BP ≥ 110 mmHg in patients with signs or symptoms of a hypertensive urgency (headache or dizziness)", "on_fail": "REFER" },
+            { "criterion": "Concurrent referral for further investigation of thyroid function: TSH > 4 mlU/L", "on_fail": "REFER" }
+          ],
+          "confidence": "unclear",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 6, "section_heading": "Table 1: Recommended investigations/tests" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Develop management plan: management in accordance with the Australian Obesity Management Algorithm is centred around lifestyle interventions (initial weight-loss strategies) tailored to relevant factors for the individual. Management may include more intensive interventions (secondary weight-loss strategies) if initial weight loss strategies have not been effective (if clinically indicated and appropriate). Management Plan A (Initial weight loss strategies): lifestyle modification (for relevant factors) - counselling and education for lifestyle modification as per the 5As framework detailed in the RACGP Smoking, nutrition, alcohol and physical activity (SNAP) guide, the Handbook of Non-Drug Interventions (HANDI) and the Australian Obesity Management Algorithm; Reduced energy diets (RED) and low energy diets (LED) in accordance with the Australian Obesity Management Algorithm; it is recommended that consenting patients are referred to a dietitian for specialised and individualised advice and a tailored eating plan; it is recommended that consenting patients are referred to an appropriate healthcare provider for physical activity and psychosocial interventions, where required. Management Plan B (Secondary weight loss strategies) can be considered for individuals who have not adequately responded to initial weight loss strategies as described in Management Plan A, including where these may have been attempted outside of this service as part of another structured weight loss program: Very low energy diets (VLEDs) for individuals who have not adequately responded to a RED or LED, in accordance with individual product instructions and indications, and the Australian Obesity Management Algorithm, with referral to a dietitian recommended. Pharmacotherapy: for patients following Management Plan A showing less than a 5 per cent decrease in weight after 3 months AND with a BMI > 27 kg/m² (if other cardiovascular risk factors are present) or BMI > 30 kg/m² (no other CVD risk factors or comorbidities) - prescribe Orlistat, in accordance with the Australian Medicines Handbook: Orlistat. Liver function should be monitored. If Orlistat is unsuitable, refer to an appropriate healthcare provider for other pharmacological management. NB2: VLEDs are contraindicated in patients aged > 65 years; VLEDs are recommended to be used in collaboration with a dietitian and medical practitioner for periodic monitoring of biochemistry (electrolytes, creatinine, liver function tests, fasting glucose, lipids, uric acid) and haematology (full blood count, iron studies); Pharmacists should evaluate the risks associated with prescribing specific treatments for patients who lack access to reliable multidisciplinary support, particularly in rural and remote areas. Setting appropriate weight management goals: a weight loss of between 5 per cent and 10 per cent is achievable for most overweight adults and will provide cardiovascular and other health benefits. Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+          "gates": [
+            { "criterion": "Pharmacotherapy (Orlistat) eligibility: less than a 5 per cent decrease in weight after 3 months AND BMI > 27 kg/m² (if other cardiovascular risk factors are present) or BMI > 30 kg/m² (no other CVD risk factors or comorbidities)", "on_fail": "STOP" },
+            { "criterion": "VLEDs are contraindicated in patients aged > 65 years", "on_fail": "STOP" },
+            { "criterion": "If Orlistat is unsuitable, refer to an appropriate healthcare provider for other pharmacological management", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: patients with cardiovascular disease (CVD), asthma*, or chronic obstructive pulmonary disease", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: patients aged > 65 years", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: patients with diagnosed (or suspected) psychiatric disorders, or a history of eating disorders", "on_fail": "REFER" },
+            { "criterion": "Treat and concurrently refer: patients under active medical treatment and supervision for weight reduction", "on_fail": "REFER" },
+            { "criterion": "Refer when: inadequate response to Management Plan B (< 5 per cent loss after 12 weeks)", "on_fail": "REFER" },
+            { "criterion": "It is recommended that consenting patients are referred to a dietitian for specialised and individualised advice and a tailored eating plan", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 8, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: 'Consult the Australian Medicines Handbook, the Australian Obesity Management Algorithm and other relevant references to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.'",
+          "gates": [
+            { "criterion": "contraindications and precautions", "on_fail": "STOP" },
+            { "criterion": "drug interactions", "on_fail": "STOP" },
+            { "criterion": "pregnancy and lactation (Refer when: the patient is or could be pregnant or lactating)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information if required) should be provided to the patient regarding the weight management plan. Relevant information may include: instructions for individual product and medicine use (or the patient's chosen healthcare provider); non-pharmacological measures; how to manage adverse effects, including serious adverse effects requiring medical care; importance of completing any recommended screening or blood tests, and when to return for follow up. A Weight Management Plan template has been provided in Appendix 2 for guidance. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers), and compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+          "gates": [
+            { "criterion": "serious adverse effects requiring medical care", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: 'Follow up and clinical review is an important component of overweight and obesity management. Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Australian Obesity Management Algorithm. Clinical review on a monthly basis is recommended to monitor progress towards the weight loss target, efficacy of lifestyle modification, and to monitor for adverse effects.' Clinical review appointments may include: weight and waist circumference measurements, and BMI calculation; blood pressure monitoring; brief advice and reinforcement of lifestyle modification; review of adverse effects. Pharmacists may also consider repeating laboratory testing (where indicated). For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review.",
+          "gates": [
+            { "criterion": "inadequate response to Management Plan B (< 5 per cent loss after 12 weeks)", "on_fail": "REFER" },
+            { "criterion": "investigations indicate further investigation of a possible comorbidity is required", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Orlistat",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Pharmacotherapy under Management Plan B (secondary weight-loss strategies). Eligibility verbatim (p.8): 'For patients following Management Plan A showing less than a 5 per cent decrease in weight after 3 months AND with a BMI > 27 kg/m² (if other cardiovascular risk factors are present) or BMI > 30 kg/m² (no other CVD risk factors or comorbidities): - prescribe Orlistat, in accordance with the Australian Medicines Handbook: Orlistat. Liver function should be monitored. If Orlistat is unsuitable, refer to an appropriate healthcare provider for other pharmacological management.' Also printed (p.8): 'Orlistat is indicated for patients with BMI ≥ 27 kg/m² and other cardiovascular risk factors.' and 'The Australian Obesity Management Algorithm provides guidance on the use of pharmacotherapy for patients with BMI ≥ 30 kg/m².' No drug strength, dose, dosing frequency, dosing duration, form or route is printed anywhere in this guideline - product-level detail must be taken from the Australian Medicines Handbook: Orlistat (p.8). Liver function monitoring interval is not printed. Supply rule (p.10): 'Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review.' Confirm management is appropriate (p.10) requires checking contraindications and precautions, drug interactions, and pregnancy and lactation. Lifestyle modification remains the foundation of weight management (p.3), so Orlistat is recorded as second-line (secondary strategy), not first_line. Pregnancy/lactation caveat verbatim (p.10): 'pregnancy and lactation' must be confirmed before management is appropriate; Refer when (p.4): 'the patient is or could be pregnant or lactating'.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 8, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Very low energy diets (VLEDs)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Secondary weight-loss strategy under Management Plan B (p.8): 'For individuals who have not adequately responded to a RED or LED, in accordance with individual product instructions and indications, and the Australian Obesity Management Algorithm. It is recommended that consenting patients are referred to a dietitian for specialised and individualised advice and a tailored eating plan.' NB2 verbatim (p.9): 'VLEDs are contraindicated in patients aged > 65 years.'; 'VLEDs are recommended to be used in collaboration with a dietitian and medical practitioner for periodic monitoring of biochemistry (electrolytes, creatinine, liver function tests, fasting glucose, lipids, uric acid) and haematology (full blood count, iron studies).'; 'Pharmacists should evaluate the risks associated with prescribing specific treatments for patients who lack access to reliable multidisciplinary support, particularly in rural and remote areas.' No product, energy target, dose, frequency or duration is printed - individual product instructions and indications apply. Paediatric/age caveat verbatim: contraindicated in patients aged > 65 years. first_line false (secondary strategy).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 9, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Reduced energy diets (RED) and low energy diets (LED)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Initial weight-loss strategy under Management Plan A (p.8): 'In accordance with the Australian Obesity Management Algorithm.'; 'It is recommended that consenting patients are referred to a dietitian for specialised and individualised advice and a tailored eating plan.' No energy target, product, dose, frequency or duration is printed. Lifestyle modification is the foundation of weight management and for some patients, lifestyle modification alone may be sufficient to achieve weight loss (p.3). Goal context (p.9): 'A weight loss of between 5 per cent and 10 per cent is achievable for most overweight adults and will provide cardiovascular and other health benefits.' first_line recorded false because the document prints no ranking of diet types; lifestyle modification (non-pharmacological measures) is described as 'the foundation' rather than any specific diet.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 8, "section_heading": "Develop management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "the patient is aged below 18 years (does not preclude a patient from accessing usual pharmacy care)",
+      "structured": { "parameter": "age", "operator": "<", "value": 18, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "the patient is or could be pregnant or lactating",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "BMI > 40 kg/m²",
+      "structured": { "parameter": "BMI", "operator": ">", "value": 40, "unit": "kg/m²" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "comorbidity not being managed by an appropriate healthcare provider* or that requires specialist management for weight loss",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "previous bariatric surgery",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "taking a medicine associated with weight gain",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "inadequate response to Management Plan B (< 5 per cent loss after 12 weeks).",
+      "structured": { "parameter": "weight loss after 12 weeks on Management Plan B", "operator": "<", "value": 5, "unit": "per cent" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Treat and concurrently refer: patients with diagnosed (or suspected) psychiatric disorders, including psychosis, schizophrenia, bipolar disorder, major depression, anxiety, eating disorder (binge eating, anorexia nervosa, bulimia), or a history of eating disorders",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Treat and concurrently refer: patients with clinically significant nutritional (vitamin or mineral) deficiencies",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Treat and concurrently refer: patients under active medical treatment and supervision for weight reduction",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Treat and concurrently refer: patients with cardiovascular disease (CVD), asthma*, or chronic obstructive pulmonary disease",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Treat and concurrently refer: patients aged > 65 years",
+      "structured": { "parameter": "age", "operator": ">", "value": 65, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Treat and concurrently refer: findings indicate further investigation of a possible comorbidity is required*.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Treat and concurrently refer" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider is required for further investigation of diabetes when: HbA1c of ≥ 6.5 per cent (48 mmol/mol) [AND] fasting blood glucose ≥ 7.0 mmol/L. [AND/OR connector unclear in the two-column Table 1 - see open question; both readings recorded]",
+      "structured": { "parameter": "HbA1c", "operator": ">=", "value": 6.5, "unit": "per cent" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 6, "section_heading": "Table 1: Recommended investigations/tests" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Immediate/emergency referral: HbA1c > 10 per cent (86 mmol/mol) ... is considered to be severe hyperglycaemia and is a medical emergency in patients who are unwell (signs of ketosis, dehydration, vomiting, signs or symptoms of underlying infection, confusion and/or delirium/altered level of consciousness).",
+      "structured": { "parameter": "HbA1c", "operator": ">", "value": 10, "unit": "per cent" },
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 6, "section_heading": "Table 1: Recommended investigations/tests" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Immediate/emergency referral: any blood glucose level ≥ 20.0 mmol/L is considered to be severe hyperglycaemia and is a medical emergency in patients who are unwell (signs of ketosis, dehydration, vomiting, signs or symptoms of underlying infection, confusion and/or delirium/altered level of consciousness).",
+      "structured": { "parameter": "blood glucose level", "operator": ">=", "value": 20.0, "unit": "mmol/L" },
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 6, "section_heading": "Table 1: Recommended investigations/tests" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider for further investigation of dyslipidaemia when: total cholesterol (TC): ≥ 5.5 mmol/L (or > 4.0 mmol/L for people on lipid modifying drug therapy)",
+      "structured": { "parameter": "total cholesterol", "operator": ">=", "value": 5.5, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "Serum lipids (fasting) (including LDL-C, HDL-C and triglycerides)" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "LDL-C: ≥ 2.0 mmol/L [referral for further investigation of dyslipidaemia]",
+      "structured": { "parameter": "LDL-C", "operator": ">=", "value": 2.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "Serum lipids (fasting) (including LDL-C, HDL-C and triglycerides)" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "HDL-C ≤ 1.0 mmol/L [referral for further investigation of dyslipidaemia]",
+      "structured": { "parameter": "HDL-C", "operator": "<=", "value": 1.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "Serum lipids (fasting) (including LDL-C, HDL-C and triglycerides)" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Triglycerides: ≥ 2.0 mmol/L [referral for further investigation of dyslipidaemia]",
+      "structured": { "parameter": "triglycerides", "operator": ">=", "value": 2.0, "unit": "mmol/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "Serum lipids (fasting) (including LDL-C, HDL-C and triglycerides)" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider for further investigation of hypertension and CVD: BP ≥ 140/90 mmHg.",
+      "structured": { "parameter": "BP", "operator": ">=", "value": "140/90", "unit": "mmHg" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "BP measurement" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Immediate/emergency referral: Systolic BP ≥ 180 and/or diastolic BP ≥ 110 mmHg is considered to be severe hypertension and is a medical emergency in patients with signs or symptoms of a hypertensive urgency (headache or dizziness).",
+      "structured": { "parameter": "systolic BP", "operator": ">=", "value": 180, "unit": "mmHg" },
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "BP measurement" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "Immediate/emergency referral: Systolic BP ≥ 180 and/or diastolic BP ≥ 110 mmHg is considered to be severe hypertension and is a medical emergency in patients with signs or symptoms of a hypertensive urgency (headache or dizziness).",
+      "structured": { "parameter": "diastolic BP", "operator": ">=", "value": 110, "unit": "mmHg" },
+      "action": "REFER_URGENT",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "BP measurement" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider for further investigation of thyroid function if: TSH > 4 mlU/L.",
+      "structured": { "parameter": "TSH", "operator": ">", "value": 4, "unit": "mlU/L" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 7, "section_heading": "Thyroid stimulating hormone (TSH)" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider for further investigation is recommended for all patients suspected of having sleep apnoea or another weight-related respiratory condition, for example: patients with at least one risk factor or comorbidity + multiple symptoms of sleep apnoea; a score of ≥ 3 on the STOP-Bang questionnaire.",
+      "structured": { "parameter": "STOP-Bang total score", "operator": ">=", "value": 3, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 12, "section_heading": "Obstructive Sleep Apnoea" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Referral to an appropriate healthcare provider or specialist weight loss service is recommended for people with: BMI > 40 kg/m².",
+      "structured": { "parameter": "BMI", "operator": ">", "value": 40, "unit": "kg/m²" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 12, "section_heading": "BMI and waist circumference" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider is recommended for patients suspected of having a mental health disorder or in psychological distress, for example: patients who score ≥20 on the K10.",
+      "structured": { "parameter": "K10 score", "operator": ">=", "value": 20, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 13, "section_heading": "Mental health/psychological distress" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider is recommended for patients with or suspected of having an eating disorder.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 13, "section_heading": "Eating disorders" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "Concurrent referral to an appropriate healthcare provider is recommended for patients with a history of familial hypercholesterolemia.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 13, "section_heading": "Dyslipidaemia" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "If Orlistat is unsuitable, refer to an appropriate healthcare provider for other pharmacological management.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 8, "section_heading": "Develop management plan" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "Refer the patient to an appropriate healthcare provider in the following situations: [the seven Refer when triggers - see red_flags RF-1 to RF-7]",
+      "Provide initial treatment and concurrently refer to an appropriate healthcare provider for collaborative management in the following situations: [the six treat-and-concurrently-refer triggers - see red_flags RF-8 to RF-13]",
+      "It is recommended that consenting patients are referred to a dietitian for specialised and individualised advice and a tailored eating plan.",
+      "It is recommended that consenting patients are referred to an appropriate healthcare provider for physical activity and psychosocial interventions, where required.",
+      "Pharmacists should also consider referral to, and collaboration with, other members of the multidisciplinary health team, depending on the patient's needs, location, and financial means.",
+      "Referral to an appropriate healthcare provider or specialist weight loss service is recommended for people with: BMI > 40 kg/m².",
+      "However, it is also recommended that the patient be comprehensively screened, either as part of the pilot services (if eligible) or by referral to their usual healthcare provider.",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+      "*Patients with mild to moderate asthma may be suitable for management as part of the WA Enhanced Access Community Pharmacy Pilot – refer to the respective clinical protocol for information and eligibility criteria if in a participating pharmacy."
+    ],
+    "urgent": [
+      "Concurrent referral to an appropriate healthcare provider is required for further investigation of diabetes when: HbA1c of ≥ 6.5 per cent (48 mmol/mol) [AND] fasting blood glucose ≥ 7.0 mmol/L.",
+      "Concurrent referral to an appropriate healthcare provider for further investigation of dyslipidaemia when: total cholesterol (TC): ≥ 5.5 mmol/L (or > 4.0 mmol/L for people on lipid modifying drug therapy); LDL-C: ≥ 2.0 mmol/L; HDL-C ≤ 1.0 mmol/L; Triglycerides: ≥ 2.0 mmol/L.",
+      "Concurrent referral to an appropriate healthcare provider for further investigation of hypertension and CVD: BP ≥ 140/90 mmHg.",
+      "Concurrent referral to an appropriate healthcare provider for further investigation of thyroid function if: TSH > 4 mlU/L.",
+      "Concurrent referral to an appropriate healthcare provider for further investigation is recommended for all patients suspected of having sleep apnoea or another weight-related respiratory condition, for example: patients with at least one risk factor or comorbidity + multiple symptoms of sleep apnoea; a score of ≥ 3 on the STOP-Bang questionnaire.",
+      "Concurrent referral to an appropriate healthcare provider is recommended for patients suspected of having a mental health disorder or in psychological distress, for example: patients who score ≥20 on the K10.",
+      "Concurrent referral to an appropriate healthcare provider is recommended for patients with or suspected of having an eating disorder.",
+      "Concurrent referral to an appropriate healthcare provider is recommended for patients with a history of familial hypercholesterolemia."
+    ],
+    "emergency": [
+      "Immediate/emergency referral: HbA1c > 10 per cent (86 mmol/mol) or any blood glucose level ≥ 20.0 mmol/L is considered to be severe hyperglycaemia and is a medical emergency in patients who are unwell (signs of ketosis, dehydration, vomiting, signs or symptoms of underlying infection, confusion and/or delirium/altered level of consciousness).",
+      "Immediate/emergency referral: Systolic BP ≥ 180 and/or diastolic BP ≥ 110 mmHg is considered to be severe hypertension and is a medical emergency in patients with signs or symptoms of a hypertensive urgency (headache or dizziness)."
+    ],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "Monthly (clinical review on a monthly basis is recommended)",
+      "what": "Clinical review on a monthly basis is recommended to monitor progress towards the weight loss target, efficacy of lifestyle modification, and to monitor for adverse effects.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At each clinical review appointment",
+      "what": "weight and waist circumference measurements, and BMI calculation; blood pressure monitoring; brief advice and reinforcement of lifestyle modification; review of adverse effects.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At commencement and regular reviews (recommended monthly)",
+      "what": "Measurement of BMI and waist circumference is required to inform the management plan and assist with patient education regarding risk factors for obesity comorbidities.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 12, "section_heading": "BMI and waist circumference" }
+    },
+    {
+      "when": "12 weeks after commencing Management Plan B",
+      "what": "Assess response: inadequate response to Management Plan B (< 5 per cent loss after 12 weeks) requires referral to an appropriate healthcare provider.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 4, "section_heading": "Refer when" }
+    },
+    {
+      "when": "Every 3 years for patients aged ≥ 40 years",
+      "what": "Risk of developing type 2 diabetes should be estimated every 3 years using the validated Australian type 2 Diabetes Risk Assessment Tool (AUSDRISK).",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 13, "section_heading": "Diabetes" }
+    },
+    {
+      "when": "Where indicated / for patients continuing therapy",
+      "what": "Pharmacists may also consider repeating laboratory testing (where indicated). For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Overweight.pdf", "page": 10, "section_heading": "Communicate agreed management plan" }
+  },
+  "references": [
+    "1. Markovic TP, Proietto J, Dixon JB, Rigas G, Deed G, Hamdorf JM, et al. The Australian Obesity Management Algorithm: A simple tool to guide the management of obesity in primary care. Obesity Research & Clinical Practice. 2022;16(5):353-63. [p.15]",
+    "2. Jordan M, Harmon, J,. Pharmacist interventions for obesity: improving treatment adherence and patient outcomes. Integr Pharm Res Pract. 2015;4:79-89. [p.15]",
+    "3. Qasim A, Turcotte M, de Souza RJ, Samaan MC, Champredon D, Dushoff J, et al. On the origin of obesity: identifying the biological, environmental and cultural drivers of genetic risk among human populations. Obes Rev. 2018;19(2):121-49. [p.15]",
+    "4. National Health and Medical Research Council. Clinical practice guidelines for the management of overweight and obesity in adults, adolescents and children in Australia (rescinded). Melbourne: Commonwealth of Australia; 2013. [p.15]",
+    "5. Australian Institute of Health Welfare. Inequalities in overweight and obesity and the social determinants of health. Canberra: AIHW; 2021. [p.15]",
+    "6. Australian Institute of Health and Welfare. Overweight and obesity. Canberra: Australian Institute of Health and Welfare; 2024. [p.15]",
+    "7. World Health Organisation (WHO). Overweight and Obesity. WHO; 2024 [cited 2025 April 2]. Available from: https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight. [p.15]",
+    "8. Centers for Disease Control and Prevention. Body Mass Index (BMI). Bethesda, U.S.: U.S. Department of Health and Human Services; 2024 [cited 2025 April 2]. Available from: https://www.cdc.gov/bmi/index.html. [p.15]",
+    "9. Therapeutic Guidelines: Cardiovascular. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Cardiovascular&amp;etgAccess=true. [p.15]",
+    "10. Chisholm-Burns M, Kim Lee, J, Spivey, CA, Slack, M, Herrier, RN, Hall-Lipsy, E, et.al. US pharmacists’ effect as team members on patient care: systematic review and meta-analyses. 2010;48(10):923-33. [p.15]",
+    "11. Foster D, Sanchez-Collins, S, Cheskin, LJ,. Multidisciplinary Team-Based Obesity Treatment in Patients With Diabetes: Current Practices and State of the Science. Diabetes Spectr. 2017;4(30):244-9. [p.15]",
+    "12. Grima M, Dixon J. Obesity: Recommendations for management in general practice and beyond. Australian Family Physician. 2013;42(8):532-41. [p.15]",
+    "13. Tchang BG, Saunders KH, Igel LI. Best Practices in the Management of Overweight and Obesity. Med Clin North Am. 2021;105(1):149-74. [p.15]",
+    "14. The Royal Australian College of General Practitioners (RACGP). Management of type 2 diabetes: A handbook for general practice. East Melbourne: RACGP; 2024 [cited 2025 April 2]. Available from: www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/management-of-type-2-diabetes/introduction. [p.15]",
+    "15. Therapeutic Guidelines: Diabetes (Management of first presentation with hyperglycaemia). Melbourne: Therapeutic Guidelines Limited; 2022 [cited 2025 April 2] Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Diabetes&topicfile=management-of-first-presentation-with-hyperglycaemia&guidelinename=Diabetes&sectionId=toc_d1e62#toc_d1e62. [p.15]",
+    "16. The Royal Australian College of General Practitioners (RACGP). Guidelines for preventive activities in general practice. East Melbourne: RACGP; 2024. Available from: http://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/preventive-activities-in-general-practice/about-the-red-book [p.15]",
+    "17. CSIRO. Cholesterol facts. CSIRO; 2022 [cited 2025 April 2]. Available from: https://www.csiro.au/en/research/health-medical/nutrition/cholesterol-facts. [p.15]",
+    "18. National Aboriginal Community Controlled Health Organisation and The Royal Australian College of General Practitioners. National guide to preventive healthcare for Aboriginal and Torres Strait Islander people: Recommendations. 4th edition. East Melbourne, Vic: RACGP, 2024 [p.15]",
+    "19 National Heart Foundation of Australia. Guideline for the diagnosis and management of hypertension in adults. Melbourne: National Heart Foundation of Australia; 2016. [p.15]",
+    "20. The Royal College of Pathologists of Australasia - RCPA manual. Thyroid Stimulating Hormone; 2024 [cited 2024 April 2]. Available from: https://www.rcpa.edu.au/Manuals/RCPA-Manual/Pathology-Tests/T/Thyroid-stimulating-hormone [p.16]",
+    "21. Therapeutic Guidelines: Bone and Metabolism (Thyroid disorders: overview). Melbourne: Therapeutic Guidelines Limited; 2019 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Bone%20and%20Metabolism&topicfile=thyroid-disorders-overview [p.16]",
+    "22. The Royal College of Pathologists of Australasia – Pathology Tests Explained. Thyroid Function Tests; 2025 [cited 2025 April 2]. Available from: https://pathologytestsexplained.org.au/ptests.php?q=Thyroid+Function+Tests [p.16]",
+    "23. Australian Medicines Handbook: Orlistat. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 2]. Available from: https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/other-gastrointestinal-drugs/orlistat?menu=hints. [p.16]",
+    "24. The Royal Australian College of General Practitioners (RACGP). Smoking, nutrition, alcohol, physical activity (SNAP): A population health guide for behavioural risk factors in general practice. East Melbourne: RACGP; 2015 [cited2025 April 2]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/snap. [p.16]",
+    "25. The Royal Australian College of General Practitioners (RACGP). Handbook of Non-Drug Interventions (HANDI). East Melbourne: RACGP; 2020 [cited2025 April 2]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/handi. [p.16]",
+    "26. Perrault L. Obesity in adults: Drug therapy. UpToDate. 2025. Available from: https://www.uptodate.com/contents/obesity-in-adults-drug-therapy?search=obesity%20in%20adults&source=search_result&selectedTitle=3~150&usage_type=default&display_rank=3 [p.16]",
+    "27. National Health and Medical Research Council: Australian Research Council and Universities Australia. Australian Guidelines to Reduce Health Risks from Drinking Alcohol. Canberra: Commonwealth of Australia; 2020. [p.16]",
+    "28. Commonwealth of Australia: Department of Health. Physical activity and exercise guidelines for all Australians Canberra: Commonwealth of Australia; 2021 [cited 2025 April 2]. Available from: https://www.health.gov.au/health-topics/physical-activity-and-exercise/physical-activity-and-exercise-guidelines-for-all-australians. [p.16]",
+    "29. National Health and Medical Research Council. Australian Dietary Guidelines. Canberra: Commonwealth of Australia; 2013. Available from: https://www.nhmrc.gov.au/sites/default/files/documents/australian-dietary-guidelines-2013.pdf [p.16]",
+    "30. Hall K, Kahan S. Maintenance of lost weight and long-term management of obesity. Med Clin North Am 2018;102(1):183–97. [p.16]",
+    "31. Sumithran P, Proietto J. The defence of body weight: a physiological basis for weight regain after weight loss. Clin Sci (Lond) 2013;124(4):231–41. [p.16]",
+    "32. Perdomo C, Cohen R, Sumithran P, et al. Contemporary medical, device, and surgical therapies for obesity in adults. Lancet 2023;S0140-6736(22)02403-5. [p.16]",
+    "33. Toronto Western Hospital University Health Network. The Official STOP-Bang Questionnaire [Webpage]. Toronto: University of Toronto; 2012 [cited 2025 April 2]. Available from: http://www.stopbang.ca/osa/screening.php. [p.16]",
+    "34. Therapeutic Guidelines: Respiratory (Sleep-disordered breathing). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Respiratory&topicfile=asthma-introduction-and-diagnosis&guidelinename=auto&sectionId=sleep_disordered_breathing#sleep_disordered_breathing. [p.16]",
+    "35. Commonwealth of Australia; Department of Health. Body mass index (BMI) and waist measurement Canberra: Commonwealth of Australia; 2021 [cited 2025 April 2]. Available from: https://www.health.gov.au/topics/overweight-and-obesity/bmi-and-waist. [p.16]",
+    "36. Andrews G, Slade T. Interpreting scores on the Kessler Psychological Distress Scale (K10). Aust N Z J Public Health. 2001;25(6):494-7. [p.16]",
+    "37. Kessler RC, Andrews G, Colpe LJ, Hiripi E, Mroczek DK, Normand SLT, et al. Short screening scales to monitor population prevalences and trends in non-specific psychological distress. Psychological Medicine. 2002;32(6):959-76. [p.17]",
+    "38. Transport Accident Commission - TAC. Kessler's Psychological Distress Scale (K10) [cited 2025 April 2]. Available from: https://www.tac.vic.gov.au/files-to-move/media/upload/k10_english.pdf [p.17]",
+    "39. Inside Out Institute for Eating Disorders. The SCOFF Questionnaire [cited 2025 April 2]. Available from: https://insideoutinstitute.org.au/resource-library/the-scoff-questionnaire [p.17]",
+    "40. Inside Out Institute for Eating Disorders. InsideOut Screener [cited 2025 April 2]. Available from: https://insideoutinstitute.org.au/screener/ [p.17]",
+    "41. Dermnet. Xanthoma; 2020 [cited 2025 April 2]. Available from: https://dermnetnz.org/topics/xanthoma. [p.17]",
+    "42. Therapeutic Guidelines: Cardiovascular (Lipid modification). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Cardiovascular&topicfile=c_CVG_Lipid-modificationtopic_1&guidelinename=auto&sectionId=c_CVG_Lipid-modificationtopic_1#c_CVG_Lipid-modificationtopic_1 [p.17]"
+  ],
+  "open_questions": [
+    {
+      "topic": "AND/OR ambiguity in the diabetes referral criteria (Table 1, two-column layout)",
+      "observed": "Page 6 Table 1 right column reads 'Concurrent referral to an appropriate healthcare provider is required for further investigation of diabetes when: • HbA1c of ≥ 6.5 per cent (48 mmol/mol)' and '• fasting blood glucose ≥ 7.0 mmol/L', with an 'AND' printed on the adjacent line that may belong to either column (the left column also uses 'AND' to join its three testing requirements).",
+      "why_unclear": "Readings differ materially: AND means both abnormal values are required, OR means either triggers referral. The extracted text cannot disambiguate the columns; confidence is 'unclear' on RF-14 and both readings are recorded rather than reconciled (spec rule 2).",
+      "source_page": 6
+    },
+    {
+      "topic": "No connector printed between the dyslipidaemia referral values",
+      "observed": "Page 7 lists 'total cholesterol (TC): ≥ 5.5 mmol/L (or > 4.0 mmol/L for people on lipid modifying drug therapy)', 'LDL-C: ≥ 2.0 mmol/L', 'HDL-C ≤ 1.0 mmol/L', 'Triglycerides: ≥ 2.0 mmol/L' as bullets under 'Concurrent referral ... for further investigation of dyslipidaemia when:' with no AND/OR word between them.",
+      "why_unclear": "RF-17 to RF-20 are captured as four separate triggers (the natural reading of parallel bullets), but the document does not print the combinatorics; recorded here per spec rule 4.",
+      "source_page": 7
+    },
+    {
+      "topic": "Orlistat BMI thresholds differ between two prints on the same page",
+      "observed": "Page 8: 'Orlistat is indicated for patients with BMI ≥ 27 kg/m² and other cardiovascular risk factors.' and 'The Australian Obesity Management Algorithm provides guidance on the use of pharmacotherapy for patients with BMI ≥ 30 kg/m²'; but the prescribing instruction reads 'BMI > 27 kg/m² (if other cardiovascular risk factors are present) or BMI > 30 kg/m² (no other CVD risk factors or comorbidities)'.",
+      "why_unclear": "≥ 27 vs > 27 and ≥ 30 vs > 30 are different at the boundary (a patient at exactly BMI 27 or 30 is in or out depending on which print governs). Both readings are recorded in TX-1 notes and PW-1-S5; not silently reconciled (spec rule 2).",
+      "source_page": 8
+    },
+    {
+      "topic": "No product-level dose, strength, frequency or duration printed for Orlistat",
+      "observed": "The only pharmacotherapy named is Orlistat, prescribed 'in accordance with the Australian Medicines Handbook: Orlistat'. No strength, dose, dosing frequency, form, route or treatment duration appears in the 18 pages.",
+      "why_unclear": "TX-1 strength/dose/frequency/duration/form/route are blank; nothing can be transcribed without inventing it. Dosing must come from the AMH.",
+      "source_page": 8
+    },
+    {
+      "topic": "'Treat and concurrently refer' conditions are not exclusions from treatment",
+      "observed": "Page 4 prints two lists: 'Refer when' (7 triggers) and 'Treat and concurrently refer' (6 triggers introduced by 'Provide initial treatment and concurrently refer to an appropriate healthcare provider for collaborative management in the following situations:').",
+      "why_unclear": "The 6 treat-and-refer conditions are captured as red_flags (RF-8 to RF-13) with action REFER rather than as eligibility exclusions, because the document says to treat them while referring; only the 'Refer when' list is used for eligibility.exclusion. This split is an interpretation and is recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Asterisked footnote scope is ambiguous",
+      "observed": "Two Refer when/treat-and-refer items carry an asterisk ('comorbidity not being managed by an appropriate healthcare provider*', 'findings indicate further investigation of a possible comorbidity is required*', 'asthma*'), and the single footnote reads '*Patients with mild to moderate asthma may be suitable for management as part of the WA Enhanced Access Community Pharmacy Pilot – refer to the respective clinical protocol for information and eligibility criteria if in a participating pharmacy.'",
+      "why_unclear": "It is not clear whether the asterisk marks only the word 'asthma' or qualifies each asterisked line; EXE-2 records the footnote as printed without applying it to EXC-4/RF-13.",
+      "source_page": 4
+    },
+    {
+      "topic": "Referral content spans pages 4 to 13",
+      "observed": "Referral triggers/destinations are printed on p.4 (Refer when; Treat and concurrently refer), p.6-7 (Table 1), p.8 (dietitian, physical activity/psychosocial, Orlistat unsuitable, multidisciplinary team), p.10 (serious adverse effects) and p.12-13 (Appendix 1 screening referral requirements).",
+      "why_unclear": "Spec rule for the referral block: shared provenance uses the first page (page 4); the range 4-13 is recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "No upper age bound is printed for eligibility",
+      "observed": "'Service restricted to patients aged 18 years or over' (p.1) sets the floor only; separately, 'patients aged > 65 years' are treat-and-concurrently-refer (p.4) and 'VLEDs are contraindicated in patients aged > 65 years' (p.9).",
+      "why_unclear": "age_bounds.max_years is null because no maximum eligibility age is printed; the >65 referral and VLED contraindication are captured in RF-12 and TX-2 notes rather than as an upper bound.",
+      "source_page": 1
+    },
+    {
+      "topic": "BMI ≥ 25 kg/m² is the general definition, not a printed eligibility cut-off",
+      "observed": "Page 3: 'Excess weight (overweight and obesity), generally defined in adults as a body mass index (BMI) ≥ 25 kg/m²'; pharmacotherapy thresholds are printed separately (≥ 27 / ≥ 30 / > 27 / > 30) and BMI > 40 kg/m² is a referral trigger.",
+      "why_unclear": "INC-5 records the printed definition as the condition being managed; the document never states a single numeric eligibility BMI for the service, so no hard BMI inclusion gate exists (only the >40 exclusion).",
+      "source_page": 3
+    },
+    {
+      "topic": "No version number or date printed",
+      "observed": "No version, date, document ID or approving officer appears; page 18 shows footer codes \"62'GUA\" and \"180510-DEC\", 'Produced by Clinical Excellence Division' and '© Department of Health 2026'.",
+      "why_unclear": "instrument_version and effective_date cannot be populated beyond what is printed.",
+      "source_page": 18
+    },
+    {
+      "topic": "No notifiable condition or statutory notification requirement printed",
+      "observed": "The guideline requires sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent' and communication with other health practitioners, but mentions no notifiable condition, AIR notification or compulsory GP notification.",
+      "why_unclear": "notifiable.required is null because the document is silent.",
+      "source_page": 10
+    },
+    {
+      "topic": "Source and adaptation acknowledged: originally Queensland Health material",
+      "observed": "Page 18: 'This document is based on clinical guidelines/protocols originally developed by Queensland Health for the Queensland Community Pharmacy Pilots. Queensland Health is acknowledged as the source of the original material.'",
+      "why_unclear": "Recorded for provenance of the instrument; no version of the Queensland originals is cited, so the WA document's own version cannot be derived from it.",
+      "source_page": 18
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm each pharmacist's EACPP approval and authorisation to prescribe under the Medicines and Poisons Regulations 2016 (WA), since 'This document alone does not provide an authorisation for a pharmacist to prescribe'.",
+      "source_page": 1,
+      "reason": "Eligibility to use the guideline is conditional on departmental approval and authorisation that this document cannot evidence."
+    },
+    {
+      "item": "Confirm the controlled version/date of this clinical practice guideline with the Department of Health (no version or date is printed; only footer codes \"62'GUA\" and \"180510-DEC\" and © Department of Health 2026).",
+      "source_page": 18,
+      "reason": "A clinical practice guideline used for funded prescribing must be version-controlled and traceable to an approval date."
+    },
+    {
+      "item": "Confirm which sections of the current online version of the Therapeutic Guidelines are the 'specified sections' that pharmacists must prescribe medicines according to (page 8) - the guideline does not enumerate them.",
+      "source_page": 8,
+      "reason": "This is a mandatory prescribing condition (PW-1-S5) but without the section list it cannot be evaluated as a hard check before go-live."
+    },
+    {
+      "item": "Obtain product-level Orlistat strength, dose, dosing frequency, form, route, duration and quantity-to-supply from the Australian Medicines Handbook: Orlistat, plus the liver function monitoring interval ('Liver function should be monitored' with no interval printed).",
+      "source_page": 8,
+      "reason": "TX-1 has blank strength/dose/frequency fields; a prescribing support module cannot issue supply instructions from the drug name alone."
+    },
+    {
+      "item": "Resolve the Orlistat BMI boundary discrepancy: 'BMI ≥ 27 kg/m² and other cardiovascular risk factors' / 'BMI ≥ 30 kg/m²' versus the prescribing instruction 'BMI > 27 kg/m² ... or BMI > 30 kg/m²'.",
+      "source_page": 8,
+      "reason": "A patient at exactly BMI 27.0 or 30.0 is eligible under one print and ineligible under the other; both readings are recorded and must be settled before the rule is enforced."
+    },
+    {
+      "item": "Resolve the AND/OR connector for the diabetes referral trigger: HbA1c of ≥ 6.5 per cent (48 mmol/mol) [AND or OR] fasting blood glucose ≥ 7.0 mmol/L (two-column Table 1).",
+      "source_page": 6,
+      "reason": "The connector changes which patients are referred for further investigation of diabetes; RF-14 is recorded with confidence 'unclear' and both readings."
+    },
+    {
+      "item": "Confirm whether the dyslipidaemia referral values (TC ≥ 5.5, LDL-C ≥ 2.0, HDL-C ≤ 1.0, triglycerides ≥ 2.0 mmol/L) are alternative (OR) triggers - no connector is printed.",
+      "source_page": 7,
+      "reason": "Four parallel bullets without a connector cannot be encoded as a deterministic check without confirming the intended combinatorics."
+    },
+    {
+      "item": "Confirm local referral pathways and capacity for: dietitian referral ('It is recommended that consenting patients are referred to a dietitian'), physical activity and psychosocial intervention referral, specialist weight loss service for BMI > 40 kg/m², and concurrent referrals for investigations.",
+      "source_page": 8,
+      "reason": "The guideline recommends these referrals but leaves destination, waiting times and who arranges them to local arrangements; 'consenting patients' also implies a consent step."
+    },
+    {
+      "item": "Confirm the NB2 rural/remote rule: 'Pharmacists should evaluate the risks associated with prescribing specific treatments for patients who lack access to reliable multidisciplinary support, particularly in rural and remote areas.'",
+      "source_page": 9,
+      "reason": "This is an unevaluated judgement instruction with no printed threshold; it may amount to a soft exclusion for remote patients and must be decided as local policy."
+    },
+    {
+      "item": "Confirm which validated screening tools are adopted locally and who owns them: STOP-BANG, Kessler Psychological Distress Scale (K10), SCOFF Questionnaire or InsideOut Screener, AUSDRISK, plus BMI/waist measurement.",
+      "source_page": 13,
+      "reason": "Appendix 1 says pharmacists 'may use' these tools; the choice, documentation and referral cut-offs (≥3, ≥20, ≥12) are left to the service."
+    },
+    {
+      "item": "Confirm the asthma cross-protocol dependency: '*Patients with mild to moderate asthma may be suitable for management as part of the WA Enhanced Access Community Pharmacy Pilot – refer to the respective clinical protocol for information and eligibility criteria if in a participating pharmacy.'",
+      "source_page": 4,
+      "reason": "Eligibility for an asterisked comorbidity depends on a separate protocol and pharmacy participation that this document does not define."
+    },
+    {
+      "item": "Confirm the supply/quantity rule against the review cadence: quantity (including repeats) must align with the expected duration of therapy and ensure sufficient supply until the patient's next review, with clinical review recommended monthly.",
+      "source_page": 10,
+      "reason": "Duration-of-therapy vs quantity-supplied vs a monthly review interval is left to the pharmacist and local supply policy."
+    }
+  ]
+}

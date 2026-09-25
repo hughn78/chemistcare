@@ -46,6 +46,7 @@ import {
 } from '@/lib/conditionTemplates/uti';
 import type { TreatmentOptionDefinition } from '@/lib/conditionTemplates/types';
 import { buildProtocolStamp, formatProtocolFooter } from '@/lib/protocolVersion';
+import { ProtocolPanel } from '@/components/protocols/ProtocolPanel';
 import { useConsultAudit } from '@/hooks/useConsultAudit';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -821,6 +822,13 @@ const UtiConsultation = () => {
 
           {/* ── Right rail ── */}
           <aside className="border-l bg-card overflow-auto p-4 space-y-4 hidden lg:block">
+            {/* Protocol panel — jurisdiction protocol decision support from the OCR corpus */}
+            <ProtocolPanel
+              conditionSlug="uncomplicated-uti"
+              formData={data as unknown as Record<string, unknown>}
+              compact
+            />
+
             {/* Safety score */}
             <div>
               <h3 className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">Safety Score</h3>

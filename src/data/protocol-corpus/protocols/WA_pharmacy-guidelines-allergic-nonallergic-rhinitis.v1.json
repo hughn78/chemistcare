@@ -1,0 +1,419 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf",
+    "pdf_sha256": "7ca9299f1e6ce5d1ddcb109e2f22fb0132b4c4aeff894d511783e01960ae2779",
+    "page_count": 10,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Allergic and non-allergic rhinitis: Clinical practice guideline",
+    "instrument_version": "No version number printed; footer codes \"62'GUA\" and \"180510-DEC\" (p.10); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division, p.10)",
+    "legal_basis": "Authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.'",
+    "supervision_model": "Pharmacists approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA); 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority' and retain responsibility for clinical assessment and decisions appropriate to the individual (document's own terminology; not labelled collaborative/autonomous).",
+    "scope_summary": "Clinical practice guideline for pharmacist management of allergic and non-allergic rhinitis under the EACPP (WA): service obligations and consent, patient history, examination of nose/throat/eyes/ears (plus neck palpation, vital signs and chest examination where indicated), differentiation of rhinitis type (Table 1), management plans for allergic rhinitis (ASCIA treatment plan) and non-allergic rhinitis, confirm management, communicate plan, clinical review, plus 'Refer when' and 'Treat and concurrently refer' referral triggers. No minimum age is printed on the cover (unrelated to the other EACPP guidelines)."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": {"all_of": ["INC-2"], "any_of": ["INC-3", "INC-4"]},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": {"all_of": ["INC-1"], "any_of": ["INC-3", "INC-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Table 1 - allergic rhinitis: Symptoms after exposure to animals, pollen, dust, or other environmental factors/allergens: • sneezing • nasal congestion • clear rhinorrhoea • upper airway cough syndrome (post-nasal drip) • mucosal itching of the nose, eyes, ears, and palate.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2"], "any_of": ["INC-4"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 5, "section_heading": "Table 1: Symptoms and clinical signs of rhinitis"}
+      },
+      {
+        "id": "INC-4",
+        "text": "Table 1 - non-allergic rhinitis: Symptoms without an identifiable infectious or allergic cause: • nasal blockage and/or congestion • clear rhinorrhoea • post-nasal drip.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2"], "any_of": ["INC-3"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 5, "section_heading": "Table 1: Symptoms and clinical signs of rhinitis"}
+      }
+    ],
+    "exclusion": [
+      {"id": "EXC-1", "text": "unclear diagnosis", "criteria_group": {"all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-2", "text": "systemic symptoms, including fever, or generally unwell", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-3", "text": "signs or symptoms of infection or infectious rhinosinusitis (e.g. facial pain, fever, purulent nasal discharge)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4", "EXC-5", "EXC-6", "EXC-7"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-4", "text": "nasal polyps or other structural abnormalities", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-5", "EXC-6", "EXC-7"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-5", "text": "signs or symptoms of undiagnosed or uncontrolled asthma", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-6", "EXC-7"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-6", "text": "asthma in patients under the age of 16 years (does not preclude a patient from accessing usual pharmacy care)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-7"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-7", "text": "inadequate response to optimal treatment.", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}}
+    ],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 1, "section_heading": "Contents"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-2"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 1, "section_heading": "Contents"}
+      },
+      {
+        "id": "EXE-2",
+        "text": "asthma in patients under the age of 16 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1"]},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Allergic and non-allergic rhinitis management pathway (Enhanced Access Community Pharmacy Pilot)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service, and patient informed consent (including consent for communication with other health practitioners if relevant).",
+          "gates": [
+            {"criterion": "Patient is eligible and suitable for management within the scope of the service (no 'Refer when' situation present)", "on_fail": "REFER"},
+            {"criterion": "Patient informed consent obtained (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 2, "section_heading": "Guideline overview"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines - age; pregnancy and lactation status (if applicable); onset, nature, duration, frequency, severity and pattern of respiratory symptoms; other signs and symptoms suggestive of infection including fever, purulent nasal discharge, or facial pain; respiratory virus testing (PCR or RAT) and results; presence of asthma symptoms; co-existing and underlying medical conditions including asthma, nasal polyps, or other allergic diseases (e.g. atopic dermatitis); family history of nasal polyps or allergic disease (including rhinitis); triggering, aggravating and relieving factors (e.g. occupational exposure to cleaning chemicals, foods, pollen, cigarette smoke); emotional and social impacts of the condition; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements, and over-the-counter medicines); pharmacological and non-pharmacological strategies tried to treat current symptoms and response, including use of nasal decongestants; drug allergies/adverse drug reactions; smoking status.",
+          "gates": [
+            {"criterion": "Diagnosis is clear (no 'unclear diagnosis' trigger)", "on_fail": "REFER"},
+            {"criterion": "No signs or symptoms suggestive of infection including fever, purulent nasal discharge, or facial pain", "on_fail": "REFER"},
+            {"criterion": "No nasal polyps or other structural abnormalities on history/examination", "on_fail": "REFER"},
+            {"criterion": "No signs or symptoms of undiagnosed or uncontrolled asthma", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 4, "section_heading": "Patient history"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Examination: physical examination of nose, throat, eyes, and ears is generally required; where appropriate, palpate the neck for lymphadenopathy (more relevant when throat symptoms present); where appropriate, conduct an assessment of vital signs. Outward signs of rhinitis upon examination may include: enlarged/swelled, pale, boggy nasal mucosa with thin secretions; nasal polyps; dark undereye area due to venous congestion (particularly in children); cobblestone throat due to irritation of post-nasal drip; mouth breathing. Patients with symptoms of asthma or lower respiratory disease should have a chest examination in accordance with the clinical protocol for the Enhanced Access Community Pharmacy Pilot Improved Asthma Symptom Control Program.",
+          "gates": [
+            {"criterion": "Physical examination of nose, throat, eyes, and ears performed", "on_fail": "REFER"},
+            {"criterion": "Chest examination performed in accordance with the EACPP Improved Asthma Symptom Control Program clinical protocol where the patient has symptoms of asthma or lower respiratory disease", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 5, "section_heading": "Examination"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Differentiate the type of rhinitis using Table 1 (Symptoms and clinical signs of rhinitis). Allergic rhinitis: symptoms after exposure to animals, pollen, dust, or other environmental factors/allergens - sneezing, nasal congestion, clear rhinorrhoea, upper airway cough syndrome (post-nasal drip), mucosal itching of the nose, eyes, ears, and palate; non-specific symptoms - fuzzy head/brain fog, tiredness and daytime sleepiness, constant colds; allergic conjunctivitis frequently co-occurs (eye redness, watering, and itching); in children, additional symptoms may include sniffing, blinking and eye rubbing, speech problems, snoring, mouth breathing, and dark undereye circles. Non-allergic rhinitis: symptoms without an identifiable infectious or allergic cause - nasal blockage and/or congestion, clear rhinorrhoea, post-nasal drip; may or may not be present - sneezing, itchy nose, ears, or throat. Reported symptom improvement with second generation antihistamines is strongly suggestive of allergic rhinitis, as is a previous response to intranasal corticosteroids. Rhinitis can be classified as allergic, non-allergic (vasomotor), infectious, drug-induced and occupational; accurate differentiation of the type of rhinitis is important to inform effective treatment.",
+          "gates": [
+            {"criterion": "Type of rhinitis differentiated (allergic, non-allergic, infectious, drug-induced or occupational) to inform effective treatment", "on_fail": "REFER"},
+            {"criterion": "Signs or symptoms of infection or infectious rhinosinusitis absent (e.g. facial pain, fever, purulent nasal discharge)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 5, "section_heading": "Table 1: Symptoms and clinical signs of rhinitis"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Refer when: refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations (RF-1 to RF-7): unclear diagnosis; systemic symptoms, including fever, or generally unwell; signs or symptoms of infection or infectious rhinosinusitis (e.g. facial pain, fever, purulent nasal discharge); nasal polyps or other structural abnormalities; signs or symptoms of undiagnosed or uncontrolled asthma; asthma in patients under the age of 16 years; inadequate response to optimal treatment. Rhinitis and asthma commonly co-exist (sometimes referred to as United Airway Disease); all asthma symptoms should be investigated and/or the patient provided with a referral to an appropriate healthcare provider.",
+          "gates": [
+            {"criterion": "Any 'Refer when' situation present", "on_fail": "SEE_PW-1-S6"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Develop management plan. Allergic rhinitis: developing a treatment plan based on the Australasian Society of Clinical Immunology and Allergy: Allergic Rhinitis Treatment Plan; non-pharmacological measures - education regarding allergen avoidance and minimising exposure to known/clinically obvious allergens and irritants as per the Australian Society of Clinical Immunology and Allergy: Allergic Rhinitis Clinical Update 2024, nasal irrigation with saline to soothe nasal passages, and clear mucous and irritants; advice to patients that oral and intranasal decongestants have no role in the management of allergic rhinitis (use of intranasal decongestants for more than 3 to 5 days causes rebound congestion (rhinitis medicamentosa); prolonged use of oral decongestants can increase blood pressure and the risk of arrythmias in people with cardiovascular disease); pharmacotherapy for allergic rhinitis - a medicine mentioned in Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis). Non-allergic rhinitis: non-pharmacological measures - education regarding avoidance and minimisation of exposure to known/clinically obvious irritants where possible, nasal irrigation with saline to soothe dry nasal passages, and clear out mucous; pharmacotherapy - a medicine mentioned in Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Nonallergic rhinitis); intranasal corticosteroids are the mainstay of treatment for non-allergic rhinitis. NB1: anti-inflammatory eye drops (e.g. ketorolac and corticosteroids) are for use under specialist advice only and are not authorised for use by pharmacists and are not indicated for the initial management of allergic conjunctivitis; vasoconstrictor eye drops (e.g. naphazoline and tetryzoline) are also not indicated for allergic conjunctivitis. NB2: the use of montelukast in the treatment of allergic rhinitis has limited evidence and potential for serious neuropsychiatric side effects and is not authorised for use by pharmacists.",
+          "gates": [
+            {"criterion": "Patient eligible for management in the service and no 'Refer when' situation present (see PW-1-S5)", "on_fail": "REFER"},
+            {"criterion": "Medicines not used that can cause or exacerbate rhinitis, or where the medicine is authorised for use by pharmacists (montelukast and anti-inflammatory eye drops are not authorised)", "on_fail": "SEE_PW-1-S7"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "Develop management plan"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "Treat (if clinically appropriate) and concurrently refer: provide initial treatment and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: using a medicine that can cause or exacerbate rhinitis; quality of life is significantly affected.",
+          "gates": [
+            {"criterion": "Treat-and-concurrently-refer situation present (using a medicine that can cause or exacerbate rhinitis; quality of life is significantly affected)", "on_fail": "SEE_PW-1-S8"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic.",
+          "gates": [
+            {"criterion": "Contraindications and precautions, drug interactions and pregnancy and lactation confirmed appropriate", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "Confirm management is appropriate"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) regarding individual product and medicine use - dosing and correct intranasal spray technique; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for follow-up. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. General advice: at the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if the condition does not improve within 4 weeks of starting treatment; the patient's condition worsens, including developing systemic signs and symptoms; the patient develops new signs or symptoms (e.g. infection); the patient develops new or worsening asthma symptoms; quality of life is significantly affected; adverse effects of treatment cannot be managed in the pharmacy setting.",
+          "gates": [
+            {"criterion": "Patient (and/or parent/caregiver) counselled on individual product and medicine use including dosing and correct intranasal spray technique, and on when to seek further care", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "Communicate agreed management plan"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines. Patients should return for a follow-up consultation 4 weeks after initiation of intranasal corticosteroids to assess for: response to treatment and if changes to the treatment plan are required (continue, modify, stop and/or refer); intranasal spray administration technique. If the patient's symptoms are mild and adequately managed with an oral or intranasal antihistamine after trialling a new treatment for 4 weeks, clinical review will generally not be required, and the patient may be advised to remain on the minimum effective dose. For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. Patients who require routine treatment over periods of > 12 months to feel well, may benefit from referral to a medical practitioner for consideration of immunotherapy. Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review; the total quantity prescribed should be dependent on clinical need (e.g. seasonal vs perennial) and should not exceed 12 months' supply (including repeats).",
+          "gates": [
+            {"criterion": "Follow-up scheduled: 4 weeks after initiation of intranasal corticosteroids, or after a 4-week trial of a new treatment (review generally not required if symptoms mild and adequately managed)", "on_fail": "unclear"},
+            {"criterion": "Total quantity prescribed does not exceed 12 months' supply (including repeats)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "intranasal corticosteroids",
+      "form": "nasal spray (form not printed)",
+      "strength": "",
+      "dose": "",
+      "route": "intranasal (route implied by 'intranasal'; not printed as a route)",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "quantity should not exceed 12 months' supply (including repeats)",
+      "notes": "'Intranasal corticosteroids are the mainstay of treatment for non-allergic rhinitis.' Also: pharmacotherapy for non-allergic rhinitis - a medicine mentioned in Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Nonallergic rhinitis); 'Reported symptom improvement with second generation antihistamines is strongly suggestive of allergic rhinitis, as is a previous response to intranasal corticosteroids' (Table 1, page 5). Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. Follow-up: patients should return for a follow-up consultation 4 weeks after initiation of intranasal corticosteroids (response to treatment and intranasal spray administration technique). Counselling includes dosing and correct intranasal spray technique. No specific strength, dose, frequency or duration is printed in this document.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "Non-allergic rhinitis"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "pharmacotherapy for allergic rhinitis (medicines mentioned in Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis))",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "quantity should not exceed 12 months' supply (including repeats)",
+      "notes": "'pharmacotherapy: - a medicine mentioned in Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis)'. No specific agent, form, strength, dose, route, frequency or duration is printed in this document; the specific agent must be selected from the current online Therapeutic Guidelines. Management of allergic rhinitis also involves developing a treatment plan based on the Australasian Society of Clinical Immunology and Allergy: Allergic Rhinitis Treatment Plan. Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "Allergic rhinitis"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "oral and intranasal decongestants",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral and intranasal (as printed in the drug name)",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NO ROLE IN ALLERGIC RHINITIS: 'advice to patients that oral and intranasal decongestants have no role in the management of allergic rhinitis. Use of intranasal decongestants for more than 3 to 5 days causes rebound congestion (rhinitis medicamentosa). Prolonged use of oral decongestants can increase blood pressure and the risk of arrythmias in people with cardiovascular disease'. Recorded for counselling/caution purposes; not a recommended treatment in this protocol.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "Allergic rhinitis"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "anti-inflammatory eye drops (e.g. ketorolac and corticosteroids)",
+      "form": "eye drops",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB1: 'Anti-inflammatory eye drops (e.g. ketorolac and corticosteroids) are mentioned within the Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis) for use under specialist advice only and are not authorised for use by pharmacists; these are not indicated for the initial management of allergic conjunctivitis.' NOT AUTHORISED FOR PHARMACIST USE.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "NB1: Anti-inflammatory eye drops"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "vasoconstrictor eye drops (e.g. naphazoline and tetryzoline)",
+      "form": "eye drops",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB1: 'Vasoconstrictor eye drops (e.g. naphazoline and tetryzoline) are also not indicated for allergic conjunctivitis.' NOT INDICATED for allergic conjunctivitis.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "NB1: Anti-inflammatory eye drops"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "montelukast",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NB2: 'The use of montelukast in the treatment of allergic rhinitis has limited evidence and potential for serious neuropsychiatric side effects and is not authorised for use by pharmacists. For further information, refer to the Australian Therapeutic Goods Administration (TGA) Safety Alert.' NOT AUTHORISED FOR PHARMACIST USE.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 6, "section_heading": "NB2: The use of montelukast"}
+    },
+    {
+      "id": "TX-7",
+      "drug": "oral or intranasal antihistamine",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral or intranasal (as printed in the drug name)",
+      "frequency": "",
+      "duration": "trialling a new treatment for 4 weeks",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "'If the patient's symptoms are mild and adequately managed with an oral or intranasal antihistamine after trialling a new treatment for 4 weeks, clinical review will generally not be required, and the patient may be advised to remain on the minimum effective dose.' Also: 'Reported symptom improvement with second generation antihistamines is strongly suggestive of allergic rhinitis' (page 5). The document does not designate a first-line antihistamine; confirm the agent and dose against the current Therapeutic Guidelines: Respiratory. Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}
+    }
+  ],
+  "red_flags": [
+    {"id": "RF-1", "trigger_text": "unclear diagnosis", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-2", "trigger_text": "systemic symptoms, including fever, or generally unwell", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-3", "trigger_text": "signs or symptoms of infection or infectious rhinosinusitis (e.g. facial pain, fever, purulent nasal discharge)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-4", "trigger_text": "nasal polyps or other structural abnormalities", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-5", "trigger_text": "signs or symptoms of undiagnosed or uncontrolled asthma", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-6", "trigger_text": "asthma in patients under the age of 16 years (does not preclude a patient from accessing usual pharmacy care)", "structured": {"parameter": "age", "operator": "<", "value": 16, "unit": "years"}, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-7", "trigger_text": "inadequate response to optimal treatment.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-8", "trigger_text": "using a medicine that can cause or exacerbate rhinitis", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-9", "trigger_text": "quality of life is significantly affected.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-10", "trigger_text": "Rhinitis and asthma commonly co-exist (sometimes referred to as United Airway Disease). Effective management of allergic rhinitis is important for the management of asthma; all asthma symptoms should be investigated and/or the patient provided with a referral to an appropriate healthcare provider.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Key points"}},
+    {"id": "RF-11", "trigger_text": "the condition does not improve within 4 weeks of starting treatment", "structured": {"parameter": "weeks_without_improvement_after_starting_treatment", "operator": ">=", "value": 4, "unit": "weeks"}, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-12", "trigger_text": "the patient's condition worsens, including developing systemic signs and symptoms", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-13", "trigger_text": "the patient develops new signs or symptoms (e.g. infection)", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-14", "trigger_text": "the patient develops new or worsening asthma symptoms", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-15", "trigger_text": "quality of life is significantly affected", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-16", "trigger_text": "adverse effects of treatment cannot be managed in the pharmacy setting.", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"id": "RF-17", "trigger_text": "Patients who require routine treatment over periods of > 12 months to feel well, may benefit from referral to a medical practitioner for consideration of immunotherapy.", "structured": {"parameter": "duration_of_routine_treatment", "operator": ">", "value": 12, "unit": "months"}, "action": "REFER", "severity": "low", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}}
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "a medical practitioner for consideration of immunotherapy (patients who require routine treatment over periods of > 12 months to feel well)"
+    ],
+    "urgent": [],
+    "emergency": [
+      "including emergency services, if required"
+    ],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 3, "section_heading": "Refer when"}
+  },
+  "review_followup": [
+    {"when": "4 weeks after initiation of intranasal corticosteroids", "what": "Assess response to treatment and if changes to the treatment plan are required (continue, modify, stop and/or refer); assess intranasal spray administration technique", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}},
+    {"when": "after trialling a new treatment for 4 weeks and symptoms are mild and adequately managed with an oral or intranasal antihistamine", "what": "Clinical review will generally not be required; the patient may be advised to remain on the minimum effective dose", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}},
+    {"when": "in line with recommendations in the Therapeutic Guidelines", "what": "Clinical review with the pharmacist (or the patient's chosen healthcare provider)", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}},
+    {"when": "for patients continuing therapy", "what": "Follow-up individualised to the patient's clinical presentation, response to treatment, and therapeutic goals", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}},
+    {"when": "the condition does not improve within 4 weeks of starting treatment", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "the patient's condition worsens, including developing systemic signs and symptoms", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "the patient develops new signs or symptoms (e.g. infection)", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "the patient develops new or worsening asthma symptoms", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "quality of life is significantly affected", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "adverse effects of treatment cannot be managed in the pharmacy setting", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "General advice"}},
+    {"when": "patients require routine treatment over periods of > 12 months to feel well", "what": "may benefit from referral to a medical practitioner for consideration of immunotherapy", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 8, "section_heading": "Clinical review"}}
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Allergic-Nonallergic-Rhinitis.pdf", "page": 7, "section_heading": "Communicate agreed management plan"}
+  },
+  "references": [
+    "1. Therapeutic Guidelines: Respiratory (Allergic Rhinitis). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 02]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=allergic-rhinitis&guidelineName=Respiratory&topicNavigation=navigateTopic. [page 9]",
+    "2. Quillen DM, Feller DB. Diagnosing rhinitis: allergic vs. nonallergic. American Family Physician. 2006;73(9):1583-90. [page 9]",
+    "3. DynaMed: Vasomotor Rhinitis: EBSCO Information Services; 2024 [cited 2025 April 02]. Available from: https://www.dynamed.com/condition/vasomotor-rhinitis. [page 9]",
+    "4. Australasian Society of Clinical Immunology and Allergy. Allergic Rhinitis Clinical Update Brookvale: Australasian Society of Clinical Immunology and Allergy; 2024 [cited 2025 April 02]. Available from: www.allergy.org.au/images/stories/pospapers/ar/ASCIA_HP_Clinical_Update_Allergic_Rhinitis_2024.pdf [page 9]",
+    "5. Hu W. Katelaris C. Kemp A. Allergic rhinitis practical managment strategies. Australian Family Physician. 2008;37(4):214-20. [page 9]",
+    "6. Small P, Keith PK, Kim H. Allergic rhinitis. Allergy, Asthma & Clinical Immunology. 2018;14(2):51. [page 9]",
+    "7. Delves P. MSD Manual Professional Version: Allergic Rhinitis: Merck & Co; 2024 [cited 2025 April 04]. Available from: https://www.msdmanuals.com/en-au/professional/immunology-allergic-disorders/allergic,-autoimmune,-and-other-hypersensitivity-disorders/allergic-rhinitis?query=allergic%20rhinitis. [page 9]",
+    "8. DynaMed: Allergic Rhinitis: EBSCO Information Services; 2024 [cited 2025 April 04]. Available from: https://www.dynamed.com/condition/allergic-rhinitis. [page 9]",
+    "9. Therapeutic Guidelines: Respiratory (Nonallergic rhinitis). Melbourne: Therapeutic Guidelines Limited; 2024 [cited 2025 April 04]. Available from: https://tgldcdp.tg.org.au/viewTopic?topicfile=nonallergic-rhinitis#toc_d1e56. [page 9]",
+    "10. Australasian Society of Clinical Immunology and Allergy. Allergic Rhinitis Treatment Plan Brookvale: Australasian Society of Clinical Immunology and Allergy; 2024 [cited 2025 April 02]. Available from: https://www.allergy.org.au/patients/allergic-rhinitis-hay-fever-and-sinusitis/allergic-rhinitis-treatment-plan. [page 9]",
+    "11. Ellis AK. Pharmacotherapy of allergic rhinitis - UpToDate; 2025 [cited 2025 May 30]. Available from: https://www.uptodate.com/contents/pharmacotherapy-of-allergic-rhinitis [page 9]",
+    "12. BMJ Best Practice. Non-allergic rhinitis; 2024 [cited 2025 May 30]. Available from: https://bestpractice.bmj.com/topics/en-gb/231?q=Non-allergic%20rhinitis&c=suggested. [page 9]"
+  ],
+  "open_questions": [
+    {"topic": "Eligibility list has no 'inclusion/exclusion criteria' headings", "observed": "Eligibility is expressed as 'Meet service and professional obligations' (page 2) plus the rhinitis symptom patterns in Table 1 (page 5); the 'Refer when' list (page 3) has been used as the exclusion list.", "why_unclear": "The document does not label these as formal criteria and does not state combinatorics; defaulted to all_of for eligibility/consent with any_of between the allergic and non-allergic symptom patterns, and any_of for exclusion.", "source_page": 3},
+    {"topic": "'Refer when' versus exclusion semantics", "observed": "'Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' (page 3).", "why_unclear": "It is not stated whether treatment may still be provided under the service for these situations; items are recorded both as exclusion criteria and as red flags.", "source_page": 3},
+    {"topic": "No numeric age bound printed", "observed": "Unlike the other EACPP guidelines, the cover page (page 1) has no 'Service restricted to patients aged X years or over' box; the only age figure is the referral trigger 'asthma in patients under the age of 16 years' (page 3).", "why_unclear": "age_bounds recorded as null/null with page 1 provenance; the 16-year figure is an asthma referral threshold, not an eligibility age bound.", "source_page": 1},
+    {"topic": "Instrument effective date / version not printed", "observed": "Only '© Department of Health 2026' and footer codes \"62'GUA\" and \"180510-DEC\" are printed; no effective date or version number appears.", "why_unclear": "effective_date recorded as 'Not printed'; instrument_version records the printed copyright/codes only.", "source_page": 10},
+    {"topic": "Specific drug agents and doses absent from the document", "observed": "Pharmacotherapy is delegated to Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis) and (Rhinitis and rhinosinusitis – Nonallergic rhinitis) (page 6); no molecule, strength, dose, frequency or duration is printed (except the decongestant 3 to 5 day caution and the 4-week review points).", "why_unclear": "Treatment rows carry no agent/dose; agents must be sourced externally.", "source_page": 6},
+    {"topic": "First-line agent for allergic rhinitis not designated", "observed": "The document states only 'a medicine mentioned in Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis)' (page 6); it names intranasal corticosteroids as the mainstay only for non-allergic rhinitis.", "why_unclear": "TX-2 recorded with first_line=false and confidence 'medium'; the document does not state which agent is first-line for allergic rhinitis.", "source_page": 6},
+    {"topic": "No separate urgent referral tier printed", "observed": "A single referral tier is printed ('an appropriate healthcare provider (including emergency services, if required)', page 3); no 'urgent' referral wording appears.", "why_unclear": "referral.urgent left empty because the document genuinely has no separate urgent tier.", "source_page": 3},
+    {"topic": "Supply limit is a general statement, not a per-drug quantity", "observed": "'The total quantity prescribed should be dependent on clinical need (e.g. seasonal vs perennial) and should not exceed 12 months' supply (including repeats).' (page 8).", "why_unclear": "Recorded in quantity_to_supply as a general ceiling; no numeric per-drug quantity is printed.", "source_page": 8},
+    {"topic": "Chest examination delegated to another EACPP clinical protocol", "observed": "'Patients with symptoms of asthma or lower respiratory disease should have a chest examination in accordance with the clinical protocol for the Enhanced Access Community Pharmacy Pilot Improved Asthma Symptom Control Program.' (page 6).", "why_unclear": "The referenced clinical protocol is not part of this document; gate recorded with on_fail REFER based on the document's referral wording for asthma symptoms.", "source_page": 6},
+    {"topic": "Authorisation restrictions for eye drops and montelukast", "observed": "NB1: anti-inflammatory eye drops 'for use under specialist advice only and are not authorised for use by pharmacists'; NB2: montelukast 'is not authorised for use by pharmacists' (page 6).", "why_unclear": "Recorded verbatim in treatment notes; confirm against the current Therapeutic Guidelines: Respiratory and TGA Safety Alert before go-live.", "source_page": 6},
+    {"topic": "Pathway gate on_fail not stated by the document", "observed": "Consent (page 2), confirm-management (page 7), educate (page 7) and clinical-review (page 8) steps do not state what happens if the gate fails.", "why_unclear": "on_fail recorded as 'unclear' per spec rather than inferred.", "source_page": 2},
+    {"topic": "Pregnancy and lactation caveat wording", "observed": "'pregnancy and lactation status (if applicable)' in patient history (page 4) and 'pregnancy and lactation' as a confirm-management item (page 7); no pregnancy- or lactation-specific dosing guidance is printed.", "why_unclear": "Caveat recorded verbatim in treatment notes and hugh_to_confirm; no condition-specific guidance exists in this document.", "source_page": 7}
+  ],
+  "hugh_to_confirm": [
+    {"item": "Confirm the individual pharmacist is approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA) - 'This document alone does not provide an authorisation for a pharmacist to prescribe'.", "source_page": 1, "reason": "Authorisation is individual and external to the guideline; prerequisite for go-live."},
+    {"item": "Obtain the exact agents, forms, strengths, doses, routes, frequencies and durations from the current online Therapeutic Guidelines: Respiratory (Rhinitis and rhinosinusitis – Allergic rhinitis) and (Rhinitis and rhinosinusitis – Nonallergic rhinitis).", "source_page": 6, "reason": "No regimen is printed in the protocol; required before a prescribing rules engine can be used."},
+    {"item": "Confirm local adoption of the Australasian Society of Clinical Immunology and Allergy (ASCIA) Allergic Rhinitis Treatment Plan and the ASCIA Allergic Rhinitis Clinical Update 2024 as the basis of the treatment plan and non-pharmacological advice.", "source_page": 6, "reason": "External treatment plan document governs the structure of the management plan."},
+    {"item": "Confirm supply/repeat policy against 'quantity (including repeats) that aligns with the expected duration of therapy ... should not exceed 12 months' supply (including repeats)' and 'ensure sufficient supply until the patient's next review'.", "source_page": 8, "reason": "Quantity is left to clinical need (seasonal vs perennial); local dispensing policy required."},
+    {"item": "Confirm the referral threshold for immunotherapy: 'Patients who require routine treatment over periods of > 12 months to feel well, may benefit from referral to a medical practitioner'.", "source_page": 8, "reason": "Stated as a benefit ('may benefit'), not a mandatory referral; local policy decision."},
+    {"item": "Confirm pregnancy and lactation checks against the Therapeutic Guidelines and Australian Medicines Handbook before prescribing (document requirement).", "source_page": 7, "reason": "Document requires the check but prints no pregnancy/lactation-specific dosing guidance."},
+    {"item": "Confirm the EACPP Improved Asthma Symptom Control Program clinical protocol for chest examination of patients with symptoms of asthma or lower respiratory disease.", "source_page": 6, "reason": "The referenced clinical protocol is a separate document not included here."},
+    {"item": "Confirm NB1: anti-inflammatory eye drops (e.g. ketorolac and corticosteroids) are for use under specialist advice only and are not authorised for use by pharmacists; vasoconstrictor eye drops (e.g. naphazoline and tetryzoline) are not indicated for allergic conjunctivitis.", "source_page": 6, "reason": "Authorisation boundary must be verified against current Therapeutic Guidelines: Respiratory before go-live."},
+    {"item": "Confirm NB2: montelukast is not authorised for use by pharmacists for allergic rhinitis (limited evidence, potential for serious neuropsychiatric side effects; refer to the TGA Safety Alert).", "source_page": 6, "reason": "Authorisation boundary and TGA alert must be re-verified at go-live."},
+    {"item": "Confirm counselling content and local stop-rule for decongestants: 'Use of intranasal decongestants for more than 3 to 5 days causes rebound congestion (rhinitis medicamentosa)'; 'oral and intranasal decongestants have no role in the management of allergic rhinitis'.", "source_page": 6, "reason": "Duration caution must be encoded locally as a hard limit if used at all."},
+    {"item": "Confirm scheduling of the 4-week intranasal corticosteroid follow-up consultation and the minimum-effective-dose advice after a 4-week trial of a new treatment.", "source_page": 8, "reason": "Appointment/recall process is local; document gives timing but no process."},
+    {"item": "Confirm local antimicrobial considerations when differentiating infectious rhinosinusitis (referral trigger) and any antibiotic advice, consistent with the Therapeutic Guidelines: Antibiotic reminder.", "source_page": 7, "reason": "This guideline does not treat infection; referral pathway must align with local AMR data."},
+    {"item": "Confirm EACPP service-level arrangements for consent documentation and communication with other health practitioners.", "source_page": 2, "reason": "Document requires informed consent including consent for communication but does not specify the local process."}
+  ]
+}

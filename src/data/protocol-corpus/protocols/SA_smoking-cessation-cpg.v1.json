@@ -1,0 +1,624 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf",
+    "pdf_sha256": "2eb0ec3e990218ceaa116c2cd4b6da41907206d4fa8fbfdc4f2c4afe8120d3d8",
+    "page_count": 13,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Smoking Cessation – Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "Authorisation page (p2): 'Community Pharmacy Expanded Scope of Practice Initiative. In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.'",
+    "supervision_model": "Document does not use 'collaborative'/'autonomous' terminology; its own wording (p2): an authorised pharmacist who 'is included on the register of authorised pharmacists' prescribing 'in accordance with the Community Pharmacist Prescribing Code'. Discretion clause (p5): 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.' Drug-specific limits: 'first-line therapies NB3, varenicline or bupropion' (p7); 'Nortriptyline is not permitted for use within this service as a second-line treatment option (10)' (p7); 'The use of NRT for smoking cessation is part of standard pharmacist care and practice; guidance on its use is not covered in detail in this guideline' (NB2, p7).",
+    "scope_summary": "SA Health (Community Pharmacy Expanded Scope of Practice Initiative) clinical practice guideline for pharmacist assessment and management of adult smokers. 'Service restricted to patients aged 18 years or over'; 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.' Covers 'Red flag' warning signs necessitating emergency care ('Immediate referral to an emergency department – call 000'), the 'Refer when' list for referral to a medical practitioner for pharmacological support with varenicline and/or bupropion, key points, the 5As (Ask, Assess, Advise, Assist, Arrange), patient history, smoking history, examination and screening (BP, comorbidity screening, National Lung Cancer Screening Program), the smoking cessation plan (non-pharmacological support plus NRT and first-line varenicline or bupropion), confirmation that management is appropriate, communication of the agreed plan, patient resources, general advice, and clinical review (2-3 weeks after commencing pharmacotherapy; end of course 9 weeks bupropion / 12 weeks varenicline; possible additional 12 weeks varenicline). Appendix 1 (Pharmacotherapy treatment algorithm) and Appendix 2 (References) are included; no doses, strengths or frequencies for any medicine are printed in this guideline."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "INC-2",
+        "text": "'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and breastfeeding status (if applicable); previous responses to pharmacotherapy and/or NRT for smoking cessation; underlying medical conditions and chronic diseases including current (or history of) psychiatric illness (including but not limited to psychosis, schizophrenia, bipolar disorder, clinically diagnosed depression and anxiety, eating disorder, substance abuse disorders and history of suicidal ideation, suicide related behaviour or self-harm, parasomnias); current medications (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/adverse drug events.' (items continued on p6)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 5, "section_heading": "Patient history" }
+      },
+      {
+        "id": "INC-3",
+        "text": "NB3: 'Unless contraindicated, pharmacotherapy is recommended for patients with moderate to high nicotine dependence who are motivated to stop smoking. Nortriptyline is not permitted for use within this service as a second-line treatment option (10).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+      },
+      {
+        "id": "INC-4",
+        "text": "None of the printed referral/exclusion triggers applies — none of the 'Immediate referral to an emergency department – call 000' signs (p4), none of the eight 'Refer when' criteria for pharmacological support with varenicline and/or bupropion (p4), no 'Nortriptyline is not permitted for use within this service' situation (p7), and no varenicline two-course rule (p9) is present at presentation.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "Immediate referral to an emergency department – call 000: 'Patients who are acutely unwell, presenting with shortness of breath, chest pain.'", "criteria_group": { "all_of": [], "any_of": ["EXC-1"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" } },
+      { "id": "EXC-2", "text": "Refer when: 'The patient is aged under 18 years (consider referring to Quitline / My QuitBuddy app in addition to referral to a medical practitioner)'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-3", "text": "Refer when: 'The patient is pregnant'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-4", "text": "Refer when: 'The patient has a mental health condition or history of psychiatric illness where the use of pharmacotherapy for smoking cessation may interact with current medication and/or pose an unacceptable risk of mood disturbance (requiring medical management and close supervision)'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-5", "text": "Refer when: 'The patient has contraindications to varenicline and/or bupropion, or is taking a medicine that interacts with varenicline and/or bupropion'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-6", "text": "Refer when: 'The patient is taking a medicine that interacts with smoking and may require review and dose adjustment by a medical practitioner due to changing smoking patterns'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-7", "text": "Refer when: 'Intolerable adverse effects have been previously experienced with pharmacotherapy for smoking cessation e.g., mood disturbances, suicidal thoughts, anxiety, agitation, cardiovascular adverse effects including palpitations, tachycardia, hypertension and chest pain'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-8", "text": "Refer when: 'The patient has another chronic disease that is not well controlled or severe e.g., severe asthma, moderate or severe chronic obstructive pulmonary disease (COPD), diabetes, epilepsy, autoimmune and rheumatologic diseases, severe hypertension'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-9", "text": "Refer when: 'The patient has a recent history (within the previous 12 months) of an acute cardiovascular or cerebrovascular event.'", "criteria_group": { "all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXC-10", "text": "'Nortriptyline is not permitted for use within this service as a second-line treatment option (10).' (excludes nortriptyline as a treatment, not the patient)", "criteria_group": { "all_of": [], "any_of": ["EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" } },
+      { "id": "EXC-11", "text": "'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner.'", "criteria_group": { "all_of": [], "any_of": ["EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" } },
+      { "id": "EXC-12", "text": "'Consider whether the patient is eligible for the National Lung Cancer Screening Program (16). People are eligible for the program if they are aged between 50 and 70 years and: show no signs or symptoms suggesting they may have lung cancer (that is, they are asymptomatic); currently smoke or have quit smoking in the past 10 years; have a history of tobacco cigarette smoking of at least 30 pack-years. If the patient meets the eligibility criteria, refer them to their medical practitioner, or other appropriate healthcare provider, to enrol the patient as a participant in the program.' (referral for programme enrolment, not exclusion from the prescribing service)", "criteria_group": { "all_of": [], "any_of": ["EXC-12"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 6, "section_heading": "Examination and screening" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    "exclusion_exceptions": [
+      { "id": "EXE-1", "text": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'", "criteria_group": { "all_of": ["EXE-1"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" } },
+      { "id": "EXE-2", "text": "'* The use of nicotine replacement therapy (NRT) is part of standard pharmacist care. Pharmacists must refer to appropriate guidelines for advice regarding suitability for NRT and patient referrals.' — the eight 'Refer when' criteria are stated for referral 'for pharmacological support with varenicline and/or bupropion when*'; the asterisk ties them to this NRT note, so NRT remains part of standard pharmacist care for patients outside the varenicline/bupropion pathway.", "criteria_group": { "all_of": [], "any_of": ["EXE-2"] }, "confidence": "medium", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" } },
+      { "id": "EXE-3", "text": "'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'", "criteria_group": { "all_of": ["EXE-3"], "any_of": [] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 5, "section_heading": "Key points" } },
+      { "id": "EXE-4", "text": "A patient who does not stop smoking, or who relapses, is not excluded: 'While pharmacotherapy for smoking cessation has good efficacy, relapse is not uncommon; people should be advised not to be discouraged by unsuccessful attempts and reassured that most former smokers have progressed through a number of quitting attempts and relapses before achieving long-term cessation (10).'", "criteria_group": { "all_of": [], "any_of": ["EXE-4"] }, "confidence": "high", "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 8, "section_heading": "General advice" } }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Smoking cessation assessment, referral triage and management pathway",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs: 'The 5As approach (Ask, Assess, Advise, Assist, Arrange) is recommended to identify an individual's support needs, barriers and other relevant cultural, population-specific, or medicine-associated factors, to develop a comprehensive smoking cessation plan (7, 9).' 'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines.' Patient history should consider: age; pregnancy and breastfeeding status (if applicable); previous responses to pharmacotherapy and/or NRT for smoking cessation; underlying medical conditions and chronic diseases including current (or history of) psychiatric illness (including but not limited to psychosis, schizophrenia, bipolar disorder, clinically diagnosed depression and anxiety, eating disorder, substance abuse disorders and history of suicidal ideation, suicide related behaviour or self-harm, parasomnias); current medications (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/adverse drug events (p5-p6). Smoking history: 'age when smoking first commenced; type of smoking e.g., cigarettes, cigars, pipes, vaping/e-cigarettes, hookah, nicotine pouches, chewing tobacco; duration, recording past and current pack years; previous attempts to quit and periods of not smoking, including support required' (p6). 'Refer to Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence – Screening and assessment of tobacco smoking and nicotine dependence) to assist with determining nicotine dependence and whether pharmacotherapy may be appropriate (10).' Reminder (p6): 'Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [
+            { "criterion": "age recorded and patient aged 18 years or over — 'Service restricted to patients aged 18 years or over' (INC-1 / EXC-2 / RF-1 / RF-3)", "on_fail": "STOP" },
+            { "criterion": "pregnancy and breastfeeding status assessed — 'The patient is pregnant' requires referral (EXC-3 / RF-4)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "psychiatric illness history assessed — 'The patient has a mental health condition or history of psychiatric illness where the use of pharmacotherapy for smoking cessation may interact with current medication and/or pose an unacceptable risk of mood disturbance' (EXC-4 / RF-5)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "current medications, drug allergies/adverse drug events and previous pharmacotherapy/NRT responses recorded before any pharmacotherapy decision (EXC-5, EXC-6, EXC-7 / RF-6, RF-7, RF-8)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "underlying medical conditions and chronic disease status assessed — 'another chronic disease that is not well controlled or severe' requires referral (EXC-8 / RF-9)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "recent acute cardiovascular or cerebrovascular event within the previous 12 months excluded (EXC-9 / RF-10)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "nicotine dependence determined and motivation to stop smoking established — NB3: 'pharmacotherapy is recommended for patients with moderate to high nicotine dependence who are motivated to stop smoking' (INC-3)", "on_fail": "unclear" },
+            { "criterion": "sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 5, "section_heading": "Gather information and assess patient's needs" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination and screening: 'Pharmacists should take an initial blood pressure (BP) measurement to screen for hypertension. It is recommended that the patient be screened for common comorbidities associated with smoking, including CVD, asthma and COPD with a medical practitioner. Consider whether the patient is eligible for the National Lung Cancer Screening Program (16). People are eligible for the program if they are aged between 50 and 70 years and: show no signs or symptoms suggesting they may have lung cancer (that is, they are asymptomatic); currently smoke or have quit smoking in the past 10 years; have a history of tobacco cigarette smoking of at least 30 pack-years. If the patient meets the eligibility criteria, refer them to their medical practitioner, or other appropriate healthcare provider, to enrol the patient as a participant in the program.' 'Aboriginal and Torres Strait Islander patients: Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (17).'",
+          "gates": [
+            { "criterion": "initial blood pressure measurement taken to screen for hypertension (no numeric BP threshold is printed)", "on_fail": "unclear" },
+            { "criterion": "common comorbidities associated with smoking screened for with a medical practitioner — CVD, asthma and COPD", "on_fail": "unclear" },
+            { "criterion": "National Lung Cancer Screening Program eligibility assessed (aged between 50 and 70 years AND asymptomatic AND currently smoke or quit in the past 10 years AND at least 30 pack-years); if eligible → refer to medical practitioner or other appropriate healthcare provider to enrol (EXC-12 / RF-13)", "on_fail": "REFER" },
+            { "criterion": "acute cardiovascular or cerebrovascular event in the previous 12 months re-checked after history (EXC-9 / RF-10)", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 6, "section_heading": "Examination and screening" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the smoking cessation plan is appropriate, including for: contraindications and precautions; drug interactions NB1 (6, 11, 14); pregnancy and breastfeeding (7, 9, 10, 20).' NB1 (p8): 'Both smoking itself and pharmacotherapy to assist with smoking cessation are associated with a number of drug interactions that require consideration when someone is deciding to reduce and/or cease smoking (20).' Nicotine dependence level and pharmacotherapy suitability per 'Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence)' (p5). NB3 (p7): 'Unless contraindicated, pharmacotherapy is recommended for patients with moderate to high nicotine dependence who are motivated to stop smoking. Nortriptyline is not permitted for use within this service as a second-line treatment option (10).'",
+          "gates": [
+            { "criterion": "no 'Refer when' trigger present (EXC-2 to EXC-9 / RF-3 to RF-10)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "no call-000 red flag present (EXC-1 / RF-2)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "contraindications and precautions confirmed against the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "drug interactions confirmed (including interactions of smoking itself with current medicines)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "pregnancy and breastfeeding status confirmed as appropriate for the plan", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "moderate to high nicotine dependence and motivation to stop smoking confirmed (INC-3)", "on_fail": "unclear" },
+            { "criterion": "nortriptyline is not selected — 'Nortriptyline is not permitted for use within this service as a second-line treatment option (10)' (EXC-10 / RF-12)", "on_fail": "STOP" },
+            { "criterion": "varenicline two-course rule checked — 'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner' (EXC-11 / RF-11)", "on_fail": "SEE_PW-1-S4" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "REFER",
+          "description": "Referral triage. (a) p4: ''Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: Immediate referral to an emergency department – call 000: Patients who are acutely unwell, presenting with shortness of breath, chest pain.' (b) p4: 'Refer when: Refer to an appropriate medical practitioner for pharmacological support with varenicline and/or bupropion when*: The patient is aged under 18 years (consider referring to Quitline / My QuitBuddy app in addition to referral to a medical practitioner); The patient is pregnant; The patient has a mental health condition or history of psychiatric illness where the use of pharmacotherapy for smoking cessation may interact with current medication and/or pose an unacceptable risk of mood disturbance (requiring medical management and close supervision); The patient has contraindications to varenicline and/or bupropion, or is taking a medicine that interacts with varenicline and/or bupropion; The patient is taking a medicine that interacts with smoking and may require review and dose adjustment by a medical practitioner due to changing smoking patterns; Intolerable adverse effects have been previously experienced with pharmacotherapy for smoking cessation e.g., mood disturbances, suicidal thoughts, anxiety, agitation, cardiovascular adverse effects including palpitations, tachycardia, hypertension and chest pain; The patient has another chronic disease that is not well controlled or severe e.g., severe asthma, moderate or severe chronic obstructive pulmonary disease (COPD), diabetes, epilepsy, autoimmune and rheumatologic diseases, severe hypertension; The patient has a recent history (within the previous 12 months) of an acute cardiovascular or cerebrovascular event.' '* The use of nicotine replacement therapy (NRT) is part of standard pharmacist care. Pharmacists must refer to appropriate guidelines for advice regarding suitability for NRT and patient referrals.' (c) p9: 'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner.' (d) p6: National Lung Cancer Screening Program enrolment referral and 'Consider referring to the CARPA Standard Treatment Manual ... (17)'. (e) p7 NB1: 'Referral to Quitline (13 7848) or a relevant health professional with expertise specific to smoking cessation is recommended (7, 10).'",
+          "gates": [
+            { "criterion": "no 'Immediate referral to an emergency department – call 000' trigger present (EXC-1 / RF-2)", "on_fail": "STOP" },
+            { "criterion": "no 'Refer when' trigger present for varenicline/bupropion pharmacological support (EXC-2 to EXC-9 / RF-3 to RF-10)", "on_fail": "REFER" },
+            { "criterion": "varenicline two-course rule not triggered (EXC-11 / RF-11)", "on_fail": "REFER" },
+            { "criterion": "National Lung Cancer Screening Program eligibility handled by referral if criteria met (EXC-12 / RF-13)", "on_fail": "REFER" },
+            { "criterion": "referral destination and timeframe recorded by the local service (no destinations or timeframes other than 'call 000' are printed)", "on_fail": "unclear" },
+            { "criterion": "where the patient is ineligible for the prescribing service: 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care' (EXE-1) and NRT remains 'part of standard pharmacist care' (EXE-2)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "TREAT",
+          "description": "Smoking cessation plan: 'A comprehensive approach to smoking cessation should include counselling and behavioural support. The type of assistance should be based on the patient's readiness to quit and level of nicotine dependence.' Pharmacist support involves: non-pharmacological interventions and support — 'develop a cessation plan, e.g., Your quit smoking plan available on the QUIT website; including identifying barriers to stopping, strategies to address barriers, and identifying and engaging social support (1)'; 'provide brief advice, support and help based on contemporary tools and guidelines, counselling and behavioural support and referral to general SA Quitline (phone 13 7848) and/or other support programsNB1 (6, 12)'. Pharmacotherapy: 'guided by the Pharmacotherapy treatment algorithm in the RACGP guidance (see Appendix 1) (7, 18)'; 'NRT NB2 in accordance with the Therapeutic Guidelines and the Pharmaceutical Society of Australia Guidelines for pharmacists providing smoking cessation support (9, 10)'; 'first-line therapies NB3, varenicline or bupropion, in accordance with the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (10)'. NB3: 'Unless contraindicated, pharmacotherapy is recommended for patients with moderate to high nicotine dependence who are motivated to stop smoking. Nortriptyline is not permitted for use within this service as a second-line treatment option (10).' No strengths, doses, frequencies or durations for varenicline, bupropion or NRT are printed in this guideline.",
+          "gates": [
+            { "criterion": "red-flag triage completed and no open referral trigger remains (PW-1-S4)", "on_fail": "SEE_PW-1-S4" },
+            { "criterion": "'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other relevant references to confirm the smoking cessation plan is appropriate' (PW-1-S3)", "on_fail": "STOP" },
+            { "criterion": "assistance matched to the patient's readiness to quit and level of nicotine dependence", "on_fail": "unclear" },
+            { "criterion": "counselling and behavioural support provided alongside pharmacotherapy — 'The most successful approach to smoking cessation for people living with nicotine dependence is counselling and behavioural support, combined with first-line pharmacotherapy and follow up (7)'", "on_fail": "unclear" },
+            { "criterion": "pharmacotherapy selection follows the Pharmacotherapy treatment algorithm in the RACGP guidance (Appendix 1) and first-line therapies are varenicline or bupropion", "on_fail": "unclear" },
+            { "criterion": "nortriptyline is not used — 'Nortriptyline is not permitted for use within this service as a second-line treatment option (10)' (EXC-10 / RF-12)", "on_fail": "STOP" },
+            { "criterion": "NRT dosing, contraindications, precautions, adverse effects and interactions checked against the PSA Guidelines, Therapeutic Guidelines and Australian Medicines Handbook (NB2)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: 'Comprehensive advice and counselling (including supporting written information if required), should be provided to the patient regarding the smoking cessation plan. Relevant information may include: instructions for individual product and medicine use e.g., medicine dosage and NRT product selection and use; how to manage adverse effects, including serious adverse effects requiring medical care e.g., mood disturbances; when to return to the pharmacist for clinical review.' 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' General advice (p8): 'people should be advised not to be discouraged by unsuccessful attempts and reassured that most former smokers have progressed through a number of quitting attempts and relapses before achieving long-term cessation (10).' Patient resources and tools: Quit.org.au (quit plan, quitting tips and tactics, cost of smoking calculator) (1); Commonwealth Government My QuitBuddy app (3); Tackling Indigenous Smoking Program (5). Referral to Quitline (13 7848) and/or other support programs is recommended (NB1, p7).",
+          "gates": [
+            { "criterion": "instructions for individual product and medicine use given (medicine dosage and NRT product selection and use)", "on_fail": "unclear" },
+            { "criterion": "advice on managing adverse effects given, including serious adverse effects requiring medical care e.g. mood disturbances", "on_fail": "unclear" },
+            { "criterion": "patient told when to return to the pharmacist for clinical review", "on_fail": "unclear" },
+            { "criterion": "agreed management plan shared with the multidisciplinary healthcare team, with the patient's consent", "on_fail": "unclear" },
+            { "criterion": "resources offered (Quit.org.au, My QuitBuddy app, Tackling Indigenous Smoking Program, SA Quitline 13 7848)", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 8, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "FOLLOW_UP",
+          "description": "Clinical Review: 'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and the RACGP guidance (7, 10).' 'All people prescribed varenicline or bupropion should return for review 2-3 weeks after commencing pharmacotherapy (after the quit date) to monitor for progress and adverse effects of pharmacotherapy and to provide additional support, particularly for relapse prevention (10).' 'Blood pressure should be measured at each review appointment.' 'It is recommended that the patient also receive follow up and ongoing support from a service such as Quitline.' 'A clinical review should also occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline).' 'An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.' 'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner.' 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review.'",
+          "gates": [
+            { "criterion": "review appointment booked 2-3 weeks after commencing pharmacotherapy (after the quit date) for all people prescribed varenicline or bupropion", "on_fail": "unclear" },
+            { "criterion": "blood pressure measured at each review appointment", "on_fail": "unclear" },
+            { "criterion": "clinical review at end of treatment course: 9 weeks for bupropion, 12 weeks for varenicline", "on_fail": "unclear" },
+            { "criterion": "if additional varenicline treatment is required beyond two courses (24 weeks) within the previous 12 months → refer to a medical practitioner (EXC-11 / RF-11)", "on_fail": "REFER" },
+            { "criterion": "quantity prescribed (including repeats) covers only the period until the patient's next review", "on_fail": "unclear" },
+            { "criterion": "ongoing support from a service such as Quitline arranged", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Varenicline",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "12 weeks",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient quantity of medicine (including repeats) for the period until the patient's next review",
+      "notes": "Verbatim (p7): 'first-line therapies NB3, varenicline or bupropion, in accordance with the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (10).' Duration from p9: 'A clinical review should also occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline).' and 'An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.' Quantity rule (p9): 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review.' NB3 (p7): 'Unless contraindicated, pharmacotherapy is recommended for patients with moderate to high nicotine dependence who are motivated to stop smoking.' Referral limits (p4 'Refer when'; p9 two courses rule). No strength, dose, route or frequency is printed in this guideline — dosing delegated to the Therapeutic Guidelines.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Bupropion",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "9 weeks",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "sufficient quantity of medicine (including repeats) for the period until the patient's next review",
+      "notes": "Verbatim (p7): 'first-line therapies NB3, varenicline or bupropion, in accordance with the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (10).' Duration from p9: 'A clinical review should also occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline).' Quantity rule (p9): 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review.' Same 'Refer when' referral limits as varenicline (p4). No strength, dose, route or frequency is printed in this guideline.",
+      "first_line": true,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Nicotine replacement therapy (NRT)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p7, NB2): 'The use of NRT for smoking cessation is part of standard pharmacist care and practice; guidance on its use is not covered in detail in this guideline. Pharmacists should refer to the Pharmaceutical Society of Australia's Guidelines for pharmacists providing smoking cessation support, the Therapeutic Guidelines, and Australian Medicines Handbook for further information regarding the use of NRT, including dosage recommendations, contraindications and precautions, adverse effects and drug interactions (9, 10, 20).' Also (p7): 'NRT NB2 in accordance with the Therapeutic Guidelines and the Pharmaceutical Society of Australia Guidelines for pharmacists providing smoking cessation support (9, 10).' p4 footnote: '* The use of nicotine replacement therapy (NRT) is part of standard pharmacist care. Pharmacists must refer to appropriate guidelines for advice regarding suitability for NRT and patient referrals.' No product, strength, dose, frequency or duration is printed. Not labelled 'first-line' in this document (the document's 'first-line therapies' are varenicline or bupropion).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Nortriptyline",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Verbatim (p7, NB3): 'Nortriptyline is not permitted for use within this service as a second-line treatment option (10).' Prohibited within this service; no dose data printed because use is not permitted.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Service restricted to patients aged 18 years or over.' 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+      "structured": { "parameter": "age_years", "operator": ">=", "value": 18, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Immediate referral to an emergency department – call 000: Patients who are acutely unwell, presenting with shortness of breath, chest pain.'",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Refer when: 'The patient is aged under 18 years (consider referring to Quitline / My QuitBuddy app in addition to referral to a medical practitioner)'",
+      "structured": { "parameter": "age_years", "operator": "<", "value": 18, "unit": "years" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Refer when: 'The patient is pregnant'",
+      "structured": { "parameter": "pregnancy_status", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Refer when: 'The patient has a mental health condition or history of psychiatric illness where the use of pharmacotherapy for smoking cessation may interact with current medication and/or pose an unacceptable risk of mood disturbance (requiring medical management and close supervision)'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Refer when: 'The patient has contraindications to varenicline and/or bupropion, or is taking a medicine that interacts with varenicline and/or bupropion'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Refer when: 'The patient is taking a medicine that interacts with smoking and may require review and dose adjustment by a medical practitioner due to changing smoking patterns'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Refer when: 'Intolerable adverse effects have been previously experienced with pharmacotherapy for smoking cessation e.g., mood disturbances, suicidal thoughts, anxiety, agitation, cardiovascular adverse effects including palpitations, tachycardia, hypertension and chest pain'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Refer when: 'The patient has another chronic disease that is not well controlled or severe e.g., severe asthma, moderate or severe chronic obstructive pulmonary disease (COPD), diabetes, epilepsy, autoimmune and rheumatologic diseases, severe hypertension'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Refer when: 'The patient has a recent history (within the previous 12 months) of an acute cardiovascular or cerebrovascular event.'",
+      "structured": { "parameter": "time_since_acute_cardiovascular_or_cerebrovascular_event", "operator": "<", "value": 12, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner.'",
+      "structured": { "parameter": "total_weeks_of_varenicline_in_previous_12_months", "operator": ">=", "value": 24, "unit": "weeks" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Nortriptyline is not permitted for use within this service as a second-line treatment option (10).'",
+      "structured": null,
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'People are eligible for the [National Lung Cancer Screening] program if they are aged between 50 and 70 years and: show no signs or symptoms suggesting they may have lung cancer (that is, they are asymptomatic); currently smoke or have quit smoking in the past 10 years; have a history of tobacco cigarette smoking of at least 30 pack-years. If the patient meets the eligibility criteria, refer them to their medical practitioner, or other appropriate healthcare provider, to enrol the patient as a participant in the program.'",
+      "structured": { "parameter": "age_years", "operator": "range", "value": [50, 70], "unit": "years" },
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 6, "section_heading": "Examination and screening" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Pharmacists should take an initial blood pressure (BP) measurement to screen for hypertension. It is recommended that the patient be screened for common comorbidities associated with smoking, including CVD, asthma and COPD with a medical practitioner.' (screening finding prompts medical-practitioner involvement; no BP threshold is printed)",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 6, "section_heading": "Examination and screening" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "p7 NB1: 'Referral to Quitline (13 7848) or a relevant health professional with expertise specific to smoking cessation is recommended (7, 10).' and 'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (17).' (p6)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 7, "section_heading": "Smoking cessation plan" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'Refer to an appropriate medical practitioner for pharmacological support with varenicline and/or bupropion when*: The patient is aged under 18 years (consider referring to Quitline / My QuitBuddy app in addition to referral to a medical practitioner)'",
+      "'The patient is pregnant'",
+      "'The patient has a mental health condition or history of psychiatric illness where the use of pharmacotherapy for smoking cessation may interact with current medication and/or pose an unacceptable risk of mood disturbance (requiring medical management and close supervision)'",
+      "'The patient has contraindications to varenicline and/or bupropion, or is taking a medicine that interacts with varenicline and/or bupropion'",
+      "'The patient is taking a medicine that interacts with smoking and may require review and dose adjustment by a medical practitioner due to changing smoking patterns'",
+      "'Intolerable adverse effects have been previously experienced with pharmacotherapy for smoking cessation e.g., mood disturbances, suicidal thoughts, anxiety, agitation, cardiovascular adverse effects including palpitations, tachycardia, hypertension and chest pain'",
+      "'The patient has another chronic disease that is not well controlled or severe e.g., severe asthma, moderate or severe chronic obstructive pulmonary disease (COPD), diabetes, epilepsy, autoimmune and rheumatologic diseases, severe hypertension'",
+      "'The patient has a recent history (within the previous 12 months) of an acute cardiovascular or cerebrovascular event.'",
+      "'If the patient meets the eligibility criteria, refer them to their medical practitioner, or other appropriate healthcare provider, to enrol the patient as a participant in the [National Lung Cancer Screening] program.' (p6)",
+      "'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (17).' (p6)",
+      "'Referral to Quitline (13 7848) or a relevant health professional with expertise specific to smoking cessation is recommended (7, 10).' (p7, NB1)",
+      "'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner.' (p9)"
+    ],
+    "urgent": [],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: 'Immediate referral to an emergency department – call 000: Patients who are acutely unwell, presenting with shortness of breath, chest pain.' (p4)"
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 4, "section_heading": "Refer when:" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review timing — general rule",
+      "what": "'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and the RACGP guidance (7, 10).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 8, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "2-3 weeks after commencing pharmacotherapy (after the quit date)",
+      "what": "'All people prescribed varenicline or bupropion should return for review 2-3 weeks after commencing pharmacotherapy (after the quit date) to monitor for progress and adverse effects of pharmacotherapy and to provide additional support, particularly for relapse prevention (10).' 'Blood pressure should be measured at each review appointment.' 'It is recommended that the patient also receive follow up and ongoing support from a service such as Quitline.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "End of the treatment course (9 weeks for bupropion, 12 weeks for varenicline)",
+      "what": "'A clinical review should also occur at the end of the treatment course (9 weeks for bupropion, 12 weeks for varenicline).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "Additional 12 weeks of varenicline treatment, if considered required",
+      "what": "'An additional 12 weeks of treatment with varenicline may be considered if required, to reduce chances of relapse.' 'People who have already undergone two courses of varenicline (24 weeks) within the previous 12 months, or those who require additional treatment with varenicline after two courses should be referred to a medical practitioner.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "At each prescribing/review event",
+      "what": "'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "When the patient develops serious adverse effects (advice given at plan communication)",
+      "what": "'how to manage adverse effects, including serious adverse effects requiring medical care e.g., mood disturbances'; 'when to return to the pharmacist for clinical review.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 8, "section_heading": "Communicate agreed management plan" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-smoking-cessation-cpg.pdf", "page": 1, "section_heading": "Smoking Cessation – Clinical Practice Guideline" }
+  },
+  "references": [
+    "[p12] 1. Quitline Victoria. Your Quit smoking plan. In: Victoria Q, editor. Online: Quitline, Cancer Council Victoria; 2025.",
+    "[p12] 2. Supporting smoking cessation: A guide for health professionals [Internet]. The Royal Australian College of General Practitioners, RACGP. 2024 [cited 23 June 2025]. Available from: https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/supporting-smoking-cessation.",
+    "[p12] 3. Australian Government Department for Health and Aged Care. QuitBuddy app: Department of Health, Disability and Ageing, Australian Government; 2025 [Available from: https://www.health.gov.au/resources/apps-and-tools/my-quitbuddy-app.",
+    "[p12] 4. The Royal Australian College of General Practitioners (RACGP). Smoking, nutrition, alcohol, physical activity (SNAP). The Royal Australian College of General Practitioners, RACGP; 2025.",
+    "[p12] 5. Tackling Indigenous Smoking. Tackling Indigenous Smoking program: Tackling Indigenous Smoking; 2025 [Available from: https://tacklingsmoking.org.au/.",
+    "[p12] 6. Australian Institute of Health and Welfare. Alcohol, tobacco & other drugs in Australia Canberra: AIHW; 2025 [Available from: https://www.aihw.gov.au/reports/alcohol/tobacco-other-drugs-australia.",
+    "[p12] 7. The Royal Australian College of General Practitioners R. Supporting Smoking & Vaping Cessation: A Guidel For Health Professionals. Online: The Royal Australian College of General Practitioners, RACGP; 2024.",
+    "[p12] 8. QuitLine CCV. Quitline referral form Online2025 [Available from: https://www.quit.org.au/referral-form.",
+    "[p12] 9. Pharmaceutical Society of Australia. Professional practice guidelines for pharmacists Nicotine dependence support guidelines. 2024:44.",
+    "[p12] 10. Tobacco smoking and nicotine dependence [Internet]. Therapeutic Guidelines Limited. 2025 [cited 23 June2025]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Addiction%20Medicine&topicfile=alcohol-drug-problems&guidelinename=auto&sectionId=AMG_Tobacco_smoking_and_nicotine_dependence#AMG_Tobacco_smoking_and_nicotine_dependence.",
+    "[p12] 11. Lucas C, Martin J. Smoking and drug interactions. Australian Prescriber. 2013;36(3):102-4.",
+    "[p12] 12. QuitLine CCV. Clinical Tools & Guidelines Online: Quitline, Cancer Council Victoria; 2025 [Available from: https://www.quitcentre.org.au/clinical-tools.",
+    "[p12] 13. Quitline Cancer Council V. 3-step brief advice for smoking cessation: Ask, Advise, Help 2025. Available from: https://d2kbzxzw5x0z2s.cloudfront.net/uploads/downloads/3-step-aah-chart.pdf.",
+    "[p12] 14. Quit Centre and Pharmaceutical Society of Australia. Drug interactions with smokingOctober 2020. Available from: https://d2kbzxzw5x0z2s.cloudfront.net/uploads/downloads/202010-Quit_Drug-interactions-with-smoking_2021_V3.0.pdf.",
+    "[p12] 15. QuitLine CCV. Shared care - helping our community quit smoking. Available from: https://assets.quit.org.au/uploads/downloads/QUIT_SharedCare_0xaKeI4.pdf.",
+    "[p12] 16. Department of Health Disability and Ageing. National Lung Cancer Screening Program: Department of Health, Disability and Ageing, Australian Goverment; 2025 [Available from: https://www.health.gov.au/our-work/nlcsp?language=en.",
+    "[p12] 17. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[p12] 18. The Royal Australian College of General Practitioners (RACGP). RACGP Pharmacotherapy Treatment Algorithm Online: The Royal Australian College of General Practitioners, RACGP 2025 [Available from: https://www.racgp.org.au/getattachment/c72914f5-567f-4d06-ac24-274d588bff04/attachment.aspx?disposition=inline.",
+    "[p12] 19. Health) TSoQDo. For health professionals Help your patients live a smoke-free life Online: The State of Queensland (Department of Health); 2025 [Available from: https://www.quithq.initiatives.qld.gov.au/for-health-professionals.",
+    "[p12] 20. Drugs for nicotine dependence [Internet]. 2025 [cited 23 June 2025]. Available from: https://amhonline.amh.net.au/chapters/psychotropic-drugs/drugs-nicotine-dependence.",
+    "[p13] 21. The Royal Australian College of General P. Supporting smoking cessation: A guide for health professionals. Online: The Royal Australian College of General Practitioners, RACGP; 2024.",
+    "[p10] Pharmacist resources (as printed): Therapeutic Guidelines: Smoking cessation; Australian Medicines Handbook: Drugs for nicotine dependence; RACGP Supporting smoking cessation: A guide for health professionals (2); RACGP Smoking, nutrition, alcohol, physical activity (SNAP): A population health guide to behavioural risk factors in general practice (4); Refer a client to Quitline (8); Smoking | SA Health; Quitting smoking | SA Health; Quit smoking campaigns | SA Health; Pharmaceutical Society of Australia: Guidelines for pharmacists providing smoking cessation support (9); Australian Prescriber, Lucas et al. Smoking and drug interactions (11); Quit Centre: Training and resources for health services (12): 3-step brief advice for smoking cessation: Ask, Advise, Help (13); Drug interactions with smoking (14); Shared care - helping our community quit smoking (15); National Lung Cancer Screening Program (16); HealthPathways: Smoking and Vaping Cessation; CARPA Standard Treatment Manual: Tobacco."
+  ],
+  "open_questions": [
+    {
+      "topic": "Appendix 1 – Pharmacotherapy treatment algorithm (21) contains no extractable text",
+      "observed": "Page 11 shows only 'Appendix 1 – Pharmacotherapy treatment algorithm (21)' with no body text in the extraction.",
+      "why_unclear": "The algorithm is an image/figure; agent selection order beyond the printed statements ('first-line therapies NB3, varenicline or bupropion'; 'Nortriptyline is not permitted ... as a second-line treatment option') could not be transcribed and must not be invented.",
+      "source_page": 11
+    },
+    {
+      "topic": "No dose, strength, frequency or quantity printed for varenicline, bupropion or NRT",
+      "observed": "p7 delegates: 'first-line therapies NB3, varenicline or bupropion, in accordance with the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence) (10)'; NB2: 'guidance on its use is not covered in detail in this guideline'.",
+      "why_unclear": "Dosing is entirely delegated to external references; TX-1 to TX-3 dose fields are empty rather than invented.",
+      "source_page": 7
+    },
+    {
+      "topic": "Combinatorics of inclusion criteria not printed",
+      "observed": "Age restriction (p3), history requirements (p5-p6) and NB3 pharmacotherapy indication (p7) are printed in separate sections with no AND/OR statement.",
+      "why_unclear": "Defaulted to {all_of: [INC-1..INC-4]} per spec rule 4; INC-4 is a derived 'no referral trigger' criterion with confidence 'medium'.",
+      "source_page": 3
+    },
+    {
+      "topic": "The eight 'Refer when' criteria apply to varenicline/bupropion, NRT status is ambiguous",
+      "observed": "'Refer to an appropriate medical practitioner for pharmacological support with varenicline and/or bupropion when*' followed by the asterisked note '* The use of nicotine replacement therapy (NRT) is part of standard pharmacist care. Pharmacists must refer to appropriate guidelines for advice regarding suitability for NRT and patient referrals.'",
+      "why_unclear": "It is not stated whether a patient meeting a 'Refer when' criterion is excluded from all pharmacist pharmacotherapy (including NRT) or only from varenicline/bupropion; captured as EXE-2 with confidence 'medium'.",
+      "source_page": 4
+    },
+    {
+      "topic": "No urgency tier between routine referral and call-000",
+      "observed": "p4 has 'Immediate referral to an emergency department – call 000' and plain 'Refer when' referrals with no timeframe; no 'urgent' tier exists.",
+      "why_unclear": "referral.urgent is empty because the document genuinely prints no urgent tier; severity for 'Refer when' items set to 'medium' (the document's own language carries no urgency).",
+      "source_page": 4
+    },
+    {
+      "topic": "Referral block spans pages 4 to 9",
+      "observed": "'Refer when' list p4; CARPA and National Lung Cancer Screening Program referrals p6; Quitline referral NB1 p7; varenicline two-course referral p9.",
+      "why_unclear": "Spec requires one shared provenance for the referral block; page 4 (first page) used, range recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "No blood pressure threshold printed despite mandatory BP screening",
+      "observed": "'Pharmacists should take an initial blood pressure (BP) measurement to screen for hypertension' (p6) and 'Blood pressure should be measured at each review appointment' (p9) with no numeric cut-off anywhere in the document.",
+      "why_unclear": "No hypertension threshold exists to transcribe; RF-14 captured as a qualitative REVIEW_GP prompt with confidence 'medium'.",
+      "source_page": 6
+    },
+    {
+      "topic": "Page 3 heading layout — 'Guideline Overview' appears after the age/ineligibility statements in the extraction",
+      "observed": "Page 3 extraction order: 'Service restricted to patients aged 18 years or over.', 'Ineligibility for treatment ... usual pharmacy care.', 'Guideline Overview', then the page footer.",
+      "why_unclear": "Reading order suggests 'Guideline Overview' is the page heading; provenance for the age restriction and the ineligibility exception uses section_heading 'Guideline Overview' on page 3. Confirm visually against the PDF.",
+      "source_page": 3
+    },
+    {
+      "topic": "Document-wide discretion clause vs hard exclusion rules",
+      "observed": "'pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist...' (p5) sits alongside mandatory 'Refer when' rules (p4) and 'must be referred' style rules (p9).",
+      "why_unclear": "Whether the discretion clause permits deviation from a 'Refer when' trigger is not stated; recorded as EXE-3.",
+      "source_page": 5
+    },
+    {
+      "topic": "Mapping of printed urgency language to severity values",
+      "observed": "'call 000' → critical/ESCALATE_000; plain 'Refer when' → medium/REFER; National Lung Cancer Screening Program enrolment and Quitline/CARPA considerations → low.",
+      "why_unclear": "The document prints no numeric severity scale; mapping recorded so it can be re-checked.",
+      "source_page": 4
+    },
+    {
+      "topic": "Management of a patient who is acutely unwell with shortness of breath or chest pain — destination and transport",
+      "observed": "'Immediate referral to an emergency department – call 000' with no further detail on transport, after-hours pathways or which department.",
+      "why_unclear": "Operational pathway not printed; must be supplied locally (see hugh_to_confirm).",
+      "source_page": 4
+    },
+    {
+      "topic": "Several reference citations are line-wrapped in the text extraction",
+      "observed": "p12 ref 6 URL breaks as '.../reports/alcohol/tobacco-' + 'other-drugs-australia.'; ref 10 URL breaks across four lines; ref 1 and ref 18 URLs break mid-address.",
+      "why_unclear": "Wrapped citations were rejoined at the printed hyphenation; no characters were added or removed, but each rejoined string should be visually checked against the PDF.",
+      "source_page": 12
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document for most steps",
+      "observed": "The guideline prints referral rules but does not print explicit branch outcomes for incomplete history, declined screening or failed confirmation checks.",
+      "why_unclear": "Used STOP for call-000/nortriptyline/confirmation failures, REFER for mandatory referrals, SEE_PW-1-S4 to route into referral triage, and 'unclear' where the document states no consequence (recorded here per spec rule 5).",
+      "source_page": 4
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Dose regimens for varenicline and bupropion (strength, dose, route, frequency, duration, max dose, age/weight bands) taken from the Therapeutic Guidelines: Addiction (Tobacco smoking and nicotine dependence).",
+      "source_page": 7,
+      "reason": "Not printed anywhere in this guideline; TX-1 and TX-2 dose fields are empty and must be filled before go-live."
+    },
+    {
+      "item": "NRT product list, strengths, doses, frequencies and durations from the PSA Guidelines for pharmacists providing smoking cessation support, Therapeutic Guidelines and Australian Medicines Handbook (NB2).",
+      "source_page": 7,
+      "reason": "NRT is 'part of standard pharmacist care' with 'guidance on its use ... not covered in detail in this guideline'; TX-3 dose fields are empty."
+    },
+    {
+      "item": "Interpretation of the asterisked 'Refer when' list — does meeting a criterion exclude the patient from all pharmacist pharmacotherapy (including NRT) or only from varenicline/bupropion?",
+      "source_page": 4,
+      "reason": "The asterisk ties the list to the NRT footnote; eligibility scope must be decided locally (EXE-2, confidence 'medium')."
+    },
+    {
+      "item": "Content of Appendix 1 – Pharmacotherapy treatment algorithm (image, p11), including any second-line ordering.",
+      "source_page": 11,
+      "reason": "The algorithm is referenced as the guide to pharmacotherapy selection but its content is not in extractable text."
+    },
+    {
+      "item": "Referral destinations, contact pathways and timeframes for each 'Refer when' item (other than 'call 000'), including after-hours arrangements.",
+      "source_page": 4,
+      "reason": "Only 'Immediate referral to an emergency department – call 000' and Quitline 13 7848 are printed; local pathways must be confirmed."
+    },
+    {
+      "item": "Quantity-and-repeat rule operationalisation — 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's next review'.",
+      "source_page": 9,
+      "reason": "'Generally' plus an undefined review interval leaves the pack/repeat ceiling to local policy."
+    },
+    {
+      "item": "Operational cut-off for the varenicline two-course rule — how 'two courses of varenicline (24 weeks) within the previous 12 months' is verified (dispensing history, patient report) and counted.",
+      "source_page": 9,
+      "reason": "The rule triggers mandatory referral but the verification method is not printed."
+    },
+    {
+      "item": "Blood pressure thresholds for 'screen for hypertension' at baseline and at each review appointment.",
+      "source_page": 6,
+      "reason": "BP measurement is required but no numeric threshold exists in the document; engine cannot evaluate it as a hard check."
+    },
+    {
+      "item": "National Lung Cancer Screening Program referral mechanics — who enrols, what the pharmacist sends, and confirmation that the pharmacist's role stops at referral.",
+      "source_page": 6,
+      "reason": "'refer them to their medical practitioner, or other appropriate healthcare provider, to enrol the patient' does not specify the handover process."
+    },
+    {
+      "item": "Operational compliance evidence for each prescribing event: pharmacist 'included on the register of authorised pharmacists' and prescribing 'in accordance with the Community Pharmacist Prescribing Code' (regulation 17A, Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal basis is stated but the record-keeping/verification steps are not; local process must be confirmed before go-live."
+    },
+    {
+      "item": "Mood-disturbance monitoring protocol for patients on varenicline/bupropion — what the pharmacist must check at the 2-3 week review and what counts as 'intolerable adverse effects'.",
+      "source_page": 9,
+      "reason": "Review content is described only as 'monitor for progress and adverse effects'; no checklist is printed."
+    }
+  ]
+}

@@ -1,0 +1,1098 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf",
+    "pdf_sha256": "901e2f4d60df03546e34e5dfe1bd25765fb63336144f6075849a30c0e2fac8d7",
+    "page_count": 17,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Pharmacist Practice Standards for Management of Impetigo",
+    "instrument_version": "NSW Health Authority (dated 28 August 2026)",
+    "effective_date": "2026-08-28",
+    "legal_basis": "Not explicitly stated as a regulation or poisons schedule provision. The document states Approved Medicines 'are listed in the NSW Health Authority (dated 28 August 2026)' and is 'Approved Dr Kerry Chant AO PSM, Chief Health Officer and Deputy Secretary, Population and Public Health, 28 August 2026'; the service is delivered 'as part of the NSW Health Authority (dated 28 August 2026)' under the Community Pharmacy Dermatology Service.",
+    "supervision_model": "appropriately trained approved pharmacists: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 28 August 2026).' Framework applies to 'appropriately trained approved pharmacists' / a 'participating approved pharmacist'; 'Pharmacists must exercise professional discretion and judgement when applying the information within these Practice Standards.'",
+    "scope_summary": "Practice standard for management of impetigo ('school sores') by approved pharmacists in NSW under the Community Pharmacy Dermatology Service: assess eligibility (age 2+, no red flags/exclusions per Section G table), obtain consent, take history/examination, supply up to 5 days of therapy (or higher quantity as specified in the Authority) of listed Approved Medicines (mupirocin 2% topical, dicloxacillin, flucloxacillin, cefalexin oral), counsel, document, and refer per the Section G referral table. Mild presentations only for pharmacist management; moderate to severe presentations require referral."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "'Patients must be aged 2 years or older to be eligible for the service.' (flowchart gate: 'Is the patient >=2 years old?' - No leads to 'Not eligible for management under the Authority and Practice Standards. Refer to GP.')",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "INC-2",
+        "text": "'Patients must be physically present in the pharmacy to be eligible for management.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-3",
+        "text": "'Patients are required to have a consultation with an approved pharmacist before a medication can be supplied under the Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-4",
+        "text": "'Pharmacists must only supply formulations listed in the Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-5",
+        "text": "'Pharmacists can supply up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "Key points"}
+      },
+      {
+        "id": "INC-6",
+        "text": "'Patients who meet any of the urgent referral criteria below must be referred to their regular medical practitioner, maternity provider, health service, or Emergency Department (ED) as indicated in the table.' AND the patient group must NOT have a 'No' in the 'Treat' column: 'Pharmacists must not provide management to individuals specified in the table below, where there is a 'No' in the 'Treat' column for the patient group, and must take appropriate action in accordance with established referral pathways.' (i.e. inclusion requires Treat = Yes / no exclusion row met)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+      },
+      {
+        "id": "INC-7",
+        "text": "Informed consent obtained: 'Informed clinical and financial consent must be obtained from the patient or, if relevant, a parent, guardian, or other substituted decision maker prior to providing care under these Practice Standards.' Flowchart: 'Obtain informed consent for: Participation; Financial consent; Pharmacist communication with other health practitioners'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+      },
+      {
+        "id": "INC-9",
+        "text": "Presentation must be mild: 'Pharmacists can only manage mild presentations of impetigo. All moderate to severe presentations require referral to a medical practitioner.' / 'Pharmacists can only treat mild presentations of impetigo in paediatric patients.'",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "INC-10",
+        "text": "'Patients aged 65 years and older' - Treat column = Yes, but 'patients in this age range must be simultaneously referred to a medical practitioner and cannot receive multiple consultation without confirming they have also received medical practitioner follow-up'.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-9", "INC-10"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "INC-8",
+        "text": "Pharmacist requirement: 'Pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 28 August 2026).'",
+        "criteria_group": {"all_of": ["INC-8"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "B. GENERAL REQUIREMENTS"}
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Severe or widespread or painful rash'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-2",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Raised purple rash that doesn't blanch'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-3",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Generalised erythema that covers 90% or more of the skin surface'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-4",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Signs of sepsis, systemic illness or other complications including Acute Poststreptococcal Glomerulonephritis (APSGN) and Acute Rheumatic Fever (ARF) such as: fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-5",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Blistering of the skin and mucous membranes (including mouth and eyes)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-6",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Bullous lesions and/or ecthyma'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-7",
+        "text": "Table row (Treat = No; Referral = Urgent: ED): 'Cellulitis, gangrene and/or bacteraemia'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-8",
+        "text": "Table row (Treat = No; Referral = Urgent: ED or GP): 'Lymphadenopathy or lymphadenitis'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-9",
+        "text": "Table row (Treat = No; Referral = Urgent: ED or GP): 'Chronic sores or ulcers'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-10",
+        "text": "Table row (Treat = No; Referral = Urgent: ED or GP): 'Symptoms not resolved or worsened after treatment (within 5 days)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-11",
+        "text": "Table row (Treat = No; Referral = Urgent: ED or GP): 'Severe disease'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-12",
+        "text": "Table row (Treat = No; Referral = Urgent: ED [extraction does not show 'or GP' for this row - see open_questions]): 'Immunocompromised patients - due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, prednisone therapy)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "unclear",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-13",
+        "text": "Table row (Treat = No; Referral = GP): 'Paediatric patient requiring oral antibiotics (*pharmacists can only manage mild presentations of impetigo. All moderate to severe presentations require referral to a medical practitioner. Oral antibiotics in paediatric cases are indicated for severe presentations only.)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+      },
+      {
+        "id": "EXC-14",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient is below 2 years of age'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-15",
+        "text": "Table row (Treat = No; Referral = GP): 'The diagnosis is unclear'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-16",
+        "text": "Table row (Treat = No; Referral = GP): 'Vesicles in more than one location'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-17",
+        "text": "Table row (Treat = No; Referral = GP): 'Symptoms have not resolved after the first course of antibiotic treatment, or symptoms worsen'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-18",
+        "text": "Table row (Treat = No; Referral = GP): 'Recurrent impetigo (defined as 2 or more presentations in the same year in an adult, and more than 1 presentation in the same year in a child)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-19",
+        "text": "Table row (Treat = No; Referral = GP): 'Patient requires swabbing and further investigations or decolonisation'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-20",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient has an underlying medical condition or a suspected co-occurring condition that may lead to complications (e.g. viral infection, eczema herpeticum/herpes simplex, contact dermatitis, atopic dermatitis, scabies)'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-21",
+        "text": "Table row (Treat = No; Referral = GP): 'Food and/or drinking aversion in children'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-22",
+        "text": "Table row (Treat = No; Referral = GP): 'The patient is currently, or has recently resided in a community where impetigo is endemic, such as refugees or migrants from low-middle income countries, rural and remote communities (refer to table \"Individuals at high risk of developing ARF\")'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      },
+      {
+        "id": "EXC-23",
+        "text": "Scope exclusion: '*nasal ointment is excluded' (footnote to 'Mupirocin* 2% ointment or cream (topical)').",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+      },
+      {
+        "id": "EXC-24",
+        "text": "Scope exclusions: 'Use of benzathine benzylpenicillin is excluded from the scope of practice, and requires referral to a medical practitioner.' AND 'Pharmacists may not supply combinations of antibiotics, corticosteroid creams, antivirals, antifungals all at once to a patient.' AND 'topical antibiotics are not appropriate if the infection is widespread, or multiple family/community members are affected, due to the risk of rapid antibiotic resistance.'",
+        "criteria_group": {"all_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22", "EXC-23", "EXC-24"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 11, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+      }
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": null,
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'Patients aged 65 years and older (**patients in this age range must be simultaneously referred to a medical practitioner and cannot receive multiple consultation without confirming they have also received medical practitioner follow-up)' - Treat column = Yes (this age group may be managed by the pharmacist despite 'advanced age' being listed within the immunocompromised exclusion row).",
+        "criteria_group": {"all_of": ["EXE-1"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Patient Assessment Flowchart - management of impetigo (Section D) with Section G eligibility and referral criteria",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Entry: 'Patient presents to a participating approved pharmacist for management of impetigo'. Confirm age eligibility: 'Is the patient >=2 years old?' If No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.' ('Patients must be aged 2 years or older to be eligible for the service.')",
+          "gates": [
+            {"criterion": "Patient is >=2 years old", "on_fail": "REFER"},
+            {"criterion": "Patient presents to a participating approved pharmacist for management of impetigo", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Flowchart: 'Does the patient have any red flags, or exclusions?' If yes: 'Check Section G (Patient eligibility and referral criteria) to determine if patient may be treated and/or must be referred for GP or ED management.' Section G: 'Patients who meet any of the urgent referral criteria below must be referred to their regular medical practitioner, maternity provider, health service, or Emergency Department (ED) as indicated in the table'; 'Pharmacists must not provide management to individuals specified in the table below, where there is a 'No' in the 'Treat' column for the patient group, and must take appropriate action in accordance with established referral pathways.' Red flag signs table: Severe or widespread or painful rash; Raised purple rash that doesn't blanch; Generalised erythema that covers 90% or more of the skin surface; Signs of sepsis, systemic illness or other complications including APSGN and ARF; Blistering of the skin and mucous membranes (including mouth and eyes); Bullous lesions and/or ecthyma; Cellulitis, gangrene and/or bacteraemia; Lymphadenopathy or lymphadenitis; Chronic sores or ulcers; Symptoms not resolved or worsened after treatment (within 5 days); Severe disease; Immunocompromised patients. Details of presenting complaint table: below 2 years of age; diagnosis unclear; vesicles in more than one location; symptoms not resolved after the first course of antibiotic treatment or worsen; recurrent impetigo; requires swabbing/further investigations or decolonisation; underlying or suspected co-occurring condition; food and/or drinking aversion in children; currently or recently resided in a community where impetigo is endemic.",
+          "gates": [
+            {"criterion": "No 'Red flag' signs and no 'Details of presenting complaint' row with Treat = No is met", "on_fail": "SEE_PW-1-S3"}
+          ],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "REFER",
+          "description": "Section G referral determination for patients with red flags/exclusions: refer per the table's Referral column ('Urgent: ED', 'Urgent: ED or GP', or 'GP'); 'Patients who require non-urgent referral to a GP or a healthcare provider are to be referred in accordance with the usual referral processes'; 'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care'; 'Patients who have requested the service but are not eligible for management should be referred to their regular medical practitioner or health service.' Where the 'Treat' column is 'No', pharmacist management is not permitted (STOP - not eligible under the Authority and Practice Standards); where 'Treat' is 'Yes' (e.g. patients aged 65 years and older) the mandatory simultaneous referral is arranged and assessment continues.",
+          "gates": [
+            {"criterion": "'Treat' column = Yes for the patient group (or referral completed where the table requires it)", "on_fail": "STOP"},
+            {"criterion": "Urgent referral criteria met are referred as indicated in the table (Urgent: ED / Urgent: ED or GP / GP)", "on_fail": "STOP"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "HISTORY",
+          "description": "Obtain informed consent: 'Obtain informed consent for: Participation; Financial consent; Pharmacist communication with other health practitioners.' 'Informed clinical and financial consent must be obtained from the patient or, if relevant, a parent, guardian, or other substituted decision maker prior to providing care under these Practice Standards.' Flowchart 'No' branch: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.'",
+          "gates": [
+            {"criterion": "Informed consent obtained for participation, financial consent, and pharmacist communication with other health practitioners", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Flowchart: 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status.' Section I PATIENT HISTORY: 'Sufficient information must be obtained from the patient to assess the safety and appropriateness of management. The My Health Record should be reviewed where appropriate and available.' History should include: Age; Weight (if presenting patient is a child); Pregnancy and lactation status (if applicable); Ethnicity (Aboriginal and Torres Strait Islander, Maori or Pacific Islander); Most recent place of residence/community and/or recent travel to a place where impetigo or ARF may be endemic; Onset, duration, nature, location, and extent of lesions; Recent skin and throat infections and treatment received; Other signs and symptoms e.g. pain, lymphadenopathy, signs of sepsis or other complications including APSGN and ARF (fever, confusion, tachycardia, hypotension, hypertension, clammy skin, vomiting and diarrhoea, facial or peripheral oedema, severe headache, joint pain and/or swollen joints); Potential source of infection e.g. skin trauma, contact with people with similar symptoms; Underlying medical conditions including skin conditions or immunosuppression (e.g. atopic dermatitis, scabies, herpes simplex); Current and recently commenced medications; Drug allergies/adverse drug events; Other risk factors: poor hygiene, daycare settings, crowding, malnutrition. 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: Contraindications and precautions; Drug interactions; Pregnancy and lactation.'",
+          "gates": [
+            {"criterion": "Sufficient information obtained to assess the safety and appropriateness of management", "on_fail": "unclear"},
+            {"criterion": "Contraindications, precautions, drug interactions, pregnancy and lactation status reviewed and no contraindication to the planned management", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 10, "section_heading": "PATIENT HISTORY"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EXAMINATION",
+          "description": "EXAMINATION: 'Assessment of vital signs' and 'Physical examination of patient to assess rash'. Signs of sepsis/systemic illness (fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints) are red flag signs requiring Urgent: ED referral. 'Be aware of cognitive bias, focus on excluding red flags and early referral to a medical practitioner.'",
+          "gates": [
+            {"criterion": "Vital signs assessed with no signs of sepsis, systemic illness or other complications (APSGN/ARF)", "on_fail": "REFER"},
+            {"criterion": "Physical examination of the rash completed and diagnosis established (not unclear)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 11, "section_heading": "EXAMINATION"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "INVESTIGATION",
+          "description": "Investigations (swabs): 'Patients with mild impetigo do not require an initial skin swab before empirical antibiotic therapy is started but should have a swab taken for culture and susceptibility testing if there is no response to empirical therapy. In this instance, a pharmacist must refer to a medical practitioner.' 'Patients presenting with more severe disease require a skin swab for culture and susceptibility testing before empirical antibiotic therapy is started. Pharmacists must refer all presentations of severe disease for urgent medical practitioner review without commencing any therapy.' A patient who 'requires swabbing and further investigations or decolonisation' has Treat = No (referral to GP).",
+          "gates": [
+            {"criterion": "Disease severity is mild (initial skin swab not required before empirical antibiotic therapy)", "on_fail": "REFER"},
+            {"criterion": "No swabbing, further investigations or decolonisation required by the patient", "on_fail": "REFER"},
+            {"criterion": "Response to empirical therapy present (if no response: swab for culture and susceptibility testing and refer to a medical practitioner)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 9, "section_heading": "Investigations (swabs)"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "TREAT",
+          "description": "Establish and supply the management plan: 'Patients with impetigo require antibiotic treatment.' 'Topical antibiotics are considered sufficient treatment for the majority of patients where small areas of skin are affected. However, topical antibiotics are not appropriate if the infection is widespread, or multiple family/community members are affected, due to the risk of rapid antibiotic resistance.' 'Oral antibiotics are needed if large areas of skin are involved or if there are multiple patches.' 'Pharmacist management of impetigo involves: General and preventive measures; Treatment of co-occurring skin conditions with standard pharmacist care or referral to a medical practitioner; Pharmacotherapy as per the Therapeutic Guidelines: Impetigo.' Approved Medicines (NSW Health Authority 28 August 2026): Mupirocin* 2% ointment or cream (topical) (*nasal ointment is excluded); Dicloxacillin (oral); Flucloxacillin (oral); Cefalexin (oral). 'Pharmacists can supply up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority.' Paediatric: 'Pharmacists can only treat mild presentations of impetigo in paediatric patients. Any paediatric patient requiring oral antibiotics requires a referral to a GP (with no initiation of antibiotic treatment by the pharmacist). If oral antibiotics are indicated in a paediatric patient, the patient should be offered cefalexin liquid formulation in the first instance due to better tolerance than dicloxacillin or flucloxacillin.' Aged 65+: 'Patients aged 65 years and older can continue to be managed by a pharmacist but must be simultaneously referred for follow-up by a medical practitioner.' Exclusions: benzathine benzylpenicillin excluded from scope (requires referral); no combinations of antibiotics, corticosteroid creams, antivirals, antifungals all at once; 'The correct use of antibiotics is essential. Incorrect use or extended use of antibiotics increases the risk of antimicrobial resistance.'",
+          "gates": [
+            {"criterion": "Presentation is mild (all moderate to severe presentations require referral to a medical practitioner)", "on_fail": "REFER"},
+            {"criterion": "Infection is not widespread and multiple family/community members are not affected (topical antibiotics inappropriate otherwise)", "on_fail": "REFER"},
+            {"criterion": "Paediatric patient does not require oral antibiotics (if required: GP referral, no initiation of antibiotic treatment by the pharmacist)", "on_fail": "REFER"},
+            {"criterion": "Supply within 5 days of therapy (or a higher quantity as specified in the Authority)", "on_fail": "REFER"},
+            {"criterion": "Supply is of a formulation listed in the Authority (nasal ointment excluded)", "on_fail": "REFER"},
+            {"criterion": "No combination of antibiotics, corticosteroid creams, antivirals, antifungals supplied all at once", "on_fail": "STOP"},
+            {"criterion": "Benzathine benzylpenicillin not supplied (excluded from the scope of practice)", "on_fail": "REFER"},
+            {"criterion": "If patient aged 65 years or older: simultaneous referral for follow-up by a medical practitioner arranged", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 11, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Comprehensive advice and counselling (including supporting written information when required) as per the Therapeutic Guidelines, the Australian Medicines Handbook and other relevant resources, regarding: Individual product and medicine use (dosing and duration); Non-pharmacological, general, and preventative measures; How to manage adverse effects of treatment; When/how to seek further care and/or treatment from a medical practitioner; Recognising complications of impetigo, particularly ARF and APSGN; Follow-up care and review. 'Discussing the treatment regimen with patients and parent/caregiver reduces the risk that antibiotics will be used incorrectly. Where the patient or caregiver's ability/motivation to correctly use topical treatment is in doubt (e.g. where there are multiple sores) a referral to a medical practitioner should be organised.'",
+          "gates": [
+            {"criterion": "Patient or caregiver able and motivated to correctly use topical treatment", "on_fail": "REFER"},
+            {"criterion": "Counselling on dosing and duration, adverse effects, when to seek further care, and recognising ARF/APSGN complications completed", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Follow-up and review: 'Clinical review with the pharmacist is generally not required.' 'If the condition does not improve or resolve, or worsens (within 5 days), the patient should be advised to see a medical practitioner for further management.' Flowchart final box: 'Communicate agreed management plan with patient and patient's medical practitioner. Document all aspects of management plan.'",
+          "gates": [
+            {"criterion": "Condition improves or resolves within 5 days", "on_fail": "REFER"},
+            {"criterion": "Agreed management plan communicated with patient and patient's medical practitioner and documented", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Clinical documentation and communication: 'The pharmacist must make an electronic clinical record, and a record in a pharmacy dispensing system regarding the supply of any medications under these services, in accordance with the Authority.' 'Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.' 'Pharmacists must make a full clinical record of the consultation and the details of all consultations and outcomes must be recorded using secure digital software. Records must be stored securely for a minimum of seven (7) years or, in the case of health information collected while the patient was under the age of 18 years, until the patient has attained the age of 25 years.' Consent to share: 'The pharmacist must seek consent to share a record of the consultation and any subsequent consultations (including adverse events) with the patient's usual treating medical practitioner or medical practice, where the patient has one. If the patient (or substituted decision maker) consents to the disclosure, the record must be shared within a week following the consultation.'",
+          "gates": [
+            {"criterion": "Electronic clinical record and pharmacy dispensing system record made for the supply", "on_fail": "STOP"},
+            {"criterion": "Record shared with patient and (if consented) usual treating medical practitioner within a week following the consultation", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "K. CLINICAL DOCUMENTATION AND COMMUNICATION"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Mupirocin",
+      "form": "ointment or cream (topical)",
+      "strength": "2%",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority",
+      "max_quantity": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "max_dose": "",
+      "quantity_to_supply": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "notes": "As printed: 'a. Mupirocin* 2% ointment or cream (topical)' with '*nasal ointment is excluded'. Strength/dose/frequency for individual use are not printed in this document - 'Pharmacotherapy as per the Therapeutic Guidelines: Impetigo' and counselling should cover 'Individual product and medicine use (dosing and duration)'. Topical antibiotics are considered sufficient treatment for the majority of patients where small areas of skin are affected; 'topical antibiotics are not appropriate if the infection is widespread, or multiple family/community members are affected, due to the risk of rapid antibiotic resistance.' Pregnancy/lactation caveat (verbatim): 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status'; 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'; history should include 'Pregnancy and lactation status (if applicable)' - no numeric dose or method-specific lactation restriction is printed here. Paediatric caveat (verbatim): 'Patients must be aged 2 years or older to be eligible for the service.'; 'Pharmacists can only treat mild presentations of impetigo in paediatric patients. Any paediatric patient requiring oral antibiotics requires a referral to a GP (with no initiation of antibiotic treatment by the pharmacist).' Contraindications within protocol: no supply to patients with a 'No' in the Treat column of the Section G table; no combinations of antibiotics, corticosteroid creams, antivirals, antifungals all at once.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "Dicloxacillin",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority",
+      "max_quantity": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "max_dose": "",
+      "quantity_to_supply": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "notes": "As printed: 'b. Dicloxacillin (oral)'. No strength/dose/frequency printed - 'Pharmacotherapy as per the Therapeutic Guidelines: Impetigo'; counselling should cover 'Individual product and medicine use (dosing and duration)'. Oral antibiotics are needed if large areas of skin are involved or if there are multiple patches. Paediatric caveat (verbatim): 'Any paediatric patient requiring oral antibiotics requires a referral to a GP (with no initiation of antibiotic treatment by the pharmacist). If oral antibiotics are indicated in a paediatric patient, the patient should be offered cefalexin liquid formulation in the first instance due to better tolerance than dicloxacillin or flucloxacillin.' Pregnancy/lactation caveat (verbatim): 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status'; 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'; history should include 'Pregnancy and lactation status (if applicable)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "Flucloxacillin",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority",
+      "max_quantity": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "max_dose": "",
+      "quantity_to_supply": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "notes": "As printed: 'c. Flucloxacillin (oral)'. No strength/dose/frequency printed - 'Pharmacotherapy as per the Therapeutic Guidelines: Impetigo'; counselling should cover 'Individual product and medicine use (dosing and duration)'. Oral antibiotics are needed if large areas of skin are involved or if there are multiple patches. Paediatric caveat (verbatim): 'Any paediatric patient requiring oral antibiotics requires a referral to a GP (with no initiation of antibiotic treatment by the pharmacist). If oral antibiotics are indicated in a paediatric patient, the patient should be offered cefalexin liquid formulation in the first instance due to better tolerance than dicloxacillin or flucloxacillin.' Pregnancy/lactation caveat (verbatim): 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status'; 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'; history should include 'Pregnancy and lactation status (if applicable)'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "Cefalexin",
+      "form": "oral (liquid formulation in paediatric cases)",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority",
+      "max_quantity": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "max_dose": "",
+      "quantity_to_supply": "up to 5 days of therapy (or a higher quantity as specified in the Authority)",
+      "notes": "As printed: 'd. Cefalexin (oral)'. Paediatric preference (verbatim): 'If oral antibiotics are indicated in a paediatric patient, the patient should be offered cefalexin liquid formulation in the first instance due to better tolerance than dicloxacillin or flucloxacillin.' - note this is in the context where 'Any paediatric patient requiring oral antibiotics requires a referral to a GP (with no initiation of antibiotic treatment by the pharmacist)'. No strength/dose/frequency printed - 'Pharmacotherapy as per the Therapeutic Guidelines: Impetigo'; counselling should cover 'Individual product and medicine use (dosing and duration)'. Pregnancy/lactation caveat (verbatim): 'Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status'; 'Pharmacists must consult the Therapeutic Guidelines and other relevant references to confirm management is appropriate, including for: ... Pregnancy and lactation'; history should include 'Pregnancy and lactation status (if applicable)'.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 11, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "'Severe or widespread or painful rash' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "'Raised purple rash that doesn't blanch' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "'Generalised erythema that covers 90% or more of the skin surface' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": {"parameter": "generalised_erythema_skin_surface_coverage", "operator": ">=", "value": 90, "unit": "%"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "'Signs of sepsis, systemic illness or other complications including Acute Poststreptococcal Glomerulonephritis (APSGN) and Acute Rheumatic Fever (ARF) such as: fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "'Blistering of the skin and mucous membranes (including mouth and eyes)' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "'Bullous lesions and/or ecthyma' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "'Cellulitis, gangrene and/or bacteraemia' (table: Treat = No; Referral = Urgent: ED)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "'Lymphadenopathy or lymphadenitis' (table: Treat = No; Referral = Urgent: ED or GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "'Chronic sores or ulcers' (table: Treat = No; Referral = Urgent: ED or GP)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "'Symptoms not resolved or worsened after treatment (within 5 days)' (table: Treat = No; Referral = Urgent: ED or GP)",
+      "structured": {"parameter": "days_after_treatment_start", "operator": ">=", "value": 5, "unit": "days"},
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "'Severe disease' (table: Treat = No; Referral = Urgent: ED or GP). Also: 'Pharmacists must refer all presentations of severe disease for urgent medical practitioner review without commencing any therapy.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "'Immunocompromised patients - due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, prednisone therapy)' (table: Treat = No; Referral column shows 'Urgent: ED' in the extraction - see open_questions)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "unclear",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "'Paediatric patient requiring oral antibiotics (*pharmacists can only manage mild presentations of impetigo. All moderate to severe presentations require referral to a medical practitioner. Oral antibiotics in paediatric cases are indicated for severe presentations only.)' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "'Red flag' signs"}
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "'Patients aged 65 years and older (**patients in this age range must be simultaneously referred to a medical practitioner and cannot receive multiple consultation without confirming they have also received medical practitioner follow-up)' (table: Treat = Yes; Referral = GP)",
+      "structured": {"parameter": "age", "operator": ">=", "value": 65, "unit": "years"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "'The patient is below 2 years of age' (table: Treat = No; Referral = GP); flowchart: 'Is the patient >=2 years old?' - No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.'",
+      "structured": {"parameter": "age", "operator": "<", "value": 2, "unit": "years"},
+      "action": "NOT_ELIGIBLE",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "'The diagnosis is unclear' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "'Vesicles in more than one location' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "'Symptoms have not resolved after the first course of antibiotic treatment, or symptoms worsen' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "'Recurrent impetigo (defined as 2 or more presentations in the same year in an adult...)' (table: Treat = No; Referral = GP). Also: 'Recurrent impetigo presentations require referral to a medical practitioner for investigations (swabs) and management, especially if recurrence occurs in a short time (within months).'",
+      "structured": {"parameter": "impetigo_presentations_in_same_year_adult", "operator": ">=", "value": 2, "unit": "presentations"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "'Recurrent impetigo (... and more than 1 presentation in the same year in a child)' (table: Treat = No; Referral = GP)",
+      "structured": {"parameter": "impetigo_presentations_in_same_year_child", "operator": ">", "value": 1, "unit": "presentations"},
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "'Patient requires swabbing and further investigations or decolonisation' (table: Treat = No; Referral = GP). 'Antibacterial washes, staphylococcal carriage identification and decolonisation are important in recurrent presentations.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "'The patient has an underlying medical condition or a suspected co-occurring condition that may lead to complications (e.g. viral infection, eczema herpeticum/herpes simplex, contact dermatitis, atopic dermatitis, scabies)' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "'Food and/or drinking aversion in children' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'The patient is currently, or has recently resided in a community where impetigo is endemic, such as refugees or migrants from low-middle income countries, rural and remote communities (refer to table \"Individuals at high risk of developing ARF\")' (table: Treat = No; Referral = GP)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'Pharmacists need to be alert to the complex nature of presentations of impetigo and any suspicions of co-occurring or underlying conditions or atypical presentations must be referred to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'Red flag symptoms (listed in the table above) are suggestive of other serious conditions and require immediate referral to a medical practitioner for assessment.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'Impetigo can lead to more serious illnesses such as sepsis, ARF, rheumatic heart disease and APSGN. Caution must be exercised by pharmacists managing patients with suspected complex presentations of sepsis, ARF, rheumatic heart disease and APSGN. Pharmacists are required to immediately refer these patients to an emergency department for urgent medical assessment.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'MRSA is a common cause of recurrent infection, and non-responders to therapy are often infected with MRSA. These situations require referral to a medical practitioner for further investigations including culture and susceptibility testing where appropriate, and management.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'Recurrent infections are a red flag for underlying immunodeficiency and require urgent investigation.' (Recurrent impetigo defined as 2 or more presentations in the same year in an adult, and more than 1 presentation in the same year in a child)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 7, "section_heading": "H. BACKGROUND"}
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'Patients with ecthyma need to be referred to a medical practitioner' (ecthyma: ulcerative form of impetigo, lesions extend through the epidermis and deep into the dermis; crusted sores with underlying 'punched out' ulcers)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 8, "section_heading": "Clinical presentations of impetigo"}
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "'Patients with mild impetigo ... should have a swab taken for culture and susceptibility testing if there is no response to empirical therapy. In this instance, a pharmacist must refer to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 9, "section_heading": "Investigations (swabs)"}
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "'Patients presenting with more severe disease require a skin swab for culture and susceptibility testing before empirical antibiotic therapy is started. Pharmacists must refer all presentations of severe disease for urgent medical practitioner review without commencing any therapy.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 9, "section_heading": "Investigations (swabs)"}
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "'Use of benzathine benzylpenicillin is excluded from the scope of practice, and requires referral to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 11, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "id": "RF-34",
+      "trigger_text": "'Where the patient or caregiver's ability/motivation to correctly use topical treatment is in doubt (e.g. where there are multiple sores) a referral to a medical practitioner should be organised.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "id": "RF-35",
+      "trigger_text": "'If the condition does not improve or resolve, or worsens (within 5 days), the patient should be advised to see a medical practitioner for further management.'",
+      "structured": {"parameter": "days_after_treatment_start", "operator": ">=", "value": 5, "unit": "days"},
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "id": "RF-36",
+      "trigger_text": "'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    },
+    {
+      "id": "RF-37",
+      "trigger_text": "'Patients who have requested the service but are not eligible for management should be referred to their regular medical practitioner or health service.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "Key points"}
+    },
+    {
+      "id": "RF-38",
+      "trigger_text": "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration ... by reporting online at https://aems.tga.gov.au/. Additionally, you must notify the patient's usual general practitioner (if they have one).'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}
+    },
+    {
+      "id": "RF-39",
+      "trigger_text": "'Patients who meet any of the urgent referral criteria below must be referred to their regular medical practitioner, maternity provider, health service, or Emergency Department (ED) as indicated in the table.'",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'refer to their regular medical practitioner or health service' (patients who requested the service but are not eligible for management)",
+      "'Patients who require non-urgent referral to a GP or a healthcare provider are to be referred in accordance with the usual referral processes.'",
+      "'Urgent: ED or GP' (table rows: Lymphadenopathy or lymphadenitis; Chronic sores or ulcers; Symptoms not resolved or worsened after treatment (within 5 days); Severe disease)",
+      "'GP' (table rows: Paediatric patient requiring oral antibiotics; The patient is below 2 years of age; The diagnosis is unclear; Vesicles in more than one location; Symptoms have not resolved after the first course of antibiotic treatment, or symptoms worsen; Recurrent impetigo; Patient requires swabbing and further investigations or decolonisation; underlying medical condition or suspected co-occurring condition; Food and/or drinking aversion in children; currently or recently resided in a community where impetigo is endemic)",
+      "'Patients aged 65 years and older ... must be simultaneously referred to a medical practitioner' / 'must be simultaneously referred for follow-up by a medical practitioner'",
+      "'Any paediatric patient requiring oral antibiotics requires a referral to a GP (with no initiation of antibiotic treatment by the pharmacist)'",
+      "'Use of benzathine benzylpenicillin is excluded from the scope of practice, and requires referral to a medical practitioner.'",
+      "'a referral to a medical practitioner should be organised' (patient or caregiver ability/motivation to use topical treatment in doubt)",
+      "'should be advised to see a medical practitioner for further management' (condition does not improve or resolve, or worsens within 5 days)",
+      "'a pharmacist must refer to a medical practitioner' (no response to empirical therapy - swab for culture and susceptibility testing)",
+      "'Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care.'"
+    ],
+    "urgent": [
+      "'Urgent: ED' (table rows: Severe or widespread or painful rash; Raised purple rash that doesn't blanch; Generalised erythema that covers 90% or more of the skin surface; Signs of sepsis, systemic illness or other complications including APSGN and ARF; Blistering of the skin and mucous membranes (including mouth and eyes); Bullous lesions and/or ecthyma; Cellulitis, gangrene and/or bacteraemia; Immunocompromised patients)",
+      "'Red flag symptoms (listed in the table above) are suggestive of other serious conditions and require immediate referral to a medical practitioner for assessment.'",
+      "'Pharmacists are required to immediately refer these patients to an emergency department for urgent medical assessment.' (suspected complex presentations of sepsis, ARF, rheumatic heart disease and APSGN)",
+      "'Pharmacists must refer all presentations of severe disease for urgent medical practitioner review without commencing any therapy.'",
+      "'Recurrent infections are a red flag for underlying immunodeficiency and require urgent investigation.'"
+    ],
+    "emergency": [],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA"}
+  },
+  "review_followup": [
+    {
+      "when": "If the condition does not improve or resolve, or worsens (within 5 days)",
+      "what": "'the patient should be advised to see a medical practitioner for further management.' (Also table row: 'Symptoms not resolved or worsened after treatment (within 5 days)' - Treat = No, Referral = Urgent: ED or GP)",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "when": "Routine follow-up after supply",
+      "what": "'Clinical review with the pharmacist is generally not required.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 12, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN"}
+    },
+    {
+      "when": "Patients aged 65 years and older - before any repeat/multiple consultation for this condition",
+      "what": "'cannot receive multiple consultation without confirming they have also received medical practitioner follow-up' / 'must be simultaneously referred for follow-up by a medical practitioner'.",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 6, "section_heading": "Details of presenting complaint"}
+    },
+    {
+      "when": "Within a week following the consultation (if the patient or substituted decision maker consents)",
+      "what": "'the record must be shared within a week following the consultation.' (record of the consultation and any subsequent consultations, including adverse events, with the patient's usual treating medical practitioner or medical practice, where the patient has one)",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT"}
+    },
+    {
+      "when": "Minimum seven (7) years from record creation, or until the patient attains 25 years where information was collected under age 18",
+      "what": "'Records must be stored securely for a minimum of seven (7) years or, in the case of health information collected while the patient was under the age of 18 years, until the patient has attained the age of 25 years.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 4, "section_heading": "Key points"}
+    },
+    {
+      "when": "If there is no response to empirical therapy (mild impetigo)",
+      "what": "'should have a swab taken for culture and susceptibility testing ... In this instance, a pharmacist must refer to a medical practitioner.'",
+      "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 9, "section_heading": "Investigations (swabs)"}
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "'If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/.'",
+      "'Additionally, you must notify the patient's usual general practitioner (if they have one).'",
+      "'Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.'",
+      "'The pharmacist must make an electronic clinical record, and a record in a pharmacy dispensing system regarding the supply of any medications under these services, in accordance with the Authority.'"
+    ],
+    "provenance": {"pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-impetigo.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS"}
+  },
+  "references": [
+    "1. American Academy of Dermatology Association. 10 tips to prevent spreading impetigo, and avoid getting it again. 2025. Available from: https://www.aad.org/public/diseases/a-z/impetigo-self-care (page 13)",
+    "2. Australian Medicines Handbook Pty Ltd. Antibacterials. Australian Medicines Handbook; 2025. Available from: https://amhonline.amh.net.au.acs.hcn.com.au/chapters/anti-infectives/antibacterials (page 13)",
+    "3. Australian Medicines Handbook Pty Ltd. Antibacterials (skin). Australian Medicines Handbook; 2025. Available from: https://amhonline.amh.net.au.acs.hcn.com.au/chapters/dermatological-drugs/drugs-skin-infections/antibacterials-skin (page 13)",
+    "4. Baddour L. Impetigo. UpToDate; 2025. Available from: https://www.uptodate.com.acs.hcn.com.au/contents/impetigo?search=impetigo&source=search_result&selectedTitle=1%7E87&usage_type=default&display_rank=1 (pages 13-14)",
+    "5. Baddour L. Patient education: Impetigo (Beyond the Basics). UpToDate; 2024. Available from: https://www.uptodate.com.acs.hcn.com.au/contents/impetigo-beyond-the-basics (page 14)",
+    "6. Bakis-Petsoglou S. Impetigo. Australasian College of Dermatologists; 2019. Available from: https://www.dermcoll.edu.au/atoz/impetigo/ (page 14)",
+    "7. DermNet: DermNet New Zealand Trust; 2025. Available from: https://dermnetnz.org/ (page 14)",
+    "8. DynaMed. Impetigo. EBSCO Industries; 2023. Available from: https://www.dynamed.com/condition/impetigo (page 14)",
+    "9. DynaMed. Ipswich (MA). EBSCO Industries. 2025. Available from: https://www.dynamed.com/ (page 14)",
+    "10. Gahlawat G, Tesfaye W, Bushell M, Abrha S, Peterson GM, Mathew C, et al. Emerging Treatment Strategies for Impetigo in Endemic and Nonendemic Settings: A Systematic Review. Clinical Therapeutics. 2021;43(6):986-1006. (page 14)",
+    "11. Hartmann-Adams H, Banvard C, Juckett G. Impetigo: Diagnosis and Treatment. American Family Physician. 2014;15(90):229-35. (page 14)",
+    "12. Healthdirect Australia Limited: Impetigo. Healthdirect; 2023. Available from: https://www.healthdirect.gov.au/impetigo (page 14)",
+    "13. Marquardt T. Managing skin infections in Aboriginal and Torres Strait Islander children. Australian Family Physician. 2014;43(1):16-9. Available from: https://www.racgp.org.au/afp/2014/januaryfebruary/managing-skin-infections/ (page 14)",
+    "14. Menzies School of Health Research. RHDAustralia: ARF and RHD Guideline. 2025. Available from: https://rhdaustralia.org.au/arf-rhd-guidelines/ (page 14)",
+    "15. Menzies School of Health Research. RHDAustralia: Clinical Support App. 2025. Available from: https://rhdaustralia.org.au/apps/ (page 14)",
+    "16. National Institute for Health and Care Excellence (NICE). Impetigo: antimicrobial prescribing. London: Public Health England; 2020. Available from: https://www.nice.org.uk/guidance/ng153 (page 14)",
+    "17. Ngan V, Gomez J. Ecthyma: DermNet New Zealand Trust; 2016. Available from: https://dermnetnz.org/topics/ecthyma (page 14)",
+    "18. Northern Territory Government. Acute post-streptococcal glomerulonephritis. Darwin: Northern Territory Government; 2022. Available from: https://nt.gov.au/wellbeing/health-conditions/acute-post-streptococcal-glomerulonephritis (page 14)",
+    "19. NSW Health. Impetigo (school sores) fact sheet. NSW Ministry of Health; 2024. Available from: https://www.health.nsw.gov.au/Infectious/factsheets/Pages/impetigo.aspx (page 14)",
+    "20. Oakley A, Quirke K. Impetigo: DermNet New Zealand Trust; 2022. Available from: https://dermnetnz.org/topics/impetigo/ (page 14)",
+    "21. Panesar P, Green E. Case-based learning: impetigo. The Pharmaceutical Journal. 2020;305(7941). (page 14)",
+    "22. Queensland Health, Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. 12th ed. Cairns (AU): Office of Rural and Remote Health, Queensland Government; 2025. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0022/1447051/PCCM_full.pdf (pages 14-15)",
+    "23. Queensland Health. Queensland Community Pharmacy Impetigo - Clinical Practice Guideline. Queensland Health; 2025. Available from: https://www.health.qld.gov.au/__data/assets/pdf_file/0020/1304246/impetigo-guideline.pdf (page 15)",
+    "24. Ralph AP, Noonan S, Wade V, Currie BJ. The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease. Medical Journal of Australia. 2021;214(5):220-7. (page 15)",
+    "25. Rehmus W. Impetigo and Ecthyma. MSD Manual Professional Version. Merck & Co; 2023. Available from: https://www.msdmanuals.com/professional/dermatologic-disorders/bacterial-skin-infections/impetigo-and-ecthyma (page 15)",
+    "26. Rhiannon R, Dana S, Ian M, John WF. Cutaneous infection and atopic dermatitis: The importance of early intervention in Indigenous children in Australia. Wound Practice & Research: Journal of the Australian Wound Management Association. 2022. (page 15)",
+    "27. The Australian Healthy Skin Consortium. National Healthy Skin Guideline: for the Diagnosis, Treatment and Prevention of Skin Infections for Aboriginal & Torres Strait Islander Children and Communities in Australia (2nd edition). Telethon Kids Institute; 2023. Available from: https://www.thekids.org.au/globalassets/media/documents/our-research/healthy-skin-arf/hsg-digital-04-12-2023.pdf (page 15)",
+    "28. The Healthy Skin & ARF Prevention Team, Bowen AC, Recognising & Treating Skin Infections: A visual clinical handbook, 4th edition, Telethon Kids Institute; 2023. Available from: https://www.thekids.org.au/globalassets/media/documents/our-research/healthy-skin-arf/nhsg_recognising--treating-skin-infections_4th-ed.-2023_formatted-v1-04-12-2023.pdf (page 15)",
+    "29. Therapeutic Guidelines: Antibiotic (Acute Rheumatic Fever). Melbourne: Therapeutic Guidelines Limited; 2025. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=rheumatic-fever&guidelinename=Antibiotic&sectionId=toc_d1e47#toc_d1e47 (page 15)",
+    "30. Therapeutic Guidelines: Antibiotic (Impetigo). Melbourne: Therapeutic Guidelines Limited; 2025. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=c_ABG_Impetigo_topic_1&guidelinename=auto&sectionId=c_ABG_Impetigo_topic_1#c_ABG_Impetigo_topic_1 (page 15)",
+    "31. Therapeutic Guidelines [Digital]. Melbourne: Therapeutic Guidelines Limited. Available from: https://www.tg.org.au/ (page 15)",
+    "32. The Royal Children's Hospital Melbourne. Impetigo (School Sores) Melbourne: RCHM; 2020. Available from: https://www.rch.org.au/kidsinfo/fact_sheets/impetigo_school_sores/ (page 15)",
+    "33. Thomas, Hannah M MAmgarth-Duff, Ingrid et al. Trimodal skin health programme for childhood impetigo control in remote Western Australia (SToP): a cluster randomised, stepped-wedge trial. The Lancet Child & Adolescent Health, Volume 8, Issue 11, 809 - 820 (page 15)",
+    "34. UpToDate. Patient education: Impetigo (The Basics). UpToDate; 2025. Available from: https://www.uptodate.com.acs.hcn.com.au/contents/impetigo-the-basics (page 15)",
+    "35. U.S. Centers for Disease Control and Prevention (CDC). Clinical Guidance for Acute Rheumatic Fever. CDC; 2025. Available from: https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/acute-rheumatic-fever.html (pages 15-16)",
+    "36. U.S. Centers for Disease Control and Prevention (CDC). Clinical Guidance for Group A Streptococcal Impetigo. CDC; 2025. Available from: https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/impetigo.html (page 16)",
+    "37. U.S. Centers for Disease Control and Prevention (CDC). Clinical Guidelines for Post-Streptococcal Glomerulonephritis. CDC; 2025. Available from: https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/post-streptococcal-glomerulonephritis.html (page 16)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Flowchart Yes/No branch labels interleaved in text extraction",
+      "observed": "Page 3 extraction interleaves the boxes and branch labels: 'Does the patient have any red flags, or exclusions?' appears together with 'Check Section G (Patient eligibility and referral criteria) to determine if patient may be treated and/or must be referred for GP or ED management.' and stray 'Yes'/'No' tokens; the consent box similarly interleaves 'Not eligible for management ... Refer to GP.'",
+      "why_unclear": "Which exact branch label attaches to which connector cannot be confirmed from text alone. Readings captured: age No -> refer to GP (explicit); consent No -> 'Not eligible ... Refer to GP' (explicit); red flag Yes -> Section G check (annotation text). Verify against the printed flowchart.",
+      "source_page": 3
+    },
+    {
+      "topic": "Immunocompromised row referral column ambiguous",
+      "observed": "Rows 8-11 each print 'Urgent: ED' followed by 'or GP' on the next line, but the 'Immunocompromised patients' row shows 'Urgent: ED' with its bullet sub-details and no 'or GP' before the next row begins.",
+      "why_unclear": "Table extraction alignment is ambiguous; whether immunocompromised patients are 'Urgent: ED' only or 'Urgent: ED or GP' cannot be confirmed. EXC-12/RF-12 marked confidence unclear.",
+      "source_page": 5
+    },
+    {
+      "topic": "Rotated table headers extracted reversed",
+      "observed": "Headers appear as 'sngis gninraw 'gafl deR' (page 5) and 'tnialpmoc gnitneserp fo sliateD' (page 6).",
+      "why_unclear": "Reversed/rotated text interpreted as \"'Red flag' signs\" and \"Details of presenting complaint\" respectively; interpretation used as section_heading.",
+      "source_page": 5
+    },
+    {
+      "topic": "Immunocompromised bullet wording possibly mis-OCR'd",
+      "observed": "'due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, ...'",
+      "why_unclear": "'transplant or GP recipients' is clinically odd (possibly 'transplant recipients' or similar); transcribed verbatim, not reconciled.",
+      "source_page": 5
+    },
+    {
+      "topic": "No dose, frequency or dosing duration printed for Approved Medicines",
+      "observed": "Section A lists only: Mupirocin* 2% ointment or cream (topical); Dicloxacillin (oral); Flucloxacillin (oral); Cefalexin (oral). Dosing is deferred: 'Pharmacotherapy as per the Therapeutic Guidelines: Impetigo' and counselling should cover 'Individual product and medicine use (dosing and duration)'.",
+      "why_unclear": "Exact dose/frequency/duration per drug are not printed in this document, so treatment dose/frequency fields are left empty rather than inferred.",
+      "source_page": 2
+    },
+    {
+      "topic": "Tension between 'advanced age' in the immunocompromised exclusion and Treat = Yes for patients aged 65+",
+      "observed": "'advanced age' is listed as an example of underlying conditions for immunocompromised patients (Treat = No), yet the row 'Patients aged 65 years and older' has Treat = Yes (with mandatory simultaneous referral).",
+      "why_unclear": "The boundary between 'advanced age' as an exclusion and the explicit 65+ treatable row is not defined; captured as EXE-1 (exclusion exception) and an open question.",
+      "source_page": 6
+    },
+    {
+      "topic": "'higher quantity as specified in the Authority' not printed",
+      "observed": "'Pharmacists can supply up to 5 days of therapy before referring a patient to a medical practitioner, or a higher quantity as specified in the Authority.'",
+      "why_unclear": "The higher quantity is specified in an external document (the Authority) not included here; quantity_to_supply limited to the printed 5-day statement.",
+      "source_page": 4
+    },
+    {
+      "topic": "Legal basis not named",
+      "observed": "No regulation or poisons schedule provision cited; document references 'the NSW Health Authority (dated 28 August 2026)' and approval by the Chief Health Officer on 28 August 2026, delivered under the Community Pharmacy Dermatology Service.",
+      "why_unclear": "The provision under which pharmacists may supply cannot be determined from the document text.",
+      "source_page": 17
+    },
+    {
+      "topic": "No emergency referral category printed",
+      "observed": "Referral destinations in the table are only 'Urgent: ED', 'Urgent: ED or GP' and 'GP'; the document uses 'urgent referral criteria' language but never a separate 'emergency' category, ambulance/000 instruction, or escalation to ESCALATE_000.",
+      "why_unclear": "referral.emergency left empty because the document specifies none; ED destinations recorded under 'urgent' to match the document's own wording.",
+      "source_page": 5
+    },
+    {
+      "topic": "Five-day timing wording for non-resolution",
+      "observed": "'Symptoms not resolved or worsened after treatment (within 5 days)' and 'If the condition does not improve or resolve, or worsens (within 5 days)'.",
+      "why_unclear": "'within 5 days' could mean review at or after day 5, or referral if failure occurs inside 5 days. Structured as days_after_treatment_start >= 5 with confidence medium - verify intended timing.",
+      "source_page": 12
+    },
+    {
+      "topic": "First-line designation limited to paediatric oral agent",
+      "observed": "'the patient should be offered cefalexin liquid formulation in the first instance due to better tolerance than dicloxacillin or flucloxacillin' (paediatric oral antibiotic context only). No first-line ranking is printed for topical therapy or adults.",
+      "why_unclear": "TX-4 marked first_line true only for the paediatric oral context; TX-1..TX-3 marked false because no first-line statement exists for them.",
+      "source_page": 11
+    },
+    {
+      "topic": "Gates with on_fail 'unclear'",
+      "observed": "PW-1-S5 (sufficient information; contraindication/interaction review), PW-1-S9 (counselling completed), PW-1-S10 (management plan communicated and documented) and PW-1-S11 (record shared within a week) have on_fail 'unclear'.",
+      "why_unclear": "Requirements are stated but failure consequences are not printed; spec requires 'unclear' plus an open question.",
+      "source_page": 10
+    },
+    {
+      "topic": "No numeric dose/age thresholds beyond 2 years and 65 years",
+      "observed": "age_bounds set min_years 2, max_years null. Other ages printed are risk-group ages (ARF high-risk table 'Individuals aged 40 years and under', 'particularly 5 to 20 years'; APSGN most commonly children 12 months-17 years; ARF most frequently children 5-14 years), which are background epidemiology rather than eligibility bounds.",
+      "why_unclear": "These ages are not eligibility limits and were not converted into age_bounds.",
+      "source_page": 10
+    },
+    {
+      "topic": "ARF high-risk individuals table has no stated action",
+      "observed": "'Individuals at high risk of developing ARF' (page 10) lists individuals aged 40 years and under with risk factors (Aboriginal and Torres Strait Islander people in rural/remote areas, household overcrowding >2 people per bedroom, lower socioeconomic status; Maori and/or Pacific Islander; recent personal or family/household history of ARF or RHD; additional factors for <=40 years) but no referral or treatment instruction is attached.",
+      "why_unclear": "Not converted into a red flag because no escalation trigger is stated; it informs history/risk assessment only.",
+      "source_page": 10
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Legal basis for pharmacist supply under the Community Pharmacy Dermatology Service (which regulation/poisons schedule provision the Practice Standard operates under).",
+      "source_page": 17,
+      "reason": "Document names only 'the NSW Health Authority (dated 28 August 2026)' and Chief Health Officer approval; no instrument cited."
+    },
+    {
+      "item": "Current Approved Medicines list in the external NSW Health Authority (dated 28 August 2026) - confirm formulations match Mupirocin 2% (nasal ointment excluded), Dicloxacillin, Flucloxacillin, Cefalexin.",
+      "source_page": 2,
+      "reason": "'Approved Medicines are listed in the NSW Health Authority' and 'Pharmacists must only supply formulations listed in the Authority' - the Authority list is external to this PDF."
+    },
+    {
+      "item": "Exact training requirements in the NSW Health Authority (dated 28 August 2026) that pharmacists must have completed.",
+      "source_page": 2,
+      "reason": "General requirements refer to externally detailed training; specific course not printed."
+    },
+    {
+      "item": "Dose, frequency and duration regimens for Mupirocin 2%, Dicloxacillin, Flucloxacillin and Cefalexin (per Therapeutic Guidelines: Impetigo / Australian Medicines Handbook) before encoding into the rules engine.",
+      "source_page": 11,
+      "reason": "This document defers pharmacotherapy detail to external guidelines; no dose/frequency printed here."
+    },
+    {
+      "item": "'A higher quantity as specified in the Authority' beyond the 5-day therapy supply limit - obtain the quantity schedule.",
+      "source_page": 4,
+      "reason": "Supply quantity rule is partly external; needed to enforce quantity_to_supply."
+    },
+    {
+      "item": "Verify the printed Patient Assessment Flowchart (page 3) branch labels and the Section G referral table column alignment (especially the Immunocompromised row) against the PDF.",
+      "source_page": 5,
+      "reason": "Text extraction interleaves flowchart boxes/branches and shifts the table's 'or GP' markers; confidence unclear on those items."
+    },
+    {
+      "item": "Local workflow for patients aged 65 years and older: simultaneous referral for medical practitioner follow-up and blocking repeat/multiple consultations until follow-up confirmed.",
+      "source_page": 6,
+      "reason": "Operational control is stated but implementation is local policy."
+    },
+    {
+      "item": "Record retention rule: minimum seven (7) years, or health information collected under age 18 until the patient attains 25 years; secure digital software and My Health Record upload conventions.",
+      "source_page": 4,
+      "reason": "Systems/records configuration is left to local policy."
+    },
+    {
+      "item": "Consent workflow: consent to share record with usual treating medical practitioner and sharing 'within a week following the consultation'; consent categories (participation, financial, communication with other health practitioners).",
+      "source_page": 4,
+      "reason": "Communication workflow must be confirmed locally before go-live."
+    },
+    {
+      "item": "Referral destination mapping for each table row (Urgent: ED vs Urgent: ED or GP vs GP) and the local 'established referral pathways' to be used.",
+      "source_page": 5,
+      "reason": "The document says referrals follow 'established referral pathways' and 'usual referral processes' without naming local destinations."
+    },
+    {
+      "item": "Reconciliation of 'advanced age' (immunocompromised exclusion, Treat = No) with 'Patients aged 65 years and older' (Treat = Yes) - which age boundary governs when both could apply.",
+      "source_page": 6,
+      "reason": "Document does not define the boundary; could cause contradictory eligibility decisions."
+    },
+    {
+      "item": "Emergency escalation: document prints no emergency/000 instruction - confirm local emergency pathway for suspected sepsis, ARF, rheumatic heart disease or APSGN presentations.",
+      "source_page": 7,
+      "reason": "referral.emergency is empty because the document specifies none; only 'Urgent: ED' is printed."
+    }
+  ]
+}

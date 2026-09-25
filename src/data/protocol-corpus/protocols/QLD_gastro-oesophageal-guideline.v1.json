@@ -1,0 +1,330 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline",
+    "pdf_sha256": "f87431f036252974dad39dddb7b5397e19c92df297fc6d58014c9f9ec064835f",
+    "page_count": 8,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Gastro-oesophageal Reflux and Gastro-oesophageal Reflux Disease - Clinical Practice Guideline",
+    "instrument_version": "Version 2.0 (Version dated 1 July 2025); version history (page 7): Version 1.0 01.02.2024; Version 1.1 11.11.2024 (Administrative update.); Version 2.0 01.07.2025 (Updated to reflect current clinical guidance and improved usability across sections.)",
+    "effective_date": "1 July 2025",
+    "legal_basis": "Not printed in this document - no regulation or poisons schedule provision is cited; the guideline is issued by Queensland Health as a Queensland Community Pharmacy clinical practice guideline for a prescribing service (see open_questions).",
+    "supervision_model": "Not stated using the terms 'collaborative' or 'autonomous'. Document terminology: pharmacist 'prescribing service' - 'Pharmacist management of gastro-oesophageal reflux and GORD involves' non-pharmacological measures and pharmacotherapy per the Therapeutic Guidelines, with mandatory 'Refer when' criteria and the requirement that 'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines'.",
+    "scope_summary": "Clinical practice guideline for pharmacist management of gastro-oesophageal reflux and gastro-oesophageal reflux disease (GORD) in a Queensland Community Pharmacy prescribing service. Service restricted to patients aged 18 to 55 years of age. Covers key points and diagnostic definitions, patient history and assessment, examination, management plan development (dietary/lifestyle advice and pharmacotherapy per the Therapeutic Guidelines), confirmation that management is appropriate, communication of the plan, referral triggers ('Refer when'), general advice, clinical review (4-8 weeks) and supply-quantity limits. Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 to 55 years of age.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Gastro-oesophageal Reflux and Gastro-oesophageal Reflux Disease - Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "The fundamental signs of gastro-oesophageal reflux are heartburn and regurgitation (1, 2, 3).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4", "INC-5"] },
+        "confidence": "unclear",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-3",
+        "text": "gastro-oesophageal reflux symptoms that are frequent (2 or more episodes per week)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-4",
+        "text": "gastro-oesophageal reflux symptoms severe enough to significantly impair quality of life",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-5",
+        "text": "complications of gastro-oesophageal reflux are present",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4", "INC-5"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Key points" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "unclear diagnosis", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-2", "text": "chest pain as the primary symptom", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-3", "text": "symptoms of anaemia, including fatigue, shortness of breath, weakness, dizziness or an irregular heartbeat", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-4", "text": "difficulty or painful swallowing", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-5", "text": "prolonged or recurrent vomiting (longer than 24–48 hours)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-6", "text": "jaundice", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-7", "text": "haematemesis or melaena", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-8", "text": "unexplained weight loss", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-9", "text": "severe, frequent or changing symptoms", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-10", "text": "inadequate response to optimal treatment (8 weeks of PPI therapy at the standard dose).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": 55,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Gastro-oesophageal Reflux and Gastro-oesophageal Reflux Disease - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Gastro-oesophageal Reflux and Gastro-oesophageal Reflux Disease - Clinical Practice Guideline" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist assessment and management of gastro-oesophageal reflux and GORD",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient history and assessment. Presenting signs and symptoms: the clinical symptoms of GORD are common to multiple other conditions but can often be differentiated using the patient's history. In addition to the cardinal signs of heartburn and regurgitation other atypical symptoms attributed to reflux include: belching; epigastric pain; dyspepsia; acid brash (saliva mixing with stomach acid in the mouth) (1, 2). Extra-oesophageal symptoms that are associated with, but not specific to gastro-oesophageal reflux, may include: tooth sensitivity, enamel erosion (particularly on palatal surface of upper incisors) and halitosis; pharyngeal and laryngeal signs and symptoms such as hoarseness and throat clearing, persistent cough, sore throat, pharyngitis and sinusitis; chest pain; sleep disturbance; nausea; asthma-like symptoms (cough, wheeze, shortness of breath); early post-prandial satiety (3, 4, 5). Patient history: obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; weight; pregnancy and lactation status (if applicable); nature, severity and frequency of symptoms (typical, atypical and extra-oesophageal), including signs and symptoms that may indicate the need for referral; onset and duration of symptoms; precipitating and relieving factors; underlying medical conditions and conditions that may complicate diagnosis e.g., coronary heart disease and asthma; dietary patterns or changes; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); allergies/adverse drug reactions; pharmacological and non-pharmacological (dietary and lifestyle) strategies tried to treat current symptoms (page 4: alcohol and drug history; smoking status). Reminder (page 4): pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [
+            { "criterion": "No signs or symptoms that may indicate the need for referral (Refer when list, page 2)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 3, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination. Where appropriate, conduct assessment of vital signs.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EDUCATE",
+          "description": "Develop management plan - non-pharmacological measures. Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. The initial management of gastro-oesophageal reflux and GORD is based on the severity of symptoms; symptom control is the aim for most patients (3). Pharmacist management of gastro-oesophageal reflux and GORD involves: non-pharmacological measures - advice regarding dietary and lifestyle modification as per the Therapeutic Guidelines: Diet and lifestyle modification for the management of gastro-oesophageal reflux in adults (3). Severity branch (page 2, Key points): mild intermittent symptoms may be managed with diet and lifestyle modification only; however, on-demand ('when required') drug therapy may also be used if symptoms are significantly troublesome (3).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "TREAT",
+          "description": "Pharmacotherapy (NB1, NB2). pharmacotherapy NB1,2: as per the Therapeutic Guidelines: Gastrointestinal (Gastro-oesophageal reflux in adults) (3). Diagnosis note (page 2, Key points): response to a trial of proton pump inhibitors (PPIs) can help to confirm a diagnosis of GORD (2, 3); a trial of high dose PPIs has a sensitivity of 80% as a diagnostic test for GORD (1). NB1: The efficacy and availability of PPIs has led to overuse. Long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly (3, 6). NB2: Where regular drug therapy is required, consider referral to an appropriate healthcare provider (3).",
+          "gates": [
+            { "criterion": "Symptoms are significantly troublesome so that on-demand ('when required') drug therapy is used; mild intermittent symptoms may be managed with diet and lifestyle modification only", "on_fail": "SEE_PW-1-S3" },
+            { "criterion": "Regular drug therapy is not required (NB2: where regular drug therapy is required, consider referral to an appropriate healthcare provider)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate. Consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan. Comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual medicine use e.g., initial dosing, maintenance and step-down therapy; non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment; when to return for follow-up. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers), and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "General advice (patient-initiated escalation). At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: the condition does not improve with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI); ongoing maintenance treatment with a PPI is required; the patient's condition worsens, including developing systemic signs and symptoms; the patient develops new or changed signs or symptoms; adverse effects of treatment cannot be managed in the pharmacy setting.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review. Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines. Patients should return for a follow up consultation 4-8 weeks after initiation of a new therapy to assess: adherence to pharmacotherapy and non-pharmacological management strategies; response to treatment and if changes to the treatment plan are required (continue, modify, stop and/or refer). For patients continuing therapy, the frequency of further follow up appointments for maintenance and step-down therapy should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals, and based on recommendations in the Therapeutic Guidelines. Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+          "gates": [
+            { "criterion": "The condition improves with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI); inadequate response to optimal treatment (8 weeks of PPI therapy at the standard dose) is a Refer when trigger", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "proton pump inhibitors (PPIs)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "a quantity of medicine (including repeats) that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review; the total quantity prescribed should not exceed 12 months' supply (including repeats)",
+      "notes": "Class-level entry: no specific PPI medicine, strength, dose, frequency or duration is printed in this guideline; pharmacotherapy is specified only as 'As per the Therapeutic Guidelines: Gastrointestinal (Gastro-oesophageal reflux in adults) (3)' (page 4). Printed PPI statements: 'response to a trial of proton pump inhibitors (PPIs) can help to confirm a diagnosis of GORD (2, 3)' and 'A trial of high dose PPIs has a sensitivity of 80% as a diagnostic test for GORD (1)' (page 2, Key points). NB1 verbatim (page 4): 'The efficacy and availability of PPIs has led to overuse. Long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly (3, 6).' NB2 verbatim (page 4): 'Where regular drug therapy is required, consider referral to an appropriate healthcare provider (3).' Refer when trigger (page 2): 'inadequate response to optimal treatment (8 weeks of PPI therapy at the standard dose).' - the 'standard dose' is not defined in the document. General advice (page 5): see an appropriate healthcare provider if 'the condition does not improve with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI)' or if 'ongoing maintenance treatment with a PPI is required'. Pregnancy/lactation caveat verbatim (page 4, Confirm management is appropriate): confirm management is appropriate including for 'contraindications and precautions; drug interactions; pregnancy and lactation'; patient history should consider 'pregnancy and lactation status (if applicable)' (page 3). No first-line ranking is printed: initial management is based on the severity of symptoms; 'Mild intermittent symptoms may be managed with diet and lifestyle modification only. However, on-demand ('when required') drug therapy may also be used if symptoms are significantly troublesome (3)' (page 2). Non-pharmacological alternative (page 4): advice regarding dietary and lifestyle modification as per the Therapeutic Guidelines.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Develop management plan" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "unclear diagnosis", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-2", "trigger_text": "chest pain as the primary symptom", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-3", "trigger_text": "symptoms of anaemia, including fatigue, shortness of breath, weakness, dizziness or an irregular heartbeat", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-4", "trigger_text": "difficulty or painful swallowing", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-5", "trigger_text": "prolonged or recurrent vomiting (longer than 24–48 hours)", "structured": { "parameter": "duration of prolonged or recurrent vomiting", "operator": ">", "value": 24, "unit": "hours" }, "action": "REFER", "severity": "medium", "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-6", "trigger_text": "prolonged or recurrent vomiting (longer than 24–48 hours)", "structured": { "parameter": "duration of prolonged or recurrent vomiting", "operator": ">", "value": 48, "unit": "hours" }, "action": "REFER", "severity": "medium", "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-7", "trigger_text": "jaundice", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-8", "trigger_text": "haematemesis or melaena", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-9", "trigger_text": "unexplained weight loss", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-10", "trigger_text": "severe, frequent or changing symptoms", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-11", "trigger_text": "inadequate response to optimal treatment (8 weeks of PPI therapy at the standard dose).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-12", "trigger_text": "Where regular drug therapy is required, consider referral to an appropriate healthcare provider (3).", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Develop management plan" } },
+    { "id": "RF-13", "trigger_text": "the condition does not improve with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI)", "structured": { "parameter": "time to improvement after starting treatment with a PPI", "operator": ">", "value": 8, "unit": "weeks" }, "action": "REFER", "severity": "medium", "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } },
+    { "id": "RF-14", "trigger_text": "ongoing maintenance treatment with a PPI is required", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } },
+    { "id": "RF-15", "trigger_text": "the patient's condition worsens, including developing systemic signs and symptoms", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } },
+    { "id": "RF-16", "trigger_text": "the patient develops new or changed signs or symptoms", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } },
+    { "id": "RF-17", "trigger_text": "adverse effects of treatment cannot be managed in the pharmacy setting.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } }
+  ],
+  "referral": {
+    "routine": [
+      "Where regular drug therapy is required, consider referral to an appropriate healthcare provider (3).",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.",
+      "the condition does not improve with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI)",
+      "ongoing maintenance treatment with a PPI is required",
+      "the patient's condition worsens, including developing systemic signs and symptoms",
+      "the patient develops new or changed signs or symptoms",
+      "adverse effects of treatment cannot be managed in the pharmacy setting."
+    ],
+    "urgent": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:",
+      "unclear diagnosis",
+      "chest pain as the primary symptom",
+      "symptoms of anaemia, including fatigue, shortness of breath, weakness, dizziness or an irregular heartbeat",
+      "difficulty or painful swallowing",
+      "prolonged or recurrent vomiting (longer than 24–48 hours)",
+      "jaundice",
+      "haematemesis or melaena",
+      "unexplained weight loss",
+      "severe, frequent or changing symptoms",
+      "inadequate response to optimal treatment (8 weeks of PPI therapy at the standard dose)."
+    ],
+    "emergency": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    { "when": "4-8 weeks after initiation of a new therapy", "what": "Follow up consultation with the pharmacist (or the patient's chosen healthcare provider) to assess adherence to pharmacotherapy and non-pharmacological management strategies, and response to treatment and if changes to the treatment plan are required (continue, modify, stop and/or refer).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "Clinical review" } },
+    { "when": "For patients continuing therapy", "what": "The frequency of further follow up appointments for maintenance and step-down therapy should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals, and based on recommendations in the Therapeutic Guidelines.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "Clinical review" } },
+    { "when": "At each supply (until the patient's next review)", "what": "Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months' supply (including repeats).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "Clinical review" } },
+    { "when": "If the condition does not improve with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI)", "what": "Patient advised at the time of initial consultation to see an appropriate healthcare provider.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } },
+    { "when": "If ongoing maintenance treatment with a PPI is required", "what": "Patient advised at the time of initial consultation to see an appropriate healthcare provider.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "General advice" } },
+    { "when": "Long-term regular PPI therapy", "what": "Long-term regular PPI therapy is only recommended for a limited number of indications and should be reviewed regularly (3, 6).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 4, "section_heading": "Develop management plan" } }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\gastro-oesophageal-guideline", "page": 5, "section_heading": "Communicate agreed management plan" }
+  },
+  "references": [
+    "[p.8] 1. Bloom S, McCartney S, Langmead L, Banks M. The modern investigation and management of gastro-oesophageal reflux disease (GORD). Clin Med (Lond). 2009;9(6):600-4.",
+    "[p.8] 2. Badillo R, Francis D. Diagnosis and treatment of gastroesophageal reflux disease. World J Gastrointest Pharmacol Ther. 2014;5(3):105-12.",
+    "[p.8] 3. Therapeutic Guidelines: Gastrointestinal (Oesophageal disorders). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 2]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Gastrointestinal&topicfile=c_GIG_Gastro-oesophageal-reflux-in-adultstopic_1&guidelinename=Gastrointestinal&sectionId=c_GIG_Gastro-oesophageal-reflux-in-adultstopic_1#c_GIG_Gastro-oesophageal-reflux-in-adultstopic_1.",
+    "[p.8] 4. DynaMed: Gastroesophageal Reflux Disease (GERD): EBSCO Information Services; 2024 [cited 2025 April 2]. Available from: https://www.dynamed.com/condition/gastroesophageal-reflux-disease-gerd.",
+    "[p.8] 5. Cancer Council. Stomach cancer; 2025 [cited 2025 April 2]. Available from: https://www.cancer.org.au/cancer-information/types-of-cancer/stomach-cancer",
+    "[p.8] 6. Australian Medicines Handbook: Drugs for dyspepsia, reflux and peptic ulcers. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 2]. Available from: https://amhonline.amh.net.au/chapters/gastrointestinal-drugs/drugs-dyspepsia-reflux-peptic-ulcers?menu=vertical."
+  ],
+  "open_questions": [
+    {
+      "topic": "legal_basis not printed",
+      "observed": "No regulation, Medicines and Poisons Act provision or poisons schedule provision is cited in this guideline; it refers only to a Queensland Community Pharmacy 'prescribing service' and 'Clinical Practice Guideline'.",
+      "why_unclear": "Spec requires legal_basis; the source is silent.",
+      "source_page": 1
+    },
+    {
+      "topic": "No specific PPI medicine, strength, dose, frequency or duration printed",
+      "observed": "Pharmacotherapy is specified only as 'As per the Therapeutic Guidelines: Gastrointestinal (Gastro-oesophageal reflux in adults) (3)' (page 4). No generic PPI name, strength, dose, frequency, route or duration appears anywhere in the document; the refer-when item refers to '8 weeks of PPI therapy at the standard dose' without defining the standard dose.",
+      "why_unclear": "No drug-level dosing data exists in the source; the treatment row is class-level with empty dose fields.",
+      "source_page": 4
+    },
+    {
+      "topic": "No first-line ranking printed for pharmacotherapy",
+      "observed": "'The initial management of gastro-oesophageal reflux and GORD is based on the severity of symptoms; with symptom control the aim for most patients (3). Mild intermittent symptoms may be managed with diet and lifestyle modification only. However, on-demand ('when required') drug therapy may also be used if symptoms are significantly troublesome (3)' (page 2).",
+      "why_unclear": "The document does not rank any drug as first-line; first_line recorded as false for TX-1.",
+      "source_page": 2
+    },
+    {
+      "topic": "Emergency referral criteria not separately designated",
+      "observed": "The document gives one umbrella heading - 'Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' - and does not designate which of the 10 listed criteria require emergency services.",
+      "why_unclear": "No separate emergency criteria list is printed; the emergency list contains only the umbrella heading text.",
+      "source_page": 2
+    },
+    {
+      "topic": "Referral block spans pages 2, 4 and 5",
+      "observed": "Umbrella heading and the 10 'Refer when' items are on page 2; NB2 referral ('Where regular drug therapy is required, consider referral...') is on page 4; the 'General advice' see-a-healthcare-provider criteria are on page 5.",
+      "why_unclear": "Spec allows one shared provenance object per block using the first page; the page range 2-5 is noted here rather than in the provenance object.",
+      "source_page": 2
+    },
+    {
+      "topic": "Combinatorics between age restriction and diagnostic criteria not stated; INC-2 requirement inferred",
+      "observed": "Page 1 prints the service age restriction; page 2 prints the fundamental signs (heartburn and regurgitation) and the Therapeutic Guidelines GORD definition with an explicit 'or' between its three clauses ('frequent (2 or more episodes per week) or severe enough to significantly impair quality of life, or if complications ... are present'). Page 3 lists atypical and extra-oesophageal symptoms (including chest pain, nausea, asthma-like symptoms) that are attributed to reflux without requiring heartburn or regurgitation.",
+      "why_unclear": "The document does not state how these criteria combine; group recorded as all_of [INC-1, INC-2] with any_of [INC-3, INC-4, INC-5] per the printed 'or', and INC-2 carries confidence 'unclear' because requiring the cardinal signs is inferred, not stated.",
+      "source_page": 1
+    },
+    {
+      "topic": "Ambiguous vomiting duration threshold",
+      "observed": "'prolonged or recurrent vomiting (longer than 24–48 hours)' (page 2) prints a duration range with a single 'longer than' operator; it is unclear whether the trigger threshold is 24 hours or 48 hours.",
+      "why_unclear": "Both readings recorded as separate red flags (RF-5 at >24 hours, RF-6 at >48 hours); EXC-5 confidence marked unclear; not reconciled.",
+      "source_page": 2
+    },
+    {
+      "topic": "Eight-week PPI thresholds are examples, not hard rules, and 'standard dose' undefined",
+      "observed": "General advice: see a healthcare provider if 'the condition does not improve with recommended treatment (e.g., within 8 weeks of starting treatment with a PPI)' (page 5) - printed as 'e.g.'; refer when: 'inadequate response to optimal treatment (8 weeks of PPI therapy at the standard dose)' (page 2) - the standard dose is not defined.",
+      "why_unclear": "RF-13 structured confidence marked unclear because the 8-week figure is given as an example; the definition of 'standard dose' must come from an external source.",
+      "source_page": 5
+    },
+    {
+      "topic": "notifiable requirements silent",
+      "observed": "No mention of notifiable conditions, GP notification, AIR reporting or mandatory notification. The only sharing requirement is 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.'",
+      "why_unclear": "Spec: notifiable.required is null if the document is silent.",
+      "source_page": 5
+    },
+    {
+      "topic": "General ineligibility statement not tied to specific exclusions (EXE-1 criteria_group empty)",
+      "observed": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.' (page 1) is printed immediately after the age restriction and before any criteria lists; it does not enumerate which ineligibilities it covers.",
+      "why_unclear": "The exception cannot be mapped to specific EXC ids from the printed text, so criteria_group is left empty rather than guessed.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    { "item": "'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines'", "source_page": 4, "reason": "External living reference - the version in force at go-live must be confirmed and re-checked periodically." },
+    { "item": "Pharmacotherapy 'As per the Therapeutic Guidelines: Gastrointestinal (Gastro-oesophageal reflux in adults) (3)' - no PPI medicine, strength, dose, frequency or duration is printed in this guideline", "source_page": 4, "reason": "No drug-level dosing data in the source; local approved PPI list, dosing conventions and the definition of 'standard dose' must be confirmed before go-live." },
+    { "item": "'Consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation'", "source_page": 4, "reason": "External resources with no printed contraindication, interaction or pregnancy/lactation data in this document; current versions and local check workflow must be confirmed." },
+    { "item": "'The total quantity prescribed should not exceed 12 months' supply (including repeats).' and supply must align with expected duration of therapy until next review", "source_page": 5, "reason": "Supply-quantity limits must be aligned with local policy before go-live." },
+    { "item": "Legal basis/authority under which the pharmacist prescribing service for gastro-oesophageal reflux operates is not cited in the guideline", "source_page": 1, "reason": "Jurisdictional authority must be verified against the authorising instrument (e.g. the extended practice authority) before go-live." },
+    { "item": "'Service restricted to patients aged 18 to 55 years of age.'", "source_page": 1, "reason": "Jurisdictional service parameter - confirm the age window matches the authorising instrument before go-live." },
+    { "item": "Pharmacist resources list: Therapeutic Guidelines: Gastrointestinal (Oesophageal disorders; Functional gastrointestinal disorders); Australian Medicines Handbook (Drugs for dyspepsia, reflux and peptic ulcers); APF Treatment guideline for pharmacists (Gastro-oesophageal reflux); Australian Prescriber; PSA 'Heartburn and indigestion Self-care' patient information card; GESA Patient Resources (Information about Reflux)", "source_page": 6, "reason": "External resources must be obtained and confirmed as the correct current versions for local use." },
+    { "item": "'Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.'", "source_page": 4, "reason": "My Health Record access arrangements are jurisdictional/organisational - confirm access and workflow locally." }
+  ]
+}

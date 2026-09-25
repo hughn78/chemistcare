@@ -1,0 +1,464 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf",
+    "pdf_sha256": "6ffb185895acac8fea8da9b7f23429cefd49c07afaff0cff6a0825efaad7a556",
+    "page_count": 13,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Acute minor wound management: Clinical practice guideline",
+    "instrument_version": "No version number printed; footer code \"62'GUA180510-DEC\" (p.13); © Department of Health 2026",
+    "effective_date": "Not printed (© Department of Health 2026; Produced by Clinical Excellence Division, p.13)",
+    "legal_basis": "Authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). 'This clinical practice guideline may only be used by pharmacists who have been approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and are authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA). This document alone does not provide an authorisation for a pharmacist to prescribe.'",
+    "supervision_model": "Pharmacists approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA); 'Pharmacists must exercise professional discretion and judgement consistent with their qualifications and legislative authority' and retain responsibility for clinical assessment and decisions appropriate to the individual (document's own terminology; not labelled collaborative/autonomous).",
+    "scope_summary": "Clinical practice guideline for pharmacist management of acute minor wounds under the EACPP (WA): service obligations and consent, patient and wound history, clinical wound assessment (Table 1), pathology testing decision, management plan (local anaesthetic, cleansing, closure, dressing, presumptive/prophylactic/empirical oral antibiotic therapy, tetanus post-exposure prophylaxis), confirm management, communicate plan, clinical review, plus 'Refer when' and 'Treat and concurrently refer' referral triggers. Service restricted to patients aged 5 years or over."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 5 years or over.",
+        "criteria_group": {"all_of": ["INC-2", "INC-3", "INC-4", "INC-5", "INC-6"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 1, "section_heading": "Contents"}
+      },
+      {
+        "id": "INC-2",
+        "text": "Initial patient eligibility and suitability for management within the scope of the service",
+        "criteria_group": {"all_of": ["INC-1", "INC-3", "INC-4", "INC-5", "INC-6"], "any_of": []},
+        "confidence": "medium",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-3",
+        "text": "Patient informed consent (including consent for communication with other health practitioners if relevant)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-4", "INC-5", "INC-6"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 2, "section_heading": "Guideline overview"}
+      },
+      {
+        "id": "INC-4",
+        "text": "For the purposes of the service, an acute minor wound is defined as a wound: caused by injury or trauma (as opposed to surgical wounds)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-5", "INC-6"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-5",
+        "text": "involving the epidermis and upper dermis (superficial wound) or dermis (partial thickness)",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-6"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      },
+      {
+        "id": "INC-6",
+        "text": "in the inflammation stage (approximately 0 to 4 days post injury) on initial presentation and expected to follow the normal physiological wound healing process.",
+        "criteria_group": {"all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5"], "any_of": []},
+        "confidence": "high",
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Patient history and assessment"}
+      }
+    ],
+    "exclusion": [
+      {"id": "EXC-1", "text": "the patient is aged below 5 years (does not preclude a patient from accessing usual pharmacy care)", "criteria_group": {"all_of": [], "any_of": ["EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-2", "text": "burns require management at a specialist centre as per the Australian and New Zealand Burn Association (ANZBA) criteria", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-3", "text": "injury has suspected vascular, tendon, joint, bone, muscle, or nerve involvement", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-4", "text": "fractures, crush injuries, partial amputations of a digit or penetrating wounds of the torso", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-5", "text": "a penetrating wound, including through footwear, or a marine envenomation (a complex wound at high risk of infection)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-6", "text": "recent orofacial trauma (not yet seen by a dental practitioner)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-7", "text": "suspected concussive head injury", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-8", "text": "pain that requires management with treatments not available to pharmacists", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-9", "text": "immunocompromised or at high risk of infection or compromised wound healing", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-10", "text": "signs or symptoms of systemic infection or is generally unwell", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-11", "text": "infection of a surgical or chronic wound", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-12", "text": "a tetanus-prone wound that requires tetanus immunoglobulin (e.g. patient has had less than 3 doses of the tetanus toxoid vaccine, or vaccination history is unknown)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-13", "text": "significant risk of suicide (e.g. a current intent, a specific plan, access and means, or have had previous suicide attempts), or self-inflicted injuries (see Treat and concurrently refer section)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-14", "text": "injury sustained in the workplace or as a result of a work-related incident", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-15", "text": "the wound history is unclear (how, where, and when the wound was acquired)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-16", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-16", "text": "the wound is showing abnormal signs of healing or not progressing through the normal stages of healing (e.g. chronic ulcers or wounds, necrotic or hyper-granulation tissue, wounds older than approximately 4 days that have not begun epithelialisation)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-17", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-17", "text": "the wound is suspected to be full thickness (involving epidermis, dermis and subcutaneous tissue)", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-18", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-18", "text": "the wound is to the head (scalp, face, ears, eyes) or neck, or where sustained closure is difficult to achieve", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-19"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+      {"id": "EXC-19", "text": "anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure.", "criteria_group": {"all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"]}, "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}}
+    ],
+    "age_bounds": {
+      "min_years": 5,
+      "max_years": null,
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 1, "section_heading": "Contents"}
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-2", "EXE-3"]},
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 1, "section_heading": "Contents"},
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-2",
+        "text": "the patient is aged below 5 years (does not preclude a patient from accessing usual pharmacy care)",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-3"]},
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"},
+        "confidence": "high"
+      },
+      {
+        "id": "EXE-3",
+        "text": "Provide first aid and concurrently refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:",
+        "criteria_group": {"all_of": [], "any_of": ["EXE-1", "EXE-2"]},
+        "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"},
+        "confidence": "medium"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Acute minor wound management pathway (Enhanced Access Community Pharmacy Pilot)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Meet service and professional obligations: initial patient eligibility and suitability for management within the scope of the service (service restricted to patients aged 5 years or over; acute minor wound definition - injury/trauma, epidermis and upper dermis or dermis, inflammation stage approximately 0 to 4 days post injury), and patient informed consent (including consent for communication with other health practitioners if relevant).",
+          "gates": [
+            {"criterion": "Patient is eligible and suitable for management within the scope of the service (aged 5 years or over, acute minor wound definition met, no 'Refer when' situation present)", "on_fail": "REFER"},
+            {"criterion": "Patient informed consent obtained (including consent for communication with other health practitioners if relevant)", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 2, "section_heading": "Guideline overview"}
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "Patient history and assessment: obtain sufficient information from the patient - age, weight, pregnancy and lactation status (if applicable), current medical conditions that may increase risk of infection (immunocompromised) or impair wound healing (vascular disease, diabetes mellitus, autoimmune disorders, malignancy), factors affecting healing, symptoms indicating systemic infection or other injury (fever, lymphadenopathy, nausea, vomiting), current and recently ceased treatments, previous wound healing and scarring, allergies/adverse drug reactions, alcohol and drug history, smoking status, immunisation status including tetanus vaccination, MRSA risk factors, psychosocial history including potential for family violence, ability to undertake appropriate self-care, nutritional and hydration status. Wound history: mechanism of injury, date and time of injury, environment where the wound was acquired (fresh or salt water, muddy locations, contaminated soil), treatments already provided and response, whether the injury was sustained in the workplace or related to employment, whether the injury may be associated with family violence or self-harm.",
+          "gates": [
+            {"criterion": "Wound history is clear (how, where, and when the wound was acquired)", "on_fail": "REFER"},
+            {"criterion": "Injury not sustained in the workplace or as a result of a work-related incident", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 5, "section_heading": "Patient history"}
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EXAMINATION",
+          "description": "Wound assessment and examination per Table 1: Clinical acute wound assessment - anatomical location (consider possible damage to joint, tendon, nerve and vascular structures; check distal sensation, motor function, range of motion and vascularity); size and degree of tissue loss; wound appearance (contamination, stage/phase of healing, wound bed appearance, wound edges and surrounding skin, exudate); signs of infection (local, spreading, systemic - fever, tachycardia, hypotension, other signs of sepsis); pain (timing, triggers, severity, impact, type, response to medication). Conduct assessment of vital signs for any patients presenting with signs of infection. The TIME acronym (Tissue, Infection/Inflammation, Moisture balance, Edge and peri-wound area) may guide wound examination.",
+          "gates": [
+            {"criterion": "Patient presents with signs of infection (conduct assessment of vital signs)", "on_fail": "SEE_PW-1-S4"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 7, "section_heading": "Table 1: Clinical acute wound assessment"}
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "INVESTIGATION",
+          "description": "Pathology testing for Gram stain, culture and sensitivity testing. Wound swabbing is not routinely recommended for uncomplicated wounds. Pathology testing for microbial Gram stain, culture and antibiotic sensitivity should be considered prior to commencing empirical antibiotic therapy, where: the result of testing will help to guide management; the wound is not responding to empirical treatment; there is suspicion of unusual or resistant pathogens; there are concerns regarding local antimicrobial resistant organisms. Wounds at high risk of infection: pathology testing is not required before commencing presumptive or prophylactic antibiotic therapy. If pathology testing is indicated, the patient should be referred to an appropriate healthcare provider to conduct specimen collection; if timely referral is not practicable, empirical antibiotic therapy may be provided in accordance with the Therapeutic Guidelines with concurrent referral.",
+          "gates": [
+            {"criterion": "Pathology testing indicated (result will help guide management, wound not responding to empirical treatment, suspicion of unusual or resistant pathogens, or concerns regarding local antimicrobial resistant organisms)", "on_fail": "SEE_PW-1-S5"},
+            {"criterion": "Timely referral for specimen collection is practicable when pathology testing is indicated", "on_fail": "SEE_PW-1-S6"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 8, "section_heading": "Pathology testing for Gram stain, culture and sensitivity testing"}
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Refer when: provide first aid and concurrently refer the patient to an appropriate healthcare provider (including emergency services, if required) in the 19 situations listed under 'Refer when' (RF-1 to RF-19): aged below 5 years; burns requiring specialist centre management per ANZBA criteria; suspected vascular/tendon/joint/bone/muscle/nerve involvement; fractures, crush injuries, partial amputations of a digit or penetrating wounds of the torso; penetrating wound including through footwear or marine envenomation; recent orofacial trauma; suspected concussive head injury; pain requiring treatments not available to pharmacists; immunocompromised or at high risk of infection or compromised wound healing; signs or symptoms of systemic infection or is generally unwell; infection of a surgical or chronic wound; tetanus-prone wound requiring tetanus immunoglobulin; significant risk of suicide or self-inflicted injuries; workplace injury; unclear wound history; abnormal signs of healing; suspected full thickness wound; wound to the head or neck or where sustained closure is difficult; anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure.",
+          "gates": [
+            {"criterion": "Any 'Refer when' situation present", "on_fail": "SEE_PW-1-S6"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Develop management plan: administration of local anaesthetic - use of ≤1 per cent lidocaine preparations (without adrenaline, maximum of 10 mL) if required; wound cleansing - irrigation, simple mechanical debridement (using sterile gauze or non-woven swabs) and use of antiseptics; wound closure - adhesive strips, topical skin/tissue adhesives and basic suturing techniques only; wound dressing - application and changing of dressings; pharmacotherapy - presumptive oral antibiotic therapy for bite wounds (including marine animal bites) and clenched-fist injuries at high risk of infection, prophylactic oral antibiotic therapy for significantly contaminated traumatic wounds, empirical oral antibiotic therapy for localised post-traumatic wound infections, localised bite and clenched-fist wound infections and localised water-immersed wound infections, and tetanus post-exposure prophylaxis with tetanus toxoid vaccine. Topical antibiotics are not recommended for the treatment of wounds and are not included for use as part of this service. Antibiotic prophylaxis for acute minor wounds is not routinely recommended - thorough cleansing and dressing are the mainstay of treatment.",
+          "gates": [
+            {"criterion": "Wound meets the acute minor wound definition (caused by injury or trauma; involving the epidermis and upper dermis or dermis; in the inflammation stage approximately 0 to 4 days post injury and expected to follow the normal physiological wound healing process)", "on_fail": "REFER"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "REFER",
+          "description": "Treat (if clinically appropriate) and concurrently refer: provide initial treatment (wound care and antibiotic therapy if indicated) and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: the wound is significantly contaminated, e.g. a foreign body or other contamination that cannot be removed by the pharmacist, significantly contaminated water-immersed wounds; localised post-traumatic wound infections, including localised bite and clenched-fist wound infections and localised water-immersed wound infections; self-inflicted injuries.",
+          "gates": [
+            {"criterion": "Treat and concurrently refer situation present (significantly contaminated wound; localised post-traumatic, bite, clenched-fist or water-immersed wound infection; self-inflicted injuries)", "on_fail": "SEE_PW-1-S8"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: consult the Therapeutic Guidelines, Australian Medicines Handbook, Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; appropriate antibiotic use; anaesthesia (if indicated); pregnancy and lactation. The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic.",
+          "gates": [
+            {"criterion": "Contraindications and precautions, drug interactions, appropriate antibiotic use, anaesthesia (if indicated) and pregnancy and lactation confirmed appropriate", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "Confirm management is appropriate"}
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information if required) regarding wound care - schedule for dressing changes and suture removal, instructions for individual product/dressing and medicine use, non-pharmacological measures, how to recognise the signs of local and systemic infection, when to commence antibiotic therapy and any required follow-up, measures to prevent further injury, how to manage adverse effects of pharmacotherapy, when to return for follow-up; medication counselling; when to seek further care and/or treatment; communication with other health practitioners (plan shared with the patient's multidisciplinary healthcare team with consent). General advice: at the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if the wound becomes infected or deteriorates, the wound is not healing as expected, pain is not well managed with recommended analgesia, or they become systemically unwell.",
+          "gates": [
+            {"criterion": "Patient (and/or parent/caregiver) counselled on wound care and dressing at home (e.g. when showering, bathing) and on when to seek further care", "on_fail": "unclear"}
+          ],
+          "confidence": "high",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "Communicate agreed management plan"}
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review with the pharmacist (or the patient's chosen healthcare provider), including for dressing changes and suture removal, should occur in line with recommendations in the Therapeutic Guidelines and the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual; covering response to treatment, dressing changes and suture removal (if necessary), and communication with other health practitioners. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+          "gates": [
+            {"criterion": "Response to treatment assessed at clinical review", "on_fail": "unclear"}
+          ],
+          "confidence": "medium",
+          "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "Clinical review"}
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "lidocaine",
+      "form": "preparations",
+      "strength": "≤1 per cent",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "maximum of 10 mL",
+      "quantity_to_supply": "",
+      "notes": "administration of local anaesthetic: use of ≤1 per cent lidocaine preparations (without adrenaline, maximum of 10 mL) if required, in accordance with the current online version of: Therapeutic Guidelines: Pain and analgesia (Drugs used for pain – Local anaesthetics for acute pain management); Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual. Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. No route, dose volume per site, frequency or duration is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-2",
+      "drug": "presumptive oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "presumptive oral antibiotic therapy for bite wounds (including marine animal bites) and clenched-fist injuries at high risk of infection, in accordance with the: Therapeutic Guidelines: Antibiotic (Traumatic wound infections – Bite wound infections, including clenched-fist injury infections). No specific agent, strength, dose, frequency or duration is printed in this document. Confirm management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-3",
+      "drug": "prophylactic oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "prophylactic oral antibiotic therapy for significantly contaminated traumatic wounds, in accordance with the: Therapeutic Guidelines: Antibiotic (Traumatic wound infections – Post-traumatic wound infections). Key points: 'Antibiotic prophylaxis for acute minor wounds is not routinely recommended. Thorough cleansing and dressing are the mainstay of treatment.' Pathology testing is not required before commencing presumptive or prophylactic antibiotic therapy for wounds at high risk of infection. No specific agent, strength, dose, frequency or duration is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-4",
+      "drug": "empirical oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "empirical oral antibiotic therapy for localised post-traumatic wound infections, localised bite and clenched-fist wound infections, and localised water-immersed wound infections, in accordance with the: Therapeutic Guidelines: Antibiotic (Traumatic wound infections – Post-traumatic wound infections); Therapeutic Guidelines: Antibiotic (Traumatic wound infections – Bite wound infections, including clenched-fist injury infections); Therapeutic Guidelines: Antibiotic (Traumatic wound infections – Water-immersed wound infections). Where pathology testing is indicated but timely referral is not practicable, empirical antibiotic therapy may be provided with concurrent referral. No specific agent, strength, dose, frequency or duration is printed.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-5",
+      "drug": "tetanus toxoid vaccine",
+      "form": "vaccine",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "tetanus post-exposure prophylaxis with tetanus toxoid vaccine in accordance with the: Therapeutic Guidelines: Antibiotic (Traumatic wound infections – Post-traumatic wound infections). NB2: Tetanus-toxoid vaccines must be given in accordance with the Australian Immunisation Handbook: Tetanus and recorded on the Australian Immunisation Register.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+    },
+    {
+      "id": "TX-6",
+      "drug": "topical antibiotics",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "NOT RECOMMENDED / NOT INCLUDED IN THIS SERVICE: 'Topical antibiotics are not recommended for the treatment of wounds and are not included for use as part of this service. Topical antibiotics do not improve healing and may contribute to antimicrobial resistance.'",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Key points"}
+    },
+    {
+      "id": "TX-7",
+      "drug": "antiseptics",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "wound cleansing: irrigation, simple mechanical debridement (using sterile gauze or non-woven swabs) and use of antiseptics in accordance with the: Therapeutic Guidelines: Ulcer and wound management. Key points: 'Wound healing is optimised when the wound is cleansed to remove debris and devitalised tissue, kept moist, infection is prevented, and the wound has adequate blood supply.' Thorough cleansing and dressing are the mainstay of treatment. No specific antiseptic agent, strength or frequency is printed.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "Develop management plan"}
+    }
+  ],
+  "red_flags": [
+    {"id": "RF-1", "trigger_text": "the patient is aged below 5 years (does not preclude a patient from accessing usual pharmacy care)", "structured": {"parameter": "age", "operator": "<", "value": 5, "unit": "years"}, "action": "NOT_ELIGIBLE", "severity": "low", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-2", "trigger_text": "burns require management at a specialist centre as per the Australian and New Zealand Burn Association (ANZBA) criteria", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-3", "trigger_text": "injury has suspected vascular, tendon, joint, bone, muscle, or nerve involvement", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-4", "trigger_text": "fractures, crush injuries, partial amputations of a digit or penetrating wounds of the torso", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-5", "trigger_text": "a penetrating wound, including through footwear, or a marine envenomation (a complex wound at high risk of infection)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-6", "trigger_text": "recent orofacial trauma (not yet seen by a dental practitioner)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-7", "trigger_text": "suspected concussive head injury", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-8", "trigger_text": "pain that requires management with treatments not available to pharmacists", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-9", "trigger_text": "immunocompromised or at high risk of infection or compromised wound healing", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-10", "trigger_text": "signs or symptoms of systemic infection or is generally unwell", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-11", "trigger_text": "infection of a surgical or chronic wound", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-12", "trigger_text": "a tetanus-prone wound that requires tetanus immunoglobulin (e.g. patient has had less than 3 doses of the tetanus toxoid vaccine, or vaccination history is unknown)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-13", "trigger_text": "significant risk of suicide (e.g. a current intent, a specific plan, access and means, or have had previous suicide attempts), or self-inflicted injuries (see Treat and concurrently refer section)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-14", "trigger_text": "injury sustained in the workplace or as a result of a work-related incident", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-15", "trigger_text": "the wound history is unclear (how, where, and when the wound was acquired)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-16", "trigger_text": "the wound is showing abnormal signs of healing or not progressing through the normal stages of healing (e.g. chronic ulcers or wounds, necrotic or hyper-granulation tissue, wounds older than approximately 4 days that have not begun epithelialisation)", "structured": {"parameter": "wound_age_days_without_epithelialisation", "operator": ">", "value": 4, "unit": "days"}, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-17", "trigger_text": "the wound is suspected to be full thickness (involving epidermis, dermis and subcutaneous tissue)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-18", "trigger_text": "the wound is to the head (scalp, face, ears, eyes) or neck, or where sustained closure is difficult to achieve", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-19", "trigger_text": "anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}},
+    {"id": "RF-20", "trigger_text": "the wound is significantly contaminated, e.g. a foreign body or other contamination that cannot be removed by the pharmacist, significantly contaminated water-immersed wounds", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-21", "trigger_text": "localised post-traumatic wound infections, including: - localised bite and clenched-fist wound infections - localised water-immersed wound infections", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-22", "trigger_text": "self-inflicted injuries.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 4, "section_heading": "Treat (if clinically appropriate) and concurrently refer"}},
+    {"id": "RF-23", "trigger_text": "Patients at significant risk of suicide (e.g. if they have a current intent, a specific plan, access and means, or have had previous suicide attempts) require urgent referral to an appropriate healthcare provider and/or acute psychiatric/mental health service.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 6, "section_heading": "Patients at significant risk of suicide"}},
+    {"id": "RF-24", "trigger_text": "If the pharmacist suspects the patient has been subjected to family violence, they should provide appropriate support and assistance to the patient (separate from other family members), including referral to support services and reporting to the WA Police Force.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 5, "section_heading": "Injuries associated with family violence or non-accidental injury in children"}},
+    {"id": "RF-25", "trigger_text": "Pharmacists are strongly encouraged to voluntarily report suspected child abuse and neglect to the WA Police Force.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 5, "section_heading": "Injuries associated with family violence or non-accidental injury in children"}},
+    {"id": "RF-26", "trigger_text": "the wound becomes infected (for non-infected wounds) or deteriorates", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"id": "RF-27", "trigger_text": "the wound is not healing as expected (e.g. no evidence of epithelialisation approximately 4 days post wound event)", "structured": {"parameter": "days_post_wound_event_without_epithelialisation", "operator": ">=", "value": 4, "unit": "days"}, "action": "REVIEW_GP", "severity": "medium", "confidence": "medium", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"id": "RF-28", "trigger_text": "their pain is not well managed with recommended analgesia", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"id": "RF-29", "trigger_text": "they become systemically unwell.", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"id": "RF-30", "trigger_text": "Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "Clinical review"}}
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "a dental practitioner (recent orofacial trauma not yet seen by a dental practitioner)",
+      "an appropriate healthcare provider to conduct specimen collection (if pathology testing is indicated)",
+      "appropriate support services and the WA Police Force (suspected family violence)",
+      "appropriate healthcare provider for dressing changes and suture removal (clinical review)"
+    ],
+    "urgent": [
+      "Patients at significant risk of suicide (e.g. if they have a current intent, a specific plan, access and means, or have had previous suicide attempts) require urgent referral to an appropriate healthcare provider and/or acute psychiatric/mental health service."
+    ],
+    "emergency": [
+      "including emergency services, if required"
+    ],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 3, "section_heading": "Refer when"}
+  },
+  "review_followup": [
+    {"when": "Clinical review with the pharmacist (or the patient's chosen healthcare provider), in line with recommendations in the Therapeutic Guidelines and the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual", "what": "Response to treatment; dressing changes and suture removal (if necessary); communication with other health practitioners", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "Clinical review"}},
+    {"when": "the wound becomes infected (for non-infected wounds) or deteriorates", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"when": "the wound is not healing as expected (e.g. no evidence of epithelialisation approximately 4 days post wound event)", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"when": "their pain is not well managed with recommended analgesia", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"when": "they become systemically unwell", "what": "see an appropriate healthcare provider", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "General advice"}},
+    {"when": "the condition does not improve or resolve", "what": "Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider (see Refer when and General advice)", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 10, "section_heading": "Clinical review"}},
+    {"when": "any patients presenting with signs of infection", "what": "Conduct assessment of vital signs", "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 6, "section_heading": "Wound assessment and examination"}}
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "NB2: Tetanus-toxoid vaccines must be given in accordance with the Australian Immunisation Handbook: Tetanus and recorded on the Australian Immunisation Register (page 9)",
+      "If the pharmacist suspects the patient has been subjected to family violence, they should ... includ[e] referral to support services and reporting to the WA Police Force (page 5)",
+      "Pharmacists are strongly encouraged to voluntarily report suspected child abuse and neglect to the WA Police Force (page 5)"
+    ],
+    "provenance": {"pdf_file": "wa-pharmacist-prescribing-protocols\\Pharmacy-Guidelines-Acute-Minor-Wounds.pdf", "page": 9, "section_heading": "NB2"}
+  },
+  "references": [
+    "1. The Australian & New Zealand Burn Association (ANZBA). ANZBA Management of Burns. Available from: https://www.anzba.org/index.cfm//quality-care/management-of-burns/. [page 12]",
+    "2. Therapeutic Guidelines: Ulcer and Wound Management. Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Ulcer%20and%20Wound%20Management&amp;etgAccess=true. [page 12]",
+    "3. Queensland Health and Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. Cairns: Office of Rural and Remote Health, Queensland Government; 2025 [cited 2025 June 18]. Available from: https://www.health.qld.gov.au/orrh/clinical-manuals/primary-clinical-care-manual-pccm [page 12]",
+    "4. Therapeutic Guidelines: Antibiotic (Traumatic wound infections). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=bartonella-infections&guidelinename=auto&sectionId=c_Traumatic_wound_infections#c_Traumatic_wound_infections [page 12]",
+    "5. Cox J. Wound Care 101. Nursing 2022. 2019;49(10). [page 12]",
+    "6. The Royal Children’s Hospital of Melbourne. Wound assessment and management. Melbourne: The Royal Children’s Hospital of Melbourne; 2023 [cited 2025 April 4]. Available from: https://www.rch.org.au/rchcpg/hospital_clinical_guideline_index/Wound_assessment_and_management/. [page 12]",
+    "7. Haesler E. and Carville K. (2023). Australian Standards for Wound Prevention and Management. Australian Health Research Alliance, Wounds Australia and WA Health Translation Network. [page 12]",
+    "8. Ngan V. Dermnet NZ: Wounds; 2005 [cited 2025 April 4]. Available from: https://dermnetnz.org/topics/wounds [page 12]",
+    "9. Australian Medical Association. Supporting patients experiencing family violence: Australian Medical Association; 2015 [cited 2025 April 4]. Available from: https://ama.com.au/sites/default/files/documents/AMA%20Supporting%20Patients%20Experiencing%20Family%20Violence%20Resource%20_0.pdf. [page 12]",
+    "10. Western Australian Government. Family and domestic violence helplines and support services. Available from: https://www.wa.gov.au/organisation/department-of-communities/family-and-domestic-violence-helplines-and-support-services [page 12]",
+    "11. Western Australian Government. Report child abuse. Available from: https://www.wa.gov.au/service/justice/criminal-law/report-child-abuse [page 12]",
+    "12. Carter G, Page A, Large M, Hetrick S, Milner AJ, Bendit N, et al. Royal Australian and New Zealand College of Psychiatrists clinical practice guideline for the management of deliberate self-harm. Australian & New Zealand Journal of Psychiatry. 2016;50(10):939-1000. [page 12]",
+    "13. National Institute for Health and Care Excellence (NICE). Self-harm: assessment, management and preventing recurrence. Methods. 2022. [page 12]",
+    "14. Therapeutic Guidelines: Psychotropic (Assessing suicide risk). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 April 4]. [page 12]",
+    "15. International Wound Infection Institute (IWII). Wound infection in clinical practice. Wounds International. 2022. At: IWII-CD-2022-web-1.pdf [page 12]",
+    "16. Therapeutic Guidelines: Pain and Analgesia (Local anaesthetics for acute pain management). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=local-anaesthetics-acute-pain-management. [page 12]"
+  ],
+  "open_questions": [
+    {"topic": "Eligibility list has no 'inclusion/exclusion criteria' headings", "observed": "Eligibility is expressed as the cover-page age restriction (page 1), 'Meet service and professional obligations' (page 2) and the acute minor wound definition (page 4); the 'Refer when' list (page 3) has been used as the exclusion list.", "why_unclear": "The document does not label or group these as formal criteria and does not state combinatorics; defaulted to all_of for inclusion and any_of for exclusion.", "source_page": 3},
+    {"topic": "'Refer when' versus exclusion semantics", "observed": "'Provide first aid and concurrently refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' (page 3).", "why_unclear": "It is not stated whether any treatment may still be provided under the service for these situations; items are recorded both as exclusion criteria and as red flags.", "source_page": 3},
+    {"topic": "Instrument effective date / version not printed", "observed": "Only '© Department of Health 2026' and document code \"62'GUA180510-DEC\" are printed; no effective date or version number appears.", "why_unclear": "effective_date recorded as 'Not printed'; instrument_version records the printed copyright/code only.", "source_page": 13},
+    {"topic": "Specific drug regimens absent from the document", "observed": "Pharmacotherapy is delegated to the current online Therapeutic Guidelines: Antibiotic (Traumatic wound infections), Therapeutic Guidelines: Pain and analgesia, Therapeutic Guidelines: Ulcer and wound management and the Queensland Health/RFDS Primary Clinical Care Manual; no molecule, strength, dose, frequency or duration is printed.", "why_unclear": "Treatment rows therefore carry no agent/dose; regimens must be sourced externally.", "source_page": 9},
+    {"topic": "Referral content spans multiple pages", "observed": "Refer when (page 3), Treat and concurrently refer (page 4), family violence reporting (page 5), suicide/self-harm (page 6) and General advice (page 10).", "why_unclear": "The shared referral provenance uses page 3 (first page) with the range recorded here.", "source_page": 3},
+    {"topic": "Abnormal healing threshold wording is hedged", "observed": "'wounds older than approximately 4 days that have not begun epithelialisation' (page 3) and 'no evidence of epithelialisation approximately 4 days post wound event' (page 10).", "why_unclear": "'approximately' makes the threshold imprecise; structured values recorded as > 4 days (RF-16) and >= 4 days (RF-27) with medium confidence.", "source_page": 3},
+    {"topic": "Clinical review interval not numerically specified", "observed": "Clinical review 'should occur in line with recommendations in the Therapeutic Guidelines and the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual'.", "why_unclear": "No numeric follow-up interval is printed.", "source_page": 10},
+    {"topic": "Notifiable conditions recorded on two pages", "observed": "AIR recording requirement printed on page 9 (NB2); WA Police family violence and child abuse reporting statements printed on page 5.", "why_unclear": "A single notifiable provenance was required; page 9 used and the page 5 items are noted here.", "source_page": 9},
+    {"topic": "Pathway gate on_fail not stated by the document", "observed": "Consent (page 2), confirm management (page 10) and clinical review (page 10) steps do not state what happens if the gate fails.", "why_unclear": "on_fail recorded as 'unclear' per spec rather than inferred.", "source_page": 2},
+    {"topic": "Severity grading not stated by the document", "observed": "'Refer when' items are listed without individual urgency labels; only the suicide item is described as requiring 'urgent referral'.", "why_unclear": "Severity assigned from the document's own wording only; no item was upgraded to critical.", "source_page": 3}
+  ],
+  "hugh_to_confirm": [
+    {"item": "Confirm the individual pharmacist is approved by the Department of Health to participate in the Enhanced Access Community Pharmacy Pilot (EACPP) and authorised to prescribe under the Medicines and Poisons Regulations 2016 (WA) - 'This document alone does not provide an authorisation for a pharmacist to prescribe'.", "source_page": 1, "reason": "Authorisation is individual and external to the guideline; prerequisite for go-live."},
+    {"item": "Confirm local antimicrobial resistance patterns when selecting therapy, including WA MRSA prevalence 'particularly in regions north of metropolitan Perth, including the Goldfields, Kimberley, and Pilbara regions' (NB1), with reference to Australian Passive AMR Surveillance (APAS).", "source_page": 8, "reason": "Region-specific resistance data are external and change over time; document requires local consideration."},
+    {"item": "Obtain exact antibiotic agents, strengths, doses, frequencies and durations from the current online Therapeutic Guidelines: Antibiotic (Traumatic wound infections) for presumptive, prophylactic and empirical oral antibiotic therapy.", "source_page": 9, "reason": "No regimen is printed in the protocol; required before a prescribing rules engine can be used."},
+    {"item": "Obtain exact local anaesthetic technique and dosing detail from Therapeutic Guidelines: Pain and analgesia (Local anaesthetics for acute pain management) and the Queensland Health/RFDS Primary Clinical Care Manual; only '≤1 per cent lidocaine preparations (without adrenaline, maximum of 10 mL)' is printed.", "source_page": 9, "reason": "Administration route, site and volume per site are not printed."},
+    {"item": "Confirm tetanus post-exposure prophylaxis regimen and Australian Immunisation Register (AIR) recording workflow per the Australian Immunisation Handbook: Tetanus (NB2).", "source_page": 9, "reason": "External handbook governs the regimen; AIR recording is a local system step."},
+    {"item": "Confirm quantity-to-supply / dispensing quantity policy: 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.'", "source_page": 10, "reason": "Quantity is left to pharmacist judgement; no numeric quantity is printed."},
+    {"item": "Confirm clinical review timing (dressing changes, suture removal) against the Therapeutic Guidelines and the Queensland Health/RFDS Primary Clinical Care Manual.", "source_page": 10, "reason": "No numeric follow-up interval is printed."},
+    {"item": "Confirm applicability to WA practice of the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (the document is an adaptation of Queensland Community Pharmacy Pilots material).", "source_page": 9, "reason": "Cross-jurisdictional source document; the guideline defers to it for wound closure, local anaesthetic and clinical review standards."},
+    {"item": "Confirm local family/domestic violence support and reporting pathway (WA Police Force; WA Government Family and Domestic Violence Helplines and Support Services webpage) and the child abuse reporting process (Western Australian Government Report Child Abuse webpage).", "source_page": 5, "reason": "Local policy, reporting pathway and service lists are external to the clinical guideline."},
+    {"item": "Confirm EACPP service-level arrangements for consent documentation and communication with other health practitioners.", "source_page": 2, "reason": "Document requires informed consent including consent for communication but does not specify the local process."}
+  ]
+}

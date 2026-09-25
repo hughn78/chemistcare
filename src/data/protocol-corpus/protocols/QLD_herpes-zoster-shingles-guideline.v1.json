@@ -1,0 +1,695 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline",
+    "pdf_sha256": "ee8ae9cf7a4b26f62c0f429b426fe3dfb29782b98d00a56fa3d1c9e2ba3d24e2",
+    "page_count": 10,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Herpes Zoster (Shingles) – Clinical Practice Guideline",
+    "instrument_version": "Version dated 1 July 2025 (version history: Version 2.0, 01.07.2025)",
+    "effective_date": "2025-07-01",
+    "legal_basis": "No prescribing legal instrument or poisons schedule provision is printed. The only legislation cited is the Queensland Public Health Regulation 2018 and Public Health Act 2005 (sections 72 and 73), which govern public health notification of VZV infection (page 6, 'Public health notification').",
+    "supervision_model": "Not stated using 'collaborative'/'autonomous' terminology; document states pharmacists are advised to exercise professional discretion and judgement and must prescribe medicines according to the specified sections of the current online version of the Therapeutic Guidelines.",
+    "scope_summary": "Queensland Community Pharmacy clinical practice guideline for pharmacist management of herpes zoster (shingles). Service restricted to patients aged 18 years or over. Covers guideline overview, 'Refer when' and 'Treat (if clinically appropriate) and concurrently refer' triggers, key points, patient history and assessment (prodrome, rash, complications, HZ in pregnancy), examination and laboratory confirmation, development of a management plan (oral antiviral therapy, oral analgesia per Therapeutic Guidelines), zoster vaccination, public health notification, confirmation of management, communicating the agreed plan, general advice, preventing transmission, and clinical review. Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Herpes Zoster (Shingles) – Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Presentation is herpes zoster (shingles) within the scope of this guideline: 'Typical presentations of HZ can be diagnosed based on the patient history and examination for the characteristic appearance and distribution of the rash (1-3, 6, 7).'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Patient history and assessment" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "unclear diagnosis",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "the patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Herpes Zoster (Shingles) – Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": [], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Herpes Zoster (Shingles) – Clinical Practice Guideline" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist assessment and management of herpes zoster (history, examination, referral screening, treatment, advice and review)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; pregnancy and lactation status (if applicable); nature, severity and frequency of symptoms; nature of rash (distribution, appearance, number of lesions); onset and duration of symptoms; precipitating and relieving factors; history of VZV infection; underlying medical conditions e.g., immunocompromise (auto-immune diseases including diabetes, rheumatoid arthritis, HIV, cancer, conditions treated with immune suppressants, or renal impairment); current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); treatment and other strategies used to treat current symptoms and associated response; drug allergies/ adverse reactions; immunisation status as per the Australian Immunisation Handbook (HZ and varicella vaccinations). Reminder: pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 4, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination of the rash and documentation of its characteristics and location, as well as any signs of complications is important for the diagnosis of HZ and the exclusion of other conditions with similar presentations. Presenting signs and symptoms: prodromal symptoms may be observed between 48–72 hours before the localised, characteristic vesicular rash becomes evident (localised nerve pain usually described as stabbing, prickling or burning; lethargy, fever, headache; abnormal skin sensations such as burning, itching, hyperesthesia and/or paraesthesia; photophobia). The HZ rash is typically unilateral with a dermatomal distribution and distinct anterior and posterior midline cut-offs; however, some satellite lesions may also appear. New lesions will continue to erupt for 3-5 days within the locality of the affected nerve, becoming pustular, before scabbing and crusting over between 7-10 days. The most affected areas are the chest, neck, forehead (ophthalmic) and lumbar/sacral sensory nerve supply regions.",
+          "gates": [
+            { "criterion": "Diagnosis is clear (characteristic appearance and distribution of the rash) and other conditions with similar presentations excluded - see RF-1 'unclear diagnosis'", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 5, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "INVESTIGATION",
+          "description": "Laboratory confirmation is generally not required for typical presentations and uncomplicated cases of HZ (3, 13). Confirmatory pathology testing is required for cases where diagnosis is uncertain, or in cases of HZ in people who have been previously vaccinated against HZ (13, 14). Where diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing (page 6, Public health notification).",
+          "gates": [
+            { "criterion": "Diagnosis is not uncertain AND the patient has not been previously vaccinated against HZ (otherwise confirmatory pathology testing is required)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 5, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Screen against the printed 'Refer when' list: Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations: unclear diagnosis; the patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history). (See EXC-1, EXC-2, RF-1, RF-2.) Note: 'Treat (if clinically appropriate) and concurrently refer' triggers are screened separately at PW-1-S5.",
+          "gates": [
+            { "criterion": "None of the 'Refer when' triggers present (RF-1 unclear diagnosis; RF-2 pregnant without past/with uncertain VZV history)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Refer when" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Treat (if clinically appropriate) and concurrently refer: Provide initial treatment (antiviral therapy and pain relief) and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: immunocompromised; superinfection of herpes zoster (HZ) skin lesions; multidermatomal rash or disseminated zoster; complications of HZ, including postherpetic neuralgia or specific zoster syndromes; HZ affecting the face or genitals; pain management for neuropathic pain or moderate to severe nociceptive pain is needed; pregnant with a definite history of previous VZV infection; previous vaccination against HZ; inadequate response to optimal treatment. (See RF-3 to RF-11.)",
+          "gates": [
+            { "criterion": "None of the 'Treat (if clinically appropriate) and concurrently refer' triggers present (RF-3 to RF-11)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Develop management plan. Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. Antiviral treatment can reduce acute pain, rash duration, viral shedding, and the risk of ocular complications if started within 72 hours of rash onset in immunocompetent patients, and at any stage of rash duration in immunocompromised patients (4). Pharmacist management of HZ involves: non-pharmacological measures - education and advice regarding care for lesions (use of dressings, cleaning and appropriate clothing) and regarding transmission precautions in accordance with the Queensland Health Guideline for Public Health Units (14); pharmacotherapy - oral antiviral therapy in accordance with the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Shingles (Herpes zoster)) (4), and oral analgesia for mild nociceptive shingles pain in accordance with Therapeutic Guidelines: Pain and analgesia (Pain associated with shingles (herpes zoster) - Acute pain associated with shingles (herpes zoster)) (9) or (Pharmacological management of acute pain - Mild, acute nociceptive pain) (15). In pregnancy with first/uncertain VZV exposure, zoster immunoglobulin should be given to all seronegative women within 96 hours (5) with urgent referral (PW-1-S4/RF-17).",
+          "gates": [
+            { "criterion": "No HZ affecting the face or genitals (RF-7), no herpes zoster ophthalmicus (RF-12) and no herpes zoster oticus/Ramsay Hunt syndrome (RF-13) - urgent/specialist referral required", "on_fail": "REFER" },
+            { "criterion": "Antiviral treatment started within 72 hours of rash onset in immunocompetent patients, or at any stage of rash duration in immunocompromised patients", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 5, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: consult the Therapeutic Guidelines, Australian Medicines Handbook, Australian Immunisation Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation. Reminder: The prescribing and use of antimicrobials should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic.",
+          "gates": [
+            { "criterion": "Management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 6, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Zoster vaccination: Vaccination against HZ is the best way to prevent HZ and reduce the risk of complications, however it is not indicated during an acute HZ episode or to treat PHN (5). People who have had a previous episode of HZ can be vaccinated against a recurrence; the interval between the episode and vaccination is dependent on the patient's immune status (5). Refer to the Australian Immunisation Handbook for HZ vaccination information and recommendations (5). The National Immunisation Program (NIP) recommends HZ vaccination for patients at risk (5).",
+          "gates": [
+            { "criterion": "Vaccination is not indicated during an acute HZ episode and is not used to treat PHN", "on_fail": "STOP" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 6, "section_heading": "Zoster vaccination" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medication use; non-pharmacological measures; how to manage adverse effects; recommendations for vaccination against HZ (see Australian Immunisation Handbook); when to seek further care and/or treatment, including recognising superinfection and HZ complications; when to return for follow-up. It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers) and to ensure compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. Preventing transmission: the patient should be advised to inform any high-risk contacts (pregnant persons, neonates in first month of life, premature infants born at <28 weeks gestation and immunocompromised individuals) who have had significant exposure to a person with active VZV (household contacts or where there has been direct face-to-face contact for 5 minutes or being within the same room for at least an hour) to seek medical care as soon as possible (14). People with HZ are infectious from the onset of the rash, until vesicles have dried and scabbed (14); rashes should be covered with appropriate dressings until the patient is no longer infectious and contact with high-risk contacts must be avoided (14).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 6, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "REFER",
+          "description": "General advice: At the time of initial consultation, patients (and/or parents/caregivers) should be advised to see an appropriate healthcare provider if: signs or symptoms worsen; new signs or symptoms develop (e.g., superinfection of HZ lesions); the blisters spread to the face or genitals, or a new area; they do not respond adequately to the recommended treatment or pain management is inadequate (skin lesions usually heal within 2-4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease; pain and systemic symptoms subside as the rash resolves with recovery complete in 2-4 weeks in most cases; pain can persist after shingles has resolved); they are experiencing complications (see Refer when and Complications of HZ); they are having unmanageable adverse effects. The incubation period of VZV ranges between 10-21 days (14-16 days on average) (14). (See RF-18 to RF-23.)",
+          "gates": [
+            { "criterion": "None of the 'see an appropriate healthcare provider if' triggers present (RF-18 to RF-23)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review is generally not required. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers, if applicable) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+          "gates": [
+            { "criterion": "Condition improves or resolves as expected (skin lesions usually heal within 2-4 weeks)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 8, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "oral antiviral therapy",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'Oral antiviral therapy in accordance with the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Shingles (Herpes zoster)) (4).' 'Antiviral treatment can reduce acute pain, rash duration, viral shedding, and the risk of ocular complications if started within 72 hours of rash onset in immunocompetent patients, and at any stage of rash duration in immunocompromised patients (4).' 'Early identification and management with antivirals and analgesia (including all immunocompetent patients who present within 72 hours of rash onset as well as all patients who are immunocompromised regardless of rash duration) reduces the acute pain, rash duration, viral shedding and potential for ocular complications of HZ (3, 4).' No specific drug name, strength, dose, frequency or duration is printed in this guideline (see OQ-3). Pharmacist resources list 'Australian Medicines Handbook: Antivirals (Guanine analogues)'.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 5, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "oral analgesia for mild nociceptive shingles pain",
+      "form": "oral",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed: 'Oral analgesia for mild nociceptive shingles pain in accordance with the: Therapeutic Guidelines: Pain and analgesia (Pain associated with shingles (herpes zoster) - Acute pain associated with shingles (herpes zoster)) (9), or Therapeutic Guidelines: Pain and analgesia (Pharmacological management of acute pain - Mild, acute nociceptive pain) (15).' Page 2 'Treat (if clinically appropriate) and concurrently refer': initial treatment is '(antiviral therapy and pain relief)'. If pain management for neuropathic pain or moderate to severe nociceptive pain is needed, refer (RF-8). Pharmacist resources also list 'Australian Medicines Handbook: Paracetamol' and 'Australian Medicines Handbook: NSAIDs', and 'Therapeutic Guidelines: Pain and analgesia (Postherpetic neuralgia)'. No specific drug, strength, dose or frequency is printed (see OQ-4).",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 5, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "zoster immunoglobulin",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "within 96 hours",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "As printed (page 4, HZ in pregnancy): 'Urgent referral to an appropriate healthcare provider is required as zoster immunoglobulin should be given to all seronegative women within 96 hours (5).' Applies to pregnant patients exposed to VZV (chicken pox or HZ) for the first time (no or uncertain history of previous chicken pox infection). Dose, route and strength are not printed (see OQ-11). Listed under pharmacist resources as 'Australian Medicines Handbook: Zoster immunoglobulin'.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 4, "section_heading": "HZ in pregnancy" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "unclear diagnosis",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "the patient is pregnant and does not have a past history of varicella zoster virus (VZV) (or uncertain history).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "immunocompromised",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "superinfection of herpes zoster (HZ) skin lesions",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "multidermatomal rash or disseminated zoster",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "complications of HZ, including postherpetic neuralgia or specific zoster syndromes",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "HZ affecting the face or genitals",
+      "structured": { "parameter": "rash location", "operator": "in", "value": "face or genitals", "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "pain management for neuropathic pain or moderate to severe nociceptive pain is needed",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "pregnant with a definite history of previous VZV infection",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "previous vaccination against HZ",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "inadequate response to optimal treatment.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "When the ophthalmic division of the trigeminal nerve is affected (herpes zoster ophthalmicus), the patient will present with a blistering rash around the eye/eyelid with associated pain, swelling and redness (6, 8). Urgent referral to an appropriate healthcare provider is required.",
+      "structured": { "parameter": "rash location", "operator": "in", "value": "around the eye/eyelid (ophthalmic division of the trigeminal nerve)", "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 3, "section_heading": "Rash" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "If the facial nerve and subsequently, the vestibulocochlear nerve is affected (herpes zoster oticus/Ramsay Hunt syndrome), symptoms include earache, blistering in and around the ear canal, with or without facial paralysis (6). Urgent referral to an appropriate healthcare provider is required.",
+      "structured": { "parameter": "rash/symptom location", "operator": "in", "value": "in and around the ear canal", "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 3, "section_heading": "Rash" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Complications occur in approximately 13%-26% of patients with HZ (most prevalent in older people and those who are immunocompromised) and will require referral to an appropriate healthcare provider at presentation or at any stage if a complication develops (3, 5).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 3, "section_heading": "Complications" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Secondary bacterial skin infections (referral to an appropriate healthcare provider for swab and culture is required).",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 4, "section_heading": "Other complications" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "disseminated zoster is defined as 20 lesions outside of the dermatome and may be clinically indistinguishable from varicella infection (3).",
+      "structured": { "parameter": "number of lesions outside the primary dermatome", "operator": ">=", "value": 20, "unit": "lesions" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 4, "section_heading": "Disseminated zoster (VZV dissemination)" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Pregnant patients who are exposed to VZV (chicken pox or HZ) for the first time (no or uncertain history of previous chicken pox infection) may develop chicken pox which can have serious consequences. These include maternal mortality and morbidity, fetal varicella syndrome and the associated abnormalities (11, 12). Urgent referral to an appropriate healthcare provider is required as zoster immunoglobulin should be given to all seronegative women within 96 hours (5).",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 4, "section_heading": "HZ in pregnancy" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Service restricted to patients aged 18 years or over. (patient aged under 18 years)",
+      "structured": { "parameter": "age", "operator": "<", "value": 18, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 1, "section_heading": "Queensland Community Pharmacy Herpes Zoster (Shingles) – Clinical Practice Guideline" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "signs or symptoms worsen",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "new signs or symptoms develop (e.g., superinfection of HZ lesions)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "the blisters spread to the face or genitals, or a new area",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "they do not respond adequately to the recommended treatment or pain management is inadequate",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "they are experiencing complications, see Refer when and Complications of HZ",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "they are having unmanageable adverse effects.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "high-risk contacts (pregnant persons, neonates in first month of life, premature infants born at <28 weeks gestation and immunocompromised individuals) who have had significant exposure to a person with active VZV (household contacts or where there has been direct face-to-face contact for 5 minutes or being within the same room for at least an hour) to seek medical care as soon as possible (14).",
+      "structured": { "parameter": "direct face-to-face contact with a person with active VZV", "operator": ">=", "value": 5, "unit": "minutes" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "Preventing transmission" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "an appropriate healthcare provider for swab and culture (secondary bacterial skin infections)",
+      "a medical practitioner who may initiate pathology testing (diagnosis uncertain or patient previously vaccinated against HZ)",
+      "high-risk contacts with significant exposure to seek medical care as soon as possible"
+    ],
+    "urgent": [
+      "Urgent referral to an appropriate healthcare provider is required (herpes zoster ophthalmicus - blistering rash around the eye/eyelid with associated pain, swelling and redness)",
+      "Urgent referral to an appropriate healthcare provider is required (herpes zoster oticus/Ramsay Hunt syndrome - earache, blistering in and around the ear canal, with or without facial paralysis)",
+      "Urgent referral to an appropriate healthcare provider is required as zoster immunoglobulin should be given to all seronegative women within 96 hours (pregnant patients exposed to VZV for the first time)"
+    ],
+    "emergency": [
+      "emergency services, if required"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review (default)",
+      "what": "Clinical review is generally not required. Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 8, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "If the condition does not improve or resolve",
+      "what": "Advise patients (and/or parents/caregivers, if applicable) to see an appropriate healthcare provider (see Refer when and General advice).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 8, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "Expected course (skin lesions usually heal within 2-4 weeks)",
+      "what": "Skin lesions usually heal within 2-4 weeks although it may take longer, particularly for those that are immunocompromised or those with severe disease (2); pain and systemic symptoms subside as the rash resolves with recovery complete in 2-4 weeks in most cases (3, 7); pain can persist after shingles has resolved (4). Advise the patient at initial consultation of these timeframes.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "General advice" }
+    },
+    {
+      "when": "Patient with active VZV has exposed a high-risk contact (pregnant persons, neonates in first month of life, premature infants born at <28 weeks gestation, immunocompromised individuals)",
+      "what": "High-risk contacts who have had significant exposure (household contacts or direct face-to-face contact for 5 minutes or being within the same room for at least an hour) should be informed to seek medical care as soon as possible (14). People with HZ are infectious from the onset of the rash, until vesicles have dried and scabbed.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 7, "section_heading": "Preventing transmission" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Under the Queensland Public Health Regulation 2018, VZV infection (chicken pox or shingles) is considered a pathological diagnosis notifiable condition (as opposed to a clinical diagnosis notifiable condition) and must be notified in accordance with section 72 and 73 of the Public Health Act 2005.",
+      "Clinical notification (diagnosis made on the basis of clinic evidence) is generally not required.",
+      "If the diagnosis is uncertain or the patient has previously been vaccinated against HZ, they should be referred to a medical practitioner who may initiate pathology testing.",
+      "Cases of HZ confirmed by pathology testing must be notified by the director of the pathology laboratory."
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\herpes-zoster-shingles-guideline", "page": 6, "section_heading": "Public health notification" }
+  },
+  "references": [
+    "1. Cunningham AL, Breuer J, Dwyer DE, Gronow DW, Helme RD, Litt JC, et al. The prevention and management of herpes zoster. The Medical Journal of Australia. 2008;188(3):171-6. (page 10)",
+    "2. DynaMed: Herpes Zoster: EBSCO Information Services; 2025 [cited 2025 April 02]. Available from: https://www.dynamed.com/condition/herpes-zoster. (page 10)",
+    "3. Wehrhahn MC, Dwyer DE. Herpes zoster: epidemiology, clinical features, treatment and prevention. Australian Prescriber. 2012;35:143-7. (page 10)",
+    "4. Therapeutic Guidelines: Antibiotic (Shingles). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 02]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=c_ABG_Shingles-herpes-zoster_topic_1&guidelinename=auto&sectionId=c_ABG_Shingles-herpes-zoster_topic_1#c_ABG_Shingles-herpes-zoster_topic_1 (page 10)",
+    "5. Australian Technical Advisory Group on Immunisation (ATAGI). Australian Immunisation Handbook. Canberra: Australian Government Department of Health and Aged Care; 2022 [cited 2025 April 02]. Available from: https://immunisationhandbook.health.gov.au/ (page 10)",
+    "6. Corden E. How to identify and treat herpes zoster (shingles). Journal of Community Nursing. 2014;28(6):59-64. (page 10)",
+    "7. Oakley A. Herpes Zoster: DermNet New Zealand Trust; 2015 [cited 2022 May 23]. Available from: https://dermnetnz.org/topics/herpes-zoster. (page 10)",
+    "8. Kaye K. MSD Manual Professional Version: Herpes Zoster: Merck & Co; 2023 [cited 2025 April 02]. Available from: https://www.msdmanuals.com/en-au/professional/infectious_diseases/herpesviruses/herpes-zoster. (page 10)",
+    "9. Therapeutic Guidelines: Pain and analgesia (Pain associated with shingles (herpes zoster)). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 03]. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=pain-shingles (page 10)",
+    "10. Therapeutic Guidelines: Antibiotic (Herpes zoster ophthalmicus). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 03]. (page 10)",
+    "11. Pupco A, Bozzo P, Koren G. Herpes zoster during pregnancy. Canadian Family Physician. 2011;57(10):1133. (page 10)",
+    "12. SA Maternal & Neonatal Clinical Network. Clinical Guideline: Varicella Zoster (chicken pox) in Pregnancy. Adelaide: South Australia Health; 2015. (page 10)",
+    "13. Werner RN, Nikkels AF, Marinović B, Schäfer M, Czarnecka-Operacz M, Agius AM, et al. European consensus-based (S2k) Guideline on the Management of Herpes Zoster - guided by the European Dermatology Forum (EDF) in cooperation with the European Academy of Dermatology and Venereology (EADV), Part 1: Diagnosis. J Eur Acad Dermatol Venereol. 2017;31(1):9-19. (page 10)",
+    "14. Queensland Health. Varicella-zoster infection (chickenpox and shingles) Brisbane: Queensland Health; 2018 [cited 2022 August 30]. Available from: https://www.health.qld.gov.au/cdcg/index/varicella#procedure. (page 10)",
+    "15. Therapeutic Guidelines: Pain and analgesia (Mild, acute nociceptive pain). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 April 03]. Available from: https://app.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=mild-acute-nociceptive-pain (page 10)"
+  ],
+  "open_questions": [
+    {
+      "topic": "No printed exclusion criteria section - 'Refer when' bullets captured as exclusions",
+      "observed": "The document has no heading titled 'Exclusion criteria'. The two bullets under 'Refer when' (unclear diagnosis; pregnant without past/with uncertain VZV history) are captured as EXC-1/EXC-2 because these patients are to be referred rather than treated under the prescribing service. The nine 'Treat (if clinically appropriate) and concurrently refer' bullets are captured only as red flags (RF-3 to RF-11), not as exclusions, because the document says to treat them.",
+      "why_unclear": "Derivation from referral headings rather than a printed eligibility exclusion list.",
+      "source_page": 2
+    },
+    {
+      "topic": "Gate outcome not stated - patient history sufficiency",
+      "observed": "PW-1-S1 gate 'Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines' has no stated consequence in the document; on_fail recorded as 'unclear'.",
+      "why_unclear": "Document does not say what to do when history is insufficient.",
+      "source_page": 4
+    },
+    {
+      "topic": "Gate outcome not stated - antiviral window in immunocompetent patients beyond 72 hours",
+      "observed": "Antiviral treatment 'can reduce acute pain, rash duration, viral shedding, and the risk of ocular complications if started within 72 hours of rash onset in immunocompetent patients, and at any stage of rash duration in immunocompromised patients (4)'. The document does not state the action when an immunocompetent patient presents after 72 hours; on_fail recorded as 'unclear'.",
+      "why_unclear": "Efficacy window printed without a stated downstream action (treat anyway, or refer).",
+      "source_page": 5
+    },
+    {
+      "topic": "Gate outcome not stated - confirm management appropriate",
+      "observed": "PW-1-S7 gate 'management confirmed appropriate for contraindications and precautions, drug interactions, and pregnancy and lactation' has no stated failure action; on_fail recorded as 'unclear'.",
+      "why_unclear": "Document instructs confirmation but not the consequence of a failed check.",
+      "source_page": 6
+    },
+    {
+      "topic": "Specific antiviral drugs, strengths, doses, frequencies and durations not printed",
+      "observed": "Guideline states only 'Oral antiviral therapy in accordance with the Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Shingles (Herpes zoster)) (4)'. No valacicclovir/aciclovir/ famciclovir, strength, dose, frequency or duration appears anywhere in the document.",
+      "why_unclear": "Dose/strength/frequency are not in this document; no invented values were entered.",
+      "source_page": 5
+    },
+    {
+      "topic": "Specific analgesic drugs, strengths, doses and frequencies not printed",
+      "observed": "Only 'Oral analgesia for mild nociceptive shingles pain' with pointers to Therapeutic Guidelines: Pain and analgesia topic pages. Paracetamol and NSAIDs appear only in the 'Pharmacist resources' list, not as dosed recommendations.",
+      "why_unclear": "Dose detail delegated to external guidelines.",
+      "source_page": 5
+    },
+    {
+      "topic": "Zoster immunoglobulin dose, route and strength not printed",
+      "observed": "'zoster immunoglobulin should be given to all seronegative women within 96 hours (5)' - only the 96 hour window is printed.",
+      "why_unclear": "No dose/route in the source.",
+      "source_page": 4
+    },
+    {
+      "topic": "Referral urgency grading and cross-page referral lists",
+      "observed": "Referral wording spans pages 2 (Refer when / Treat and concurrently refer, '(including emergency services, if required)'), 3 (herpes zoster ophthalmicus and oticus - 'Urgent referral ... is required'), 4 (HZ in pregnancy - 'Urgent referral ... is required'), 7 (General advice - 'see an appropriate healthcare provider if') and 8 (Clinical review). Only three triggers carry explicit 'Urgent' language; all other referral triggers were coded severity 'medium' (not upgraded). Referral block provenance is page 2 with the range noted here.",
+      "why_unclear": "No formal urgency categories printed beyond 'urgent' and '(including emergency services, if required)'.",
+      "source_page": 2
+    },
+    {
+      "topic": "Notifiable - both readings recorded",
+      "observed": "'clinical notification is generally not required' (page 2 key points) yet 'must be notified in accordance with section 72 and 73 of the Public Health Act 2005' and 'Cases of HZ confirmed by pathology testing must be notified by the director of the pathology laboratory' (page 6). notifiable.required set to true with all four conditions recorded verbatim so the engine can show the nuance.",
+      "why_unclear": "Document states both a notification duty and that clinical notification is generally not required.",
+      "source_page": 6
+    },
+    {
+      "topic": "Legal basis for prescribing not printed",
+      "observed": "No poisons schedule provision, regulation or delegation instrument under which the pharmacist prescribing service operates is cited. The only legislation cited (Queensland Public Health Regulation 2018; Public Health Act 2005 ss 72-73) concerns public health notification.",
+      "why_unclear": "Nothing in the document attributes prescribing authority to a legal instrument.",
+      "source_page": 6
+    },
+    {
+      "topic": "first_line ranking not stated",
+      "observed": "Pharmacotherapy options are listed without an explicit line of therapy. TX-1 (oral antiviral therapy) coded first_line=true because the document presents antivirals as the principal therapy ('Early identification and management with antivirals and analgesia'); TX-2 (oral analgesia) coded first_line=false because it is scoped to 'mild nociceptive shingles pain'.",
+      "why_unclear": "No ranked treatment ladder printed.",
+      "source_page": 5
+    },
+    {
+      "topic": "No upper age bound printed",
+      "observed": "'Service restricted to patients aged 18 years or over' sets a minimum of 18 years; no maximum age is stated (age_bounds.max_years = null).",
+      "why_unclear": "Document only states a lower bound.",
+      "source_page": 1
+    },
+    {
+      "topic": "Postherpetic neuralgia timing definition vs referral trigger",
+      "observed": "PHN is defined as 'Neuropathic pain that persists for at least 3 months beyond the duration of the rash or reoccurs'; the 'Refer when' list separately requires referral when 'pain management for neuropathic pain or moderate to severe nociceptive pain is needed'. No numeric threshold for 'moderate to severe' pain is printed.",
+      "why_unclear": "Severity thresholds for pain not quantified in the document.",
+      "source_page": 3
+    },
+    {
+      "topic": "Vaccination interval not numeric",
+      "observed": "'the interval between the episode and vaccination is dependent on the patient's immune status (5)' - no numbers printed; delegated to the Australian Immunisation Handbook.",
+      "why_unclear": "Interval cannot be transcribed as a rule from this document.",
+      "source_page": 6
+    },
+    {
+      "topic": "Stray text on page 1",
+      "observed": "Page 1 text extraction contains a stray line 'than' between the service restriction sentence and 'Guideline overview'; appears to be a conversion/OCR artefact with no clinical meaning.",
+      "why_unclear": "Text extraction artefact; no clinical content attributed to it.",
+      "source_page": 1
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Specific antiviral agent, strength, dose, route, frequency and duration for herpes zoster (oral antiviral therapy).",
+      "source_page": 5,
+      "reason": "Delegated to the current online version of Therapeutic Guidelines: Antibiotic (Skin and soft tissue infections - Shingles (Herpes zoster)); must be pinned and confirmed before go-live."
+    },
+    {
+      "item": "Specific analgesic agent, strength, dose, route and frequency for mild nociceptive shingles pain, and management of neuropathic/postherpetic pain.",
+      "source_page": 5,
+      "reason": "Delegated to Therapeutic Guidelines: Pain and analgesia topic pages; not printed in this PDF."
+    },
+    {
+      "item": "Zoster immunoglobulin dose, route and administration detail (only 'within 96 hours' for seronegative women is printed).",
+      "source_page": 4,
+      "reason": "Dose/route live in Australian Medicines Handbook (Zoster immunoglobulin); must be confirmed before go-live."
+    },
+    {
+      "item": "Quantity of medicine to supply - 'Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy' (no numeric cap printed).",
+      "source_page": 8,
+      "reason": "Supply quantity is left to pharmacist judgement with no printed maximum; local policy must set the cap."
+    },
+    {
+      "item": "Legal basis / poisons schedule provision under which the Queensland Community Pharmacy prescribing service operates for herpes zoster.",
+      "source_page": 1,
+      "reason": "Not printed anywhere in the document; jurisdictional basis must be confirmed."
+    },
+    {
+      "item": "Professional discretion clause - 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement...'",
+      "source_page": 1,
+      "reason": "Local policy must define how discretion interacts with automated eligibility/referral checks."
+    },
+    {
+      "item": "72-hour antiviral treatment window for immunocompetent patients and 'any stage of rash duration' for immunocompromised patients - what the engine should do outside that window.",
+      "source_page": 5,
+      "reason": "Document states the benefit window but not the action beyond it."
+    },
+    {
+      "item": "Confirm management checks - contraindications and precautions, drug interactions, pregnancy and lactation (per Therapeutic Guidelines, Australian Medicines Handbook, Australian Immunisation Handbook).",
+      "source_page": 6,
+      "reason": "Checklists live in external resources; contents and failure actions must be pinned locally."
+    },
+    {
+      "item": "HZ vaccination eligibility, NIP risk status and interval after a previous HZ episode (Australian Immunisation Handbook).",
+      "source_page": 6,
+      "reason": "Cross-guideline dependency; interval is 'dependent on the patient's immune status' with no printed number."
+    },
+    {
+      "item": "Public health notification workflow for VZV infection - Queensland Public Health Regulation 2018, Public Health Act 2005 ss 72-73; who notifies and when (clinical notification 'generally not required', pathology-confirmed cases notified by the director of the pathology laboratory).",
+      "source_page": 6,
+      "reason": "Notification duty is jurisdictionally hedged ('generally not required'); local process must be confirmed."
+    },
+    {
+      "item": "Transmission precautions 'in accordance with the Queensland Health Guideline for Public Health Units (14)' and high-risk contact advice (significant exposure: face-to-face contact 5 minutes / same room 1 hour).",
+      "source_page": 7,
+      "reason": "External Queensland Health guideline dependency; exposure thresholds must be confirmed for the rules engine."
+    },
+    {
+      "item": "Service restriction 'aged 18 years or over' and the statement that ineligibility does not preclude usual pharmacy care.",
+      "source_page": 1,
+      "reason": "Jurisdictional service eligibility rule to be confirmed against current Queensland Community Pharmacy programme settings."
+    }
+  ]
+}

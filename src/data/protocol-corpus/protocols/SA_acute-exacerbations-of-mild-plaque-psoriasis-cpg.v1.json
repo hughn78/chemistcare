@@ -1,0 +1,960 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf",
+    "pdf_sha256": "311d00484f474385e56395d441c205b2526dc8d7c7ffda4b69e4b0ac3e8aa08d",
+    "page_count": 13,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "SA",
+    "instrument_name": "Acute Exacerbations of Mild Plaque Psoriasis – Clinical Practice Guideline",
+    "instrument_version": "Version 1.0 September 2025",
+    "effective_date": "September 2025",
+    "legal_basis": "Authorisation page (p2): 'Community Pharmacy Expanded Scope of Practice Initiative. In accordance with regulation 17A of the Controlled Substances (Poisons) Regulations 2011 (the Poisons Regulations) a pharmacist is authorised to prescribe a prescription drug (not being a drug of dependence) if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code.'",
+    "supervision_model": "Document does not use 'collaborative'/'autonomous' terminology; its own wording: an authorised pharmacist — 'if the pharmacist is included on the register of authorised pharmacists and the drug is prescribed in accordance with the Community Pharmacist Prescribing Code' (p2). Clinical discretion statement (p5): 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'",
+    "scope_summary": "SA Health (Community Pharmacy Expanded Scope of Practice Initiative) clinical practice guideline for pharmacist assessment and management of an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris). Service restricted to patients aged 18 years or over. Covers 'Red flag' warning signs necessitating referral to emergency medical care (immediate referral to an emergency department – call 000; urgent referral within 24 to 48 hours; non-urgent referral), 'Treat (if clinically appropriate) and concurrently refer' situations, key points, patient history, Table 1 factors that can aggravate psoriasis, examination, severity assessment with PASI and DLQI, management and treatment plan (general measures plus topical treatments per Therapeutic Guidelines: Psoriasis), confirmation of management, communication of the agreed management plan, patient resources, general advice, clinical review and resources. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'"
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 18 years or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Presentation is an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris): 'People presenting with an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris) may receive treatment within the scope of the guideline; all other presentations necessitate a referral to a medical practitioner.'",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Key points" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Severity within the mild/mild-to-moderate band by score: 'mild to moderate plaque psoriasis = a PASI ≤ 10 and DLQI ≤ 10 (23)'.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+      },
+      {
+        "id": "INC-4",
+        "text": "Physical examination of the skin performed to identify, assess and classify severity: 'Physical examination of the patient's skin is required to identify, assess and classify the severity of an acute exacerbation of mild plaque psoriasis.' Patient history must also establish 'previous diagnosis of plaque psoriasis and any current or past management plan'.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Examination" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "Immediate referral to an emergency department – call 000: Raised purple rash that doesn't blanch.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "Immediate referral to an emergency department – call 000: Generalised erythema that covers 90% or more of the skin.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "Immediate referral to an emergency department – call 000: Rash with shortness of breath or lip / tongue swelling.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "Immediate referral to an emergency department – call 000: Fever (temperature > 38°C) or hypothermia (temperature < 35.5°C) with other signs or symptoms of sepsis as listed below [text extraction renders the degree symbol as '0': '> 380C' / '< 35.50C'; see open_questions].",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "Signs or symptoms of sepsis as listed under the fever/hypothermia bullet: 'Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "Immediate referral to an emergency department – call 000: 'Significant concern from parent/caregiver.' (printed as a sub-bullet of the sepsis signs list)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "Urgent referral within 24 to 48 hours: Psoriatic lesions are infected.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "Urgent referral within 24 to 48 hours: Signs and symptoms of progressive disease, e.g. cellulitis.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "Urgent referral within 24 to 48 hours: The diagnosis is unclear.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "Urgent referral within 24 to 48 hours: 'The psoriasis is severe e.g., it is having a marked negative emotional and social impact and/or extensively affecting highly visible areas including the face and scalp, genitals, palms, flexures soles and nails' [as printed; missing comma between 'flexures' and 'soles' — see open_questions].",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "Urgent referral within 24 to 48 hours: The patient is immunocompromised.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "Urgent referral within 24 to 48 hours: Erythrodermic psoriasis, unstable or generalised pustular psoriasis.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "Non-urgent referral: A diagnosis of psoriasis has not previously been made by a medical practitioner.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "Non-urgent referral: The patient is planning a pregnancy or pregnant.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "Non-urgent referral: The patient presents with a type of psoriasis other than mild plaque psoriasis.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "Non-urgent referral: The face, scalp, genitals, palms and/or soles are affected. Related key point (p5): psoriasis is 'considered severe when it occurs on the face, nails, scalp, genitals, flexure and soles (14)'.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "Non-urgent referral: The patient is taking a medicine that can exacerbate psoriasis.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-18",
+        "text": "Non-urgent referral: 'There is no response to optimal topical treatment (within 3 to 6 months), or the condition worsens, rapidly relapses or reoccurs after adequate treatment.'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+      },
+      {
+        "id": "EXC-19",
+        "text": "'all other presentations necessitate a referral to a medical practitioner' (i.e. any presentation that is not an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris)).",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Key points" }
+      },
+      {
+        "id": "EXC-20",
+        "text": "Severity outside the guideline scope: 'severe plaque psoriasis = PASI > 10 and/or DLQI > 10 (23)'; 'The psoriasis is always considered severe when the DLQI score is > 10, regardless of the PASI score (23).'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+      },
+      {
+        "id": "EXC-21",
+        "text": "Considered severe by impact: 'It may also be considered severe if it has significant impacts on the patient's quality of life, due to involvement of visible areas, major parts of the scalp, genitals, palms and / or soles, onycholysis of at least 2 fingernails or pruritus leading to excoriation (21, 23).'",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 18,
+      "max_years": null,
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+      },
+      {
+        "id": "EXE-2",
+        "text": "'Treat (if clinically appropriate) and concurrently refer' — 'The patient has psoriatic comorbidities or risk factors that require management e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours.' Not an exclusion: 'Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) in the following situations' (sic 'approriate').",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2", "EXE-3", "EXE-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+      },
+      {
+        "id": "EXE-3",
+        "text": "'Treat (if clinically appropriate) and concurrently refer' — 'Evidence of synovitis.' Not an exclusion: initial treatment is provided while concurrently referring.",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2", "EXE-3", "EXE-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+      },
+      {
+        "id": "EXE-4",
+        "text": "'Treat (if clinically appropriate) and concurrently refer' — 'The patient has not seen a medical practitioner for review of their condition in the previous 12 months.' Not an exclusion: initial treatment is provided while concurrently referring.",
+        "criteria_group": { "all_of": [], "any_of": ["EXE-2", "EXE-3", "EXE-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Assessment and management of an acute exacerbation of mild plaque psoriasis",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Gather information and assess patient's needs — Patient history: 'Sufficient information should be obtained from the patient to assess the safety and appropriateness of any recommendations and medicines.' The patient history should consider: age; whether the patient identifies as Aboriginal or Torres Strait Islander; pregnancy and breastfeeding status (if applicable); onset, duration, nature, location, severity and extent of the rash and other symptoms; previous diagnosis of plaque psoriasis and any current or past management plan, including for underlying and associated medical conditions; underlying and associated medical conditions, including immunocompromise, psoriatic comorbidities such as arthritis and common comorbidities such as hypertension, hyperlipidaemia, obesity, type 2 diabetes and depression; response to any previous treatments; impacts on quality of life and psychosocial wellbeing; exposure to factors that can aggravate psoriasis (see Table 1); current, recently commenced or recently ceased medicines (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); family history of psoriasis; allergies/adverse drug effects. Aboriginal and Torres Strait Islander patients: 'Consider referring to the CARPA Standard Treatment Manual for further information for Aboriginal and Torres Strait Islander patients living in rural and remote communities (17).' Reminder: 'Pharmacists can access a range of clinical information in a patient's My Health Record, including details about current and past medication history, allergies and current medical conditions.'",
+          "gates": [
+            { "criterion": "Sufficient information obtained to assess the safety and appropriateness of any recommendations and medicines", "on_fail": "unclear" },
+            { "criterion": "age 18 years or over — 'Service restricted to patients aged 18 years or over' (INC-1 / RF-1)", "on_fail": "unclear" },
+            { "criterion": "pregnancy and breastfeeding status (if applicable) assessed — 'The patient is planning a pregnancy or pregnant' requires non-urgent referral (EXC-14 / RF-16)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "previous diagnosis of plaque psoriasis made by a medical practitioner documented — 'A diagnosis of psoriasis has not previously been made by a medical practitioner' requires non-urgent referral (EXC-13 / RF-15)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "current, recently commenced or recently ceased medicines reviewed — 'The patient is taking a medicine that can exacerbate psoriasis' requires non-urgent referral (EXC-17 / RF-19)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "immunocompromise assessed — 'The patient is immunocompromised' requires urgent referral within 24 to 48 hours (EXC-11 / RF-13)", "on_fail": "SEE_PW-1-S5" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 6, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination: 'Apply standard and contact infection precautions when examining patients.' 'Check vital signs – BP, HR, pulse, temperature, hydration status.' 'Physical examination of the patient's skin is required to identify, assess and classify the severity of an acute exacerbation of mild plaque psoriasis. DermNet NZ - Psoriasis contains images of different types of psoriasis (4).' 'In darker skin tones, plaques are generally darker or violet in colour, thicker, and with more obvious scale and itch (4).' 'Psoriasis Area and Severity Index (PASI) scores may be underestimated in people with darker skin tones (2).' 'Nail changes, include pitting, lifting of the nail (onycholysis) and subungual hyperkeratosis may also be observed, although it may be difficult to distinguish nail changes due to psoriasis from fungal nail infections (3, 4).'",
+          "gates": [
+            { "criterion": "standard and contact infection precautions applied when examining the patient", "on_fail": "unclear" },
+            { "criterion": "vital signs checked – BP, HR, pulse, temperature, hydration status — fever > 38°C or hypothermia < 35.5°C with other signs or symptoms of sepsis requires immediate referral to an emergency department, call 000 (EXC-4 / RF-5, RF-6)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "physical examination of the skin performed to identify, assess and classify the severity of the acute exacerbation", "on_fail": "unclear" },
+            { "criterion": "diagnosis is clear — 'The diagnosis is unclear' requires urgent referral within 24 to 48 hours (EXC-9 / RF-11)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "psoriatic lesions are not infected and there are no signs or symptoms of progressive disease, e.g. cellulitis (EXC-7, EXC-8 / RF-9, RF-10)", "on_fail": "SEE_PW-1-S5" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Examination" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm the presentation is within the guideline scope: 'People presenting with an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris) may receive treatment within the scope of the guideline; all other presentations necessitate a referral to a medical practitioner.' Key points: 'There is no cure for psoriasis; treatment aims to clear lesions and manage symptoms (3). Most cases of mild plaque psoriasis can be treated with topical therapies (6).' 'As a systemic autoimmune disease, psoriasis is associated with an increased risk of hypertension, obesity, elevated lipid levels, heart disease, diabetes, inflammatory bowel disease, lymphoma and depression (10). Where appropriate, consider screening for cardiovascular risk and possible referral to a medical practitioner.' 'Psoriasis can have marked functional, psychological and social impacts, and this does not always correlate with severity (3, 4). Psoriasis is difficult to treat, associated with poor cosmetic outcomes and considered severe when it occurs on the face, nails, scalp, genitals, flexure and soles (14).' 'Skin conditions in Aboriginal and Torres Strait Islander people are often complicated by high rates of impetigo (and increased risk of rheumatic fever), MRSA colonisation, and underlying inflammatory dermatoses.' 'When applying the information contained within this clinical practice guideline, pharmacists are advised to exercise professional discretion and judgement. The clinical practice guideline does not override the responsibility of the pharmacist to make decisions appropriate to the circumstances of the individual, in consultation with the patient and/or their carer.'",
+          "gates": [
+            { "criterion": "presentation is an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris) — 'all other presentations necessitate a referral to a medical practitioner' (EXC-19 / RF-24)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "the type of psoriasis is mild plaque psoriasis — 'The patient presents with a type of psoriasis other than mild plaque psoriasis' requires non-urgent referral (EXC-15 / RF-17)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "face, scalp, genitals, palms and/or soles are not affected (and not severe per the Key points site list: face, nails, scalp, genitals, flexure and soles) — EXC-16 / RF-18", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "no erythrodermic psoriasis, unstable or generalised pustular psoriasis (EXC-12 / RF-14)", "on_fail": "SEE_PW-1-S5" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Key points" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Assessment of severity: 'A Psoriasis Area and Severity Index (PASI) score and Dermatology Life Quality Index (DLQI) score may be used to assess severity and responses to treatment (10, 23): mild to moderate plaque psoriasis = a PASI ≤ 10 and DLQI ≤ 10 (23); severe plaque psoriasis = PASI > 10 and/or DLQI > 10 (23).' 'The psoriasis is always considered severe when the DLQI score is > 10, regardless of the PASI score (23).' 'It may also be considered severe if it has significant impacts on the patient's quality of life, due to involvement of visible areas, major parts of the scalp, genitals, palms and / or soles, onycholysis of at least 2 fingernails or pruritus leading to excoriation (21, 23).'",
+          "gates": [
+            { "criterion": "PASI ≤ 10 and DLQI ≤ 10 (mild to moderate plaque psoriasis — INC-3)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "DLQI ≤ 10 — 'The psoriasis is always considered severe when the DLQI score is > 10, regardless of the PASI score' (EXC-20 / RF-26)", "on_fail": "SEE_PW-1-S5" },
+            { "criterion": "no significant quality-of-life impact from visible areas, major parts of the scalp, genitals, palms and/or soles, onycholysis of at least 2 fingernails or pruritus leading to excoriation (EXC-21 / RF-27)", "on_fail": "SEE_PW-1-S5" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "REFER",
+          "description": "Red-flag triage: ''Red flag' warning signs at patient presentation that necessitate referral to emergency medical care' (p4). (a) 'Immediate referral to an emergency department – call 000:' Raised purple rash that doesn't blanch; Generalised erythema that covers 90% or more of the skin; Rash with shortness of breath or lip / tongue swelling; Fever (temperature > 38°C) or hypothermia (temperature < 35.5°C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver. (b) 'Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours:' Psoriatic lesions are infected; Signs and symptoms of progressive disease, e.g. cellulitis; The diagnosis is unclear; The psoriasis is severe e.g., it is having a marked negative emotional and social impact and/or extensively affecting highly visible areas including the face and scalp, genitals, palms, flexures soles and nails; The patient is immunocompromised; Erythrodermic psoriasis, unstable or generalised pustular psoriasis. (c) 'Non-urgent referral:' A diagnosis of psoriasis has not previously been made by a medical practitioner; The patient is planning a pregnancy or pregnant; The patient presents with a type of psoriasis other than mild plaque psoriasis; The face, scalp, genitals, palms and/or soles are affected; The patient is taking a medicine that can exacerbate psoriasis; There is no response to optimal topical treatment (within 3 to 6 months), or the condition worsens, rapidly relapses or reoccurs after adequate treatment. (d) 'Treat (if clinically appropriate) and concurrently refer' situations (p5) are treated at PW-1-S6 with concurrent referral (RF-21 to RF-23). Severity-based referral triggers are at RF-25 to RF-27. See RF-1 to RF-32.",
+          "gates": [
+            { "criterion": "no 'Immediate referral to an emergency department – call 000' red flag present (EXC-1 to EXC-6 / RF-2 to RF-8)", "on_fail": "STOP" },
+            { "criterion": "no 'Urgent referral within 24 to 48 hours' trigger present (EXC-7 to EXC-12 / RF-9 to RF-14)", "on_fail": "REFER" },
+            { "criterion": "no 'Non-urgent referral' trigger present (EXC-13 to EXC-18 / RF-15 to RF-20)", "on_fail": "REFER" },
+            { "criterion": "no severity-based referral trigger present — PASI > 10 and/or DLQI > 10, or severe features (EXC-20, EXC-21 / RF-25 to RF-27)", "on_fail": "REFER" },
+            { "criterion": "no 'Treat (if clinically appropriate) and concurrently refer' situation present (EXE-2 to EXE-4 / RF-21 to RF-23) — if present, provide initial treatment AND concurrently refer to a general practitioner", "on_fail": "SEE_PW-1-S6" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Management and treatment plan: 'Pharmacist management of acute exacerbations of mild plaque psoriasis involves: general measures: Education and advice regarding lifestyle modification, use of adjunctive agents including emollients/moisturisers, and other measures as per the Therapeutic Guidelines: Psoriasis and the Australian Medicines Handbook: Psoriasis (25, 26). pharmacotherapy: Topical treatments according to Therapeutic Guidelines: Psoriasis (26).' Confirm management is appropriate: 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other appropriate therapeutic resources to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.' 'Pharmacists should confirm the patient has an appropriate management plan for any underlying and associated medical conditions.' No specific agent, strength, dose, route, frequency or duration is printed in this document (TX-1 to TX-3; see open_questions). 'Treat (if clinically appropriate) and concurrently refer': 'Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) in the following situations: The patient has psoriatic comorbidities or risk factors that require management e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours; Evidence of synovitis; The patient has not seen a medical practitioner for review of their condition in the previous 12 months.'",
+          "gates": [
+            { "criterion": "'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other appropriate therapeutic resources to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding'", "on_fail": "STOP" },
+            { "criterion": "general measures provided: education and advice regarding lifestyle modification, use of adjunctive agents including emollients/moisturisers, and other measures as per the Therapeutic Guidelines: Psoriasis and the Australian Medicines Handbook: Psoriasis", "on_fail": "unclear" },
+            { "criterion": "patient has an appropriate management plan for any underlying and associated medical conditions", "on_fail": "unclear" },
+            { "criterion": "'Treat (if clinically appropriate) and concurrently refer' situations (EXE-2 to EXE-4 / RF-21 to RF-23): initial treatment provided while concurrently referring to a general practitioner", "on_fail": "SEE_PW-1-S5" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: 'Comprehensive advice and counselling (including supporting written information when required) as per the Australian Medicines Handbook and other relevant references should be provided to the patient regarding: the typical cycle of psoriasis and the expectations of treatment; product and medication use: dosing and application instructions for TCS, moisturisers, emollients and other topical products; how to manage adverse effects; when to seek further care and/or treatment, including recognising infection; when to return to the pharmacist for clinical review.' 'It is the pharmacist's responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and parents/caregivers if applicable) and compliance with all copyright conditions.' 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.' Patient resources (p9): NPS MedicineWise factsheets 'Topical treatments for your plague psoriasis' [as printed] and 'Plaque psoriasis: my options when topical treatments aren't enough'; Skin Health Institute – Patient information sheet; SA Health - Psoriasis - Adult Clinical Prioritisation Criteria; Health Direct - Psoriasis. General advice (p9): 'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved.' 'The patient should be advised to immediately see their usual medical practitioner if symptoms worsen after commencing treatment.' 'Common adverse effects of TCS, such as transient burning, stinging or pain on application, can generally be reversed by stopping the medicine. Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting.'",
+          "gates": [
+            { "criterion": "comprehensive advice and counselling (including supporting written information when required) provided on the typical cycle of psoriasis and expectations of treatment; product and medication use including dosing and application instructions for topical corticosteroids (TCS), moisturisers, emollients and other topical products; how to manage adverse effects; when to seek further care and/or treatment, including recognising infection; when to return to the pharmacist for clinical review", "on_fail": "unclear" },
+            { "criterion": "agreed management plan shared with members of the patient's multidisciplinary healthcare team, with the patient's consent", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 8, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "FOLLOW_UP",
+          "description": "Clinical Review: 'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines. Clinical review is recommended 2-4 weeks after initiation of treatment for an acute exacerbation to assess: response to treatment and adherence (or barriers to following treatment plan); if changes are required to the treatment plan; adverse effects.' 'If a good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only. If there has been an inadequate response, the pharmacist should check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied, consider alternative treatment options, or consider referral to a medical practitioner where appropriate (26).' 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's review.' 'Pharmacotherapy for the management of psoriasis may be required longer-term; pharmacists should refer the patient to a medical practitioner for review and ongoing management after the acute flare has been managed. An annual review by a medical practitioner is recommended to assess for adverse effects from TCS therapy (10, 20).'",
+          "gates": [
+            { "criterion": "clinical review 2-4 weeks after initiation of treatment for an acute exacerbation to assess response to treatment and adherence (or barriers to following treatment plan), whether changes are required to the treatment plan, and adverse effects", "on_fail": "unclear" },
+            { "criterion": "quantity prescribed (including repeats) limited to the period until the patient's review", "on_fail": "unclear" },
+            { "criterion": "after the acute flare has been managed, referral to a medical practitioner for review and ongoing management, and annual review by a medical practitioner to assess for adverse effects from TCS therapy", "on_fail": "unclear" },
+            { "criterion": "at review: good response → medication reduced or stopped and regular moisturiser only; inadequate response → check compliance and amount applied, consider alternative treatment options, or consider referral to a medical practitioner", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Topical treatments (specific agent not specified in this document)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Pharmacotherapy verbatim (p8): 'Topical treatments according to Therapeutic Guidelines: Psoriasis (26).' Context (p5 Key points): 'Most cases of mild plaque psoriasis can be treated with topical therapies (6).' No agent, strength, dose, route (beyond 'topical'), frequency or duration is printed in this document — delegated to Therapeutic Guidelines: Psoriasis (see open_questions and hugh_to_confirm). Response timeframes verbatim (p9 General advice): 'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved.' Confirm-management caveat verbatim (p8): 'Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other appropriate therapeutic resources to confirm the treatment recommendation is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and breastfeeding.' Quantity rule verbatim (p9): 'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's review.'",
+      "first_line": true,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Emollients/moisturisers (adjunctive agents; specific products not specified in this document)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "General measure verbatim (p8): 'Education and advice regarding lifestyle modification, use of adjunctive agents including emollients/moisturisers, and other measures as per the Therapeutic Guidelines: Psoriasis and the Australian Medicines Handbook: Psoriasis (25, 26).' Also (p9 Clinical Review): 'If a good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only.' Advice item (p8): 'dosing and application instructions for TCS, moisturisers, emollients and other topical products'. No product, strength, dose, frequency or duration is printed.",
+      "first_line": false,
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 8, "section_heading": "Management and treatment plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "Topical corticosteroids (TCS) (class term as printed; no specific agent, strength or dose printed)",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Captured as a class row so the adverse-effect, counselling and annual-review rules are machine-checkable; confidence 'unclear' because no specific product is named. p8 (Communicate agreed management plan): 'dosing and application instructions for TCS, moisturisers, emollients and other topical products'. p9 (General advice): 'Common adverse effects of TCS, such as transient burning, stinging or pain on application, can generally be reversed by stopping the medicine. Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting.' p9 (Clinical Review): 'An annual review by a medical practitioner is recommended to assess for adverse effects from TCS therapy (10, 20).' Table 1 aggravating factor (p7): 'stopping oral corticosteroids or potent topical corticosteroids (TCS)'. Pharmacist resources (p10) list 'Application and quantity of topical steroids' (Therapeutic Guidelines: Dermatology) and 'Corticosteroids' / 'Topical steroids - how much do I use?' (Australian Medicines Handbook).",
+      "first_line": false,
+      "confidence": "unclear",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "General advice" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Service restricted to patients aged 18 years or over. 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.'",
+      "structured": { "parameter": "age_years", "operator": ">=", "value": 18, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 3, "section_heading": "Guideline Overview" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "Immediate referral to an emergency department – call 000: Raised purple rash that doesn't blanch.",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "Immediate referral to an emergency department – call 000: Generalised erythema that covers 90% or more of the skin.",
+      "structured": { "parameter": "generalised_erythema_body_surface_covered", "operator": ">=", "value": 90, "unit": "% of skin" },
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "Immediate referral to an emergency department – call 000: Rash with shortness of breath or lip / tongue swelling.",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "Immediate referral to an emergency department – call 000: Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below [degree symbol rendered as '0' in the text extraction; read as 38°C and 35.5°C — see open_questions].",
+      "structured": { "parameter": "temperature", "operator": ">", "value": 38, "unit": "degC" },
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "Immediate referral to an emergency department – call 000: Hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis as listed below [degree symbol rendered as '0' in the text extraction; read as 35.5°C — see open_questions].",
+      "structured": { "parameter": "temperature", "operator": "<", "value": 35.5, "unit": "degC" },
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "Signs or symptoms of sepsis (with fever > 38°C or hypothermia < 35.5°C): 'Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite'.",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "Immediate referral to an emergency department – call 000: 'Significant concern from parent/caregiver.' (printed as a sub-bullet under the sepsis signs list)",
+      "structured": null,
+      "action": "ESCALATE_000",
+      "severity": "critical",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours: Psoriatic lesions are infected.",
+      "structured": { "parameter": "psoriatic_lesions_infected", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "Urgent referral within 24 to 48 hours: Signs and symptoms of progressive disease, e.g. cellulitis.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "Urgent referral within 24 to 48 hours: The diagnosis is unclear.",
+      "structured": { "parameter": "diagnosis_clarity", "operator": "==", "value": "unclear", "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "Urgent referral within 24 to 48 hours: 'The psoriasis is severe e.g., it is having a marked negative emotional and social impact and/or extensively affecting highly visible areas including the face and scalp, genitals, palms, flexures soles and nails' [as printed].",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "Urgent referral within 24 to 48 hours: The patient is immunocompromised.",
+      "structured": { "parameter": "immunocompromised", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "Urgent referral within 24 to 48 hours: Erythrodermic psoriasis, unstable or generalised pustular psoriasis.",
+      "structured": { "parameter": "psoriasis_type", "operator": "in", "value": ["erythrodermic psoriasis", "unstable psoriasis", "generalised pustular psoriasis"], "unit": "" },
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "Non-urgent referral: A diagnosis of psoriasis has not previously been made by a medical practitioner.",
+      "structured": { "parameter": "psoriasis_previously_diagnosed_by_medical_practitioner", "operator": "==", "value": false, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "Non-urgent referral: The patient is planning a pregnancy or pregnant.",
+      "structured": { "parameter": "planning_pregnancy_or_pregnant", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "Non-urgent referral: The patient presents with a type of psoriasis other than mild plaque psoriasis.",
+      "structured": { "parameter": "psoriasis_type_other_than_mild_plaque", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "Non-urgent referral: The face, scalp, genitals, palms and/or soles are affected.",
+      "structured": { "parameter": "affected_sites_face_scalp_genitals_palms_soles", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "Non-urgent referral: The patient is taking a medicine that can exacerbate psoriasis.",
+      "structured": { "parameter": "taking_medicine_that_can_exacerbate_psoriasis", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "Non-urgent referral: 'There is no response to optimal topical treatment (within 3 to 6 months), or the condition worsens, rapidly relapses or reoccurs after adequate treatment.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "Treat (if clinically appropriate) and concurrently refer — 'The patient has psoriatic comorbidities or risk factors that require management e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours'.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "Treat (if clinically appropriate) and concurrently refer — Evidence of synovitis.",
+      "structured": { "parameter": "evidence_of_synovitis", "operator": "==", "value": true, "unit": "" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "Treat (if clinically appropriate) and concurrently refer — 'The patient has not seen a medical practitioner for review of their condition in the previous 12 months.'",
+      "structured": { "parameter": "months_since_last_medical_practitioner_review", "operator": ">=", "value": 12, "unit": "months" },
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "'People presenting with an acute exacerbation of mild plaque psoriasis (psoriasis vulgaris) may receive treatment within the scope of the guideline; all other presentations necessitate a referral to a medical practitioner.'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Key points" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "'severe plaque psoriasis = PASI > 10 and/or DLQI > 10 (23)' — outside the mild plaque psoriasis scope of this guideline.",
+      "structured": { "parameter": "pasi_or_dlqi_score", "operator": ">", "value": 10, "unit": "score" },
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "'The psoriasis is always considered severe when the DLQI score is > 10, regardless of the PASI score (23).'",
+      "structured": { "parameter": "dlqi_score", "operator": ">", "value": 10, "unit": "score" },
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "'It may also be considered severe if it has significant impacts on the patient's quality of life, due to involvement of visible areas, major parts of the scalp, genitals, palms and / or soles, onycholysis of at least 2 fingernails or pruritus leading to excoriation (21, 23).'",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 7, "section_heading": "Assessment of severity" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "'The patient should be advised to immediately see their usual medical practitioner if symptoms worsen after commencing treatment.'",
+      "structured": { "parameter": "symptoms_worsen_after_comencing_treatment", "operator": "==", "value": true, "unit": "" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "'Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting.' (context: 'Common adverse effects of TCS, such as transient burning, stinging or pain on application, can generally be reversed by stopping the medicine.')",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "'If there has been an inadequate response, the pharmacist should check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied, consider alternative treatment options, or consider referral to a medical practitioner where appropriate (26).'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "'As a systemic autoimmune disease, psoriasis is associated with an increased risk of hypertension, obesity, elevated lipid levels, heart disease, diabetes, inflammatory bowel disease, lymphoma and depression (10). Where appropriate, consider screening for cardiovascular risk and possible referral to a medical practitioner.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 5, "section_heading": "Key points" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "'Pharmacotherapy for the management of psoriasis may be required longer-term; pharmacists should refer the patient to a medical practitioner for review and ongoing management after the acute flare has been managed.'",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "'Refer to a general practitioner (or other medical practitioner where appropriate): Non-urgent referral:' A diagnosis of psoriasis has not previously been made by a medical practitioner; The patient is planning a pregnancy or pregnant; The patient presents with a type of psoriasis other than mild plaque psoriasis; The face, scalp, genitals, palms and/or soles are affected; The patient is taking a medicine that can exacerbate psoriasis; There is no response to optimal topical treatment (within 3 to 6 months), or the condition worsens, rapidly relapses or reoccurs after adequate treatment.",
+      "'Treat (if clinically appropriate) and concurrently refer — Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) in the following situations:' The patient has psoriatic comorbidities or risk factors that require management e.g., arthritis, risk of venous thromboembolism, depression, increased alcohol consumption, signs of lymphoma, skin cancers and solid tumours; Evidence of synovitis; The patient has not seen a medical practitioner for review of their condition in the previous 12 months. [sic 'approriate']",
+      "'all other presentations necessitate a referral to a medical practitioner.' (Key points)",
+      "'Referral to a medical practitioner is required when adverse effects cannot be managed in the pharmacy setting.'",
+      "'If there has been an inadequate response, the pharmacist should check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied, consider alternative treatment options, or consider referral to a medical practitioner where appropriate (26).'",
+      "'Pharmacotherapy for the management of psoriasis may be required longer-term; pharmacists should refer the patient to a medical practitioner for review and ongoing management after the acute flare has been managed.'",
+      "'Where appropriate, consider screening for cardiovascular risk and possible referral to a medical practitioner.'"
+    ],
+    "urgent": [
+      "'Refer to a general practitioner (or other medical practitioner where appropriate): Urgent referral within 24 to 48 hours:' Psoriatic lesions are infected; Signs and symptoms of progressive disease, e.g. cellulitis; The diagnosis is unclear; The psoriasis is severe e.g., it is having a marked negative emotional and social impact and/or extensively affecting highly visible areas including the face and scalp, genitals, palms, flexures soles and nails; The patient is immunocompromised; Erythrodermic psoriasis, unstable or generalised pustular psoriasis.",
+      "'The patient should be advised to immediately see their usual medical practitioner if symptoms worsen after commencing treatment.' (General advice — no explicit timeframe printed)"
+    ],
+    "emergency": [
+      "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care: 'Immediate referral to an emergency department – call 000:' Raised purple rash that doesn't blanch; Generalised erythema that covers 90% or more of the skin; Rash with shortness of breath or lip / tongue swelling; Fever (temperature > 38°C) or hypothermia (temperature < 35.5°C) with other signs or symptoms of sepsis as listed below: Respiratory distress, vomiting, tachycardia, rash, hypotension and/or cold extremities or other significant systemic symptoms including weakness, irritability, difficulty sleeping and/or loss of appetite; Significant concern from parent/caregiver."
+    ],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 4, "section_heading": "'Red flag' warning signs at patient presentation that necessitate referral to emergency medical care:" }
+  },
+  "review_followup": [
+    {
+      "when": "2-4 weeks after initiation of treatment for an acute exacerbation",
+      "what": "'Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines and other relevant guidelines. Clinical review is recommended 2-4 weeks after initiation of treatment for an acute exacerbation to assess: response to treatment and adherence (or barriers to following treatment plan); if changes are required to the treatment plan; adverse effects.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "Each new treatment: trialled for 2 to 4 weeks; adequate response to optimal topical treatment may take up to 3 to 6 months",
+      "what": "'Patients should be advised that each new treatment may take time to work and should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "when": "Immediately, if symptoms worsen after commencing treatment",
+      "what": "'The patient should be advised to immediately see their usual medical practitioner if symptoms worsen after commencing treatment.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "when": "At clinical review, once response is assessed",
+      "what": "'If a good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only. If there has been an inadequate response, the pharmacist should check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied, consider alternative treatment options, or consider referral to a medical practitioner where appropriate (26).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "Until the patient's review (supply period)",
+      "what": "'Pharmacists should generally only prescribe a sufficient quantity of medicine (including repeats) for the period until the patient's review.'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    },
+    {
+      "when": "After the acute flare has been managed; and annually thereafter",
+      "what": "'Pharmacotherapy for the management of psoriasis may be required longer-term; pharmacists should refer the patient to a medical practitioner for review and ongoing management after the acute flare has been managed. An annual review by a medical practitioner is recommended to assess for adverse effects from TCS therapy (10, 20).'",
+      "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 9, "section_heading": "Clinical Review" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "sa-pharmacist-prescribing-protocols\\sa-acute-exacerbations-of-mild-plaque-psoriasis-cpg.pdf", "page": 1, "section_heading": "Acute Exacerbations of Mild Plaque Psoriasis – Clinical Practice Guideline" }
+  },
+  "references": [
+    "[p12] 1. NPS MedicineWise. Topical Treatments For Your Plaque Psoriasis. In: NPS MedicineWise, editor. 2021.",
+    "[p12] 2. Dermnet. PASI score 2009 [Available from: https://dermnetnz.org/topics/pasi-score.",
+    "[p12] 3. The Australasian College of Dermatologists. Psoriasis Online2025 [Available from: https://www.dermcoll.edu.au/atoz/psoriasis/.",
+    "[p12] 4. DermNet. Psoriasis Online2023 [Available from: https://dermnetnz.org/topics/psoriasis.",
+    "[p12] 5. NPS MedicineWise. Plaque Psoriasis: My Options When Topical Treatments Aren't Enough. In: NPS MedicineWise, editor. 2021.",
+    "[p12] 6. NPS MedicineWise. Plaque psoriasis Online2022 [Available from: https://www.nps.org.au/bdmards/dermatology#hp.",
+    "[p12] 7. Skin Health Institute. Psoriasis 2025 [Available from: https://skinhealthinstitute.org.au/skin-conditions/psoriasis/.",
+    "[p12] 8. Psoriasis [Internet]. 2025. Available from: https://www.msdmanuals.com/professional/dermatologic-disorders/psoriasis-and-scaling-diseases/psoriasis.",
+    "[p12] 9. Government of South Australia SA Health. Psoriasis - Adult Clinical Prioritisation Criteria Online2025 [Available from: https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/outpatients/cpc/specialities/dermatology/psoriasis+adult+cpc.",
+    "[p12] 10. Clarke P. Psoriasis. Aust Fam Physician. 2011;40(7):468-73.",
+    "[p12] 11. HealthDirect. Psoriasis Online2025 [Available from: https://www.healthdirect.gov.au/psoriasis.",
+    "[p12] 12. Gisondi P, Bellinato F, Girolomoni G. Topographic Differential Diagnosis of Chronic Plaque Psoriasis: Challenges and Tricks. J Clin Med. 2020;9(11).",
+    "[p12] 13. Cardiff University. Dermatology Life Quality Index (DLQI). 2019.",
+    "[p12] 14. Nair PA BT. Psoriasis. StatPearls [Internet]: StatPearls Publishing; 2023.",
+    "[p12] 15. Skin Deep. Skin Deep - Description, diagnosis A-Z 2025 [Available from: https://dftbskindeep.com/.",
+    "[p12] 16. Mayo Clinic. Types of psoriasis. 2025.",
+    "[p12] 17. Remote Primary Health Care Manuals. CARPA Standard Treatment Manual. 8 ed. Central Australian Aboriginal Congress CA, Inc RPA, editors. Alice Springs, NT: Flinders University; 2022.",
+    "[p12] 18. Psoriasis (mild plaque psoriasis) [Internet]. Pharmaceutical Society of Australia. 2025. Available from: https://apf-psa-org-au.saluspharm.idm.oclc.org/treatment-guidelines-pharmacists/psoriasis-mild-plaque-psoriasis.",
+    "[p12] 19. BMJ Best Practice. Psoriasis 2022 [Available from: https://bestpractice.bmj.com/topics/en-gb/74?q=Psoriasis&c=recentlyviewed.",
+    "[p12] 20. Dermnet. Guidelines for the management of psoriasis 2020 [Available from: https://dermnetnz.org/topics/guidelines-for-the-treatment-of-psoriasis.",
+    "[p12] 21. The Australasian College of Dermatologists. Consensus Adaptation: Treatment goals for moderate-to-severe psoriasis in paediatric and adult Australian patients. 2024.",
+    "[p12] 22. The Australasian College of Dermatologists. Taking care of skin - How to recognise and respond to skin health issues in Aboriginal and Torres Strait Islander peoples. 2025.",
+    "[p12] 23. Baker C, Mack A, Cooper A, Fischer G, Shumack S, Sidhu S, et al. Treatment goals for moderate to severe psoriasis: An Australian consensus. Australasian Journal of Dermatology. 2013;54(2):148-54.",
+    "[p12] 24. Daniel B. The multiple comorbidities of psoriasis: The importance of a holistic approach. Australian Journal of General Practice. 2020;49:433-7.",
+    "[p12] 25. Psoriasis [Internet]. AMH. 2025. Available from: https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-psoriasis/psoriasis.",
+    "[p12] 26. Psoriasis [Internet]. Therapeutic Guidelines Limited. 2025. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Dermatology&topicfile=psoriasis&guidelinename=Dermatology&sectionId=toc_d1e182#toc_d1e120.",
+    "[p10] Pharmacist resources: Therapeutic Guidelines: Dermatology (Psoriasis; Application and quantity of topical steroids); Australian Medicines Handbook (Drugs for psoriasis; General principles: topical treatment of skin conditions; Corticosteroids; Topical steroids - how much do I use?); Pharmaceutical Society of Australia - Fingertip Guide; DermNet NZ (PASI; Psoriasis); MSD Manual (Professional version) - Psoriasis; Journal of Clinical Medicine - Topographic Differential Diagnosis of Chronic Plaque Psoriasis: Challenges and Tricks; Cardiff University - Dermatology Life Quality Index; Skin Deep; Types of psoriasis (psoriasis pictures) - Mayo Clinic; NPS MedicineWise - Plaque psoriasis; Psoriasis (mild plaque psoriasis) | Australian Pharmaceutical Formulary and Handbook; CARPA Manual (Skin Infection and Rashes); The Australasian College of Dermatologists (Consensus statement: Treatment goals for psoriasis; A-Z of skin - Psoriasis); Taking care of skin (online course/teaching resource for Aboriginal Health Workers); The multiple comorbidities of psoriasis; Psoriasis: Australian Family Physician.",
+    "[p9] Patient resources: NPS MedicineWise factsheets (Topical treatments for your plague psoriasis [as printed]; Plaque psoriasis: my options when topical treatments aren't enough); Skin Health Institute – Patient information sheet; SA Health - Psoriasis - Adult Clinical Prioritisation Criteria; Health Direct - Psoriasis."
+  ],
+  "open_questions": [
+    {
+      "topic": "No specific drug, strength, dose, route, frequency or duration printed for pharmacotherapy (delegated to Therapeutic Guidelines: Psoriasis)",
+      "observed": "'pharmacotherapy: Topical treatments according to Therapeutic Guidelines: Psoriasis (26).' TX-1 to TX-3 have empty strength/dose/frequency/duration and confidence 'unclear' or 'medium'.",
+      "why_unclear": "The document names no agent, strength, dose, frequency or duration; inventing them would breach the never-invent rule.",
+      "source_page": 8
+    },
+    {
+      "topic": "Temperature thresholds rendered without a degree symbol in the text extraction",
+      "observed": "Page 4 reads 'Fever (temperature > 380C) or hypothermia (temperature < 35.50C) with other signs or symptoms of sepsis' — the superscript degree symbol appears as '0' ('380C', '35.50C').",
+      "why_unclear": "Read as 38 °C and 35.5 °C for the structured form; the printed PDF must be checked before the thresholds are enforced as automatic checks.",
+      "source_page": 4
+    },
+    {
+      "topic": "Criteria combinatorics not explicitly labelled",
+      "observed": "Inclusion uses all_of (INC-1 to INC-4) and exclusion uses any_of (EXC-1 to EXC-21); the document states 'Service restricted to patients aged 18 years or over' and that each listed red flag 'necessitate[s] referral', but never prints an AND/OR key.",
+      "why_unclear": "Combinatorics derived from the wording ('restricted to'; any red flag necessitates referral) rather than stated; default all_of would contradict 'any red flag' reading, so the derivation is recorded here.",
+      "source_page": 4
+    },
+    {
+      "topic": "Mapping of the document's own referral urgency tiers to the severity enum",
+      "observed": "'Immediate referral to an emergency department – call 000' → critical/ESCALATE_000; 'Urgent referral within 24 to 48 hours' → high; 'Non-urgent referral' → medium; 'Treat (if clinically appropriate) and concurrently refer' → medium; unhedged consideration ('Where appropriate, consider screening…') → low.",
+      "why_unclear": "The document prints its own three tiers but no numeric severity; the mapping is recorded so it can be re-checked.",
+      "source_page": 4
+    },
+    {
+      "topic": "Table 1 (Factors that can aggravate psoriasis) two-column table interleaved in the text extraction",
+      "observed": "Page 7 prints bullets across two columns and the extraction interleaves fragments (e.g. 'medicines such as lithium, betablockers,' then 'sun exposure …' then 'antimalarials, nonsteroidal anti-inflammatories, antibiotics, ACE inhibitors and TNF-α inhibitors').",
+      "why_unclear": "Column membership and bullet order were reconstructed only in the pathway/notes; the reconstruction should be checked against the printed table before the medicine list is used (see hugh_to_confirm).",
+      "source_page": 7
+    },
+    {
+      "topic": "'Significant concern from parent/caregiver' printed in an 18+ service",
+      "observed": "'Significant concern from parent/caregiver.' appears as a sepsis sub-bullet on p4, while p3 states 'Service restricted to patients aged 18 years or over'.",
+      "why_unclear": "The document does not reconcile caregiver involvement with the adult-only restriction; both statements recorded as printed (RF-8 / EXC-6 confidence medium).",
+      "source_page": 4
+    },
+    {
+      "topic": "Gate on_fail values not stated by the document",
+      "observed": "Branch outcomes are not printed for every gate. Used: STOP for an emergency 'call 000' red flag (patient sent to an emergency department); REFER for urgent/non-urgent/severity referral triggers; SEE_PW-1-S5 to route into red-flag triage; SEE_PW-1-S6 for treat-and-concurrently-refer situations; STOP where 'Pharmacists must consult … to confirm the treatment recommendation is appropriate' fails; 'unclear' where the document states no consequence (history sufficiency, under-18 handling, examination performed, general measures, plan sharing, review timing, quantity until review).",
+      "why_unclear": "Some branch outcomes are inferred from directive wording rather than printed explicitly.",
+      "source_page": 4
+    },
+    {
+      "topic": "Action for a patient under 18 years not stated",
+      "observed": "'Service restricted to patients aged 18 years or over' plus 'Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.' No referral or escalation action is printed for an under-18 presenter.",
+      "why_unclear": "PW-1-S1 age gate on_fail recorded as 'unclear' because the document states no action beyond ineligibility for the prescribing service.",
+      "source_page": 3
+    },
+    {
+      "topic": "Notifiable conditions / GP or AIR notification silent",
+      "observed": "Document is silent on notifiable conditions, GP notification or AIR reporting; the only shared-record statement is the My Health Record reminder on p6.",
+      "why_unclear": "No statement printed; notifiable.required set to null.",
+      "source_page": 6
+    },
+    {
+      "topic": "PASI and DLQI scoring 'may be used' — optional instrument, but eligibility/severity rules depend on it",
+      "observed": "'A Psoriasis Area and Severity Index (PASI) score and Dermatology Life Quality Index (DLQI) score may be used to assess severity and responses to treatment (10, 23)'; INC-3, EXC-20, RF-25 to RF-27 depend on PASI ≤ 10 / ≤ 10 and > 10 thresholds. Also 'Psoriasis Area and Severity Index (PASI) scores may be underestimated in people with darker skin tones (2).'",
+      "why_unclear": "Scoring is optional ('may be used'); the document does not state what to do when scores are not calculated or when clinical judgement conflicts with the score.",
+      "source_page": 7
+    },
+    {
+      "topic": "Transcription ambiguity in the severe-disease site list (p4)",
+      "observed": "'extensively affecting highly visible areas including the face and scalp, genitals, palms, flexures soles and nails' — no comma between 'flexures' and 'soles' in the extraction.",
+      "why_unclear": "List membership (flexures + soles vs a single 'flexures soles' item) cannot be resolved from the extraction alone; text recorded as printed.",
+      "source_page": 4
+    },
+    {
+      "topic": "Referral destinations and escalation operation not named beyond 'a general practitioner (or other medical practitioner where appropriate)'",
+      "observed": "No named service, phone number (other than 'call 000'), after-hours pathway or destination is printed for urgent/non-urgent referral; 'Urgent referral within 24 to 48 hours' has no named receiving service.",
+      "why_unclear": "Local referral pathways must be defined outside the document; nothing invented here.",
+      "source_page": 4
+    },
+    {
+      "topic": "'Treat (if clinically appropriate) and concurrently refer' — sequencing not specified",
+      "observed": "'Provide initial treatment and concurrently refer to a general practitioner (or other medical practitioner where approriate) in the following situations …' does not state whether treatment precedes, follows or is contingent on referral acceptance, nor what 'if clinically appropriate' requires.",
+      "why_unclear": "Operational sequencing is left to pharmacist judgement; PW-1-S6 gate records that initial treatment is provided while concurrently referring.",
+      "source_page": 5
+    },
+    {
+      "topic": "Two different response timeframes printed",
+      "observed": "Non-urgent referral trigger: 'There is no response to optimal topical treatment (within 3 to 6 months)' (p4); General advice: 'each new treatment … should be trialled for 2 to 4 weeks. However, adequate response to optimal topical treatment may take up to 3 to 6 months to be achieved' (p9).",
+      "why_unclear": "Trial duration (2-4 weeks) and adequacy window (3-6 months) are anchored differently; both recorded as printed, RF-20 structured left null.",
+      "source_page": 4
+    },
+    {
+      "topic": "Reference list line wrapping/URL truncation in the extraction",
+      "observed": "Appendix 1 entries 2, 7, 9, 19, 20, 26 contain unbalanced brackets or wrapped URLs in the text extraction (e.g. '[Available from: https://dermnetnz.org/topics/pasi-score.').",
+      "why_unclear": "Citation strings transcribed as extracted; minor formatting artefacts may differ from the printed page.",
+      "source_page": 12
+    },
+    {
+      "topic": "Document is a clinical practice guideline, not a stand-alone prescribing authority",
+      "observed": "The guideline operationalises an SA prescribing service under regulation 17A and the Community Pharmacist Prescribing Code but does not itself list drugs, schedules or pack quantities.",
+      "why_unclear": "Any drug-specific prescribing parameters must come from the referenced Therapeutic Guidelines/AMH; nothing else is printed in these 13 pages.",
+      "source_page": 2
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Specific topical agent(s), strengths, doses, routes, frequencies and durations from the current Therapeutic Guidelines: Psoriasis and Australian Medicines Handbook: Psoriasis.",
+      "source_page": 8,
+      "reason": "This guideline prints none of these ('Topical treatments according to Therapeutic Guidelines: Psoriasis (26)'); TX-1 to TX-3 dose fields are empty and must be filled from the referenced sources before go-live."
+    },
+    {
+      "item": "Contraindications and precautions, drug interactions, and pregnancy/breastfeeding checks for the topical therapies (per Therapeutic Guidelines, Australian Medicines Handbook and other appropriate therapeutic resources).",
+      "source_page": 8,
+      "reason": "Explicitly delegated by the document ('Pharmacists must consult the Therapeutic Guidelines, Australian Medicines Handbook and other appropriate therapeutic resources to confirm the treatment recommendation is appropriate')."
+    },
+    {
+      "item": "Quantity of medicine to supply — pack sizes and repeats satisfying 'a sufficient quantity of medicine (including repeats) for the period until the patient's review'.",
+      "source_page": 9,
+      "reason": "No packs, quantities or repeat counts are printed; local supply policy must be defined before go-live."
+    },
+    {
+      "item": "PASI and DLQI scoring implementation — which tool/form is used, where scores are recorded, how scores are handled when 'may be used' is not taken up, and how the PASI-underestimation caveat in darker skin tones is managed.",
+      "source_page": 7,
+      "reason": "Scoring is optional in the document but INC-3/EXC-20/RF-25 to RF-27 thresholds depend on it; the engine needs a defined rule or an override."
+    },
+    {
+      "item": "Referral destinations and escalation operation: what 'Immediate referral to an emergency department – call 000' means operationally, and which service receives 'Urgent referral within 24 to 48 hours' and 'Non-urgent referral' (GP vs other medical practitioner vs hospital).",
+      "source_page": 4,
+      "reason": "No destinations or after-hours pathways are named beyond 'a general practitioner (or other medical practitioner where appropriate)'; local pathways must be confirmed."
+    },
+    {
+      "item": "Temperature thresholds '> 380C' / '< 35.50C' — confirm against the printed PDF that these are 38 °C and 35.5 °C before the structured checks are enforced.",
+      "source_page": 4,
+      "reason": "The text extraction renders the degree symbol as '0'; a wrong threshold would mis-fire an emergency escalation rule."
+    },
+    {
+      "item": "Applicability of 'Significant concern from parent/caregiver' to an adult-only service ('Service restricted to patients aged 18 years or over').",
+      "source_page": 4,
+      "reason": "The document prints the caregiver trigger without reconciling it with the 18+ restriction; local interpretation required."
+    },
+    {
+      "item": "Action to take for a presenter aged under 18 (document states ineligibility only, with no referral action).",
+      "source_page": 3,
+      "reason": "No escalation instruction is printed; local policy must define what happens after NOT_ELIGIBLE."
+    },
+    {
+      "item": "Which medicines 'can exacerbate psoriasis' for RF-19 (Table 1 lists lithium, betablockers, antimalarials, nonsteroidal anti-inflammatories, antibiotics, ACE inhibitors and TNF-α inhibitors, plus stopping oral corticosteroids or potent topical corticosteroids) and the column reconstruction of Table 1 against the printed PDF.",
+      "source_page": 7,
+      "reason": "Table 1 is an aggravating-factor list, not a medicine-trigger rule, and the two-column table is interleaved in the text extraction."
+    },
+    {
+      "item": "How the cardiovascular risk screening consideration ('Where appropriate, consider screening for cardiovascular risk and possible referral to a medical practitioner') is handled inside this service — separate referral, cross-referral, or note only.",
+      "source_page": 5,
+      "reason": "Presented as a consideration with no threshold, tool or action in the document (RF-31, severity low, confidence medium)."
+    },
+    {
+      "item": "Use of the CARPA Standard Treatment Manual for Aboriginal and Torres Strait Islander patients living in rural and remote communities within this SA service.",
+      "source_page": 6,
+      "reason": "Document says 'Consider referring to the CARPA Standard Treatment Manual … (17)' without defining when or how it applies to pharmacist prescribing here."
+    },
+    {
+      "item": "Operational compliance evidence for each prescribing event: pharmacist 'included on the register of authorised pharmacists' and prescribing 'in accordance with the Community Pharmacist Prescribing Code' (regulation 17A, Controlled Substances (Poisons) Regulations 2011).",
+      "source_page": 2,
+      "reason": "Legal basis is stated but the record-keeping/verification steps for the register and Code are not; local process must be confirmed before go-live."
+    },
+    {
+      "item": "Sharing the agreed management plan with the multidisciplinary healthcare team 'with the patient's consent' — consent capture and destination list.",
+      "source_page": 8,
+      "reason": "Left to local policy by the document; no consent wording or sharing mechanism is printed."
+    },
+    {
+      "item": "Definition of 'acute exacerbation of mild plaque psoriasis' used to accept a patient into the service (no diagnostic definition is printed).",
+      "source_page": 5,
+      "reason": "Scope acceptance (INC-2) rests on an undefined term; local clinical definition required for the rules engine."
+    },
+    {
+      "item": "Pharmacist professional discretion clause — how 'exercise professional discretion and judgement … in consultation with the patient and/or their carer' interacts with hard-coded engine rules.",
+      "source_page": 5,
+      "reason": "The document explicitly reserves judgement to the pharmacist; the engine needs a documented override/escalation path."
+    }
+  ]
+}

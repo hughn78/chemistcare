@@ -1,0 +1,359 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline",
+    "pdf_sha256": "4b093f63f7163009bbb721024dccc5a072f4758385f8bede032b0f56ed19934e",
+    "page_count": 11,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Mild to Moderate Atopic Dermatitis - Clinical Practice Guideline",
+    "instrument_version": "Version 2.0 (Version dated 1 July 2025)",
+    "effective_date": "1 July 2025",
+    "legal_basis": "Not printed in this document - no regulation or poisons schedule provision is cited; the guideline is issued by Queensland Health as a Queensland Community Pharmacy clinical practice guideline for a 'prescribing service' (see open_questions).",
+    "supervision_model": "Not stated using the terms 'collaborative' or 'autonomous'. Document terminology: pharmacist-managed 'prescribing service' - 'Pharmacist management of mild to moderate AD involves' an Eczema Action Plan, non-pharmacological measures and pharmacotherapy 'in accordance with the Therapeutic Guidelines', with mandatory referral criteria ('Refer when').",
+    "scope_summary": "Clinical practice guideline for pharmacist management of mild to moderate atopic dermatitis (AD) in a Queensland Community Pharmacy prescribing service. Service restricted to patients aged 6 months or over. Covers patient history and examination, severity assessment (SCORAD/EASI), complications, Eczema Action Plan, non-pharmacological measures, topical pharmacotherapy, communication of the plan, referral triggers and clinical review. Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 6 months or over.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 1, "section_heading": "Mild to Moderate Atopic Dermatitis - Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "For a diagnosis of AD to be made, both signs of itching and a rash must be present (7).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 3, "section_heading": "Clinical features" }
+      },
+      {
+        "id": "INC-3",
+        "text": "mild AD is indicated by a score of <25 (SCORAD) or <7 (EASI)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 4, "section_heading": "Severity" }
+      },
+      {
+        "id": "INC-4",
+        "text": "moderate AD is indicated by a score 25–50 (SCORAD) or 7.1–21 (EASI)",
+        "criteria_group": { "all_of": ["INC-1", "INC-2"], "any_of": ["INC-3", "INC-4"] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 4, "section_heading": "Severity" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "unclear diagnosis", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-2", "text": "widespread rash with painful skin", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-3", "text": "raised purple rash that doesn't blanch", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-4", "text": "generalised erythema that covers ≥90% of the skin", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-5", "text": "blistering of skin and mucous membranes (including mouth and eyes)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-6", "text": "systemic signs or symptoms, including fever, lethargy, nausea, vomiting, headache", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-7", "text": "chronic sores or ulcers", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-8", "text": "severe symptoms (SCORAD score >51 or EASI score >21.1)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-9", "text": "child with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, concerns about failure to thrive", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-10", "text": "presentations with eczema herpeticum or cellulitis", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+      { "id": "EXC-11", "text": "inadequate response to optimal treatment.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11"] }, "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } }
+    ],
+    "age_bounds": {
+      "min_years": 0.5,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 1, "section_heading": "Mild to Moderate Atopic Dermatitis - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Pharmacist assessment and management of mild to moderate atopic dermatitis",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Patient history. Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; weight; pregnancy and lactation status (if applicable); onset, duration, nature, location, severity and extent of patches and plaques, including recent or previous relapses or flare ups; response to any previous treatment/s; impacts on quality of life and psychosocial wellbeing including sleep and learning; dietary history and changes in diet; underlying and associated medical conditions including asthma, allergic rhinitis, allergic conjunctivitis, allergic contact dermatitis, food allergy and depression; exposure to potential triggers or irritants; other factors including family history, environmental factors (e.g., exposure to smoking and airborne pollution) and infectious factors; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines); drug allergies/adverse drug reactions. A comprehensive assessment template is provided at Appendix 1. Pharmacists can access a range of clinical information in a patient's My Health Record.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 3, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "EXAMINATION",
+          "description": "Examination - clinical features. AD is characterised by dry, scaly erythematous patches with the primary hallmark being itch (9). While AD can affect any area of skin, patches typically occur on the: face; inside of the elbow/arm and back of the knee (cubital and popliteal fossae); wrists and ankles. For a diagnosis of AD to be made, both signs of itching and a rash must be present (7). The skin signs of AD may vary depending on age and ethnicity (7, 12). People with AD are at higher risk of allergic contact reactions (e.g., nickel is a common contact allergen) and are prone to other viral skin infections (e.g., common warts and molluscum contagiosum) (4). For patients without an existing diagnosis of AD, other conditions with similar clinical features, symptoms and presentations that may be considered are outlined in Dermnet NZ: Guidelines for the diagnosis and assessment of eczema (11).",
+          "gates": [
+            { "criterion": "Both signs of itching and a rash must be present for a diagnosis of AD (and diagnosis is clear)", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 3, "section_heading": "Clinical features" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Complications of AD (page 4). Secondary bacterial infections (impetiginisation) are the most common complication of AD (4, 12); treatment of concurrent infection is important for successful management of active AD. Suspected impetigo can be assessed and treated as per the Queensland Community Pharmacy Clinical Practice Guideline for Impetigo or referred to an appropriate healthcare provider. Suspected cellulitis must be referred to an appropriate health care provider. Eczema herpeticum is an infection of the AD with herpes simplex virus (HSV): vesicles usually develop in areas of active or recent AD, followed by the onset of high fever and adenopathy; painful corneal lesions will develop if the eye is involved and if the HSV infection becomes systemic, it may be fatal; refer to an appropriate healthcare provider if eczema herpeticum is suspected.",
+          "gates": [
+            { "criterion": "No suspected cellulitis, no suspected eczema herpeticum, and no secondary bacterial infection requiring treatment", "on_fail": "REFER" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 4, "section_heading": "Complications of AD" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Severity. For the purposes of the Service, the SCORing Atopic Dermatitis (SCORAD) index (5) or the Eczema Area and Severity Index (EASI) (5) can be used to assess the severity of the AD to determine whether the patient requires referral, to inform the treatment plan and to monitor treatment effectiveness: mild AD is indicated by a score of <25 (SCORAD) or <7 (EASI); moderate AD is indicated by a score 25–50 (SCORAD) or 7.1–21 (EASI); severe AD is indicated by a score >50 (SCORAD) or >21.1 (EASI) (2, 13) - note the Refer-when list on page 2 prints the severe threshold as 'SCORAD score >51' (see open_questions; both readings recorded). Conventional scoring systems may underestimate AD severity and erythema in people with darker skin tones (8); consider the skin tone when assessing erythema and where there is uncertainty, severity can be assessed by using the EASI and upgrading the score by 1 grade or more for heavily pigmented skin (e.g., from mild to moderate) (5, 13).",
+          "gates": [
+            { "criterion": "AD severity is mild or moderate (not severe: SCORAD >50/>51 or EASI >21.1)", "on_fail": "REFER" }
+          ],
+          "confidence": "unclear",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 4, "section_heading": "Severity" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "Develop management plan. Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. Pharmacist management of mild to moderate AD involves: development of an Eczema Action Plan based on the Australasian Society of Clinical Immunology and Allergy (ASCIA) Action Plan for Eczema template (14); non-pharmacological measures - advice regarding skin care and minimising aggravating factors as per the Therapeutic Guidelines: Dermatology (Atopic dermatitis) (10) and the Australian Medicines Handbook: Eczema (15); pharmacotherapy (see PW-1-S6). Identify triggers (Appendix 1): irritants (soaps and detergents, abrasive clothing, chlorinated swimming pools, emollients containing sodium lauryl sulphate), skin infections (Staphylococcus aureus, Streptococcus pyogenes, HSV (eczema herpeticum), molluscum contagiosum), contact allergens, stress, food and inhalant triggers.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 5, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "TREAT",
+          "description": "Pharmacotherapy. The mainstay of treatment for active AD is topical corticosteroids (TCS) in combination with emollients, identification and avoidance of triggers, and the early treatment of infection (6) (page 2, Key points). A topical treatment for the management of mild to moderate atopic dermatitis in accordance with the Therapeutic Guidelines: Dermatology (Atopic dermatitis) (10). NB1: Very potent TCS (class IV), and potent TCS (class III containing betamethasone dipropionate 0.05%, betamethasone valerate 0.1%, methylprednisolone aceponate 0.1% or mometasone furoate 0.1%) should not be used for children aged 12 months or younger (15) - if the patient is a child aged 12 months or younger, re-select a preparation outside that list (branch not otherwise stated by the document). Selecting the correct potency and formulation of TCS is important to avoid both undertreatment and fears around TCS use (16). Choice of treatment should consider the impact of factors such as age, socioeconomic status, cost and literacy on the patient's ability to adhere to prescribed therapies (4).",
+          "gates": [
+            { "criterion": "Patient is not a child aged 12 months or younger when a very potent TCS (class IV) or the specified class III potent TCS is being considered", "on_fail": "SEE_PW-1-S6" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 5, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate. Consult the Therapeutic Guidelines, Australian Medicines Handbook and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 5, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan. Comprehensive advice and counselling (including supporting written information when required) should be provided to the patient regarding: individual product and medicine use (e.g., application instructions for emollients, topical treatments and wet dressing use); non-pharmacological measures; how to manage adverse effects; when to seek further care and/or treatment, including recognising secondary infection; when to return for follow-up. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent. When recommending TCS for AD, pharmacists should reassure patients (and/or parents/caregivers) who have concerns about the safety of TCS that they are safe when used appropriately (6). Common adverse effects of TCS, such as transient burning, stinging or pain on application, can generally be reversed by stopping the medicine. Refer to an appropriate healthcare provider when adverse effects cannot be managed in the pharmacy setting.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "REFER",
+          "description": "General advice (patient-initiated escalation). At the time of initial consultation, patients (and/or parents/caregivers if applicable) should be advised to see an appropriate healthcare provider if: signs or symptoms worsen; new signs or symptoms occur (including systemic signs or symptoms); there is inadequate improvement of symptoms within 1–2 weeks; symptoms recur within 2–4 weeks of initial resolution; stable, long-term control of the condition is not achieved; ongoing impairment is present e.g. pruritus, pain, loss of sleep, learning difficulties; quality of life is significantly affected. Treatment may be unsuccessful when there is poor adherence with therapy, skin infection, allergy or severe dermatitis (4, 8, 15).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review. Clinical review with the pharmacist (or the patient's chosen healthcare provider) should occur in line with recommendations in the Therapeutic Guidelines. Patients should return for a follow up consultation 7-14 days after initiation of a new therapy and/or changes to the treatment plan. Clinical review should consider: response to treatment (using the SCORAD index or EASI); if changes are required to the treatment plan (decisions to continue, modify or stop treatment should be reflected in the patient's eczema action plan). If a good response has been achieved, the medication can be stopped, and the patient can continue using regular emollients to maintain remission (9). If there has been an inadequate response, the pharmacist should check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied (9). Patients should be counselled on the role of emollients in both the management of AD, and the ongoing maintenance of remission after the flare is clear and TCS treatment is ceased (10). For patients continuing therapy, follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals. Pharmacists should prescribe a quantity of medicine (including repeats), that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review. The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+          "gates": [
+            { "criterion": "Good response to treatment achieved (assessed using the SCORAD index or EASI)", "on_fail": "SEE_PW-1-S10" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "topical corticosteroids (TCS)",
+      "form": "topical (specific formulations not printed)",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+      "max_dose": "",
+      "quantity_to_supply": "a quantity of medicine (including repeats) that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review",
+      "notes": "Class-level entry: no specific TCS medicine, strength, dose, frequency or duration is printed in this guideline. Printed statements: 'The mainstay of treatment for active AD is topical corticosteroids (TCS) in combination with emollients, identification and avoidance of triggers, and the early treatment of infection (6)' (page 2, Key points). 'A topical treatment for the management of mild to moderate atopic dermatitis in accordance with the Therapeutic Guidelines: Dermatology (Atopic dermatitis) (10)' (page 5). Paediatric caveat verbatim (page 5, NB1): 'Very potent TCS (class IV), and potent TCS (class III containing betamethasone dipropionate 0.05%, betamethasone valerate 0.1%, methylprednisolone aceponate 0.1% or mometasone furoate 0.1%) should not be used for children aged 12 months or younger (15).' Pregnancy/lactation caveat (page 5, Confirm management is appropriate): confirm management is appropriate including for 'contraindications and precautions; drug interactions; pregnancy and lactation' (page 3, Patient history also requires pregnancy and lactation status (if applicable)); patients planning a pregnancy or pregnant are referred and concurrently treated (page 2, Treat (if clinically appropriate) and concurrently refer). Adverse effects (page 6): 'Common adverse effects of TCS, such as transient burning, stinging or pain on application, can generally be reversed by stopping the medicine.' 'When recommending TCS for AD, pharmacists should reassure patients (and/or parents/caregivers) who have concerns about the safety of TCS that they are safe when used appropriately (6).' Underuse of TCS is a common cause of previous treatment failure (page 9, NB2).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 5, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "emollients",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "topical",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "The total quantity prescribed should not exceed 12 months' supply (including repeats).",
+      "max_dose": "",
+      "quantity_to_supply": "a quantity of medicine (including repeats) that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review",
+      "notes": "Class-level entry: no specific emollient product, strength, dose or frequency is printed in this guideline. Printed statements: 'The mainstay of treatment for active AD is topical corticosteroids (TCS) in combination with emollients ...' (page 2, Key points); 'Patients (and/or parents/caregivers) should be counselled on the role of emollients in both the management of AD, and the ongoing maintenance of remission after the flare is clear and TCS treatment is ceased (10). Advice regarding skin care and minimising aggravating factors should be reiterated (10)' (page 7); 'If a good response has been achieved, the medication can be stopped, and the patient can continue using regular emollients to maintain remission (9)' (page 7); application instructions for emollients are part of communicated advice (page 6). Trigger caveat (page 9, Appendix 1): 'emollients containing sodium lauryl sulphate' listed as an irritant trigger. Patient history must record 'emollient/moisturiser use, application frequency and quantity applied' (page 9).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" }
+    }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "unclear diagnosis", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-2", "trigger_text": "widespread rash with painful skin", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-3", "trigger_text": "raised purple rash that doesn't blanch", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-4", "trigger_text": "generalised erythema that covers ≥90% of the skin", "structured": { "parameter": "percentage of skin covered by generalised erythema", "operator": ">=", "value": 90, "unit": "%" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-5", "trigger_text": "blistering of skin and mucous membranes (including mouth and eyes)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-6", "trigger_text": "systemic signs or symptoms, including fever, lethargy, nausea, vomiting, headache", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-7", "trigger_text": "chronic sores or ulcers", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-8", "trigger_text": "severe symptoms (SCORAD score >51 or EASI score >21.1)", "structured": { "parameter": "SCORAD score", "operator": ">", "value": 51, "unit": "score" }, "action": "REFER", "severity": "high", "confidence": "unclear", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-9", "trigger_text": "severe symptoms (SCORAD score >51 or EASI score >21.1)", "structured": { "parameter": "EASI score", "operator": ">", "value": 21.1, "unit": "score" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-10", "trigger_text": "child with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, concerns about failure to thrive", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-11", "trigger_text": "presentations with eczema herpeticum or cellulitis", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-12", "trigger_text": "inadequate response to optimal treatment.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" } },
+    { "id": "RF-13", "trigger_text": "the patient is planning a pregnancy or is pregnant", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-14", "trigger_text": "quality of life significantly affected", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-15", "trigger_text": "the patient is immunocompromised or has diabetes.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" } },
+    { "id": "RF-16", "trigger_text": "Suspected cellulitis must be referred to an appropriate health care provider.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 4, "section_heading": "Complications of AD" } },
+    { "id": "RF-17", "trigger_text": "Refer to an appropriate healthcare provider if eczema herpeticum is suspected.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 4, "section_heading": "Complications of AD" } },
+    { "id": "RF-18", "trigger_text": "If cellulitis is present the patient should be referred to an appropriate healthcare provider.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Key points" } },
+    { "id": "RF-19", "trigger_text": "signs or symptoms worsen", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-20", "trigger_text": "new signs or symptoms occur (including systemic signs or symptoms)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-21", "trigger_text": "there is inadequate improvement of symptoms within 1–2 weeks", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-22", "trigger_text": "symptoms recur within 2–4 weeks of initial resolution", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-23", "trigger_text": "stable, long-term control of the condition is not achieved", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-24", "trigger_text": "ongoing impairment is present e.g. pruritus, pain, loss of sleep, learning difficulties", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-25", "trigger_text": "quality of life is significantly affected.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "id": "RF-26", "trigger_text": "Refer to an appropriate healthcare provider when adverse effects cannot be managed in the pharmacy setting.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "Communicate agreed management plan" } }
+  ],
+  "referral": {
+    "routine": [
+      "Suspected cellulitis must be referred to an appropriate health care provider.",
+      "If cellulitis is present the patient should be referred to an appropriate healthcare provider.",
+      "Refer to an appropriate healthcare provider if eczema herpeticum is suspected.",
+      "Refer to an appropriate healthcare provider when adverse effects cannot be managed in the pharmacy setting.",
+      "Suspected impetigo can be assessed and treated as per the Queensland Community Pharmacy Clinical Practice Guideline for Impetigo or referred to an appropriate healthcare provider.",
+      "The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent."
+    ],
+    "urgent": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations:",
+      "unclear diagnosis",
+      "widespread rash with painful skin",
+      "raised purple rash that doesn't blanch",
+      "generalised erythema that covers ≥90% of the skin",
+      "blistering of skin and mucous membranes (including mouth and eyes)",
+      "systemic signs or symptoms, including fever, lethargy, nausea, vomiting, headache",
+      "chronic sores or ulcers",
+      "severe symptoms (SCORAD score >51 or EASI score >21.1)",
+      "child with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, concerns about failure to thrive",
+      "presentations with eczema herpeticum or cellulitis",
+      "inadequate response to optimal treatment.",
+      "Provide initial treatment and concurrently refer to an appropriate healthcare provider in the following situations: the patient is planning a pregnancy or is pregnant; quality of life significantly affected; the patient is immunocompromised or has diabetes."
+    ],
+    "emergency": [
+      "Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    { "when": "7-14 days after initiation of a new therapy and/or changes to the treatment plan", "what": "Follow up consultation; clinical review should consider response to treatment (using the SCORAD index or EASI) and if changes are required to the treatment plan (continue, modify or stop - reflected in the patient's eczema action plan).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" } },
+    { "when": "If a good response has been achieved", "what": "The medication can be stopped, and the patient can continue using regular emollients to maintain remission.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" } },
+    { "when": "If there has been an inadequate response", "what": "Check the patient's compliance with the medication and skin care measures, ensuring enough medication is applied; refer if inadequate improvement of symptoms within 1–2 weeks (see RF-21).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" } },
+    { "when": "For patients continuing therapy", "what": "Follow-up should be individualised to the patient's clinical presentation, response to treatment, and therapeutic goals; prescribe a quantity of medicine (including repeats) that aligns with the expected duration of therapy, ensuring sufficient supply until the patient's next review (total not exceeding 12 months' supply including repeats).", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" } },
+    { "when": "After the flare is clear and TCS treatment is ceased", "what": "Patient counselled on the role of emollients in ongoing maintenance of remission; advice regarding skin care and minimising aggravating factors reiterated.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 7, "section_heading": "Clinical review" } },
+    { "when": "Within 1–2 weeks of initial consultation (if symptoms do not improve)", "what": "Patient advised to see an appropriate healthcare provider if there is inadequate improvement of symptoms within 1–2 weeks.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } },
+    { "when": "Within 2–4 weeks of initial resolution", "what": "Patient advised to see an appropriate healthcare provider if symptoms recur within 2–4 weeks of initial resolution.", "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "General advice" } }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\dermatitis-guideline", "page": 6, "section_heading": "Communicate agreed management plan" }
+  },
+  "references": [
+    "[p.11] 1. The Australasian College of Dermatologists. Consensus statement: Management of atopic dermatitis in adults. Melbourne: The Australasian College of Dermatologists; 2021.",
+    "[p.11] 2. Wollenberg A, Christen-Zäch S, Taieb A, Paul C, Thyssen JP, de Bruin-Weller M, et al. ETFAD/EADV Eczema task force 2020 position paper on diagnosis and treatment of atopic dermatitis in adults and children. J Eur Acad Dermatol Venereol. 2020;34(12):2717-44.",
+    "[p.11] 3. Willems A, Tapley A, Fielding A, Tng ETV, Holliday EG, van Driel ML, et al. Prevalence and Associations of General Practice Registrars' Management of Atopic Dermatitis: A Cross-Sectional Analysis from the Registrar Clinical Encounters in Training Study. Dermatology practical & conceptual. 2021;11(4):e2021128-e.",
+    "[p.11] 4. Ruenger T. MSD Manual Professional Version: Atopic Dermatitis (Eczema): Merck & Co; 2021 [cited 2022 June 7]. Available from: https://www.msdmanuals.com/professional/dermatologic-disorders/dermatitis/atopic-dermatitis-eczema?query=atopic%20dermatitis.",
+    "[p.11] 5. DermNet NZ: DermNet New Zealand Trust; 2022 [cited 2025 04 April]. Available from: https://dermnetnz.org.",
+    "[p.11] 6. The Australasian College of Dermatologists. Consensus statement: Topical corticosteroids in paediatric eczema. Melbourne: The Australasian College of Dermatologists; 2022.",
+    "[p.11] 7. DynaMed: Atopic Dermatitis: EBSCO Information Services; 2018 [cited 2022 March 3]. Available from: www.dynamed.com/condition/atopic-dermatitis",
+    "[p.11] 8. Stanway A, Jarrett P. Atopic dermatitis: DermNet New Zealand Trust; 2021 [cited 2022 February 8]. Available from: https://dermnetnz.org/topics/atopic-dermatitis",
+    "[p.11] 9. Therapeutic Guidelines: Dermatology. Melbourne: Therapeutic Guidelines Limited; 2023 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Dermatology&amp;etgAccess=true.",
+    "[p.11] 10. Therapeutic Guidelines: Dematology (Dermatitis). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Dermatology&topicfile=c_DMG_Atopic-dermatitis_topic_1&guidelinename=Dermatology&sectionId=c_DMG_Atopic-dermatitis_topic_1#c_DMG_Atopic-dermatitis_topic_1.",
+    "[p.11] 11. Purvis D. Guidelines for the diagnosis and assessment of eczema. DermNet New Zealand Trust; 2014 [cited 2021 August 10]. Available from: https://dermnetnz.org/topics/guidelines-for-the-diagnosis-and-assessment-of-eczema/",
+    "[p.11] 12. Weidinger S, Novak N. Atopic dermatitis. Lancet. 2016;387(10023):1109-22.",
+    "[p.11] 13. Hanifin JM, Baghoomian W, Grinich E, Leshem YA, Jacobson M, Simpson EL. The Eczema Area and Severity Index-A Practical Guide. Dermatitis. 2022;33(3):187-92.",
+    "[p.11] 14. Australasian Society of Clinical Immunology and Allergy (ASCIA). Action Plan for Eczema: ASCIA; 2024 [cited 2025 April 4]. Available from: http://www.allergy.org.au/patients/skin-allergy/eczema-action-plan.",
+    "[p.11] 15. Australian Medicines Handbook: Drugs for eczema. Adelaide: Australian Medicines Handbook Pty Ltd; 2025 [cited 2025 April 3]. Available from: https://amhonline.amh.net.au/chapters/dermatological-drugs/drugs-eczema?menu=vertical.",
+    "[p.11] 16. Aung T, Aung S. Selection of an effective topical corticosteroid. Australian Journal of General Practice. 2021;50(9):651-5.",
+    "[p.11] 17. Purvis D. Guidelines for the diagnosis and assessment of eczema. DermNet New Zealand Trust; 2014 [cited 2021 August 10]. Available from: https://dermnetnz.org/topics/guidelines-for-the-diagnosis-and-assessment-of-eczema/.",
+    "[p.11] 18. Lewis-Jones M, Finlay A. The Children's Dermatology Life Quality Index (CDLQI): Initial validation and practical use. British Journal of Dermatology. 1995;132:942-9.",
+    "[p.11] 19. University of Nottingham. POEM — Patient Oriented Eczema Measure: Centre of Evidence Based Dermatology; 2022 [Available from: https://www.nottingham.ac.uk/research/groups/cebd/resources/poem.aspx#:~:text=The%20Patient%20%20Oriented%20Eczema%20Measure,as%20experienced%20by%20the%20patient"
+  ],
+  "open_questions": [
+    {
+      "topic": "Contradictory SCORAD threshold for severe disease",
+      "observed": "Both readings recorded, not reconciled. Page 2 (Refer when): referral for 'severe symptoms (SCORAD score >51 or EASI score >21.1)'. Page 4 (Severity): 'severe AD is indicated by a score >50 (SCORAD) or >21.1 (EASI) (2, 13)'.",
+      "why_unclear": "The document prints two different SCORAD cut-offs (>50 vs >51) for severe AD; the engine cannot choose between them.",
+      "source_page": 2
+    },
+    {
+      "topic": "EASI band gap between moderate and severe",
+      "observed": "Page 4 prints moderate AD as 'score ... 7.1–21 (EASI)' and severe AD as '>21.1 (EASI)'; scores above 21 up to and including 21.1 are not assigned to a band by the printed ranges.",
+      "why_unclear": "Printed bands do not cover every possible score; no reconciliation attempted.",
+      "source_page": 4
+    },
+    {
+      "topic": "No formal 'exclusion criteria' section in the document",
+      "observed": "The guideline has no heading 'Exclusion criteria'; it has 'Refer when' (page 2) and 'Treat (if clinically appropriate) and concurrently refer' (page 2). The exclusion list here is derived from the 'Refer when' items (patients who must be referred rather than managed under the service); 'treat and concurrently refer' items are captured as red flags only because the document says the pharmacist provides initial treatment.",
+      "why_unclear": "Interpretation of referral criteria as eligibility exclusions is inferred, not stated as such by the document.",
+      "source_page": 2
+    },
+    {
+      "topic": "Emergency referral criteria not separately designated",
+      "observed": "The document gives one umbrella heading - 'Refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations' - and does not designate which listed criteria require emergency services; page 4 notes that if the HSV infection in eczema herpeticum becomes systemic 'it may be fatal'.",
+      "why_unclear": "No separate emergency criteria list is printed; emergency list contains only the umbrella heading text.",
+      "source_page": 2
+    },
+    {
+      "topic": "No specific TCS medicines, strengths, doses or frequencies printed",
+      "observed": "Pharmacotherapy is specified only as 'A topical treatment for the management of mild to moderate atopic dermatitis in accordance with the Therapeutic Guidelines: Dermatology (Atopic dermatitis) (10)'. Named corticosteroids appear only in NB1 as agents that should NOT be used in children aged 12 months or younger (betamethasone dipropionate 0.05%, betamethasone valerate 0.1%, methylprednisolone aceponate 0.1%, mometasone furoate 0.1%).",
+      "why_unclear": "No dose/strength data exists in the source; treatment rows are class-level with empty dose fields.",
+      "source_page": 5
+    },
+    {
+      "topic": "legal_basis not printed",
+      "observed": "No regulation, Medicines and Poisons Act provision or poisons schedule provision is cited in this guideline; it refers only to 'the Service' and 'prescribing service'.",
+      "why_unclear": "Spec requires legal_basis; the source is silent.",
+      "source_page": 1
+    },
+    {
+      "topic": "notifiable requirements silent",
+      "observed": "No mention of notifiable conditions, AIR reporting or mandatory notification. The only sharing requirement is 'The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.'",
+      "why_unclear": "Spec: notifiable.required is null if the document is silent.",
+      "source_page": 6
+    }
+  ],
+  "hugh_to_confirm": [
+    { "item": "Specific topical corticosteroid agents, potencies/classes, strengths, application quantities (e.g. fingertip units), frequency and duration are not printed - guideline defers to the current online Therapeutic Guidelines: Dermatology (Atopic dermatitis)", "source_page": 5, "reason": "No drug-level dosing data in the source; local approved TCS list and dosing conventions must be confirmed before go-live." },
+    { "item": "Legal basis/authority under which the pharmacist prescribing service for atopic dermatitis operates is not cited in the guideline", "source_page": 1, "reason": "Jurisdictional authority must be verified against the authorising instrument (e.g. the extended practice authority) before go-live." },
+    { "item": "Eczema Action Plan 'Based on the Australasian Society of Clinical Immunology and Allergy (ASCIA) Action Plan for Eczema template (14)'", "source_page": 5, "reason": "External template must be obtained and confirmed as the correct current version for local use." },
+    { "item": "'Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines'", "source_page": 5, "reason": "External living reference - the version in force at go-live must be confirmed and re-checked periodically." },
+    { "item": "'The total quantity prescribed should not exceed 12 months' supply (including repeats).' and supply must align with expected duration of therapy until next review", "source_page": 7, "reason": "Supply-quantity limits must be aligned with local policy before go-live." },
+    { "item": "Severe SCORAD threshold discrepancy (>51 on page 2 vs >50 on page 4) that governs mandatory referral", "source_page": 2, "reason": "Referral rule cannot be built until the threshold is resolved; both readings recorded in open_questions." },
+    { "item": "Suspected impetigo pathway - treatment under the separate 'Queensland Community Pharmacy Clinical Practice Guideline for Impetigo' or referral", "source_page": 4, "reason": "Cross-protocol branch depends on another protocol document; local workflow must be confirmed." }
+  ]
+}

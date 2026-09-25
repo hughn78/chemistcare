@@ -1,0 +1,174 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf",
+    "pdf_sha256": "9bd9d21acf1853c53b815787528207f8c9601abfd89205802336c26211ad6e63",
+    "page_count": 2,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "WA",
+    "instrument_name": "Enhanced Access Community Pharmacy Pilot - Improved Asthma Symptom Control Program Lifestyle Prescription",
+    "instrument_version": "No version number printed on the document",
+    "effective_date": "No date printed on the document (document footer reads 'health.wa.gov.au')",
+    "legal_basis": "Not stated in this document; no regulation or schedule provision is cited. The form is headed 'Enhanced Access Community Pharmacy Pilot' only.",
+    "supervision_model": "Not stated in this document; the form records 'Pharmacist name' and 'Program pharmacy details' for the Enhanced Access Community Pharmacy Pilot (EACPP) Asthma Program, but no authorisation, approval or supervision wording is printed.",
+    "scope_summary": "SUPPORTING DOCUMENT / BLANK FORM, NOT A PRESCRIBING PROTOCOL: a two-page lifestyle prescription form used in the EACPP Improved Asthma Symptom Control Program. Page 1 collects patient details, program pharmacy details, FEV1, symptom-control scores (ACT or ACQ5), vaccination dates and healthcare team contacts. Page 2 is the 'Lifestyle prescription' section: risk factors and triggers, physical activity, weight management/diet/nutrition and other management strategies (smoking cessation, mental health, alcohol), with 'if required' referrals. It contains no eligibility criteria, no medicines or doses, no diagnostic criteria and no red-flag trigger wording; clinical arrays are therefore intentionally empty (the ordered sections of the printed form are captured as one pathway for traceability)."
+  },
+  "eligibility": {
+    "inclusion": [],
+    "exclusion": [],
+    "age_bounds": {
+      "min_years": null,
+      "max_years": null,
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 1, "section_heading": "Patient details" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Lifestyle prescription form sections (order as printed)",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "HISTORY",
+          "description": "Record patient details (name, date of birth, patient support person and/or caregiver), program pharmacy details (pharmacist name, phone, pharmacy name and address, opening hours, next Asthma Program appointment, date of enrolment in the Asthma Program), 'My current FEV1' and its date, 'Date of last vaccinations: (list all applicable)', 'Date next vaccinations are due: (list all applicable)', current level of symptom control (including Asthma Control Test (ACT) or Asthma Control Questionnaire-5 (ACQ5) score if known) and its date, and healthcare team details (General practitioner and clinic, Closest 24-hour emergency services, Dietitian, Physiotherapist, Other services).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 1, "section_heading": "Patient details" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "HISTORY",
+          "description": "'My risk factors and triggers': List identified risk factors, and triggers and strategies to minimise and avoid exposure.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 2, "section_heading": "My risk factors and triggers" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EDUCATE",
+          "description": "Physical activity: Enter recommendations for physical activity for the patient's age and capability based on the national guidelines: Informal exercise e.g. building exercise into everyday activities; Formal exercise e.g. walking (moderate intensity) for 30 minutes, 5 days of the week, strength building 2 days per week; Individualised guidance for building up to recommendations.",
+          "gates": [
+            { "criterion": "If required: Referral to a GP, exercise physiologist, physiotherapist, or other supports for safe exercise", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 2, "section_heading": "Physical activity" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "EDUCATE",
+          "description": "Weight management, and diet and nutrition: Recommendation for weight loss or gain (if applicable); Summary of nutritional advice for a balanced diet (more of/ increase..., less of/ limit...); Referral to pilot overweight and obesity management program and/or other supports e.g. dietitian.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 2, "section_heading": "Weight management, and diet and nutrition" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "EDUCATE",
+          "description": "Other management strategies: If required: Smoking cessation - Refer to pilot smoking cessation program and/or other supports e.g. Quitline or GP; If required: Referral to a GP, psychologist, or other clinician for mental health support; If required: Summary of advice regarding alcohol consumption.",
+          "gates": [
+            { "criterion": "If required: Smoking cessation (refer to pilot smoking cessation program and/or other supports e.g. Quitline or GP)", "on_fail": "unclear" },
+            { "criterion": "If required: Referral to a GP, psychologist, or other clinician for mental health support", "on_fail": "unclear" },
+            { "criterion": "If required: Summary of advice regarding alcohol consumption", "on_fail": "unclear" }
+          ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 2, "section_heading": "Other management strategies" }
+        }
+      ]
+    }
+  ],
+  "treatments": [],
+  "red_flags": [],
+  "referral": {
+    "routine": [
+      "If required: Referral to a GP, exercise physiologist, physiotherapist, or other supports for safe exercise",
+      "Referral to pilot overweight and obesity management program and/or other supports e.g. dietitian",
+      "If required: Smoking cessation - Refer to pilot smoking cessation program and/or other supports e.g. Quitline or GP",
+      "If required: Referral to a GP, psychologist, or other clinician for mental health support"
+    ],
+    "urgent": [],
+    "emergency": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 2, "section_heading": "Lifestyle prescription" }
+  },
+  "review_followup": [
+    {
+      "when": "Date of 'Next Asthma Program appointment' recorded on the form (no interval or trigger is printed)",
+      "what": "Patient attends the next Asthma Program appointment; the form provides a field for the appointment date only, with no clinical review instructions.",
+      "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 1, "section_heading": "Program pharmacy details" }
+    }
+  ],
+  "notifiable": {
+    "required": null,
+    "conditions": [],
+    "provenance": { "pdf_file": "wa-pharmacist-prescribing-protocols\\Asthma-symptom-control-program-lifestyle-prescription.pdf", "page": 1, "section_heading": "Healthcare team" }
+  },
+  "references": [],
+  "open_questions": [
+    {
+      "topic": "This is a blank form (supporting document), not a prescribing protocol",
+      "observed": "The document is titled 'Improved Asthma Symptom Control Program Lifestyle Prescription' and consists of fill-in fields: patient details, program pharmacy details, FEV1, ACT/ACQ5 score, vaccination dates, healthcare team contacts (page 1), and four lifestyle-prescription prompts (page 2). It has no eligibility/exclusion criteria, no medicines, no doses, no diagnostic criteria and no red-flag trigger wording.",
+      "why_unclear": "Per the extraction spec's NON-PROTOCOL DOCUMENTS rule, clinical arrays are left empty rather than populated with fabricated criteria; the ordered sections of the printed form are captured as PW-1 for traceability.",
+      "source_page": 1
+    },
+    {
+      "topic": "No version, date or approval reference printed",
+      "observed": "Neither page carries a version number, date, document identifier or approving officer; only 'health.wa.gov.au 1' and 'health.wa.gov.au 2' footers appear.",
+      "why_unclear": "instrument_version and effective_date cannot be populated from the document.",
+      "source_page": 1
+    },
+    {
+      "topic": "No numeric age bound printed",
+      "observed": "The form collects 'Date of birth' and says to enter physical activity recommendations 'for the patient's age and capability based on the national guidelines', but prints no minimum or maximum age for the program.",
+      "why_unclear": "age_bounds is null/null with provenance to the Patient details section; no age limit can be transcribed without inventing one.",
+      "source_page": 2
+    },
+    {
+      "topic": "'The national guidelines' are not named or cited",
+      "observed": "Physical activity recommendations are stated as 'based on the national guidelines' (e.g. 'walking (moderate intensity) for 30 minutes, 5 days of the week, strength building 2 days per week') but no guideline title, publisher or citation is printed anywhere in the document.",
+      "why_unclear": "The source of the numeric activity targets cannot be verified from this document; references array is therefore empty.",
+      "source_page": 2
+    },
+    {
+      "topic": "No clinical thresholds, referral triggers or escalation wording printed",
+      "observed": "The form records FEV1, ACT/ACQ5 score, symptom control, vaccinations and a 'Closest 24-hour emergency services' contact, but prints no threshold, cut-off or condition that would trigger referral or escalation. The referral items on page 2 are all qualified only as 'If required' or unconditioned (weight-management referral).",
+      "why_unclear": "red_flags is empty because the document contains no referral/escalation trigger wording; the conditional 'If required' referrals are captured as pathway gates with on_fail 'unclear' because the document does not state what happens when the condition is not met.",
+      "source_page": 2
+    },
+    {
+      "topic": "Combinatorics of the 'If required' referral conditions are not stated",
+      "observed": "Page 2 lists referrals as 'If required:' without stating who decides, on what criteria, or what happens if referral is not required.",
+      "why_unclear": "Spec rule 4: the document does not state combinatorics, so no eligibility group was created; the conditions are recorded as pathway gates with on_fail 'unclear'.",
+      "source_page": 2
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm which national physical activity guideline the printed targets ('walking (moderate intensity) for 30 minutes, 5 days of the week, strength building 2 days per week') derive from, and that they remain current for the EACPP asthma program.",
+      "source_page": 2,
+      "reason": "The document cites only 'the national guidelines' with no title or date; the numeric targets must be traceable before they are issued to patients."
+    },
+    {
+      "item": "Confirm the criteria (and decision owner) for each 'If required' referral on page 2 - GP/exercise physiologist/physiotherapist for safe exercise, pilot overweight and obesity management program/dietitian, smoking cessation program/Quitline/GP, and GP/psychologist/mental health support.",
+      "source_page": 2,
+      "reason": "The form gives no thresholds, triggers or on_fail action for these referrals, so they cannot be turned into automatic rules without local policy."
+    },
+    {
+      "item": "Confirm where the clinical content of the asthma program (FEV1 interpretation, ACT/ACQ5 score bands, vaccination scheduling, symptom-control criteria) is specified, since this form only records the values.",
+      "source_page": 1,
+      "reason": "The form captures clinical measurements but prints no target, band or action for them; the prescribing/assessment rules must come from the companion EACPP asthma guideline or protocol."
+    },
+    {
+      "item": "Confirm the controlled version/date of this lifestyle prescription form with the Department of Health (no version or date is printed) and the legal basis under which the EACPP lifestyle prescription is issued.",
+      "source_page": 1,
+      "reason": "A form used in a funded pilot should be version-controlled, and the document states no regulation, schedule provision or authorisation wording."
+    }
+  ]
+}

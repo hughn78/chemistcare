@@ -1,0 +1,439 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf",
+    "pdf_sha256": "28d087dd442618fbcefe8728bf98a858283a7cdb0e12d6a41e9af2ac61294021",
+    "page_count": 16,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "NSW",
+    "instrument_name": "NSW Pharmacist Practice Standards for Management of Acute Exacerbations of Mild to Moderate Atopic Dermatitis (Community Pharmacy Dermatology Service)",
+    "instrument_version": "NSW Health Authority dated 28 August 2026; approved 28 August 2026",
+    "effective_date": "2026-08-28",
+    "legal_basis": "NSW Health Authority (dated 28 August 2026); pharmacists must hold general registration under the Health Practitioner Regulation National Law and have successfully completed the training requirements detailed in the NSW Health Authority (dated 28 August 2026). Approved Medicines are listed in the NSW Health Authority (dated 28 August 2026).",
+    "supervision_model": "approved pharmacist - appropriately trained approved pharmacists manage eligible patients as part of the NSW Health Authority (dated 28 August 2026); pharmacists must exercise professional discretion and judgement when applying the Practice Standards",
+    "scope_summary": "NSW Health practice standards for approved pharmacists managing eligible patients (aged 2-65 inclusive) with previously medically diagnosed mild to moderate atopic dermatitis in acute exacerbation: nine approved topical medicines with site-specific corticosteroid rules, assessment flowchart, consent, eligibility and urgent/GP referral table, 14-day supply limit, 7-14 day clinical review, documentation and communication requirements."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Patients must be aged between 2 years to 65 years (inclusive) to be eligible for the service.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA" }
+      },
+      {
+        "id": "INC-2",
+        "text": "Has the patient been diagnosed with atopic dermatitis by a medical practitioner? Only patients who have previously been diagnosed with atopic dermatitis by a medical practitioner can be managed by pharmacists under these Practice Standards.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+      },
+      {
+        "id": "INC-3",
+        "text": "Patient presents to a participating approved pharmacist for management of mild to moderate atopic dermatitis.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+      },
+      {
+        "id": "INC-4",
+        "text": "The patient has no red flags, or exclusions (checked against the eligibility and referral criteria table).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+      },
+      {
+        "id": "INC-5",
+        "text": "Informed clinical and financial consent must be obtained from the patient (or, if relevant, a parent, guardian or other substitute decision maker prior to providing care under this Practice Standard).",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT" }
+      },
+      {
+        "id": "INC-6",
+        "text": "Patients must be physically present in the pharmacy to be eligible for management.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+      },
+      {
+        "id": "INC-7",
+        "text": "Patients are required to have a consultation with an approved pharmacist before a medication can be supplied under the Authority.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+      },
+      {
+        "id": "INC-8",
+        "text": "To receive management for mild to moderate atopic dermatitis under this service, the patient must fulfill the eligibility requirements set out under Part G of the Practice Standards.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 4, "section_heading": "E. SUPPLEMENTARY INFORMATION AND NOTES" }
+      },
+      {
+        "id": "INC-9",
+        "text": "Pharmacists can only manage mild to moderate presentations of atopic dermatitis that has previously been diagnosed by a medical practitioner as part of these Practice Standards.",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" }
+      },
+      {
+        "id": "INC-10",
+        "text": "Both pruritus and rash must be present for a diagnosis of atopic dermatitis (examination: 'Itching and rash must be present').",
+        "criteria_group": { "all_of": ["INC-1", "INC-2", "INC-3", "INC-4", "INC-5", "INC-6", "INC-7", "INC-8", "INC-9", "INC-10"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "H. BACKGROUND" }
+      }
+    ],
+    "exclusion": [
+      { "id": "EXC-1", "text": "Severe or widespread or painful rash (Treat: No; Referral: Urgent: ED).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-2", "text": "Raised purple rash that doesn't blanch (Treat: No; Referral: Urgent: ED).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-3", "text": "Generalised erythema that covers 90% or more of the skin (this is a medical emergency and requires immediate ED referral) (Treat: No; Referral: Urgent: ED).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-4", "text": "Signs of sepsis, systemic illness or other complications such as: fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints (Treat: No; Referral: Urgent: ED).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-5", "text": "Blistering of the skin and mucous membranes (including mouth and eyes) (Treat: No; Referral: Urgent: ED).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-6", "text": "Non-healing broken skin, sores, ulcers or crusts that are chronic (more than 4 weeks) (Treat: No; Referral: Urgent: ED).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-7", "text": "Immunocompromised patients - due to underlying medical condition (e.g. transplant or GP recipients [printed as 'transplant or GP recipients'], patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, prednisone therapy) (Treat: No; Referral column printed as 'Urgent: ED' with 'GP' appearing misaligned within the sub-bullets - unclear).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "unclear", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+      { "id": "EXC-8", "text": "Significant body surface area involvement (>30% body surface area) (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-9", "text": "The condition is having a marked negative emotional and social effect (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-10", "text": "Complex presentation, such as those requiring antibiotic therapy for secondary infection. Pharmacists must not supply antibiotic therapy. (Treat: No; Referral: GP.)", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-11", "text": "The patient is below 2 years or over 65 years of age (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-12", "text": "The diagnosis is unclear (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-13", "text": "The patient has not been diagnosed with atopic dermatitis by a medical practitioner (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-14", "text": "Atopic dermatitis affecting the genitals (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+      { "id": "EXC-15", "text": "Pregnant or planning a pregnancy (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+      { "id": "EXC-16", "text": "Atypical presentations of atopic dermatitis (i.e. not classic atopic dermatitis) (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+      { "id": "EXC-17", "text": "A paediatric patient that presents with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, concerns about failure to thrive (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+      { "id": "EXC-18", "text": "Patient presents with or develops complication (e.g. eczema herpeticum) (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+      { "id": "EXC-19", "text": "There is no response to optimal treatment (within 7 days) or the condition worsens or reoccurs (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+      { "id": "EXC-20", "text": "Patient requires large quantities of topical products (such as topical corticosteroids) that require an authority from the Pharmaceutical Benefits Scheme (Treat: No; Referral: GP).", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+      { "id": "EXC-21", "text": "Atopic dermatitis is often misdiagnosed as a contact irritant or allergic dermatitis. Pharmacists must be aware of potential differential diagnoses and refer these presentations for management by a medical practitioner. Only management of atopic dermatitis is permitted under these Practice Standards.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "H. BACKGROUND" } },
+      { "id": "EXC-22", "text": "Management of the groin is beyond the scope of the Practice Standards.", "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18", "EXC-19", "EXC-20", "EXC-21", "EXC-22"] }, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 10, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } }
+    ],
+    "age_bounds": {
+      "min_years": 2,
+      "max_years": 65,
+      "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "G. PATIENT ELIGIBILITY AND REFERRAL CRITERIA" }
+    },
+    "exclusion_exceptions": []
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Patient assessment flowchart",
+      "steps": [
+        { "id": "PW-1-S1", "order": 1, "type": "HISTORY", "description": "Patient presents to a participating approved pharmacist for management of mild to moderate atopic dermatitis.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S2", "order": 2, "type": "DIAGNOSIS_CHECK", "description": "Has the patient been diagnosed with atopic dermatitis by a medical practitioner? If No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.'", "gates": [{ "criterion": "Patient has been diagnosed with atopic dermatitis by a medical practitioner", "on_fail": "REFER" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S3", "order": 3, "type": "DIAGNOSIS_CHECK", "description": "Is the patient >=2 and <=65 years old*? If No: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.' (asterisk printed on the gate; no footnote located in the document text)", "gates": [{ "criterion": "Patient is >=2 and <=65 years old", "on_fail": "REFER" }], "confidence": "medium", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S4", "order": 4, "type": "DIAGNOSIS_CHECK", "description": "Does the patient have any red flags, or exclusions? If Yes: 'Not eligible for management under the Authority and Practice Standards. Refer to Emergency Department or GP.' (pharmacists must not provide management where there is a 'No' in the 'Treat' column and must take appropriate action in accordance with established referral pathways)", "gates": [{ "criterion": "No red flags and no exclusions under the eligibility and referral criteria table", "on_fail": "REFER" }], "confidence": "medium", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S5", "order": 5, "type": "HISTORY", "description": "Obtain informed consent: Participation; Financial; Pharmacist communication with other health practitioners. If No consent: 'Not eligible for management under the Authority and Practice Standards. Refer to GP.'", "gates": [{ "criterion": "Informed consent obtained (participation, financial, communication with other health practitioners)", "on_fail": "REFER" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S6", "order": 6, "type": "HISTORY", "description": "Conduct patient history and clinical review including review of contraindications, precautions, drug interactions, pregnancy and lactation status.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S7", "order": 7, "type": "TREAT", "description": "Establish management plan.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } },
+        { "id": "PW-1-S8", "order": 8, "type": "EDUCATE", "description": "Communicate agreed management plan with patient and patient's medical practitioner. Document all aspects of management plan.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" } }
+      ]
+    },
+    {
+      "id": "PW-2",
+      "name": "Patient assessment (history, examination, severity)",
+      "steps": [
+        { "id": "PW-2-S1", "order": 1, "type": "HISTORY", "description": "Patient history should include: Age; Weight (if a child); Pregnancy and lactation status (if applicable); Onset, duration, nature, location, severity and extent of the rash including recent or previous relapse or flare ups, and other symptoms; Previous diagnosis of atopic dermatitis and any current or past management plan; Underlying associated medical conditions including asthma, allergic rhinitis, allergic conjunctivitis, allergic contact dermatitis, food allergy and depression; Details of and response to previous treatments; Impacts on quality of life and psychosocial wellbeing including sleep and learning; Dietary history and changes in diet; Exposure to potential triggers or irritants; Other factors including family history, environmental factors (e.g. exposure to smoking and airborne pollution) and infectious factors; Current, recently commenced or recently ceased medications; Allergies/adverse drug events. The My Health Record should be reviewed where appropriate and available.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 8, "section_heading": "PATIENT HISTORY" } },
+        { "id": "PW-2-S2", "order": 2, "type": "EXAMINATION", "description": "Physical examination of the patient's skin is required to identify, assess and classify the severity of an acute exacerbation of atopic dermatitis. Itching and rash must be present.", "gates": [{ "criterion": "Itching and rash present on examination", "on_fail": "REFER" }], "confidence": "medium", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "EXAMINATION" } },
+        { "id": "PW-2-S3", "order": 3, "type": "DIAGNOSIS_CHECK", "description": "Severity: 'SCORing Atopic Dermatitis (SCORAD) index and the Eczema Area and Severity Index (EASI) can be used to assess the severity of atopic dermatitis to determine whether the patient requires a referral and to inform the treatment plan and monitor treatment effectiveness. Use of these scoring systems are beyond the scope of these Practice Standards.' 'Conventional scoring systems may underestimate severity and erythema in people with darker skin tones including Aboriginal and Torres Strait Islander and Pacific Islander populations, and people of African descent. Consider the skin tone when assessing erythema.'", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 7, "section_heading": "H. BACKGROUND" } }
+      ]
+    },
+    {
+      "id": "PW-3",
+      "name": "Management and treatment plan",
+      "steps": [
+        { "id": "PW-3-S1", "order": 1, "type": "TREAT", "description": "Development of an Eczema Action Plan: Based on the Australasian Society of Clinical Immunology and Allergy Action Plan for Eczema template.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } },
+        { "id": "PW-3-S2", "order": 2, "type": "EDUCATE", "description": "Non-pharmacological/general measures: advice regarding skin care and minimising aggravating factors; advice on how to manage the itch-scratch cycle. Regular use of moisturisers (emollients) and avoiding aggravating and triggering factors are a central component of managing atopic dermatitis.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } },
+        { "id": "PW-3-S3", "order": 3, "type": "TREAT", "description": "Pharmacotherapy as per the Therapeutic Guidelines using Approved Medicines only (Hydrocortisone 1% ointment; Methylprednisolone aceponate 0.1% lotion, ointment or fatty ointment; Triamcinolone acetonide 0.02% ointment; Mometasone furoate 0.1% ointment; Betamethasone dipropionate 0.05% ointment; Betamethasone valerate 0.1% ointment; Desonide 0.05% lotion; Pimecrolimus 1% cream; Crisaborole 2% ointment). 'Patients should be advised that each new treatment may take time to work and should be trialled for 7 days. If there is no improvement, the patient must be referred to a medical practitioner.' 'Pharmacists must only supply formulations listed in the Authority.'", "gates": [{ "criterion": "Improvement after trialling the new treatment for 7 days", "on_fail": "REFER" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } },
+        { "id": "PW-3-S4", "order": 4, "type": "TREAT", "description": "Topical corticosteroid site rules: 'For management of the face, pharmacists must use hydrocortisone 1% ointment only. All stronger potency corticosteroid therapies cannot be supplied by the pharmacist under the Practice Standards and can only be prescribed by a medical practitioner.' 'For management of flexural sites, pharmacists must use hydrocortisone 1% ointment or desonide 0.05% lotion only. All stronger potency corticosteroid therapies cannot be supplied by the pharmacist under the Practice Standards and can only be prescribed by a medical practitioner.' 'Management of the groin is beyond the scope of the Practice Standards.' 'For management of the scalp in children, pharmacists can use desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only.'", "gates": [
+          { "criterion": "Face treatment uses hydrocortisone 1% ointment only", "on_fail": "STOP" },
+          { "criterion": "Flexural site treatment uses hydrocortisone 1% ointment or desonide 0.05% lotion only", "on_fail": "STOP" },
+          { "criterion": "Site of management is not the groin", "on_fail": "STOP" },
+          { "criterion": "Scalp treatment in children uses desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only", "on_fail": "STOP" }
+        ], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } },
+        { "id": "PW-3-S5", "order": 5, "type": "TREAT", "description": "'Tar preparations can cause sensitivity reactions and are beyond the scope of these Practice Standards, and can only be initiated by a medical practitioner.' 'Treatment of infection in atopic dermatitis is beyond the scope of these Practice Standards and requires a referral to a medical practitioner.' 'Pharmacists must not supply antibiotic therapy.'", "gates": [
+          { "criterion": "No tar preparations supplied or initiated by the pharmacist", "on_fail": "STOP" },
+          { "criterion": "No treatment of infection (no antibiotic therapy supplied) by the pharmacist", "on_fail": "REFER" }
+        ], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 10, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } },
+        { "id": "PW-3-S6", "order": 6, "type": "EDUCATE", "description": "Counselling (comprehensive advice and counselling including supportive written information when required) regarding: Product and medication use: dosing and application instructions for topical corticosteroids, emollients, and other topical products, wet dressing use; How to manage adverse reactions; When to seek further care and/or treatment from a medical practitioner; How to recognise infection; When to return for a clinical review; How to manage the itch-scratch cycle. 'Treatment may be unsuccessful when there is poor adherence with therapy, skin infection, allergy or severe dermatitis.' 'Patients should be advised to immediately see a medical practitioner if symptoms worsen after commencing treatment.' 'When recommending topical corticosteroids for atopic dermatitis, pharmacists should reassure patients/caregivers who have concerns about the safety of topical corticosteroids that they are safe when used appropriately.'", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 10, "section_heading": "Counselling" } },
+        { "id": "PW-3-S7", "order": 7, "type": "EDUCATE", "description": "The agreed management plan must be documented in the patient electronic clinical record and shared with members of the patient's multidisciplinary team, in accordance with the Authority. Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient.", "gates": [], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 10, "section_heading": "Counselling" } }
+      ]
+    },
+    {
+      "id": "PW-4",
+      "name": "Follow-up care and review",
+      "steps": [
+        { "id": "PW-4-S1", "order": 1, "type": "FOLLOW_UP", "description": "Clinical review with the pharmacist should occur in line with recommendations in the Therapeutic Guidelines. Patients should be advised and educated on how and when to seek a review with medical practitioner.", "gates": [], "confidence": "medium", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+        { "id": "PW-4-S2", "order": 2, "type": "FOLLOW_UP", "description": "Clinical review is recommended 7 to 14 days after the initiation of treatment for acute atopic dermatitis to assess: Response to treatment; Adverse effects; If changes are required to the treatment plan, decisions to continue, modify or stop treatment should be reflected in the patient's eczema action plan.", "gates": [{ "criterion": "Treatment for acute atopic dermatitis initiated and 7 to 14 days elapsed", "on_fail": "unclear" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+        { "id": "PW-4-S3", "order": 3, "type": "REFER", "description": "'If a patient experiences worsening of symptoms, minimal improvement in symptoms after commencing pharmacist care, a secondary infection, they must be referred for an urgent review by a medical practitioner.'", "gates": [{ "criterion": "Worsening of symptoms, minimal improvement after commencing pharmacist care, or secondary infection", "on_fail": "SEE_PW-4-S4" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+        { "id": "PW-4-S4", "order": 4, "type": "TREAT", "description": "If a good response has been achieved, the medication can be reduced or stopped, and the patient can continue using regular moisturiser only.", "gates": [{ "criterion": "Good response to therapy achieved at review", "on_fail": "SEE_PW-4-S5" }], "confidence": "medium", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+        { "id": "PW-4-S5", "order": 5, "type": "EDUCATE", "description": "If there has been an inadequate response to therapy due to compliance issues such as inappropriate use, or a patient not applying enough medication, the pharmacist may provide further advice.", "gates": [{ "criterion": "Inadequate response to therapy due to compliance issues (inappropriate use or not applying enough medication)", "on_fail": "unclear" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+        { "id": "PW-4-S6", "order": 6, "type": "FOLLOW_UP", "description": "Pharmacists should generally only supply a sufficient quantity of medicine (including repeats) for the period until the patient's review. Pharmacists can only supply a maximum of 14 days of therapy under these Practice Standards.", "gates": [{ "criterion": "Supply does not exceed a maximum of 14 days of therapy", "on_fail": "REFER" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+        { "id": "PW-4-S7", "order": 7, "type": "REFER", "description": "Pharmacotherapy for management of atopic dermatitis may be required longer-term. Pharmacists should refer patients to a medical practitioner for a review and ongoing management after the acute flare has been managed. An annual review by a medical practitioner is recommended to assess for adverse effects from topical corticosteroid therapy.", "gates": [{ "criterion": "Acute flare has been managed", "on_fail": "unclear" }], "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } }
+      ]
+    }
+  ],
+  "treatments": [
+    { "id": "TX-1", "drug": "Hydrocortisone", "form": "ointment", "strength": "1%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine a: 'Hydrocortisone 1% ointment' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9): 'For management of the face, pharmacists must use hydrocortisone 1% ointment only.'; 'For management of flexural sites, pharmacists must use hydrocortisone 1% ointment or desonide 0.05% lotion only.'; groin management is beyond the scope (p10). Supply limit (p4): 'Pharmacists can supply up to 14 days of therapy before referring a patient to a medical practitioner.'; (p11) 'Pharmacists can only supply a maximum of 14 days of therapy under these Practice Standards.' and should generally only supply a sufficient quantity (including repeats) for the period until the patient's review. Pregnancy/lactation: 'Pregnant or planning a pregnancy' is an exclusion requiring GP referral (p6); flowchart requires review of pregnancy and lactation status (p3); consult Therapeutic Guidelines and Australian Medicines Handbook for contraindications and precautions, drug interactions, pregnancy and lactation (p5). Paediatric: 'Weight (if a child)' in patient history (p8); 'For management of the scalp in children, pharmacists can use desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only.' (p10); choice of treatment should consider age, socioeconomic status, cost and literacy (p10). Dose, frequency and duration per application are not printed in this document (deferred to Therapeutic Guidelines and Australian Medicines Handbook).", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-2", "drug": "Methylprednisolone aceponate", "form": "lotion, ointment or fatty ointment", "strength": "0.1%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine b: 'Methylprednisolone aceponate 0.1% lotion, ointment or fatty ointment' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9-10): face - hydrocortisone 1% ointment only and 'All stronger potency corticosteroid therapies cannot be supplied by the pharmacist under the Practice Standards and can only be prescribed by a medical practitioner'; flexural sites - hydrocortisone 1% ointment or desonide 0.05% lotion only; groin - beyond the scope; 'For management of the scalp in children, pharmacists can use desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only.' Supply limit (p4, p11): up to 14 days of therapy before referring a patient to a medical practitioner; maximum 14 days of therapy under these Practice Standards. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH (p5). Paediatric: weight if a child (p8); scalp-in-children rule (p10); consider age, socioeconomic status, cost and literacy (p10). Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-3", "drug": "Triamcinolone acetonide", "form": "ointment", "strength": "0.02%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine c: 'Triamcinolone acetonide 0.02% ointment' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9-10): face - hydrocortisone 1% ointment only ('All stronger potency corticosteroid therapies cannot be supplied by the pharmacist ... can only be prescribed by a medical practitioner'); flexural sites - hydrocortisone 1% ointment or desonide 0.05% lotion only; groin - beyond the scope; scalp in children - desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only. Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH (p5). Paediatric caveats (p8, p10) as above. Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-4", "drug": "Mometasone furoate", "form": "ointment", "strength": "0.1%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine d: 'Mometasone furoate 0.1% ointment' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9-10): face - hydrocortisone 1% ointment only ('All stronger potency corticosteroid therapies cannot be supplied by the pharmacist ... can only be prescribed by a medical practitioner'); flexural sites - hydrocortisone 1% ointment or desonide 0.05% lotion only; groin - beyond the scope; scalp in children - desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only. Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH (p5). Paediatric caveats (p8, p10) as above. Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-5", "drug": "Betamethasone dipropionate", "form": "ointment", "strength": "0.05%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine e: 'Betamethasone dipropionate 0.05% ointment' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9-10): face - hydrocortisone 1% ointment only ('All stronger potency corticosteroid therapies cannot be supplied by the pharmacist ... can only be prescribed by a medical practitioner'); flexural sites - hydrocortisone 1% ointment or desonide 0.05% lotion only; groin - beyond the scope; scalp in children - desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only. Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH (p5). Paediatric caveats (p8, p10) as above. Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-6", "drug": "Betamethasone valerate", "form": "ointment", "strength": "0.1%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine f: 'Betamethasone valerate 0.1% ointment' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9-10): face - hydrocortisone 1% ointment only ('All stronger potency corticosteroid therapies cannot be supplied by the pharmacist ... can only be prescribed by a medical practitioner'); flexural sites - hydrocortisone 1% ointment or desonide 0.05% lotion only; groin - beyond the scope; scalp in children - desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only. Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH (p5). Paediatric caveats (p8, p10) as above. Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-7", "drug": "Desonide", "form": "lotion", "strength": "0.05%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine g: 'Desonide 0.05% lotion' listed in the NSW Health Authority (dated 28 August 2026). Site rules (p9-10): 'For management of flexural sites, pharmacists must use hydrocortisone 1% ointment or desonide 0.05% lotion only.'; 'For management of the scalp in children, pharmacists can use desonide 0.05% lotion or methylprednisolone aceponate 0.1% lotion only.'; face - hydrocortisone 1% ointment only; groin - beyond the scope. Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH (p5). Paediatric: weight if a child (p8); scalp-in-children rule (p10); consider age, socioeconomic status, cost and literacy (p10). Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-8", "drug": "Pimecrolimus", "form": "cream", "strength": "1%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine h: 'Pimecrolimus 1% cream' listed in the NSW Health Authority (dated 28 August 2026). The document does not state whether the face/flexural/groin/scalp-in-children topical corticosteroid site rules apply to this non-corticosteroid agent (see open_questions). Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy; only supply a sufficient quantity (including repeats) for the period until the patient's review. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH for contraindications, drug interactions, pregnancy and lactation (p5). Paediatric: weight if a child (p8); choice of treatment should consider age, socioeconomic status, cost and literacy (p10). Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } },
+    { "id": "TX-9", "drug": "Crisaborole", "form": "ointment", "strength": "2%", "dose": "", "route": "topical", "frequency": "", "duration": "", "max_quantity": "", "max_dose": "", "quantity_to_supply": "up to 14 days of therapy before referring a patient to a medical practitioner", "notes": "Approved Medicine i: 'Crisaborole 2% ointment' listed in the NSW Health Authority (dated 28 August 2026). The document does not state whether the face/flexural/groin/scalp-in-children topical corticosteroid site rules apply to this non-corticosteroid agent (see open_questions). Supply limit (p4, p11): up to 14 days of therapy before referring; maximum 14 days of therapy; only supply a sufficient quantity (including repeats) for the period until the patient's review. Pregnancy/lactation: exclusion 'Pregnant or planning a pregnancy' (p6); review pregnancy and lactation status (p3); consult Therapeutic Guidelines/AMH for contraindications, drug interactions, pregnancy and lactation (p5). Paediatric: weight if a child (p8); choice of treatment should consider age, socioeconomic status, cost and literacy (p10). Dose, frequency and duration per application are not printed in this document.", "first_line": false, "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "A. APPROVED MEDICINES" } }
+  ],
+  "red_flags": [
+    { "id": "RF-1", "trigger_text": "Severe or widespread or painful rash", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-2", "trigger_text": "Raised purple rash that doesn't blanch", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-3", "trigger_text": "Generalised erythema that covers 90% or more of the skin (this is a medical emergency and requires immediate ED referral)", "structured": { "parameter": "generalised_erythema_body_surface_coverage", "operator": ">=", "value": 90, "unit": "% of the skin" }, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-4", "trigger_text": "Signs of sepsis, systemic illness or other complications such as: fever, confusion, lethargy, tachycardia, hypotension, hypertension, clammy skin, rash, nausea, vomiting, diarrhoea, facial or peripheral oedema, headache, joint pain and/or swollen joints", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-5", "trigger_text": "Blistering of the skin and mucous membranes (including mouth and eyes)", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-6", "trigger_text": "Non-healing broken skin, sores, ulcers or crusts that are chronic (more than 4 weeks)", "structured": { "parameter": "duration_of_non_healing_broken_skin_sores_ulcers_or_crusts", "operator": ">", "value": 4, "unit": "weeks" }, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-7", "trigger_text": "Immunocompromised patients - due to underlying medical condition (e.g. transplant or GP recipients, patients with malignancies, patients receiving chemotherapy, HIV infection, uncontrolled diabetes, advanced age); due to medication taken by the patient (such as immunomodulatory therapy, prednisone therapy)", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "unclear", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "'Red flag' warning signs" } },
+    { "id": "RF-8", "trigger_text": "Significant body surface area involvement (>30% body surface area)", "structured": { "parameter": "body_surface_area_involvement", "operator": ">", "value": 30, "unit": "% body surface area" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-9", "trigger_text": "The condition is having a marked negative emotional and social effect", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-10", "trigger_text": "Complex presentation, such as those requiring antibiotic therapy for secondary infection. Pharmacists must not supply antibiotic therapy.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-11", "trigger_text": "The patient is below 2 years or over 65 years of age", "structured": { "parameter": "age", "operator": "not_in", "value": "2 to 65 years inclusive", "unit": "years" }, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-12", "trigger_text": "The diagnosis is unclear", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-13", "trigger_text": "The patient has not been diagnosed with atopic dermatitis by a medical practitioner", "structured": null, "action": "NOT_ELIGIBLE", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-14", "trigger_text": "Atopic dermatitis affecting the genitals", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 5, "section_heading": "Referral criteria" } },
+    { "id": "RF-15", "trigger_text": "Pregnant or planning a pregnancy", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+    { "id": "RF-16", "trigger_text": "Atypical presentations of atopic dermatitis (i.e. not classic atopic dermatitis)", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+    { "id": "RF-17", "trigger_text": "A paediatric patient that presents with a history of immediate or delayed-type hypersensitivity to food, poor feeding or sleep, concerns about failure to thrive", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+    { "id": "RF-18", "trigger_text": "Patient presents with or develops complication (e.g. eczema herpeticum)", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+    { "id": "RF-19", "trigger_text": "There is no response to optimal treatment (within 7 days) or the condition worsens or reoccurs", "structured": { "parameter": "duration_of_optimal_treatment_without_response", "operator": ">=", "value": 7, "unit": "days" }, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+    { "id": "RF-20", "trigger_text": "Patient requires large quantities of topical products (such as topical corticosteroids) that require an authority from the Pharmaceutical Benefits Scheme", "structured": null, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "Referral criteria" } },
+    { "id": "RF-21", "trigger_text": "Secondary infection is a common complication of atopic dermatitis. If a secondary infection co-occurs in the presentation, the patient must be referred to a medical practitioner for investigation and management. Treatment of infection in atopic dermatitis is beyond the scope of these Practice Standards and requires a referral to a medical practitioner.", "structured": null, "action": "REFER", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 6, "section_heading": "H. BACKGROUND" } },
+    { "id": "RF-22", "trigger_text": "All severe cases of atopic dermatitis must be urgently referred to a medical practitioner for management without any treatment by the pharmacists.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 7, "section_heading": "H. BACKGROUND" } },
+    { "id": "RF-23", "trigger_text": "Complications of atopic dermatitis - pharmacists are required to immediately refer these patients for urgent medical assessment at presentation or at any stage if a complication develops.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 7, "section_heading": "Complications of atopic dermatitis" } },
+    { "id": "RF-24", "trigger_text": "Eczema herpeticum - 'Vesicles develop usually in areas of active or recent atopic dermatitis, followed by the onset of high fever and adenopathy ... Painful corneal lesions will develop if the eye is involved and if the HSV infection becomes systemic. This may be fatal. This is a medical emergency. Pharmacists are required to immediately refer these patients to an emergency department for urgent medical assessment.'", "structured": null, "action": "REFER_URGENT", "severity": "critical", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 8, "section_heading": "Complications of atopic dermatitis" } },
+    { "id": "RF-25", "trigger_text": "'Patients should be advised that each new treatment may take time to work and should be trialled for 7 days. If there is no improvement, the patient must be referred to a medical practitioner.'", "structured": { "parameter": "duration_of_new_treatment_trial_without_improvement", "operator": ">=", "value": 7, "unit": "days" }, "action": "REFER", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 9, "section_heading": "J. MANAGEMENT AND TREATMENT PLAN" } },
+    { "id": "RF-26", "trigger_text": "Patients should be advised to immediately see a medical practitioner if symptoms worsen after commencing treatment.", "structured": null, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 10, "section_heading": "Counselling" } },
+    { "id": "RF-27", "trigger_text": "Common adverse effects of topical corticosteroids such as transient burning, stinging or pain on application can generally be reversed by stopping the medication. Referral to a medical practitioner is required if the adverse effect does not resolve quickly.", "structured": null, "action": "REFER", "severity": "medium", "confidence": "medium", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 10, "section_heading": "Counselling" } },
+    { "id": "RF-28", "trigger_text": "All patients should be advised to contact a medical practitioner if: They are not responding to treatment (within 7 days); Their signs and symptoms worsen; They are experiencing complications (as soon as they become evident); They are having unmanageable adverse effects", "structured": { "parameter": "duration_of_treatment_without_response", "operator": ">=", "value": 7, "unit": "days" }, "action": "REVIEW_GP", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "id": "RF-29", "trigger_text": "If a patient experiences worsening of symptoms, minimal improvement in symptoms after commencing pharmacist care, a secondary infection, they must be referred for an urgent review by a medical practitioner.", "structured": null, "action": "REFER_URGENT", "severity": "high", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "id": "RF-30", "trigger_text": "If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration ... Additionally, you must notify the patient's usual general practitioner (if they have one).", "structured": null, "action": "REVIEW_GP", "severity": "medium", "confidence": "high", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS" } }
+  ],
+  "referral": {
+    "routine": [
+      "Patients who have requested the service but are not eligible for management should be referred to their regular medical practitioner or health service.",
+      "Pharmacists must apply clinical judgement and refer any patient considered appropriate for medical care.",
+      "If a secondary infection co-occurs in the presentation, the patient must be referred to a medical practitioner for investigation and management.",
+      "Pharmacists should refer patients to a medical practitioner for a review and ongoing management after the acute flare has been managed.",
+      "Atopic dermatitis is often misdiagnosed as a contact irritant or allergic dermatitis. Pharmacists must be aware of potential differential diagnoses and refer these presentations for management by a medical practitioner."
+    ],
+    "urgent": [
+      "Patients who meet any of the urgent referral criteria below must be referred to their regular medical practitioner, maternity provider, health service, or Emergency Department (ED) as indicated in the table.",
+      "Patients presenting with generalised erythema that covers 90% of the skin require urgent referral to a medical practitioner.",
+      "All severe cases of atopic dermatitis must be urgently referred to a medical practitioner for management without any treatment by the pharmacists.",
+      "Pharmacists are required to immediately refer these patients for urgent medical assessment at presentation or at any stage if a complication develops.",
+      "they must be referred for an urgent review by a medical practitioner."
+    ],
+    "emergency": [
+      "Generalised erythema that covers 90% or more of the skin (this is a medical emergency and requires immediate ED referral).",
+      "This may be fatal. This is a medical emergency. Pharmacists are required to immediately refer these patients to an emergency department for urgent medical assessment. (eczema herpeticum)",
+      "Not eligible for management under the Authority and Practice Standards. Refer to Emergency Department or GP. (flowchart, red flags/exclusions = Yes)"
+    ],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 3, "section_heading": "D. PATIENT ASSESSMENT FLOWCHART" }
+  },
+  "review_followup": [
+    { "when": "7 to 14 days after the initiation of treatment for acute atopic dermatitis", "what": "Clinical review to assess response to treatment, adverse effects, and if changes are required to the treatment plan (decisions to continue, modify or stop treatment should be reflected in the patient's eczema action plan).", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "when": "In line with recommendations in the Therapeutic Guidelines", "what": "Clinical review with the pharmacist; patients should be advised and educated on how and when to seek a review with medical practitioner.", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "when": "When a good response has been achieved", "what": "The medication can be reduced or stopped, and the patient can continue using regular moisturiser only.", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "when": "After the acute flare has been managed", "what": "Pharmacists should refer patients to a medical practitioner for a review and ongoing management.", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "when": "Annually", "what": "An annual review by a medical practitioner is recommended to assess for adverse effects from topical corticosteroid therapy.", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 11, "section_heading": "FOLLOW-UP CARE AND REVIEW" } },
+    { "when": "Within a week following the consultation (if the patient or substituted decision maker consents to disclosure)", "what": "The record of the consultation and any subsequent consultations (including adverse events) must be shared with the patient's usual treating medical practitioner or medical practice, where the patient has one.", "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 4, "section_heading": "F. PATIENT CONSENT" } }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "If the treating pharmacist becomes aware of an uncommon, unexpected or serious adverse event following treatment with an Approved Medicine, this should be reported to the Therapeutic Goods Administration. This should be conducted via the usual processes, by reporting online at https://aems.tga.gov.au/.",
+      "Additionally, you must notify the patient's usual general practitioner (if they have one).",
+      "Where a patient has a My Health Record, the pharmacist must ensure the details of the supply are uploaded to My Health Record, unless requested otherwise by the patient."
+    ],
+    "provenance": { "pdf_file": "nsw-pharmacist-prescribing-protocols\\practice-standards-atopic-dermatitis.pdf", "page": 2, "section_heading": "C. ADVERSE EVENTS" }
+  },
+  "references": [
+    "1. Allergy & Asthma Network. Ask the Allergist: Breaking the Itch-Scratch Cycle. 2024. (p13)",
+    "2. American Academy of Dermatology Association. Eczema Resource Center. 2025. (p13)",
+    "3. Aung T, Aung S. Selection of an effective topical corticosteroid. Australian Journal of General Practice. 2021;50(9):651-5. (p13)",
+    "4. Australasian Society of Clinical Immunology and Allergy (ASCIA). Action Plan for Eczema: ASCIA; 2024. (p13)",
+    "5. Australian Medicines Handbook: Drugs for eczema. Adelaide: Australian Medicines Handbook Pty Ltd; 2022. (p13)",
+    "6. Australian Medicines Handbook: Topical steroids - how much do I use? Australian Medicines Handbook Pty Ltd; 2017. (p13)",
+    "7. Australian Medicines Handbook: General principles: topical treatment of skin conditions. Australian Medicines Handbook Pty Ltd; 2017. (p13)",
+    "8. DermNet NZ: Atopic dermatitis images. DermNet New Zealand Trust; 2025. (p13)",
+    "9. DermNet NZ. DermNet New Zealand Trust; 2025. (p13)",
+    "10. DynaMed: Atopic Dermatitis: EBSCO Information Services; 2018. (p13)",
+    "11. Eczema Association of Australasia Inc. Managing Eczema. Eczema Association Australasia; 2025. (p13)",
+    "12. Hanifin JM, Baghoomian W, Grinich E, Leshem YA, Jacobson M, Simpson EL. The Eczema Area and Severity Index-A Practical Guide. Dermatitis. 2022;33(3):187-92. (p13)",
+    "13. Healthdirect Australia Limited: Eczema. Healthdirect; 2024. (p13)",
+    "14. Lewis-Jones M, Finlay A. The Children's Dermatology Life Quality Index (CDLQI): Initial validation and practical use. British Journal of Dermatology. 1995;132:942-9. (p13)",
+    "15. National Eczema Society. Itching and scratching: How to control eczema itching. London: National Eczema Society; 2021. (p13)",
+    "16. Oakley A, Coulson I. Fingertip unit. DermNet New Zealand Trust; 2023. (p14)",
+    "17. Purvis D. Guidelines for the diagnosis and assessment of eczema. DermNet New Zealand Trust; 2014. (p14)",
+    "18. Queensland Health. Queensland Community Pharmacy Mild to Moderate Atopic Dermatitis - Clinical Practice Guideline. Queensland Health; 2025. (p14)",
+    "19. Raising Children Network. A-Z Health Reference: Eczema. 2024. (p14)",
+    "20. Royal Children's Hospital Melbourne. Eczema. 2024. (p14)",
+    "21. Ruenger T. MSD Manual Professional Version: Atopic Dermatitis (Eczema): Merck & Co; 2025. (p14)",
+    "22. Skin Deep: A DFTB Project. Welcome to Skin Deep; 2025. (p14)",
+    "23. Stanway A, Jarrett P. Atopic dermatitis: DermNet New Zealand Trust; 2021. (p14)",
+    "24. The Australasian College of Dermatologists. Consensus statement: Management of atopic dermatitis in adults. Melbourne: The Australasian College of Dermatologists; 2021. (p14)",
+    "25. The Australasian College of Dermatologists. Consensus statement: Topical corticosteroids in paediatric eczema. Melbourne: The Australasian College of Dermatologists; 2022. (p14)",
+    "26. Therapeutic Guidelines: Dermatology (Atopic dermatitis) Melbourne: Therapeutic Guidelines Limited; 2025. (p14)",
+    "27. Therapeutic Guidelines: Dermatology (Considerations in the use of topical corticosteroids). Melbourne: Therapeutic Guidelines Limited; 2022. (p14)",
+    "28. Therapeutic Guidelines: Dermatology (Dermatitis). Melbourne: Therapeutic Guidelines Limited; 2022. (p15)",
+    "29. Therapeutic Guidelines: Dermatology (Modified dressings for inflammatory dermatoses). Melbourne: Therapeutic Guidelines Limited; 2025. (p15)",
+    "30. The Royal Children's Hospital Melbourne. Kids Health Info: Fact sheets: Eczema (atopic dermatitis). 2025. (p15)",
+    "31. University of Nottingham. POEM - Patient Oriented Eczema Measure: Centre of Evidence Based Dermatology; 2022. (p15)",
+    "32. Wargon O. A-Z of skin: Atopic Dermatitis. Australasian College of Dermatologists; 2023. (p15)",
+    "33. Weidinger S, Novak N. Atopic dermatitis. Lancet. 2016;387(10023):1109-22. (p15)",
+    "34. Willems A, Tapley A, Fielding A, Tng ETV, Holliday EG, van Oriel ML, et al. Prevalence and Associations of General Practice Registrars' Management of Atopic Dermatitis: A Cross-Sectional Analysis from the Registrar Clinical Encounters in Training Study. Dermatology practical & conceptual. 2021;11(4):e2021128-e. (p15)",
+    "35. Wollenberg A, Christen-Zach S, Taieb A, Paul C, Thyssen JP, de Bruin-Weller M, et al. ETFAD/EADV Eczema task force 2020 position paper on diagnosis and treatment of atopic dermatitis in adults and children. J Eur Acad Dermatol Venereol. 2020;34(12):2717-44. (p15)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Asterisk on the age gate has no located footnote",
+      "observed": "Flowchart gate reads 'Is the patient >=2 and <=65 years old*' with an asterisk; no footnote or explanatory note for the asterisk was found anywhere in the extracted text (16 pages).",
+      "why_unclear": "The asterisk may point to a qualification (e.g. exception for certain patients) that is not present in the text; gate transcribed without the qualification and confidence marked medium.",
+      "source_page": 3
+    },
+    {
+      "topic": "Flowchart box order reconstructed from diagram layout",
+      "observed": "Section D flowchart text is interleaved, e.g. 'Is the patient >=2 and <=65 years old* No under the Authority and Practice' and Yes/No branch labels appear detached from boxes.",
+      "why_unclear": "Step order and on_fail assignments were inferred from the diagram layout; branch wording transcribed verbatim. Confidence medium on PW-1-S4.",
+      "source_page": 3
+    },
+    {
+      "topic": "Referral table headers reversed/mirrored in extraction",
+      "observed": "Above the table rows the text reads 'sngis gninraw 'gafl deR'' (the heading \"'Red flag' warning signs\" reversed) and mid-table 'fo sliateD gnitneserp tnialpmoc' ('Details of presenting complaint' reversed), alongside the header 'Referral criteria Treat Referral'.",
+      "why_unclear": "Column alignment of the table cannot be fully confirmed from the extraction; rows transcribed with Treat: No and Referral (Urgent: ED / GP) as printed per row.",
+      "source_page": 5
+    },
+    {
+      "topic": "Immunocompromised row referral destination misaligned",
+      "observed": "Row reads 'Immunocompromised patients No Urgent: ED' and the following sub-bullet lines contain a stray 'GP' ('due to underlying medical condition (e.g. transplant or GP recipients...'), so the Referral value may be 'Urgent: ED' or 'GP'.",
+      "why_unclear": "Row alignment is ambiguous; EXC-7/RF-7 confidence marked unclear and both readings recorded (Urgent: ED on the row line; GP appearing within the sub-bullets).",
+      "source_page": 5
+    },
+    {
+      "topic": "Likely typo in the immunocompromised row",
+      "observed": "'transplant or GP recipients' printed where 'transplant or graft recipients' is likely intended.",
+      "why_unclear": "Transcribed verbatim as printed; interpretation flagged rather than silently corrected.",
+      "source_page": 5
+    },
+    {
+      "topic": "Exclusion/referral table spans pages 5-6",
+      "observed": "Table rows EXC-1 to EXC-14 are printed on page 5 and EXC-15 to EXC-20 continue on page 6 without a repeated heading.",
+      "why_unclear": "Provenance uses the page on which each row appears; heading carried over from the table header on page 5.",
+      "source_page": 5
+    },
+    {
+      "topic": "Dose, frequency, duration and application instructions not printed",
+      "observed": "Nine approved medicines are listed with form and strength only; the document states 'Pharmacists need to refer to the Therapeutic Guidelines and the Australian Medicines Handbook for details on management' and directs to sources for potency/formulation selection.",
+      "why_unclear": "dose, frequency and duration fields left empty rather than invented; must be sourced from Therapeutic Guidelines/AMH before go-live.",
+      "source_page": 9
+    },
+    {
+      "topic": "No first-line designation or potency ranking printed",
+      "observed": "The nine approved medicines are listed alphabetically with no ranking; 'Selecting the correct potency and formulation of topical corticosteroids is important ... Pharmacists should consult the Therapeutic Guidelines ... and other relevant sources.'",
+      "why_unclear": "first_line set to false for all treatments; no agent is designated first-line and no potency hierarchy is printed.",
+      "source_page": 9
+    },
+    {
+      "topic": "Site restrictions worded only for topical corticosteroids",
+      "observed": "Face/flexural/groin/scalp rules refer to corticosteroid therapies and named agents; the document does not state whether pimecrolimus 1% cream and crisaborole 2% ointment may be used on the face, flexural sites, groin or children's scalp.",
+      "why_unclear": "Cannot extend corticosteroid site rules to the non-corticosteroid approved medicines without inventing a restriction; recorded in treatment notes as unstated.",
+      "source_page": 10
+    },
+    {
+      "topic": "Emollients/moisturisers are central to management but not in the Approved Medicines list",
+      "observed": "'Regular use of moisturisers (emollients) ... are a central component of managing atopic dermatitis' and 'the patient can continue using regular moisturiser only', yet the Approved Medicines list contains only the nine listed agents.",
+      "why_unclear": "The document does not say whether moisturiser supply under this service is permitted outside the Authority's approved formulations; no treatment row was created for moisturisers.",
+      "source_page": 7
+    },
+    {
+      "topic": "Notifiable conditions span pages 2, 10 and 11",
+      "observed": "TGA reporting and notification of the patient's usual general practitioner wording is on page 2; My Health Record upload requirement is on pages 10-11.",
+      "why_unclear": "Shared provenance uses the first page (2) per spec; range recorded here.",
+      "source_page": 2
+    },
+    {
+      "topic": "Referral block quotes span pages 3-11",
+      "observed": "referral.routine quotes from pages 4, 5, 6 and 11; urgent quotes from pages 5, 7 and 11; emergency from pages 5, 8 and 3.",
+      "why_unclear": "Spec requires one shared provenance object for the referral block using the first page; page range recorded here.",
+      "source_page": 3
+    },
+    {
+      "topic": "Branch actions not stated for several follow-up gates",
+      "observed": "PW-4-S2, PW-4-S5 and PW-4-S7 use on_fail 'unclear'; the follow-up section is prose and does not state actions when the review is not attended, when non-compliance is not the cause, or before the acute flare is managed.",
+      "why_unclear": "Spec requires 'unclear' plus an open question where the document does not dictate the branch; PW-4-S3/S4 on_fail branches were inferred from bullet order (confidence medium on PW-4-S4).",
+      "source_page": 11
+    },
+    {
+      "topic": "Flowchart gate 'diagnosed with atopic dermatitis by a medical practitioner' and exclusion row duplicate",
+      "observed": "The same requirement appears as a flowchart gate (page 3), an exclusion row (page 5) and a background statement (page 6).",
+      "why_unclear": "Recorded once as INC-2 (inclusion/gate) and once as EXC-13 (table row) because both are printed; the engine should treat them as the same underlying requirement.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Verify the current NSW Health Authority (dated 28 August 2026) Approved Medicines list and any subsequent amendments before go-live.",
+      "source_page": 2,
+      "reason": "The Approved Medicines list is held in an external Authority document not included in this protocol PDF."
+    },
+    {
+      "item": "Confirm each pharmacist using the module has completed the training requirements detailed in the NSW Health Authority (dated 28 August 2026) and holds general registration under the Health Practitioner Regulation National Law.",
+      "source_page": 2,
+      "reason": "Training requirements are detailed in an external document; pharmacist authorisation to practise under the standard must be verified locally."
+    },
+    {
+      "item": "Confirm local process for TGA adverse event reporting via https://aems.tga.gov.au/ and notification of the patient's usual general practitioner.",
+      "source_page": 2,
+      "reason": "Reporting is directed to be done 'via the usual processes', which is left to local policy."
+    },
+    {
+      "item": "Confirm consent record-sharing within a week of consultation and secure digital record retention (minimum seven (7) years, or for patients under 18 until the patient has attained the age of 25 years) arrangements.",
+      "source_page": 4,
+      "reason": "Documentation, storage and sharing arrangements depend on local pharmacy systems and policy."
+    },
+    {
+      "item": "Confirm My Health Record upload workflow and patient opt-out handling for each supply.",
+      "source_page": 10,
+      "reason": "Upload requirement is stated but the operational process is left to the pharmacy's local workflow."
+    },
+    {
+      "item": "Confirm the intended meaning of the asterisk on the flowchart age gate 'Is the patient >=2 and <=65 years old*'.",
+      "source_page": 3,
+      "reason": "An asterisk is printed but no footnote was located in the document text; the qualification may affect eligibility decisions."
+    },
+    {
+      "item": "Confirm whether immunocompromised patients are referred Urgent: ED or to GP (table row alignment ambiguity).",
+      "source_page": 5,
+      "reason": "The referral column for the immunocompromised row is misaligned in the source table ('Urgent: ED' on the row line, 'GP' appearing within the sub-bullets)."
+    },
+    {
+      "item": "Confirm whether emollients/moisturisers may be supplied under this service given they are not in the Approved Medicines list.",
+      "source_page": 7,
+      "reason": "Moisturisers are described as a central component of management but the Authority list contains only the nine approved medicines."
+    },
+    {
+      "item": "Confirm local policy on exercising professional discretion and judgement when applying the Practice Standards.",
+      "source_page": 4,
+      "reason": "The Practice Standards explicitly defer to pharmacist judgement and consultation with the patient, which is a local policy/governance decision."
+    },
+    {
+      "item": "Confirm potency/formulation selection guidance (Therapeutic Guidelines, AMH, Australasian College of Dermatologists consensus statements) is available to pharmacists at point of care.",
+      "source_page": 9,
+      "reason": "The document defers potency and formulation selection to external references that are not reproduced in the protocol."
+    }
+  ]
+}

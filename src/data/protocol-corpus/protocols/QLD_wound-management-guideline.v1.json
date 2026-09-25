@@ -1,0 +1,1049 @@
+{
+  "schema_version": "protocol-extraction-v1",
+  "source": {
+    "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline",
+    "pdf_sha256": "bf7c0cba23257937b859206c62afae387cb91adf3ccdca8e99c397355157418d",
+    "page_count": 12,
+    "extracted_at": "2026-09-25T10:00:00+10:00",
+    "extracted_by": "opencode-agent/mimo-v2.6-flash-free"
+  },
+  "protocol": {
+    "state": "QLD",
+    "instrument_name": "Queensland Community Pharmacy Acute Minor Wound Management - Clinical Practice Guideline",
+    "instrument_version": "Version 2.0 (Version dated 1 July 2025)",
+    "effective_date": "1 July 2025",
+    "legal_basis": "Not stated in this document; issued by Queensland Health as a Queensland Community Pharmacy clinical practice guideline for a prescribing service (page 1).",
+    "supervision_model": "Document's own terminology: pharmacists are advised to 'exercise professional discretion and judgement' and to decide 'in consultation with the patient and/or their parent/caregiver'; pharmacists must prescribe according to 'the specified sections of the current online version of the Therapeutic Guidelines'. No 'collaborative'/'autonomous' label is printed.",
+    "scope_summary": "Clinical practice guideline for pharmacist management of acute minor wounds in Queensland community pharmacies: 'Refer when' criteria (first aid and concurrent referral), 'Treat (if clinically appropriate) and concurrently refer' criteria, comprehensive patient and wound history, acute wound assessment (Table 1, TIME framework), vital signs for signs of infection, pathology testing (Gram stain, culture and sensitivity) with referral for specimen collection, management (administration of local anaesthetic - use of \u22641% lidocaine preparations without adrenaline, maximum of 10ml; wound cleansing with irrigation, simple mechanical debridement and antiseptics; wound closure using adhesive strips, topical skin/tissue adhesives and basic suturing techniques only; wound dressing), presumptive/prophylactic/empirical oral antibiotic therapy delegated to Therapeutic Guidelines: Antibiotic (Traumatic wound infections), tetanus post-exposure prophylaxis, family violence and non-accidental injury, self-harm and suicide risk pathways, communication of the agreed management plan, general advice and clinical review. Service restricted to patients aged 5 years or over. Topical antibiotics are not recommended and are not included for use as part of this Service. Antibiotic prophylaxis for acute minor wounds is not routinely recommended."
+  },
+  "eligibility": {
+    "inclusion": [
+      {
+        "id": "INC-1",
+        "text": "Service restricted to patients aged 5 years or over.",
+        "criteria_group": { "all_of": ["INC-1"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 1, "section_heading": "Acute Minor Wound Management - Clinical Practice Guideline" }
+      },
+      {
+        "id": "INC-2",
+        "text": "For the purposes of the Service, an acute minor wound is a wound caused by injury or trauma (as opposed to surgical wounds)",
+        "criteria_group": { "all_of": ["INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 3, "section_heading": "Patient history and assessment" }
+      },
+      {
+        "id": "INC-3",
+        "text": "For the purposes of the Service, an acute minor wound is a wound involving the epidermis and upper dermis (superficial wound) or dermis (partial thickness) (3, 8)",
+        "criteria_group": { "all_of": ["INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 3, "section_heading": "Patient history and assessment" }
+      },
+      {
+        "id": "INC-4",
+        "text": "For the purposes of the Service, an acute minor wound is a wound in the inflammation stage (approximately 0\u20134 days post injury) and expected to follow the normal physiological wound healing process.",
+        "criteria_group": { "all_of": ["INC-2", "INC-3", "INC-4"], "any_of": [] },
+        "confidence": "high",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 3, "section_heading": "Patient history and assessment" }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "EXC-1",
+        "text": "burns require management at a specialist centre as per the Australian and New Zealand Burn Association (ANZBA) criteria (1)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-2",
+        "text": "injury has suspected vascular, tendon, joint, bone, muscle, or nerve involvement",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-3",
+        "text": "fractures, crush injuries, partial amputations of a digit or penetrating wounds of the torso",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-4",
+        "text": "a penetrating wound, including through footwear, or a marine envenomation (a complex wound at high risk of infection)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-5",
+        "text": "recent orofacial trauma (not yet seen by a dental practitioner)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-6",
+        "text": "suspected concussive head injury",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-7",
+        "text": "pain that requires management with treatments not available to pharmacists",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-8",
+        "text": "immunocompromised or at high risk of infection or compromised wound healing",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-9",
+        "text": "signs or symptoms of systemic infection or is generally unwell",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-10",
+        "text": "infection of a surgical or chronic wound",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-11",
+        "text": "a tetanus-prone wound that requires tetanus immunoglobulin (e.g. patient has had less than 3 doses of the tetanus toxoid vaccine, or vaccination history is unknown)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-12",
+        "text": "significant risk of suicide (e.g. a current intent, a specific plan, access and means or have had previous suicide attempts), or self-inflicted injuries (see \u2018Treat and concurrently refer\u2019)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-13",
+        "text": "injury sustained in the workplace or as a result of a work-related incident",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-14",
+        "text": "the wound history is unclear (how, where and when the wound was acquired)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-15",
+        "text": "the wound is showing abnormal signs of healing or not progressing through the normal stages of healing (e.g., chronic ulcers or wounds, necrotic or hyper-granulation tissue, wounds older than 4 days that have not begun epithelialisation)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-16",
+        "text": "the wound is suspected to be full thickness (involving epidermis, dermis and subcutaneous tissue)",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-17",
+        "text": "the wound is to the head (scalp, face, ears, eyes) or neck, or where sustained closure is difficult to achieve",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      },
+      {
+        "id": "EXC-18",
+        "text": "anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure.",
+        "criteria_group": { "all_of": [], "any_of": ["EXC-1", "EXC-2", "EXC-3", "EXC-4", "EXC-5", "EXC-6", "EXC-7", "EXC-8", "EXC-9", "EXC-10", "EXC-11", "EXC-12", "EXC-13", "EXC-14", "EXC-15", "EXC-16", "EXC-17", "EXC-18"] },
+        "confidence": "medium",
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+      }
+    ],
+    "age_bounds": {
+      "min_years": 5,
+      "max_years": null,
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 1, "section_heading": "Acute Minor Wound Management - Clinical Practice Guideline" }
+    },
+    "exclusion_exceptions": [
+      {
+        "id": "EXE-1",
+        "text": "Ineligibility for treatment as part of a prescribing service does not preclude a patient from accessing services provided as part of usual pharmacy care.",
+        "criteria_group": { "all_of": ["EXE-1"], "any_of": [] },
+        "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 1, "section_heading": "Acute Minor Wound Management - Clinical Practice Guideline" },
+        "confidence": "high"
+      }
+    ]
+  },
+  "diagnosis_pathways": [
+    {
+      "id": "PW-1",
+      "name": "Acute minor wound management - assessment, referral, treatment and clinical review",
+      "steps": [
+        {
+          "id": "PW-1-S1",
+          "order": 1,
+          "type": "REFER",
+          "description": "Refer when: Provide first aid and concurrently refer the patient to an appropriate healthcare provider (including emergency services, if required) in the following situations: burns require management at a specialist centre as per the Australian and New Zealand Burn Association (ANZBA) criteria (1); injury has suspected vascular, tendon, joint, bone, muscle, or nerve involvement; fractures, crush injuries, partial amputations of a digit or penetrating wounds of the torso; a penetrating wound, including through footwear, or a marine envenomation (a complex wound at high risk of infection); recent orofacial trauma (not yet seen by a dental practitioner); suspected concussive head injury; pain that requires management with treatments not available to pharmacists; immunocompromised or at high risk of infection or compromised wound healing; signs or symptoms of systemic infection or is generally unwell; infection of a surgical or chronic wound; a tetanus-prone wound that requires tetanus immunoglobulin (e.g. patient has had less than 3 doses of the tetanus toxoid vaccine, or vaccination history is unknown); significant risk of suicide (e.g. a current intent, a specific plan, access and means or have had previous suicide attempts), or self-inflicted injuries (see \u2018Treat and concurrently refer\u2019); injury sustained in the workplace or as a result of a work-related incident; the wound history is unclear (how, where and when the wound was acquired); the wound is showing abnormal signs of healing or not progressing through the normal stages of healing (e.g., chronic ulcers or wounds, necrotic or hyper-granulation tissue, wounds older than 4 days that have not begun epithelialisation); the wound is suspected to be full thickness (involving epidermis, dermis and subcutaneous tissue); the wound is to the head (scalp, face, ears, eyes) or neck, or where sustained closure is difficult to achieve; anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure. Each situation is captured individually as RF-2 to RF-19 and as eligibility exclusions EXC-1 to EXC-18.",
+          "gates": [ { "criterion": "None of the 'Refer when' situations present", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+        },
+        {
+          "id": "PW-1-S2",
+          "order": 2,
+          "type": "TREAT",
+          "description": "Treat (if clinically appropriate) and concurrently refer: Provide initial treatment (wound care and antibiotic therapy if indicated) and concurrently refer to an appropriate healthcare provider (including emergency services, if required) in the following situations: the wound is significantly contaminated, e.g., a foreign body or other contamination that cannot be removed by the pharmacist, significantly contaminated water-immersed wounds; localised post-traumatic wound infections, including: localised bite and clenched-fist wound infections; localised water-immersed wound infections; self-inflicted injuries. Each situation is captured individually as RF-20 to RF-22.",
+          "gates": [ { "criterion": "Initial treatment (wound care and antibiotic therapy if indicated) provided with concurrent referral to an appropriate healthcare provider (including emergency services, if required)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+        },
+        {
+          "id": "PW-1-S3",
+          "order": 3,
+          "type": "EDUCATE",
+          "description": "Key points: Comprehensive assessment that includes wound factors (e.g. site, type, size, onset, contamination, infection, drying/maceration) and patient factors (e.g. age, medical conditions, medicines, nutrition, lifestyle) is required to determine appropriate management, including whether referral to an appropriate healthcare provider is required. Wound healing is optimised when the wound is cleansed to remove debris and devitalised tissue, kept moist, infection is prevented, and the wound has adequate blood supply (2). Topical antibiotics are not recommended for the treatment of wounds and are not included for use as part of this Service. Topical antibiotics do not improve healing potential and may contribute to antimicrobial resistance (2, 3). Antibiotic prophylaxis for acute minor wounds is not routinely recommended. Thorough cleansing and dressing are the mainstay of treatment (4).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 3, "section_heading": "Key points" }
+        },
+        {
+          "id": "PW-1-S4",
+          "order": 4,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Patient history and assessment: A comprehensive and holistic wound assessment must consider both patient and wound history (2, 5, 7). For the purposes of the Service, an acute minor wound is defined as a wound: caused by injury or trauma (as opposed to surgical wounds); involving the epidermis and upper dermis (superficial wound) or dermis (partial thickness) (3, 8); in the inflammation stage (approximately 0\u20134 days post injury) and expected to follow the normal physiological wound healing process.",
+          "gates": [ { "criterion": "Wound meets the acute minor wound definition (all of: caused by injury or trauma; involving epidermis and upper dermis or dermis; in the inflammation stage approximately 0\u20134 days post injury and expected to follow normal healing)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 3, "section_heading": "Patient history and assessment" }
+        },
+        {
+          "id": "PW-1-S5",
+          "order": 5,
+          "type": "HISTORY",
+          "description": "Patient history: Obtain sufficient information from the patient to assess the safety and appropriateness of any recommendations and medicines. The patient history should consider: age; weight; pregnancy and lactation status (if applicable); current medical conditions, particularly conditions that may increase risk of infection (immunocompromised) or impair wound healing (e.g., vascular disease, diabetes mellitus, autoimmune disorders, malignancy); factors that may impact on successful wound healing as per the Therapeutic Guidelines: Ulcer and Wound Management (Factors affecting ulcer and wound healing) (2); symptoms that may indicate systemic infection or other injury including fever, lymphadenopathy, nausea and vomiting; current and recently ceased treatments (including prescribed medicines, vitamins, herbs, other supplements and over-the-counter medicines), including medicines that may delay wound healing; previous wound healing and scarring (list continues on page 4).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 3, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S6",
+          "order": 6,
+          "type": "HISTORY",
+          "description": "Patient history (continues from page 3): allergies / adverse drug reactions; alcohol and drug history; smoking status; immunisation status including tetanus vaccination; risk factors for infection with methicillin-resistant Staphylococcus aureus (MRSA); psychosocial history, emotional and mental state including level of distress, history of mental health conditions and potential for family violence; ability to undertake appropriate self-care; nutritional and hydration status.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 4, "section_heading": "Patient history" }
+        },
+        {
+          "id": "PW-1-S7",
+          "order": 7,
+          "type": "HISTORY",
+          "description": "Reminder: Pharmacists can access a range of clinical information in a patient\u2019s My Health Record, including details about current and past medication history, allergies and current medical conditions.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 4, "section_heading": "Reminder" }
+        },
+        {
+          "id": "PW-1-S8",
+          "order": 8,
+          "type": "HISTORY",
+          "description": "Wound history: Consider: mechanism of injury: to assess the potential for retained foreign bodies; to assist in determining if presumptive, prophylactic or empirical antibiotic therapy is required; date and time of injury; environment where the wound was acquired e.g., fresh or salt water, muddy locations, contaminated soil; treatments already provided and response e.g., dressings, antiseptics, antibiotics; whether the injury was sustained in a workplace or related to employment; whether the injury may be associated with family violence or self-harm (see below).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 4, "section_heading": "Wound history" }
+        },
+        {
+          "id": "PW-1-S9",
+          "order": 9,
+          "type": "REFER",
+          "description": "Injuries associated with family violence or non-accidental injury in children: Indications of injuries associated with family violence may include injuries and/or bruising to the head, neck, face, areas usually hidden from view, bite marks, unusual burns, injuries that do not match the history/explanation given by the patient (and/or parent/caregiver) or no explanation can be provided (9). If the pharmacist suspects the patient has been subjected to family violence, they should provide appropriate support and assistance to the patient (separate from other family members), including referral to support options. A list of services is provided on the Queensland Government Supports for victims of abuse webpage (10). Pharmacists are strongly encouraged to voluntarily report suspected child abuse and neglect to Child Safety. Information on the reporting process and other supports for affected families can be found on the Queensland Government Child Safety webpage (11).",
+          "gates": [ { "criterion": "No suspicion of family violence or non-accidental injury", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 4, "section_heading": "Injuries associated with family violence or non-accidental injury in children" }
+        },
+        {
+          "id": "PW-1-S10",
+          "order": 10,
+          "type": "REFER",
+          "description": "Injuries associated with self-harm: The most common form of deliberate self-harm is self-poisoning, followed by self-cutting and other methods such as hanging, burns, bruising and picking at sores (12). It is often done in secret and on places of the body that may not be seen by others (e.g., thighs). People may try to conceal wounds caused by self-harm by wearing long-sleeve clothing, or high neck shirts (12). Pharmacist assessment of a patient presenting with self-inflicted injuries, or a suspected self-inflicted injury, should consider: the patient\u2019s emotional and mental state and level of distress; whether there is an immediate concern related to the patient\u2019s safety; the need for referral to a mental health service (13). Self-harm may be a repetitive behavior (12). People presenting for treatment of self-inflicted injuries must be concurrently referred to an appropriate healthcare provider or mental health service. They may be provided treatment if clinically appropriate.",
+          "gates": [ { "criterion": "No self-inflicted or suspected self-inflicted injury", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 5, "section_heading": "Injuries associated with self-harm" }
+        },
+        {
+          "id": "PW-1-S11",
+          "order": 11,
+          "type": "REFER",
+          "description": "Injuries associated with self-harm (continued): Self-inflicted injuries are a warning sign that indicate a patient might be at a heightened risk of suicide. Consider key questions and/or other risk factors for suicide risk in accordance with Therapeutic Guidelines: Psychotropic (Suicide risk - Assessing suicide risk) (14). Patients at significant risk of suicide (e.g., if they have a current intent, a specific plan, access and means or have had previous suicide attempts) require urgent referral to an appropriate healthcare provider and/or acute psychiatric/mental health service. Helplines and support services for people at risk of suicide include: Beyond Blue (1300 224 636); for young people, e-headspace (1800 650 890); Kids Helpline (1800 551 800); Lifeline (13 11 14); Suicide Call Back Service (1300 659 467) (14).",
+          "gates": [ { "criterion": "No significant risk of suicide (current intent, a specific plan, access and means, or previous suicide attempts)", "on_fail": "REFER_URGENT" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 5, "section_heading": "Injuries associated with self-harm" }
+        },
+        {
+          "id": "PW-1-S12",
+          "order": 12,
+          "type": "EXAMINATION",
+          "description": "Wound assessment and examination: Wound-related factors to be considered and documented during clinical assessment and at clinical review (if applicable) are detailed in Table 1. Conduct assessment of vital signs for any patients presenting with signs of infection. The TIME acronym (Tissue, Infection/Inflammation, Moisture balance, Edge and peri-wound area) as detailed in the Therapeutic Guidelines: Ulcer and Wound Management (Assessing patients with an ulcer or wound) may also be used to guide wound examination and documentation of characteristics (2). Table 1. Clinical acute wound assessment - Anatomical location: Consider possible damage to joint, tendon, nerve and vascular structures; check distal sensation, motor function, range of motion (extensors and flexors) and vascularity.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 5, "section_heading": "Wound assessment and examination" }
+        },
+        {
+          "id": "PW-1-S13",
+          "order": 13,
+          "type": "EXAMINATION",
+          "description": "Table 1. Clinical acute wound assessment (continued from page 5): Size and degree of tissue loss: length, circumference and width; approximate depth \u2013 measured with a damp cotton tip, although generally not required for a minor acute wound; tissue loss \u2013 superficial, partial or full thickness. Wound appearance: presence of wound contamination \u2013 consider if the wound can be adequately cleaned, including with simple debridement, in the community pharmacy setting, or if referral is required; consider if a foreign body is present and refer if needed; stage/phase of healing \u2013 inflammation, reconstruction/proliferation, maturation; wound bed clinical appearance (if visible) \u2013 granulation tissue, epithelial tissue, sloughy, necrotic, hyper-granulation tissue; wound edges and surrounding skin (colour, contraction, change in sensation) \u2013 signs of normal or abnormal healing; exudate \u2013 type, amount, colour and odour. Signs of infection: local infection \u2013 redness, heat, pain and swelling above normal inflammatory responses, presence of exudate, odour, impaired wound healing, contact bleeding, tissue breakdown, unhealthy granulation tissue; spreading infection \u2013 increasing wound size, lymphangitis, inflammation and swelling of lymph nodes, wound breakdown, patient malaise or deterioration in health; systemic infection \u2013 fever, tachycardia, hypotension, other signs of sepsis. Pain: timing, triggers, severity and impact; type of pain \u2013 background, breakthrough pain, precipitating factors, pain before during and/or after dressing, cleaning and exposure to air; response to any medication used to manage the wound.",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 6, "section_heading": "Table 1. Clinical acute wound assessment ( 2, 3, 5, 6, 15)" }
+        },
+        {
+          "id": "PW-1-S14",
+          "order": 14,
+          "type": "INVESTIGATION",
+          "description": "Pathology testing for Gram stain, culture and sensitivity testing - Infected wounds: Wound swabbing is not routinely recommended for uncomplicated wounds. Pathology testing for microbial Gram stain, culture and antibiotic sensitivity should be considered prior to commencing empirical antibiotic therapy, where: the result of testing will help to guide management; the wound is not responding to empirical treatment; there is suspicion of unusual or resistant pathogens; there are concerns regarding local antimicrobial resistant organisms. If pathology testing is indicated, the patient should be referred to an appropriate healthcare provider to conduct specimen collection. If timely referral is not practicable, then empirical antibiotic therapy may be provided in accordance with the Therapeutic Guidelines with concurrent referral (see Pharmacotherapy). (Sentence continues from page 6 to page 7.)",
+          "gates": [ { "criterion": "Pathology testing not indicated; or specimen collection referred to an appropriate healthcare provider (with empirical therapy and concurrent referral only if timely referral is not practicable)", "on_fail": "REFER" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 6, "section_heading": "Pathology testing for Gram stain, culture and sensitivity testing" }
+        },
+        {
+          "id": "PW-1-S15",
+          "order": 15,
+          "type": "INVESTIGATION",
+          "description": "Wounds at high risk of infection: Pathology testing for microbial Gram stain, culture and antibiotic sensitivity is not required before commencing presumptive or prophylactic antibiotic therapy for wounds at high risk of infection (4).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Wounds at high risk of infection" }
+        },
+        {
+          "id": "PW-1-S16",
+          "order": 16,
+          "type": "TREAT",
+          "description": "Develop management plan: Pharmacists must ensure that they are prescribing medicines according to the specified sections of the current online version of the Therapeutic Guidelines. Pharmacist management of acute minor wounds may involve: administration of local anaesthetic: Use of \u22641% lidocaine preparations (without adrenaline, maximum of 10ml) if required, in accordance with the current online version of Therapeutic Guidelines: Pain and analgesia (Drugs used for pain - Local anaesthetics for acute pain management) (16) and Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3); wound cleansing: Irrigation, simple mechanical debridement (using sterile gauze or non-woven swabs) and use of antiseptics in accordance with the Therapeutic Guidelines: Ulcer and wound management (2); wound closure: Closure using adhesive strips, topical skin/tissue adhesives and basic suturing techniques only in accordance with the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3); wound dressing: Application and changing of dressings in accordance with the Therapeutic Guidelines: Ulcer and wound management (2) (pharmacotherapy continues on pages 7-8).",
+          "gates": [ { "criterion": "Prescribing aligns with the specified sections of the current online version of the Therapeutic Guidelines", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S17",
+          "order": 17,
+          "type": "TREAT",
+          "description": "Develop management plan - pharmacotherapy (continues from page 7): Presumptive oral antibiotic therapy for bite wounds (including marine animal bites) and clenched-fist injuries at high risk of infection, in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Bite wound infections, including clenched-fist injury infections) (4) and Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Water-immersed wound infections) (4); Prophylactic oral antibiotic therapy for significantly contaminated traumatic wounds, in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Post-traumatic wound infections) (4) and Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Water-immersed wound infections) (4); Empirical oral antibiotic therapy for localised post-traumatic wound infections, localised bite and clenched-fist wound infections, and localised water-immersed wound infections, in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Post-traumatic wound infections) (4), Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Bite wound infections, including clenched-fist injury infections) (4) and Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Water-immersed wound infections) (4); Tetanus post-exposure prophylaxis NB1 with tetanus toxoid vaccine in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Post-traumatic wound infections) (4). NB1: Tetanus-toxoid vaccines must be given in accordance with the Australian Immunisation Handbook: Tetanus and recorded on the Australian Immunisation Register (16).",
+          "gates": [ { "criterion": "Antibiotic therapy or tetanus post-exposure prophylaxis indicated and prescribed in accordance with the specified Therapeutic Guidelines sections", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+        },
+        {
+          "id": "PW-1-S18",
+          "order": 18,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Confirm management is appropriate: Consult the Therapeutic Guidelines, Australian Medicines Handbook, Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3) and other resources to confirm that management is appropriate, including for: contraindications and precautions; drug interactions; pregnancy and lactation.",
+          "gates": [ { "criterion": "Management confirmed appropriate including for contraindications and precautions, drug interactions, and pregnancy and lactation", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 8, "section_heading": "Confirm management is appropriate" }
+        },
+        {
+          "id": "PW-1-S19",
+          "order": 19,
+          "type": "DIAGNOSIS_CHECK",
+          "description": "Reminder: The prescribing and use of antibiotics should be consistent with the principles described in the Therapeutic Guidelines: Antibiotic. Pharmacists should carefully assess whether antibiotic therapy is clinically indicated, and if so, consider local antimicrobial resistance patterns and relevant clinical factors when selecting therapy.",
+          "gates": [ { "criterion": "Antibiotic therapy clinically indicated (assessed against Therapeutic Guidelines: Antibiotic principles)", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 8, "section_heading": "Reminder" }
+        },
+        {
+          "id": "PW-1-S20",
+          "order": 20,
+          "type": "EDUCATE",
+          "description": "Communicate agreed management plan: Comprehensive advice and counselling (including supporting written information if required), should be provided to the patient regarding wound care. Relevant information may include: schedule for dressing changes and suture removal; instructions for individual product/dressing and medicine use; non-pharmacological measures; how to recognise the signs of local and systemic infection; when to commence antibiotic therapy and any required follow-up; measures to prevent further injury; how to manage adverse effects of pharmacotherapy; when to return for follow-up. (Continues on page 9: It is the pharmacist\u2019s responsibility to ensure the suitability and accuracy of any resources and information provided to patients (and/or parents/caregivers) and compliance with all copyright conditions. The agreed management plan should be shared with members of the patient's multidisciplinary healthcare team, with the patient's consent.)",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 8, "section_heading": "Communicate agreed management plan" }
+        },
+        {
+          "id": "PW-1-S21",
+          "order": 21,
+          "type": "EDUCATE",
+          "description": "General advice: At the time of initial consultation, patients (and/or parents/caregivers if applicable) should be advised to see an appropriate healthcare provider if: the wound becomes infected (for non-infected wounds) or deteriorates; the wound is not healing as expected (e.g. no evidence of epithelialisation 4 days post wound event); their pain is not well managed with recommended analgesia; they become systemically unwell. Reiterate to the patient (and/or parents/caregivers) how to care for the wound and/or dressing at home as appropriate (e.g. when showering, bathing).",
+          "gates": [],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "General advice" }
+        },
+        {
+          "id": "PW-1-S22",
+          "order": 22,
+          "type": "FOLLOW_UP",
+          "description": "Clinical review: Clinical review with the pharmacist (or the patient\u2019s chosen healthcare provider), including for dressing changes and suture removal, should occur in line with recommendations in the Therapeutic Guidelines and the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3). Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy. Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+          "gates": [ { "criterion": "Clinical review arranged in line with recommendations in the Therapeutic Guidelines and the Primary Clinical Care Manual", "on_fail": "unclear" } ],
+          "confidence": "high",
+          "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "Clinical review" }
+        }
+      ]
+    }
+  ],
+  "treatments": [
+    {
+      "id": "TX-1",
+      "drug": "Lidocaine",
+      "form": "",
+      "strength": "\u22641% (without adrenaline)",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "maximum of 10ml",
+      "quantity_to_supply": "",
+      "notes": "Administration of local anaesthetic: Use of \u22641% lidocaine preparations (without adrenaline, maximum of 10ml) if required, in accordance with the current online version of Therapeutic Guidelines: Pain and analgesia (Drugs used for pain - Local anaesthetics for acute pain management) (16) and Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3). Route, frequency and duration are not printed in this document. Refer when: 'anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure' requires referral to an appropriate healthcare provider.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-2",
+      "drug": "Antiseptics",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Wound cleansing: Irrigation, simple mechanical debridement (using sterile gauze or non-woven swabs) and use of antiseptics in accordance with the Therapeutic Guidelines: Ulcer and wound management (2). Key points: 'Antibiotic prophylaxis for acute minor wounds is not routinely recommended. Thorough cleansing and dressing are the mainstay of treatment (4)'; wound healing is optimised when the wound is cleansed to remove debris and devitalised tissue, kept moist, infection is prevented, and the wound has adequate blood supply (2). No specific antiseptic agent, strength, contact time or frequency is printed in this document.",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-3",
+      "drug": "adhesive strips, topical skin/tissue adhesives and basic suturing techniques",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Wound closure: Closure using adhesive strips, topical skin/tissue adhesives and basic suturing techniques only in accordance with the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3). The word 'only' limits permitted closure methods to these options. No product names, quantities or technique parameters are printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-4",
+      "drug": "Dressings",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Wound dressing: Application and changing of dressings in accordance with the Therapeutic Guidelines: Ulcer and wound management (2). Key points: thorough cleansing and dressing are the mainstay of treatment (4). No dressing type, product or change frequency is printed; the schedule for dressing changes is provided as patient counselling (Communicate agreed management plan).",
+      "first_line": true,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-5",
+      "drug": "Presumptive oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "For bite wounds (including marine animal bites) and clenched-fist injuries at high risk of infection, in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Bite wound infections, including clenched-fist injury infections) (4) and Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Water-immersed wound infections) (4). Pathology testing is not required before commencing presumptive therapy for wounds at high risk of infection (4). No antibiotic name, strength, dose, frequency or duration is printed. Topical antibiotics are not recommended and are not included for use as part of this Service; antibiotic prophylaxis for acute minor wounds is not routinely recommended.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-6",
+      "drug": "Prophylactic oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "For significantly contaminated traumatic wounds, in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Post-traumatic wound infections) (4) and Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Water-immersed wound infections) (4). Pathology testing for microbial Gram stain, culture and antibiotic sensitivity is not required before commencing presumptive or prophylactic antibiotic therapy for wounds at high risk of infection (4). No antibiotic name, strength, dose, frequency or duration is printed.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 7, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-7",
+      "drug": "Empirical oral antibiotic therapy",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "oral",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "For localised post-traumatic wound infections, localised bite and clenched-fist wound infections, and localised water-immersed wound infections, in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Post-traumatic wound infections) (4), Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Bite wound infections, including clenched-fist injury infections) (4) and Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Water-immersed wound infections) (4). If pathology testing is indicated the patient should be referred to an appropriate healthcare provider to conduct specimen collection; if timely referral is not practicable, empirical antibiotic therapy may be provided in accordance with the Therapeutic Guidelines with concurrent referral. No antibiotic name, strength, dose, frequency or duration is printed. NB1: benefits of antibiotic therapy must be weighed against risks; consider local antimicrobial resistance patterns.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 8, "section_heading": "Develop management plan" }
+    },
+    {
+      "id": "TX-8",
+      "drug": "Tetanus toxoid vaccine",
+      "form": "",
+      "strength": "",
+      "dose": "",
+      "route": "",
+      "frequency": "",
+      "duration": "",
+      "max_quantity": "",
+      "max_dose": "",
+      "quantity_to_supply": "",
+      "notes": "Tetanus post-exposure prophylaxis NB1 with tetanus toxoid vaccine in accordance with the Therapeutic Guidelines: Antibiotic (Traumatic wound infections \u2013 Post-traumatic wound infections) (4). NB1: Tetanus-toxoid vaccines must be given in accordance with the Australian Immunisation Handbook: Tetanus and recorded on the Australian Immunisation Register (16). A tetanus-prone wound that requires tetanus immunoglobulin (e.g. patient has had less than 3 doses of the tetanus toxoid vaccine, or vaccination history is unknown) must instead be referred (see Refer when). No vaccine schedule, strength or dose is printed in this document.",
+      "first_line": false,
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 8, "section_heading": "Develop management plan" }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "RF-1",
+      "trigger_text": "Service restricted to patients aged 5 years or over.",
+      "structured": { "parameter": "age", "operator": "<", "value": 5, "unit": "years" },
+      "action": "NOT_ELIGIBLE",
+      "severity": "low",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 1, "section_heading": "Acute Minor Wound Management - Clinical Practice Guideline" }
+    },
+    {
+      "id": "RF-2",
+      "trigger_text": "burns require management at a specialist centre as per the Australian and New Zealand Burn Association (ANZBA) criteria (1)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-3",
+      "trigger_text": "injury has suspected vascular, tendon, joint, bone, muscle, or nerve involvement",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-4",
+      "trigger_text": "fractures, crush injuries, partial amputations of a digit or penetrating wounds of the torso",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-5",
+      "trigger_text": "a penetrating wound, including through footwear, or a marine envenomation (a complex wound at high risk of infection)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-6",
+      "trigger_text": "recent orofacial trauma (not yet seen by a dental practitioner)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-7",
+      "trigger_text": "suspected concussive head injury",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-8",
+      "trigger_text": "pain that requires management with treatments not available to pharmacists",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-9",
+      "trigger_text": "immunocompromised or at high risk of infection or compromised wound healing",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-10",
+      "trigger_text": "signs or symptoms of systemic infection or is generally unwell",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-11",
+      "trigger_text": "infection of a surgical or chronic wound",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-12",
+      "trigger_text": "a tetanus-prone wound that requires tetanus immunoglobulin (e.g. patient has had less than 3 doses of the tetanus toxoid vaccine, or vaccination history is unknown)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-13",
+      "trigger_text": "significant risk of suicide (e.g. a current intent, a specific plan, access and means or have had previous suicide attempts), or self-inflicted injuries (see \u2018Treat and concurrently refer\u2019)",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-14",
+      "trigger_text": "injury sustained in the workplace or as a result of a work-related incident",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-15",
+      "trigger_text": "the wound history is unclear (how, where and when the wound was acquired)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-16",
+      "trigger_text": "the wound is showing abnormal signs of healing or not progressing through the normal stages of healing (e.g., chronic ulcers or wounds, necrotic or hyper-granulation tissue, wounds older than 4 days that have not begun epithelialisation)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-17",
+      "trigger_text": "the wound is suspected to be full thickness (involving epidermis, dermis and subcutaneous tissue)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-18",
+      "trigger_text": "the wound is to the head (scalp, face, ears, eyes) or neck, or where sustained closure is difficult to achieve",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-19",
+      "trigger_text": "anaesthesia (if indicated) cannot be achieved for adequate cleansing or closure.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+    },
+    {
+      "id": "RF-20",
+      "trigger_text": "the wound is significantly contaminated, e.g., a foreign body or other contamination that cannot be removed by the pharmacist, significantly contaminated water-immersed wounds",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-21",
+      "trigger_text": "localised post-traumatic wound infections, including: localised bite and clenched-fist wound infections; localised water-immersed wound infections",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-22",
+      "trigger_text": "self-inflicted injuries (treat if clinically appropriate and concurrently refer)",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Treat (if clinically appropriate) and concurrently refer" }
+    },
+    {
+      "id": "RF-23",
+      "trigger_text": "If the pharmacist suspects the patient has been subjected to family violence, they should provide appropriate support and assistance to the patient (separate from other family members), including referral to support options.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 4, "section_heading": "Injuries associated with family violence or non-accidental injury in children" }
+    },
+    {
+      "id": "RF-24",
+      "trigger_text": "Pharmacists are strongly encouraged to voluntarily report suspected child abuse and neglect to Child Safety.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 4, "section_heading": "Injuries associated with family violence or non-accidental injury in children" }
+    },
+    {
+      "id": "RF-25",
+      "trigger_text": "People presenting for treatment of self-inflicted injuries must be concurrently referred to an appropriate healthcare provider or mental health service.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 5, "section_heading": "Injuries associated with self-harm" }
+    },
+    {
+      "id": "RF-26",
+      "trigger_text": "Patients at significant risk of suicide (e.g., if they have a current intent, a specific plan, access and means or have had previous suicide attempts) require urgent referral to an appropriate healthcare provider and/or acute psychiatric/mental health service.",
+      "structured": null,
+      "action": "REFER_URGENT",
+      "severity": "high",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 5, "section_heading": "Injuries associated with self-harm" }
+    },
+    {
+      "id": "RF-27",
+      "trigger_text": "Consider if a foreign body is present and refer if needed.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 6, "section_heading": "Table 1. Clinical acute wound assessment ( 2, 3, 5, 6, 15)" }
+    },
+    {
+      "id": "RF-28",
+      "trigger_text": "If pathology testing is indicated, the patient should be referred to an appropriate healthcare provider to conduct specimen collection.",
+      "structured": null,
+      "action": "REFER",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 6, "section_heading": "Pathology testing for Gram stain, culture and sensitivity testing" }
+    },
+    {
+      "id": "RF-29",
+      "trigger_text": "the wound becomes infected (for non-infected wounds) or deteriorates",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-30",
+      "trigger_text": "the wound is not healing as expected (e.g. no evidence of epithelialisation 4 days post wound event)",
+      "structured": { "parameter": "days post wound event without evidence of epithelialisation", "operator": ">=", "value": 4, "unit": "days" },
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "medium",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-31",
+      "trigger_text": "their pain is not well managed with recommended analgesia",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-32",
+      "trigger_text": "they become systemically unwell.",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "id": "RF-33",
+      "trigger_text": "Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider if the condition does not improve or resolve (see Refer when and General advice).",
+      "structured": null,
+      "action": "REVIEW_GP",
+      "severity": "medium",
+      "confidence": "high",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "Clinical review" }
+    }
+  ],
+  "referral": {
+    "routine": [
+      "an appropriate healthcare provider",
+      "an appropriate healthcare provider to conduct specimen collection",
+      "an appropriate healthcare provider or mental health service",
+      "a specialist centre as per the Australian and New Zealand Burn Association (ANZBA) criteria",
+      "appropriate support and assistance to the patient (separate from other family members), including referral to support options",
+      "Child Safety"
+    ],
+    "urgent": [
+      "an appropriate healthcare provider and/or acute psychiatric/mental health service"
+    ],
+    "emergency": [
+      "emergency services, if required"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 2, "section_heading": "Refer when" }
+  },
+  "review_followup": [
+    {
+      "when": "Clinical review (in line with recommendations in the Therapeutic Guidelines and the Primary Clinical Care Manual)",
+      "what": "Clinical review with the pharmacist (or the patient\u2019s chosen healthcare provider), including for dressing changes and suture removal, should occur in line with recommendations in the Therapeutic Guidelines and the Queensland Health and Royal Flying Doctor Service (Queensland Section) Primary Clinical Care Manual (3).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "At the time of initial consultation (return advice given to patients and/or parents/caregivers)",
+      "what": "Patients should be advised to see an appropriate healthcare provider if: the wound becomes infected (for non-infected wounds) or deteriorates; the wound is not healing as expected (e.g. no evidence of epithelialisation 4 days post wound event); their pain is not well managed with recommended analgesia; they become systemically unwell.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "General advice" }
+    },
+    {
+      "when": "If the condition does not improve or resolve",
+      "what": "Advise patients (and/or parents/caregivers) to see an appropriate healthcare provider (see Refer when and General advice).",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "Clinical review" }
+    },
+    {
+      "when": "When prescribing a course of medicine",
+      "what": "Pharmacists should prescribe a quantity of medicine that aligns with the expected duration of therapy.",
+      "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 9, "section_heading": "Clinical review" }
+    }
+  ],
+  "notifiable": {
+    "required": true,
+    "conditions": [
+      "Tetanus-toxoid vaccines must be given in accordance with the Australian Immunisation Handbook: Tetanus and recorded on the Australian Immunisation Register (NB1)"
+    ],
+    "provenance": { "pdf_file": "qld-pharmacist-prescribing-guidelines\\acute-common-conditions\\wound-management-guideline", "page": 8, "section_heading": "Develop management plan" }
+  },
+  "references": [
+    "1. The Australian & New Zealand Burn Association (ANZBA). ANZBA Management of Burns. Available from: https://www.anzba.org/index.cfm//quality-care/management-of-burns/. (page 12)",
+    "2. Therapeutic Guidelines: Ulcer and Wound Management. Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/topicTeaser?guidelinePage=Ulcer%20and%20Wound%20Management&amp;etgAccess=true. (page 12)",
+    "3. Queensland Health and Royal Flying Doctor Service (Queensland Section). Primary Clinical Care Manual. Cairns: Office of Rural and Remote Health, Queensland Government; 2025 [cited 2025 June 18]. Available from: https://www.health.qld.gov.au/orrh/clinical-manuals/primary-clinical-care-manual-pccm (page 12)",
+    "4. Therapeutic Guidelines: Antibiotic (Traumatic wound infections). Melbourne: Therapeutic Guidelines Limited; 2025 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Antibiotic&topicfile=bartonella-infections&guidelinename=auto&sectionId=c_Traumatic_wound_infections#c_Traumatic_wound_infections (page 12)",
+    "5. Cox J. Wound Care 101. Nursing 2022. 2019;49(10). (page 12)",
+    "6. The Royal Children's Hospital of Melbourne. Wound assessment and management. Melbourne: The Royal Children's Hospital of Melbourne; 2023 [cited 2025 April 4]. Available from: https://www.rch.org.au/rchcpg/hospital_clinical_guideline_index/Wound_assessment_and_management/. (page 12)",
+    "7. Haesler E. and Carville K. (2023). Australian Standards for Wound Prevention and Management. Australian Health Research Alliance, Wounds Australia and WA Health Translation Network. (page 12)",
+    "8. Ngan V. Dermnet NZ: Wounds; 2005 [cited 2025 April 4]. Available from: https://dermnetnz.org/topics/wounds (page 12)",
+    "9. Australian Medical Association. Supporting patients experiencing family violence: Australian Medical Association; 2015 [cited 2025 April 4]. Available from: https://ama.com.au/sites/default/files/documents/AMA%20Supporting%20Patients%20Experiencing%20Family%20Violence%20Resource%20_0.pdf. (page 12)",
+    "10. Queensland Government. Support for victims of abuse. Available from: https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse (page 12)",
+    "11. Queensland Government. Reporting child abuse. Available from: https://www.qld.gov.au/community/getting-support-health-social-issue/support-victims-abuse/child-abuse/reporting-child-abuse (page 12)",
+    "12. Carter G, Page A, Large M, Hetrick S, Milner AJ, Bendit N, et al. Royal Australian and New Zealand College of Psychiatrists clinical practice guideline for the management of deliberate self-harm. Australian & New Zealand Journal of Psychiatry. 2016;50(10):939-1000. (page 12)",
+    "13. National Institute for Health and Care Excellence (NICE). Self-harm: assessment, management and preventing recurrence. Methods. 2022. (page 12)",
+    "14. Therapeutic Guidelines: Psychotropic (Assessing suicide risk). Melbourne: Therapeutic Guidelines Limited; 2021 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Psychotropic&topicfile=suicide-risk&guidelinename=Psychotropic&sectionId=toc_d1e316#toc_d1e316. (page 12)",
+    "15. International Wound Infection Institute (IWII). Wound infection in clinical practice. Wounds International. 2022. At: IWII-CD-2022-web-1.pdf (page 12)",
+    "16. Therapeutic Guidelines: Pain and Analgesia (Local anaesthetics for acute pain management). Melbourne: Therapeutic Guidelines Limited; 2020 [cited 2025 April 4]. Available from: https://tgldcdp.tg.org.au/viewTopic?etgAccess=true&guidelinePage=Pain%20and%20Analgesia&topicfile=local-anaesthetics-acute-pain-management. (page 12)",
+    "Pharmacist resources: Australian and New Zealand Burn Association: ANZBA Referral Criteria; Therapeutic Guidelines: Ulcer and wound management, Pain and analgesia: Local anaesthetics for acute pain management, Antibiotic: Traumatic wound infections, Antibiotic: Principles of antimicrobial use; Australian Pharmaceutical Formulary and Handbook (APF): Wound management; Australian Medicines Handbook: Drugs for local anaesthesia, Antibacterials; DermNet NZ: Wounds, Synthetic wound dressings, Topical skin adhesives, Suturing techniques, Surgical wound closure; Wounds Australia: Australian Standards for Wound Prevention and Management; Queensland Health and Royal Flying Doctors Service (Queensland branch) - Primary Clinical Care Manual 12th edition 2025; Australian Immunisation Handbook: Tetanus; The Royal Children's Hospital Melbourne: Wound assessment and management, Burns - Acute management, Wound dressings \u2013 acute traumatic wounds, Lacerations; International Wound Infection Institute: Wound infection in Clinical Practice 2022, Therapeutic wound and skin cleansing 2025; Australian Prescriber: An update on wound management; Frontiers in Pharmacology: First-Line Interactive Wound Dressing Update: A Comprehensive Review of the Evidence; Wound Practice and Research - Wounds Australia Journal: The negative impact of medications on wound healing; Royal Australian College of General Practitioners: Selecting appropriate dressings, Acute lacerations: Assessment and non-surgical management, Surgical management of acute lacerations (pages 9-10)"
+  ],
+  "open_questions": [
+    {
+      "topic": "Refer-when list encoded as eligibility exclusions",
+      "observed": "The 'Refer when' bullet list (page 2, 18 bullets) is transcribed into eligibility.exclusion as EXC-1 to EXC-18 with a shared any_of criteria_group (confidence medium). The document frames these as referral triggers ('Provide first aid and concurrently refer'), not service-exclusion criteria; the same triggers are captured individually as red flags RF-2 to RF-19.",
+      "why_unclear": "Interpretation required by the spec (referral triggers recorded as decision-list entries); confirm this framing is acceptable for the rules engine.",
+      "source_page": 2
+    },
+    {
+      "topic": "Treat-and-concurrently-refer kept as red flags only",
+      "observed": "'Treat (if clinically appropriate) and concurrently refer' bullets (page 2: significantly contaminated wounds; localised post-traumatic wound infections; self-inflicted injuries) are captured as red flags RF-20 to RF-22 but NOT as eligibility exclusions, because initial treatment proceeds.",
+      "why_unclear": "Documented interpretation consistent with prior batches: exclusion is reserved for situations where the service does not treat.",
+      "source_page": 2
+    },
+    {
+      "topic": "Age floor of 5 years",
+      "observed": "Page 1 prints 'Service restricted to patients aged 5 years or over.' age_bounds.min_years = 5 with INC-1 recording the same wording; RF-1 encodes the under-5 case as NOT_ELIGIBLE.",
+      "why_unclear": "NOT_ELIGIBLE mapping of the age restriction is an interpretation; the document does not state an action for under-5 presentations (only that ineligibility does not preclude usual pharmacy care, EXE-1).",
+      "source_page": 1
+    },
+    {
+      "topic": "No antibiotic agents or doses printed",
+      "observed": "Presumptive, prophylactic and empirical oral antibiotic therapy (TX-5 to TX-7) are named only by category and delegated to the Therapeutic Guidelines: Antibiotic (Traumatic wound infections) chapters (4); no drug name, strength, dose, frequency or duration appears anywhere in the document.",
+      "why_unclear": "Treatment rows carry category names only; specific agents and doses cannot be extracted without inventing.",
+      "source_page": 7
+    },
+    {
+      "topic": "Lidocaine limits printed but route and schedule not",
+      "observed": "'Use of \u22641% lidocaine preparations (without adrenaline, maximum of 10ml) if required' (page 7). Route, frequency and duration are not printed; 'maximum of 10ml' is recorded as max_dose.",
+      "why_unclear": "Strength ceiling and volume ceiling are explicit, but administration route and per-session limits are not stated.",
+      "source_page": 7
+    },
+    {
+      "topic": "Reference citation mismatch for tetanus NB1",
+      "observed": "NB1 (page 8) states tetanus-toxoid vaccines must be given per the Australian Immunisation Handbook: Tetanus and recorded on the Australian Immunisation Register '(16)', but reference 16 (page 12) is 'Therapeutic Guidelines: Pain and Analgesia (Local anaesthetics for acute pain management)'. The Australian Immunisation Handbook appears only in the Pharmacist resources list, not the numbered references.",
+      "why_unclear": "Apparent numbering error in the source document; both readings recorded, neither reconciled.",
+      "source_page": 8
+    },
+    {
+      "topic": "Structured operator for the 4-day healing trigger",
+      "observed": "RF-30 uses {parameter: days post wound event without evidence of epithelialisation, operator: >=, value: 4, unit: days} from the parenthetical example 'no evidence of epithelialisation 4 days post wound event' (page 9).",
+      "why_unclear": "The 'e.g.' wording implies a threshold at day 4 rather than an explicit comparison; confidence set to medium, operator inferred.",
+      "source_page": 9
+    },
+    {
+      "topic": "Two phrasings of the 4-day epithelialisation threshold",
+      "observed": "Refer when (page 2): 'wounds older than 4 days that have not begun epithelialisation' (strictly greater than 4 days, part of the compound RF-16/EXC-15 trigger, structured null). General advice (page 9): 'no evidence of epithelialisation 4 days post wound event' (RF-30, structured >= 4 days).",
+      "why_unclear": "Both readings recorded verbatim with their own provenance; not silently reconciled (spec rule 2).",
+      "source_page": 2
+    },
+    {
+      "topic": "Child safety and family violence actions mapped to REFER",
+      "observed": "The action enum has no 'report' value, so voluntary reporting of suspected child abuse and neglect to Child Safety (page 4) and referral to support options for family violence (page 4) are recorded with action REFER.",
+      "why_unclear": "Reporting is 'strongly encouraged' and voluntary, not mandatory; severity kept at medium because no urgency language is printed.",
+      "source_page": 4
+    },
+    {
+      "topic": "Notifiable scope limited to AIR recording",
+      "observed": "notifiable.required = true based solely on NB1 (page 8): tetanus-toxoid vaccines 'must be ... recorded on the Australian Immunisation Register'. The document states no notifiable disease, pathology or GP notification requirements; suspected child abuse reporting is voluntary (page 4).",
+      "why_unclear": "AIR recording is treated as the only notification obligation printed; confirm this matches the service's notification model.",
+      "source_page": 8
+    },
+    {
+      "topic": "Referral block provenance page range",
+      "observed": "referral.provenance uses page 2 (first page) although destinations quoted in the block are printed across pages 2, 4, 5, 6 and 9.",
+      "why_unclear": "Spec requires a single shared provenance object using the first page; the full range is recorded here.",
+      "source_page": 2
+    },
+    {
+      "topic": "Suicide risk screening tool not printed",
+      "observed": "'Consider key questions and/or other risk factors for suicide risk in accordance with Therapeutic Guidelines: Psychotropic (Suicide risk - Assessing suicide risk) (14)' (page 5); no screening questions or threshold are printed in this document.",
+      "why_unclear": "Assessment content is delegated; the step gate only encodes the document's own examples of significant risk (current intent, specific plan, access and means, previous attempts).",
+      "source_page": 5
+    },
+    {
+      "topic": "Vital signs and infection thresholds not specified",
+      "observed": "'Conduct assessment of vital signs for any patients presenting with signs of infection' (page 5) and systemic infection signs 'fever, tachycardia, hypotension, other signs of sepsis' (page 6) are listed without numeric thresholds; TIME framework and Table 1 are descriptive.",
+      "why_unclear": "No numeric parameters exist to structure; captured qualitatively in PW-1-S12 and PW-1-S13.",
+      "source_page": 5
+    },
+    {
+      "topic": "Topical antibiotics prohibited for the Service",
+      "observed": "'Topical antibiotics are not recommended for the treatment of wounds and are not included for use as part of this Service' and 'Antibiotic prophylaxis for acute minor wounds is not routinely recommended' (page 3).",
+      "why_unclear": "Captured in pathway step PW-1-S3 and hugh_to_confirm rather than as eligibility exclusions, because they prohibit treatments rather than exclude patients; confirm this placement.",
+      "source_page": 3
+    }
+  ],
+  "hugh_to_confirm": [
+    {
+      "item": "Confirm the refer-when list is modelled as eligibility exclusions EXC-1 to EXC-18 (any_of) in addition to red flags RF-2 to RF-19",
+      "source_page": 2,
+      "reason": "The document says 'Refer when', not 'exclusion'; the dual capture is an interpretation that affects eligibility decisions."
+    },
+    {
+      "item": "Confirm the service-wide age floor of 5 years (age_bounds.min_years) and the NOT_ELIGIBLE mapping for under-5 presentations (RF-1)",
+      "source_page": 1,
+      "reason": "Age restriction is explicit; the action mapping and its severity (low) are interpretive, with EXE-1 noting usual pharmacy care still applies."
+    },
+    {
+      "item": "Confirm topical antibiotics are excluded from the formulary for this Service and antibiotic prophylaxis is not routinely recommended",
+      "source_page": 3,
+      "reason": "Document states topical antibiotics 'are not included for use as part of this Service'; affects what may be supplied."
+    },
+    {
+      "item": "Confirm which antibiotic agents and doses are authorised, since the document delegates all presumptive/prophylactic/empirical therapy to Therapeutic Guidelines: Antibiotic (Traumatic wound infections)",
+      "source_page": 7,
+      "reason": "No drug names or doses are printed; local formulary and dosing rules must come from the referenced chapters."
+    },
+    {
+      "item": "Confirm in-pharmacy arrangements for local anaesthetic: use of \u22641% lidocaine preparations without adrenaline, maximum of 10ml",
+      "source_page": 7,
+      "reason": "Strength and volume ceilings are printed but route, session limits and administration arrangements are not."
+    },
+    {
+      "item": "Confirm credentialing for wound closure using adhesive strips, topical skin/tissue adhesives and basic suturing techniques only",
+      "source_page": 7,
+      "reason": "Document limits closure methods 'only' to these options per the Primary Clinical Care Manual; training/scope must be confirmed."
+    },
+    {
+      "item": "Confirm tetanus post-exposure prophylaxis workflow: Australian Immunisation Handbook compliance, Australian Immunisation Register recording, and referral of tetanus-prone wounds requiring immunoglobulin",
+      "source_page": 8,
+      "reason": "NB1 citation numbering appears inconsistent in the source (see open question); referral threshold is '<3 doses or unknown history'."
+    },
+    {
+      "item": "Confirm local urgent-referral pathway and acute psychiatric/mental health service contacts for significant suicide risk",
+      "source_page": 5,
+      "reason": "Document requires 'urgent referral to an appropriate healthcare provider and/or acute psychiatric/mental health service' without naming services; helplines are listed for support."
+    },
+    {
+      "item": "Confirm family violence support pathways and Child Safety reporting process (voluntary reporting is 'strongly encouraged', not mandated)",
+      "source_page": 4,
+      "reason": "Local policy decision; the rules engine cannot distinguish voluntary from mandatory reporting with the REFER action."
+    },
+    {
+      "item": "Confirm the pathology testing pathway: referral for specimen collection, with empirical therapy plus concurrent referral only if timely referral is not practicable",
+      "source_page": 6,
+      "reason": "Determines whether the pharmacist can commence empirical antibiotics without prior pathology."
+    },
+    {
+      "item": "Confirm that clinical review including dressing changes and suture removal is within pharmacist scope at the reviewed intervals",
+      "source_page": 9,
+      "reason": "Timing is delegated to the Therapeutic Guidelines and Primary Clinical Care Manual; no interval is printed."
+    },
+    {
+      "item": "Confirm RF-30 structured threshold (>= 4 days without epithelialisation) against the rendered PDF and against the stricter refer-when wording on page 2",
+      "source_page": 9,
+      "reason": "Two different phrasings of the 4-day threshold exist in the document (see open questions); operator was inferred from an 'e.g.' example."
+    }
+  ]
+}
