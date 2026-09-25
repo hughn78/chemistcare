@@ -6,7 +6,8 @@ import { Separator } from '@/components/ui/separator';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getConditionById } from '@/data/conditions';
 import { getSlugForConditionId } from '@/lib/conditionRegistry';
-import { AlertTriangle, ArrowLeft, Shield, Pill, FileText, Clock, XCircle, CheckCircle } from 'lucide-react';
+import { getConditionDocsForSlug, CORPUS_AS_AT, type CorpusDocumentMeta } from '@/data/protocol-corpus';
+import { AlertTriangle, ArrowLeft, Shield, Pill, FileText, Clock, XCircle, CheckCircle, ExternalLink } from 'lucide-react';
 
 const ConditionDetail = () => {
   const { id } = useParams();
@@ -45,6 +46,8 @@ const ConditionDetail = () => {
           <p className="text-sm text-muted-foreground">{condition.description}</p>
           <p className="text-xs text-muted-foreground mt-1 italic">Reference: {condition.guidelineReference}</p>
         </div>
+
+        <CorpusInstruments conditionId={condition.id} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* Scope Validation */}
@@ -182,5 +185,52 @@ const ConditionDetail = () => {
     </ClinicalLayout>
   );
 };
+
+/** Jurisdiction protocol instruments for this condition, from the corpus. */
+function CorpusInstruments({ conditionId }: { conditionId: string }) {
+  const slug = getSlugForConditionId(conditionId);
+  const docs = slug ? getConditionDocsForSlug(slug) : [];
+  if (docs.length === 0) return null;
+  const states = Array.from(new Set(docs.map(d => d.state)));
+
+  return (
+    <Card>
+      <CardHeader className="pb-3">
+        <CardTitle className="text-sm flex items-center gap-2">
+          <FileText className="h-4 w-4 text-accent" /> Jurisdiction instruments ({states.length} state{states.length > 1 ? 's' : ''})
+          <span className="text-[10px] font-normal text-muted-foreground">corpus as at {CORPUS_AS_AT}</span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-2">
+        {states.map(st => {
+          const stDocs = docs.filter(d => d.state === st);
+          const active = stDocs.filter(d => d.docType !== 'repealed');
+          return (
+            <div key={st} className="rounded border border-border/60 p-2.5">
+              <p className="text-xs font-semibold mb-1">{st}</p>
+              {active.map(d => (
+                <div key={d.file} className="flex items-start justify-between gap-2 text-[11px] py-0.5">
+                  <div className="min-w-0">
+                    <p className="truncate">{d.title}</p>
+                    <p className="text-[9px] text-muted-foreground">
+                      {d.instrumentVersion}
+                      {d.effectiveDate ? ` · eff. ${d.effectiveDate}` : ''}
+                      {` · ${d.counts.redFlags} red flags · ${d.counts.treatments} treatments`}
+                      {d.truncated ? ' · truncated extraction' : ''}
+                    </p>
+                  </div>
+                  <span className="text-[9px] text-muted-foreground shrink-0">sha256 {d.sha256?.slice(0, 8)}</span>
+                </div>
+              ))}
+            </div>
+          );
+        })}
+        <p className="text-[10px] text-muted-foreground">
+          Decision support only — always confirm against the current instrument published by your state/territory health department.
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
 
 export default ConditionDetail;
