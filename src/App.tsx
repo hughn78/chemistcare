@@ -26,6 +26,7 @@ import EightCpaServiceHistory from "./pages/EightCpaServiceHistory";
 import PatientTriage from "./pages/PatientTriage";
 import ProtocolConsultation from "./pages/ProtocolConsultation";
 import ProtocolCorpusPage from "./pages/ProtocolCorpusPage";
+import TemplateConsultation from "./pages/TemplateConsultation";
 import TravelConsultation from "./pages/TravelConsultation";
 import CalendarPage from "./pages/CalendarPage";
 import BookingPage from "./pages/BookingPage";
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
   // continue to use the generic NewConsultation engine until they are
   // migrated to the ConditionTemplate contract.
   { path: "/consultations/new/uncomplicated-uti", element: <UtiConsultation /> },
+  // Corpus-driven condition pathways (TemplateConsultation over corpus templates)
+  { path: "/consultations/new/acute-nausea-and-vomiting", element: <TemplateConsultation /> },
+  { path: "/consultations/new/psoriasis", element: <TemplateConsultation /> },
+  { path: "/consultations/new/gord", element: <TemplateConsultation /> },
+  { path: "/consultations/new/atopic-dermatitis", element: <TemplateConsultation /> },
   { path: "/consultations/new/:conditionSlug", element: <NewConsultation /> },
   // Legacy: /consultation and /consultation?condition=<id> still link in from
   // Dashboard, ConditionDetail, PrescribingLog, ReviewPanel — redirect them.

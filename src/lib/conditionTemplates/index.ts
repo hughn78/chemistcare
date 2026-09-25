@@ -28,9 +28,26 @@ import { gordTemplate } from './gord';
 import { acneTemplate } from './acne';
 import { atopicDermatitisTemplate } from './atopicDermatitis';
 import { earInfectionsTemplate } from './earInfections';
+import { nauseaTemplate } from './nauseaCorpus';
+import { psoriasisTemplate } from './psoriasisCorpus';
+import { gordTemplate as gordCorpusTemplate } from './gordCorpus';
+import { atopicDermatitisCorpusTemplate } from './atopicDermatitisCorpus';
 
+/**
+ * Corpus-driven templates (nauseaCorpus/psoriasisCorpus/gordCorpus/
+ * atopicDermatitisCorpus) are DATA-DERIVED from the Sep 2026 protocol
+ * corpus: their red flags, scope rules, treatments and note generators
+ * come from the governing instrument (see ./corpusFactory.ts). They are
+ * listed FIRST so first-match-wins lookup below resolves their slugs to
+ * the corpus versions; the hand-written GORD/AD templates remain
+ * registered for any code referencing them by import.
+ */
 export const CONDITION_TEMPLATES: ConditionTemplate[] = [
   utiTemplate,
+  nauseaTemplate,
+  psoriasisTemplate,
+  gordCorpusTemplate,
+  atopicDermatitisCorpusTemplate,
   herpesZosterTemplate,
   ocpResupplyTemplate,
   smokingCessationTemplate,
@@ -42,8 +59,14 @@ export const CONDITION_TEMPLATES: ConditionTemplate[] = [
   earInfectionsTemplate,
 ];
 
-const BY_SLUG = new Map(CONDITION_TEMPLATES.map(t => [t.slug, t]));
-const BY_ID = new Map(CONDITION_TEMPLATES.map(t => [t.id, t]));
+const BY_SLUG = new Map<string, ConditionTemplate>();
+for (const t of CONDITION_TEMPLATES) {
+  if (!BY_SLUG.has(t.slug)) BY_SLUG.set(t.slug, t);
+}
+const BY_ID = new Map<string, ConditionTemplate>();
+for (const t of CONDITION_TEMPLATES) {
+  if (!BY_ID.has(t.id)) BY_ID.set(t.id, t);
+}
 
 export function getConditionTemplateBySlug(slug: string): ConditionTemplate | undefined {
   return BY_SLUG.get(slug);
